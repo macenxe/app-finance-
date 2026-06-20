@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-feature-settings: 'tnum'; }
+  .tnum { font-variant-numeric: tabular-nums; }
+</style>
+</helmet>
+
+<div style="width:max-content; min-width:100%; min-height:100vh; box-sizing:border-box; padding:48px; background:#e7e5df; font-family:'IBM Plex Sans',system-ui,sans-serif;">
+
+  <div style="margin-bottom:32px; max-width:760px;">
+    <div style="font-family:'IBM Plex Sans'; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">Conservateur App · Direction artistique</div>
+    <h1 style="font-family:'Spectral'; font-weight:600; font-size:32px; color:#16304f; margin:8px 0 6px;">Trois directions de style</h1>
+    <p style="font-size:14px; line-height:1.6; color:#5b5e63; margin:0;">Même contenu, trois traitements de la navigation latérale et des cartes de synthèse. Choisissez une direction (ou un mélange) avant que je déroule les pages complètes.</p>
+  </div>
+
+  <div style="display:flex; gap:48px; align-items:flex-start;">
+
+    <!-- ============ FRAME A — MARINE CLASSIQUE ============ -->
+    <div style="flex:none; width:1180px;">
+      <div style="font-family:'IBM Plex Sans'; font-size:13px; font-weight:600; color:#16304f; margin-bottom:10px;">A · Marine classique <span style="color:#9a8f7a; font-weight:400;">— sidebar bleu profond, accent or, cartes sobres bordées</span></div>
+      <div style="background:#fbfaf7; border-radius:6px; box-shadow:0 1px 3px rgba(20,40,70,.10); overflow:hidden; display:flex; height:620px;">
+
+        <!-- sidebar -->
+        <aside style="width:248px; flex:none; background:#16304f; color:#cdd6e2; display:flex; flex-direction:column;">
+          <div style="padding:24px 22px 20px; border-bottom:1px solid rgba(255,255,255,.08);">
+            <div style="font-family:'Spectral'; font-size:19px; font-weight:600; color:#fff; letter-spacing:.01em;">Conservateur</div>
+            <div style="font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#c9a96a; margin-top:3px;">App · Analyse</div>
+          </div>
+          <nav style="padding:14px 12px; display:flex; flex-direction:column; gap:2px; flex:1;">
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 14px; border-radius:5px; background:rgba(201,169,106,.14); color:#fff; font-size:13.5px; font-weight:500; border-left:2px solid #c9a96a; margin-left:-2px;"><span style="width:6px;height:6px;border-radius:50%;background:#c9a96a;"></span>Tableau de bord</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 14px; border-radius:5px; color:#aeb9c8; font-size:13.5px;"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22);"></span>Produits structurés</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 14px; border-radius:5px; color:#aeb9c8; font-size:13.5px;"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22);"></span>Allocation & Marchés</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 14px; border-radius:5px; color:#aeb9c8; font-size:13.5px;"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22);"></span>Veille économique</div>
+          </nav>
+          <div style="padding:16px 18px; border-top:1px solid rgba(255,255,255,.08); font-size:11px; line-height:1.5; color:#7e8ba0;">Usage interne · données à vérifier · validation humaine obligatoire</div>
+        </aside>
+
+        <!-- main -->
+        <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+          <header style="display:flex; align-items:center; justify-content:space-between; padding:18px 26px; border-bottom:1px solid #ece7dc; background:#fff;">
+            <div>
+              <div style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f;">Tableau de bord</div>
+              <div style="font-size:12px; color:#9a8f7a; margin-top:1px;">Synthèse des marchés · 20 juin 2026, 17:35</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="display:flex; align-items:center; gap:8px; background:#f4f1e9; border:1px solid #e6e0d2; border-radius:5px; padding:8px 12px; width:220px; color:#9a8f7a; font-size:12.5px;">Rechercher un produit, un indice…</div>
+              <div style="width:34px; height:34px; border-radius:50%; background:#16304f; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600;">AG</div>
+            </div>
+          </header>
+
+          <div style="padding:22px 26px; overflow:hidden;">
+            <div style="font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7a; font-weight:600; margin-bottom:12px;">Indices clés</div>
+            <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:22px;">
+              <!-- card -->
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:14px 15px;">
+                <div style="font-size:11.5px; color:#6b6e73; font-weight:500;">Euro Stoxx 50</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">5 124,30</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">▲ +0,42 %</div>
+              </div>
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:14px 15px;">
+                <div style="font-size:11.5px; color:#6b6e73; font-weight:500;">S&amp;P 500</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">5 487,12</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">▲ +0,18 %</div>
+              </div>
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:14px 15px;">
+                <div style="font-size:11.5px; color:#6b6e73; font-weight:500;">Nasdaq</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">17 689,4</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">▲ +0,55 %</div>
+              </div>
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:14px 15px;">
+                <div style="font-size:11.5px; color:#6b6e73; font-weight:500;">CAC 40</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">7 612,80</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#9a3535;">▼ −0,23 %</div>
+              </div>
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:14px 15px;">
+                <div style="font-size:11.5px; color:#6b6e73; font-weight:500;">ES Banks</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">142,15</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">▲ +0,87 %</div>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1.35fr; gap:18px;">
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:18px;">
+                <div style="font-family:'Spectral'; font-size:15px; font-weight:600; color:#16304f; margin-bottom:14px;">Alertes du jour</div>
+                <div style="display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #f1ece1;"><span style="width:8px;height:8px;border-radius:50%;background:#9a3535;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">CAC 40 sous la barrière de protection — <b style="color:#16304f;">Phoenix Banques EU</b></div></div>
+                <div style="display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #f1ece1;"><span style="width:8px;height:8px;border-radius:50%;background:#b06a1a;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">Constatation J−3 — <b style="color:#16304f;">Autocall Luxe Monde</b></div></div>
+                <div style="display:flex; gap:10px; padding:10px 0;"><span style="width:8px;height:8px;border-radius:50%;background:#1d6f4c;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">Rappel probable — <b style="color:#16304f;">Athéna Tech US</b></div></div>
+              </div>
+              <div style="background:#fff; border:1px solid #ece7dc; border-radius:6px; padding:18px;">
+                <div style="font-family:'Spectral'; font-size:15px; font-weight:600; color:#16304f; margin-bottom:12px;">Autocalls à surveiller</div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#9a8f7a; font-weight:600; padding-bottom:8px; border-bottom:1px solid #ece7dc;"><span>Produit</span><span>Sous-jacent</span><span style="text-align:right;">Niveau</span><span style="text-align:right;">Statut</span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0; border-bottom:1px solid #f1ece1;"><span style="color:#16304f;font-weight:500;">Phoenix Banques EU</span><span style="color:#6b6e73;">ES Banks</span><span class="tnum" style="text-align:right;color:#3a3d42;">94,2 %</span><span style="text-align:right;"><span style="background:#fbeaea;color:#9a3535;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:3px;">Risque</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0; border-bottom:1px solid #f1ece1;"><span style="color:#16304f;font-weight:500;">Autocall Luxe Monde</span><span style="color:#6b6e73;">MSCI Lux</span><span class="tnum" style="text-align:right;color:#3a3d42;">101,8 %</span><span style="text-align:right;"><span style="background:#fbf2e3;color:#b06a1a;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:3px;">Surveillance</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0;"><span style="color:#16304f;font-weight:500;">Athéna Tech US</span><span style="color:#6b6e73;">Nasdaq 100</span><span class="tnum" style="text-align:right;color:#3a3d42;">112,4 %</span><span style="text-align:right;"><span style="background:#e8f1ec;color:#1d6f4c;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:3px;">Rappel probable</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FRAME B — IVOIRE & OR ============ -->
+    <div style="flex:none; width:1180px;">
+      <div style="font-family:'IBM Plex Sans'; font-size:13px; font-weight:600; color:#16304f; margin-bottom:10px;">B · Ivoire &amp; or <span style="color:#9a8f7a; font-weight:400;">— sidebar claire ivoire, texte bleu, hairline doré, cartes à ombre douce</span></div>
+      <div style="background:#fbfaf7; border-radius:6px; box-shadow:0 1px 3px rgba(20,40,70,.10); overflow:hidden; display:flex; height:620px;">
+
+        <aside style="width:248px; flex:none; background:#f3efe5; color:#16304f; display:flex; flex-direction:column; border-right:1px solid #e6dfcf;">
+          <div style="padding:24px 22px 20px; border-bottom:1px solid #e6dfcf;">
+            <div style="font-family:'Spectral'; font-size:19px; font-weight:600; color:#16304f;">Conservateur</div>
+            <div style="font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#b0945a; margin-top:3px;">App · Analyse</div>
+          </div>
+          <nav style="padding:14px 12px; display:flex; flex-direction:column; gap:2px; flex:1;">
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 14px; border-radius:5px; background:#fff; color:#16304f; font-size:13.5px; font-weight:600; box-shadow:0 1px 2px rgba(20,40,70,.06); border:1px solid #ece4d2;"><span style="width:6px;height:18px;border-radius:2px;background:#c9a96a;margin-left:-4px;"></span>Tableau de bord</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 18px; color:#5e6b7e; font-size:13.5px;">Produits structurés</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 18px; color:#5e6b7e; font-size:13.5px;">Allocation & Marchés</div>
+            <div style="display:flex; align-items:center; gap:11px; padding:10px 18px; color:#5e6b7e; font-size:13.5px;">Veille économique</div>
+          </nav>
+          <div style="padding:16px 18px; border-top:1px solid #e6dfcf; font-size:11px; line-height:1.5; color:#9a8f7a;">Usage interne · données à vérifier · validation humaine obligatoire</div>
+        </aside>
+
+        <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+          <header style="display:flex; align-items:center; justify-content:space-between; padding:18px 26px; border-bottom:1px solid #ece7dc; background:#fff;">
+            <div>
+              <div style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f;">Tableau de bord</div>
+              <div style="font-size:12px; color:#9a8f7a; margin-top:1px;">Synthèse des marchés · 20 juin 2026, 17:35</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="display:flex; align-items:center; gap:8px; background:#f4f1e9; border:1px solid #e6e0d2; border-radius:20px; padding:8px 14px; width:220px; color:#9a8f7a; font-size:12.5px;">Rechercher…</div>
+              <div style="width:34px; height:34px; border-radius:50%; background:#f3efe5; border:1px solid #e6dfcf; color:#16304f; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600;">AG</div>
+            </div>
+          </header>
+
+          <div style="padding:22px 26px;">
+            <div style="font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#b0945a; font-weight:600; margin-bottom:12px;">Indices clés</div>
+            <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:22px;">
+              <div style="background:#fff; border-radius:7px; padding:15px; box-shadow:0 2px 8px rgba(20,40,70,.06); border-top:2px solid #c9a96a;">
+                <div style="font-size:11.5px; color:#6b6e73;">Euro Stoxx 50</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">5 124,30</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">+0,42 %</div>
+              </div>
+              <div style="background:#fff; border-radius:7px; padding:15px; box-shadow:0 2px 8px rgba(20,40,70,.06); border-top:2px solid #c9a96a;">
+                <div style="font-size:11.5px; color:#6b6e73;">S&amp;P 500</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">5 487,12</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">+0,18 %</div>
+              </div>
+              <div style="background:#fff; border-radius:7px; padding:15px; box-shadow:0 2px 8px rgba(20,40,70,.06); border-top:2px solid #c9a96a;">
+                <div style="font-size:11.5px; color:#6b6e73;">Nasdaq</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">17 689,4</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">+0,55 %</div>
+              </div>
+              <div style="background:#fff; border-radius:7px; padding:15px; box-shadow:0 2px 8px rgba(20,40,70,.06); border-top:2px solid #d8d3c4;">
+                <div style="font-size:11.5px; color:#6b6e73;">CAC 40</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">7 612,80</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#9a3535;">−0,23 %</div>
+              </div>
+              <div style="background:#fff; border-radius:7px; padding:15px; box-shadow:0 2px 8px rgba(20,40,70,.06); border-top:2px solid #c9a96a;">
+                <div style="font-size:11.5px; color:#6b6e73;">ES Banks</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:23px; font-weight:600; color:#16304f; margin:6px 0 4px;">142,15</div>
+                <div class="tnum" style="font-size:12px; font-weight:600; color:#1d6f4c;">+0,87 %</div>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1.35fr; gap:18px;">
+              <div style="background:#fff; border-radius:7px; padding:18px; box-shadow:0 2px 8px rgba(20,40,70,.06);">
+                <div style="font-family:'Spectral'; font-size:15px; font-weight:600; color:#16304f; margin-bottom:14px;">Alertes du jour</div>
+                <div style="display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #f4efe4;"><span style="width:8px;height:8px;border-radius:50%;background:#9a3535;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">CAC 40 sous la barrière — <b style="color:#16304f;">Phoenix Banques EU</b></div></div>
+                <div style="display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #f4efe4;"><span style="width:8px;height:8px;border-radius:50%;background:#b06a1a;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">Constatation J−3 — <b style="color:#16304f;">Autocall Luxe Monde</b></div></div>
+                <div style="display:flex; gap:10px; padding:10px 0;"><span style="width:8px;height:8px;border-radius:50%;background:#1d6f4c;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;color:#3a3d42;line-height:1.45;">Rappel probable — <b style="color:#16304f;">Athéna Tech US</b></div></div>
+              </div>
+              <div style="background:#fff; border-radius:7px; padding:18px; box-shadow:0 2px 8px rgba(20,40,70,.06);">
+                <div style="font-family:'Spectral'; font-size:15px; font-weight:600; color:#16304f; margin-bottom:12px;">Autocalls à surveiller</div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#b0945a; font-weight:600; padding-bottom:8px; border-bottom:1px solid #ece7dc;"><span>Produit</span><span>Sous-jacent</span><span style="text-align:right;">Niveau</span><span style="text-align:right;">Statut</span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0; border-bottom:1px solid #f4efe4;"><span style="color:#16304f;font-weight:500;">Phoenix Banques EU</span><span style="color:#6b6e73;">ES Banks</span><span class="tnum" style="text-align:right;color:#3a3d42;">94,2 %</span><span style="text-align:right;"><span style="background:#fbeaea;color:#9a3535;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:10px;">Risque</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0; border-bottom:1px solid #f4efe4;"><span style="color:#16304f;font-weight:500;">Autocall Luxe Monde</span><span style="color:#6b6e73;">MSCI Lux</span><span class="tnum" style="text-align:right;color:#3a3d42;">101,8 %</span><span style="text-align:right;"><span style="background:#fbf2e3;color:#b06a1a;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:10px;">Surveillance</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr .9fr; gap:6px; align-items:center; font-size:12px; padding:9px 0;"><span style="color:#16304f;font-weight:500;">Athéna Tech US</span><span style="color:#6b6e73;">Nasdaq 100</span><span class="tnum" style="text-align:right;color:#3a3d42;">112,4 %</span><span style="text-align:right;"><span style="background:#e8f1ec;color:#1d6f4c;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:10px;">Rappel probable</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FRAME C — DESK GRAPHITE ============ -->
+    <div style="flex:none; width:1180px;">
+      <div style="font-family:'IBM Plex Sans'; font-size:13px; font-weight:600; color:#16304f; margin-bottom:10px;">C · Desk graphite <span style="color:#9a8f7a; font-weight:400;">— sidebar compacte sombre, cartes teintées beige, lignes-registre, lecture dense</span></div>
+      <div style="background:#f4f1e9; border-radius:6px; box-shadow:0 1px 3px rgba(20,40,70,.10); overflow:hidden; display:flex; height:620px;">
+
+        <aside style="width:210px; flex:none; background:#0e2236; color:#9fb0c4; display:flex; flex-direction:column;">
+          <div style="padding:20px 18px 16px; border-bottom:1px solid rgba(255,255,255,.07);">
+            <div style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#fff;">Conservateur</div>
+            <div style="font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:#c9a96a; margin-top:3px;">App · Analyse</div>
+          </div>
+          <nav style="padding:10px 8px; display:flex; flex-direction:column; gap:1px; flex:1;">
+            <div style="padding:9px 14px; border-radius:4px; background:#c9a96a; color:#16304f; font-size:12.5px; font-weight:600;">Tableau de bord</div>
+            <div style="padding:9px 14px; color:#9fb0c4; font-size:12.5px;">Produits structurés</div>
+            <div style="padding:9px 14px; color:#9fb0c4; font-size:12.5px;">Allocation & Marchés</div>
+            <div style="padding:9px 14px; color:#9fb0c4; font-size:12.5px;">Veille économique</div>
+          </nav>
+          <div style="padding:13px 16px; border-top:1px solid rgba(255,255,255,.07); font-size:10px; line-height:1.5; color:#67788c;">Usage interne · données à vérifier · validation humaine</div>
+        </aside>
+
+        <div style="flex:1; display:flex; flex-direction:column; min-width:0;">
+          <header style="display:flex; align-items:center; justify-content:space-between; padding:14px 22px; border-bottom:1px solid #e2dccc; background:#fbfaf7;">
+            <div style="display:flex; align-items:baseline; gap:12px;">
+              <div style="font-family:'Spectral'; font-size:18px; font-weight:600; color:#16304f;">Tableau de bord</div>
+              <div style="font-size:11.5px; color:#9a8f7a;">20 juin 2026 · 17:35 · clôture provisoire</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="background:#fff; border:1px solid #e2dccc; border-radius:4px; padding:7px 11px; width:190px; color:#9a8f7a; font-size:12px;">Rechercher…</div>
+              <div style="width:30px; height:30px; border-radius:4px; background:#16304f; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600;">AG</div>
+            </div>
+          </header>
+
+          <div style="padding:16px 22px;">
+            <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#e2dccc; border:1px solid #e2dccc; border-radius:5px; overflow:hidden; margin-bottom:18px;">
+              <div style="background:#fbfaf7; padding:12px 14px;">
+                <div style="font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">Euro Stoxx 50</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 2px;">5 124,30</div>
+                <div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">+0,42 %</div>
+              </div>
+              <div style="background:#fbfaf7; padding:12px 14px;">
+                <div style="font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">S&amp;P 500</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 2px;">5 487,12</div>
+                <div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">+0,18 %</div>
+              </div>
+              <div style="background:#fbfaf7; padding:12px 14px;">
+                <div style="font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">Nasdaq</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 2px;">17 689,4</div>
+                <div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">+0,55 %</div>
+              </div>
+              <div style="background:#fbfaf7; padding:12px 14px;">
+                <div style="font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">CAC 40</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 2px;">7 612,80</div>
+                <div class="tnum" style="font-size:11.5px; font-weight:600; color:#9a3535;">−0,23 %</div>
+              </div>
+              <div style="background:#fbfaf7; padding:12px 14px;">
+                <div style="font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">ES Banks</div>
+                <div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 2px;">142,15</div>
+                <div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">+0,87 %</div>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1.35fr; gap:16px;">
+              <div style="background:#fbfaf7; border:1px solid #e2dccc; border-radius:5px; overflow:hidden;">
+                <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; padding:12px 15px; border-bottom:1px solid #e2dccc; background:#f4f1e9;">Alertes du jour</div>
+                <div style="display:flex; gap:9px; padding:9px 15px; border-bottom:1px solid #efe9dc;"><span style="width:3px;align-self:stretch;background:#9a3535;border-radius:2px;flex:none;"></span><div style="font-size:12px;color:#3a3d42;line-height:1.4;">CAC 40 sous la barrière — <b style="color:#16304f;">Phoenix Banques EU</b></div></div>
+                <div style="display:flex; gap:9px; padding:9px 15px; border-bottom:1px solid #efe9dc;"><span style="width:3px;align-self:stretch;background:#b06a1a;border-radius:2px;flex:none;"></span><div style="font-size:12px;color:#3a3d42;line-height:1.4;">Constatation J−3 — <b style="color:#16304f;">Autocall Luxe Monde</b></div></div>
+                <div style="display:flex; gap:9px; padding:9px 15px;"><span style="width:3px;align-self:stretch;background:#1d6f4c;border-radius:2px;flex:none;"></span><div style="font-size:12px;color:#3a3d42;line-height:1.4;">Rappel probable — <b style="color:#16304f;">Athéna Tech US</b></div></div>
+              </div>
+              <div style="background:#fbfaf7; border:1px solid #e2dccc; border-radius:5px; overflow:hidden;">
+                <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; padding:12px 15px; border-bottom:1px solid #e2dccc; background:#f4f1e9;">Autocalls à surveiller</div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr 1fr; gap:6px; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#9a8f7a; font-weight:600; padding:8px 15px; border-bottom:1px solid #e2dccc;"><span>Produit</span><span>Sous-jacent</span><span style="text-align:right;">Niveau</span><span style="text-align:right;">Statut</span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr 1fr; gap:6px; align-items:center; font-size:11.5px; padding:8px 15px; border-bottom:1px solid #efe9dc;"><span style="color:#16304f;font-weight:500;">Phoenix Banques EU</span><span style="color:#6b6e73;">ES Banks</span><span class="tnum" style="text-align:right;color:#3a3d42;">94,2 %</span><span style="text-align:right;"><span style="color:#9a3535;font-weight:600;">● Risque</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr 1fr; gap:6px; align-items:center; font-size:11.5px; padding:8px 15px; border-bottom:1px solid #efe9dc;"><span style="color:#16304f;font-weight:500;">Autocall Luxe Monde</span><span style="color:#6b6e73;">MSCI Lux</span><span class="tnum" style="text-align:right;color:#3a3d42;">101,8 %</span><span style="text-align:right;"><span style="color:#b06a1a;font-weight:600;">● Surveillance</span></span></div>
+                <div style="display:grid; grid-template-columns:1.6fr 1fr .9fr 1fr; gap:6px; align-items:center; font-size:11.5px; padding:8px 15px;"><span style="color:#16304f;font-weight:500;">Athéna Tech US</span><span style="color:#6b6e73;">Nasdaq 100</span><span class="tnum" style="text-align:right;color:#3a3d42;">112,4 %</span><span style="text-align:right;"><span style="color:#1d6f4c;font-weight:600;">● Rappel probable</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

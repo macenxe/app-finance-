@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#16304f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Conservateur">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; overscroll-behavior: none; }
+  .tnum { font-variant-numeric: tabular-nums; }
+  .hscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .hscroll::-webkit-scrollbar { display: none; }
+  .vscroll::-webkit-scrollbar { width: 0; }
+</style>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
+</helmet>
+
+<div style="height:100vh; display:flex; flex-direction:column; font-family:'IBM Plex Sans',system-ui,sans-serif; background:#fbfaf7; color:#3a3d42; overflow:hidden;">
+
+  <!-- ===== TOP HEADER ===== -->
+  <header style="flex:none; background:#16304f; color:#fff; padding:calc(env(safe-area-inset-top, 0px) + 14px) 18px 14px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:34px; height:34px; border-radius:9px; background:#c9a96a; color:#16304f; display:flex; align-items:center; justify-content:center; font-family:'Spectral'; font-size:20px; font-weight:700;">C</div>
+        <div>
+          <div style="font-family:'Spectral'; font-size:17px; font-weight:600; line-height:1.1;">Conservateur</div>
+          <div style="font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:#c9a96a;">App · Analyse</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:#9fb0c4; border:1px solid rgba(255,255,255,.18); padding:4px 8px; border-radius:20px;">Usage interne</div>
+        <div style="width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600;">AG</div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between;">
+      <div>
+        <div style="font-family:'Spectral'; font-size:24px; font-weight:600; line-height:1.15;">{{ title }}</div>
+        <div style="font-size:11.5px; color:#9fb0c4; margin-top:2px;">{{ subtitle }}</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SCROLL CONTENT ===== -->
+  <div class="vscroll" style="flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch;">
+
+    <!-- ===== DASHBOARD ===== -->
+    <sc-if value="{{ isDash }}" hint-placeholder-val="{{ true }}">
+    <div style="padding:16px 0 24px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; padding:0 18px; margin-bottom:10px;">
+        <div style="font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">Indices clés</div>
+        <div style="font-size:10.5px; color:#b5ab95;">à vérifier</div>
+      </div>
+      <div class="hscroll" style="display:flex; gap:10px; padding:0 18px 4px;">
+        <div style="flex:none; width:128px; background:#fff; border:1px solid #ece7dc; border-radius:9px; padding:13px;"><div style="font-size:11px; color:#6b6e73;">Euro Stoxx 50</div><div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 3px; white-space:nowrap;">5 124,30</div><div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">▲ +0,42 %</div></div>
+        <div style="flex:none; width:128px; background:#fff; border:1px solid #ece7dc; border-radius:9px; padding:13px;"><div style="font-size:11px; color:#6b6e73;">S&amp;P 500</div><div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 3px; white-space:nowrap;">5 487,12</div><div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">▲ +0,18 %</div></div>
+        <div style="flex:none; width:128px; background:#fff; border:1px solid #ece7dc; border-radius:9px; padding:13px;"><div style="font-size:11px; color:#6b6e73;">Nasdaq</div><div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 3px; white-space:nowrap;">17 689,4</div><div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">▲ +0,55 %</div></div>
+        <div style="flex:none; width:128px; background:#fff; border:1px solid #ece7dc; border-radius:9px; padding:13px;"><div style="font-size:11px; color:#6b6e73;">CAC 40</div><div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 3px; white-space:nowrap;">8 351,20</div><div class="tnum" style="font-size:11.5px; font-weight:600; color:#9a3535;">▼ −0,23 %</div></div>
+        <div style="flex:none; width:128px; background:#fff; border:1px solid #ece7dc; border-radius:9px; padding:13px;"><div style="font-size:11px; color:#6b6e73;">ES Banks</div><div class="tnum" style="font-family:'Spectral'; font-size:21px; font-weight:600; color:#16304f; margin:5px 0 3px; white-space:nowrap;">277,95</div><div class="tnum" style="font-size:11.5px; font-weight:600; color:#1d6f4c;">▲ +0,87 %</div></div>
+      </div>
+
+      <div style="padding:0 18px;">
+        <!-- taux -->
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px; margin-top:16px;">
+          <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; margin-bottom:12px;">Taux & banques centrales</div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px;">
+            <div><div style="font-size:10px; color:#6b6e73;">OAT 10a</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f; white-space:nowrap;">3,12 %</div></div>
+            <div><div style="font-size:10px; color:#6b6e73;">Bund 10a</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f; white-space:nowrap;">2,48 %</div></div>
+            <div><div style="font-size:10px; color:#6b6e73;">US 10a</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f; white-space:nowrap;">4,28 %</div></div>
+            <div><div style="font-size:10px; color:#6b6e73;">CMS 10a</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f; white-space:nowrap;">3,04 %</div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid #f1ece1;">
+            <div><div style="font-size:10px; color:#6b6e73;">Inflation €</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f;">2,1 %</div></div>
+            <div><div style="font-size:10px; color:#6b6e73;">BCE</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f;">2,25 %</div></div>
+            <div><div style="font-size:10px; color:#6b6e73;">Fed</div><div class="tnum" style="font-family:'Spectral'; font-size:17px; font-weight:600; color:#16304f;">4,38 %</div></div>
+          </div>
+        </div>
+
+        <!-- alertes -->
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px; margin-top:14px;">
+          <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; margin-bottom:8px;">Alertes du jour</div>
+          <div style="display:flex; gap:9px; padding:9px 0; border-bottom:1px solid #f1ece1;"><span style="width:7px;height:7px;border-radius:50%;background:#9a3535;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;line-height:1.45;"><b style="color:#16304f;">LC Athena Stellantis</b> — sous-jacent à 69,8 % du strike.</div></div>
+          <div style="display:flex; gap:9px; padding:9px 0; border-bottom:1px solid #f1ece1;"><span style="width:7px;height:7px;border-radius:50%;background:#b06a1a;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;line-height:1.45;"><b style="color:#16304f;">CMS Juillet 2030</b> — 1ère constatation dans 23 j.</div></div>
+          <div style="display:flex; gap:9px; padding:9px 0;"><span style="width:7px;height:7px;border-radius:50%;background:#1d6f4c;margin-top:4px;flex:none;"></span><div style="font-size:12.5px;line-height:1.45;"><b style="color:#16304f;">13 produits</b> en zone de rappel probable.</div></div>
+        </div>
+
+        <!-- autocalls watch -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin:18px 2px 10px;">
+          <div style="font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7a; font-weight:600;">Autocalls à surveiller</div>
+          <div onClick="{{ goProd }}" style="font-size:12px; color:#9a7b3c; font-weight:500;">Tout voir →</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:13px 14px; border-left:3px solid #9a3535;"><div style="display:flex; justify-content:space-between; align-items:center;"><div style="font-size:13px; font-weight:600; color:#16304f;">LC Athena Stellantis</div><span style="background:#fbeaea;color:#9a3535;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;">Risque</span></div><div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:6px;"><div style="font-size:11.5px; color:#6b6e73;">Stellantis · const. 16/11/2026</div><div class="tnum" style="font-size:13px; font-weight:600; color:#9a3535;">69,8 %</div></div></div>
+          <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:13px 14px; border-left:3px solid #b06a1a;"><div style="display:flex; justify-content:space-between; align-items:center;"><div style="font-size:13px; font-weight:600; color:#16304f;">LC Athena Capgemini</div><span style="background:#fbf2e3;color:#b06a1a;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;">Surveillance</span></div><div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:6px;"><div style="font-size:11.5px; color:#6b6e73;">Capgemini · const. 04/05/2027</div><div class="tnum" style="font-size:13px; font-weight:600; color:#b06a1a;">91,2 %</div></div></div>
+          <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:13px 14px; border-left:3px solid #1d6f4c;"><div style="display:flex; justify-content:space-between; align-items:center;"><div style="font-size:13px; font-weight:600; color:#16304f;">CAP 40 Février 2031</div><span style="background:#e8f1ec;color:#1d6f4c;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;">Rappel probable</span></div><div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:6px;"><div style="font-size:11.5px; color:#6b6e73;">ES Banks · const. 26/02/2027</div><div class="tnum" style="font-size:13px; font-weight:600; color:#1d6f4c;">101,8 %</div></div></div>
+          <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:13px 14px; border-left:3px solid #1d6f4c;"><div style="display:flex; justify-content:space-between; align-items:center;"><div style="font-size:13px; font-weight:600; color:#16304f;">LC Athena BNP 2030</div><span style="background:#e8f1ec;color:#1d6f4c;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;">Rappel probable</span></div><div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:6px;"><div style="font-size:11.5px; color:#6b6e73;">BNP Paribas · const. 20/07/2026</div><div class="tnum" style="font-size:13px; font-weight:600; color:#1d6f4c;">124,2 %</div></div></div>
+        </div>
+
+        <!-- events -->
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px; margin-top:14px;">
+          <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; margin-bottom:6px;">Prochains événements</div>
+          <div style="display:flex; gap:12px; padding:8px 0; border-bottom:1px solid #f1ece1;"><div class="tnum" style="font-size:11.5px; color:#9a8f7a; font-weight:600; width:50px; flex:none;">24 juin</div><div style="font-size:12.5px;">IFO climat des affaires — Allemagne</div></div>
+          <div style="display:flex; gap:12px; padding:8px 0; border-bottom:1px solid #f1ece1;"><div class="tnum" style="font-size:11.5px; color:#9a8f7a; font-weight:600; width:50px; flex:none;">02 juil</div><div style="font-size:12.5px;">Inflation flash zone euro (juin)</div></div>
+          <div style="display:flex; gap:12px; padding:8px 0; border-bottom:1px solid #f1ece1;"><div class="tnum" style="font-size:11.5px; color:#16304f; font-weight:600; width:50px; flex:none;">17 juil</div><div style="font-size:12.5px;">Réunion BCE — décision de taux</div></div>
+          <div style="display:flex; gap:12px; padding:8px 0;"><div class="tnum" style="font-size:11.5px; color:#16304f; font-weight:600; width:50px; flex:none;">30 juil</div><div style="font-size:12.5px;">Réunion Fed / FOMC</div></div>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===== PRODUITS ===== -->
+    <sc-if value="{{ isProd }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:14px 0 24px;">
+      <!-- search -->
+      <div style="padding:0 18px;">
+        <div style="display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #e6e0d2; border-radius:10px; padding:10px 13px; color:#9a8f7a; font-size:13px;">
+          <span style="font-size:14px;">⌕</span>
+          <input value="{{ q }}" onChange="{{ setQ }}" placeholder="ISIN, nom, sous-jacent…" style="border:none; outline:none; background:transparent; font-family:inherit; font-size:13px; color:#3a3d42; width:100%;" />
+        </div>
+      </div>
+      <!-- filter chips -->
+      <div class="hscroll" style="display:flex; gap:8px; padding:12px 18px;">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="4">
+          <div style="{{ c.style }}" onClick="{{ c.onClick }}">{{ c.label }}</div>
+        </sc-for>
+      </div>
+      <div style="padding:0 18px 8px; font-size:11.5px; color:#9a8f7a;">{{ shown }} produits sur {{ total }}</div>
+
+      <!-- product cards -->
+      <div style="padding:0 18px; display:flex; flex-direction:column; gap:11px;">
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="10">
+          <div style="{{ r.cardStyle }}">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+              <div style="min-width:0;">
+                <div style="font-size:14px; font-weight:600; color:#16304f; line-height:1.25;">{{ r.nom }}</div>
+                <div class="tnum" style="font-size:10.5px; color:#9a8f7a; margin-top:2px; letter-spacing:.02em;">{{ r.isin }} · {{ r.sj }}</div>
+              </div>
+              <span style="{{ r.badgeStyle }}">{{ r.statut }}</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:9px 6px; margin-top:11px;">
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">Coupon</div><div class="tnum" style="font-size:13px; font-weight:600; color:#3a3d42;">{{ r.coupon }}</div></div>
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">Niveau</div><div class="tnum" style="font-size:13px; font-weight:600; color:#3a3d42;">{{ r.niveau }}</div></div>
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">% strike</div><div class="tnum" style="{{ r.pctCardStyle }}">{{ r.pct }}</div></div>
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">B. autocall</div><div class="tnum" style="font-size:13px; color:#6b6e73;">{{ r.bAuto }}</div></div>
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">B. coupon</div><div class="tnum" style="font-size:13px; color:#6b6e73;">{{ r.bCoupon }}</div></div>
+              <div><div style="font-size:9.5px; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7a;">1ère const.</div><div class="tnum" style="font-size:13px; color:#6b6e73;">{{ r.constat }}</div></div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:11px; padding-top:10px; border-top:1px solid #f1ece1;">
+              <div class="tnum" style="font-size:11px; color:#9a8f7a;">Échéance {{ r.ech }}</div>
+              <div style="font-size:12px; color:#9a7b3c; font-weight:600;">Voir détail →</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="padding:14px 18px 0; font-size:10.5px; color:#b5ab95; line-height:1.5;">% strike = niveau / strike initial (indicatif). Produits CMS exprimés en taux. Données à vérifier.</div>
+    </div>
+    </sc-if>
+
+    <!-- ===== ALLOCATION ===== -->
+    <sc-if value="{{ isAlloc }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:16px 18px 24px;">
+      <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:16px;">
+        <div style="font-family:'Spectral'; font-size:15px; font-weight:600; color:#16304f; margin-bottom:7px;">Contexte économique</div>
+        <p style="font-size:12.5px; line-height:1.6; color:#4a4d52; margin:0; text-wrap:pretty;">Désinflation confirmée en zone euro (2,1 %), biais BCE accommodant mesuré. Croissance modérée mais résiliente. La Fed reste prudente face à une inflation collante. Environnement porteur pour les structures de rappel, sous réserve de la volatilité bancaire européenne.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:11px; margin-top:14px;">
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:14px;"><div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:7px;"><div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f;">Actions</div><span style="background:#e8f1ec; color:#1d6f4c; font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:3px; white-space:nowrap;">Favorable</span></div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0;">Indices proches des plus hauts. Préférence grandes capitalisations EU de qualité. Vigilance sur les banques (sous-jacents CAP).</p></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:14px;"><div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:7px;"><div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f;">Obligations</div><span style="background:#fbf2e3; color:#b06a1a; font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:3px; white-space:nowrap;">Neutre +</span></div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0;">Portage attractif sur le 10 ans souverain. Pentification favorable aux autocalls CMS.</p></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:14px;"><div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:7px;"><div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f;">Monétaire</div><span style="background:#f1eee6; color:#8a7f68; font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:3px; white-space:nowrap;">Rendement en baisse</span></div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0;">Rémunération orientée à la baisse avec l'assouplissement BCE. Redéploiement de la trésorerie longue à étudier.</p></div>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:14px; margin-top:14px;">
+        <div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f; margin-bottom:6px;">Risques macro</div>
+        <div style="display:flex; gap:9px; padding:7px 0; border-bottom:1px solid #f1ece1;"><span style="width:7px;height:7px;border-radius:50%;background:#9a3535;margin-top:4px;flex:none;"></span><div style="font-size:12px; color:#4a4d52; line-height:1.5;">Stress bancaire européen — impact direct sur les sous-jacents ES Banks.</div></div>
+        <div style="display:flex; gap:9px; padding:7px 0; border-bottom:1px solid #f1ece1;"><span style="width:7px;height:7px;border-radius:50%;background:#b06a1a;margin-top:4px;flex:none;"></span><div style="font-size:12px; color:#4a4d52; line-height:1.5;">Inflation US persistante retardant les baisses Fed.</div></div>
+        <div style="display:flex; gap:9px; padding:7px 0;"><span style="width:7px;height:7px;border-radius:50%;background:#b06a1a;margin-top:4px;flex:none;"></span><div style="font-size:12px; color:#4a4d52; line-height:1.5;">Tensions géopolitiques et énergie — volatilité ponctuelle.</div></div>
+      </div>
+
+      <div style="background:#f7f4ec; border:1px solid #ece2cd; border-radius:11px; padding:14px; margin-top:14px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:9px;"><div style="font-family:'Spectral'; font-size:14px; font-weight:600; color:#16304f;">Recommandations internes</div><span style="background:#fff; color:#9a7b3c; font-size:9px; font-weight:600; padding:3px 7px; border-radius:3px; border:1px solid #e3d6b6; text-transform:uppercase; letter-spacing:.05em;">Non personnalisées</span></div>
+        <div style="font-size:12px; color:#4a4d52; line-height:1.5; padding:5px 0; border-bottom:1px solid #ece2cd;"><b style="color:#16304f;">Surpondérer</b> les structures de taux (CMS) en cœur de rendement.</div>
+        <div style="font-size:12px; color:#4a4d52; line-height:1.5; padding:5px 0; border-bottom:1px solid #ece2cd;"><b style="color:#16304f;">Surveiller</b> l'exposition aux banques EU concentrée sur les CAP.</div>
+        <div style="font-size:12px; color:#4a4d52; line-height:1.5; padding:5px 0;"><b style="color:#16304f;">Préparer</b> le réemploi des capitaux issus des rappels (T3 2026).</div>
+        <div style="font-size:10.5px; color:#9a8f7a; margin-top:10px; padding-top:9px; border-top:1px solid #ece2cd; line-height:1.5;">Aide à l'analyse interne — ne constitue pas un conseil personnalisé. Validation humaine et étude d'adéquation requises.</div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===== VEILLE ===== -->
+    <sc-if value="{{ isVeille }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:14px 0 24px;">
+      <div class="hscroll" style="display:flex; gap:8px; padding:0 18px 14px;">
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#16304f; color:#fff;">Tout</div>
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#fff; color:#5b5e63; border:1px solid #e6e0d2;">BCE / Fed</div>
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#fff; color:#5b5e63; border:1px solid #e6e0d2;">Inflation & taux</div>
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#fff; color:#5b5e63; border:1px solid #e6e0d2;">Géopolitique</div>
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#fff; color:#5b5e63; border:1px solid #e6e0d2;">Immobilier</div>
+        <div style="flex:none; font-size:12px; font-weight:500; padding:6px 13px; border-radius:20px; background:#fff; color:#5b5e63; border:1px solid #e6e0d2;">Fiscalité</div>
+      </div>
+
+      <div style="padding:0 18px; display:flex; flex-direction:column; gap:12px;">
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:7px;"><span style="background:#eaf0f6; color:#16304f; font-size:9.5px; font-weight:600; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em;">BCE</span><span class="tnum" style="font-size:10.5px; color:#9a8f7a;">20 juin 2026</span></div><div style="font-family:'Spectral'; font-size:14.5px; font-weight:600; color:#16304f; line-height:1.3; margin-bottom:5px;">La BCE maintient son taux de dépôt à 2,25 %</div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0 0 10px;">Désinflation jugée « en bonne voie », biais prudent. Marché anticipe une dernière baisse au S2.</p><div style="font-size:11.5px; color:#9a7b3c; font-weight:600;">Résumer l'impact pour l'allocation →</div></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:7px;"><span style="background:#eaf0f6; color:#16304f; font-size:9.5px; font-weight:600; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em;">Fed</span><span class="tnum" style="font-size:10.5px; color:#9a8f7a;">19 juin 2026</span></div><div style="font-family:'Spectral'; font-size:14.5px; font-weight:600; color:#16304f; line-height:1.3; margin-bottom:5px;">La Fed laisse ses taux inchangés</div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0 0 10px;">FOMC reporte ses prévisions de baisse. 10 ans US à 4,28 %. Pression sur les sous-jacents tech.</p><div style="font-size:11.5px; color:#9a7b3c; font-weight:600;">Résumer l'impact pour l'allocation →</div></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:7px;"><span style="background:#f3eee2; color:#8a6d2e; font-size:9.5px; font-weight:600; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em;">Inflation</span><span class="tnum" style="font-size:10.5px; color:#9a8f7a;">18 juin 2026</span></div><div style="font-family:'Spectral'; font-size:14.5px; font-weight:600; color:#16304f; line-height:1.3; margin-bottom:5px;">Inflation zone euro stable à 2,1 % en mai</div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0 0 10px;">Services toujours élevés. Cible des 2 % en approche, soutenant la trajectoire de taux.</p><div style="font-size:11.5px; color:#9a7b3c; font-weight:600;">Résumer l'impact pour l'allocation →</div></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:7px;"><span style="background:#f0ecec; color:#8a4a4a; font-size:9.5px; font-weight:600; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em;">Géopolitique</span><span class="tnum" style="font-size:10.5px; color:#9a8f7a;">17 juin 2026</span></div><div style="font-family:'Spectral'; font-size:14.5px; font-weight:600; color:#16304f; line-height:1.3; margin-bottom:5px;">Tensions commerciales : volatilité accrue sur les actions</div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0 0 10px;">Nouveaux droits de douane évoqués. Surveillance des barrières de protection.</p><div style="font-size:11.5px; color:#9a7b3c; font-weight:600;">Résumer l'impact pour l'allocation →</div></div>
+        <div style="background:#fff; border:1px solid #ece7dc; border-radius:11px; padding:15px;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:7px;"><span style="background:#efeae0; color:#7a6a45; font-size:9.5px; font-weight:600; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.05em;">Fiscalité</span><span class="tnum" style="font-size:10.5px; color:#9a8f7a;">13 juin 2026</span></div><div style="font-family:'Spectral'; font-size:14.5px; font-weight:600; color:#16304f; line-height:1.3; margin-bottom:5px;">Assurance-vie & transmission : rappel des abattements</div><p style="font-size:12px; line-height:1.5; color:#5b5e63; margin:0 0 10px;">Cadrage interne fiscalité patrimoniale 2026. Aucun changement majeur à ce jour — à confirmer.</p><div style="font-size:11.5px; color:#9a7b3c; font-weight:600;">Résumer l'impact pour l'allocation →</div></div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- compliance footer -->
+    <div style="padding:16px 18px 8px;">
+      <div style="display:flex; gap:9px; align-items:flex-start; background:#f4f1e9; border:1px solid #ece2cd; border-radius:10px; padding:12px 14px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#c9a96a;margin-top:4px;flex:none;"></span>
+        <div style="font-size:10.5px; line-height:1.55; color:#8a7f68;"><b style="color:#6b6253;">Outil interne d'aide à l'analyse.</b> Données à vérifier · Validation humaine obligatoire · Aucune recommandation personnalisée automatisée · Usage interne uniquement.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOTTOM TAB BAR ===== -->
+  <nav style="flex:none; display:flex; background:#fff; border-top:1px solid #e6e0d2; padding-bottom:env(safe-area-inset-bottom, 0px);">
+    <div style="{{ tabDash }}" onClick="{{ goDash }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+      <span>Marchés</span>
+    </div>
+    <div style="{{ tabProd }}" onClick="{{ goProd }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/></svg>
+      <span>Produits</span>
+    </div>
+    <div style="{{ tabAlloc }}" onClick="{{ goAlloc }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg>
+      <span>Allocation</span>
+    </div>
+    <div style="{{ tabVeille }}" onClick="{{ goVeille }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+      <span>Veille</span>
+    </div>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}">
+class Component extends DCLogic {
+  state = { page: 'dash', filter: 'tous', q: '' };
+
+  get products() {
+    const E = 'ES Banks';
+    return [
+      { isin:'FR001400KP78', nom:'Conservateur Autocall CAC 90% Déc 2026', sj:'CAC 40', coupon:'6 %', strike:'7 346', niveau:'8 351', bAuto:'90 %', bCoupon:'—', constat:'1er j./mois*', ech:'15/12/2026', type:'equity', strikeNum:7346, niveauNum:8351, zoneAutocall:'NON' },
+      { isin:'FRF0000001M7', nom:'CAP 40 Août 2030', sj:E, coupon:'7 %', strike:'215,10', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'29/07/2026', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FRF0000001K1', nom:'CAP 50 Août 2030', sj:E, coupon:'6 %', strike:'215,10', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'29/07/2026', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FRF0000001L9', nom:'CAP 60 Août 2030', sj:E, coupon:'5 %', strike:'215,10', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'29/07/2026', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014011HA6', nom:'CAP 40 Décembre 2030', sj:E, coupon:'7 %', strike:'243,31', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'30/11/2026', ech:'16/12/2030', type:'equity', strikeNum:243.31, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014011HB4', nom:'CAP 50 Décembre 2030', sj:E, coupon:'6 %', strike:'243,31', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'30/11/2026', ech:'16/12/2030', type:'equity', strikeNum:243.31, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014011HC2', nom:'CAP 60 Décembre 2030', sj:E, coupon:'5 %', strike:'243,31', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'30/11/2026', ech:'16/12/2030', type:'equity', strikeNum:243.31, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014013KJ7', nom:'CAP 40 Février 2031', sj:E, coupon:'7 %', strike:'273,13', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'26/02/2027', ech:'17/03/2031', type:'equity', strikeNum:273.13, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014013KI9', nom:'CAP 50 Février 2031', sj:E, coupon:'6 %', strike:'273,13', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'26/02/2027', ech:'17/03/2031', type:'equity', strikeNum:273.13, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR0014013KK5', nom:'CAP 60 Février 2031', sj:E, coupon:'5 %', strike:'273,13', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'26/02/2027', ech:'17/03/2031', type:'equity', strikeNum:273.13, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FRF0000002N3', nom:'CAP 40 Avril 2031', sj:E, coupon:'7 %', strike:'257,72', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'27/04/2027', ech:'12/05/2031', type:'equity', strikeNum:257.72, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FRF0000002M5', nom:'CAP 50 Avril 2031', sj:E, coupon:'6 %', strike:'257,72', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'27/04/2027', ech:'12/05/2031', type:'equity', strikeNum:257.72, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FRF0000002O1', nom:'CAP 60 Avril 2031', sj:E, coupon:'5 %', strike:'257,72', niveau:'277,95', bAuto:'100 %', bCoupon:'80 %', constat:'27/04/2027', ech:'12/05/2031', type:'equity', strikeNum:257.72, niveauNum:277.95, zoneAutocall:'OUI' },
+      { isin:'FR1459AB7782', nom:'Conservateur Autocall CMS Juillet 2030', sj:'CMS 10 ans', coupon:'4,25 %', strike:'NA', niveau:'3,04 %', bAuto:'2,50 %', bCoupon:'3,00 %', constat:'13/07/2026', ech:'25/07/2030', type:'cms', zoneAutocall:'NON' },
+      { isin:'FR00140108S4', nom:'Conservateur Autocall CMS Octobre 2030', sj:'CMS 10 ans', coupon:'4,00 %', strike:'NA', niveau:'3,04 %', bAuto:'2,25 %', bCoupon:'2,75 %', constat:'16/10/2026', ech:'30/10/2030', type:'cms', zoneAutocall:'NON' },
+      { isin:'FR0014012R49', nom:'Conservateur Autocall CMS Janvier 2031', sj:'CMS 10 ans', coupon:'4,00 %', strike:'NA', niveau:'3,04 %', bAuto:'2,20 %', bCoupon:'2,85 %', constat:'18/01/2027', ech:'03/02/2031', type:'cms', zoneAutocall:'NON' },
+      { isin:'FR0014014XL4', nom:'Conservateur Autocall CMS Avril 2031', sj:'CMS 10 ans', coupon:'4,00 %', strike:'NA', niveau:'3,04 %', bAuto:'2,50 %', bCoupon:'3,00 %', constat:'12/04/2027', ech:'02/05/2031', type:'cms', zoneAutocall:'NON' },
+      { isin:'FRF0000001C8', nom:'LC Athena BNP Juillet 2030', sj:'BNP Paribas', coupon:'10 %', strike:'77,84', niveau:'96,69', bAuto:'100 %', bCoupon:'NA', constat:'20/07/2026', ech:'31/07/2030', type:'equity', strikeNum:77.84, niveauNum:96.69, zoneAutocall:'OUI' },
+      { isin:'FRBCP1260215', nom:'LC Athena Stellantis Novembre 2030', sj:'Stellantis', coupon:'11 %', strike:'8,45', niveau:'5,90', bAuto:'100 %', bCoupon:'NA', constat:'16/11/2026', ech:'28/11/2030', type:'equity', strikeNum:8.45, niveauNum:5.90, zoneAutocall:'NON' },
+      { isin:'FR0014015OJ4', nom:'LC Athena Capgemini Mai 2031', sj:'Capgemini', coupon:'10 %', strike:'106,10', niveau:'96,72', bAuto:'100 %', bCoupon:'NA', constat:'04/05/2027', ech:'12/05/2031', type:'equity', strikeNum:106.10, niveauNum:96.72, zoneAutocall:'NON' },
+    ];
+  }
+
+  computed() {
+    const tone = {
+      green: { background:'#e8f1ec', color:'#1d6f4c' },
+      orange:{ background:'#fbf2e3', color:'#b06a1a' },
+      red:   { background:'#fbeaea', color:'#9a3535' },
+    };
+    const pctColor = { green:'#1d6f4c', orange:'#b06a1a', red:'#9a3535' };
+    const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });
+    return this.products.map(p => {
+      let k;
+      if (p.zoneAutocall === 'OUI') k = 'green';
+      else if (p.type === 'equity' && (p.niveauNum / p.strikeNum) < 0.75) k = 'red';
+      else k = 'orange';
+      const label = k === 'green' ? 'Rappel probable' : (k === 'red' ? 'Risque' : 'Surveillance');
+      const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
+      const col = p.type === 'equity' ? pctColor[k] : '#9a8f7a';
+      return Object.assign({}, p, {
+        k, statut: label, pct,
+        badgeStyle: Object.assign({ fontSize:'10px', fontWeight:600, padding:'3px 9px', borderRadius:'3px', whiteSpace:'nowrap', flex:'none' }, tone[k]),
+        pctCardStyle: 'font-size:13px; font-weight:700; color:' + col + ';',
+        cardStyle: { background:'#fff', border:'1px solid #ece7dc', borderRadius:'13px', padding:'14px', borderLeft:'3px solid ' + tone[k].color },
+      });
+    });
+  }
+
+  renderVals() {
+    const page = this.state.page;
+    const all = this.computed();
+    const f = this.state.filter;
+    const q = (this.state.q || '').trim().toLowerCase();
+    let rows = all.filter(r => f === 'tous' || r.k === f);
+    if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
+    const count = k => all.filter(r => r.k === k).length;
+
+    const chip = (key,label) => {
+      const active = f === key;
+      return {
+        key, label,
+        onClick: () => this.setState({ filter:key }),
+        style: { flex:'none', cursor:'pointer', fontSize:'12px', fontWeight:500, padding:'7px 13px', borderRadius:'20px', whiteSpace:'nowrap',
+          border:'1px solid '+(active ? '#16304f' : '#e6e0d2'),
+          background: active ? '#16304f' : '#fff', color: active ? '#fff' : '#5b5e63' },
+      };
+    };
+
+    const tab = (key) => {
+      const active = page === key;
+      return { display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'3px',
+        flex:'1', padding:'9px 0 7px', cursor:'pointer', fontSize:'10px', fontWeight: active ? 600 : 500,
+        color: active ? '#16304f' : '#9aa0a6', borderTop:'2px solid ' + (active ? '#c9a96a' : 'transparent') };
+    };
+
+    const meta = {
+      dash:   { title:'Marchés',     sub:'Synthèse · 20 juin 2026, 17:35' },
+      prod:   { title:'Produits',    sub:all.length + ' autocalls suivis · à vérifier' },
+      alloc:  { title:'Allocation',  sub:'Lecture macro interne · non personnalisée' },
+      veille: { title:'Veille',      sub:'Actualités marchés & patrimoine' },
+    }[page];
+
+    return {
+      title: meta.title, subtitle: meta.sub,
+      isDash: page === 'dash', isProd: page === 'prod', isAlloc: page === 'alloc', isVeille: page === 'veille',
+      rows, total: all.length, shown: rows.length,
+      cGreen: count('green'), cOrange: count('orange'), cRed: count('red'),
+      chips: [ chip('tous','Tous ('+all.length+')'), chip('green','Rappel'), chip('orange','Surveillance'), chip('red','Risque') ],
+      q: this.state.q,
+      setQ: (e) => this.setState({ q: e.target.value }),
+      goDash: () => this.setState({ page:'dash' }),
+      goProd: () => this.setState({ page:'prod' }),
+      goAlloc: () => this.setState({ page:'alloc' }),
+      goVeille: () => this.setState({ page:'veille' }),
+      tabDash: tab('dash'), tabProd: tab('prod'), tabAlloc: tab('alloc'), tabVeille: tab('veille'),
+    };
+  }
+}
+</script>
+</body>
+</html>

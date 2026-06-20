@@ -12,5 +12,8 @@ dist/
 # Variables d'environnement (clés API, etc.)
 .env
 
+# Déploiement Vercel
+.vercel
+
 # Système
 .DS_Store
