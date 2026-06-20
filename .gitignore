@@ -1,0 +1,16 @@
+# Dépendances installées
+node_modules/
+
+# Code compilé
+dist/
+
+# Base de données SQLite locale
+*.db
+*.db-shm
+*.db-wal
+
+# Variables d'environnement (clés API, etc.)
+.env
+
+# Système
+.DS_Store
