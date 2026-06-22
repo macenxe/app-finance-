@@ -22,7 +22,7 @@ Chacun travaille dans son dossier. Les conflits sont donc quasi inexistants.
 cd back
 npm install      # à faire une seule fois
 npm run dev      # lance le back en mode développement
-```
+``` 
 
 ## Workflow Git
 
