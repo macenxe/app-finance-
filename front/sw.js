@@ -1,6 +1,6 @@
-const CACHE = 'conservateur-v1';
+const CACHE = 'conservateur-v6';
 const ASSETS = [
-  './index.html', './style.css', './data.js', './pages.js', './app.js', './manifest.json',
+  './index.html', './style.css', './data.js', './api.js', './pages.js', './app.js', './manifest.json',
 ];
 
 self.addEventListener('install', e => {
@@ -15,8 +15,18 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
+// Network-first : on tente le réseau, on tombe sur le cache seulement si hors ligne.
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request))
+    fetch(e.request)
+      .then(response => {
+        if (response.ok) {
+          const clone = response.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+        }
+        return response;
+      })
+      .catch(() => caches.match(e.request))
   );
 });

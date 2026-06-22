@@ -1,39 +1,49 @@
-// Trois familles de données échangées entre le front et le back.
-// Les champs sont provisoires et seront affinés plus tard.
+// Types partagés front/back — version étendue
 
-// --- 1. Produit structuré : saisi à la main et stocké en base ---
+// --- 1. Produit structuré ---
 
-export type TypeBarriere = 'europeenne' | 'americaine' | 'continue';
+export type TypeProduit = 'equity' | 'cms';
 
 export interface ProduitStructure {
   id: number;
+  isin: string;
   nom: string;
-  sousJacent: string;
-  strike: number;
-  barriere: number;
-  typeBarriere: TypeBarriere;
-  echeance: string; // date au format ISO, ex. '2028-06-20'
-  coupon: number; // en pourcentage, ex. 8 pour 8 %
+  sousJacent: string;        // ticker Yahoo Finance
+  sousJacentLabel: string;   // nom lisible affiché à l'écran
+  typeProduit: TypeProduit;
+  strike: number | null;     // null pour les CMS (pas de strike en cours)
+  barriereCoupon: number | null;   // seuil de versement du coupon (null si N/A)
+  barriereAutocall: number | null; // seuil de rappel automatique
+  echeance: string;          // ISO date, ex. '2030-07-25'
+  constat: string;           // libellé de la prochaine date de constatation
+  coupon: number;            // en %, ex. 8 pour 8 %
 }
 
-// Produit avant insertion : sans id, qui est généré par la base.
 export type NouveauProduit = Omit<ProduitStructure, 'id'>;
 
-// --- 2. Cours de marché : récupéré au fournisseur à chaque rafraîchissement ---
+// --- 2. Cours de marché ---
 
 export interface CoursMarche {
   sousJacent: string;
   dernierCours: number;
-  heureCours: string; // date-heure au format ISO
+  heureCours: string;      // ISO datetime
+  variationPct?: number;   // % de variation journalière (non stocké en DB)
 }
 
-// --- 3. Indicateurs calculés : produits par le back, non stockés ---
+// --- 3. Indicateurs calculés ---
 
-export type StatutBarriere = 'intacte' | 'franchie';
+export type StatutZone = 'rappel_probable' | 'surveillance' | 'risque';
 
 export interface IndicateursProduit {
   produitId: number;
-  distanceStrike: number; // écart en %, (cours - strike) / strike * 100
-  distanceBarriere: number; // écart en %, (cours - barrière) / barrière * 100
-  statutBarriere: StatutBarriere;
+  pctStrike: number | null;      // (cours - strike) / strike * 100, null si CMS
+  zoneAutocall: boolean;         // cours >= barriereAutocall
+  statutZone: StatutZone;
+}
+
+// --- 4. Réponse enrichie (produit + cours + indicateurs) ---
+
+export interface ProduitEnrichi extends ProduitStructure {
+  cours: CoursMarche | null;
+  indicateurs: IndicateursProduit | null;
 }

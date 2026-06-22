@@ -1,7 +1,8 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
-function renderDashboard(indices, produits) {
+function renderDashboard(indices, produits, taux) {
+  taux = taux || TAUX;
   // Priorité d'affichage : risque > surveillance > rappel probable
   const top6 = [...produits]
     .sort((a, b) => {
@@ -60,7 +61,7 @@ function renderDashboard(indices, produits) {
         <div class="card p-18">
           <div class="card-title mb-12">Taux & obligations</div>
           <div class="taux-grid">
-            ${TAUX.map(t => `
+            ${taux.map(t => `
             <div>
               <div class="taux-item-name">${t.nom}</div>
               <div class="taux-val tnum">${t.valeur}</div>
@@ -156,6 +157,7 @@ function renderProduits(produits, state) {
           <input id="prod-search" placeholder="ISIN, nom, sous-jacent…" value="${escHtml(state.q||'')}"
                  oninput="App.prodSearch(this.value)">
         </div>
+        <button class="btn-primary" onclick="App.ouvrirFormulaire()">+ Ajouter un produit</button>
         <button class="btn-secondary">Export PDF</button>
       </div>
     </header>
@@ -198,7 +200,7 @@ function renderProduits(produits, state) {
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
-            <span class="col-detail">Détail</span>
+            <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
           </div>`).join('')}
         </div>
       </div>
@@ -306,6 +308,163 @@ function renderVeille() {
           <p class="veille-corps">${v.corps}</p>
           <div class="veille-link">Résumer l'impact pour l'allocation →</div>
         </div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderDetail(produit) {
+  const typLabel = produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
+  const canDelete = produit.id != null;
+
+  return `
+  <div>
+    <header class="page-header">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <button class="btn-back" onclick="App.fermerDetail()">← Retour</button>
+        <div>
+          <div class="page-title">${escHtml(produit.nom)}</div>
+          <div class="page-sub">${escHtml(produit.isin)} · ${typLabel}</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        ${canDelete
+          ? `<button class="btn-danger" onclick="App.supprimerProduit(${produit.id})">Supprimer ce produit</button>`
+          : `<span class="detail-hint">Suppression disponible avec les données API</span>`}
+      </div>
+    </header>
+
+    <div style="padding:18px 30px 40px;">
+      <div class="detail-status-row">
+        <span class="badge ${produit.k} badge-lg">${produit.statut}</span>
+        ${produit.zoneAutocall === 'OUI' ? `<span class="detail-autocall-tag">Zone autocall franchie</span>` : ''}
+      </div>
+
+      <div class="detail-grid">
+        <div class="card p-18">
+          <div class="card-title mb-12">Identification</div>
+          <div class="detail-rows">
+            <div class="detail-row"><span class="detail-key">Code ISIN</span><span class="detail-val tnum">${escHtml(produit.isin)}</span></div>
+            <div class="detail-row"><span class="detail-key">Nom commercial</span><span class="detail-val">${escHtml(produit.nom)}</span></div>
+            <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(produit.sj)}</span></div>
+            <div class="detail-row"><span class="detail-key">Type de produit</span><span class="detail-val">${typLabel}</span></div>
+            <div class="detail-row"><span class="detail-key">Coupon annuel</span><span class="detail-val tnum">${escHtml(produit.coupon)}</span></div>
+          </div>
+        </div>
+
+        <div class="card p-18">
+          <div class="card-title mb-12">Niveaux de marché</div>
+          <div class="detail-rows">
+            ${produit.type === 'equity' ? `
+            <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(produit.strike)}</span></div>
+            <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>
+            <div class="detail-row">
+              <span class="detail-key">% du strike</span>
+              <span class="detail-val tnum" style="font-weight:600;color:${produit.k==='red'?'#9a3535':produit.k==='orange'?'#b06a1a':'#1d6f4c'};">${escHtml(produit.pct)}</span>
+            </div>` : `
+            <div class="detail-row"><span class="detail-key">Taux CMS 10 ans</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>`}
+            <div class="detail-row"><span class="detail-key">Barrière autocall</span><span class="detail-val tnum">${escHtml(produit.bAuto)}</span></div>
+            <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(produit.bCoupon)}</span></div>
+            <div class="detail-row">
+              <span class="detail-key">Zone autocall</span>
+              <span class="detail-val">${produit.zoneAutocall === 'OUI' ? '<span style="color:#1d6f4c;font-weight:600;">OUI ✓</span>' : 'NON'}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-18">
+          <div class="card-title mb-12">Dates clés</div>
+          <div class="detail-rows">
+            <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(produit.constat)}</span></div>
+            <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(produit.ech)}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
+    </div>
+  </div>`;
+}
+
+function renderFormulaireAjout() {
+  return `
+  <div class="modal-overlay" onclick="if(event.target===this)App.fermerFormulaire()">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title">Ajouter un produit structuré</div>
+        <button class="modal-close" onclick="App.fermerFormulaire()">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-ajout" onsubmit="App.soumettreFormulaire(event)">
+          <div class="form-section-label">Identification</div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="f-isin">Code ISIN <span class="form-req">*</span></label>
+              <input id="f-isin" name="isin" placeholder="FR001400XXXX" required maxlength="12" style="text-transform:uppercase;">
+            </div>
+            <div class="form-field">
+              <label for="f-type">Type de produit <span class="form-req">*</span></label>
+              <select id="f-type" name="typeProduit" onchange="App.toggleStrikeField(this.value)">
+                <option value="equity">Actions (equity)</option>
+                <option value="cms">Taux (CMS)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="f-nom">Nom commercial <span class="form-req">*</span></label>
+            <input id="f-nom" name="nom" placeholder="Ex : Conservateur Autocall CAC 90% Déc 2026" required>
+          </div>
+
+          <div class="form-section-label">Sous-jacent</div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="f-sj">Ticker Yahoo Finance <span class="form-req">*</span></label>
+              <input id="f-sj" name="sousJacent" placeholder="Ex : ^STOXX50E, SX7E.PA" required>
+            </div>
+            <div class="form-field">
+              <label for="f-sjlabel">Libellé affiché <span class="form-req">*</span></label>
+              <input id="f-sjlabel" name="sousJacentLabel" placeholder="Ex : Euro Stoxx 50" required>
+            </div>
+          </div>
+
+          <div class="form-section-label">Caractéristiques financières</div>
+          <div class="form-grid-3">
+            <div class="form-field">
+              <label for="f-coupon">Coupon (%) <span class="form-req">*</span></label>
+              <input id="f-coupon" name="coupon" type="number" step="0.01" min="0" placeholder="6.00" required>
+            </div>
+            <div class="form-field" id="field-strike">
+              <label for="f-strike">Strike initial</label>
+              <input id="f-strike" name="strike" type="number" step="0.01" placeholder="7 346">
+            </div>
+            <div class="form-field">
+              <label for="f-bauto">Barrière autocall (%) <span class="form-req">*</span></label>
+              <input id="f-bauto" name="barriereAutocall" type="number" step="0.01" min="0" placeholder="100" required>
+            </div>
+            <div class="form-field">
+              <label for="f-bcoupon">Barrière coupon (%)</label>
+              <input id="f-bcoupon" name="barriereCoupon" type="number" step="0.01" min="0" placeholder="80">
+            </div>
+          </div>
+
+          <div class="form-section-label">Dates</div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="f-constat">Prochaine constatation <span class="form-req">*</span></label>
+              <input id="f-constat" name="constat" placeholder="Ex : 13/07/2026" required>
+            </div>
+            <div class="form-field">
+              <label for="f-ech">Échéance finale <span class="form-req">*</span></label>
+              <input id="f-ech" name="echeance" type="date" required>
+            </div>
+          </div>
+
+          <div id="form-error" class="form-error" style="display:none;"></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="App.fermerFormulaire()">Annuler</button>
+        <button type="submit" form="form-ajout" class="btn-primary" id="form-submit">Enregistrer le produit</button>
       </div>
     </div>
   </div>`;
