@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16304f">
+  <title>Conservateur · App Analyse</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+  <div id="app">
+    <!-- ── Sidebar ── -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">Conservateur</div>
+        <div class="sidebar-sub">App · Analyse</div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sidebar-user">
+        <div class="user-avatar">AG</div>
+        <div>
+          <div class="user-name">A. Gérard</div>
+          <div class="user-role">Agent général · Patrimoine</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Main ── -->
+    <div id="main">
+      <div id="content" class="scroll"></div>
+      <footer id="footer">
+        <span class="footer-dot"></span>
+        <span><b style="color:#6b6253;">Outil interne d'aide à l'analyse.</b> Données à vérifier · Validation humaine obligatoire · Aucune recommandation personnalisée automatisée · Usage interne uniquement.</span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./pages.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

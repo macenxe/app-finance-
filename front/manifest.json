@@ -1,0 +1,10 @@
+{
+  "name": "Conservateur App Analyse",
+  "short_name": "Conservateur",
+  "description": "Suivi de produits structurés — usage interne",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#16304f",
+  "theme_color": "#16304f",
+  "icons": []
+}
