@@ -3,7 +3,7 @@ import { serve } from '@hono/node-server';
 import { cors } from 'hono/cors';
 import { ouvrirBase, listerProduits, enregistrerCours, lireCours, listerCours } from './db';
 import { calculerIndicateurs } from './calc';
-import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, TICKERS_PRODUITS } from './indices';
+import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, recupererTauxBDF, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, BDF_TAUX, TICKERS_PRODUITS } from './indices';
 import { seederBase } from './seed';
 import { ProduitEnrichi } from './types';
 
@@ -73,20 +73,27 @@ app.get('/api/produits', async (c) => {
 app.get('/api/taux', async (c) => {
   const db = ouvrirBase();
   const fredKey = process.env.FRED_API_KEY ?? '';
+  const bdfKey  = process.env.BDF_API_KEY  ?? '';
 
   // Table de correspondance sousJacent → nom affichable
   const nomMap: Record<string, string> = {};
-  TAUX_DASHBOARD.forEach((t) => { nomMap[t.ticker]    = t.nom; });
-  FRED_TAUX.forEach((t)      => { nomMap[t.seriesId]  = t.nom; });
+  TAUX_DASHBOARD.forEach((t) => { nomMap[t.ticker]   = t.nom; });
+  FRED_TAUX.forEach((t)      => { nomMap[t.seriesId] = t.nom; });
+  BDF_TAUX.forEach((t)       => { nomMap[t.seriesId] = t.nom; });
 
-  const allIds = [...TAUX_DASHBOARD.map((t) => t.ticker), ...FRED_TAUX.map((t) => t.seriesId)];
+  const allIds = [
+    ...TAUX_DASHBOARD.map((t) => t.ticker),
+    ...FRED_TAUX.map((t) => t.seriesId),
+    ...BDF_TAUX.map((t) => t.seriesId),
+  ];
 
   try {
-    const [coursYahoo, coursFred] = await Promise.all([
+    const [coursYahoo, coursFred, coursBdf] = await Promise.all([
       recupererTaux(),
       fredKey ? recupererTauxFRED(fredKey) : Promise.resolve([]),
+      bdfKey  ? recupererTauxBDF(bdfKey)   : Promise.resolve([]),
     ]);
-    const cours = [...coursYahoo, ...coursFred];
+    const cours = [...coursYahoo, ...coursFred, ...coursBdf];
     for (const cr of cours) enregistrerCours(db, cr);
     return c.json(cours.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent })));
   } catch {

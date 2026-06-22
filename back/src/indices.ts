@@ -39,6 +39,48 @@ export async function recupererTauxFRED(apiKey: string): Promise<CoursMarche[]> 
   return resultats;
 }
 
+const BDF_BASE = 'https://webstat.banque-france.fr/api/explore/v2.1/catalog/datasets/observations/exports/json';
+
+// TEC10 — Taux de l'Echéance Constante 10 ans (Banque de France, quotidien)
+// C'est l'indice de référence des autocalls CMS français.
+export const BDF_TAUX: { seriesId: string; nom: string }[] = [
+  { seriesId: 'FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA', nom: 'CMS 10 ans' },
+];
+
+export async function recupererTauxBDF(apiKey: string): Promise<CoursMarche[]> {
+  const resultats: CoursMarche[] = [];
+  for (const serie of BDF_TAUX) {
+    try {
+      const params = new URLSearchParams({
+        select: 'time_period_start,obs_value',
+        where:  `series_key='${serie.seriesId}'`,
+        order_by: 'time_period_start desc',
+        limit: '10',
+        apikey: apiKey,
+      });
+      const resp = await fetch(`${BDF_BASE}?${params}`);
+      if (!resp.ok) continue;
+      const data = await resp.json() as { time_period_start: string; obs_value: number | null }[];
+      const valides = data.filter((o) => o.obs_value !== null);
+      if (valides.length === 0) continue;
+      const dernierCours = valides[0].obs_value as number;
+      const precedent    = valides.length > 1 ? (valides[1].obs_value as number) : null;
+      const variationPct = (precedent && precedent !== 0)
+        ? (dernierCours - precedent) / precedent * 100
+        : undefined;
+      resultats.push({
+        sousJacent:   serie.seriesId,
+        dernierCours,
+        heureCours:   new Date(valides[0].time_period_start).toISOString(),
+        variationPct,
+      });
+    } catch {
+      // série indisponible, on ignore
+    }
+  }
+  return resultats;
+}
+
 // Indices de marché suivis dans le dashboard
 export const INDICES_DASHBOARD: { ticker: string; nom: string }[] = [
   { ticker: '^STOXX50E', nom: 'Euro Stoxx 50'    },
