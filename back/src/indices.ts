@@ -3,6 +3,42 @@ import { CoursMarche } from './types';
 
 const yahooFinance = new YahooFinance({ suppressNotices: ['yahooSurvey'] });
 
+const FRED_BASE = 'https://api.stlouisfed.org/fred/series/observations';
+
+// Taux OAT et Bund via FRED (données mensuelles ECB, décalage ~1 mois)
+export const FRED_TAUX: { seriesId: string; nom: string }[] = [
+  { seriesId: 'IRLTLT01FRM156N', nom: 'OAT 10 ans'  },
+  { seriesId: 'IRLTLT01DEM156N', nom: 'Bund 10 ans' },
+];
+
+export async function recupererTauxFRED(apiKey: string): Promise<CoursMarche[]> {
+  const resultats: CoursMarche[] = [];
+  for (const serie of FRED_TAUX) {
+    try {
+      const url = `${FRED_BASE}?series_id=${serie.seriesId}&api_key=${apiKey}&sort_order=desc&limit=2&file_type=json`;
+      const resp = await fetch(url);
+      if (!resp.ok) continue;
+      const data = await resp.json() as { observations: { date: string; value: string }[] };
+      const valides = data.observations.filter((o) => o.value !== '.' && o.value !== 'NA');
+      if (valides.length === 0) continue;
+      const dernierCours = parseFloat(valides[0].value);
+      const precedent    = valides.length > 1 ? parseFloat(valides[1].value) : null;
+      const variationPct = (precedent && precedent !== 0)
+        ? (dernierCours - precedent) / precedent * 100
+        : undefined;
+      resultats.push({
+        sousJacent:   serie.seriesId,
+        dernierCours,
+        heureCours:   new Date(valides[0].date).toISOString(),
+        variationPct,
+      });
+    } catch {
+      // série indisponible, on ignore
+    }
+  }
+  return resultats;
+}
+
 // Indices de marché suivis dans le dashboard
 export const INDICES_DASHBOARD: { ticker: string; nom: string }[] = [
   { ticker: '^STOXX50E', nom: 'Euro Stoxx 50'    },

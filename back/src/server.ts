@@ -3,7 +3,7 @@ import { serve } from '@hono/node-server';
 import { cors } from 'hono/cors';
 import { ouvrirBase, listerProduits, enregistrerCours, lireCours, listerCours } from './db';
 import { calculerIndicateurs } from './calc';
-import { recupererIndices, recupererTaux, recupererCours, INDICES_DASHBOARD, TAUX_DASHBOARD, TICKERS_PRODUITS } from './indices';
+import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, TICKERS_PRODUITS } from './indices';
 import { seederBase } from './seed';
 import { ProduitEnrichi } from './types';
 
@@ -69,25 +69,29 @@ app.get('/api/produits', async (c) => {
 });
 
 // ── GET /api/taux ────────────────────────────────────────────────────────────
-// Renvoie les taux obligataires 10 ans (OAT, Bund, US) via Yahoo Finance.
+// US 10 ans via Yahoo Finance (^TNX) ; OAT + Bund via FRED (mensuel ECB).
 app.get('/api/taux', async (c) => {
   const db = ouvrirBase();
+  const fredKey = process.env.FRED_API_KEY ?? '';
+
+  // Table de correspondance sousJacent → nom affichable
+  const nomMap: Record<string, string> = {};
+  TAUX_DASHBOARD.forEach((t) => { nomMap[t.ticker]    = t.nom; });
+  FRED_TAUX.forEach((t)      => { nomMap[t.seriesId]  = t.nom; });
+
+  const allIds = [...TAUX_DASHBOARD.map((t) => t.ticker), ...FRED_TAUX.map((t) => t.seriesId)];
+
   try {
-    const cours = await recupererTaux();
+    const [coursYahoo, coursFred] = await Promise.all([
+      recupererTaux(),
+      fredKey ? recupererTauxFRED(fredKey) : Promise.resolve([]),
+    ]);
+    const cours = [...coursYahoo, ...coursFred];
     for (const cr of cours) enregistrerCours(db, cr);
-    const enrichis = cours.map((cr) => ({
-      ...cr,
-      nom: TAUX_DASHBOARD.find((t) => t.ticker === cr.sousJacent)?.nom ?? cr.sousJacent,
-    }));
-    return c.json(enrichis);
+    return c.json(cours.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent })));
   } catch {
-    const cached = listerCours(db).filter((cr) =>
-      TAUX_DASHBOARD.some((t) => t.ticker === cr.sousJacent)
-    );
-    return c.json(cached.map((cr) => ({
-      ...cr,
-      nom: TAUX_DASHBOARD.find((t) => t.ticker === cr.sousJacent)?.nom ?? cr.sousJacent,
-    })));
+    const cached = listerCours(db).filter((cr) => allIds.includes(cr.sousJacent));
+    return c.json(cached.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent })));
   } finally {
     db.close();
   }
