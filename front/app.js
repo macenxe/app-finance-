@@ -1,11 +1,12 @@
 const App = (() => {
-  let state = { page: 'dash', filter: 'tous', q: '' };
+  let state  = { page: 'dash', filter: 'tous', q: '' };
+  let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS) };
 
   const NAV = [
-    { key: 'dash',   label: 'Tableau de bord' },
-    { key: 'prod',   label: 'Produits structurés' },
-    { key: 'alloc',  label: 'Allocation & Marchés' },
-    { key: 'veille', label: 'Veille économique' },
+    { key: 'dash',   label: 'Tableau de bord'      },
+    { key: 'prod',   label: 'Produits structurés'   },
+    { key: 'alloc',  label: 'Allocation & Marchés'  },
+    { key: 'veille', label: 'Veille économique'     },
   ];
 
   function renderNav() {
@@ -17,14 +18,36 @@ const App = (() => {
 
   function renderPage() {
     const el = document.getElementById('content');
+    const { indices, produits } = donnees;
     switch (state.page) {
-      case 'dash':   el.innerHTML = renderDashboard(); break;
-      case 'prod':   el.innerHTML = renderProduits(state); break;
-      case 'alloc':  el.innerHTML = renderAllocation(); break;
-      case 'veille': el.innerHTML = renderVeille(); break;
+      case 'dash':   el.innerHTML = renderDashboard(indices, produits); break;
+      case 'prod':   el.innerHTML = renderProduits(produits, state);    break;
+      case 'alloc':  el.innerHTML = renderAllocation();                 break;
+      case 'veille': el.innerHTML = renderVeille();                     break;
     }
     el.scrollTop = 0;
     renderNav();
+    mettreAJourBadgeSource();
+  }
+
+  function mettreAJourBadgeSource() {
+    const badge = document.getElementById('source-badge');
+    if (!badge) return;
+    if (donnees.source === 'api') {
+      badge.textContent = '● Données en direct';
+      badge.className = 'source-badge live';
+    } else {
+      badge.textContent = '○ Données statiques (back hors ligne)';
+      badge.className = 'source-badge offline';
+    }
+  }
+
+  async function init() {
+    // Affiche immédiatement avec les données statiques
+    renderPage();
+    // Puis tente de charger les données réelles depuis l'API
+    donnees = await AppAPI.chargerDonnees();
+    renderPage();
   }
 
   return {
@@ -38,25 +61,18 @@ const App = (() => {
     },
     prodSearch(q) {
       state = { ...state, q };
-      // Re-render only the table portion to avoid losing input focus
       const el = document.getElementById('content');
-      el.innerHTML = renderProduits(state);
+      el.innerHTML = renderProduits(donnees.produits, state);
       const input = document.getElementById('prod-search');
       if (input) { input.focus(); input.setSelectionRange(q.length, q.length); }
       renderNav();
     },
-    dashSearch(q) {
-      // Dashboard search: filter is visual only for now
-    },
-    init() {
-      renderPage();
-    },
+    init,
   };
 })();
 
 document.addEventListener('DOMContentLoaded', () => App.init());
 
-// Service Worker registration
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(() => {});
 }

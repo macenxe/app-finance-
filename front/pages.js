@@ -1,25 +1,36 @@
 // ── Fonctions de rendu des 4 pages ──
+// Chaque fonction accepte les données en paramètre (API ou statiques).
 
-function renderDashboard() {
-  const top5 = enrichirProduits(PRODUITS)
-    .filter(p => p.zoneAutocall === 'NON' || p.k !== 'green')
+function renderDashboard(indices, produits) {
+  // Priorité d'affichage : risque > surveillance > rappel probable
+  const top6 = [...produits]
     .sort((a, b) => {
-      const ord = { red:0, orange:1, green:2 };
+      const ord = { red: 0, orange: 1, green: 2 };
       return ord[a.k] - ord[b.k];
     })
     .slice(0, 6);
+
+  const fmtHeure = (iso) => {
+    if (!iso) return '';
+    const d = new Date(iso);
+    return d.toLocaleString('fr-FR', { day:'2-digit', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit' });
+  };
+
+  const heureRef = indices[0]?.heureCours
+    ? `${fmtHeure(indices[0].heureCours)} · cours indicatifs`
+    : '20 juin 2026, 17:35 · clôture provisoire';
 
   return `
   <div>
     <header class="page-header">
       <div>
         <div class="page-title">Tableau de bord</div>
-        <div class="page-sub">Synthèse des marchés · 20 juin 2026, 17:35 · clôture provisoire</div>
+        <div class="page-sub">Synthèse des marchés · ${heureRef}</div>
       </div>
       <div class="header-actions">
         <div class="search-box">
           <span style="font-size:13px;">⌕</span>
-          <input id="dash-search" placeholder="Rechercher un produit, un indice…" oninput="App.dashSearch(this.value)">
+          <input id="dash-search" placeholder="Rechercher un produit, un indice…">
         </div>
         <button class="btn-primary">Générer une synthèse conseiller</button>
         <button class="btn-secondary">Export PDF</button>
@@ -33,11 +44,14 @@ function renderDashboard() {
         <span class="section-hint">Données à vérifier</span>
       </div>
       <div class="grid-5 mb-24">
-        ${INDICES_MARCHE.map(i => `
+        ${indices.map(i => `
         <div class="card index-card">
           <div class="index-name">${i.nom}</div>
           <div class="index-val tnum">${i.valeur}</div>
-          <div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>
+          ${i.var != null
+            ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
+            : `<div class="index-var tnum" style="color:#9a8f7a;">—</div>`
+          }
         </div>`).join('')}
       </div>
 
@@ -66,7 +80,7 @@ function renderDashboard() {
         </div>
       </div>
 
-      <!-- Alertes + Autocalls -->
+      <!-- Alertes + Autocalls + Événements -->
       <div class="grid-dash-bottom">
         <div style="display:flex;flex-direction:column;gap:18px;">
           <div class="card p-18">
@@ -99,7 +113,7 @@ function renderDashboard() {
               <span>Prochaine const.</span>
               <span style="text-align:right;">Statut</span>
             </div>
-            ${top5.map(p => `
+            ${top6.map(p => `
             <div class="autocall-row">
               <span style="color:#16304f;font-weight:500;">${p.nom}</span>
               <span style="color:#6b6e73;">${p.sj}</span>
@@ -114,17 +128,16 @@ function renderDashboard() {
   </div>`;
 }
 
-function renderProduits(state) {
-  const all = enrichirProduits(PRODUITS);
+function renderProduits(produits, state) {
   const q = (state.q || '').trim().toLowerCase();
   const f = state.filter || 'tous';
-  let rows = f === 'tous' ? all : all.filter(r => r.k === f);
+  let rows = f === 'tous' ? produits : produits.filter(r => r.k === f);
   if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
 
-  const count = k => all.filter(r => r.k === k).length;
+  const count = k => produits.filter(r => r.k === k).length;
 
   const chips = [
-    { key:'tous',   label:`Tous (${all.length})` },
+    { key:'tous',   label:`Tous (${produits.length})` },
     { key:'green',  label:'Rappel probable' },
     { key:'orange', label:'Surveillance' },
     { key:'red',    label:'Risque' },
@@ -135,7 +148,7 @@ function renderProduits(state) {
     <header class="page-header">
       <div>
         <div class="page-title">Produits structurés · Autocalls</div>
-        <div class="page-sub">${all.length} produits suivis · niveaux indicatifs à vérifier</div>
+        <div class="page-sub">${produits.length} produits suivis · niveaux indicatifs à vérifier</div>
       </div>
       <div class="header-actions">
         <div class="search-box">
@@ -149,7 +162,7 @@ function renderProduits(state) {
 
     <div style="padding:18px 30px 40px;">
       <div class="summary-chips">
-        <div class="card chip-card"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${all.length}</div></div>
+        <div class="card chip-card"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
         <div class="card chip-card green"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
         <div class="card chip-card orange"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
         <div class="card chip-card red"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
@@ -213,24 +226,15 @@ function renderAllocation() {
 
       <div class="grid-3 mb-18">
         <div class="card alloc-asset-card">
-          <div class="alloc-asset-header">
-            <div class="card-title">Actions</div>
-            <span class="alloc-badge favorable">Favorable</span>
-          </div>
+          <div class="alloc-asset-header"><div class="card-title">Actions</div><span class="alloc-badge favorable">Favorable</span></div>
           <p class="alloc-asset-body">Indices proches des plus hauts. Préférence pour les grandes capitalisations européennes de qualité. Banques EU volatiles — vigilance sur les sous-jacents bancaires des CAP.</p>
         </div>
         <div class="card alloc-asset-card">
-          <div class="alloc-asset-header">
-            <div class="card-title">Obligations</div>
-            <span class="alloc-badge neutre">Neutre +</span>
-          </div>
+          <div class="alloc-asset-header"><div class="card-title">Obligations</div><span class="alloc-badge neutre">Neutre +</span></div>
           <p class="alloc-asset-body">Portage attractif sur le 10 ans souverain. Pentification favorable aux autocalls indexés CMS. Sensibilité au calendrier BCE/Fed.</p>
         </div>
         <div class="card alloc-asset-card">
-          <div class="alloc-asset-header">
-            <div class="card-title">Monétaire</div>
-            <span class="alloc-badge baisse">Rendement en baisse</span>
-          </div>
+          <div class="alloc-asset-header"><div class="card-title">Monétaire</div><span class="alloc-badge baisse">Rendement en baisse</span></div>
           <p class="alloc-asset-body">Rémunération du monétaire orientée à la baisse avec l'assouplissement BCE. Incite à redéployer la trésorerie longue vers le structuré ou l'obligataire.</p>
         </div>
       </div>
