@@ -33,22 +33,6 @@ const App = (() => {
     }
     el.scrollTop = 0;
     renderNav();
-    mettreAJourBadgeSource();
-  }
-
-  function mettreAJourBadgeSource() {
-    const badge = document.getElementById('source-badge');
-    if (!badge) return;
-    if (donnees.source === 'api') {
-      badge.textContent = '● Données en direct';
-      badge.className = 'source-badge live';
-    } else if (donnees.source === 'snapshot') {
-      badge.textContent = '● Données du marché · mise à jour auto';
-      badge.className = 'source-badge live';
-    } else {
-      badge.textContent = '○ Données statiques (hors ligne)';
-      badge.className = 'source-badge offline';
-    }
   }
 
   function fermerFormulaire() {
