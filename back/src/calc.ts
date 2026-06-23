@@ -12,21 +12,29 @@ export function calculerIndicateurs(
     pctStrike = (niveau / produit.strike) * 100;
   }
 
-  // Zone autocall : cours >= barriereAutocall (pour equity) ou toujours false (CMS)
+  // Zone autocall et statut
   let zoneAutocall = false;
-  if (produit.typeProduit === 'equity' && produit.barriereAutocall !== null && produit.strike !== null) {
-    const seuilAbs = (produit.barriereAutocall / 100) * produit.strike;
-    zoneAutocall = niveau >= seuilAbs;
-  }
+  let statutZone: StatutZone = 'surveillance';
 
-  // Statut de zone
-  let statutZone: StatutZone;
-  if (zoneAutocall) {
-    statutZone = 'rappel_probable';
-  } else if (produit.typeProduit === 'equity' && pctStrike !== null && pctStrike < 75) {
-    statutZone = 'risque';
-  } else {
-    statutZone = 'surveillance';
+  if (produit.typeProduit === 'equity') {
+    if (produit.barriereAutocall !== null && produit.strike !== null) {
+      const seuilAbs = (produit.barriereAutocall / 100) * produit.strike;
+      zoneAutocall = niveau >= seuilAbs;
+    }
+    if (zoneAutocall) {
+      statutZone = 'rappel_probable';
+    } else if (pctStrike !== null && pctStrike < 75) {
+      statutZone = 'risque';
+    }
+  } else if (produit.typeProduit === 'cms') {
+    // Pour CMS : niveau = taux en % (ex: 3.18)
+    // barriereAutocall et barriereCoupon sont des taux absolus en %
+    if (produit.barriereAutocall !== null && niveau >= produit.barriereAutocall) {
+      zoneAutocall = true;
+      statutZone = 'rappel_probable';
+    } else if (produit.barriereCoupon !== null && niveau < produit.barriereCoupon) {
+      statutZone = 'risque';
+    }
   }
 
   return { produitId: produit.id, pctStrike, zoneAutocall, statutZone };

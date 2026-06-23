@@ -56,6 +56,13 @@ app.get('/api/produits', async (c) => {
       // on continue avec les cours en cache
     }
 
+    // Synchronise le taux CMS saisi manuellement dans la table cours
+    // pour que calculerIndicateurs puisse l'utiliser via lireCours('CMS10').
+    const cmsTaux = lireTauxManuel(db, 'CMS 10 ans');
+    if (cmsTaux) {
+      enregistrerCours(db, { sousJacent: 'CMS10', dernierCours: cmsTaux.valeur, heureCours: cmsTaux.date_maj });
+    }
+
     const enrichis: ProduitEnrichi[] = produits.map((p) => {
       const cours = lireCours(db, p.sousJacent) ?? null;
       const indicateurs = cours ? calculerIndicateurs(p, cours) : null;
