@@ -3,13 +3,21 @@
 
 function renderDashboard(indices, produits, taux) {
   taux = taux || TAUX;
-  // Priorité d'affichage : risque > surveillance > rappel probable
-  const top6 = [...produits]
-    .sort((a, b) => {
-      const ord = { red: 0, orange: 1, green: 2 };
-      return ord[a.k] - ord[b.k];
-    })
-    .slice(0, 6);
+
+  // Prochaines dates clés : constatations à venir, triées par date croissante
+  const parseConstat = (str) => {
+    const m = str && str.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!m) return null;
+    return new Date(+m[3], +m[2] - 1, +m[1]);
+  };
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const fmtDateCle = (d) => d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+
+  const prochainsDates = produits
+    .map(p => { const d = parseConstat(p.constat); return d && d >= today ? { p, d, jours: Math.ceil((d - today) / 86400000) } : null; })
+    .filter(Boolean)
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 9);
 
   const fmtHeure = (iso) => {
     if (!iso) return '';
@@ -18,7 +26,7 @@ function renderDashboard(indices, produits, taux) {
   };
 
   const heureRef = indices[0]?.heureCours
-    ? fmtHeure(indices[0].heureCours)
+    ? `${fmtHeure(indices[0].heureCours)} · cours indicatifs`
     : '20 juin 2026, 17:35 · clôture provisoire';
 
   return `
@@ -42,10 +50,11 @@ function renderDashboard(indices, produits, taux) {
       <!-- Indices -->
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
+        <span class="section-hint">Données à vérifier</span>
       </div>
       <div class="grid-5 mb-24">
         ${indices.map(i => `
-        <div class="card index-card${i.ticker ? ' index-clic' : ''}"${i.ticker ? ` onclick="App.ouvrirGraphique('${i.ticker}','${i.nom}')"` : ''}>
+        <div class="card index-card">
           <div class="index-name">${i.nom}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
@@ -107,25 +116,23 @@ function renderDashboard(indices, produits, taux) {
 
         <div class="card p-18">
           <div class="flex-sb mb-12">
-            <div class="card-title">Produits autocall à surveiller</div>
+            <div class="card-title">Prochaines dates clés</div>
             <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
           </div>
-          <div class="autocall-table">
-            <div class="autocall-header">
-              <span>Produit</span><span>Sous-jacent</span>
-              <span>% strike</span>
-              <span>Prochaine const.</span>
-              <span>Statut</span>
+          ${prochainsDates.length === 0
+            ? `<div style="font-size:12.5px;color:#9a8f7a;padding:8px 0;">Aucune constatation à venir.</div>`
+            : `<div class="dates-cles-table">
+            <div class="dates-cles-header">
+              <span>Date</span><span>Dans</span><span>Produit</span><span style="text-align:right;">Statut</span>
             </div>
-            ${top6.map(p => `
-            <div class="autocall-row">
-              <span style="color:#16304f;font-weight:500;">${p.nom}</span>
-              <span style="color:#6b6e73;">${p.sj}</span>
-              <span class="tnum" style="font-weight:600;color:${p.k==='red'?'#9a3535':p.k==='orange'?'#b06a1a':'#6b6e73'};">${p.pct}</span>
-              <span class="tnum" style="color:#6b6e73;">${p.constat}</span>
-              <span><span class="badge ${p.k}">${p.statut}</span></span>
+            ${prochainsDates.map(({ p, d, jours }) => `
+            <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
+              <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
+              <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
+              <span class="dates-cles-nom">${p.nom}</span>
+              <span style="text-align:right;"><span class="badge ${p.k}">${p.statut}</span></span>
             </div>`).join('')}
-          </div>
+          </div>`}
         </div>
       </div>
     </div>
@@ -152,7 +159,7 @@ function renderProduits(produits, state) {
     <header class="page-header">
       <div>
         <div class="page-title">Produits structurés · Autocalls</div>
-        <div class="page-sub">${produits.length} produits suivis</div>
+        <div class="page-sub">${produits.length} produits suivis · niveaux indicatifs à vérifier</div>
       </div>
       <div class="header-actions">
         <div class="search-box">
@@ -173,62 +180,41 @@ function renderProduits(produits, state) {
         <div class="card chip-card red"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
       </div>
 
-      <div class="cat-block">
-        <div class="section-label mb-12">Sous-jacents par catégorie</div>
-        <div class="cat-grid">
-          ${grouperCategories(produits).map(c => `
-          <div class="card cat-card" onclick="App.ouvrirCategorie('${c.cat}')">
-            <div class="cat-card-nom">${c.cat}</div>
-            <div class="cat-card-meta">${c.n} produit${c.n > 1 ? 's' : ''}</div>
-            <div class="cat-card-sj">${c.sjLabels}</div>
-          </div>`).join('')}
-        </div>
-      </div>
-
       <div class="filter-row">
         <div class="filter-chips">
           ${chips.map(c => `<div class="filter-chip${f===c.key?' active':''}" onclick="App.setFilter('${c.key}')">${c.label}</div>`).join('')}
         </div>
+        <div class="filter-count">${rows.length} produits affichés</div>
       </div>
 
-      <!-- Vue tableau (desktop) -->
       <div class="products-table-wrap scroll">
         <div class="products-table">
-          <div class="products-table-header products-table-row--slim">
-            <span>Nom commercial</span><span>Sous-jacent</span>
-            <span class="col-right">Coupon</span>
-            <span class="col-right">% strike</span>
-            <span class="col-center">Autocall</span>
-            <span class="col-center">Coupon versé</span>
-            <span>Proch. const.</span><span>Échéance</span>
-            <span>Statut</span><span></span>
+          <div class="products-table-header">
+            <span>Code ISIN</span><span>Nom commercial</span><span>Sous-jacent</span>
+            <span class="col-right">Coupon</span><span class="col-right">Strike</span>
+            <span class="col-right">Niveau</span><span class="col-right">% strike</span>
+            <span class="col-right">B. auto</span><span class="col-right">B. coup.</span>
+            <span>1ère const.</span><span>Échéance</span><span>Statut</span><span></span>
           </div>
-          ${rows.map(r => {
-            const cv = couponVerse(r);
-            const pctColor = r.type==='equity' ? (r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c') : '#9a8f7a';
-            return `
-          <div class="products-table-row products-table-row--slim">
+          ${rows.map(r => `
+          <div class="products-table-row">
+            <span class="col-isin tnum">${r.isin}</span>
             <span class="col-nom">${r.nom}</span>
             <span class="col-sj">${r.sj}</span>
             <span class="tnum col-right">${r.coupon}</span>
-            <span class="tnum col-right" style="font-weight:600;color:${pctColor};">${r.pct}</span>
-            <span class="col-center">${r.zoneAutocall==='OUI' ? '<span class="oui">✓</span>' : '<span class="non">—</span>'}</span>
-            <span class="col-center">${cv===true ? '<span class="oui">✓</span>' : cv===false ? '<span class="non">—</span>' : '<span class="na">NA</span>'}</span>
+            <span class="tnum col-dim">${r.strike}</span>
+            <span class="tnum col-num">${r.niveau}</span>
+            <span class="tnum col-right" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
+            <span class="tnum col-dim">${r.bAuto}</span>
+            <span class="tnum col-dim">${r.bCoupon}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
-          </div>`;
-          }).join('')}
+          </div>`).join('')}
         </div>
       </div>
-
-      <!-- Vue cartes accordéon (mobile) -->
-      <div class="prod-cards">
-        ${rows.map(r => renderProduitCard(r)).join('')}
-      </div>
-
-      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Validation humaine obligatoire.</div>
+      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Données à vérifier — validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
@@ -306,7 +292,7 @@ function renderVeille() {
     <header class="page-header">
       <div>
         <div class="page-title">Veille économique</div>
-        <div class="page-sub">Actualités marchés, taux & patrimoine</div>
+        <div class="page-sub">Actualités marchés, taux & patrimoine · sources à vérifier</div>
       </div>
       <button class="btn-primary">Résumer l'impact pour l'allocation</button>
     </header>
@@ -494,114 +480,8 @@ function renderFormulaireAjout() {
   </div>`;
 }
 
-// Retourne true si le coupon est versé, false si barrière non atteinte, null si non applicable.
-function couponVerse(r) {
-  if (!r.bCoupon || r.bCoupon === '—' || r.bCoupon === 'NA') return null;
-  if (r.type === 'cms') {
-    const b = parseFloat(r.bCoupon.replace(/[^0-9,\.]/g, '').replace(',', '.'));
-    const n = parseFloat((r.niveau || '').replace(/[^0-9,\.]/g, '').replace(',', '.'));
-    return (!isNaN(b) && !isNaN(n)) ? n >= b : null;
-  }
-  const b = parseFloat(r.bCoupon.replace(/[^0-9,\.]/g, '').replace(',', '.'));
-  return (!isNaN(b) && r.strikeNum && r.niveauNum) ? r.niveauNum >= r.strikeNum * (b / 100) : null;
-}
-
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-// ── Carte produit accordéon (vue mobile) ──
-function renderProduitCard(r) {
-  const pctColor = r.type === 'equity'
-    ? (r.k === 'red' ? 'red' : r.k === 'orange' ? 'orange' : 'green')
-    : '';
-
-  const details = r.type === 'equity' ? `
-    <div><div class="pcard-key">Niveau actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
-    <div><div class="pcard-key">% du strike</div><div class="pcard-val tnum ${pctColor}">${escHtml(r.pct)}</div></div>
-    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
-    <div><div class="pcard-key">Barrière auto.</div><div class="pcard-val tnum">${escHtml(r.bAuto)}</div></div>
-    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
-    ${r.zoneAutocall === 'OUI' ? `<div><div class="pcard-key">Zone autocall</div><div class="pcard-val green">Franchie ✓</div></div>` : ''}
-  ` : `
-    <div><div class="pcard-key">CMS actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
-    <div><div class="pcard-key">Barrière auto.</div><div class="pcard-val tnum">${escHtml(r.bAuto)}</div></div>
-    <div><div class="pcard-key">Barrière coupon</div><div class="pcard-val tnum">${escHtml(r.bCoupon)}</div></div>
-    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
-    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
-  `;
-
-  return `
-  <div class="prod-card" data-k="${r.k}" data-isin="${escHtml(r.isin)}" onclick="toggleCard('${escHtml(r.isin)}')">
-    <div class="pcard-top">
-      <div class="pcard-left">
-        <div class="pcard-nom">${escHtml(r.nom)}</div>
-        <div class="pcard-meta">${escHtml(r.sjLabel || r.sj)} · ${escHtml(r.coupon)}</div>
-      </div>
-      <div class="pcard-right">
-        <span class="badge ${r.k}">${escHtml(r.statut)}</span>
-        <span class="pcard-chevron">›</span>
-      </div>
-    </div>
-    <div class="pcard-body">
-      <div class="pcard-grid">${details}</div>
-      <button class="pcard-link" onclick="event.stopPropagation();App.voirDetail('${escHtml(r.isin)}')">Voir le détail →</button>
-    </div>
-  </div>`;
-}
-
-function toggleCard(isin) {
-  const card = document.querySelector(`.prod-card[data-isin="${isin}"]`);
-  if (card) card.classList.toggle('open');
-}
-
-// ── Catégories de produits (CAP, Autocall CMS, Athena…) ──
-function categorieProduit(p) {
-  const n = p.nom || '';
-  if (/^CAP\b/i.test(n))       return 'CAP';
-  if (/Autocall CMS/i.test(n)) return 'Autocall CMS';
-  if (/Athena/i.test(n))       return 'Athena';
-  if (/Autocall/i.test(n))     return 'Autocall indice';
-  return 'Autres';
-}
-
-// Regroupe les produits par catégorie (ordre d'apparition conservé).
-function grouperCategories(produits) {
-  const map = new Map();
-  produits.forEach(p => {
-    const c = categorieProduit(p);
-    if (!map.has(c)) map.set(c, []);
-    map.get(c).push(p);
-  });
-  return [...map.entries()].map(([cat, membres]) => ({
-    cat, membres, n: membres.length,
-    sjLabels: [...new Set(membres.map(m => m.sjLabel || m.sj))].join(', '),
-  }));
-}
-
-// Modale : liste des membres d'une catégorie. Clic sur un membre → graphique.
-function renderModalCategorie(cat, membres) {
-  return `
-  <div class="modal-overlay" onclick="if(event.target===this)App.fermerModal()">
-    <div class="modal-panel modal-panel--sm">
-      <div class="modal-header">
-        <span class="modal-title">${escHtml(cat)}</span>
-        <button class="modal-close" onclick="App.fermerModal()">✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="cat-membres">
-          ${membres.map(m => `
-          <div class="cat-membre" onclick="App.ouvrirGraphiqueProduit('${m.isin}')">
-            <div class="cat-membre-info">
-              <div class="cat-membre-nom">${escHtml(m.nom)}</div>
-              <div class="cat-membre-sj">${escHtml(m.sjLabel || m.sj)}${m.strike && m.strike !== 'NA' ? ' · strike ' + escHtml(String(m.strike)) : ''}</div>
-            </div>
-            <span class="cat-membre-go">graphique →</span>
-          </div>`).join('')}
-        </div>
-      </div>
-    </div>
-  </div>`;
 }
 
 function renderModalEditionCMS(valeurActuelle) {
