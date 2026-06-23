@@ -55,7 +55,7 @@ function renderDashboard(indices, produits, taux) {
       <div class="grid-5 mb-24">
         ${indices.map(i => `
         <div class="card index-card">
-          <div class="index-name">${i.nom}</div>
+          <div class="index-name">${i.nom}${i.statique ? ' <span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span>' : ''}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
             ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
