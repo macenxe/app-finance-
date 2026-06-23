@@ -104,3 +104,49 @@ function enrichirProduits(produits) {
     return { ...p, zoneAutocall, k, statut: statuts[k], pct };
   });
 }
+
+
+// ── Contrats assurance-vie & UC ──
+// Structure : un objet par contrat, avec fonds euros + liste des UC.
+// Mettre à jour manuellement les taux et performances.
+const CONTRATS = [
+  {
+    id: 'c1',
+    nom: 'Contrat 1',
+    assureur: 'À compléter',
+    ref: 'REF-001',
+    ouverture: '20XX',
+    fondsEuros: {
+      nom: 'Fonds en euros',
+      taux2024: '—',
+      taux2023: '—',
+      part: '— %',
+    },
+    uc: [
+      {
+        nom: 'À compléter',
+        isin: '—',
+        categorie: 'À renseigner',
+        risque: 0,
+        perfYtd: '—',
+        perfAn:  '—',
+        part:    '— %',
+        hausse:  null,
+      },
+    ],
+  },
+  {
+    id: 'c2',
+    nom: 'Contrat 2',
+    assureur: 'À compléter',
+    ref: 'REF-002',
+    ouverture: '20XX',
+    fondsEuros: {
+      nom: 'Fonds en euros',
+      taux2024: '—',
+      taux2023: '—',
+      part: '— %',
+    },
+    uc: [],
+  },
+];

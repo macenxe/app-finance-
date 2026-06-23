@@ -509,3 +509,110 @@ function renderModalEditionCMS(valeurActuelle) {
     </div>
   </div>`;
 }
+
+
+function renderContrats() {
+  function srriDots(n) {
+    const filled = Math.max(0, Math.min(7, n));
+    let s = '';
+    for (let i = 1; i <= 7; i++) s += `<span class="srri-dot${i <= filled ? ' on' : ''}"></span>`;
+    return `<span class="srri-bar">${s}</span>`;
+  }
+
+  function perfClass(h) {
+    if (h === true)  return ' up';
+    if (h === false) return ' down';
+    return '';
+  }
+
+  const contrats = typeof CONTRATS !== 'undefined' ? CONTRATS : [];
+
+  return `
+  <div>
+    <header class="page-header">
+      <div>
+        <div class="page-title">Contrats & Unités de Compte</div>
+        <div class="page-sub">${contrats.length} contrat${contrats.length > 1 ? 's' : ''} · données à vérifier</div>
+      </div>
+    </header>
+
+    <div class="page-body">
+      ${contrats.map(c => {
+        const nbUc = c.uc ? c.uc.length : 0;
+        return `
+      <div class="contrat-block card mb-18">
+        <div class="contrat-header-bar">
+          <div>
+            <div class="contrat-nom">${c.nom}</div>
+            <div class="contrat-meta">${c.assureur}${c.ref ? ' · Réf. ' + c.ref : ''}${c.ouverture ? ' · Ouvert en ' + c.ouverture : ''}</div>
+          </div>
+          <div class="contrat-chips">
+            ${c.fondsEuros ? `<span class="contrat-chip fe">Fonds euros</span>` : ''}
+            ${nbUc > 0    ? `<span class="contrat-chip uc">${nbUc} UC</span>` : ''}
+          </div>
+        </div>
+
+        ${c.fondsEuros ? `
+        <div class="contrat-section">
+          <div class="contrat-section-label">Fonds en euros</div>
+          <div class="fe-row">
+            <div class="fe-nom">${c.fondsEuros.nom}</div>
+            <div class="fe-taux-wrap">
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Taux 2024</div>
+                <div class="fe-taux-val tnum">${c.fondsEuros.taux2024}</div>
+              </div>
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Taux 2023</div>
+                <div class="fe-taux-val tnum secondary">${c.fondsEuros.taux2023}</div>
+              </div>
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Part contrat</div>
+                <div class="fe-taux-val tnum">${c.fondsEuros.part}</div>
+              </div>
+            </div>
+          </div>
+        </div>` : ''}
+
+        ${nbUc > 0 ? `
+        <div class="contrat-section">
+          <div class="contrat-section-label">Unités de compte</div>
+          <div class="uc-table-wrap scroll">
+            <div class="uc-table">
+              <div class="uc-table-header uc-table-row--cols">
+                <span>Fonds</span>
+                <span>ISIN</span>
+                <span>Catégorie</span>
+                <span class="col-center">Risque (SRRI)</span>
+                <span class="col-center">Perf. YTD</span>
+                <span class="col-center">Perf. annualisée</span>
+                <span class="col-center">Part contrat</span>
+              </div>
+              ${c.uc.map(u => `
+              <div class="uc-table-row uc-table-row--cols">
+                <span class="uc-nom">${u.nom}</span>
+                <span class="uc-isin tnum">${u.isin}</span>
+                <span class="uc-cat"><span class="uc-cat-badge">${u.categorie}</span></span>
+                <span class="col-center">${u.risque > 0 ? srriDots(u.risque) : '<span class="na">—</span>'}</span>
+                <span class="col-center tnum${perfClass(u.hausse)}">${u.perfYtd}</span>
+                <span class="col-center tnum${perfClass(u.hausse)}">${u.perfAn}</span>
+                <span class="col-center tnum">${u.part}</span>
+              </div>`).join('')}
+            </div>
+          </div>
+        </div>` : `
+        <div class="contrat-section">
+          <div class="uc-empty">Aucune UC renseignée pour ce contrat.</div>
+        </div>`}
+      </div>`;
+      }).join('')}
+
+      ${contrats.length === 0 ? `
+      <div class="card p-18" style="color:#9a8f7a;font-size:13px;">
+        Aucun contrat configuré. Ajouter des entrées dans <code>CONTRATS</code> (data.js).
+      </div>` : ''}
+
+      <div class="table-note">Données saisies manuellement · taux de revalorisation nets de frais de gestion · performances indicatives à vérifier.</div>
+    </div>
+  </div>`;
+}

@@ -3,10 +3,11 @@ const App = (() => {
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
 
   const NAV = [
-    { key: 'dash',   label: 'Tableau de bord'     },
-    { key: 'prod',   label: 'Produits structurés'  },
-    { key: 'alloc',  label: 'Allocation & Marchés' },
-    { key: 'veille', label: 'Veille économique'    },
+    { key: 'dash',     label: 'Tableau de bord'        },
+    { key: 'prod',     label: 'Produits structurés'     },
+    { key: 'contrats', label: 'Contrats & UC'           },
+    { key: 'alloc',    label: 'Allocation & Marchés'    },
+    { key: 'veille',   label: 'Veille économique'       },
   ];
 
   function renderNav() {
@@ -23,8 +24,9 @@ const App = (() => {
     switch (state.page) {
       case 'dash':   el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
       case 'prod':   el.innerHTML = renderProduits(produits, state);    break;
-      case 'alloc':  el.innerHTML = renderAllocation();                 break;
-      case 'veille': el.innerHTML = renderVeille();                     break;
+      case 'contrats': el.innerHTML = renderContrats();                  break;
+      case 'alloc':    el.innerHTML = renderAllocation();               break;
+      case 'veille':   el.innerHTML = renderVeille();                   break;
       case 'detail': {
         const p = produits.find(p => p.isin === state.detailIsin);
         el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
