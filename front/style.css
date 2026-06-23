@@ -100,7 +100,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* ── Grids ── */
 .page-body { padding: 22px 30px 40px; }
 
-.grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -108,12 +108,10 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .grid-dash-bottom { display: grid; grid-template-columns: 1fr 1.5fr; gap: 18px; }
 
 /* ── Index cards ── */
-.index-card { padding: 14px 15px; }
-.index-clic { cursor: pointer; transition: border-color .15s, box-shadow .15s, transform .15s; }
-.index-clic:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
-.index-name  { font-size: 11.5px; color: #6b6e73; font-weight: 500; }
-.index-val   { font-family: 'Spectral', serif; font-size: 23px; font-weight: 600; color: #16304f; margin: 6px 0 4px; white-space: nowrap; }
-.index-var   { font-size: 12px; font-weight: 600; }
+.index-card { padding: 11px 12px; }
+.index-name  { font-size: 11px; color: #6b6e73; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.index-val   { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; color: #16304f; margin: 4px 0 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.index-var   { font-size: 11.5px; font-weight: 600; }
 .index-var.up   { color: #1d6f4c; }
 .index-var.down { color: #9a3535; }
 
@@ -380,143 +378,3 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 #ptr-indicator span { display: inline-block; }
 @keyframes ptr-spin { to { transform: rotate(360deg); } }
 #ptr-indicator.refreshing span { animation: ptr-spin .65s linear infinite; }
-
-/* ── Bouton menu + tiroir rétractable (mobile) ── */
-#sidebar-toggle {
-  display: none;
-  position: fixed; top: 12px; left: 12px; z-index: 70;
-  width: 40px; height: 40px;
-  align-items: center; justify-content: center;
-  background: #16304f; color: #fff;
-  border: none; border-radius: 7px; cursor: pointer;
-  font-size: 18px; line-height: 1; font-family: inherit;
-  box-shadow: 0 2px 8px rgba(22,48,79,.25);
-}
-#sidebar-backdrop {
-  display: none;
-  position: fixed; inset: 0; z-index: 60;
-  background: rgba(22,48,79,.45);
-  opacity: 0; transition: opacity .25s ease;
-}
-
-/* ── Centrage des cellules sans bordure interne ── */
-.index-card { text-align: center; }
-.chip-card  { text-align: center; }
-.taux-grid > div, .macro-grid > div { text-align: center; }
-.taux-item-name { justify-content: center; }
-.products-table-header span, .products-table-row > span,
-.autocall-header span, .autocall-row > span { text-align: center; }
-
-/* ── Sous-jacents par catégorie ── */
-.cat-block { margin-bottom: 20px; }
-.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.cat-card { padding: 14px 16px; text-align: center; cursor: pointer; transition: border-color .15s, box-shadow .15s, transform .15s; }
-.cat-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
-.cat-card-nom  { font-family: 'Spectral', serif; font-size: 15px; font-weight: 600; color: #16304f; }
-.cat-card-meta { font-size: 11.5px; color: #6b6e73; margin-top: 3px; }
-.cat-card-sj   { font-size: 11px; color: #9a8f7a; margin-top: 6px; line-height: 1.4; }
-
-.cat-membres { display: flex; flex-direction: column; gap: 2px; }
-.cat-membre {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 11px 12px; border-radius: 6px; cursor: pointer;
-  border: 1px solid transparent; transition: background .12s, border-color .12s;
-}
-.cat-membre:hover { background: #faf8f3; border-color: #ece7dc; }
-.cat-membre-nom { font-size: 13px; color: #16304f; font-weight: 500; }
-.cat-membre-sj  { font-size: 11.5px; color: #9a8f7a; margin-top: 2px; }
-.cat-membre-go  { font-size: 11.5px; color: #9a7b3c; font-weight: 500; white-space: nowrap; }
-
-/* ── Graphique d'évolution ── */
-.chart-panel { width: 700px; }
-.chart-titre-zone { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.chart-retour {
-  background: none; border: 1px solid #d9d2c2; color: #16304f;
-  font-size: 14px; line-height: 1; padding: 5px 10px; border-radius: 6px;
-  cursor: pointer; font-family: inherit; flex: none;
-}
-.chart-retour:hover { background: #f7f4ec; }
-.chart-sous { font-size: 11.5px; color: #9a8f7a; margin-top: 2px; }
-.chart-ligne-lab {
-  position: absolute; right: 2px; transform: translateY(-50%);
-  font-size: 10px; font-weight: 600; background: rgba(255,255,255,.85);
-  padding: 0 4px; border-radius: 3px; pointer-events: none; font-variant-numeric: tabular-nums;
-}
-.chart-body { padding: 16px 22px 18px; }
-.chart-readout { display: flex; flex-direction: column; gap: 2px; min-height: 48px; margin-bottom: 8px; }
-.chart-prix { font-family: 'Spectral', serif; font-size: 27px; font-weight: 600; color: #16304f; line-height: 1.1; }
-.chart-meta { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-.chart-var { font-size: 12.5px; font-weight: 600; }
-.chart-var.up { color: #1d6f4c; }
-.chart-var.down { color: #9a3535; }
-.chart-date { font-size: 12px; color: #9a8f7a; }
-.chart-zone { position: relative; width: 100%; }
-.chart-zone svg { width: 100%; height: auto; display: block; touch-action: none; }
-.chart-loading { padding: 64px 0; text-align: center; color: #9a8f7a; font-size: 13px; }
-.chart-grid { stroke: #f0ebe0; stroke-width: 1; }
-.chart-cross { stroke: #c9a96a; stroke-width: 1; stroke-dasharray: 3 3; pointer-events: none; }
-.chart-hl {
-  position: absolute; left: 2px; transform: translateY(-50%);
-  font-size: 10px; color: #8a7f68; background: rgba(255,255,255,.82);
-  padding: 0 4px; border-radius: 3px; pointer-events: none; font-variant-numeric: tabular-nums;
-}
-.chart-xlab { position: absolute; bottom: 0; font-size: 10px; color: #b5ab95; pointer-events: none; font-variant-numeric: tabular-nums; }
-.chart-periodes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-.chart-per {
-  font-size: 12px; font-weight: 500; padding: 6px 11px; border-radius: 5px;
-  border: 1px solid #e6e0d2; background: #fff; color: #5b5e63; cursor: pointer; font-family: inherit;
-  transition: border-color .12s, background .12s, color .12s;
-}
-.chart-per:hover { border-color: #16304f; }
-.chart-per.active { background: #16304f; color: #fff; border-color: #16304f; }
-
-@media (max-width: 860px) {
-  #sidebar-toggle { display: flex; }
-
-  .chart-body { padding: 14px 16px 16px; }
-  .chart-prix { font-size: 23px; }
-  .chart-per { padding: 6px 9px; font-size: 11.5px; }
-
-  #sidebar {
-    position: fixed; top: 0; left: 0; bottom: 0; z-index: 65;
-    transform: translateX(-100%);
-    transition: transform .26s ease;
-    box-shadow: 0 0 40px rgba(0,0,0,.3);
-  }
-  body.nav-open #sidebar { transform: translateX(0); }
-  .sidebar-header { padding-top: 56px; } /* place pour le bouton de fermeture */
-
-  #sidebar-backdrop { display: block; pointer-events: none; }
-  body.nav-open #sidebar-backdrop { opacity: 1; pointer-events: auto; }
-
-  /* En-tête empilé : le titre et le sous-titre peuvent passer à la ligne,
-     les actions de bureau (recherche, boutons) sont masquées sur mobile. */
-  .page-header { padding-left: 64px; flex-direction: column; align-items: stretch; gap: 10px; }
-  .page-title, .page-sub { white-space: normal; }
-  .header-actions { display: none; }
-
-  /* Cartes empilées verticalement (plus de scroll latéral) */
-  .grid-2, .grid-2-narrow, .grid-3, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
-  .grid-5, .grid-4, .taux-grid, .macro-grid, .summary-chips, .cat-grid { grid-template-columns: 1fr 1fr; }
-  .page-body { padding: 18px 16px 32px; }
-
-  /* Contenu pleine largeur, centré sans tenir compte de la barre de défilement */
-  #content { overflow-x: hidden; scrollbar-width: none; }
-  #content::-webkit-scrollbar { display: none; }
-
-  /* Les cartes ne sont plus élargies par un contenu interne trop large */
-  .grid-5 > *, .grid-2 > *, .grid-2-narrow > *, .grid-3 > *, .grid-dash-bottom > *, .summary-chips > * { min-width: 0; }
-
-  /* Le mini-tableau Autocalls défile dans sa carte au lieu d'étirer la colonne */
-  .autocall-table { overflow-x: auto; }
-  .autocall-header, .autocall-row { min-width: 520px; }
-
-  /* Bandeau de conformité : 2 lignes centrées, sans la pastille.
-     Le saut avant « Aucune » est forcé par .footer-l2 (passage en bloc). */
-  .footer-dot { display: none; }
-  #footer { display: block; text-align: center; padding: 9px 14px; font-size: 8.5px; line-height: 1.5; }
-  .footer-l2 { display: block; }
-
-  /* Taux alignés : hauteur de titre fixe pour que les valeurs démarrent à la même hauteur */
-  .taux-item-name { min-height: 30px; align-items: flex-start; }
-}

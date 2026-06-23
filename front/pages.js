@@ -191,6 +191,7 @@ function renderProduits(produits, state) {
         </div>
       </div>
 
+      <!-- Vue tableau (desktop) -->
       <div class="products-table-wrap scroll">
         <div class="products-table">
           <div class="products-table-header">
@@ -218,6 +219,12 @@ function renderProduits(produits, state) {
           </div>`).join('')}
         </div>
       </div>
+
+      <!-- Vue cartes accordéon (mobile) -->
+      <div class="prod-cards">
+        ${rows.map(r => renderProduitCard(r)).join('')}
+      </div>
+
       <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Validation humaine obligatoire.</div>
     </div>
   </div>`;
@@ -486,6 +493,51 @@ function renderFormulaireAjout() {
 
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Carte produit accordéon (vue mobile) ──
+function renderProduitCard(r) {
+  const pctColor = r.type === 'equity'
+    ? (r.k === 'red' ? 'red' : r.k === 'orange' ? 'orange' : 'green')
+    : '';
+
+  const details = r.type === 'equity' ? `
+    <div><div class="pcard-key">Niveau actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
+    <div><div class="pcard-key">% du strike</div><div class="pcard-val tnum ${pctColor}">${escHtml(r.pct)}</div></div>
+    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
+    <div><div class="pcard-key">Barrière auto.</div><div class="pcard-val tnum">${escHtml(r.bAuto)}</div></div>
+    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
+    ${r.zoneAutocall === 'OUI' ? `<div><div class="pcard-key">Zone autocall</div><div class="pcard-val green">Franchie ✓</div></div>` : ''}
+  ` : `
+    <div><div class="pcard-key">CMS actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
+    <div><div class="pcard-key">Barrière auto.</div><div class="pcard-val tnum">${escHtml(r.bAuto)}</div></div>
+    <div><div class="pcard-key">Barrière coupon</div><div class="pcard-val tnum">${escHtml(r.bCoupon)}</div></div>
+    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
+    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
+  `;
+
+  return `
+  <div class="prod-card" data-k="${r.k}" data-isin="${escHtml(r.isin)}" onclick="toggleCard('${escHtml(r.isin)}')">
+    <div class="pcard-top">
+      <div class="pcard-left">
+        <div class="pcard-nom">${escHtml(r.nom)}</div>
+        <div class="pcard-meta">${escHtml(r.sjLabel || r.sj)} · ${escHtml(r.coupon)}</div>
+      </div>
+      <div class="pcard-right">
+        <span class="badge ${r.k}">${escHtml(r.statut)}</span>
+        <span class="pcard-chevron">›</span>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <div class="pcard-grid">${details}</div>
+      <button class="pcard-link" onclick="event.stopPropagation();App.voirDetail('${escHtml(r.isin)}')">Voir le détail →</button>
+    </div>
+  </div>`;
+}
+
+function toggleCard(isin) {
+  const card = document.querySelector(`.prod-card[data-isin="${isin}"]`);
+  if (card) card.classList.toggle('open');
 }
 
 // ── Catégories de produits (CAP, Autocall CMS, Athena…) ──
