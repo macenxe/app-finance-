@@ -6,9 +6,11 @@
   <meta name="theme-color" content="#16304f">
   <title>Conservateur · App Analyse</title>
   <link rel="manifest" href="./manifest.json">
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=7">
 </head>
 <body>
+  <button id="sidebar-toggle" type="button" aria-label="Ouvrir le menu" onclick="App.toggleNav()">☰</button>
+  <div id="sidebar-backdrop" onclick="App.fermerNav()"></div>
   <div id="app">
     <!-- ── Sidebar ── -->
     <aside id="sidebar">
@@ -38,9 +40,9 @@
   </div>
 
   <div id="modal-root"></div>
-  <script src="./data.js?v=6"></script>
-  <script src="./api.js?v=6"></script>
-  <script src="./pages.js?v=6"></script>
-  <script src="./app.js?v=6"></script>
+  <script src="./data.js?v=7"></script>
+  <script src="./api.js?v=7"></script>
+  <script src="./pages.js?v=7"></script>
+  <script src="./app.js?v=7"></script>
 </body>
 </html>

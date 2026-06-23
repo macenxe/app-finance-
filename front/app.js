@@ -53,6 +53,21 @@ const App = (() => {
     if (root) root.innerHTML = '';
   }
 
+  // ── Tiroir latéral (mobile) ──
+  function majBoutonNav(open) {
+    const btn = document.getElementById('sidebar-toggle');
+    if (!btn) return;
+    btn.textContent = open ? '✕' : '☰';
+    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+  function toggleNav() {
+    majBoutonNav(document.body.classList.toggle('nav-open'));
+  }
+  function fermerNav() {
+    document.body.classList.remove('nav-open');
+    majBoutonNav(false);
+  }
+
   function initPullToRefresh() {
     const content = document.getElementById('content');
     const main    = document.getElementById('main');
@@ -129,6 +144,7 @@ const App = (() => {
     goto(page) {
       state = { ...state, page, q: '', detailIsin: null };
       fermerFormulaire();
+      fermerNav();
       renderPage();
     },
     setFilter(filter) {
@@ -167,6 +183,8 @@ const App = (() => {
       if (root) root.innerHTML = renderFormulaireAjout();
     },
     fermerFormulaire,
+    toggleNav,
+    fermerNav,
     ouvrirEditionCMS() {
       const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
       const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;
