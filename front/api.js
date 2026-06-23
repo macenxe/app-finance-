@@ -111,10 +111,16 @@ const AppAPI = (() => {
       let tauxLive = [];
       try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
 
+      // Merge indices live + statiques : si un indice n'est pas retourné par l'API
+      // (ex. SX7E.PA non supporté par Yahoo), on conserve la valeur statique.
+      const liveIndicesMap = {};
+      indicesAPI.map(normaliserIndice).forEach(i => { liveIndicesMap[i.nom] = i; });
+      const indices = INDICES_MARCHE.map(i => liveIndicesMap[i.nom] ?? i);
+
       backOk = true;
       return {
         source:   'api',
-        indices:  indicesAPI.map(normaliserIndice),
+        indices,
         produits: produitsAPI.map(normaliserProduit),
         taux:     construireTaux(tauxLive.map(normaliserTaux)),
       };

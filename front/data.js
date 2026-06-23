@@ -25,7 +25,7 @@ const PRODUITS = [
 const INDICES_MARCHE = [
   { nom:'Euro Stoxx 50',    valeur:'5 124,30', var:'+0,42 %', hausse:true  },
   { nom:'S&P 500',          valeur:'5 487,12', var:'+0,18 %', hausse:true  },
-  { nom:'Nasdaq',           valeur:'17 689,4', var:'+0,55 %', hausse:true  },
+  { nom:'Nasdaq',           valeur:'26 166,6', var:'+0,55 %', hausse:true  },
   { nom:'CAC 40',           valeur:'8 351,20', var:'−0,23 %', hausse:false },
   { nom:'Euro Stoxx Banks', valeur:'277,95',   var:'+0,87 %', hausse:true  },
 ];
