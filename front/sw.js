@@ -1,4 +1,4 @@
-const CACHE = 'conservateur-v14';
+const CACHE = 'conservateur-v15';
 const ASSETS = [
   './index.html', './style.css', './data.js', './api.js', './chart.js', './pages.js', './app.js', './manifest.json',
 ];

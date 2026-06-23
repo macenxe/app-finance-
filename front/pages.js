@@ -171,7 +171,7 @@ function renderProduits(produits, state) {
       </div>
     </header>
 
-    <div style="padding:18px 30px 40px;">
+    <div class="page-body">
       <div class="summary-chips">
         <div class="card chip-card"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
         <div class="card chip-card green"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
@@ -188,32 +188,41 @@ function renderProduits(produits, state) {
 
       <div class="products-table-wrap scroll">
         <div class="products-table">
-          <div class="products-table-header">
-            <span>Code ISIN</span><span>Nom commercial</span><span>Sous-jacent</span>
-            <span class="col-right">Coupon</span><span class="col-right">Strike</span>
-            <span class="col-right">Niveau</span><span class="col-right">% strike</span>
-            <span class="col-right">B. auto</span><span class="col-right">B. coup.</span>
-            <span>1ère const.</span><span>Échéance</span><span>Statut</span><span></span>
+          <div class="products-table-header products-table-row--slim">
+            <span>Nom commercial</span>
+            <span class="col-center">Coupon</span>
+            <span class="col-center">% strike</span>
+            <span class="col-center">Autocall</span>
+            <span class="col-center">Coupon versé</span>
+            <span>Constat</span>
+            <span>Échéance</span>
+            <span>Statut</span>
+            <span></span>
           </div>
-          ${rows.map(r => `
-          <div class="products-table-row">
-            <span class="col-isin tnum">${r.isin}</span>
+          ${rows.map(r => {
+            const autocall = r.zoneAutocall === 'OUI' ? '<span class="oui">✓</span>' : '<span class="na">—</span>';
+            const cv = couponVerse(r);
+            const cvHtml = cv === true ? '<span class="oui">✓</span>' : cv === false ? '<span class="non">✗</span>' : '<span class="na">NA</span>';
+            return `
+          <div class="products-table-row products-table-row--slim">
             <span class="col-nom">${r.nom}</span>
-            <span class="col-sj">${r.sj}</span>
-            <span class="tnum col-right">${r.coupon}</span>
-            <span class="tnum col-dim">${r.strike}</span>
-            <span class="tnum col-num">${r.niveau}</span>
-            <span class="tnum col-right" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
-            <span class="tnum col-dim">${r.bAuto}</span>
-            <span class="tnum col-dim">${r.bCoupon}</span>
+            <span class="tnum col-center">${r.coupon}</span>
+            <span class="tnum col-center" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
+            <span class="col-center">${autocall}</span>
+            <span class="col-center">${cvHtml}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
-          </div>`).join('')}
+          </div>`;
+          }).join('')}
         </div>
       </div>
       <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Données à vérifier — validation humaine obligatoire.</div>
+
+      <div class="prod-cards">
+        ${rows.map(r => renderProduitCard(r)).join('')}
+      </div>
     </div>
   </div>`;
 }
@@ -508,4 +517,49 @@ function renderModalEditionCMS(valeurActuelle) {
       </div>
     </div>
   </div>`;
+}
+
+function couponVerse(r) {
+  if (!r.bCoupon || r.bCoupon === '—' || r.bCoupon === 'NA') return null;
+  if (r.type === 'cms') {
+    const b = parseFloat(r.bCoupon.replace(/[^0-9,.]/g,'').replace(',','.'));
+    const n = parseFloat((r.niveau||'').replace(/[^0-9,.]/g,'').replace(',','.'));
+    return (!isNaN(b) && !isNaN(n)) ? n >= b : null;
+  }
+  const b = parseFloat(r.bCoupon.replace(/[^0-9,.]/g,'').replace(',','.'));
+  return (!isNaN(b) && r.strikeNum && r.niveauNum) ? r.niveauNum >= r.strikeNum * (b / 100) : null;
+}
+
+function renderProduitCard(r) {
+  const cv = couponVerse(r);
+  const cvHtml = cv === true ? '<span class="oui">✓</span>' : cv === false ? '<span class="non">✗</span>' : '<span class="na">NA</span>';
+  const autocall = r.zoneAutocall === 'OUI' ? '<span class="oui">✓</span>' : '<span class="na">—</span>';
+  return `
+  <div class="prod-card" data-k="${r.k}" data-isin="${r.isin}" onclick="toggleCard('${r.isin}')">
+    <div class="pcard-top">
+      <div class="pcard-left">
+        <div class="pcard-nom">${r.nom}</div>
+        <div class="pcard-meta">${r.coupon}</div>
+      </div>
+      <div class="pcard-right">
+        <span class="badge ${r.k}">${r.statut}</span>
+        <span class="pcard-chevron">›</span>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <div class="pcard-grid">
+        <div class="pcard-item"><div class="pcard-lbl">% Strike</div><div class="pcard-val" style="color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};font-weight:600;">${r.pct}</div></div>
+        <div class="pcard-item"><div class="pcard-lbl">Autocall</div><div class="pcard-val">${autocall}</div></div>
+        <div class="pcard-item"><div class="pcard-lbl">Coupon versé</div><div class="pcard-val">${cvHtml}</div></div>
+        <div class="pcard-item"><div class="pcard-lbl">Constat</div><div class="pcard-val" style="font-size:11px;">${r.constat}</div></div>
+        <div class="pcard-item"><div class="pcard-lbl">Échéance</div><div class="pcard-val" style="font-size:11px;">${r.ech}</div></div>
+      </div>
+      <button class="pcard-link" onclick="event.stopPropagation();App.voirDetail('${r.isin}')">Voir le détail →</button>
+    </div>
+  </div>`;
+}
+
+function toggleCard(isin) {
+  const card = document.querySelector(`.prod-card[data-isin="${isin}"]`);
+  if (card) card.classList.toggle('open');
 }
