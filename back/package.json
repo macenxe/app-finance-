@@ -6,6 +6,7 @@
   "scripts": {
     "dev":       "node --env-file=.env node_modules/tsx/dist/cli.mjs watch src/server.ts",
     "start":     "node --env-file=.env node_modules/tsx/dist/cli.mjs src/server.ts",
+    "snapshot":  "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/snapshot.ts",
     "build":     "tsc",
     "typecheck": "tsc --noEmit"
   },

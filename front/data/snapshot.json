@@ -1,0 +1,557 @@
+{
+  "genere": "2026-06-23T07:25:08.844Z",
+  "indices": [
+    {
+      "sousJacent": "^STOXX50E",
+      "dernierCours": 6251.41,
+      "heureCours": "2026-06-23T07:10:00.000Z",
+      "variationPct": -0.9491603,
+      "nom": "Euro Stoxx 50"
+    },
+    {
+      "sousJacent": "^GSPC",
+      "dernierCours": 7472.79,
+      "heureCours": "2026-06-22T20:45:07.000Z",
+      "variationPct": -0.37050518,
+      "nom": "S&P 500"
+    },
+    {
+      "sousJacent": "^IXIC",
+      "dernierCours": 26166.602,
+      "heureCours": "2026-06-22T21:15:59.000Z",
+      "variationPct": -1.3248774,
+      "nom": "Nasdaq"
+    },
+    {
+      "sousJacent": "^FCHI",
+      "dernierCours": 8340.18,
+      "heureCours": "2026-06-23T07:10:00.000Z",
+      "variationPct": -0.71351033,
+      "nom": "CAC 40"
+    }
+  ],
+  "taux": [
+    {
+      "sousJacent": "^TNX",
+      "dernierCours": 4.509,
+      "heureCours": "2026-06-22T18:59:53.000Z",
+      "variationPct": 1.30308,
+      "nom": "US 10 ans"
+    },
+    {
+      "nom": "CMS 10 ans",
+      "sousJacent": "CMS10",
+      "dernierCours": 3.04,
+      "heureCours": "2026-06-23T07:25:08.844Z",
+      "manuel": true,
+      "dateMaj": "23/06/2026"
+    }
+  ],
+  "produits": [
+    {
+      "isin": "FR001400KP78",
+      "nom": "Conservateur Autocall CAC 90% Déc 2026",
+      "sousJacent": "^FCHI",
+      "sousJacentLabel": "CAC 40",
+      "typeProduit": "equity",
+      "strike": 7346,
+      "barriereAutocall": 90,
+      "barriereCoupon": null,
+      "echeance": "2026-12-15",
+      "constat": "1er j./mois*",
+      "coupon": 6,
+      "id": 1,
+      "cours": {
+        "sousJacent": "^FCHI",
+        "dernierCours": 8340.18,
+        "heureCours": "2026-06-23T07:10:00.000Z",
+        "variationPct": -0.71351033,
+        "nom": "CAC 40"
+      },
+      "indicateurs": {
+        "produitId": 1,
+        "pctStrike": 113.53362374081132,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000001M7",
+      "nom": "CAP 40 Août 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 215.1,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-08-13",
+      "constat": "29/07/2026",
+      "coupon": 7,
+      "id": 2,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 2,
+        "pctStrike": 129.2189679218968,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000001K1",
+      "nom": "CAP 50 Août 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 215.1,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-08-13",
+      "constat": "29/07/2026",
+      "coupon": 6,
+      "id": 3,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 3,
+        "pctStrike": 129.2189679218968,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000001L9",
+      "nom": "CAP 60 Août 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 215.1,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-08-13",
+      "constat": "29/07/2026",
+      "coupon": 5,
+      "id": 4,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 4,
+        "pctStrike": 129.2189679218968,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014011HA6",
+      "nom": "CAP 40 Décembre 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 243.31,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-12-16",
+      "constat": "30/11/2026",
+      "coupon": 7,
+      "id": 5,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 5,
+        "pctStrike": 114.23698162837532,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014011HB4",
+      "nom": "CAP 50 Décembre 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 243.31,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-12-16",
+      "constat": "30/11/2026",
+      "coupon": 6,
+      "id": 6,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 6,
+        "pctStrike": 114.23698162837532,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014011HC2",
+      "nom": "CAP 60 Décembre 2030",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 243.31,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2030-12-16",
+      "constat": "30/11/2026",
+      "coupon": 5,
+      "id": 7,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 7,
+        "pctStrike": 114.23698162837532,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014013KJ7",
+      "nom": "CAP 40 Février 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 273.13,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-03-17",
+      "constat": "26/02/2027",
+      "coupon": 7,
+      "id": 8,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 8,
+        "pctStrike": 101.76472741917767,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014013KI9",
+      "nom": "CAP 50 Février 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 273.13,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-03-17",
+      "constat": "26/02/2027",
+      "coupon": 6,
+      "id": 9,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 9,
+        "pctStrike": 101.76472741917767,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014013KK5",
+      "nom": "CAP 60 Février 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 273.13,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-03-17",
+      "constat": "26/02/2027",
+      "coupon": 5,
+      "id": 10,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 10,
+        "pctStrike": 101.76472741917767,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000002N3",
+      "nom": "CAP 40 Avril 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 257.72,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-05-12",
+      "constat": "27/04/2027",
+      "coupon": 7,
+      "id": 11,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 11,
+        "pctStrike": 107.84960422163587,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000002M5",
+      "nom": "CAP 50 Avril 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 257.72,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-05-12",
+      "constat": "27/04/2027",
+      "coupon": 6,
+      "id": 12,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 12,
+        "pctStrike": 107.84960422163587,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000002O1",
+      "nom": "CAP 60 Avril 2031",
+      "sousJacent": "SX7E.PA",
+      "sousJacentLabel": "ES Banks",
+      "typeProduit": "equity",
+      "strike": 257.72,
+      "barriereAutocall": 100,
+      "barriereCoupon": 80,
+      "echeance": "2031-05-12",
+      "constat": "27/04/2027",
+      "coupon": 5,
+      "id": 13,
+      "cours": {
+        "sousJacent": "SX7E.PA",
+        "dernierCours": 277.95,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 13,
+        "pctStrike": 107.84960422163587,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR1459AB7782",
+      "nom": "Conservateur Autocall CMS Juillet 2030",
+      "sousJacent": "CMS10",
+      "sousJacentLabel": "CMS 10 ans",
+      "typeProduit": "cms",
+      "strike": null,
+      "barriereAutocall": 2.5,
+      "barriereCoupon": 3,
+      "echeance": "2030-07-25",
+      "constat": "13/07/2026",
+      "coupon": 4.25,
+      "id": 14,
+      "cours": {
+        "sousJacent": "CMS10",
+        "dernierCours": 3.04,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 14,
+        "pctStrike": null,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR00140108S4",
+      "nom": "Conservateur Autocall CMS Octobre 2030",
+      "sousJacent": "CMS10",
+      "sousJacentLabel": "CMS 10 ans",
+      "typeProduit": "cms",
+      "strike": null,
+      "barriereAutocall": 2.25,
+      "barriereCoupon": 2.75,
+      "echeance": "2030-10-30",
+      "constat": "16/10/2026",
+      "coupon": 4,
+      "id": 15,
+      "cours": {
+        "sousJacent": "CMS10",
+        "dernierCours": 3.04,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 15,
+        "pctStrike": null,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014012R49",
+      "nom": "Conservateur Autocall CMS Janvier 2031",
+      "sousJacent": "CMS10",
+      "sousJacentLabel": "CMS 10 ans",
+      "typeProduit": "cms",
+      "strike": null,
+      "barriereAutocall": 2.2,
+      "barriereCoupon": 2.85,
+      "echeance": "2031-02-03",
+      "constat": "18/01/2027",
+      "coupon": 4,
+      "id": 16,
+      "cours": {
+        "sousJacent": "CMS10",
+        "dernierCours": 3.04,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 16,
+        "pctStrike": null,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FR0014014XL4",
+      "nom": "Conservateur Autocall CMS Avril 2031",
+      "sousJacent": "CMS10",
+      "sousJacentLabel": "CMS 10 ans",
+      "typeProduit": "cms",
+      "strike": null,
+      "barriereAutocall": 2.5,
+      "barriereCoupon": 3,
+      "echeance": "2031-05-02",
+      "constat": "12/04/2027",
+      "coupon": 4,
+      "id": 17,
+      "cours": {
+        "sousJacent": "CMS10",
+        "dernierCours": 3.04,
+        "heureCours": "2026-06-23T07:25:08.844Z"
+      },
+      "indicateurs": {
+        "produitId": 17,
+        "pctStrike": null,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRF0000001C8",
+      "nom": "LC Athena BNP Juillet 2030",
+      "sousJacent": "BNP.PA",
+      "sousJacentLabel": "BNP Paribas",
+      "typeProduit": "equity",
+      "strike": 77.84,
+      "barriereAutocall": 100,
+      "barriereCoupon": null,
+      "echeance": "2030-07-31",
+      "constat": "20/07/2026",
+      "coupon": 10,
+      "id": 18,
+      "cours": {
+        "sousJacent": "BNP.PA",
+        "dernierCours": 101.46,
+        "heureCours": "2026-06-23T07:10:07.000Z",
+        "variationPct": -0.37305838
+      },
+      "indicateurs": {
+        "produitId": 18,
+        "pctStrike": 130.34429599177798,
+        "zoneAutocall": true,
+        "statutZone": "rappel_probable"
+      }
+    },
+    {
+      "isin": "FRBCP1260215",
+      "nom": "LC Athena Stellantis Novembre 2030",
+      "sousJacent": "STLAM.MI",
+      "sousJacentLabel": "Stellantis",
+      "typeProduit": "equity",
+      "strike": 8.45,
+      "barriereAutocall": 100,
+      "barriereCoupon": null,
+      "echeance": "2030-11-28",
+      "constat": "16/11/2026",
+      "coupon": 11,
+      "id": 19,
+      "cours": {
+        "sousJacent": "STLAM.MI",
+        "dernierCours": 5.477,
+        "heureCours": "2026-06-23T07:10:08.000Z",
+        "variationPct": -3.1117337
+      },
+      "indicateurs": {
+        "produitId": 19,
+        "pctStrike": 64.81656804733728,
+        "zoneAutocall": false,
+        "statutZone": "risque"
+      }
+    },
+    {
+      "isin": "FR0014015OJ4",
+      "nom": "LC Athena Capgemini Mai 2031",
+      "sousJacent": "CAP.PA",
+      "sousJacentLabel": "Capgemini",
+      "typeProduit": "equity",
+      "strike": 106.1,
+      "barriereAutocall": 100,
+      "barriereCoupon": null,
+      "echeance": "2031-05-12",
+      "constat": "04/05/2027",
+      "coupon": 10,
+      "id": 20,
+      "cours": {
+        "sousJacent": "CAP.PA",
+        "dernierCours": 87.86,
+        "heureCours": "2026-06-23T07:10:05.000Z",
+        "variationPct": 0.04556951
+      },
+      "indicateurs": {
+        "produitId": 20,
+        "pctStrike": 82.808671065033,
+        "zoneAutocall": false,
+        "statutZone": "surveillance"
+      }
+    }
+  ]
+}

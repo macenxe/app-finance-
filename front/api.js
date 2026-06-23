@@ -102,7 +102,23 @@ const AppAPI = (() => {
     return TAUX.map(t => liveMap[t.nom] ?? t);
   }
 
+  // Assemble la réponse à partir de données au format API (back local OU snapshot publié).
+  // Merge indices live + statiques : si un indice n'est pas retourné (ex. SX7E.PA non
+  // supporté par Yahoo), on conserve la valeur statique de data.js.
+  function assembler(source, indicesAPI, produitsAPI, tauxLive) {
+    const liveIndicesMap = {};
+    indicesAPI.map(normaliserIndice).forEach(i => { liveIndicesMap[i.nom] = i; });
+    const indices = INDICES_MARCHE.map(i => liveIndicesMap[i.nom] ?? i);
+    return {
+      source,
+      indices,
+      produits: produitsAPI.map(normaliserProduit),
+      taux:     construireTaux((tauxLive || []).map(normaliserTaux)),
+    };
+  }
+
   async function chargerDonnees() {
+    // 1. Back local (développement). En production https, l'appel vers localhost échoue vite.
     try {
       const [indicesAPI, produitsAPI] = await Promise.all([
         fetchJson(`${BASE}/indices`),
@@ -110,29 +126,25 @@ const AppAPI = (() => {
       ]);
       let tauxLive = [];
       try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
-
-      // Merge indices live + statiques : si un indice n'est pas retourné par l'API
-      // (ex. SX7E.PA non supporté par Yahoo), on conserve la valeur statique.
-      const liveIndicesMap = {};
-      indicesAPI.map(normaliserIndice).forEach(i => { liveIndicesMap[i.nom] = i; });
-      const indices = INDICES_MARCHE.map(i => liveIndicesMap[i.nom] ?? i);
-
       backOk = true;
-      return {
-        source:   'api',
-        indices,
-        produits: produitsAPI.map(normaliserProduit),
-        taux:     construireTaux(tauxLive.map(normaliserTaux)),
-      };
-    } catch {
+      return assembler('api', indicesAPI, produitsAPI, tauxLive);
+    } catch { /* pas de back local : on tente le snapshot publié */ }
+
+    // 2. Snapshot généré par GitHub Actions (même format que l'API)
+    try {
+      const snap = await fetchJson('./data/snapshot.json');
       backOk = false;
-      return {
-        source:   'statique',
-        indices:  INDICES_MARCHE,
-        produits: enrichirProduits(PRODUITS),
-        taux:     TAUX,
-      };
-    }
+      return assembler('snapshot', snap.indices ?? [], snap.produits ?? [], snap.taux ?? []);
+    } catch { /* pas de snapshot : on tombe sur le statique */ }
+
+    // 3. Données statiques de data.js (dernier recours)
+    backOk = false;
+    return {
+      source:   'statique',
+      indices:  INDICES_MARCHE,
+      produits: enrichirProduits(PRODUITS),
+      taux:     TAUX,
+    };
   }
 
   async function ajouterProduit(data) {
