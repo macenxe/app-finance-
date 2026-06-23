@@ -434,9 +434,11 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .autocall-table { overflow-x: auto; }
   .autocall-header, .autocall-row { min-width: 520px; }
 
-  /* Bandeau de conformité : 2 lignes, sans la pastille */
+  /* Bandeau de conformité : 2 lignes centrées, sans la pastille.
+     Le saut avant « Aucune » est forcé par .footer-l2 (passage en bloc). */
   .footer-dot { display: none; }
-  #footer { padding: 8px 14px; font-size: 8px; line-height: 1.4; gap: 0; }
+  #footer { display: block; text-align: center; padding: 9px 14px; font-size: 8.5px; line-height: 1.5; }
+  .footer-l2 { display: block; }
 
   /* Taux alignés : hauteur de titre fixe pour que les valeurs démarrent à la même hauteur */
   .taux-item-name { min-height: 30px; align-items: flex-start; }
