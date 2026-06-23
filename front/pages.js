@@ -194,29 +194,32 @@ function renderProduits(produits, state) {
       <!-- Vue tableau (desktop) -->
       <div class="products-table-wrap scroll">
         <div class="products-table">
-          <div class="products-table-header">
-            <span>Code ISIN</span><span>Nom commercial</span><span>Sous-jacent</span>
-            <span class="col-right">Coupon</span><span class="col-right">Strike</span>
-            <span class="col-right">Niveau</span><span class="col-right">% strike</span>
-            <span class="col-right">B. auto</span><span class="col-right">B. coup.</span>
-            <span>1ère const.</span><span>Échéance</span><span>Statut</span><span></span>
+          <div class="products-table-header products-table-row--slim">
+            <span>Nom commercial</span><span>Sous-jacent</span>
+            <span class="col-right">Coupon</span>
+            <span class="col-right">% strike</span>
+            <span class="col-center">Autocall</span>
+            <span class="col-center">Coupon versé</span>
+            <span>Proch. const.</span><span>Échéance</span>
+            <span>Statut</span><span></span>
           </div>
-          ${rows.map(r => `
-          <div class="products-table-row">
-            <span class="col-isin tnum">${r.isin}</span>
+          ${rows.map(r => {
+            const cv = couponVerse(r);
+            const pctColor = r.type==='equity' ? (r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c') : '#9a8f7a';
+            return `
+          <div class="products-table-row products-table-row--slim">
             <span class="col-nom">${r.nom}</span>
             <span class="col-sj">${r.sj}</span>
             <span class="tnum col-right">${r.coupon}</span>
-            <span class="tnum col-dim">${r.strike}</span>
-            <span class="tnum col-num">${r.niveau}</span>
-            <span class="tnum col-right" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
-            <span class="tnum col-dim">${r.bAuto}</span>
-            <span class="tnum col-dim">${r.bCoupon}</span>
+            <span class="tnum col-right" style="font-weight:600;color:${pctColor};">${r.pct}</span>
+            <span class="col-center">${r.zoneAutocall==='OUI' ? '<span class="oui">✓</span>' : '<span class="non">—</span>'}</span>
+            <span class="col-center">${cv===true ? '<span class="oui">✓</span>' : cv===false ? '<span class="non">—</span>' : '<span class="na">NA</span>'}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
-          </div>`).join('')}
+          </div>`;
+          }).join('')}
         </div>
       </div>
 
@@ -489,6 +492,18 @@ function renderFormulaireAjout() {
       </div>
     </div>
   </div>`;
+}
+
+// Retourne true si le coupon est versé, false si barrière non atteinte, null si non applicable.
+function couponVerse(r) {
+  if (!r.bCoupon || r.bCoupon === '—' || r.bCoupon === 'NA') return null;
+  if (r.type === 'cms') {
+    const b = parseFloat(r.bCoupon.replace(/[^0-9,\.]/g, '').replace(',', '.'));
+    const n = parseFloat((r.niveau || '').replace(/[^0-9,\.]/g, '').replace(',', '.'));
+    return (!isNaN(b) && !isNaN(n)) ? n >= b : null;
+  }
+  const b = parseFloat(r.bCoupon.replace(/[^0-9,\.]/g, '').replace(',', '.'));
+  return (!isNaN(b) && r.strikeNum && r.niveauNum) ? r.niveauNum >= r.strikeNum * (b / 100) : null;
 }
 
 function escHtml(s) {
