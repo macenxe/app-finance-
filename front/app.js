@@ -33,26 +33,24 @@ const App = (() => {
     }
     el.scrollTop = 0;
     renderNav();
+    mettreAJourBadgeSource();
+  }
+
+  function mettreAJourBadgeSource() {
+    const badge = document.getElementById('source-badge');
+    if (!badge) return;
+    if (donnees.source === 'api') {
+      badge.textContent = '● Données en direct';
+      badge.className = 'source-badge live';
+    } else {
+      badge.textContent = '○ Données statiques (back hors ligne)';
+      badge.className = 'source-badge offline';
+    }
   }
 
   function fermerFormulaire() {
     const root = document.getElementById('modal-root');
     if (root) root.innerHTML = '';
-  }
-
-  // ── Tiroir latéral (mobile) ──
-  function majBoutonNav(open) {
-    const btn = document.getElementById('sidebar-toggle');
-    if (!btn) return;
-    btn.textContent = open ? '✕' : '☰';
-    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-  }
-  function toggleNav() {
-    majBoutonNav(document.body.classList.toggle('nav-open'));
-  }
-  function fermerNav() {
-    document.body.classList.remove('nav-open');
-    majBoutonNav(false);
   }
 
   function initPullToRefresh() {
@@ -128,10 +126,18 @@ const App = (() => {
   }
 
   return {
+    toggleSidebar() {
+      const sidebar  = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      const isOpen   = sidebar.classList.toggle('open');
+      backdrop.classList.toggle('open', isOpen);
+    },
     goto(page) {
       state = { ...state, page, q: '', detailIsin: null };
       fermerFormulaire();
-      fermerNav();
+      // Ferme la sidebar sur mobile après navigation
+      document.getElementById('sidebar')?.classList.remove('open');
+      document.getElementById('sidebar-backdrop')?.classList.remove('open');
       renderPage();
     },
     setFilter(filter) {
@@ -170,39 +176,6 @@ const App = (() => {
       if (root) root.innerHTML = renderFormulaireAjout();
     },
     fermerFormulaire,
-    toggleNav,
-    fermerNav,
-    ouvrirGraphique(ticker, label) {
-      if (window.Chart) Chart.ouvrir(ticker, label);
-    },
-    ouvrirCategorie(cat) {
-      const membres = donnees.produits.filter(p => categorieProduit(p) === cat);
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = renderModalCategorie(cat, membres);
-    },
-    fermerModal() {
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = '';
-    },
-    ouvrirGraphiqueProduit(isin) {
-      if (!window.Chart) return;
-      const p = donnees.produits.find(x => x.isin === isin);
-      if (!p) return;
-      // Repères fins : strike, barrière autocall, barrière coupon (produits actions).
-      const lignes = [];
-      if (p.type === 'equity' && p.strikeNum) {
-        lignes.push({ valeur: p.strikeNum, label: 'Strike', couleur: '#16304f' });
-        if (p.bAutoNum != null) {
-          const v = (p.bAutoNum / 100) * p.strikeNum;
-          if (Math.abs(v - p.strikeNum) > p.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-        }
-        if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
-      }
-      const cat = categorieProduit(p);
-      Chart.ouvrir(p.ticker || p.sjLabel || p.sj, p.nom, {
-        lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
-      });
-    },
     ouvrirEditionCMS() {
       const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
       const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;

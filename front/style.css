@@ -407,3 +407,54 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 #ptr-indicator span { display: inline-block; }
 @keyframes ptr-spin { to { transform: rotate(360deg); } }
 #ptr-indicator.refreshing span { animation: ptr-spin .65s linear infinite; }
+
+/* ── Mobile responsive ── */
+#mobile-topbar { display: none; }
+#sidebar-backdrop { display: none; }
+
+@media (max-width: 640px) {
+  /* Sidebar en overlay — cachée par défaut */
+  #sidebar {
+    position: fixed; left: 0; top: 0; bottom: 0; z-index: 30;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+  }
+  #sidebar.open { transform: translateX(0); }
+
+  /* Fond semi-transparent derrière la sidebar ouverte */
+  #sidebar-backdrop {
+    display: block;
+    position: fixed; inset: 0; z-index: 29;
+    background: rgba(0,0,0,.45);
+    opacity: 0; pointer-events: none;
+    transition: opacity .25s;
+  }
+  #sidebar-backdrop.open { opacity: 1; pointer-events: auto; }
+
+  /* Main prend toute la largeur */
+  #main { width: 100%; }
+
+  /* Top bar mobile */
+  #mobile-topbar {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 52px; flex: none;
+    background: #16304f;
+  }
+  .btn-hamburger {
+    background: none; border: none; color: #c9a96a;
+    font-size: 22px; line-height: 1; cursor: pointer; padding: 4px 2px;
+  }
+  .mobile-topbar-title {
+    font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff;
+  }
+
+  /* Footer compact — cache le texte légal */
+  .footer-legal { display: none; }
+  #footer { padding: 8px 16px; gap: 8px; }
+  .footer-dot { display: none; }
+
+  /* Padding des pages réduit */
+  .page-body { padding: 16px 14px 32px; }
+  .page-header { padding: 14px 14px; flex-wrap: wrap; gap: 8px; }
+  .header-actions { flex-wrap: wrap; gap: 8px; }
+}
