@@ -397,61 +397,6 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .disabled-field { opacity: 0.4; pointer-events: none; }
 
-/* ── Contrats & UC ── */
-.contrat-block { margin-bottom: 24px; overflow: hidden; }
-.contrat-header-bar {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 20px; background: #f7f4ec; border-bottom: 1px solid #ece7dc; gap: 12px;
-}
-.contrat-nom  { font-family: 'Spectral', serif; font-size: 16px; font-weight: 600; color: #16304f; }
-.contrat-meta { font-size: 11.5px; color: #9a8f7a; margin-top: 2px; }
-.contrat-chips { display: flex; gap: 6px; flex: none; }
-.contrat-chip { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 3px; text-transform: uppercase; letter-spacing: .05em; }
-.contrat-chip.fe { background: #e8f1ec; color: #1d6f4c; }
-.contrat-chip.uc { background: #eaf0f6; color: #16304f; }
-
-.contrat-section { padding: 16px 20px; border-bottom: 1px solid #f1ece1; }
-.contrat-section:last-child { border-bottom: none; }
-.contrat-section-label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: #9a8f7a; font-weight: 600; margin-bottom: 12px; }
-
-.fe-row { display: flex; align-items: center; gap: 0; }
-.fe-nom { flex: 1; font-size: 13px; font-weight: 500; color: #16304f; }
-.fe-taux-wrap { display: flex; gap: 28px; }
-.fe-taux-item { text-align: right; }
-.fe-taux-label { font-size: 10px; color: #9a8f7a; text-transform: uppercase; letter-spacing: .05em; }
-.fe-taux-val { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; color: #16304f; }
-.fe-taux-val.secondary { font-size: 15px; color: #9a8f7a; }
-
-.uc-table-wrap { overflow-x: auto; }
-.uc-table { min-width: 780px; }
-.uc-table-row--cols {
-  display: grid;
-  grid-template-columns: minmax(180px,2.5fr) 110px 130px 130px 90px 120px 90px;
-  gap: 8px; align-items: center;
-}
-.uc-table-header {
-  padding: 8px 0 8px;
-  font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: #9a8f7a; font-weight: 600;
-  border-bottom: 1px solid #ece7dc;
-}
-.uc-table-row {
-  padding: 9px 0; font-size: 12.5px;
-  border-bottom: 1px solid #f1ece1;
-}
-.uc-table-row:last-child { border-bottom: none; }
-.uc-table-row:hover { background: #faf8f3; margin: 0 -20px; padding: 9px 20px; }
-.uc-nom  { color: #16304f; font-weight: 500; }
-.uc-isin { font-size: 11px; color: #8a8170; }
-.uc-cat-badge { font-size: 10.5px; background: #eaf0f6; color: #16304f; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
-.uc-empty { font-size: 12.5px; color: #9a8f7a; padding: 4px 0; }
-
-.srri-bar { display: inline-flex; gap: 2px; align-items: center; }
-.srri-dot { width: 9px; height: 9px; border-radius: 2px; background: #e0dbd0; }
-.srri-dot.on { background: #16304f; }
-
-.mb-18 { margin-bottom: 18px; }
-.p-18  { padding: 18px; }
-
 /* ── Pull-to-refresh ── */
 #ptr-indicator {
   height: 0; overflow: hidden; flex: none;
@@ -511,9 +456,42 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   /* Padding des pages réduit */
   .page-body { padding: 16px 14px 32px; }
   .page-header { padding: 14px 14px; flex-wrap: wrap; gap: 8px; }
-  .header-actions { flex-wrap: wrap; gap: 8px; }
+  .header-actions { flex-wrap: wrap; gap: 6px; }
+  /* Boutons secondaires du header cachés sur mobile (non essentiels) */
+  .header-actions .btn-primary,
+  .header-actions .btn-secondary { display: none; }
+  /* Search box pleine largeur */
+  .search-box { width: 100%; }
 
-  /* Contrats — mobile */
-  .uc-table-wrap { overflow-x: auto; }
-  .fe-taux-wrap { flex-direction: column; gap: 8px; }
+  /* ── Dashboard : grilles adaptées ── */
+  .grid-5         { grid-template-columns: repeat(2, 1fr); }
+  .grid-2-narrow  { grid-template-columns: 1fr; }
+  .grid-2         { grid-template-columns: 1fr; }
+  .grid-3         { grid-template-columns: 1fr; }
+
+  /* Taux : 2 colonnes au lieu de 4 */
+  .taux-grid  { grid-template-columns: repeat(2, 1fr); }
+  /* Macro : 2 colonnes au lieu de 3 */
+  .macro-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Produits : tableau 5 colonnes, cache Coupon et Prochaine const. ── */
+  .products-table-header,
+  .products-table-row {
+    grid-template-columns: 1fr 36px 36px auto 40px;
+  }
+  /* Colonnes cachées : 2 = taux coupon, 3 = prochaine const. */
+  .products-table-header > span:nth-child(2),
+  .products-table-header > span:nth-child(3),
+  .products-table-row    > span:nth-child(2),
+  .products-table-row    > span:nth-child(3) { display: none; }
+
+  /* Chips résumé produits : 2 colonnes au lieu de 4 */
+  .summary-chips { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Allocation ── */
+  .reco-grid { grid-template-columns: 1fr; }
+
+  /* ── Veille : chips enroulables ── */
+  .veille-tags  { flex-wrap: wrap; }
+  .filter-chips { flex-wrap: wrap; }
 }
