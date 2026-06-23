@@ -202,7 +202,7 @@ function renderProduits(produits, state) {
             const rappelOk  = r.k === 'green';
             return `
           <div class="products-table-row">
-            <span class="col-nom">${r.nom}</span>
+            <span class="col-nom">${r.nom.replace('Conservateur ', 'C. ')}</span>
             <span class="tnum col-right">${r.coupon}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="col-center"><span class="ind-ok${couponOk ? ' yes' : ' no'}" title="${couponOk ? 'Coupon en cours' : 'Coupon à risque'}">€</span></span>

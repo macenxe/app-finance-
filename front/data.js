@@ -1,4 +1,4 @@
-// Données statiques des produits structurés (à remplacer par l'API back)
+﻿// Données statiques des produits structurés (à remplacer par l'API back)
 const PRODUITS = [
   { isin:'FR001400KP78', nom:'Conservateur Autocall CAC 90% Déc 2026',      sj:'CAC 40',         coupon:'6 %',    strike:'7 346',  niveau:'8 351',  bAuto:'90 %',   bCoupon:'—',    constat:'1er j./mois*', ech:'15/12/2026', type:'equity', strikeNum:7346,   niveauNum:8351,  zoneAutocall:'NON' },
   { isin:'FRF0000001M7', nom:'CAP 40 Août 2030',                             sj:'ES Banks',       coupon:'7 %',    strike:'215,10', niveau:'277,95', bAuto:'100 %',  bCoupon:'80 %', constat:'29/07/2026',   ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI' },
@@ -80,13 +80,27 @@ const VEILLE = [
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });
+  const parseNum = s => parseFloat((s || '').replace(/[^0-9,.]/g, '').replace(',', '.'));
   return produits.map(p => {
+    // Calcul dynamique de la zone d'autocall (ne pas se fier au champ hardcode)
+    let zoneAutocall;
+    if (p.type === 'equity' && p.strikeNum && p.niveauNum) {
+      const bAuto = parseNum(p.bAuto);
+      zoneAutocall = !isNaN(bAuto) ? (p.niveauNum >= p.strikeNum * bAuto / 100 ? 'OUI' : 'NON') : p.zoneAutocall;
+    } else if (p.type === 'cms') {
+      const niv   = parseNum(p.niveau);
+      const bAuto = parseNum(p.bAuto);
+      zoneAutocall = (!isNaN(niv) && !isNaN(bAuto)) ? (niv >= bAuto ? 'OUI' : 'NON') : p.zoneAutocall;
+    } else {
+      zoneAutocall = p.zoneAutocall;
+    }
+
     let k;
-    if (p.zoneAutocall === 'OUI') k = 'green';
+    if (zoneAutocall === 'OUI') k = 'green';
     else if (p.type === 'equity' && (p.niveauNum / p.strikeNum) < 0.75) k = 'red';
     else k = 'orange';
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
     const statuts = { green:'Rappel probable', orange:'Surveillance', red:'Risque' };
-    return { ...p, k, statut: statuts[k], pct };
+    return { ...p, zoneAutocall, k, statut: statuts[k], pct };
   });
 }
