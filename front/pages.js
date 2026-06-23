@@ -18,7 +18,7 @@ function renderDashboard(indices, produits, taux) {
   };
 
   const heureRef = indices[0]?.heureCours
-    ? `${fmtHeure(indices[0].heureCours)} · cours indicatifs`
+    ? fmtHeure(indices[0].heureCours)
     : '20 juin 2026, 17:35 · clôture provisoire';
 
   return `
@@ -42,11 +42,10 @@ function renderDashboard(indices, produits, taux) {
       <!-- Indices -->
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
-        <span class="section-hint">Données à vérifier</span>
       </div>
       <div class="grid-5 mb-24">
         ${indices.map(i => `
-        <div class="card index-card">
+        <div class="card index-card${i.ticker ? ' index-clic' : ''}"${i.ticker ? ` onclick="App.ouvrirGraphique('${i.ticker}','${i.nom}')"` : ''}>
           <div class="index-name">${i.nom}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
@@ -114,17 +113,17 @@ function renderDashboard(indices, produits, taux) {
           <div class="autocall-table">
             <div class="autocall-header">
               <span>Produit</span><span>Sous-jacent</span>
-              <span style="text-align:right;">% strike</span>
+              <span>% strike</span>
               <span>Prochaine const.</span>
-              <span style="text-align:right;">Statut</span>
+              <span>Statut</span>
             </div>
             ${top6.map(p => `
             <div class="autocall-row">
               <span style="color:#16304f;font-weight:500;">${p.nom}</span>
               <span style="color:#6b6e73;">${p.sj}</span>
-              <span class="tnum col-right" style="font-weight:600;color:${p.k==='red'?'#9a3535':p.k==='orange'?'#b06a1a':'#6b6e73'};">${p.pct}</span>
+              <span class="tnum" style="font-weight:600;color:${p.k==='red'?'#9a3535':p.k==='orange'?'#b06a1a':'#6b6e73'};">${p.pct}</span>
               <span class="tnum" style="color:#6b6e73;">${p.constat}</span>
-              <span style="text-align:right;"><span class="badge ${p.k}">${p.statut}</span></span>
+              <span><span class="badge ${p.k}">${p.statut}</span></span>
             </div>`).join('')}
           </div>
         </div>
@@ -153,7 +152,7 @@ function renderProduits(produits, state) {
     <header class="page-header">
       <div>
         <div class="page-title">Produits structurés · Autocalls</div>
-        <div class="page-sub">${produits.length} produits suivis · niveaux indicatifs à vérifier</div>
+        <div class="page-sub">${produits.length} produits suivis</div>
       </div>
       <div class="header-actions">
         <div class="search-box">
@@ -172,6 +171,18 @@ function renderProduits(produits, state) {
         <div class="card chip-card green"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
         <div class="card chip-card orange"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
         <div class="card chip-card red"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
+      </div>
+
+      <div class="cat-block">
+        <div class="section-label mb-12">Sous-jacents par catégorie</div>
+        <div class="cat-grid">
+          ${grouperCategories(produits).map(c => `
+          <div class="card cat-card" onclick="App.ouvrirCategorie('${c.cat}')">
+            <div class="cat-card-nom">${c.cat}</div>
+            <div class="cat-card-meta">${c.n} produit${c.n > 1 ? 's' : ''}</div>
+            <div class="cat-card-sj">${c.sjLabels}</div>
+          </div>`).join('')}
+        </div>
       </div>
 
       <div class="filter-row">
@@ -207,7 +218,7 @@ function renderProduits(produits, state) {
           </div>`).join('')}
         </div>
       </div>
-      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Données à vérifier — validation humaine obligatoire.</div>
+      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
@@ -285,7 +296,7 @@ function renderVeille() {
     <header class="page-header">
       <div>
         <div class="page-title">Veille économique</div>
-        <div class="page-sub">Actualités marchés, taux & patrimoine · sources à vérifier</div>
+        <div class="page-sub">Actualités marchés, taux & patrimoine</div>
       </div>
       <button class="btn-primary">Résumer l'impact pour l'allocation</button>
     </header>
@@ -475,6 +486,55 @@ function renderFormulaireAjout() {
 
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Catégories de produits (CAP, Autocall CMS, Athena…) ──
+function categorieProduit(p) {
+  const n = p.nom || '';
+  if (/^CAP\b/i.test(n))       return 'CAP';
+  if (/Autocall CMS/i.test(n)) return 'Autocall CMS';
+  if (/Athena/i.test(n))       return 'Athena';
+  if (/Autocall/i.test(n))     return 'Autocall indice';
+  return 'Autres';
+}
+
+// Regroupe les produits par catégorie (ordre d'apparition conservé).
+function grouperCategories(produits) {
+  const map = new Map();
+  produits.forEach(p => {
+    const c = categorieProduit(p);
+    if (!map.has(c)) map.set(c, []);
+    map.get(c).push(p);
+  });
+  return [...map.entries()].map(([cat, membres]) => ({
+    cat, membres, n: membres.length,
+    sjLabels: [...new Set(membres.map(m => m.sjLabel || m.sj))].join(', '),
+  }));
+}
+
+// Modale : liste des membres d'une catégorie. Clic sur un membre → graphique.
+function renderModalCategorie(cat, membres) {
+  return `
+  <div class="modal-overlay" onclick="if(event.target===this)App.fermerModal()">
+    <div class="modal-panel modal-panel--sm">
+      <div class="modal-header">
+        <span class="modal-title">${escHtml(cat)}</span>
+        <button class="modal-close" onclick="App.fermerModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="cat-membres">
+          ${membres.map(m => `
+          <div class="cat-membre" onclick="App.ouvrirGraphiqueProduit('${m.isin}')">
+            <div class="cat-membre-info">
+              <div class="cat-membre-nom">${escHtml(m.nom)}</div>
+              <div class="cat-membre-sj">${escHtml(m.sjLabel || m.sj)}${m.strike && m.strike !== 'NA' ? ' · strike ' + escHtml(String(m.strike)) : ''}</div>
+            </div>
+            <span class="cat-membre-go">graphique →</span>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`;
 }
 
 function renderModalEditionCMS(valeurActuelle) {

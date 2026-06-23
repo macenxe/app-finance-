@@ -1,6 +1,6 @@
-const CACHE = 'conservateur-v12';
+const CACHE = 'conservateur-v14';
 const ASSETS = [
-  './index.html', './style.css', './data.js', './api.js', './pages.js', './app.js', './manifest.json',
+  './index.html', './style.css', './data.js', './api.js', './chart.js', './pages.js', './app.js', './manifest.json',
 ];
 
 self.addEventListener('install', e => {

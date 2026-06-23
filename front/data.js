@@ -23,11 +23,11 @@ const PRODUITS = [
 ];
 
 const INDICES_MARCHE = [
-  { nom:'Euro Stoxx 50',    valeur:'5 124,30', var:'+0,42 %', hausse:true  },
-  { nom:'S&P 500',          valeur:'5 487,12', var:'+0,18 %', hausse:true  },
-  { nom:'Nasdaq',           valeur:'26 166,6', var:'+0,55 %', hausse:true  },
-  { nom:'CAC 40',           valeur:'8 351,20', var:'−0,23 %', hausse:false },
-  { nom:'Euro Stoxx Banks', valeur:'277,95',   var:'+0,87 %', hausse:true  },
+  { nom:'Euro Stoxx 50',    ticker:'^STOXX50E', valeur:'5 124,30', var:'+0,42 %', hausse:true  },
+  { nom:'S&P 500',          ticker:'^GSPC',     valeur:'5 487,12', var:'+0,18 %', hausse:true  },
+  { nom:'Nasdaq',           ticker:'^IXIC',     valeur:'26 166,6', var:'+0,55 %', hausse:true  },
+  { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
+  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true  },
 ];
 
 const TAUX = [
@@ -77,6 +77,12 @@ const VEILLE = [
     corps:'Point de cadrage interne sur la fiscalité patrimoniale 2026. Aucun changement réglementaire majeur à ce jour — à confirmer.' },
 ];
 
+// Ticker Yahoo des sous-jacents (pour le graphique en mode statique hors-ligne).
+const TICKERS_SJ = {
+  'CAC 40':'^FCHI', 'ES Banks':'SX7E.PA', 'CMS 10 ans':'CMS10',
+  'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA',
+};
+
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });
@@ -87,6 +93,13 @@ function enrichirProduits(produits) {
     else k = 'orange';
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
     const statuts = { green:'Rappel probable', orange:'Surveillance', red:'Risque' };
-    return { ...p, k, statut: statuts[k], pct };
+    const bAutoNum   = parseFloat(p.bAuto);
+    const bCouponNum = parseFloat(p.bCoupon);
+    return {
+      ...p, k, statut: statuts[k], pct,
+      ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
+      bAutoNum:   isNaN(bAutoNum)   ? null : bAutoNum,
+      bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,
+    };
   });
 }

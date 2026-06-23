@@ -9,7 +9,9 @@ const AppAPI = (() => {
   let backOk = false;
 
   async function fetchJson(url, timeout = 4000) {
-    const r = await fetch(url, { signal: AbortSignal.timeout(timeout) });
+    // cache: 'no-store' → le navigateur ne sert jamais une réponse en cache,
+    // pour que chaque ouverture/rafraîchissement reparte des cours du moment.
+    const r = await fetch(url, { signal: AbortSignal.timeout(timeout), cache: 'no-store' });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   }
@@ -46,6 +48,10 @@ const AppAPI = (() => {
       type:        p.typeProduit,
       strikeNum:   p.strike,
       niveauNum,
+      ticker:      p.sousJacent,
+      sjLabel:     p.sousJacentLabel,
+      bAutoNum:    p.barriereAutocall,
+      bCouponNum:  p.barriereCoupon,
       zoneAutocall: p.indicateurs?.zoneAutocall ? 'OUI' : 'NON',
       k,
       statut:      statuts[k],
@@ -189,5 +195,5 @@ const AppAPI = (() => {
     return r.json();
   }
 
-  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS };
+  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER };
 })();
