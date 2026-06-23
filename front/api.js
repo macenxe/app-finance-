@@ -30,6 +30,7 @@ const AppAPI = (() => {
     const niveauNum = p.cours?.dernierCours ?? null;
 
     return {
+      id:          p.id,
       isin:        p.isin,
       nom:         p.nom,
       sj:          p.sousJacentLabel,
@@ -70,17 +71,52 @@ const AppAPI = (() => {
     };
   }
 
+  // Convertit un taux obligataire API vers le format TAUX de data.js.
+  // variationPct Yahoo = % relatif du taux ; on approxime en points de base.
+  function normaliserTaux(t) {
+    let varLabel = 'stable';
+    let hausse = null;
+    if (t.variationPct != null && t.dernierCours != null && t.variationPct !== 0) {
+      const bps = Math.round(t.variationPct * t.dernierCours);
+      if (bps !== 0) {
+        hausse = bps > 0;
+        varLabel = (bps > 0 ? '+' : '') + bps + ' pb';
+      }
+    }
+    return {
+      nom:    t.nom,
+      valeur: t.dernierCours.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %',
+      var:    varLabel,
+      hausse,
+      manuel:  t.manuel  ?? false,
+      dateMaj: t.dateMaj ?? null,
+    };
+  }
+
+  // Fusionne taux live et statiques.
+  // CMS 10 ans : utilise la valeur live (saisie manuelle en DB) si disponible,
+  // sinon fallback sur la valeur statique de data.js.
+  function construireTaux(tauxLive) {
+    const liveMap = {};
+    tauxLive.forEach(t => { liveMap[t.nom] = t; });
+    return TAUX.map(t => liveMap[t.nom] ?? t);
+  }
+
   async function chargerDonnees() {
     try {
       const [indicesAPI, produitsAPI] = await Promise.all([
         fetchJson(`${BASE}/indices`),
         fetchJson(`${BASE}/produits`),
       ]);
+      let tauxLive = [];
+      try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
+
       backOk = true;
       return {
         source:   'api',
         indices:  indicesAPI.map(normaliserIndice),
         produits: produitsAPI.map(normaliserProduit),
+        taux:     construireTaux(tauxLive.map(normaliserTaux)),
       };
     } catch {
       backOk = false;
@@ -88,9 +124,41 @@ const AppAPI = (() => {
         source:   'statique',
         indices:  INDICES_MARCHE,
         produits: enrichirProduits(PRODUITS),
+        taux:     TAUX,
       };
     }
   }
 
-  return { chargerDonnees, estConnecte: () => backOk };
+  async function ajouterProduit(data) {
+    const r = await fetch(`${BASE}/produits`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  }
+
+  async function supprimerProduit(id) {
+    const r = await fetch(`${BASE}/produits/${id}`, {
+      method: 'DELETE',
+      signal: AbortSignal.timeout(4000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return true;
+  }
+
+  async function mettreAJourCMS(valeur) {
+    const r = await fetch(`${BASE}/taux/cms`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ valeur }),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  }
+
+  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS };
 })();

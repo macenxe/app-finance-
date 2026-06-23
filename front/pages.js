@@ -63,9 +63,13 @@ function renderDashboard(indices, produits, taux) {
           <div class="taux-grid">
             ${taux.map(t => `
             <div>
-              <div class="taux-item-name">${t.nom}</div>
+              <div class="taux-item-name">
+                ${t.nom}
+                ${t.nom === 'CMS 10 ans' ? `<button class="btn-pencil" onclick="App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
+              </div>
               <div class="taux-val tnum">${t.valeur}</div>
               <div class="taux-var tnum ${t.hausse === null ? 'flat' : t.hausse ? 'up' : 'down'}">${t.var}</div>
+              ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
             </div>`).join('')}
           </div>
         </div>
@@ -472,4 +476,31 @@ function renderFormulaireAjout() {
 
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderModalEditionCMS(valeurActuelle) {
+  const placeholder = valeurActuelle ? String(valeurActuelle).replace(',', '.') : '3.15';
+  return `
+  <div class="modal-overlay" onclick="if(event.target===this)App.fermerEditionCMS()">
+    <div class="modal-panel modal-panel--sm">
+      <div class="modal-header">
+        <span class="modal-title">CMS 10 ans — EUR IRS 10Y</span>
+        <button class="modal-close" onclick="App.fermerEditionCMS()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="cms-modal-hint">EUR 10Y Interest Rate Swap · Source : Bloomberg / Reuters<br>Saisir le taux en pourcentage (ex : 3,15 pour 3,15 %).</p>
+        <div class="form-field">
+          <label>Nouveau taux (%)</label>
+          <input id="cms-input" type="number" step="0.01" min="0" max="20"
+                 placeholder="${placeholder}" autofocus
+                 onkeydown="if(event.key==='Enter')App.soumettreEditionCMS()">
+        </div>
+        <div id="cms-error" style="color:#9a3535;font-size:12px;margin-top:4px;display:none;"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="App.fermerEditionCMS()">Annuler</button>
+        <button class="btn-primary" onclick="App.soumettreEditionCMS()">Enregistrer</button>
+      </div>
+    </div>
+  </div>`;
 }

@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { cors } from 'hono/cors';
-import { ouvrirBase, listerProduits, enregistrerCours, lireCours, listerCours } from './db';
+import { ouvrirBase, listerProduits, enregistrerCours, lireCours, listerCours, lireTauxManuel, sauvegarderTauxManuel } from './db';
 import { calculerIndicateurs } from './calc';
-import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, recupererTauxBDF, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, BDF_TAUX, TICKERS_PRODUITS } from './indices';
+import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, TICKERS_PRODUITS } from './indices';
 import { seederBase } from './seed';
 import { ProduitEnrichi } from './types';
 
@@ -69,36 +69,66 @@ app.get('/api/produits', async (c) => {
 });
 
 // ── GET /api/taux ────────────────────────────────────────────────────────────
-// US 10 ans via Yahoo Finance (^TNX) ; OAT + Bund via FRED (mensuel ECB).
+// US 10 ans via Yahoo Finance (^TNX) ; OAT + Bund via FRED (mensuel ECB) ;
+// CMS 10 ans (EUR IRS 10Y) via saisie manuelle (taux_manuels).
 app.get('/api/taux', async (c) => {
   const db = ouvrirBase();
   const fredKey = process.env.FRED_API_KEY ?? '';
-  const bdfKey  = process.env.BDF_API_KEY  ?? '';
 
-  // Table de correspondance sousJacent → nom affichable
   const nomMap: Record<string, string> = {};
   TAUX_DASHBOARD.forEach((t) => { nomMap[t.ticker]   = t.nom; });
   FRED_TAUX.forEach((t)      => { nomMap[t.seriesId] = t.nom; });
-  BDF_TAUX.forEach((t)       => { nomMap[t.seriesId] = t.nom; });
 
   const allIds = [
     ...TAUX_DASHBOARD.map((t) => t.ticker),
     ...FRED_TAUX.map((t) => t.seriesId),
-    ...BDF_TAUX.map((t) => t.seriesId),
   ];
 
+  type TauxItem = { nom: string; sousJacent: string; dernierCours: number; heureCours: string; variationPct?: number; manuel?: boolean; dateMaj?: string };
+
+  const appendCms = (items: TauxItem[]) => {
+    const cms = lireTauxManuel(db, 'CMS 10 ans');
+    if (cms) {
+      const d = new Date(cms.date_maj);
+      items.push({
+        nom: 'CMS 10 ans', sousJacent: 'CMS10',
+        dernierCours: cms.valeur, heureCours: cms.date_maj,
+        manuel: true,
+        dateMaj: d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' }),
+      });
+    }
+    return items;
+  };
+
   try {
-    const [coursYahoo, coursFred, coursBdf] = await Promise.all([
+    const [coursYahoo, coursFred] = await Promise.all([
       recupererTaux(),
       fredKey ? recupererTauxFRED(fredKey) : Promise.resolve([]),
-      bdfKey  ? recupererTauxBDF(bdfKey)   : Promise.resolve([]),
     ]);
-    const cours = [...coursYahoo, ...coursFred, ...coursBdf];
+    const cours = [...coursYahoo, ...coursFred];
     for (const cr of cours) enregistrerCours(db, cr);
-    return c.json(cours.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent })));
+    const items: TauxItem[] = cours.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent }));
+    return c.json(appendCms(items));
   } catch {
     const cached = listerCours(db).filter((cr) => allIds.includes(cr.sousJacent));
-    return c.json(cached.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent })));
+    const items: TauxItem[] = cached.map((cr) => ({ ...cr, nom: nomMap[cr.sousJacent] ?? cr.sousJacent }));
+    return c.json(appendCms(items));
+  } finally {
+    db.close();
+  }
+});
+
+// ── PUT /api/taux/cms ────────────────────────────────────────────────────────
+// Enregistre le taux EUR IRS 10Y (CMS 10 ans) saisi manuellement.
+app.put('/api/taux/cms', async (c) => {
+  const body = await c.req.json<{ valeur: number }>();
+  if (typeof body.valeur !== 'number' || body.valeur <= 0 || body.valeur > 20) {
+    return c.json({ error: 'Valeur invalide (doit être entre 0 et 20)' }, 400);
+  }
+  const db = ouvrirBase();
+  try {
+    sauvegarderTauxManuel(db, 'CMS 10 ans', body.valeur);
+    return c.json({ ok: true });
   } finally {
     db.close();
   }

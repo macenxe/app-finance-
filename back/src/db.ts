@@ -29,6 +29,12 @@ const SCHEMA = `
     dernierCours REAL NOT NULL,
     heureCours   TEXT NOT NULL
   );
+
+  CREATE TABLE IF NOT EXISTS taux_manuels (
+    nom      TEXT PRIMARY KEY,
+    valeur   REAL NOT NULL,
+    date_maj TEXT NOT NULL
+  );
 `;
 
 // --- Produits ---
@@ -69,4 +75,17 @@ export function lireCours(db: Database.Database, sousJacent: string): CoursMarch
 
 export function listerCours(db: Database.Database): CoursMarche[] {
   return db.prepare('SELECT * FROM cours').all() as CoursMarche[];
+}
+
+// --- Taux manuels ---
+
+export function lireTauxManuel(db: Database.Database, nom: string): { valeur: number; date_maj: string } | undefined {
+  return db.prepare('SELECT valeur, date_maj FROM taux_manuels WHERE nom = ?').get(nom) as { valeur: number; date_maj: string } | undefined;
+}
+
+export function sauvegarderTauxManuel(db: Database.Database, nom: string, valeur: number): void {
+  db.prepare(`
+    INSERT INTO taux_manuels (nom, valeur, date_maj) VALUES (?, ?, ?)
+    ON CONFLICT(nom) DO UPDATE SET valeur = excluded.valeur, date_maj = excluded.date_maj
+  `).run(nom, valeur, new Date().toISOString());
 }
