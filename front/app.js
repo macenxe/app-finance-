@@ -42,8 +42,11 @@ const App = (() => {
     if (donnees.source === 'api') {
       badge.textContent = '● Données en direct';
       badge.className = 'source-badge live';
+    } else if (donnees.source === 'snapshot') {
+      badge.textContent = '● Données du marché · mise à jour auto';
+      badge.className = 'source-badge live';
     } else {
-      badge.textContent = '○ Données statiques (back hors ligne)';
+      badge.textContent = '○ Données statiques (hors ligne)';
       badge.className = 'source-badge offline';
     }
   }
