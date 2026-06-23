@@ -53,8 +53,74 @@ const App = (() => {
     if (root) root.innerHTML = '';
   }
 
+  function initPullToRefresh() {
+    const content = document.getElementById('content');
+    const main    = document.getElementById('main');
+    const THRESHOLD = 65;
+    let startY = 0, pulling = false, refreshing = false;
+
+    const ind = document.createElement('div');
+    ind.id = 'ptr-indicator';
+    ind.innerHTML = '<span>↻</span>';
+    main.prepend(ind);
+
+    content.addEventListener('touchstart', e => {
+      if (content.scrollTop === 0 && !refreshing) {
+        startY  = e.touches[0].clientY;
+        pulling = true;
+      }
+    }, { passive: true });
+
+    content.addEventListener('touchmove', e => {
+      if (!pulling) return;
+      const dy = e.touches[0].clientY - startY;
+      if (dy > 0) {
+        ind.style.height = Math.min(dy * 0.5, 52) + 'px';
+        ind.querySelector('span').style.transform =
+          `rotate(${Math.min(dy / THRESHOLD, 1) * 180}deg)`;
+      } else {
+        pulling = false;
+        ind.style.height = '';
+      }
+    }, { passive: true });
+
+    async function doRefresh() {
+      if (refreshing) return;
+      refreshing = true;
+      ind.style.transition = 'height .15s';
+      ind.style.height = '52px';
+      ind.classList.add('refreshing');
+      donnees = await AppAPI.chargerDonnees();
+      renderPage();
+      ind.classList.remove('refreshing');
+      ind.style.height = '0';
+      setTimeout(() => { ind.style.transition = ''; refreshing = false; }, 200);
+    }
+
+    content.addEventListener('touchend', e => {
+      if (!pulling) return;
+      pulling = false;
+      ind.querySelector('span').style.transform = '';
+      const dy = e.changedTouches[0].clientY - startY;
+      if (dy >= THRESHOLD) {
+        doRefresh();
+      } else {
+        ind.style.transition = 'height .2s';
+        ind.style.height = '0';
+        setTimeout(() => { ind.style.transition = ''; }, 220);
+      }
+    });
+
+    content.addEventListener('touchcancel', () => {
+      pulling = false;
+      ind.style.height = '';
+      ind.querySelector('span').style.transform = '';
+    });
+  }
+
   async function init() {
     renderPage();
+    initPullToRefresh();
     donnees = await AppAPI.chargerDonnees();
     renderPage();
   }
@@ -101,6 +167,40 @@ const App = (() => {
       if (root) root.innerHTML = renderFormulaireAjout();
     },
     fermerFormulaire,
+    ouvrirEditionCMS() {
+      const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
+      const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;
+      const root = document.getElementById('modal-root');
+      if (root) root.innerHTML = renderModalEditionCMS(valActuelle);
+      setTimeout(() => { const inp = document.getElementById('cms-input'); if (inp) inp.focus(); }, 50);
+    },
+    fermerEditionCMS() {
+      const root = document.getElementById('modal-root');
+      if (root) root.innerHTML = '';
+    },
+    async soumettreEditionCMS() {
+      const input = document.getElementById('cms-input');
+      const errEl = document.getElementById('cms-error');
+      const valeur = parseFloat(input.value.replace(',', '.'));
+      if (isNaN(valeur) || valeur <= 0 || valeur > 20) {
+        errEl.textContent = 'Valeur invalide — entrez un taux entre 0 et 20 (ex : 3.15).';
+        errEl.style.display = 'block';
+        return;
+      }
+      const btn = document.querySelector('.modal-footer .btn-primary');
+      if (btn) { btn.disabled = true; btn.textContent = 'Enregistrement…'; }
+      try {
+        await AppAPI.mettreAJourCMS(valeur);
+        donnees = await AppAPI.chargerDonnees();
+        const root = document.getElementById('modal-root');
+        if (root) root.innerHTML = '';
+        renderPage();
+      } catch (err) {
+        errEl.textContent = 'Erreur : ' + (err.message || 'serveur indisponible');
+        errEl.style.display = 'block';
+        if (btn) { btn.disabled = false; btn.textContent = 'Enregistrer'; }
+      }
+    },
     toggleStrikeField(type) {
       const f = document.getElementById('field-strike');
       if (f) f.classList.toggle('disabled-field', type === 'cms');
