@@ -412,10 +412,31 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   #sidebar-backdrop { display: block; pointer-events: none; }
   body.nav-open #sidebar-backdrop { opacity: 1; pointer-events: auto; }
 
-  .page-header { padding-left: 64px; } /* place pour le bouton ☰ */
+  /* En-tête empilé : le titre et le sous-titre peuvent passer à la ligne,
+     les actions de bureau (recherche, boutons) sont masquées sur mobile. */
+  .page-header { padding-left: 64px; flex-direction: column; align-items: stretch; gap: 10px; }
+  .page-title, .page-sub { white-space: normal; }
+  .header-actions { display: none; }
 
-  /* Bandeau de conformité plus compact */
-  #footer { padding: 8px 16px; font-size: 9.5px; line-height: 1.35; gap: 7px; }
+  /* Cartes empilées verticalement (plus de scroll latéral) */
+  .grid-2, .grid-2-narrow, .grid-3, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
+  .grid-5, .grid-4, .taux-grid, .macro-grid, .summary-chips { grid-template-columns: 1fr 1fr; }
+  .page-body { padding: 18px 16px 32px; }
+
+  /* Contenu pleine largeur, centré sans tenir compte de la barre de défilement */
+  #content { overflow-x: hidden; scrollbar-width: none; }
+  #content::-webkit-scrollbar { display: none; }
+
+  /* Les cartes ne sont plus élargies par un contenu interne trop large */
+  .grid-5 > *, .grid-2 > *, .grid-2-narrow > *, .grid-3 > *, .grid-dash-bottom > *, .summary-chips > * { min-width: 0; }
+
+  /* Le mini-tableau Autocalls défile dans sa carte au lieu d'étirer la colonne */
+  .autocall-table { overflow-x: auto; }
+  .autocall-header, .autocall-row { min-width: 520px; }
+
+  /* Bandeau de conformité : 2 lignes, sans la pastille */
+  .footer-dot { display: none; }
+  #footer { padding: 8px 14px; font-size: 8px; line-height: 1.4; gap: 0; }
 
   /* Taux alignés : hauteur de titre fixe pour que les valeurs démarrent à la même hauteur */
   .taux-item-name { min-height: 30px; align-items: flex-start; }

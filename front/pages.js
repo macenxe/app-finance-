@@ -178,7 +178,6 @@ function renderProduits(produits, state) {
         <div class="filter-chips">
           ${chips.map(c => `<div class="filter-chip${f===c.key?' active':''}" onclick="App.setFilter('${c.key}')">${c.label}</div>`).join('')}
         </div>
-        <div class="filter-count">${rows.length} produits affichés</div>
       </div>
 
       <div class="products-table-wrap scroll">
