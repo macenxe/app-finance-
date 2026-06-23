@@ -250,4 +250,9 @@ document.addEventListener('DOMContentLoaded', () => App.init());
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(() => {});
+  // Recharge la page dès qu'un nouveau service worker prend le contrôle,
+  // pour que l'utilisateur voie immédiatement la nouvelle version.
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    window.location.reload();
+  });
 }
