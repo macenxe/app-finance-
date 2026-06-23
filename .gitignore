@@ -15,5 +15,8 @@ dist/
 # Déploiement Vercel
 .vercel
 
+# Cloudflare Wrangler (Worker)
+.wrangler
+
 # Système
 .DS_Store

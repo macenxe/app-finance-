@@ -4,10 +4,12 @@
 
 const AppAPI = (() => {
   const BASE = 'http://localhost:3001/api';
+  // Source live : Cloudflare Worker (cours du moment).
+  const WORKER = 'https://app-finance-live.maxenceevrd.workers.dev';
   let backOk = false;
 
-  async function fetchJson(url) {
-    const r = await fetch(url, { signal: AbortSignal.timeout(4000) });
+  async function fetchJson(url, timeout = 4000) {
+    const r = await fetch(url, { signal: AbortSignal.timeout(timeout) });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   }
@@ -128,16 +130,25 @@ const AppAPI = (() => {
       try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
       backOk = true;
       return assembler('api', indicesAPI, produitsAPI, tauxLive);
-    } catch { /* pas de back local : on tente le snapshot publié */ }
+    } catch { /* pas de back local : on tente la source live puis le snapshot */ }
 
-    // 2. Snapshot généré par GitHub Actions (même format que l'API)
+    // 2. Source live (Cloudflare Worker) — cours du moment
+    if (WORKER) {
+      try {
+        const live = await fetchJson(WORKER, 8000);
+        backOk = false;
+        return assembler('snapshot', live.indices ?? [], live.produits ?? [], live.taux ?? []);
+      } catch { /* worker indisponible : on tente le snapshot publié */ }
+    }
+
+    // 3. Snapshot généré par GitHub Actions (même format que l'API)
     try {
       const snap = await fetchJson('./data/snapshot.json');
       backOk = false;
       return assembler('snapshot', snap.indices ?? [], snap.produits ?? [], snap.taux ?? []);
     } catch { /* pas de snapshot : on tombe sur le statique */ }
 
-    // 3. Données statiques de data.js (dernier recours)
+    // 4. Données statiques de data.js (dernier recours)
     backOk = false;
     return {
       source:   'statique',
