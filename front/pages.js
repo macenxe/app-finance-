@@ -15,9 +15,9 @@ function renderDashboard(indices, produits, taux) {
 
   const prochainsDates = produits
     .map(p => { const d = parseConstat(p.constat); return d && d >= today ? { p, d, jours: Math.ceil((d - today) / 86400000) } : null; })
-    .filter(Boolean)
+    .filter(x => x && x.jours <= 60)
     .sort((a, b) => a.d - b.d)
-    .slice(0, 9);
+    .slice(0, 12);
 
   const fmtHeure = (iso) => {
     if (!iso) return '';
@@ -93,47 +93,46 @@ function renderDashboard(indices, produits, taux) {
         </div>
       </div>
 
-      <!-- Alertes + Autocalls + Événements -->
-      <div class="grid-dash-bottom">
-        <div style="display:flex;flex-direction:column;gap:18px;">
-          <div class="card p-18">
-            <div class="card-title mb-12">Alertes du jour</div>
-            ${ALERTES.map(a => `
-            <div class="alert-item">
-              <span class="alert-dot" style="background:${a.couleur};"></span>
-              <div class="alert-text">${a.texte}</div>
-            </div>`).join('')}
-          </div>
-          <div class="card p-18">
-            <div class="card-title mb-12">Prochains événements macro</div>
-            ${EVENEMENTS.map(e => `
-            <div class="event-item">
-              <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
-              <div class="event-label">${e.label}</div>
-            </div>`).join('')}
-          </div>
-        </div>
-
+      <!-- Alertes + Événements côte à côte -->
+      <div class="grid-2 mb-24">
         <div class="card p-18">
-          <div class="flex-sb mb-12">
-            <div class="card-title">Prochaines dates clés</div>
-            <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
-          </div>
-          ${prochainsDates.length === 0
-            ? `<div style="font-size:12.5px;color:#9a8f7a;padding:8px 0;">Aucune constatation à venir.</div>`
-            : `<div class="dates-cles-table">
-            <div class="dates-cles-header">
-              <span>Date</span><span>Dans</span><span>Produit</span><span style="text-align:right;">Statut</span>
-            </div>
-            ${prochainsDates.map(({ p, d, jours }) => `
-            <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
-              <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
-              <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
-              <span class="dates-cles-nom">${p.nom}</span>
-              <span style="text-align:right;"><span class="badge ${p.k}">${p.statut}</span></span>
-            </div>`).join('')}
-          </div>`}
+          <div class="card-title mb-12">Alertes du jour</div>
+          ${ALERTES.map(a => `
+          <div class="alert-item">
+            <span class="alert-dot" style="background:${a.couleur};"></span>
+            <div class="alert-text">${a.texte}</div>
+          </div>`).join('')}
         </div>
+        <div class="card p-18">
+          <div class="card-title mb-12">Prochains événements macro</div>
+          ${EVENEMENTS.map(e => `
+          <div class="event-item">
+            <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
+            <div class="event-label">${e.label}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+
+      <!-- Prochaines dates clés — pleine largeur -->
+      <div class="card p-18">
+        <div class="flex-sb mb-12">
+          <div class="card-title">Prochaines dates clés <span style="font-size:11px;font-weight:400;color:#9a8f7a;margin-left:6px;">— 60 jours</span></div>
+          <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
+        </div>
+        ${prochainsDates.length === 0
+          ? `<div style="font-size:12.5px;color:#9a8f7a;padding:8px 0;">Aucune constatation dans les 60 prochains jours.</div>`
+          : `<div class="dates-cles-table">
+          <div class="dates-cles-header">
+            <span>Date</span><span class="col-right">Dans</span><span>Produit</span><span class="col-right">Statut</span>
+          </div>
+          ${prochainsDates.map(({ p, d, jours }) => `
+          <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
+            <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
+            <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
+            <span class="dates-cles-nom">${p.nom}</span>
+            <span class="col-right"><span class="badge ${p.k}">${p.statut}</span></span>
+          </div>`).join('')}
+        </div>`}
       </div>
     </div>
   </div>`;
@@ -172,7 +171,7 @@ function renderProduits(produits, state) {
       </div>
     </header>
 
-    <div class="page-body">
+    <div style="padding:18px 30px 40px;">
       <div class="summary-chips">
         <div class="card chip-card"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
         <div class="card chip-card green"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
@@ -187,44 +186,34 @@ function renderProduits(produits, state) {
         <div class="filter-count">${rows.length} produits affichés</div>
       </div>
 
-      <!-- Vue tableau (desktop) -->
       <div class="products-table-wrap scroll">
         <div class="products-table">
-          <div class="products-table-header products-table-row--slim">
-            <span>Nom commercial</span><span>Sous-jacent</span>
-            <span class="col-right">Coupon</span>
-            <span class="col-right">% strike</span>
-            <span class="col-center">Autocall</span>
-            <span class="col-center">Coupon versé</span>
-            <span>Proch. const.</span><span>Échéance</span>
-            <span>Statut</span><span></span>
+          <div class="products-table-header">
+            <span>Code ISIN</span><span>Nom commercial</span><span>Sous-jacent</span>
+            <span class="col-right">Coupon</span><span class="col-right">Strike</span>
+            <span class="col-right">Niveau</span><span class="col-right">% strike</span>
+            <span class="col-right">B. auto</span><span class="col-right">B. coup.</span>
+            <span>1ère const.</span><span>Échéance</span><span>Statut</span><span></span>
           </div>
-          ${rows.map(r => {
-            const cv = couponVerse(r);
-            const pctColor = r.type==='equity' ? (r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c') : '#9a8f7a';
-            return `
-          <div class="products-table-row products-table-row--slim">
+          ${rows.map(r => `
+          <div class="products-table-row">
+            <span class="col-isin tnum">${r.isin}</span>
             <span class="col-nom">${r.nom}</span>
             <span class="col-sj">${r.sj}</span>
             <span class="tnum col-right">${r.coupon}</span>
-            <span class="tnum col-right" style="font-weight:600;color:${pctColor};">${r.pct}</span>
-            <span class="col-center">${r.zoneAutocall==='OUI'?'<span class="oui">✓</span>':'<span class="non">—</span>'}</span>
-            <span class="col-center">${cv===true?'<span class="oui">✓</span>':cv===false?'<span class="non">—</span>':'<span class="na">NA</span>'}</span>
+            <span class="tnum col-dim">${r.strike}</span>
+            <span class="tnum col-num">${r.niveau}</span>
+            <span class="tnum col-right" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
+            <span class="tnum col-dim">${r.bAuto}</span>
+            <span class="tnum col-dim">${r.bCoupon}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
-          </div>`;
-          }).join('')}
+          </div>`).join('')}
         </div>
       </div>
-
-      <!-- Vue cartes accordéon (mobile) -->
-      <div class="prod-cards">
-        ${rows.map(r => renderProduitCard(r)).join('')}
-      </div>
-
-      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Validation humaine obligatoire.</div>
+      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Données à vérifier — validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
@@ -492,61 +481,6 @@ function renderFormulaireAjout() {
 
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function couponVerse(r) {
-  if (!r.bCoupon || r.bCoupon === '—' || r.bCoupon === 'NA') return null;
-  if (r.type === 'cms') {
-    const b = parseFloat(r.bCoupon.replace(/[^0-9,.]/g, '').replace(',', '.'));
-    const n = parseFloat((r.niveau || '').replace(/[^0-9,.]/g, '').replace(',', '.'));
-    return (!isNaN(b) && !isNaN(n)) ? n >= b : null;
-  }
-  const b = parseFloat(r.bCoupon.replace(/[^0-9,.]/g, '').replace(',', '.'));
-  return (!isNaN(b) && r.strikeNum && r.niveauNum) ? r.niveauNum >= r.strikeNum * (b / 100) : null;
-}
-
-function renderProduitCard(r) {
-  const cv = couponVerse(r);
-  const pctColor = r.type === 'equity'
-    ? (r.k === 'red' ? 'red' : r.k === 'orange' ? 'orange' : 'green') : '';
-
-  const details = r.type === 'equity' ? `
-    <div><div class="pcard-key">Niveau actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
-    <div><div class="pcard-key">% du strike</div><div class="pcard-val tnum ${pctColor}">${escHtml(r.pct)}</div></div>
-    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
-    <div><div class="pcard-key">Coupon versé</div><div class="pcard-val">${cv===true?'<span class="oui">✓</span>':cv===false?'<span class="non">—</span>':'<span class="na">NA</span>'}</div></div>
-    <div><div class="pcard-key">Autocall</div><div class="pcard-val">${r.zoneAutocall==='OUI'?'<span class="oui">✓ Franchie</span>':'<span class="non">Non atteint</span>'}</div></div>
-    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
-  ` : `
-    <div><div class="pcard-key">CMS actuel</div><div class="pcard-val tnum">${escHtml(r.niveau)}</div></div>
-    <div><div class="pcard-key">Coupon versé</div><div class="pcard-val">${cv===true?'<span class="oui">✓</span>':cv===false?'<span class="non">—</span>':'<span class="na">NA</span>'}</div></div>
-    <div><div class="pcard-key">Autocall</div><div class="pcard-val">${r.zoneAutocall==='OUI'?'<span class="oui">✓ Franchie</span>':'<span class="non">Non atteint</span>'}</div></div>
-    <div><div class="pcard-key">Proch. const.</div><div class="pcard-val tnum">${escHtml(r.constat)}</div></div>
-    <div><div class="pcard-key">Échéance</div><div class="pcard-val tnum">${escHtml(r.ech)}</div></div>
-  `;
-
-  return `
-  <div class="prod-card" data-k="${r.k}" data-isin="${escHtml(r.isin)}" onclick="toggleCard('${escHtml(r.isin)}')">
-    <div class="pcard-top">
-      <div class="pcard-left">
-        <div class="pcard-nom">${escHtml(r.nom)}</div>
-        <div class="pcard-meta">${escHtml(r.sjLabel || r.sj)} · ${escHtml(r.coupon)}</div>
-      </div>
-      <div class="pcard-right">
-        <span class="badge ${r.k}">${escHtml(r.statut)}</span>
-        <span class="pcard-chevron">›</span>
-      </div>
-    </div>
-    <div class="pcard-body">
-      <div class="pcard-grid">${details}</div>
-      <button class="pcard-link" onclick="event.stopPropagation();App.voirDetail('${escHtml(r.isin)}')">Voir le détail →</button>
-    </div>
-  </div>`;
-}
-
-function toggleCard(isin) {
-  const card = document.querySelector(`.prod-card[data-isin="${isin}"]`);
-  if (card) card.classList.toggle('open');
 }
 
 function renderModalEditionCMS(valeurActuelle) {
