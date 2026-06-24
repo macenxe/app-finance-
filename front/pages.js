@@ -593,7 +593,7 @@ function renderContrats() {
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">F€ &amp; UC</div>
+        <div class="page-title">Fonds € &amp; UC</div>
         <div class="page-sub">Fonds en euros · Unités de compte · Le Conservateur</div>
       </div>
     </header>
@@ -602,9 +602,9 @@ function renderContrats() {
 
       ${perf ? `
       <!-- ── Fonds en euros ── -->
-      <div class="flex-sb mb-12">
-        <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
-        <span class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</span>
+      <div class="mb-12">
+        <div class="section-label mb-4">Fonds en euros · Taux ${perf.annee}</div>
+        <div class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</div>
       </div>
       <div class="card p-18 mb-24">
         <div class="fe-contrats mb-16">
@@ -625,9 +625,6 @@ function renderContrats() {
           </div>`).join('')}
         </div>
 
-        <div class="fe-notes">
-          ${perf.notes.map(n => `<div class="fe-note">• ${n}</div>`).join('')}
-        </div>
       </div>` : ''}
 
       <!-- ── Unités de compte ── -->
