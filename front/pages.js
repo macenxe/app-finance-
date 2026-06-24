@@ -1,8 +1,8 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
-function barrierCouleur(niveauPct, barrierePct) {
-  const diff = niveauPct - barrierePct;
+function barrierCouleur(niveauPct, barrierePct, estBaisse) {
+  const diff = estBaisse ? barrierePct - niveauPct : niveauPct - barrierePct;
   if (diff >= 5)  return 'green';
   if (diff > -5)  return 'orange';
   return 'red';
@@ -227,11 +227,12 @@ function renderProduits(produits, state) {
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
             const pctStr = niveauPct != null ? niveauPct.toFixed(1) + ' %' : '—';
-            const pctCouleur = niveauPct != null ? barrierCouleur(niveauPct, 100) : null;
-            const barrCell = (val, pct) => {
+            const pctCouleur = niveauPct != null ? barrierCouleur(niveauPct, 100, r.estBaisse) : null;
+            const barrCell = (val, pct, estBaisse) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
-              const c = (niveauPct != null && pct != null) ? barrierCouleur(niveauPct, pct) : r.k;
-              return `<span class="barrier-badge ${c}">${val}</span>`;
+              const prefix = estBaisse ? '−' : '';
+              const c = (niveauPct != null && pct != null) ? barrierCouleur(niveauPct, pct, estBaisse) : r.k;
+              return `<span class="barrier-badge ${c}">${prefix}${val}</span>`;
             };
             return `
           <div class="products-table-row">
@@ -245,8 +246,8 @@ function renderProduits(produits, state) {
             <span class="col-center tnum">
               ${pctCouleur ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>` : `<span style="color:#b5ab95">${pctStr}</span>`}
             </span>
-            <span class="col-center">${barrCell(r.bCoupon, r.bCouponNum)}</span>
-            <span class="col-center">${barrCell(r.bAuto, r.bAutoNum)}</span>
+            <span class="col-center">${barrCell(r.bCoupon, r.bCouponNum, false)}</span>
+            <span class="col-center">${barrCell(r.bAuto, r.bAutoNum, r.estBaisse)}</span>
             <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
           </div>`;
           }).join('')}

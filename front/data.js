@@ -88,14 +88,21 @@ function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });
   const parseNum = s => parseFloat((s || '').replace(/[^0-9,.]/g, '').replace(',', '.'));
   return produits.map(p => {
-    // Zone d'autocall calculée dynamiquement (ne pas se fier au champ figé)
+    const bAutoRaw = parseNum(p.bAuto);
+    // Autocall à la baisse : CMS (rappelé si taux < barrière) ou equity avec barrière < 100 % du strike
+    const estBaisse = p.type === 'cms' || (p.type === 'equity' && !isNaN(bAutoRaw) && bAutoRaw < 100);
+    // Zone d'autocall calculée dynamiquement
     let zoneAutocall;
     if (p.type === 'equity' && p.strikeNum && p.niveauNum) {
-      const bAuto = parseNum(p.bAuto);
-      zoneAutocall = !isNaN(bAuto) ? (p.niveauNum >= p.strikeNum * bAuto / 100 ? 'OUI' : 'NON') : p.zoneAutocall;
+      if (!isNaN(bAutoRaw)) {
+        const seuil = p.strikeNum * bAutoRaw / 100;
+        zoneAutocall = estBaisse ? (p.niveauNum <= seuil ? 'OUI' : 'NON') : (p.niveauNum >= seuil ? 'OUI' : 'NON');
+      } else {
+        zoneAutocall = p.zoneAutocall;
+      }
     } else if (p.type === 'cms') {
-      const niv = parseNum(p.niveau), bAuto = parseNum(p.bAuto);
-      zoneAutocall = (!isNaN(niv) && !isNaN(bAuto)) ? (niv >= bAuto ? 'OUI' : 'NON') : p.zoneAutocall;
+      const niv = parseNum(p.niveau);
+      zoneAutocall = (!isNaN(niv) && !isNaN(bAutoRaw)) ? (niv <= bAutoRaw ? 'OUI' : 'NON') : p.zoneAutocall;
     } else {
       zoneAutocall = p.zoneAutocall;
     }
@@ -105,11 +112,11 @@ function enrichirProduits(produits) {
     else k = 'orange';
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
     const statuts = { green:'Rappel probable', orange:'Surveillance', red:'Risque' };
-    const bAutoNum = parseNum(p.bAuto), bCouponNum = parseNum(p.bCoupon);
+    const bCouponNum = parseNum(p.bCoupon);
     return {
-      ...p, zoneAutocall, k, statut: statuts[k], pct,
+      ...p, zoneAutocall, k, estBaisse, statut: statuts[k], pct,
       ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
-      bAutoNum:   isNaN(bAutoNum)   ? null : bAutoNum,
+      bAutoNum:   isNaN(bAutoRaw)   ? null : bAutoRaw,
       bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,
     };
   });

@@ -32,6 +32,8 @@ const AppAPI = (() => {
     const statuts = { green: 'Rappel probable', orange: 'Surveillance', red: 'Risque' };
 
     const niveauNum = p.cours?.dernierCours ?? null;
+    const estBaisse = p.typeProduit === 'cms' ||
+      (p.typeProduit === 'equity' && p.barriereAutocall != null && p.barriereAutocall < 100);
 
     return {
       id:          p.id,
@@ -54,6 +56,7 @@ const AppAPI = (() => {
       bCouponNum:  p.barriereCoupon,
       zoneAutocall: p.indicateurs?.zoneAutocall ? 'OUI' : 'NON',
       k,
+      estBaisse,
       statut:      statuts[k],
       pct,
     };
