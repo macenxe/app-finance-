@@ -594,3 +594,45 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   /* ── Chips enroulables ── */
   .veille-tags, .filter-chips { flex-wrap: wrap; }
 }
+
+/* ── Paysage mobile : sidebar overlay + tableau toutes colonnes ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Sidebar en overlay (même comportement qu'en portrait) */
+  #sidebar {
+    position: fixed; left: 0; top: 0; bottom: 0; z-index: 30;
+    transform: translateX(-100%); transition: transform .25s ease;
+  }
+  #sidebar.open { transform: translateX(0); }
+  #sidebar-backdrop {
+    display: block; position: fixed; inset: 0; z-index: 29;
+    background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .25s;
+  }
+  #sidebar-backdrop.open { opacity: 1; pointer-events: auto; }
+  #main { width: 100%; }
+
+  /* Topbar hamburger visible */
+  #mobile-topbar {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 44px; flex: none; background: #16304f;
+  }
+  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff; }
+  .footer-legal { display: none; }
+  #footer { padding: 6px 16px; gap: 8px; }
+  .footer-dot { display: none; }
+  .page-header { padding: 10px 16px; flex-wrap: wrap; gap: 6px; }
+  .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
+  .search-box { width: 100%; }
+
+  /* Tableau : toutes les 7 colonnes */
+  .products-table-header, .products-table-row {
+    grid-template-columns: 1fr auto auto 36px 36px auto 40px;
+  }
+  /* Texte des en-têtes icônes masqué (€ et ↩ se suffisent) */
+  .products-table-header > span:nth-child(4),
+  .products-table-header > span:nth-child(5) { font-size: 0; }
+
+  #content { overflow-x: hidden; scrollbar-width: none; }
+  #content::-webkit-scrollbar { display: none; }
+  .summary-chips { grid-template-columns: repeat(4, 1fr); }
+  .cat-grid { grid-template-columns: repeat(4, 1fr); }
+}
