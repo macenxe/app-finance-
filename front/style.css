@@ -176,12 +176,17 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Summary chips (produits page) ── */
 .summary-chips { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 18px; }
-.chip-card { padding: 13px 16px; }
+.chip-card { padding: 13px 16px; cursor: pointer; transition: box-shadow .15s, transform .15s; }
+.chip-card:hover { box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
 .chip-card-label { font-size: 11px; color: #6b6e73; }
 .chip-card-val   { font-family: 'Spectral', serif; font-size: 22px; font-weight: 600; margin-top: 3px; }
-.chip-card.green { border-left: 3px solid #1d6f4c; } .chip-card.green .chip-card-val { color: #1d6f4c; }
+.chip-card.green  { border-left: 3px solid #1d6f4c; } .chip-card.green .chip-card-val  { color: #1d6f4c; }
 .chip-card.orange { border-left: 3px solid #b06a1a; } .chip-card.orange .chip-card-val { color: #b06a1a; }
-.chip-card.red   { border-left: 3px solid #9a3535; } .chip-card.red .chip-card-val   { color: #9a3535; }
+.chip-card.red    { border-left: 3px solid #9a3535; } .chip-card.red .chip-card-val    { color: #9a3535; }
+.chip-card.active        { background: #16304f; } .chip-card.active .chip-card-label        { color: #a8b4c0; } .chip-card.active .chip-card-val        { color: #c9a96a; }
+.chip-card.green.active  { background: #1d6f4c; } .chip-card.green.active .chip-card-label  { color: #a8c4b8; } .chip-card.green.active .chip-card-val  { color: #fff; }
+.chip-card.orange.active { background: #b06a1a; } .chip-card.orange.active .chip-card-label { color: #e8cfa8; } .chip-card.orange.active .chip-card-val { color: #fff; }
+.chip-card.red.active    { background: #9a3535; } .chip-card.red.active .chip-card-label    { color: #e0b8b8; } .chip-card.red.active .chip-card-val    { color: #fff; }
 
 /* ── Filter chips ── */
 .filter-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }

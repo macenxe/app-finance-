@@ -180,10 +180,10 @@ function renderProduits(produits, state) {
 
     <div style="padding:18px 30px 40px;">
       <div class="summary-chips">
-        <div class="card chip-card"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
-        <div class="card chip-card green"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
-        <div class="card chip-card orange"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
-        <div class="card chip-card red"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
+        <div class="card chip-card${f==='tous'?' active':''}" onclick="App.setFilter('tous')"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
+        <div class="card chip-card green${f==='green'?' active':''}" onclick="App.setFilter('green')"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
+        <div class="card chip-card orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
+        <div class="card chip-card red${f==='red'?' active':''}" onclick="App.setFilter('red')"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
       </div>
 
       <div class="cat-block">
@@ -198,13 +198,8 @@ function renderProduits(produits, state) {
         </div>
       </div>
 
-      <div class="filter-row">
-        <div class="filter-chips">
-          ${chips.map(c => `<div class="filter-chip${f===c.key?' active':''}" onclick="App.setFilter('${c.key}')">${c.label}</div>`).join('')}
-        </div>
-      </div>
 
-      <div class="products-table-wrap">
+<div class="products-table-wrap">
         <div class="products-table">
           <div class="products-table-header">
             <span>Nom commercial</span>
