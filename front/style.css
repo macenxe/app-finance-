@@ -217,12 +217,13 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .products-table-row:hover { background: #faf8f3; }
 /* Centrage des colonnes (notre principe appliqué à la table simplifiée) */
 .products-table-header span, .products-table-row > span { text-align: center; }
-.col-right  { text-align: right; }
-.col-center { text-align: center; }
-.col-nom    { color: #16304f; font-weight: 500; }
-.col-dim    { color: #6b6e73; }
-.col-detail { color: #9a7b3c; font-weight: 500; font-size: 11.5px; cursor: pointer; }
+.col-right    { text-align: right; }
+.col-center   { text-align: center; }
+.col-nom      { color: #16304f; font-weight: 500; }
+.col-dim      { color: #6b6e73; }
+.col-detail   { color: #9a7b3c; font-weight: 500; font-size: 11.5px; cursor: pointer; }
 .col-detail:hover { text-decoration: underline; }
+.col-landscape { display: none; }
 .table-note { font-size: 11px; color: #b5ab95; margin-top: 10px; }
 
 /* ── Indicateurs OK (icônes produits) ── */
@@ -574,12 +575,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
   /* ── Tableau produits mobile : Nom | Coupon% | €icône | Statut | Détail ── */
   .products-table-header, .products-table-row { grid-template-columns: 1fr auto 36px auto 40px; }
-  .products-table-header > span:nth-child(3),
-  .products-table-header > span:nth-child(5),
-  .products-table-row    > span:nth-child(3),
-  .products-table-row    > span:nth-child(5) { display: none; }
+  .products-table-header > span:nth-child(6),
+  .products-table-header > span:nth-child(8),
+  .products-table-row    > span:nth-child(6),
+  .products-table-row    > span:nth-child(8) { display: none; }
   /* En-tête icône coupon masqué (l'icône € se suffit) */
-  .products-table-header > span:nth-child(4) { font-size: 0; }
+  .products-table-header > span:nth-child(7) { font-size: 0; }
 
   /* ── Anti-débordement horizontal ── */
   #content { overflow-x: hidden; scrollbar-width: none; }
@@ -623,13 +624,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
   .search-box { width: 100%; }
 
-  /* Tableau : toutes les 7 colonnes */
+  /* Tableau : toutes les 10 colonnes */
+  .col-landscape { display: revert; }
   .products-table-header, .products-table-row {
-    grid-template-columns: 1fr auto auto 36px 36px auto 40px;
+    grid-template-columns: 1fr auto auto auto auto auto 36px 36px auto 40px;
   }
   /* Texte des en-têtes icônes masqué (€ et ↩ se suffisent) */
-  .products-table-header > span:nth-child(4),
-  .products-table-header > span:nth-child(5) { font-size: 0; }
+  .products-table-header > span:nth-child(7),
+  .products-table-header > span:nth-child(8) { font-size: 0; }
 
   #content { overflow-x: hidden; scrollbar-width: none; }
   #content::-webkit-scrollbar { display: none; }

@@ -2,10 +2,15 @@
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
 function abregerMois(nom) {
-  const m = { Janvier:'01', Février:'02', Mars:'03', Avril:'04', Mai:'05', Juin:'06',
-              Juillet:'07', Août:'08', Septembre:'09', Octobre:'10', Novembre:'11', Décembre:'12' };
-  return nom.replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre)\s+(\d{4})\b/g,
-    (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
+  const m = {
+    Janvier:'01', Février:'02', Mars:'03', Avril:'04', Mai:'05', Juin:'06',
+    Juillet:'07', Août:'08', Septembre:'09', Octobre:'10', Novembre:'11', Décembre:'12',
+    Jan:'01', Fév:'02', Mar:'03', Avr:'04', Juil:'07', Aoû:'08', Sep:'09', Oct:'10', Nov:'11', Déc:'12',
+  };
+  return nom
+    .replace(/\bAutocall\s+/g, '')
+    .replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre|Jan|Fév|Mar|Avr|Juil|Aoû|Sep|Oct|Nov|Déc)\s+(\d{4})\b/g,
+      (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
 }
 
 function renderDashboard(indices, produits, taux) {
@@ -204,6 +209,9 @@ function renderProduits(produits, state) {
           <div class="products-table-header">
             <span>Nom commercial</span>
             <span class="col-right">Coupon</span>
+            <span class="col-landscape col-right">Strike</span>
+            <span class="col-landscape col-right">B.Auto</span>
+            <span class="col-landscape col-right">B.Cpn</span>
             <span>Prochaine const.</span>
             <span class="col-center">Coupon</span>
             <span class="col-center">Rappel</span>
@@ -217,6 +225,9 @@ function renderProduits(produits, state) {
           <div class="products-table-row">
             <span class="col-nom">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
             <span class="tnum col-right">${r.coupon}</span>
+            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
+            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.bAuto || '—'}</span>
+            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.bCoupon || '—'}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="col-center"><span class="ind-ok${couponOk ? ' yes' : ' no'}" title="${couponOk ? 'Coupon en cours' : 'Coupon à risque'}">€</span></span>
             <span class="col-center"><span class="ind-ok${rappelOk ? ' yes' : ' no'}" title="${rappelOk ? 'Zone de rappel probable' : 'Hors zone de rappel'}">↩</span></span>
