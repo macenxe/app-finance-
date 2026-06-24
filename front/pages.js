@@ -218,14 +218,16 @@ function renderProduits(produits, state) {
             <span>Prochaine const.</span>
             <span class="col-right">Coupon</span>
             <span class="col-landscape col-right">Strike</span>
+            <span class="col-center">% Strike</span>
             <span class="col-center">B. Coupon</span>
             <span class="col-center">B. Autocall</span>
             <span class="col-landscape">Statut</span>
-            <span></span>
           </div>
           ${rows.map(r => {
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
+            const pctStr = niveauPct != null ? niveauPct.toFixed(1) + ' %' : '—';
+            const pctCouleur = niveauPct != null ? barrierCouleur(niveauPct, 100) : null;
             const barrCell = (val, pct) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
               const c = (niveauPct != null && pct != null) ? barrierCouleur(niveauPct, pct) : r.k;
@@ -233,14 +235,19 @@ function renderProduits(produits, state) {
             };
             return `
           <div class="products-table-row">
-            <span class="col-nom">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
+            <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
+              <span class="col-nom-text">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
+              <span class="col-nom-hint">voir détail</span>
+            </span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-right">${r.coupon}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
+            <span class="col-center tnum">
+              ${pctCouleur ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>` : `<span style="color:#b5ab95">${pctStr}</span>`}
+            </span>
             <span class="col-center">${barrCell(r.bCoupon, r.bCouponNum)}</span>
             <span class="col-center">${barrCell(r.bAuto, r.bAutoNum)}</span>
             <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
-            <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
           </div>`;
           }).join('')}
         </div>
