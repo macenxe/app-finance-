@@ -1,5 +1,5 @@
 const App = (() => {
-  let state   = { page: 'dash', filter: 'tous', q: '', detailIsin: null };
+  let state   = { page: 'dash', filter: 'tous', cat: null, q: '', detailIsin: null };
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
 
   const NAV = [
@@ -144,6 +144,10 @@ const App = (() => {
     },
     setFilter(filter) {
       state = { ...state, filter };
+      renderPage();
+    },
+    setCat(cat) {
+      state = { ...state, cat: state.cat === cat ? null : cat };
       renderPage();
     },
     prodSearch(q) {

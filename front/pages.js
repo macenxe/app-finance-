@@ -1,6 +1,13 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
+function abregerMois(nom) {
+  const m = { Janvier:'01', Février:'02', Mars:'03', Avril:'04', Mai:'05', Juin:'06',
+              Juillet:'07', Août:'08', Septembre:'09', Octobre:'10', Novembre:'11', Décembre:'12' };
+  return nom.replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre)\s+(\d{4})\b/g,
+    (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
+}
+
 function renderDashboard(indices, produits, taux) {
   taux = taux || TAUX;
 
@@ -139,7 +146,9 @@ function renderDashboard(indices, produits, taux) {
 function renderProduits(produits, state) {
   const q = (state.q || '').trim().toLowerCase();
   const f = state.filter || 'tous';
+  const catActive = state.cat || null;
   let rows = f === 'tous' ? produits : produits.filter(r => r.k === f);
+  if (catActive) rows = rows.filter(r => categorieProduit(r) === catActive);
   if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
 
   const count = k => produits.filter(r => r.k === k).length;
@@ -181,7 +190,7 @@ function renderProduits(produits, state) {
         <div class="section-label mb-12">Sous-jacents par catégorie</div>
         <div class="cat-grid">
           ${grouperCategories(produits).map(c => `
-          <div class="card cat-card" onclick="App.ouvrirCategorie('${c.cat}')">
+          <div class="card cat-card${catActive === c.cat ? ' active' : ''}" onclick="App.setCat('${c.cat}')">
             <div class="cat-card-nom">${c.cat}</div>
             <div class="cat-card-meta">${c.n} produit${c.n > 1 ? 's' : ''}</div>
             <div class="cat-card-sj">${c.sjLabels}</div>
@@ -211,7 +220,7 @@ function renderProduits(produits, state) {
             const rappelOk = r.k === 'green';
             return `
           <div class="products-table-row">
-            <span class="col-nom">${r.nom.replace('Conservateur ', 'C. ')}</span>
+            <span class="col-nom">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
             <span class="tnum col-right">${r.coupon}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="col-center"><span class="ind-ok${couponOk ? ' yes' : ' no'}" title="${couponOk ? 'Coupon en cours' : 'Coupon à risque'}">€</span></span>
