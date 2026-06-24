@@ -593,7 +593,7 @@ function renderContrats() {
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">F€ &amp; UC</div>
+        <div class="page-title">Fonds € &amp; UC</div>
         <div class="page-sub">Fonds en euros · Unités de compte · Le Conservateur</div>
       </div>
     </header>
