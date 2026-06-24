@@ -124,6 +124,28 @@ function enrichirProduits(produits) {
   });
 }
 
+// ── Performance fonds en euros (communiqué annuel) ──
+const FONDS_EUROS_PERF = {
+  annee: 2025,
+  contrats: ['Conservateur Hélios Patrimoine', 'Conservateur Hélios Capitalisation', 'Conservateur Épargne Retraite'],
+  tranches: [
+    { label: '70 % et plus',              inf150: '4,00 %', sup150: '4,25 %' },
+    { label: 'De 60 % à moins de 70 %',   inf150: '3,75 %', sup150: '4,00 %' },
+    { label: 'De 50 % à moins de 60 %',   inf150: '3,25 %', sup150: '3,50 %' },
+    { label: 'De 40 % à moins de 50 %',   inf150: '2,00 %', sup150: '2,25 %' },
+    { label: 'Moins de 40 %',             inf150: '1,10 %', sup150: '1,10 %' },
+  ],
+  notes: [
+    'La provision pour participation aux bénéfices est supérieure à 3 % des provisions mathématiques épargne euros de l\'actif général.',
+    'La transformation des anciens contrats d\'assurance-vie en Conservateur Hélios Patrimoine est possible dans les conditions fixées par l\'assureur.',
+  ],
+};
+
+// ── Catalogue UC proposées ──
+const UC_CATALOGUE = [
+  { nom: 'À compléter', isin: '—', categorie: 'À renseigner', risque: 0, perfYtd: '—', perf1an: '—', perf3an: '—' },
+];
+
 // ── Contrats assurance-vie & UC ──
 // Structure : un objet par contrat, avec fonds euros + liste des UC.
 // Mettre à jour manuellement les taux et performances.

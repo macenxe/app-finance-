@@ -577,7 +577,7 @@ function renderModalEditionCMS(valeurActuelle) {
   </div>`;
 }
 
-// ── Page Contrats & Unités de Compte ──
+// ── Page F€ & UC ──
 function renderContrats() {
   function srriDots(n) {
     const filled = Math.max(0, Math.min(7, n));
@@ -586,95 +586,84 @@ function renderContrats() {
     return `<span class="srri-bar">${s}</span>`;
   }
 
-  function perfClass(h) {
-    if (h === true)  return ' up';
-    if (h === false) return ' down';
-    return '';
-  }
-
-  const contrats = typeof CONTRATS !== 'undefined' ? CONTRATS : [];
+  const perf = typeof FONDS_EUROS_PERF !== 'undefined' ? FONDS_EUROS_PERF : null;
+  const uc   = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
 
   return `
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">Contrats & Unités de Compte</div>
-        <div class="page-sub">${contrats.length} contrat${contrats.length > 1 ? 's' : ''}</div>
+        <div class="page-title">F€ &amp; UC</div>
+        <div class="page-sub">Fonds en euros · Unités de compte · Le Conservateur</div>
       </div>
     </header>
 
     <div class="page-body">
-      ${contrats.map(c => {
-        const nbUc = c.uc ? c.uc.length : 0;
-        return `
-      <div class="contrat-block card mb-18">
-        <div class="contrat-header-bar">
-          <div>
-            <div class="contrat-nom">${c.nom}</div>
-            <div class="contrat-meta">${c.assureur}${c.ref ? ' · Réf. ' + c.ref : ''}${c.ouverture ? ' · Ouvert en ' + c.ouverture : ''}</div>
-          </div>
-          <div class="contrat-chips">
-            ${c.fondsEuros ? `<span class="contrat-chip fe">Fonds euros</span>` : ''}
-            ${nbUc > 0    ? `<span class="contrat-chip uc">${nbUc} UC</span>` : ''}
-          </div>
+
+      ${perf ? `
+      <!-- ── Fonds en euros ── -->
+      <div class="flex-sb mb-12">
+        <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
+        <span class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</span>
+      </div>
+      <div class="card p-18 mb-24">
+        <div class="fe-contrats mb-16">
+          Applicable aux contrats : <strong>${perf.contrats.join(' · ')}</strong>
         </div>
 
-        ${c.fondsEuros ? `
-        <div class="contrat-section">
-          <div class="contrat-section-label">Fonds en euros</div>
-          <div class="fe-row">
-            <div class="fe-nom">${c.fondsEuros.nom}</div>
-            <div class="fe-taux-wrap">
-              <div class="fe-taux-item">
-                <div class="fe-taux-label">Taux 2024</div>
-                <div class="fe-taux-val tnum">${c.fondsEuros.taux2024}</div>
-              </div>
-              <div class="fe-taux-item">
-                <div class="fe-taux-label">Taux 2023</div>
-                <div class="fe-taux-val tnum secondary">${c.fondsEuros.taux2023}</div>
-              </div>
-              <div class="fe-taux-item">
-                <div class="fe-taux-label">Part contrat</div>
-                <div class="fe-taux-val tnum">${c.fondsEuros.part}</div>
-              </div>
-            </div>
+        <div class="fe-perf-table mb-16">
+          <div class="fe-perf-head">
+            <div class="fe-col-uc">% investi en UC</div>
+            <div class="fe-col-rate">&lt; 150 000 €</div>
+            <div class="fe-col-rate">≥ 150 000 €</div>
           </div>
-        </div>` : ''}
+          ${perf.tranches.map((t, i) => `
+          <div class="fe-perf-row${i % 2 === 1 ? ' alt' : ''}">
+            <div class="fe-col-uc">${t.label}</div>
+            <div class="fe-col-rate tnum fe-rate">${t.inf150}</div>
+            <div class="fe-col-rate tnum fe-rate best">${t.sup150}</div>
+          </div>`).join('')}
+        </div>
 
-        ${nbUc > 0 ? `
-        <div class="contrat-section">
-          <div class="contrat-section-label">Unités de compte</div>
-          <div class="uc-list">
-            ${c.uc.map(u => `
-            <div class="uc-card">
-              <div class="uc-card-head">
-                <div class="uc-nom">${u.nom}</div>
-                <span class="uc-cat-badge">${u.categorie}</span>
-              </div>
-              <div class="uc-card-meta">
-                <span class="uc-isin tnum">${u.isin}</span>
-                ${u.risque > 0 ? `<span class="uc-srri">SRRI ${srriDots(u.risque)}</span>` : ''}
-              </div>
-              <div class="uc-card-perf">
-                <div class="uc-perf-item"><span class="uc-perf-label">Perf. YTD</span><span class="uc-perf-val tnum${perfClass(u.hausse)}">${u.perfYtd}</span></div>
-                <div class="uc-perf-item"><span class="uc-perf-label">Perf. ann.</span><span class="uc-perf-val tnum${perfClass(u.hausse)}">${u.perfAn}</span></div>
-                <div class="uc-perf-item"><span class="uc-perf-label">Part contrat</span><span class="uc-perf-val tnum">${u.part}</span></div>
-              </div>
-            </div>`).join('')}
-          </div>
-        </div>` : `
-        <div class="contrat-section">
-          <div class="uc-empty">Aucune UC renseignée pour ce contrat.</div>
-        </div>`}
-      </div>`;
-      }).join('')}
-
-      ${contrats.length === 0 ? `
-      <div class="card p-18" style="color:#9a8f7a;font-size:13px;">
-        Aucun contrat configuré. Ajouter des entrées dans <code>CONTRATS</code> (data.js).
+        <div class="fe-notes">
+          ${perf.notes.map(n => `<div class="fe-note">• ${n}</div>`).join('')}
+        </div>
       </div>` : ''}
 
-      <div class="table-note">Données saisies manuellement · taux de revalorisation nets de frais de gestion · performances indicatives.</div>
+      <!-- ── Unités de compte ── -->
+      <div class="flex-sb mb-12">
+        <span class="section-label">Unités de compte</span>
+        <span class="section-hint">${uc.length} UC référencée${uc.length > 1 ? 's' : ''}</span>
+      </div>
+
+      ${uc.length === 0 || (uc.length === 1 && uc[0].isin === '—') ? `
+      <div class="card p-18" style="color:#9a8f7a;font-size:13px;">
+        UC à renseigner dans <code>UC_CATALOGUE</code> (data.js).
+      </div>` : `
+      <div class="uc-catalogue">
+        <div class="uc-cat-header">
+          <span>Nom / ISIN</span>
+          <span>Catégorie</span>
+          <span class="col-right">SRRI</span>
+          <span class="col-right">Perf. YTD</span>
+          <span class="col-right">Perf. 1 an</span>
+          <span class="col-right">Perf. 3 ans</span>
+        </div>
+        ${uc.map(u => `
+        <div class="uc-cat-row">
+          <div>
+            <div class="uc-cat-nom">${u.nom}</div>
+            <div class="uc-cat-isin tnum">${u.isin}</div>
+          </div>
+          <div><span class="uc-cat-badge">${u.categorie}</span></div>
+          <div class="col-right">${u.risque > 0 ? srriDots(u.risque) : '—'}</div>
+          <div class="col-right tnum uc-perf-val">${u.perfYtd}</div>
+          <div class="col-right tnum uc-perf-val">${u.perf1an}</div>
+          <div class="col-right tnum uc-perf-val">${u.perf3an}</div>
+        </div>`).join('')}
+      </div>`}
+
+      <div class="table-note mt-16">Taux FE nets de frais de gestion · performances UC indicatives · sources internes.</div>
     </div>
   </div>`;
 }
