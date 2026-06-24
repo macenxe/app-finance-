@@ -182,8 +182,13 @@ const App = (() => {
       if (root) root.innerHTML = renderFormulaireAjout();
     },
     fermerFormulaire,
-    ouvrirGraphique(ticker, label) {
-      if (window.Chart) Chart.ouvrir(ticker, label);
+    ouvrirGraphique(id, label, sous) {
+      if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '' });
+    },
+    ouvrirGraphiqueUC(isin) {
+      if (!window.Chart) return;
+      const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
+      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie });
     },
     ouvrirCategorie(cat) {
       const membres = donnees.produits.filter(p => categorieProduit(p) === cat);
@@ -294,11 +299,11 @@ const App = (() => {
 
 document.addEventListener('DOMContentLoaded', () => App.init());
 
+// Service worker désactivé (évite les pages blanches dues à un cache figé).
+// On nettoie toute inscription et tout cache existants ; on ne réenregistre rien.
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').catch(() => {});
-  // Recharge la page dès qu'un nouveau service worker prend le contrôle,
-  // pour que l'utilisateur voie immédiatement la nouvelle version.
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload();
-  });
+  navigator.serviceWorker.getRegistrations()
+    .then((rs) => rs.forEach((r) => r.unregister()))
+    .catch(() => {});
+  if (window.caches) caches.keys().then((ks) => ks.forEach((k) => caches.delete(k))).catch(() => {});
 }

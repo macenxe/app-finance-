@@ -62,15 +62,15 @@ function renderDashboard(indices, produits, taux) {
         <span class="section-label">Indices clés</span>
       </div>
       <div class="grid-3 mb-24">
-        ${indices.map(i => `
-        <div class="card index-card${i.ticker ? ' index-clic' : ''}"${i.ticker ? ` onclick="App.ouvrirGraphique('${i.ticker}','${i.nom}')"` : ''}>
-          <div class="index-name">${i.nom}${i.statique ? ' <span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span>' : ''}</div>
+        ${indices.map(i => { const gid = graphIdPour(i.nom) || i.ticker; return `
+        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${i.nom}')"` : ''}>
+          <div class="index-name">${i.nom}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
             ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
             : `<div class="index-var tnum" style="color:#9a8f7a;">—</div>`
           }
-        </div>`).join('')}
+        </div>`; }).join('')}
       </div>
 
       <!-- Taux & obligations -->
@@ -79,16 +79,16 @@ function renderDashboard(indices, produits, taux) {
       </div>
       <div class="card p-18 mb-16">
         <div class="taux-grid">
-          ${taux.map(t => `
-          <div>
+          ${taux.map(t => { const gid = graphIdPour(t.nom); return `
+          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
             <div class="taux-item-name">
               ${t.nom}
-              ${t.nom === 'CMS 10 ans' ? `<button class="btn-pencil" onclick="App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
+              ${t.nom.indexOf('CMS') !== -1 ? `<span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span><button class="btn-pencil" onclick="event.stopPropagation();App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
             </div>
             <div class="taux-val tnum">${t.valeur}</div>
             <div class="taux-var tnum ${t.hausse === null ? 'flat' : t.hausse ? 'up' : 'down'}">${t.var}</div>
             ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
-          </div>`).join('')}
+          </div>`; }).join('')}
         </div>
       </div>
 
@@ -98,12 +98,12 @@ function renderDashboard(indices, produits, taux) {
       </div>
       <div class="card p-18 mb-24">
         <div class="macro-grid">
-          ${MACRO.map(m => `
-          <div>
+          ${MACRO.map(m => { const gid = graphIdPour(m.nom); return `
+          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}>
             <div class="taux-item-name">${m.nom}</div>
             <div class="taux-val tnum">${m.valeur}</div>
             <div class="taux-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}">${m.var}</div>
-          </div>`).join('')}
+          </div>`; }).join('')}
         </div>
       </div>
 
@@ -210,8 +210,20 @@ function renderProduits(produits, state) {
           ${rows.map(r => {
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
-            const pctStr = niveauPct != null ? niveauPct.toFixed(1) + ' %' : '—';
-            const pctCouleur = niveauPct != null ? barrierCouleur(niveauPct, 100, r.estBaisse) : null;
+            // CMS : % calculé autour de la barrière de COUPON (miroir : rappelé si le taux passe
+            // sous la barrière → 100 % à l'égalité, > 100 % quand le taux baisse).
+            let pctStr, pctCouleur;
+            if (niveauPct != null) {
+              pctStr = niveauPct.toFixed(1) + ' %';
+              pctCouleur = barrierCouleur(niveauPct, 100, r.estBaisse);
+            } else if (r.type === 'cms' && r.bCouponNum) {
+              const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
+              if (isFinite(niv)) {
+                const v = 200 - (niv / r.bCouponNum) * 100;
+                pctStr = v.toFixed(1) + ' %';
+                pctCouleur = barrierCouleur(v, 100, false);
+              } else { pctStr = '—'; pctCouleur = null; }
+            } else { pctStr = '—'; pctCouleur = null; }
             const barrCell = (val, pct, estBaisse) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
               const prefix = estBaisse ? '−' : '';
@@ -632,36 +644,28 @@ function renderContrats() {
 
       <!-- ── Unités de compte ── -->
       <div class="flex-sb mb-12">
-        <span class="section-label">Unités de compte</span>
-        <span class="section-hint">${uc.length} UC référencée${uc.length > 1 ? 's' : ''}</span>
+        <span class="section-label">Unités de compte suivies</span>
+        <span class="section-hint">${uc.length} UC · cliquer pour le graphique</span>
       </div>
 
-      ${uc.length === 0 || (uc.length === 1 && uc[0].isin === '—') ? `
-      <div class="card p-18" style="color:#9a8f7a;font-size:13px;">
-        UC à renseigner dans <code>UC_CATALOGUE</code> (data.js).
-      </div>` : `
-      <div class="uc-catalogue">
-        <div class="uc-cat-header">
-          <span>Nom / ISIN</span>
-          <span>Catégorie</span>
-          <span class="col-right">SRRI</span>
-          <span class="col-right">Perf. 2025</span>
-          <span class="col-right">Perf. 4 ans</span>
-          <span class="col-right">Perf. 8 ans</span>
-        </div>
+      <div class="uc-liste">
         ${uc.map(u => `
-        <div class="uc-cat-row">
-          <div>
-            <div class="uc-cat-nom">${u.nom}</div>
-            <div class="uc-cat-isin tnum">${u.isin}</div>
+        <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
+          <div class="uc-item-haut">
+            <span class="uc-item-rang tnum">${u.rang}</span>
+            <div class="uc-item-id">
+              <div class="uc-item-nom">${u.nom}</div>
+              <div class="uc-item-isin tnum">${u.isin}</div>
+            </div>
+            ${u.graphId ? `<span class="uc-item-go">graphique →</span>` : `<span class="uc-item-go muted">indisponible</span>`}
           </div>
-          <div><span class="uc-cat-badge">${u.categorie}</span></div>
-          <div class="col-right">${u.risque > 0 ? srriDots(u.risque) : '—'}</div>
-          <div class="col-right tnum uc-perf-val">${u.perfYtd}</div>
-          <div class="col-right tnum uc-perf-val">${u.perf1an}</div>
-          <div class="col-right tnum uc-perf-val">${u.perf3an}</div>
+          <div class="uc-item-bas">
+            <span class="uc-cat-badge">${u.categorie}</span>
+            <span class="uc-expo">Actions ${u.equity} %</span>
+            ${srriDots(u.srri)}
+          </div>
         </div>`).join('')}
-      </div>`}
+      </div>
 
       <div class="table-note mt-16">Taux FE nets de frais de gestion · performances UC indicatives · sources internes.</div>
     </div>

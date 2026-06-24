@@ -64,7 +64,7 @@ const Chart = (() => {
             ${etat.retour ? `<button class="chart-retour" onclick="Chart.retour()" aria-label="Retour">←</button>` : ''}
             <span style="min-width:0;">
               <span class="modal-title">${titre}</span>
-              ${etat.sous ? `<div class="chart-sous">Sous-jacent : ${esc(etat.sous)}</div>` : ''}
+              <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
             </span>
           </span>
           <button class="modal-close" onclick="Chart.fermer()">✕</button>
@@ -96,11 +96,20 @@ const Chart = (() => {
     const zone = document.getElementById('chart-zone');
     if (zone) zone.innerHTML = '<div class="chart-loading">Chargement…</div>';
     try {
-      const url = `${WORKER}?history=${encodeURIComponent(etat.ticker)}&period=${periode}`;
+      const url = (typeof AppAPI !== 'undefined' && AppAPI.historyUrl)
+        ? AppAPI.historyUrl(etat.ticker, periode)
+        : `${WORKER}?history=${encodeURIComponent(etat.ticker)}&period=${periode}`;
       const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
       if (!r.ok) throw new Error('HTTP ' + r.status);
       const data = await r.json();
       etat.points = data.points || [];
+      // Mention « proxy » éventuelle (ex. CMS 10 ans = rendement 10 ans zone euro).
+      const sousEl = document.getElementById('chart-sous');
+      if (sousEl) {
+        const txt = data.proxy || (etat.sous ? 'Sous-jacent : ' + etat.sous : '');
+        sousEl.textContent = txt;
+        sousEl.style.display = txt ? '' : 'none';
+      }
       if (etat.points.length < 2) {
         if (zone) zone.innerHTML = '<div class="chart-loading">Données indisponibles pour cette période.</div>';
         majReadout(null);

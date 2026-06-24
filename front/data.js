@@ -25,17 +25,18 @@ const PRODUITS = [
 const INDICES_MARCHE = [
   { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
   { nom:'Euro Stoxx 50',    ticker:'^STOXX50E', valeur:'5 124,30', var:'+0,42 %', hausse:true  },
-  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true, statique:true },
+  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true  },
   { nom:'S&P 500',          ticker:'^GSPC',     valeur:'5 487,12', var:'+0,18 %', hausse:true  },
   { nom:'Nasdaq',           ticker:'^IXIC',     valeur:'26 166,6', var:'+0,55 %', hausse:true  },
-  { nom:'MSCI World',       ticker:'IWDA.AS',   valeur:'4 102,50', var:'+0,31 %', hausse:true, statique:true },
+  { nom:'MSCI World',       ticker:'IWDA.AS',   valeur:'4 102,50', var:'+0,31 %', hausse:true  },
 ];
 
 const TAUX = [
   { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'stable', hausse:null  },
   { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:false },
-  { nom:'CMS 10 ans',        valeur:'3,04 %', var:'stable', hausse:null  },
+  { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:false },
   { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:true  },
+  { nom:'CMS 10 ans',        valeur:'3,04 %', var:'stable', hausse:null  },
 ];
 
 const MACRO = [
@@ -84,6 +85,29 @@ const TICKERS_SJ = {
   'CAC 40':'^FCHI', 'ES Banks':'SX7E.PA', 'CMS 10 ans':'CMS10',
   'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA',
 };
+
+// Identifiant de graphique par nom d'élément (indices « statiques », taux, macro).
+// Préfixes : fred: (série FRED), hicp: (inflation glissement annuel), scrape:cms (proxy),
+// sinon symbole Yahoo. Le routage est fait côté Worker / serveur de dev.
+const GRAPH_IDS_EXACT = { 'Or': 'GC=F' };
+const GRAPH_IDS_SUB = [
+  ['Euro Stoxx Banks', 'BNKE.PA'],          // ETF proxy de l'indice (Yahoo ne sert pas SX7E)
+  ['MSCI World',       'IWDA.AS'],
+  ['STR',              'fred:ECBESTRVOLWGTTRMDMNRT'],
+  ['OAT',              'fred:IRLTLT01FRM156N'],
+  ['Bund',             'fred:IRLTLT01DEM156N'],
+  ['US 10',            'fred:DGS10'],
+  // CMS 10 ans : graphique désactivé en attendant une vraie source de swap CMS (valeur statique/saisie).
+  ['Inflation',        'hicp:CP0000EZ19M086NEST'],
+  ['Brent',            'BZ=F'],
+  ['Bitcoin',          'BTC-USD'],
+];
+function graphIdPour(nom) {
+  if (!nom) return null;
+  if (GRAPH_IDS_EXACT[nom]) return GRAPH_IDS_EXACT[nom];
+  for (const [k, v] of GRAPH_IDS_SUB) if (nom.indexOf(k) !== -1) return v;
+  return null;
+}
 
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
@@ -141,70 +165,21 @@ const FONDS_EUROS_PERF = {
   ],
 };
 
-// ── Catalogue UC proposées — Performances au 31/12/2025 (1 an, 4 ans, 8 ans) ──
+// ── Catalogue UC suivi (sélection ordonnée : actions → obligataire) ──
+// Cliquables : graphId = symbole Yahoo du fonds (historique de VL). equity = exposition actions indicative.
 const UC_CATALOGUE = [
-  // OPC Obligataires Court Terme & Monétaire
-  { nom:'Palatine Monétaire Court Terme (R)',           isin:'FR0013287315', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,2 %',  perf1an:'+9,8 %',   perf3an:'+8,5 %'   },
-  { nom:'Conservateur Obligations Court Terme (C)',     isin:'FR0011461326', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,8 %',  perf1an:'+7,1 %',   perf3an:'+6,4 %'   },
-  { nom:'TF - Tikehau Short Duration (R)',              isin:'LU1585265066', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,9 %',  perf1an:'+9,4 %',   perf3an:'+8,5 %'   },
-  // OPC Obligataires Long Terme
-  { nom:'DNCA Invest Flex Inflation (B)',               isin:'LU1694790202', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+0,8 %',  perf1an:'+3,2 %',   perf3an:'+15,1 %'  },
-  { nom:'Conservateur Obligations Moyen Terme (C)',     isin:'FR0010564328', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,6 %',  perf1an:'+4 %',     perf3an:'+7,2 %'   },
-  { nom:'ODDO BHF Sust Credit Opportunities (CR-EUR)', isin:'LU1752460292', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,5 %',  perf1an:'+5,2 %',   perf3an:'+12,7 %'  },
-  { nom:'La Française Obligation Carbon Impact (C)',    isin:'FR0010915314', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,7 %',  perf1an:'−1,1 %',   perf3an:'+2,1 %'   },
-  // OPC Obligataires à Échéance
-  { nom:'Conservateur Horizon 2031 (C)',                isin:'FR001400PL02', categorie:'Oblig. à Échéance',     risque:0, perfYtd:'+4 %',    perf1an:'—',        perf3an:'—'        },
-  // OPC Mixtes Obligataires
-  { nom:'Conservateur Diversifié (C)',                  isin:'FR0010564336', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+9,9 %',  perf1an:'+10,8 %',  perf3an:'+16,4 %'  },
-  { nom:'Conservateur Diversifié Réactif (C)',          isin:'FR0010489542', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+7,8 %',  perf1an:'+10 %',    perf3an:'+14,8 %'  },
-  { nom:'Carmignac Patrimoine (A)',                     isin:'FR0010135103', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+12,1 %', perf1an:'+11,2 %',  perf3an:'+21,5 %'  },
-  { nom:'Congrégation Investissement (R)',              isin:'FR001400UAZ4', categorie:'Mixte Obligataire',     risque:0, perfYtd:'—',       perf1an:'—',        perf3an:'—'        },
-  { nom:'Eurose (C)',                                   isin:'FR0007051040', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+7,9 %',  perf1an:'+17 %',    perf3an:'+21,2 %'  },
-  { nom:'DNCA Invest - Convertibles (B)',               isin:'LU0512124107', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+10,2 %', perf1an:'+4,5 %',   perf3an:'+3,3 %'   },
-  { nom:'Conservateur Immo-Or (C)',                     isin:'FR0011199314', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+12,2 %', perf1an:'+5,8 %',   perf3an:'+26,5 %'  },
-  { nom:'Conservateur Rendement Flexible (C)',          isin:'FR0013087152', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+3,4 %',  perf1an:'+15,4 %',  perf3an:'+12,9 %'  },
-  { nom:'Conservateur Reverso (C)',                     isin:'FR0011175652', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+1,6 %',  perf1an:'−22,1 %',  perf3an:'−23,8 %'  },
-  // OPC Actions Françaises
-  { nom:'Centifolia (C)',                               isin:'FR0007076930', categorie:'Actions FR',            risque:0, perfYtd:'+20 %',   perf1an:'+34,9 %',  perf3an:'+32,3 %'  },
-  { nom:'Conservateur Investissement Proximité (C)',    isin:'FR001400U512', categorie:'Actions FR',            risque:0, perfYtd:'—',       perf1an:'—',        perf3an:'—'        },
-  { nom:'Palatine France Small Cap (I)',                isin:'FR0000978439', categorie:'Actions FR',            risque:0, perfYtd:'+18,1 %', perf1an:'−10,7 %',  perf3an:'+13 %'    },
-  // OPC Actions Europe
-  { nom:'Conservateur Actions Euro (C)',                isin:'FR0014008EI2', categorie:'Actions Europe',        risque:0, perfYtd:'+18,9 %', perf1an:'—',        perf3an:'—'        },
-  { nom:'Conservateur Actions Flexibles (C)',           isin:'FR0010038257', categorie:'Actions Europe',        risque:0, perfYtd:'+16,9 %', perf1an:'+12 %',    perf3an:'+29,9 %'  },
-  { nom:'Conservateur Emploi Durable (C)',              isin:'FR0010038257', categorie:'Actions Europe',        risque:0, perfYtd:'+5,9 %',  perf1an:'+12,5 %',  perf3an:'+45,3 %'  },
-  { nom:'DNCA Invest SRI Norden Europe (A)',            isin:'LU1490785091', categorie:'Actions Europe',        risque:0, perfYtd:'−6 %',    perf1an:'−23,7 %',  perf3an:'+66,7 %'  },
-  { nom:'Moneta Multi Caps (C)',                        isin:'FR0010298596', categorie:'Actions Europe',        risque:0, perfYtd:'+26,2 %', perf1an:'+19,8 %',  perf3an:'+63,2 %'  },
-  { nom:'ODDO BHF Immobilier (CR-EUR)',                 isin:'FR0000989915', categorie:'Actions Europe',        risque:0, perfYtd:'+7,4 %',  perf1an:'−17,4 %',  perf3an:'−8,7 %'   },
-  { nom:'ODDO BHF Avenir (CR-EUR)',                     isin:'FR0000989899', categorie:'Actions Europe',        risque:0, perfYtd:'+5 %',    perf1an:'−10 %',    perf3an:'+15,9 %'  },
-  { nom:'OFI RS Croissance Durable et Solidaire (C)',   isin:'FR0000983819', categorie:'Actions Europe',        risque:0, perfYtd:'+15,8 %', perf1an:'+23,6 %',  perf3an:'+65,4 %'  },
-  // OPC Actions Internationales
-  { nom:'Candriam Equities L Biotech (C)',              isin:'LU1120766388', categorie:'Actions Monde',         risque:0, perfYtd:'+22,1 %', perf1an:'+45 %',    perf3an:'+112,3 %' },
-  { nom:'Comgest Renaissance Europe (C)',               isin:'FR0000295230', categorie:'Actions Monde',         risque:0, perfYtd:'−7,3 %',  perf1an:'−10,3 %',  perf3an:'+68,3 %'  },
-  { nom:'CPR Global Silver Age (E)',                    isin:'FR0012844140', categorie:'Actions Monde',         risque:0, perfYtd:'−6 %',    perf1an:'−4,2 %',   perf3an:'+32 %'    },
-  { nom:'CPR Invest - Food For Gene (A)',               isin:'LU1653748860', categorie:'Actions Monde',         risque:0, perfYtd:'−12,2 %', perf1an:'−19,3 %',  perf3an:'+13,3 %'  },
-  { nom:'CPR Invest Climate Action (A)',                isin:'LU1902443420', categorie:'Actions Monde',         risque:0, perfYtd:'+3,4 %',  perf1an:'+23,1 %',  perf3an:'—'        },
-  { nom:'Echiquier Artificial Intel. (B)',              isin:'LU1819480192', categorie:'Actions Monde',         risque:0, perfYtd:'+11,7 %', perf1an:'+6,1 %',   perf3an:'—'        },
-  { nom:'La Française IP Carbon Impact Glb (R)',        isin:'LU1744646933', categorie:'Actions Monde',         risque:0, perfYtd:'+23,8 %', perf1an:'+14,6 %',  perf3an:'—'        },
-  { nom:'EdR Fund - China (A)',                         isin:'LU1160365091', categorie:'Actions Monde',         risque:0, perfYtd:'+10,6 %', perf1an:'−11,5 %',  perf3an:'−6,9 %'   },
-  { nom:'EdR India (A)',                                isin:'FR0010479931', categorie:'Actions Monde',         risque:0, perfYtd:'−16,2 %', perf1an:'+8,2 %',   perf3an:'+55,2 %'  },
-  { nom:'EdR Fund - US Value (R)',                      isin:'LU1103305709', categorie:'Actions Monde',         risque:0, perfYtd:'−8,1 %',  perf1an:'+15 %',    perf3an:'+38,4 %'  },
-  { nom:'EdR Fund - Big Data (A)',                      isin:'LU1244893696', categorie:'Actions Monde',         risque:0, perfYtd:'+5,3 %',  perf1an:'+35,2 %',  perf3an:'+143,5 %' },
-  { nom:'FF - World Fund (A)',                          isin:'LU1261432659', categorie:'Actions Monde',         risque:0, perfYtd:'+9,3 %',  perf1an:'+28,8 %',  perf3an:'+109,6 %' },
-  { nom:'FF - Sustainable W & W Fund (A)',              isin:'LU1892829828', categorie:'Actions Monde',         risque:0, perfYtd:'−3,2 %',  perf1an:'−11 %',    perf3an:'—'        },
-  { nom:'FF - Sustainable Demographics Fund (A)',       isin:'LU0528228074', categorie:'Actions Monde',         risque:0, perfYtd:'+7,6 %',  perf1an:'+1,9 %',   perf3an:'+65,6 %'  },
-  { nom:'Echiquier Positive Impact Europe (A)',         isin:'FR0010863688', categorie:'Actions Monde',         risque:0, perfYtd:'−2,2 %',  perf1an:'−6,3 %',   perf3an:'+45,5 %'  },
-  { nom:'Magellan (C)',                                 isin:'FR0000292278', categorie:'Actions Monde',         risque:0, perfYtd:'+11,9 %', perf1an:'+0,4 %',   perf3an:'−11,3 %'  },
-  { nom:'Conservateur Actions Monde (C)',               isin:'FR0010564229', categorie:'Actions Monde',         risque:0, perfYtd:'+4,5 %',  perf1an:'+22 %',    perf3an:'+59,4 %'  },
-  { nom:'ODDO BHF Avenir Europe (CR-EUR)',              isin:'FR0000974149', categorie:'Actions Monde',         risque:0, perfYtd:'+10,1 %', perf1an:'−9,1 %',   perf3an:'+22,5 %'  },
-  { nom:'Palatine Planète (R)',                         isin:'FR0010649079', categorie:'Actions Monde',         risque:0, perfYtd:'+11,2 %', perf1an:'+7,5 %',   perf3an:'+61,5 %'  },
-  { nom:'Pictet - Clean Energy Transition (P)',         isin:'LU0280435388', categorie:'Actions Monde',         risque:0, perfYtd:'+9,5 %',  perf1an:'+16,6 %',  perf3an:'+129,3 %' },
-  { nom:'Pictet - Nutrition (P)',                       isin:'LU0366534344', categorie:'Actions Monde',         risque:0, perfYtd:'−14,1 %', perf1an:'−28,2 %',  perf3an:'+3,7 %'   },
-  { nom:'Pictet - Premium Brands (P)',                  isin:'LU0217139020', categorie:'Actions Monde',         risque:0, perfYtd:'−4,5 %',  perf1an:'+0,7 %',   perf3an:'+93,9 %'  },
-  // OPC Flexibles
-  { nom:'CPR Croissance Réactive (P)',                  isin:'FR0010097683', categorie:'Flexible',             risque:0, perfYtd:'+6,2 %',  perf1an:'+9 %',     perf3an:'+18,9 %'  },
-  { nom:'Sextant Grand Large (A)',                      isin:'FR0010286013', categorie:'Flexible',             risque:0, perfYtd:'+2,9 %',  perf1an:'+7,6 %',   perf3an:'+9,8 %'   },
-  { nom:'R-co Valor (C)',                               isin:'FR0011253624', categorie:'Flexible',             risque:0, perfYtd:'+16,2 %', perf1an:'+40,9 %',  perf3an:'+89,3 %'  },
-  { nom:'Tikehau International Cross Assets (R)',       isin:'LU2147879543', categorie:'Flexible',             risque:0, perfYtd:'+5 %',    perf1an:'+9,3 %',   perf3an:'+23,1 %'  },
+  { rang:1,  nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F' },
+  { rang:2,  nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F' },
+  { rang:3,  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:null          },
+  { rang:4,  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F' },
+  { rang:5,  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F' },
+  { rang:6,  nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F' },
+  { rang:7,  nom:'Comgest Renaissance Europe C',         isin:'FR0000295230', categorie:'Actions Europe',       srri:5, equity:100, graphId:'0P00000PM8.F' },
+  { rang:8,  nom:'Fidelity World Fund A-ACC-EUR',        isin:'LU1261432659', categorie:'Actions Monde',        srri:5, equity:100, graphId:'0P00016FY4.F' },
+  { rang:9,  nom:'Conservateur Actions Flexibles C',     isin:'FR0013256930', categorie:'Mixte / Flexible',     srri:3, equity:55,  graphId:'0P0001HI3U.F' },
+  { rang:10, nom:'Conservateur Diversifié Réactif C',    isin:'FR0010489542', categorie:'Mixte obligataire',    srri:3, equity:25,  graphId:'0P0000JZWP.F' },
+  { rang:11, nom:'Conservateur Rendement Flexible C',    isin:'FR0013087152', categorie:'Obligataire flexible', srri:2, equity:20,  graphId:'0P00019OMO.F' },
+  { rang:12, nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F' },
 ];
 
 // ── Contrats assurance-vie & UC ──

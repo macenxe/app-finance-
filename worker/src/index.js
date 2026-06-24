@@ -64,6 +64,72 @@ async function historiqueYahoo(ticker, periode) {
   };
 }
 
+// ── Historique des taux & inflation via FRED ──
+// L'identifiant d'historique porte un préfixe : fred:SERIE, hicp:SERIE, scrape:cms,
+// sinon c'est un symbole Yahoo (cours). La clé FRED vient du secret env.FRED_API_KEY.
+const FRED_PROXY_CMS = 'IRLTLT01EZM156N'; // rendement 10 ans zone euro (proxy du swap CMS, mensuel)
+const JOURS_PERIODE = { '1j': 3, '1s': 10, '1m': 35, '6m': 190, ytd: null, '1a': 380, '3a': 1100, '5a': 1850, '10a': 3700 };
+
+function debutPeriode(periode) {
+  if (periode === 'ytd') return new Date(Date.UTC(new Date().getUTCFullYear(), 0, 1));
+  const j = JOURS_PERIODE[periode] ?? 190;
+  return new Date(Date.now() - j * 86400000);
+}
+const isoJour = (d) => d.toISOString().slice(0, 10);
+
+async function fredObservations(series, key, start) {
+  const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${series}&api_key=${key}&file_type=json&sort_order=asc&observation_start=${start}`;
+  const r = await fetch(url, { cf: { cacheTtl: 3600 } });
+  if (!r.ok) return null;
+  const obs = (await r.json())?.observations;
+  return Array.isArray(obs) ? obs : null;
+}
+
+async function historiqueFred(series, periode, key) {
+  if (!key) return null;
+  const obs = await fredObservations(series, key, isoJour(debutPeriode(periode)));
+  if (!obs) return null;
+  const points = [];
+  for (const o of obs) {
+    if (o.value === '.' || o.value == null) continue;
+    const c = parseFloat(o.value);
+    if (isFinite(c)) points.push({ t: Math.floor(Date.parse(o.date + 'T00:00:00Z') / 1000), c });
+  }
+  if (points.length < 2) return null;
+  return { ticker: 'fred:' + series, periode, points, devise: '%' };
+}
+
+// Inflation : la série HICP est un indice de niveau → on calcule le glissement annuel (12 mois).
+async function historiqueHicp(series, periode, key) {
+  if (!key) return null;
+  const visible = debutPeriode(periode).getTime();
+  const obs = await fredObservations(series, key, isoJour(new Date(visible - 400 * 86400000)));
+  if (!obs) return null;
+  const vals = obs.filter(o => o.value !== '.' && o.value != null)
+    .map(o => ({ t: Date.parse(o.date + 'T00:00:00Z'), v: parseFloat(o.value) }));
+  const points = [];
+  for (let i = 12; i < vals.length; i++) {
+    if (vals[i].t < visible) continue;
+    points.push({ t: Math.floor(vals[i].t / 1000), c: (vals[i].v / vals[i - 12].v - 1) * 100 });
+  }
+  if (points.length < 2) return null;
+  return { ticker: 'hicp:' + series, periode, points, devise: '%' };
+}
+
+// CMS 10 ans EUR : pas de source gratuite fiable pour le swap → proxy rendement 10 ans zone euro.
+async function historiqueCms(periode, key) {
+  const h = await historiqueFred(FRED_PROXY_CMS, periode, key);
+  if (h) h.proxy = 'Proxy : rendement 10 ans zone euro';
+  return h;
+}
+
+function historique(id, periode, env) {
+  if (id.startsWith('fred:')) return historiqueFred(id.slice(5), periode, env?.FRED_API_KEY);
+  if (id.startsWith('hicp:')) return historiqueHicp(id.slice(5), periode, env?.FRED_API_KEY);
+  if (id === 'scrape:cms')    return historiqueCms(periode, env?.FRED_API_KEY);
+  return historiqueYahoo(id, periode);
+}
+
 // Reprend exactement la logique de back/src/calc.ts
 function calculerIndicateurs(p, cours) {
   const niveau = cours.dernierCours;
@@ -86,7 +152,7 @@ function calculerIndicateurs(p, cours) {
 }
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     // Pré-vol CORS (par sécurité ; les requêtes GET simples n'en déclenchent pas).
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: { ...CORS, 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
@@ -97,7 +163,7 @@ export default {
     const hist = u.searchParams.get('history');
     if (hist) {
       try {
-        const data = await historiqueYahoo(hist, u.searchParams.get('period') || '6m');
+        const data = await historique(hist, u.searchParams.get('period') || '6m', env);
         if (!data) return new Response(JSON.stringify({ error: 'no data' }), { status: 404, headers: JSON_HEADERS });
         return new Response(JSON.stringify(data), { headers: JSON_HEADERS });
       } catch (e) {

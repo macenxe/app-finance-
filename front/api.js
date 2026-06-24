@@ -198,5 +198,14 @@ const AppAPI = (() => {
     return r.json();
   }
 
-  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER };
+  // URL de l'historique d'un graphique. En local (preview/back), le serveur de dev
+  // sert /__history (FRED inclus) ; en production, c'est le Worker Cloudflare.
+  function historyUrl(id, period) {
+    const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(period)}`;
+    const h = location.hostname;
+    if (h === 'localhost' || h === '127.0.0.1') return `${location.origin}/__history?${q}`;
+    return `${WORKER}?${q}`;
+  }
+
+  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl };
 })();

@@ -11,6 +11,8 @@ dist/
 
 # Variables d'environnement (clés API, etc.)
 .env
+.claude/dev-secrets.json
+worker/.dev.vars
 
 # Déploiement Vercel
 .vercel
