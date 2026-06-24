@@ -1,0 +1,53 @@
+name: Snapshot après changement de produits
+
+# Se déclenche uniquement quand la définition des produits/sous-jacents change
+# (plus de tâche toutes les 30 min : les cours en direct viennent du Worker).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'back/src/produits.ts'
+      - 'back/src/indices.ts'
+  workflow_dispatch:               # bouton de déclenchement manuel
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: back/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: back
+        run: npm ci
+
+      - name: Générer le snapshot
+        working-directory: back
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: npm run snapshot
+
+      - name: Publier si le snapshot a changé
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add front/data/snapshot.json
+          if git diff --staged --quiet; then
+            echo "Aucun changement de données."
+          else
+            git commit -m "chore: snapshot après mise à jour des produits"
+            git pull --rebase --autostash origin main
+            git push
+          fi
