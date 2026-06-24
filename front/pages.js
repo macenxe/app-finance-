@@ -1,6 +1,13 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
+function barrierCouleur(niveauPct, barrierePct) {
+  const diff = niveauPct - barrierePct;
+  if (diff >= 5)  return 'green';
+  if (diff > -5)  return 'orange';
+  return 'red';
+}
+
 function abregerMois(nom) {
   const m = {
     Janvier:'01', Février:'02', Mars:'03', Avril:'04', Mai:'05', Juin:'06',
@@ -208,29 +215,30 @@ function renderProduits(produits, state) {
         <div class="products-table">
           <div class="products-table-header">
             <span>Nom commercial</span>
+            <span>Prochaine const.</span>
             <span class="col-right">Coupon</span>
             <span class="col-landscape col-right">Strike</span>
-            <span class="col-landscape col-right">B.Auto</span>
-            <span class="col-landscape col-right">B.Cpn</span>
-            <span>Prochaine const.</span>
-            <span class="col-center">Coupon</span>
-            <span class="col-center">Rappel</span>
+            <span class="col-landscape col-center">B. Coupon</span>
+            <span class="col-landscape col-center">B. Autocall</span>
             <span>Statut</span>
             <span></span>
           </div>
           ${rows.map(r => {
-            const couponOk = r.k !== 'red';
-            const rappelOk = r.k === 'green';
+            const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
+              ? (r.niveauNum / r.strikeNum * 100) : null;
+            const barrCell = (val, pct) => {
+              if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
+              const c = (niveauPct != null && pct != null) ? barrierCouleur(niveauPct, pct) : r.k;
+              return `<span class="barrier-badge ${c}">${val}</span>`;
+            };
             return `
           <div class="products-table-row">
             <span class="col-nom">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
+            <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-right">${r.coupon}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.bAuto || '—'}</span>
-            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.bCoupon || '—'}</span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
-            <span class="col-center"><span class="ind-ok${couponOk ? ' yes' : ' no'}" title="${couponOk ? 'Coupon en cours' : 'Coupon à risque'}">€</span></span>
-            <span class="col-center"><span class="ind-ok${rappelOk ? ' yes' : ' no'}" title="${rappelOk ? 'Zone de rappel probable' : 'Hors zone de rappel'}">↩</span></span>
+            <span class="col-landscape col-center">${barrCell(r.bCoupon, r.bCouponNum)}</span>
+            <span class="col-landscape col-center">${barrCell(r.bAuto, r.bAutoNum)}</span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
           </div>`;
