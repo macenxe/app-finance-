@@ -626,9 +626,18 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
   /* Tableau : toutes les 10 colonnes */
   .col-landscape { display: revert; }
+  .page-body { padding: 10px 14px 24px; }
   .products-table-header, .products-table-row {
-    grid-template-columns: 1fr auto auto auto auto auto 36px 36px auto 40px;
+    grid-template-columns: minmax(105px,1.5fr) 52px 62px 50px 46px minmax(82px,1fr) 32px 32px 114px 44px;
+    column-gap: 14px;
   }
+  /* Alignement des en-têtes sur les données */
+  .products-table-header > span:nth-child(2) { text-align: right; }
+  .products-table-header > span:nth-child(3) { text-align: right; }
+  .products-table-header > span:nth-child(4) { text-align: right; }
+  .products-table-header > span:nth-child(5) { text-align: right; }
+  .products-table-header > span:nth-child(6) { text-align: center; }
+  .products-table-header > span:nth-child(9) { text-align: center; }
   /* Texte des en-têtes icônes masqué (€ et ↩ se suffisent) */
   .products-table-header > span:nth-child(7),
   .products-table-header > span:nth-child(8) { font-size: 0; }
