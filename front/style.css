@@ -621,6 +621,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
   /* ── Chips enroulables ── */
   .veille-tags, .filter-chips { flex-wrap: wrap; }
+
+  /* ── Index cards compactes (tableau de bord) ── */
+  .index-card { padding: 8px 10px; }
+  .index-val  { font-size: 15px; margin: 2px 0 1px; }
+  .index-name { font-size: 10px; }
+  .index-var  { font-size: 10px; }
 }
 
 /* ── Paysage mobile : sidebar overlay + tableau toutes colonnes ── */
