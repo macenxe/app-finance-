@@ -218,9 +218,9 @@ function renderProduits(produits, state) {
             <span>Prochaine const.</span>
             <span class="col-right">Coupon</span>
             <span class="col-landscape col-right">Strike</span>
-            <span class="col-landscape col-center">B. Coupon</span>
-            <span class="col-landscape col-center">B. Autocall</span>
-            <span>Statut</span>
+            <span class="col-center">B. Coupon</span>
+            <span class="col-center">B. Autocall</span>
+            <span class="col-landscape">Statut</span>
             <span></span>
           </div>
           ${rows.map(r => {
@@ -237,9 +237,9 @@ function renderProduits(produits, state) {
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
             <span class="tnum col-right">${r.coupon}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-landscape col-center">${barrCell(r.bCoupon, r.bCouponNum)}</span>
-            <span class="col-landscape col-center">${barrCell(r.bAuto, r.bAutoNum)}</span>
-            <span><span class="badge ${r.k}">${r.statut}</span></span>
+            <span class="col-center">${barrCell(r.bCoupon, r.bCouponNum)}</span>
+            <span class="col-center">${barrCell(r.bAuto, r.bAutoNum)}</span>
+            <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
           </div>`;
           }).join('')}
