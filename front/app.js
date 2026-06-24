@@ -5,7 +5,7 @@ const App = (() => {
   const NAV = [
     { key: 'dash',     label: 'Tableau de bord'      },
     { key: 'prod',     label: 'Autocalls'             },
-    { key: 'contrats', label: 'Fonds € & UC'           },
+    { key: 'contrats', label: 'F€ & UC'               },
     { key: 'alloc',    label: 'Allocation & Marchés' },
     { key: 'veille',   label: 'Veille économique'    },
   ];

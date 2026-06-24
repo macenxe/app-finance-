@@ -593,7 +593,7 @@ function renderContrats() {
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">Fonds € &amp; UC</div>
+        <div class="page-title">F€ &amp; UC</div>
         <div class="page-sub">Fonds en euros · Unités de compte · Le Conservateur</div>
       </div>
     </header>
@@ -602,9 +602,9 @@ function renderContrats() {
 
       ${perf ? `
       <!-- ── Fonds en euros ── -->
-      <div class="mb-12">
-        <div class="section-label mb-4">Fonds en euros · Taux ${perf.annee}</div>
-        <div class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</div>
+      <div class="flex-sb mb-12">
+        <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
+        <span class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</span>
       </div>
       <div class="card p-18 mb-24">
         <div class="fe-contrats mb-16">
@@ -621,10 +621,13 @@ function renderContrats() {
           <div class="fe-perf-row${i % 2 === 1 ? ' alt' : ''}">
             <div class="fe-col-uc">${t.label}</div>
             <div class="fe-col-rate tnum fe-rate">${t.inf150}</div>
-            <div class="fe-col-rate tnum fe-rate best">${t.sup150}</div>
+            <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.sup150}</div>
           </div>`).join('')}
         </div>
 
+        <div class="fe-notes">
+          ${perf.notes.map(n => `<div class="fe-note">• ${n}</div>`).join('')}
+        </div>
       </div>` : ''}
 
       <!-- ── Unités de compte ── -->
@@ -642,9 +645,9 @@ function renderContrats() {
           <span>Nom / ISIN</span>
           <span>Catégorie</span>
           <span class="col-right">SRRI</span>
-          <span class="col-right">Perf. YTD</span>
-          <span class="col-right">Perf. 1 an</span>
-          <span class="col-right">Perf. 3 ans</span>
+          <span class="col-right">Perf. 2025</span>
+          <span class="col-right">Perf. 4 ans</span>
+          <span class="col-right">Perf. 8 ans</span>
         </div>
         ${uc.map(u => `
         <div class="uc-cat-row">

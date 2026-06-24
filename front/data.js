@@ -141,9 +141,70 @@ const FONDS_EUROS_PERF = {
   ],
 };
 
-// ── Catalogue UC proposées ──
+// ── Catalogue UC proposées — Performances au 31/12/2025 (1 an, 4 ans, 8 ans) ──
 const UC_CATALOGUE = [
-  { nom: 'À compléter', isin: '—', categorie: 'À renseigner', risque: 0, perfYtd: '—', perf1an: '—', perf3an: '—' },
+  // OPC Obligataires Court Terme & Monétaire
+  { nom:'Palatine Monétaire Court Terme (R)',           isin:'FR0013287315', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,2 %',  perf1an:'+9,8 %',   perf3an:'+8,5 %'   },
+  { nom:'Conservateur Obligations Court Terme (C)',     isin:'FR0011461326', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,8 %',  perf1an:'+7,1 %',   perf3an:'+6,4 %'   },
+  { nom:'TF - Tikehau Short Duration (R)',              isin:'LU1585265066', categorie:'Oblig. CT / Monétaire', risque:0, perfYtd:'+2,9 %',  perf1an:'+9,4 %',   perf3an:'+8,5 %'   },
+  // OPC Obligataires Long Terme
+  { nom:'DNCA Invest Flex Inflation (B)',               isin:'LU1694790202', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+0,8 %',  perf1an:'+3,2 %',   perf3an:'+15,1 %'  },
+  { nom:'Conservateur Obligations Moyen Terme (C)',     isin:'FR0010564328', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,6 %',  perf1an:'+4 %',     perf3an:'+7,2 %'   },
+  { nom:'ODDO BHF Sust Credit Opportunities (CR-EUR)', isin:'LU1752460292', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,5 %',  perf1an:'+5,2 %',   perf3an:'+12,7 %'  },
+  { nom:'La Française Obligation Carbon Impact (C)',    isin:'FR0010915314', categorie:'Oblig. Long Terme',     risque:0, perfYtd:'+2,7 %',  perf1an:'−1,1 %',   perf3an:'+2,1 %'   },
+  // OPC Obligataires à Échéance
+  { nom:'Conservateur Horizon 2031 (C)',                isin:'FR001400PL02', categorie:'Oblig. à Échéance',     risque:0, perfYtd:'+4 %',    perf1an:'—',        perf3an:'—'        },
+  // OPC Mixtes Obligataires
+  { nom:'Conservateur Diversifié (C)',                  isin:'FR0010564336', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+9,9 %',  perf1an:'+10,8 %',  perf3an:'+16,4 %'  },
+  { nom:'Conservateur Diversifié Réactif (C)',          isin:'FR0010489542', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+7,8 %',  perf1an:'+10 %',    perf3an:'+14,8 %'  },
+  { nom:'Carmignac Patrimoine (A)',                     isin:'FR0010135103', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+12,1 %', perf1an:'+11,2 %',  perf3an:'+21,5 %'  },
+  { nom:'Congrégation Investissement (R)',              isin:'FR001400UAZ4', categorie:'Mixte Obligataire',     risque:0, perfYtd:'—',       perf1an:'—',        perf3an:'—'        },
+  { nom:'Eurose (C)',                                   isin:'FR0007051040', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+7,9 %',  perf1an:'+17 %',    perf3an:'+21,2 %'  },
+  { nom:'DNCA Invest - Convertibles (B)',               isin:'LU0512124107', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+10,2 %', perf1an:'+4,5 %',   perf3an:'+3,3 %'   },
+  { nom:'Conservateur Immo-Or (C)',                     isin:'FR0011199314', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+12,2 %', perf1an:'+5,8 %',   perf3an:'+26,5 %'  },
+  { nom:'Conservateur Rendement Flexible (C)',          isin:'FR0013087152', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+3,4 %',  perf1an:'+15,4 %',  perf3an:'+12,9 %'  },
+  { nom:'Conservateur Reverso (C)',                     isin:'FR0011175652', categorie:'Mixte Obligataire',     risque:0, perfYtd:'+1,6 %',  perf1an:'−22,1 %',  perf3an:'−23,8 %'  },
+  // OPC Actions Françaises
+  { nom:'Centifolia (C)',                               isin:'FR0007076930', categorie:'Actions FR',            risque:0, perfYtd:'+20 %',   perf1an:'+34,9 %',  perf3an:'+32,3 %'  },
+  { nom:'Conservateur Investissement Proximité (C)',    isin:'FR001400U512', categorie:'Actions FR',            risque:0, perfYtd:'—',       perf1an:'—',        perf3an:'—'        },
+  { nom:'Palatine France Small Cap (I)',                isin:'FR0000978439', categorie:'Actions FR',            risque:0, perfYtd:'+18,1 %', perf1an:'−10,7 %',  perf3an:'+13 %'    },
+  // OPC Actions Europe
+  { nom:'Conservateur Actions Euro (C)',                isin:'FR0014008EI2', categorie:'Actions Europe',        risque:0, perfYtd:'+18,9 %', perf1an:'—',        perf3an:'—'        },
+  { nom:'Conservateur Actions Flexibles (C)',           isin:'FR0010038257', categorie:'Actions Europe',        risque:0, perfYtd:'+16,9 %', perf1an:'+12 %',    perf3an:'+29,9 %'  },
+  { nom:'Conservateur Emploi Durable (C)',              isin:'FR0010038257', categorie:'Actions Europe',        risque:0, perfYtd:'+5,9 %',  perf1an:'+12,5 %',  perf3an:'+45,3 %'  },
+  { nom:'DNCA Invest SRI Norden Europe (A)',            isin:'LU1490785091', categorie:'Actions Europe',        risque:0, perfYtd:'−6 %',    perf1an:'−23,7 %',  perf3an:'+66,7 %'  },
+  { nom:'Moneta Multi Caps (C)',                        isin:'FR0010298596', categorie:'Actions Europe',        risque:0, perfYtd:'+26,2 %', perf1an:'+19,8 %',  perf3an:'+63,2 %'  },
+  { nom:'ODDO BHF Immobilier (CR-EUR)',                 isin:'FR0000989915', categorie:'Actions Europe',        risque:0, perfYtd:'+7,4 %',  perf1an:'−17,4 %',  perf3an:'−8,7 %'   },
+  { nom:'ODDO BHF Avenir (CR-EUR)',                     isin:'FR0000989899', categorie:'Actions Europe',        risque:0, perfYtd:'+5 %',    perf1an:'−10 %',    perf3an:'+15,9 %'  },
+  { nom:'OFI RS Croissance Durable et Solidaire (C)',   isin:'FR0000983819', categorie:'Actions Europe',        risque:0, perfYtd:'+15,8 %', perf1an:'+23,6 %',  perf3an:'+65,4 %'  },
+  // OPC Actions Internationales
+  { nom:'Candriam Equities L Biotech (C)',              isin:'LU1120766388', categorie:'Actions Monde',         risque:0, perfYtd:'+22,1 %', perf1an:'+45 %',    perf3an:'+112,3 %' },
+  { nom:'Comgest Renaissance Europe (C)',               isin:'FR0000295230', categorie:'Actions Monde',         risque:0, perfYtd:'−7,3 %',  perf1an:'−10,3 %',  perf3an:'+68,3 %'  },
+  { nom:'CPR Global Silver Age (E)',                    isin:'FR0012844140', categorie:'Actions Monde',         risque:0, perfYtd:'−6 %',    perf1an:'−4,2 %',   perf3an:'+32 %'    },
+  { nom:'CPR Invest - Food For Gene (A)',               isin:'LU1653748860', categorie:'Actions Monde',         risque:0, perfYtd:'−12,2 %', perf1an:'−19,3 %',  perf3an:'+13,3 %'  },
+  { nom:'CPR Invest Climate Action (A)',                isin:'LU1902443420', categorie:'Actions Monde',         risque:0, perfYtd:'+3,4 %',  perf1an:'+23,1 %',  perf3an:'—'        },
+  { nom:'Echiquier Artificial Intel. (B)',              isin:'LU1819480192', categorie:'Actions Monde',         risque:0, perfYtd:'+11,7 %', perf1an:'+6,1 %',   perf3an:'—'        },
+  { nom:'La Française IP Carbon Impact Glb (R)',        isin:'LU1744646933', categorie:'Actions Monde',         risque:0, perfYtd:'+23,8 %', perf1an:'+14,6 %',  perf3an:'—'        },
+  { nom:'EdR Fund - China (A)',                         isin:'LU1160365091', categorie:'Actions Monde',         risque:0, perfYtd:'+10,6 %', perf1an:'−11,5 %',  perf3an:'−6,9 %'   },
+  { nom:'EdR India (A)',                                isin:'FR0010479931', categorie:'Actions Monde',         risque:0, perfYtd:'−16,2 %', perf1an:'+8,2 %',   perf3an:'+55,2 %'  },
+  { nom:'EdR Fund - US Value (R)',                      isin:'LU1103305709', categorie:'Actions Monde',         risque:0, perfYtd:'−8,1 %',  perf1an:'+15 %',    perf3an:'+38,4 %'  },
+  { nom:'EdR Fund - Big Data (A)',                      isin:'LU1244893696', categorie:'Actions Monde',         risque:0, perfYtd:'+5,3 %',  perf1an:'+35,2 %',  perf3an:'+143,5 %' },
+  { nom:'FF - World Fund (A)',                          isin:'LU1261432659', categorie:'Actions Monde',         risque:0, perfYtd:'+9,3 %',  perf1an:'+28,8 %',  perf3an:'+109,6 %' },
+  { nom:'FF - Sustainable W & W Fund (A)',              isin:'LU1892829828', categorie:'Actions Monde',         risque:0, perfYtd:'−3,2 %',  perf1an:'−11 %',    perf3an:'—'        },
+  { nom:'FF - Sustainable Demographics Fund (A)',       isin:'LU0528228074', categorie:'Actions Monde',         risque:0, perfYtd:'+7,6 %',  perf1an:'+1,9 %',   perf3an:'+65,6 %'  },
+  { nom:'Echiquier Positive Impact Europe (A)',         isin:'FR0010863688', categorie:'Actions Monde',         risque:0, perfYtd:'−2,2 %',  perf1an:'−6,3 %',   perf3an:'+45,5 %'  },
+  { nom:'Magellan (C)',                                 isin:'FR0000292278', categorie:'Actions Monde',         risque:0, perfYtd:'+11,9 %', perf1an:'+0,4 %',   perf3an:'−11,3 %'  },
+  { nom:'Conservateur Actions Monde (C)',               isin:'FR0010564229', categorie:'Actions Monde',         risque:0, perfYtd:'+4,5 %',  perf1an:'+22 %',    perf3an:'+59,4 %'  },
+  { nom:'ODDO BHF Avenir Europe (CR-EUR)',              isin:'FR0000974149', categorie:'Actions Monde',         risque:0, perfYtd:'+10,1 %', perf1an:'−9,1 %',   perf3an:'+22,5 %'  },
+  { nom:'Palatine Planète (R)',                         isin:'FR0010649079', categorie:'Actions Monde',         risque:0, perfYtd:'+11,2 %', perf1an:'+7,5 %',   perf3an:'+61,5 %'  },
+  { nom:'Pictet - Clean Energy Transition (P)',         isin:'LU0280435388', categorie:'Actions Monde',         risque:0, perfYtd:'+9,5 %',  perf1an:'+16,6 %',  perf3an:'+129,3 %' },
+  { nom:'Pictet - Nutrition (P)',                       isin:'LU0366534344', categorie:'Actions Monde',         risque:0, perfYtd:'−14,1 %', perf1an:'−28,2 %',  perf3an:'+3,7 %'   },
+  { nom:'Pictet - Premium Brands (P)',                  isin:'LU0217139020', categorie:'Actions Monde',         risque:0, perfYtd:'−4,5 %',  perf1an:'+0,7 %',   perf3an:'+93,9 %'  },
+  // OPC Flexibles
+  { nom:'CPR Croissance Réactive (P)',                  isin:'FR0010097683', categorie:'Flexible',             risque:0, perfYtd:'+6,2 %',  perf1an:'+9 %',     perf3an:'+18,9 %'  },
+  { nom:'Sextant Grand Large (A)',                      isin:'FR0010286013', categorie:'Flexible',             risque:0, perfYtd:'+2,9 %',  perf1an:'+7,6 %',   perf3an:'+9,8 %'   },
+  { nom:'R-co Valor (C)',                               isin:'FR0011253624', categorie:'Flexible',             risque:0, perfYtd:'+16,2 %', perf1an:'+40,9 %',  perf3an:'+89,3 %'  },
+  { nom:'Tikehau International Cross Assets (R)',       isin:'LU2147879543', categorie:'Flexible',             risque:0, perfYtd:'+5 %',    perf1an:'+9,3 %',   perf3an:'+23,1 %'  },
 ];
 
 // ── Contrats assurance-vie & UC ──

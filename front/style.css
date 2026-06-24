@@ -597,7 +597,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
   /* ── Grilles empilées verticalement (aucun défilement horizontal) ── */
   .grid-5 { grid-template-columns: repeat(2, 1fr); }
-  .grid-2, .grid-2-narrow, .grid-3, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-2-narrow, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .taux-grid, .macro-grid, .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
