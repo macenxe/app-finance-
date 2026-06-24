@@ -27,7 +27,7 @@ const INDICES_MARCHE = [
   { nom:'S&P 500',          ticker:'^GSPC',     valeur:'5 487,12', var:'+0,18 %', hausse:true  },
   { nom:'Nasdaq',           ticker:'^IXIC',     valeur:'26 166,6', var:'+0,55 %', hausse:true  },
   { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
-  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true  },
+  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true, statique:true },
 ];
 
 const TAUX = [
@@ -86,20 +86,76 @@ const TICKERS_SJ = {
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });
+  const parseNum = s => parseFloat((s || '').replace(/[^0-9,.]/g, '').replace(',', '.'));
   return produits.map(p => {
+    // Zone d'autocall calculée dynamiquement (ne pas se fier au champ figé)
+    let zoneAutocall;
+    if (p.type === 'equity' && p.strikeNum && p.niveauNum) {
+      const bAuto = parseNum(p.bAuto);
+      zoneAutocall = !isNaN(bAuto) ? (p.niveauNum >= p.strikeNum * bAuto / 100 ? 'OUI' : 'NON') : p.zoneAutocall;
+    } else if (p.type === 'cms') {
+      const niv = parseNum(p.niveau), bAuto = parseNum(p.bAuto);
+      zoneAutocall = (!isNaN(niv) && !isNaN(bAuto)) ? (niv >= bAuto ? 'OUI' : 'NON') : p.zoneAutocall;
+    } else {
+      zoneAutocall = p.zoneAutocall;
+    }
     let k;
-    if (p.zoneAutocall === 'OUI') k = 'green';
+    if (zoneAutocall === 'OUI') k = 'green';
     else if (p.type === 'equity' && (p.niveauNum / p.strikeNum) < 0.75) k = 'red';
     else k = 'orange';
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
     const statuts = { green:'Rappel probable', orange:'Surveillance', red:'Risque' };
-    const bAutoNum   = parseFloat(p.bAuto);
-    const bCouponNum = parseFloat(p.bCoupon);
+    const bAutoNum = parseNum(p.bAuto), bCouponNum = parseNum(p.bCoupon);
     return {
-      ...p, k, statut: statuts[k], pct,
+      ...p, zoneAutocall, k, statut: statuts[k], pct,
       ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
       bAutoNum:   isNaN(bAutoNum)   ? null : bAutoNum,
       bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,
     };
   });
 }
+
+// ── Contrats assurance-vie & UC ──
+// Structure : un objet par contrat, avec fonds euros + liste des UC.
+// Mettre à jour manuellement les taux et performances.
+const CONTRATS = [
+  {
+    id: 'c1',
+    nom: 'Contrat 1',
+    assureur: 'À compléter',
+    ref: 'REF-001',
+    ouverture: '20XX',
+    fondsEuros: {
+      nom: 'Fonds en euros',
+      taux2024: '—',
+      taux2023: '—',
+      part: '— %',
+    },
+    uc: [
+      {
+        nom: 'À compléter',
+        isin: '—',
+        categorie: 'À renseigner',
+        risque: 0,
+        perfYtd: '—',
+        perfAn:  '—',
+        part:    '— %',
+        hausse:  null,
+      },
+    ],
+  },
+  {
+    id: 'c2',
+    nom: 'Contrat 2',
+    assureur: 'À compléter',
+    ref: 'REF-002',
+    ouverture: '20XX',
+    fondsEuros: {
+      nom: 'Fonds en euros',
+      taux2024: '—',
+      taux2023: '—',
+      part: '— %',
+    },
+    uc: [],
+  },
+];

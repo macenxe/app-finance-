@@ -3,13 +3,20 @@
 
 function renderDashboard(indices, produits, taux) {
   taux = taux || TAUX;
-  // Priorité d'affichage : risque > surveillance > rappel probable
-  const top6 = [...produits]
-    .sort((a, b) => {
-      const ord = { red: 0, orange: 1, green: 2 };
-      return ord[a.k] - ord[b.k];
-    })
-    .slice(0, 6);
+
+  // Prochaines dates clés : constatations à venir, triées par date croissante
+  const parseConstat = (str) => {
+    const m = str && str.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!m) return null;
+    return new Date(+m[3], +m[2] - 1, +m[1]);
+  };
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const fmtDateCle = (d) => d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+  const prochainsDates = produits
+    .map(p => { const d = parseConstat(p.constat); return d && d >= today ? { p, d, jours: Math.ceil((d - today) / 86400000) } : null; })
+    .filter(x => x && x.jours <= 60)
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 12);
 
   const fmtHeure = (iso) => {
     if (!iso) return '';
@@ -46,7 +53,7 @@ function renderDashboard(indices, produits, taux) {
       <div class="grid-5 mb-24">
         ${indices.map(i => `
         <div class="card index-card${i.ticker ? ' index-clic' : ''}"${i.ticker ? ` onclick="App.ouvrirGraphique('${i.ticker}','${i.nom}')"` : ''}>
-          <div class="index-name">${i.nom}</div>
+          <div class="index-name">${i.nom}${i.statique ? ' <span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span>' : ''}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
             ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
@@ -84,49 +91,46 @@ function renderDashboard(indices, produits, taux) {
         </div>
       </div>
 
-      <!-- Alertes + Autocalls + Événements -->
-      <div class="grid-dash-bottom">
-        <div style="display:flex;flex-direction:column;gap:18px;">
-          <div class="card p-18">
-            <div class="card-title mb-12">Alertes du jour</div>
-            ${ALERTES.map(a => `
-            <div class="alert-item">
-              <span class="alert-dot" style="background:${a.couleur};"></span>
-              <div class="alert-text">${a.texte}</div>
-            </div>`).join('')}
-          </div>
-          <div class="card p-18">
-            <div class="card-title mb-12">Prochains événements macro</div>
-            ${EVENEMENTS.map(e => `
-            <div class="event-item">
-              <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
-              <div class="event-label">${e.label}</div>
-            </div>`).join('')}
-          </div>
-        </div>
-
+      <!-- Alertes + Événements côte à côte -->
+      <div class="grid-2 mb-24">
         <div class="card p-18">
-          <div class="flex-sb mb-12">
-            <div class="card-title">Produits autocall à surveiller</div>
-            <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
-          </div>
-          <div class="autocall-table">
-            <div class="autocall-header">
-              <span>Produit</span><span>Sous-jacent</span>
-              <span>% strike</span>
-              <span>Prochaine const.</span>
-              <span>Statut</span>
-            </div>
-            ${top6.map(p => `
-            <div class="autocall-row">
-              <span style="color:#16304f;font-weight:500;">${p.nom}</span>
-              <span style="color:#6b6e73;">${p.sj}</span>
-              <span class="tnum" style="font-weight:600;color:${p.k==='red'?'#9a3535':p.k==='orange'?'#b06a1a':'#6b6e73'};">${p.pct}</span>
-              <span class="tnum" style="color:#6b6e73;">${p.constat}</span>
-              <span><span class="badge ${p.k}">${p.statut}</span></span>
-            </div>`).join('')}
-          </div>
+          <div class="card-title mb-12">Alertes du jour</div>
+          ${ALERTES.map(a => `
+          <div class="alert-item">
+            <span class="alert-dot" style="background:${a.couleur};"></span>
+            <div class="alert-text">${a.texte}</div>
+          </div>`).join('')}
         </div>
+        <div class="card p-18">
+          <div class="card-title mb-12">Prochains événements macro</div>
+          ${EVENEMENTS.map(e => `
+          <div class="event-item">
+            <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
+            <div class="event-label">${e.label}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+
+      <!-- Prochaines dates clés — pleine largeur -->
+      <div class="card p-18">
+        <div class="flex-sb mb-12">
+          <div class="card-title">Prochaines dates clés <span style="font-size:11px;font-weight:400;color:#9a8f7a;margin-left:6px;">· 60 jours</span></div>
+          <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
+        </div>
+        ${prochainsDates.length === 0
+          ? `<div style="font-size:12.5px;color:#9a8f7a;padding:8px 0;">Aucune constatation dans les 60 prochains jours.</div>`
+          : `<div class="dates-cles-table">
+          <div class="dates-cles-header">
+            <span>Date</span><span class="col-right">Dans</span><span>Produit</span><span class="col-right">Statut</span>
+          </div>
+          ${prochainsDates.map(({ p, d, jours }) => `
+          <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
+            <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
+            <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
+            <span class="dates-cles-nom">${p.nom}</span>
+            <span class="col-right"><span class="badge ${p.k}">${p.statut}</span></span>
+          </div>`).join('')}
+        </div>`}
       </div>
     </div>
   </div>`;
@@ -191,34 +195,34 @@ function renderProduits(produits, state) {
         </div>
       </div>
 
-      <div class="products-table-wrap scroll">
+      <div class="products-table-wrap">
         <div class="products-table">
           <div class="products-table-header">
-            <span>Code ISIN</span><span>Nom commercial</span><span>Sous-jacent</span>
-            <span class="col-right">Coupon</span><span class="col-right">Strike</span>
-            <span class="col-right">Niveau</span><span class="col-right">% strike</span>
-            <span class="col-right">B. auto</span><span class="col-right">B. coup.</span>
-            <span>1ère const.</span><span>Échéance</span><span>Statut</span><span></span>
+            <span>Nom commercial</span>
+            <span class="col-right">Coupon</span>
+            <span>Prochaine const.</span>
+            <span class="col-center">Coupon</span>
+            <span class="col-center">Rappel</span>
+            <span>Statut</span>
+            <span></span>
           </div>
-          ${rows.map(r => `
+          ${rows.map(r => {
+            const couponOk = r.k !== 'red';
+            const rappelOk = r.k === 'green';
+            return `
           <div class="products-table-row">
-            <span class="col-isin tnum">${r.isin}</span>
-            <span class="col-nom">${r.nom}</span>
-            <span class="col-sj">${r.sj}</span>
+            <span class="col-nom">${r.nom.replace('Conservateur ', 'C. ')}</span>
             <span class="tnum col-right">${r.coupon}</span>
-            <span class="tnum col-dim">${r.strike}</span>
-            <span class="tnum col-num">${r.niveau}</span>
-            <span class="tnum col-right" style="font-weight:600;color:${r.type==='equity'?(r.k==='red'?'#9a3535':r.k==='orange'?'#b06a1a':'#1d6f4c'):'#9a8f7a'};">${r.pct}</span>
-            <span class="tnum col-dim">${r.bAuto}</span>
-            <span class="tnum col-dim">${r.bCoupon}</span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${r.ech}</span>
+            <span class="col-center"><span class="ind-ok${couponOk ? ' yes' : ' no'}" title="${couponOk ? 'Coupon en cours' : 'Coupon à risque'}">€</span></span>
+            <span class="col-center"><span class="ind-ok${rappelOk ? ' yes' : ' no'}" title="${rappelOk ? 'Zone de rappel probable' : 'Hors zone de rappel'}">↩</span></span>
             <span><span class="badge ${r.k}">${r.statut}</span></span>
             <span class="col-detail" onclick="App.voirDetail('${r.isin}')">Détail →</span>
-          </div>`).join('')}
+          </div>`;
+          }).join('')}
         </div>
       </div>
-      <div class="table-note">% strike = niveau du sous-jacent rapporté au strike initial (indicatif). Produits CMS exprimés en taux. Validation humaine obligatoire.</div>
+      <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
@@ -560,6 +564,108 @@ function renderModalEditionCMS(valeurActuelle) {
         <button class="btn-secondary" onclick="App.fermerEditionCMS()">Annuler</button>
         <button class="btn-primary" onclick="App.soumettreEditionCMS()">Enregistrer</button>
       </div>
+    </div>
+  </div>`;
+}
+
+// ── Page Contrats & Unités de Compte ──
+function renderContrats() {
+  function srriDots(n) {
+    const filled = Math.max(0, Math.min(7, n));
+    let s = '';
+    for (let i = 1; i <= 7; i++) s += `<span class="srri-dot${i <= filled ? ' on' : ''}"></span>`;
+    return `<span class="srri-bar">${s}</span>`;
+  }
+
+  function perfClass(h) {
+    if (h === true)  return ' up';
+    if (h === false) return ' down';
+    return '';
+  }
+
+  const contrats = typeof CONTRATS !== 'undefined' ? CONTRATS : [];
+
+  return `
+  <div>
+    <header class="page-header">
+      <div>
+        <div class="page-title">Contrats & Unités de Compte</div>
+        <div class="page-sub">${contrats.length} contrat${contrats.length > 1 ? 's' : ''}</div>
+      </div>
+    </header>
+
+    <div class="page-body">
+      ${contrats.map(c => {
+        const nbUc = c.uc ? c.uc.length : 0;
+        return `
+      <div class="contrat-block card mb-18">
+        <div class="contrat-header-bar">
+          <div>
+            <div class="contrat-nom">${c.nom}</div>
+            <div class="contrat-meta">${c.assureur}${c.ref ? ' · Réf. ' + c.ref : ''}${c.ouverture ? ' · Ouvert en ' + c.ouverture : ''}</div>
+          </div>
+          <div class="contrat-chips">
+            ${c.fondsEuros ? `<span class="contrat-chip fe">Fonds euros</span>` : ''}
+            ${nbUc > 0    ? `<span class="contrat-chip uc">${nbUc} UC</span>` : ''}
+          </div>
+        </div>
+
+        ${c.fondsEuros ? `
+        <div class="contrat-section">
+          <div class="contrat-section-label">Fonds en euros</div>
+          <div class="fe-row">
+            <div class="fe-nom">${c.fondsEuros.nom}</div>
+            <div class="fe-taux-wrap">
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Taux 2024</div>
+                <div class="fe-taux-val tnum">${c.fondsEuros.taux2024}</div>
+              </div>
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Taux 2023</div>
+                <div class="fe-taux-val tnum secondary">${c.fondsEuros.taux2023}</div>
+              </div>
+              <div class="fe-taux-item">
+                <div class="fe-taux-label">Part contrat</div>
+                <div class="fe-taux-val tnum">${c.fondsEuros.part}</div>
+              </div>
+            </div>
+          </div>
+        </div>` : ''}
+
+        ${nbUc > 0 ? `
+        <div class="contrat-section">
+          <div class="contrat-section-label">Unités de compte</div>
+          <div class="uc-list">
+            ${c.uc.map(u => `
+            <div class="uc-card">
+              <div class="uc-card-head">
+                <div class="uc-nom">${u.nom}</div>
+                <span class="uc-cat-badge">${u.categorie}</span>
+              </div>
+              <div class="uc-card-meta">
+                <span class="uc-isin tnum">${u.isin}</span>
+                ${u.risque > 0 ? `<span class="uc-srri">SRRI ${srriDots(u.risque)}</span>` : ''}
+              </div>
+              <div class="uc-card-perf">
+                <div class="uc-perf-item"><span class="uc-perf-label">Perf. YTD</span><span class="uc-perf-val tnum${perfClass(u.hausse)}">${u.perfYtd}</span></div>
+                <div class="uc-perf-item"><span class="uc-perf-label">Perf. ann.</span><span class="uc-perf-val tnum${perfClass(u.hausse)}">${u.perfAn}</span></div>
+                <div class="uc-perf-item"><span class="uc-perf-label">Part contrat</span><span class="uc-perf-val tnum">${u.part}</span></div>
+              </div>
+            </div>`).join('')}
+          </div>
+        </div>` : `
+        <div class="contrat-section">
+          <div class="uc-empty">Aucune UC renseignée pour ce contrat.</div>
+        </div>`}
+      </div>`;
+      }).join('')}
+
+      ${contrats.length === 0 ? `
+      <div class="card p-18" style="color:#9a8f7a;font-size:13px;">
+        Aucun contrat configuré. Ajouter des entrées dans <code>CONTRATS</code> (data.js).
+      </div>` : ''}
+
+      <div class="table-note">Données saisies manuellement · taux de revalorisation nets de frais de gestion · performances indicatives.</div>
     </div>
   </div>`;
 }

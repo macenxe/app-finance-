@@ -3,10 +3,11 @@ const App = (() => {
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
 
   const NAV = [
-    { key: 'dash',   label: 'Tableau de bord'     },
-    { key: 'prod',   label: 'Produits structurés'  },
-    { key: 'alloc',  label: 'Allocation & Marchés' },
-    { key: 'veille', label: 'Veille économique'    },
+    { key: 'dash',     label: 'Tableau de bord'      },
+    { key: 'prod',     label: 'Produits structurés'  },
+    { key: 'contrats', label: 'Contrats & UC'        },
+    { key: 'alloc',    label: 'Allocation & Marchés' },
+    { key: 'veille',   label: 'Veille économique'    },
   ];
 
   function renderNav() {
@@ -21,10 +22,11 @@ const App = (() => {
     const el = document.getElementById('content');
     const { indices, produits } = donnees;
     switch (state.page) {
-      case 'dash':   el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
-      case 'prod':   el.innerHTML = renderProduits(produits, state);    break;
-      case 'alloc':  el.innerHTML = renderAllocation();                 break;
-      case 'veille': el.innerHTML = renderVeille();                     break;
+      case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
+      case 'prod':     el.innerHTML = renderProduits(produits, state);  break;
+      case 'contrats': el.innerHTML = renderContrats();                 break;
+      case 'alloc':    el.innerHTML = renderAllocation();               break;
+      case 'veille':   el.innerHTML = renderVeille();                   break;
       case 'detail': {
         const p = produits.find(p => p.isin === state.detailIsin);
         el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
@@ -33,26 +35,24 @@ const App = (() => {
     }
     el.scrollTop = 0;
     renderNav();
+    mettreAJourBadgeSource();
+  }
+
+  function mettreAJourBadgeSource() {
+    const badge = document.getElementById('source-badge');
+    if (!badge) return;
+    if (donnees.source === 'api' || donnees.source === 'snapshot') {
+      badge.textContent = '● Données en ligne';
+      badge.className = 'source-badge live';
+    } else {
+      badge.textContent = '○ Données statiques';
+      badge.className = 'source-badge offline';
+    }
   }
 
   function fermerFormulaire() {
     const root = document.getElementById('modal-root');
     if (root) root.innerHTML = '';
-  }
-
-  // ── Tiroir latéral (mobile) ──
-  function majBoutonNav(open) {
-    const btn = document.getElementById('sidebar-toggle');
-    if (!btn) return;
-    btn.textContent = open ? '✕' : '☰';
-    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-  }
-  function toggleNav() {
-    majBoutonNav(document.body.classList.toggle('nav-open'));
-  }
-  function fermerNav() {
-    document.body.classList.remove('nav-open');
-    majBoutonNav(false);
   }
 
   function initPullToRefresh() {
@@ -128,10 +128,18 @@ const App = (() => {
   }
 
   return {
+    toggleSidebar() {
+      const sidebar  = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      const isOpen   = sidebar.classList.toggle('open');
+      if (backdrop) backdrop.classList.toggle('open', isOpen);
+    },
     goto(page) {
       state = { ...state, page, q: '', detailIsin: null };
       fermerFormulaire();
-      fermerNav();
+      // Ferme la sidebar sur mobile après navigation
+      document.getElementById('sidebar')?.classList.remove('open');
+      document.getElementById('sidebar-backdrop')?.classList.remove('open');
       renderPage();
     },
     setFilter(filter) {
@@ -170,8 +178,6 @@ const App = (() => {
       if (root) root.innerHTML = renderFormulaireAjout();
     },
     fermerFormulaire,
-    toggleNav,
-    fermerNav,
     ouvrirGraphique(ticker, label) {
       if (window.Chart) Chart.ouvrir(ticker, label);
     },
