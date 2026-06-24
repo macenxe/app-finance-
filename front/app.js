@@ -4,7 +4,7 @@ const App = (() => {
 
   const NAV = [
     { key: 'dash',     label: 'Tableau de bord'      },
-    { key: 'prod',     label: 'Produits structurés'  },
+    { key: 'prod',     label: 'Autocalls'             },
     { key: 'contrats', label: 'Contrats & UC'        },
     { key: 'alloc',    label: 'Allocation & Marchés' },
     { key: 'veille',   label: 'Veille économique'    },

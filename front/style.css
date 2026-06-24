@@ -108,12 +108,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .grid-dash-bottom { display: grid; grid-template-columns: 1fr 1.5fr; gap: 18px; }
 
 /* ── Index cards ── */
-.index-card { padding: 14px 15px; }
+.index-card { padding: 10px 12px; }
 .index-clic { cursor: pointer; transition: border-color .15s, box-shadow .15s, transform .15s; }
 .index-clic:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
-.index-name  { font-size: 11.5px; color: #6b6e73; font-weight: 500; }
-.index-val   { font-family: 'Spectral', serif; font-size: 23px; font-weight: 600; color: #16304f; margin: 6px 0 4px; white-space: nowrap; }
-.index-var   { font-size: 12px; font-weight: 600; }
+.index-name  { font-size: 11px; color: #6b6e73; font-weight: 500; }
+.index-val   { font-family: 'Spectral', serif; font-size: 19px; font-weight: 600; color: #16304f; margin: 4px 0 2px; white-space: nowrap; }
+.index-var   { font-size: 11.5px; font-weight: 600; }
 .index-var.up   { color: #1d6f4c; }
 .index-var.down { color: #9a3535; }
 
@@ -123,9 +123,9 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Taux card ── */
 .taux-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
-.macro-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.macro-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .taux-item-name { font-size: 11px; color: #6b6e73; }
-.taux-val { font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #16304f; margin-top: 4px; white-space: nowrap; }
+.taux-val { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #16304f; margin-top: 4px; white-space: nowrap; }
 .taux-var { font-size: 11px; font-weight: 600; margin-top: 2px; }
 .taux-var.up   { color: #9a3535; } /* hausse taux = mauvais */
 .taux-var.down { color: #1d6f4c; }
@@ -148,11 +148,19 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .alert-text { font-size: 12.5px; color: #3a3d42; line-height: 1.45; }
 
 /* ── Events ── */
-.event-item { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f1ece1; align-items: baseline; }
+.events-grid { display: flex; flex-direction: column; }
+.event-item { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f1ece1; align-items: center; }
 .event-item:last-child { border-bottom: none; }
 .event-date { font-size: 11.5px; color: #9a8f7a; font-weight: 600; width: 54px; flex: none; }
 .event-date.important { color: #16304f; }
 .event-label { font-size: 12.5px; color: #3a3d42; }
+.zone-flag {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #f2efe6; border: 1px solid #e6e0d2;
+  display: flex; align-items: center; justify-content: center;
+  flex: none; margin-left: auto; overflow: hidden;
+}
+.zone-flag .fi { width: 20px; height: 20px; border-radius: 50%; background-size: cover; }
 
 /* ── Autocall preview table ── */
 .autocall-table { }
@@ -319,6 +327,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Misc ── */
 .mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
 .mb-18 { margin-bottom: 18px; }
 .mb-24 { margin-bottom: 24px; }
 .p-18  { padding: 18px; }

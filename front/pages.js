@@ -54,14 +54,6 @@ function renderDashboard(indices, produits, taux) {
         <div class="page-title">Tableau de bord</div>
         <div class="page-sub">Synthèse des marchés · ${heureRef}</div>
       </div>
-      <div class="header-actions">
-        <div class="search-box">
-          <span style="font-size:13px;">⌕</span>
-          <input id="dash-search" placeholder="Rechercher un produit, un indice…">
-        </div>
-        <button class="btn-primary">Générer une synthèse conseiller</button>
-        <button class="btn-secondary">Export PDF</button>
-      </div>
     </header>
 
     <div class="page-body">
@@ -69,7 +61,7 @@ function renderDashboard(indices, produits, taux) {
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
       </div>
-      <div class="grid-5 mb-24">
+      <div class="grid-3 mb-24">
         ${indices.map(i => `
         <div class="card index-card${i.ticker ? ' index-clic' : ''}"${i.ticker ? ` onclick="App.ouvrirGraphique('${i.ticker}','${i.nom}')"` : ''}>
           <div class="index-name">${i.nom}${i.statique ? ' <span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span>' : ''}</div>
@@ -81,51 +73,49 @@ function renderDashboard(indices, produits, taux) {
         </div>`).join('')}
       </div>
 
-      <!-- Taux + Macro -->
-      <div class="grid-2-narrow mb-24">
-        <div class="card p-18">
-          <div class="card-title mb-12">Taux & obligations</div>
-          <div class="taux-grid">
-            ${taux.map(t => `
-            <div>
-              <div class="taux-item-name">
-                ${t.nom}
-                ${t.nom === 'CMS 10 ans' ? `<button class="btn-pencil" onclick="App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
-              </div>
-              <div class="taux-val tnum">${t.valeur}</div>
-              <div class="taux-var tnum ${t.hausse === null ? 'flat' : t.hausse ? 'up' : 'down'}">${t.var}</div>
-              ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
-            </div>`).join('')}
-          </div>
-        </div>
-        <div class="card p-18">
-          <div class="card-title mb-12">Inflation & banques centrales</div>
-          <div class="macro-grid">
-            ${MACRO.map(m => `
-            <div>
-              <div class="taux-item-name">${m.nom}</div>
-              <div class="taux-val tnum">${m.valeur}</div>
-            </div>`).join('')}
-          </div>
+      <!-- Taux & obligations -->
+      <div class="flex-sb mb-12">
+        <span class="section-label">Taux &amp; obligations</span>
+      </div>
+      <div class="card p-18 mb-16">
+        <div class="taux-grid">
+          ${taux.map(t => `
+          <div>
+            <div class="taux-item-name">
+              ${t.nom}
+              ${t.nom === 'CMS 10 ans' ? `<button class="btn-pencil" onclick="App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
+            </div>
+            <div class="taux-val tnum">${t.valeur}</div>
+            <div class="taux-var tnum ${t.hausse === null ? 'flat' : t.hausse ? 'up' : 'down'}">${t.var}</div>
+            ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
+          </div>`).join('')}
         </div>
       </div>
 
-      <!-- Alertes + Événements côte à côte -->
-      <div class="grid-2 mb-24">
-        <div class="card p-18">
-          <div class="card-title mb-12">Alertes du jour</div>
-          ${ALERTES.map(a => `
-          <div class="alert-item">
-            <span class="alert-dot" style="background:${a.couleur};"></span>
-            <div class="alert-text">${a.texte}</div>
+      <!-- Indicateurs macro & actifs -->
+      <div class="flex-sb mb-12">
+        <span class="section-label">Indicateurs macro &amp; actifs</span>
+      </div>
+      <div class="card p-18 mb-24">
+        <div class="macro-grid">
+          ${MACRO.map(m => `
+          <div>
+            <div class="taux-item-name">${m.nom}</div>
+            <div class="taux-val tnum">${m.valeur}</div>
+            <div class="taux-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}">${m.var}</div>
           </div>`).join('')}
         </div>
-        <div class="card p-18">
-          <div class="card-title mb-12">Prochains événements macro</div>
+      </div>
+
+      <!-- Événements macro pleine largeur -->
+      <div class="card p-18 mb-24">
+        <div class="card-title mb-12">Prochains événements macro</div>
+        <div class="events-grid">
           ${EVENEMENTS.map(e => `
           <div class="event-item">
             <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
             <div class="event-label">${e.label}</div>
+            ${e.zone ? `<span class="zone-flag"><span class="fi fi-${({FR:'fr',UE:'eu',US:'us',DE:'de',UK:'gb',JP:'jp',CN:'cn'}[e.zone]||'un')} fis"></span></span>` : ''}
           </div>`).join('')}
         </div>
       </div>
@@ -133,7 +123,7 @@ function renderDashboard(indices, produits, taux) {
       <!-- Prochaines dates clés — pleine largeur -->
       <div class="card p-18">
         <div class="flex-sb mb-12">
-          <div class="card-title">Prochaines dates clés <span style="font-size:11px;font-weight:400;color:#9a8f7a;margin-left:6px;">· 60 jours</span></div>
+          <div class="card-title">Prochaines dates clés <span style="font-size:11px;font-weight:400;color:#9a8f7a;margin-left:6px;">· Produits structurés · 60 jours</span></div>
           <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
         </div>
         ${prochainsDates.length === 0
@@ -146,7 +136,7 @@ function renderDashboard(indices, produits, taux) {
           <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
             <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
             <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
-            <span class="dates-cles-nom">${p.nom}</span>
+            <span class="dates-cles-nom">${p.nom.replace('Conservateur ', 'C. ')}</span>
             <span class="col-right"><span class="badge ${p.k}">${p.statut}</span></span>
           </div>`).join('')}
         </div>`}
@@ -176,17 +166,11 @@ function renderProduits(produits, state) {
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">Produits structurés · Autocalls</div>
+        <div class="page-title">Autocalls · Produits structurés</div>
         <div class="page-sub">${produits.length} produits suivis</div>
       </div>
       <div class="header-actions">
-        <div class="search-box">
-          <span style="font-size:13px;">⌕</span>
-          <input id="prod-search" placeholder="ISIN, nom, sous-jacent…" value="${escHtml(state.q||'')}"
-                 oninput="App.prodSearch(this.value)">
-        </div>
         <button class="btn-primary" onclick="App.ouvrirFormulaire()">+ Ajouter un produit</button>
-        <button class="btn-secondary">Export PDF</button>
       </div>
     </header>
 
@@ -266,7 +250,6 @@ function renderAllocation() {
         <div class="page-title">Allocation & Marchés</div>
         <div class="page-sub">Lecture macro interne · non personnalisée · 20 juin 2026</div>
       </div>
-      <button class="btn-primary">Générer une synthèse conseiller</button>
     </header>
 
     <div class="page-body">
@@ -375,11 +358,6 @@ function renderDetail(produit) {
           <div class="page-title">${escHtml(produit.nom)}</div>
           <div class="page-sub">${escHtml(produit.isin)} · ${typLabel}</div>
         </div>
-      </div>
-      <div class="header-actions">
-        ${canDelete
-          ? `<button class="btn-danger" onclick="App.supprimerProduit(${produit.id})">Supprimer ce produit</button>`
-          : `<span class="detail-hint">Suppression disponible avec les données API</span>`}
       </div>
     </header>
 

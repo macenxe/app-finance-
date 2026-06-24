@@ -23,24 +23,26 @@ const PRODUITS = [
 ];
 
 const INDICES_MARCHE = [
+  { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
   { nom:'Euro Stoxx 50',    ticker:'^STOXX50E', valeur:'5 124,30', var:'+0,42 %', hausse:true  },
+  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true, statique:true },
   { nom:'S&P 500',          ticker:'^GSPC',     valeur:'5 487,12', var:'+0,18 %', hausse:true  },
   { nom:'Nasdaq',           ticker:'^IXIC',     valeur:'26 166,6', var:'+0,55 %', hausse:true  },
-  { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
-  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true, statique:true },
+  { nom:'MSCI World',       ticker:'IWDA.AS',   valeur:'4 102,50', var:'+0,31 %', hausse:true, statique:true },
 ];
 
 const TAUX = [
-  { nom:'OAT 10 ans',  valeur:'3,12 %', var:'+4 pb',  hausse:false },
-  { nom:'Bund 10 ans', valeur:'2,48 %', var:'+3 pb',  hausse:false },
-  { nom:'US 10 ans',   valeur:'4,28 %', var:'−2 pb',  hausse:true  },
-  { nom:'CMS 10 ans',  valeur:'3,04 %', var:'stable', hausse:null  },
+  { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'stable', hausse:null  },
+  { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:false },
+  { nom:'CMS 10 ans',        valeur:'3,04 %', var:'stable', hausse:null  },
+  { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:true  },
 ];
 
 const MACRO = [
-  { nom:'Inflation zone €', valeur:'2,1 %'  },
-  { nom:'BCE (dépôt)',       valeur:'2,25 %' },
-  { nom:'Fed funds',         valeur:'4,38 %' },
+  { nom:'Inflation zone €', valeur:'2,1 %',    var:'stable', hausse:null  },
+  { nom:'Pétrole Brent',    valeur:'84,20 $',  var:'+0,6 %', hausse:true  },
+  { nom:'Or',               valeur:'2 321 $',  var:'+0,3 %', hausse:true  },
+  { nom:'Bitcoin',          valeur:'63 400 $', var:'−1,2 %', hausse:false },
 ];
 
 const ALERTES = [
@@ -50,10 +52,10 @@ const ALERTES = [
 ];
 
 const EVENEMENTS = [
-  { date:'24 juin', label:'IFO climat des affaires — Allemagne', important:false },
-  { date:'02 juil', label:'Inflation flash zone euro (juin)',    important:false },
-  { date:'17 juil', label:'Réunion BCE — décision de taux',     important:true  },
-  { date:'30 juil', label:'Réunion Fed / FOMC',                 important:true  },
+  { date:'24 juin', label:'IFO climat des affaires — Allemagne', zone:'DE', important:false },
+  { date:'02 juil', label:'Inflation flash zone euro (juin)',    zone:'UE', important:false },
+  { date:'17 juil', label:'Réunion BCE — décision de taux',     zone:'UE', important:true  },
+  { date:'30 juil', label:'Réunion Fed / FOMC',                 zone:'US', important:true  },
 ];
 
 const VEILLE = [
