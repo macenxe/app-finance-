@@ -454,6 +454,19 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .cat-card-meta { font-size: 11.5px; color: #6b6e73; margin-top: 3px; }
 .cat-card-sj   { font-size: 11px; color: #9a8f7a; margin-top: 6px; line-height: 1.4; }
 
+/* ── Bouton Conservateur (UC) ── */
+.cat-card-csr { border-color: #c9a96a; }
+.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 22px; font-weight: 700; color: #c9a96a; line-height: 1; margin-bottom: 2px; }
+.cat-card-csr .cat-card-nom { color: #16304f; }
+.cat-card-csr.active { background: #16304f; border-color: #c9a96a; }
+.cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
+.cat-card-csr.active .cat-card-nom { color: #c9a96a; }
+.cat-card-csr.active .cat-card-meta { color: #a8b4c0; }
+
+/* ── Grille UC (desktop 5 col, mobile scroll horizontal) ── */
+.uc-cat-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.uc-cat-grid > .cat-card { padding: 11px 10px; }
+
 .cat-membres { display: flex; flex-direction: column; gap: 2px; }
 .cat-membre {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -649,6 +662,9 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .summary-chips { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .uc-cat-grid { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .uc-cat-grid::-webkit-scrollbar { display: none; }
+  .uc-cat-grid > .cat-card { flex: 0 0 auto; min-width: 88px; padding: 10px 10px; }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }
