@@ -673,10 +673,8 @@ function renderContrats(state) {
 
       <div class="cat-block">
         <div class="cat-grid uc-cat-grid">
-          <div class="card cat-card cat-card-csr${ucCat === 'Conservateur' ? ' active' : ''}" onclick="App.setUcCat('Conservateur')">
+          <div class="card cat-card cat-card-csr${ucCat === 'Conservateur' ? ' active' : ''}" onclick="App.setUcCat('Conservateur')" title="Fonds Conservateur (${nCsr})">
             <div class="cat-card-csr-icon">C</div>
-            <div class="cat-card-nom">Conservateur</div>
-            <div class="cat-card-meta">${nCsr} fonds</div>
           </div>
           ${CATS_ORDER.map(cat => {
             const n = uc.filter(u => CAT_MAP[u.categorie] === cat).length;
@@ -692,7 +690,7 @@ function renderContrats(state) {
         ${ucFiltrees.map(u => `
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
-            <span class="uc-item-rang tnum">${u.rang}</span>
+            <span class="uc-item-rang${u.gerant === 'C' ? ' csr' : ''}">${u.gerant || u.rang}</span>
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
               <div class="uc-item-isin tnum">${u.isin}</div>

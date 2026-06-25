@@ -220,18 +220,18 @@ const FONDS_EUROS_PERF = {
 // ── Catalogue UC suivi (sélection ordonnée : actions → obligataire) ──
 // Cliquables : graphId = symbole Yahoo du fonds (historique de VL). equity = exposition actions indicative.
 const UC_CATALOGUE = [
-  { rang:1,  nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F' },
-  { rang:2,  nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F' },
-  { rang:3,  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:'0P00016P7T.F' },
-  { rang:4,  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F' },
-  { rang:5,  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F' },
-  { rang:6,  nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F' },
-  { rang:7,  nom:'Comgest Renaissance Europe C',         isin:'FR0000295230', categorie:'Actions Europe',       srri:5, equity:100, graphId:'0P00000PM8.F' },
-  { rang:8,  nom:'Fidelity World Fund A-ACC-EUR',        isin:'LU1261432659', categorie:'Actions Monde',        srri:5, equity:100, graphId:'0P00016FY4.F' },
-  { rang:9,  nom:'Conservateur Actions Flexibles C',     isin:'FR0013256930', categorie:'Mixte / Flexible',     srri:3, equity:55,  graphId:'0P0001HI3U.F' },
-  { rang:10, nom:'Conservateur Diversifié Réactif C',    isin:'FR0010489542', categorie:'Mixte obligataire',    srri:3, equity:25,  graphId:'0P0000JZWP.F' },
-  { rang:11, nom:'Conservateur Rendement Flexible C',    isin:'FR0013087152', categorie:'Obligataire flexible', srri:2, equity:20,  graphId:'0P00019OMO.F' },
-  { rang:12, nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F' },
+  { rang:1,  gerant:'R·co', nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F' },
+  { rang:2,  gerant:'LFDE', nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F' },
+  { rang:3,  gerant:'EdR',  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:'0P00016P7T.F' },
+  { rang:4,  gerant:'Pct',  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F' },
+  { rang:5,  gerant:'Pct',  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F' },
+  { rang:6,  gerant:'C',    nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F' },
+  { rang:7,  gerant:'Cg',   nom:'Comgest Renaissance Europe C',         isin:'FR0000295230', categorie:'Actions Europe',       srri:5, equity:100, graphId:'0P00000PM8.F' },
+  { rang:8,  gerant:'Fid',  nom:'Fidelity World Fund A-ACC-EUR',        isin:'LU1261432659', categorie:'Actions Monde',        srri:5, equity:100, graphId:'0P00016FY4.F' },
+  { rang:9,  gerant:'C',    nom:'Conservateur Actions Flexibles C',     isin:'FR0013256930', categorie:'Mixte / Flexible',     srri:3, equity:55,  graphId:'0P0001HI3U.F' },
+  { rang:10, gerant:'C',    nom:'Conservateur Diversifié Réactif C',    isin:'FR0010489542', categorie:'Mixte obligataire',    srri:3, equity:25,  graphId:'0P0000JZWP.F' },
+  { rang:11, gerant:'C',    nom:'Conservateur Rendement Flexible C',    isin:'FR0013087152', categorie:'Obligataire flexible', srri:2, equity:20,  graphId:'0P00019OMO.F' },
+  { rang:12, gerant:'C',    nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F' },
 ];
 
 // ── Contrats assurance-vie & UC ──

@@ -455,20 +455,17 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .cat-card-sj   { font-size: 11px; color: #9a8f7a; margin-top: 6px; line-height: 1.4; }
 
 /* ── Bouton Conservateur (UC) ── */
-.cat-card-csr { border-color: #9a7020; }
-.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 18px; font-weight: 700; color: #9a7020; line-height: 1; margin-bottom: 1px; }
-.cat-card-csr .cat-card-nom { color: #16304f; }
-.cat-card-csr.active { background: #9a7020; border-color: #9a7020; }
-.cat-card-csr.active .cat-card-csr-icon { color: #fff; }
-.cat-card-csr.active .cat-card-nom { color: #fff; }
-.cat-card-csr.active .cat-card-meta { color: #e8d8b0; }
+.cat-card-csr { border-color: #9a7020; background: #9a7020; display: flex; align-items: center; justify-content: center; }
+.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 22px; font-weight: 700; color: #16304f; line-height: 1; }
+.cat-card-csr:hover { border-color: #7a5810; background: #7a5810; }
+.cat-card-csr.active { background: #16304f; border-color: #16304f; }
+.cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
 
 /* ── Grille UC (desktop 5 col compacts, mobile scroll horizontal) ── */
 .uc-cat-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .uc-cat-grid > .cat-card { padding: 8px 8px; }
 .uc-cat-grid .cat-card-nom { font-size: 12px; }
 .uc-cat-grid .cat-card-meta { font-size: 10px; margin-top: 2px; }
-.uc-cat-grid .cat-card-csr-icon { font-size: 16px; }
 
 .cat-membres { display: flex; flex-direction: column; gap: 2px; }
 .cat-membre {
@@ -609,9 +606,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .uc-item.clic:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
 .uc-item-haut { display: flex; align-items: flex-start; gap: 10px; }
 .uc-item-rang {
-  flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%;
-  background: #eef1f5; color: #5b6b80; font-size: 11px; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
+  flex: 0 0 auto; height: 22px; min-width: 22px; padding: 0 5px; border-radius: 11px;
+  background: #eef1f5; color: #5b6b80; font-size: 9px; font-weight: 700; letter-spacing: .02em;
+  display: flex; align-items: center; justify-content: center; white-space: nowrap;
+}
+.uc-item-rang.csr {
+  background: #9a7020; color: #fff; font-family: 'Spectral', serif; font-size: 12px;
 }
 .uc-item-id { flex: 1 1 auto; min-width: 0; }
 .uc-item-nom { font-size: 13px; color: #16304f; font-weight: 600; }
@@ -664,10 +664,10 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .grid-2, .grid-2-narrow, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .summary-chips { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  .uc-cat-grid { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .uc-cat-grid::-webkit-scrollbar { display: none; }
-  .uc-cat-grid > .cat-card { flex: 0 0 auto; min-width: 88px; padding: 10px 10px; }
+  .cat-grid { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .cat-grid::-webkit-scrollbar { display: none; }
+  .cat-grid > .cat-card { flex: 0 0 auto; min-width: 80px; }
+  .uc-cat-grid > .cat-card-csr { min-width: 44px; max-width: 44px; padding: 8px 6px; }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }
