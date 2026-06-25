@@ -700,11 +700,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .veille-tags, .filter-chips { flex-wrap: wrap; }
 
   /* ── Index cards compactes (tableau de bord) ── */
-  .index-card { padding: 7px 8px; }
-  .index-val  { font-size: 13px; margin: 2px 0 1px; }
-  .index-name { font-size: 9.5px; }
-  .index-var  { font-size: 9.5px; }
-  .taux-var   { font-size: 9.5px; }
+  .index-card { padding: 9px 10px; }
+  .index-val  { font-size: 16px; margin: 3px 0 2px; }
+  .index-name { font-size: 10.5px; }
+  .index-var  { font-size: 10.5px; }
+  .taux-val   { font-size: 15px; }
+  .taux-item-name { font-size: 10.5px; }
+  .taux-var   { font-size: 10.5px; }
+  .taux-maj   { font-size: 10px; }
 }
 
 /* ── Paysage mobile : sidebar overlay + tableau toutes colonnes ── */
