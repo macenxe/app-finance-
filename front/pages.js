@@ -708,17 +708,21 @@ function renderContrats(state, ucPerfs) {
         ${ucFiltrees.map(u => `
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
-            ${perfBadge(u.isin, ucPerfs)}
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
               <div class="uc-item-isin tnum">${u.isin}</div>
             </div>
-            ${u.graphId ? `<span class="uc-item-go">graphique →</span>` : `<span class="uc-item-go muted">indisponible</span>`}
+            <div class="uc-item-right">
+              <div class="uc-item-perf-wrap">
+                <span class="uc-item-perf-label">Perf. 1 an</span>
+                ${perfBadge(u.isin, ucPerfs)}
+              </div>
+              ${srriDots(u.srri)}
+            </div>
           </div>
           <div class="uc-item-bas">
             <span class="uc-cat-badge">${u.categorie}</span>
             <span class="uc-expo">Actions ${u.equity} %</span>
-            ${srriDots(u.srri)}
           </div>
         </div>`).join('')}
       </div>
