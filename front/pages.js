@@ -611,9 +611,18 @@ function renderContrats(state) {
   const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
   const ucCat  = (state && state.ucCat) || null;
 
-  // Catégories UC dans l'ordre d'apparition
-  const cats = [...new Set(uc.map(u => u.categorie))];
-  const ucFiltrees = ucCat ? uc.filter(u => u.categorie === ucCat) : uc;
+  // Regroupement des catégories UC en 4 groupes d'affichage
+  const CAT_MAP = {
+    'Actions thématique':  'Actions thématique',
+    'Actions Monde':       'Actions',
+    'Actions Europe':      'Actions',
+    'Flexible':            'Mixte / Flexible',
+    'Mixte / Flexible':    'Mixte / Flexible',
+    'Mixte obligataire':   'Obligataire',
+    'Obligataire flexible':'Obligataire',
+  };
+  const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
+  const ucFiltrees = ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
 
   return `
   <div>
@@ -661,8 +670,8 @@ function renderContrats(state) {
 
       <div class="cat-block">
         <div class="cat-grid">
-          ${cats.map(cat => {
-            const n = uc.filter(u => u.categorie === cat).length;
+          ${CATS_ORDER.map(cat => {
+            const n = uc.filter(u => CAT_MAP[u.categorie] === cat).length;
             return `<div class="card cat-card${ucCat === cat ? ' active' : ''}" onclick="App.setUcCat('${cat}')">
               <div class="cat-card-nom">${cat}</div>
               <div class="cat-card-meta">${n} fonds</div>
