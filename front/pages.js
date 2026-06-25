@@ -689,19 +689,12 @@ function renderContrats(state, ucPerfs) {
         <span class="section-hint">${uc.length} UC${hasPerfs ? ' · ↓ Perf. 1 an' : ' · chargement…'}</span>
       </div>
 
-      <div class="cat-block">
-        <div class="cat-grid uc-cat-grid">
-          <div class="card cat-card cat-card-csr${ucCat === 'Conservateur' ? ' active' : ''}" onclick="App.setUcCat('Conservateur')" title="Fonds Conservateur (${nCsr})">
-            <div class="cat-card-csr-icon">C</div>
-          </div>
-          ${CATS_ORDER.map(cat => {
-            const n = uc.filter(u => CAT_MAP[u.categorie] === cat).length;
-            return `<div class="card cat-card${ucCat === cat ? ' active' : ''}" onclick="App.setUcCat('${cat}')">
-              <div class="cat-card-nom">${cat}</div>
-              <div class="cat-card-meta">${n} fonds</div>
-            </div>`;
-          }).join('')}
-        </div>
+      <div class="uc-chips">
+        <button class="uc-chip uc-chip-csr${ucCat === 'Conservateur' ? ' active' : ''}" onclick="App.setUcCat('Conservateur')">C</button>
+        <button class="uc-chip${ucCat === 'Actions thématique' ? ' active' : ''}" onclick="App.setUcCat('Actions thématique')">Thématique</button>
+        <button class="uc-chip${ucCat === 'Actions' ? ' active' : ''}" onclick="App.setUcCat('Actions')">Actions</button>
+        <button class="uc-chip${ucCat === 'Mixte / Flexible' ? ' active' : ''}" onclick="App.setUcCat('Mixte / Flexible')">Mixte</button>
+        <button class="uc-chip${ucCat === 'Obligataire' ? ' active' : ''}" onclick="App.setUcCat('Obligataire')">Oblig.</button>
       </div>
 
       <div class="uc-liste">

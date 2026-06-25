@@ -461,11 +461,19 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .cat-card-csr.active { background: #16304f; border-color: #16304f; }
 .cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
 
-/* ── Grille UC (desktop 5 col compacts, mobile scroll horizontal) ── */
-.uc-cat-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.uc-cat-grid > .cat-card { padding: 8px 8px; }
-.uc-cat-grid .cat-card-nom { font-size: 12px; }
-.uc-cat-grid .cat-card-meta { font-size: 10px; margin-top: 2px; }
+/* ── Chips filtres UC ── */
+.uc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.uc-chip {
+  height: 28px; padding: 0 12px; border-radius: 14px;
+  border: 1.5px solid #ece7dc; background: #fff;
+  font-size: 12px; font-weight: 600; color: #6b6e73;
+  cursor: pointer; transition: border-color .15s, background .15s, color .15s;
+  white-space: nowrap;
+}
+.uc-chip:hover { border-color: #c9a96a; color: #16304f; }
+.uc-chip.active { border-color: #16304f; background: #16304f; color: #fff; }
+.uc-chip-csr { padding: 0 10px; font-family: 'Spectral', serif; font-size: 14px; font-weight: 700; }
+.uc-chip-csr.active { border-color: #9a7020; background: #9a7020; color: #fff; }
 
 .cat-membres { display: flex; flex-direction: column; gap: 2px; }
 .cat-membre {
@@ -668,8 +676,6 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .cat-grid { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .cat-grid::-webkit-scrollbar { display: none; }
   .cat-grid > .cat-card { flex: 0 0 auto; min-width: 80px; }
-  .uc-cat-grid { flex-wrap: wrap !important; overflow-x: visible !important; padding-bottom: 0; }
-  .uc-cat-grid > .cat-card { flex: 1 0 calc(33% - 6px); min-width: 0; }
   .uc-cat-grid > .cat-card-csr { flex: 0 0 44px; min-width: 44px; max-width: 44px; padding: 8px 6px; }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
