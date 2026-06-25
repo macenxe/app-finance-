@@ -599,7 +599,7 @@ function renderModalEditionCMS(valeurActuelle) {
 }
 
 // ── Page F€ & UC ──
-function renderContrats() {
+function renderContrats(state) {
   function srriDots(n) {
     const filled = Math.max(0, Math.min(7, n));
     let s = '';
@@ -607,8 +607,13 @@ function renderContrats() {
     return `<span class="srri-bar">${s}</span>`;
   }
 
-  const perf = typeof FONDS_EUROS_PERF !== 'undefined' ? FONDS_EUROS_PERF : null;
-  const uc   = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
+  const perf   = typeof FONDS_EUROS_PERF !== 'undefined' ? FONDS_EUROS_PERF : null;
+  const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
+  const ucCat  = (state && state.ucCat) || null;
+
+  // Catégories UC dans l'ordre d'apparition
+  const cats = [...new Set(uc.map(u => u.categorie))];
+  const ucFiltrees = ucCat ? uc.filter(u => u.categorie === ucCat) : uc;
 
   return `
   <div>
@@ -625,7 +630,6 @@ function renderContrats() {
       <!-- ── Fonds en euros ── -->
       <div class="flex-sb mb-12">
         <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
-        <span class="section-hint">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</span>
       </div>
       <div class="card p-18 mb-24">
         <div class="fe-contrats mb-16">
@@ -646,9 +650,7 @@ function renderContrats() {
           </div>`).join('')}
         </div>
 
-        <div class="fe-notes">
-          ${perf.notes.map(n => `<div class="fe-note">• ${n}</div>`).join('')}
-        </div>
+        <div style="font-size:11px;color:#b5ab95;margin-top:4px;">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</div>
       </div>` : ''}
 
       <!-- ── Unités de compte ── -->
@@ -657,8 +659,20 @@ function renderContrats() {
         <span class="section-hint">${uc.length} UC · cliquer pour le graphique</span>
       </div>
 
+      <div class="cat-block">
+        <div class="cat-grid">
+          ${cats.map(cat => {
+            const n = uc.filter(u => u.categorie === cat).length;
+            return `<div class="card cat-card${ucCat === cat ? ' active' : ''}" onclick="App.setUcCat('${cat}')">
+              <div class="cat-card-nom">${cat}</div>
+              <div class="cat-card-meta">${n} fonds</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+
       <div class="uc-liste">
-        ${uc.map(u => `
+        ${ucFiltrees.map(u => `
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <span class="uc-item-rang tnum">${u.rang}</span>

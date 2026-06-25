@@ -24,7 +24,7 @@ const App = (() => {
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
       case 'prod':     el.innerHTML = renderProduits(produits, state);  break;
-      case 'contrats': el.innerHTML = renderContrats();                 break;
+      case 'contrats': el.innerHTML = renderContrats(state);            break;
       case 'alloc':    el.innerHTML = renderAllocation();               break;
       case 'veille':   el.innerHTML = renderVeille();                   break;
       case 'detail': {
@@ -174,6 +174,10 @@ const App = (() => {
     },
     setCat(cat) {
       state = { ...state, cat: state.cat === cat ? null : cat };
+      renderPage();
+    },
+    setUcCat(cat) {
+      state = { ...state, ucCat: state.ucCat === cat ? null : cat };
       renderPage();
     },
     prodSearch(q) {
