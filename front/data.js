@@ -40,11 +40,20 @@ const TAUX = [
 ];
 
 const MACRO = [
-  { nom:'Inflation zone €', valeur:'2,1 %',    var:'stable', hausse:null  },
-  { nom:'Pétrole Brent',    valeur:'84,20 $',  var:'+0,6 %', hausse:true  },
-  { nom:'Or',               valeur:'2 321 $',  var:'+0,3 %', hausse:true  },
-  { nom:'Bitcoin',          valeur:'63 400 $', var:'−1,2 %', hausse:false },
+  { nom:'Pétrole Brent', valeur:'84,20 $',  var:'+0,6 %', hausse:true  },
+  { nom:'Or',            valeur:'2 321 $',  var:'+0,3 %', hausse:true  },
+  { nom:'Bitcoin',       valeur:'63 400 $', var:'−1,2 %', hausse:false },
 ];
+
+// Dernière valeur connue des séries FRED (générée depuis front/data/history/),
+// affichée sur le tableau de bord pour coller au dernier point du graphique.
+const HISTO_DERNIER = {
+  'fred:DGS10':                 { valeur:'4,50 %', var:'-1 pb',   hausse:false },
+  'fred:IRLTLT01FRM156N':       { valeur:'3,74 %', var:'+7 pb',   hausse:true  },
+  'fred:IRLTLT01DEM156N':       { valeur:'3,05 %', var:'+5 pb',   hausse:true  },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,18 %', var:'stable',  hausse:null  },
+  'hicp:CP0000EZ19M086NEST':    { valeur:'3,1 %',  var:'+0,1 pt', hausse:true  },
+};
 
 const ALERTES = [
   { couleur:'#9a3535', texte:'<b>LC Athena Stellantis</b> — sous-jacent à 69,8 % du strike, surveillance renforcée du capital.' },
@@ -58,6 +67,49 @@ const EVENEMENTS = [
   { date:'17 juil', label:'Réunion BCE — décision de taux',     zone:'UE', important:true  },
   { date:'30 juil', label:'Réunion Fed / FOMC',                 zone:'US', important:true  },
 ];
+
+// Calendrier officiel des décisions de taux BCE et Fed (jour de l'annonce), 2026-2027.
+// Dates publiées à l'avance par les banques centrales. À revalider une fois par an.
+const CALENDRIER_MACRO = [
+  { date:'2026-02-05', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-03-19', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-04-30', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-06-11', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-07-23', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-09-10', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-10-29', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-12-17', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2027-02-04', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2027-03-18', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2027-04-29', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2027-06-10', label:'Réunion BCE — décision de taux', zone:'UE', important:true },
+  { date:'2026-01-28', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-03-18', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-04-29', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-06-17', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-07-29', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-09-16', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-10-28', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2026-12-09', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2027-01-27', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2027-03-17', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2027-04-28', label:'Réunion Fed / FOMC', zone:'US', important:true },
+  { date:'2027-06-09', label:'Réunion Fed / FOMC', zone:'US', important:true },
+];
+
+// Prochains événements macro, toujours d'actualité : décisions BCE/Fed (dates fixes) +
+// publications d'inflation récurrentes générées par règle de calendrier. Filtre sur le futur.
+function prochainsEvenementsMacro(n) {
+  n = n || 6;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const evts = CALENDRIER_MACRO.map(e => ({ ...e, d: new Date(e.date + 'T00:00:00') }));
+  for (let k = 0; k < 4; k++) {
+    const b = new Date(today.getFullYear(), today.getMonth() + k, 1);
+    evts.push({ d: new Date(b.getFullYear(), b.getMonth(), 1),  label: 'Inflation flash zone euro', zone: 'UE', important: false });
+    evts.push({ d: new Date(b.getFullYear(), b.getMonth(), 13), label: 'Inflation US (CPI)',         zone: 'US', important: false });
+  }
+  return evts.filter(e => e.d >= today).sort((a, b) => a.d - b.d).slice(0, n);
+}
 
 const VEILLE = [
   { tag:'BCE',        tagBg:'#eaf0f6', tagColor:'#16304f', date:'20 juin 2026',
@@ -170,7 +222,7 @@ const FONDS_EUROS_PERF = {
 const UC_CATALOGUE = [
   { rang:1,  nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F' },
   { rang:2,  nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F' },
-  { rang:3,  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:null          },
+  { rang:3,  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:'0P00016P7T.F' },
   { rang:4,  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F' },
   { rang:5,  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F' },
   { rang:6,  nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F' },

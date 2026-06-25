@@ -79,14 +79,20 @@ function renderDashboard(indices, produits, taux) {
       </div>
       <div class="card p-18 mb-16">
         <div class="taux-grid">
-          ${taux.map(t => { const gid = graphIdPour(t.nom); return `
+          ${[...taux, { nom: 'Inflation zone €' }].map(t => {
+            const gid = graphIdPour(t.nom);
+            const h = (gid && typeof HISTO_DERNIER !== 'undefined') ? HISTO_DERNIER[gid] : null;
+            const valeur = h ? h.valeur : t.valeur;
+            const vr = h ? h.var : t.var;
+            const hausse = h ? h.hausse : t.hausse;
+            return `
           <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
             <div class="taux-item-name">
               ${t.nom}
               ${t.nom.indexOf('CMS') !== -1 ? `<span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span><button class="btn-pencil" onclick="event.stopPropagation();App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
             </div>
-            <div class="taux-val tnum">${t.valeur}</div>
-            <div class="taux-var tnum ${t.hausse === null ? 'flat' : t.hausse ? 'up' : 'down'}">${t.var}</div>
+            <div class="taux-val tnum">${valeur}</div>
+            <div class="taux-var tnum ${hausse === null ? 'flat' : hausse ? 'up' : 'down'}">${vr || ''}</div>
             ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
           </div>`; }).join('')}
         </div>
@@ -99,10 +105,10 @@ function renderDashboard(indices, produits, taux) {
       <div class="card p-18 mb-24">
         <div class="macro-grid">
           ${MACRO.map(m => { const gid = graphIdPour(m.nom); return `
-          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}>
+          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
             <div class="taux-item-name">${m.nom}</div>
-            <div class="taux-val tnum">${m.valeur}</div>
-            <div class="taux-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}">${m.var}</div>
+            <div class="taux-val tnum" data-macro-val>${m.valeur}</div>
+            <div class="taux-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}" data-macro-var>${m.var}</div>
           </div>`; }).join('')}
         </div>
       </div>
@@ -111,12 +117,12 @@ function renderDashboard(indices, produits, taux) {
       <div class="card p-18 mb-24">
         <div class="card-title mb-12">Prochains événements macro</div>
         <div class="events-grid">
-          ${EVENEMENTS.map(e => `
+          ${prochainsEvenementsMacro(6).map(e => { const dl = e.d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }); return `
           <div class="event-item">
-            <div class="event-date tnum${e.important ? ' important' : ''}">${e.date}</div>
+            <div class="event-date tnum${e.important ? ' important' : ''}">${dl}</div>
             <div class="event-label">${e.label}</div>
             ${e.zone ? `<span class="zone-flag"><span class="fi fi-${({FR:'fr',UE:'eu',US:'us',DE:'de',UK:'gb',JP:'jp',CN:'cn'}[e.zone]||'un')} fis"></span></span>` : ''}
-          </div>`).join('')}
+          </div>`; }).join('')}
         </div>
       </div>
 
@@ -210,8 +216,9 @@ function renderProduits(produits, state) {
           ${rows.map(r => {
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
-            // CMS : % calculé autour de la barrière de COUPON (miroir : rappelé si le taux passe
-            // sous la barrière → 100 % à l'égalité, > 100 % quand le taux baisse).
+            // CMS : on affiche directement le CMS 10 ans, coloré selon sa position vs la barrière
+            // de coupon (rappelé/coupon si le taux passe sous la barrière). Vert = bon (sous la
+            // barrière), orange = presque (juste au-dessus), rouge = au-dessus.
             let pctStr, pctCouleur;
             if (niveauPct != null) {
               pctStr = niveauPct.toFixed(1) + ' %';
@@ -219,9 +226,11 @@ function renderProduits(produits, state) {
             } else if (r.type === 'cms' && r.bCouponNum) {
               const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
               if (isFinite(niv)) {
-                const v = 200 - (niv / r.bCouponNum) * 100;
-                pctStr = v.toFixed(1) + ' %';
-                pctCouleur = barrierCouleur(v, 100, false);
+                pctStr = niv.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
+                // Vert si le CMS est au niveau du strike (barrière coupon) ou en dessous ;
+                // orange jusqu'à 0,15 pt au-dessus ; rouge au-delà.
+                const d = niv - r.bCouponNum;
+                pctCouleur = d <= 0 ? 'green' : d <= 0.15 ? 'orange' : 'red';
               } else { pctStr = '—'; pctCouleur = null; }
             } else { pctStr = '—'; pctCouleur = null; }
             const barrCell = (val, pct, estBaisse) => {

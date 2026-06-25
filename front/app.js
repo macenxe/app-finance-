@@ -36,6 +36,32 @@ const App = (() => {
     el.scrollTop = 0;
     renderNav();
     mettreAJourBadgeSource();
+    if (state.page === 'dash') majCartesMarche();
+  }
+
+  // Met à jour les cartes macro Yahoo (Brent, Or, Bitcoin) avec le dernier cours,
+  // pour que la valeur affichée colle au dernier point du graphique.
+  async function majCartesMarche() {
+    if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
+    for (const card of document.querySelectorAll('[data-macro]')) {
+      const gid = card.getAttribute('data-macro');
+      if (!gid || gid.indexOf('fred:') === 0 || gid.indexOf('hicp:') === 0) continue;
+      try {
+        const r = await fetch(AppAPI.historyUrl(gid, '1j'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+        if (!r.ok) continue;
+        const pts = (await r.json()).points || [];
+        if (pts.length < 2) continue;
+        const last = pts[pts.length - 1].c, first = pts[0].c;
+        const valEl = card.querySelector('[data-macro-val]');
+        const varEl = card.querySelector('[data-macro-var]');
+        if (valEl) valEl.textContent = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
+        if (varEl && first) {
+          const pct = (last - first) / first * 100, up = pct >= 0;
+          varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+          varEl.className = 'taux-var tnum ' + (up ? 'up' : 'down');
+        }
+      } catch (_) { /* on garde la valeur affichée */ }
+    }
   }
 
   function mettreAJourBadgeSource() {
@@ -188,7 +214,7 @@ const App = (() => {
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
-      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie });
+      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin });
     },
     ouvrirCategorie(cat) {
       const membres = donnees.produits.filter(p => categorieProduit(p) === cat);

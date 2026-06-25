@@ -35,17 +35,19 @@ const Chart = (() => {
       : { day: '2-digit', month: 'short', year: 'numeric' });
   }
 
-  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé sous-jacent' }
+  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN' }
   function ouvrir(ticker, label, opts) {
     opts = opts || {};
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: opts.retour || null, sous: opts.sous || '',
+      compoIsin: opts.compoIsin || null,
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
     root.innerHTML = gabarit();
     charger(DEFAUT);
+    if (etat.compoIsin) chargerCompo(etat.compoIsin);
   }
 
   function fermer() {
@@ -83,6 +85,7 @@ const Chart = (() => {
           <div class="chart-periodes">
             ${PERIODES.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
           </div>
+          <div class="chart-compo" id="chart-compo"></div>
         </div>
       </div>
     </div>`;
@@ -103,6 +106,10 @@ const Chart = (() => {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       const data = await r.json();
       etat.points = data.points || [];
+      // Séries statiques (FRED) : le JSON contient tout l'historique → on filtre par période.
+      if (etat.ticker.indexOf('fred:') === 0 || etat.ticker.indexOf('hicp:') === 0) {
+        etat.points = filtrerPeriode(etat.points, periode);
+      }
       // Mention « proxy » éventuelle (ex. CMS 10 ans = rendement 10 ans zone euro).
       const sousEl = document.getElementById('chart-sous');
       if (sousEl) {
@@ -226,6 +233,62 @@ const Chart = (() => {
   }
 
   function retour() { if (etat.retour) etat.retour(); }
+
+  // ── Séries statiques : filtrage par période côté client ──
+  const JOURS_P = { '1j': 3, '1s': 10, '1m': 35, '6m': 190, ytd: null, '1a': 380, '3a': 1100, '5a': 1850, '10a': 3700 };
+  function filtrerPeriode(points, periode) {
+    let cutoff;
+    if (periode === 'ytd') cutoff = Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000);
+    else cutoff = Math.floor((Date.now() - (JOURS_P[periode] || 190) * 86400000) / 1000);
+    const f = points.filter(p => p.t >= cutoff);
+    return f.length >= 2 ? f : points.slice(-6);
+  }
+
+  // ── Composition d'une UC (sous le graphique) ──
+  async function chargerCompo(isin) {
+    const el = document.getElementById('chart-compo');
+    if (!el) return;
+    el.innerHTML = '<div class="chart-loading" style="padding:8px 0">Composition…</div>';
+    try {
+      const r = await fetch(`./data/uc-compo/${isin}.json`, { cache: 'force-cache' });
+      if (!r.ok) throw 0;
+      renderCompo(await r.json());
+    } catch (_) {
+      el.innerHTML = '<div class="chart-compo-note">Composition indisponible pour cette UC.</div>';
+    }
+  }
+
+  function renderCompo(d) {
+    const el = document.getElementById('chart-compo');
+    if (!el) return;
+    const esc = (s) => (window.escHtml ? escHtml(String(s)) : String(s));
+    const a = d.alloc || {};
+    const v = { action: Math.max(0, a.action || 0), obligation: Math.max(0, a.obligation || 0), liquidite: Math.max(0, a.liquidite || 0), autre: Math.max(0, a.autre || 0) };
+    const tot = v.action + v.obligation + v.liquidite + v.autre || 1;
+    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', autre: '#b5ab95' };
+    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', autre: 'Autres' };
+    const seg = Object.keys(v).filter(k => v[k] > 0.4)
+      .map(k => `<div class="compo-seg" style="width:${(v[k] / tot * 100).toFixed(1)}%;background:${COLS[k]}"></div>`).join('');
+    const leg = Object.keys(v).filter(k => v[k] > 0.4)
+      .map(k => `<span class="compo-leg"><span class="compo-pastille" style="background:${COLS[k]}"></span>${LAB[k]} ${Math.round(v[k])} %</span>`).join('');
+    const secteurs = (d.secteurs || []).slice(0, 6).map(s => `
+      <div class="compo-sect">
+        <span class="compo-sect-nom">${esc(s.nom)}</span>
+        <span class="compo-sect-bar"><span style="width:${Math.min(100, s.pct * 3).toFixed(0)}%"></span></span>
+        <span class="compo-sect-val tnum">${s.pct} %</span>
+      </div>`).join('');
+    const holdings = (d.holdings || []).length
+      ? d.holdings.map(h => `<div class="compo-hold"><span class="compo-hold-nom">${esc(h.nom)}</span><span class="tnum">${h.pct} %</span></div>`).join('')
+      : '<div class="chart-compo-note">Principales lignes non communiquées par la source.</div>';
+    el.innerHTML = `
+      <div class="compo-titre">Répartition par classe d'actifs</div>
+      <div class="compo-barre">${seg}</div>
+      <div class="compo-legende">${leg}</div>
+      ${secteurs ? `<div class="compo-titre">Secteurs</div><div class="compo-secteurs">${secteurs}</div>` : ''}
+      <div class="compo-titre">Principales lignes</div>
+      <div class="compo-holdings">${holdings}</div>
+      <div class="chart-compo-note">Répartition géographique non disponible en source gratuite. Source : Yahoo Finance / Morningstar, dernier reporting connu.</div>`;
+  }
 
   return { ouvrir, fermer, changer, retour };
 })();

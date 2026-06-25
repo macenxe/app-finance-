@@ -198,9 +198,14 @@ const AppAPI = (() => {
     return r.json();
   }
 
-  // URL de l'historique d'un graphique. En local (preview/back), le serveur de dev
-  // sert /__history (FRED inclus) ; en production, c'est le Worker Cloudflare.
+  // URL de l'historique d'un graphique.
+  // Taux & inflation (fred:/hicp:) : fichiers JSON statiques pré-générés, servis en même
+  // origine (pas de CORS, pas de clé, pas de Worker). Le reste (cours Yahoo) passe par le
+  // Worker en prod, ou le serveur de dev en local.
   function historyUrl(id, period) {
+    if (id.indexOf('fred:') === 0 || id.indexOf('hicp:') === 0) {
+      return `./data/history/${id.slice(5)}.json`;
+    }
     const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(period)}`;
     const h = location.hostname;
     if (h === 'localhost' || h === '127.0.0.1') return `${location.origin}/__history?${q}`;

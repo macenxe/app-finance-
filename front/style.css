@@ -123,7 +123,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Taux card ── */
 .taux-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
-.macro-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+.macro-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
 .taux-item-name { font-size: 11px; color: #6b6e73; }
 .taux-val { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #16304f; margin-top: 4px; white-space: nowrap; }
 .taux-var { font-size: 11px; font-weight: 600; margin-top: 2px; }
@@ -507,6 +507,28 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .chart-per:hover { border-color: #16304f; }
 .chart-per.active { background: #16304f; color: #fff; border-color: #16304f; }
 
+/* ── Composition d'une UC (sous le graphique) ── */
+.chart-compo { margin-top: 16px; border-top: 1px solid #f1ece1; padding-top: 12px; }
+.chart-compo:empty { display: none; }
+.compo-titre { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a8f7a; font-weight: 600; margin: 12px 0 7px; }
+.compo-titre:first-child { margin-top: 0; }
+.compo-barre { display: flex; height: 12px; border-radius: 3px; overflow: hidden; background: #f1ece1; }
+.compo-seg { height: 100%; }
+.compo-legende { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 8px; }
+.compo-leg { font-size: 11.5px; color: #5b5e63; display: inline-flex; align-items: center; gap: 5px; }
+.compo-pastille { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+.compo-secteurs { display: flex; flex-direction: column; gap: 5px; }
+.compo-sect { display: grid; grid-template-columns: 110px 1fr 44px; align-items: center; gap: 8px; }
+.compo-sect-nom { font-size: 11.5px; color: #3a3d42; }
+.compo-sect-bar { height: 6px; background: #f1ece1; border-radius: 3px; overflow: hidden; }
+.compo-sect-bar > span { display: block; height: 100%; background: #16304f; }
+.compo-sect-val { font-size: 11px; color: #6b6e73; text-align: right; }
+.compo-holdings { display: flex; flex-direction: column; }
+.compo-hold { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; color: #3a3d42; padding: 5px 0; border-bottom: 1px solid #f7f4ec; }
+.compo-hold:last-child { border-bottom: none; }
+.compo-hold-nom { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chart-compo-note { font-size: 10.5px; color: #b5ab95; margin-top: 10px; line-height: 1.4; }
+
 /* ── Page F€ & UC ── */
 .fe-contrats { font-size: 11.5px; color: #9a8f7a; margin-bottom: 14px; }
 .fe-contrats strong { color: #3a3d42; font-weight: 500; }
@@ -624,7 +646,10 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .grid-5 { grid-template-columns: repeat(2, 1fr); }
   .grid-2, .grid-2-narrow, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .taux-grid, .macro-grid, .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .taux-grid, .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .macro-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .macro-grid .taux-val { font-size: 17px; }
+  .macro-grid .taux-item-name { font-size: 10.5px; }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }
