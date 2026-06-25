@@ -455,17 +455,20 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .cat-card-sj   { font-size: 11px; color: #9a8f7a; margin-top: 6px; line-height: 1.4; }
 
 /* ── Bouton Conservateur (UC) ── */
-.cat-card-csr { border-color: #c9a96a; }
-.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 22px; font-weight: 700; color: #c9a96a; line-height: 1; margin-bottom: 2px; }
+.cat-card-csr { border-color: #9a7020; }
+.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 18px; font-weight: 700; color: #9a7020; line-height: 1; margin-bottom: 1px; }
 .cat-card-csr .cat-card-nom { color: #16304f; }
-.cat-card-csr.active { background: #16304f; border-color: #c9a96a; }
-.cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
-.cat-card-csr.active .cat-card-nom { color: #c9a96a; }
-.cat-card-csr.active .cat-card-meta { color: #a8b4c0; }
+.cat-card-csr.active { background: #9a7020; border-color: #9a7020; }
+.cat-card-csr.active .cat-card-csr-icon { color: #fff; }
+.cat-card-csr.active .cat-card-nom { color: #fff; }
+.cat-card-csr.active .cat-card-meta { color: #e8d8b0; }
 
-/* ── Grille UC (desktop 5 col, mobile scroll horizontal) ── */
+/* ── Grille UC (desktop 5 col compacts, mobile scroll horizontal) ── */
 .uc-cat-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.uc-cat-grid > .cat-card { padding: 11px 10px; }
+.uc-cat-grid > .cat-card { padding: 8px 8px; }
+.uc-cat-grid .cat-card-nom { font-size: 12px; }
+.uc-cat-grid .cat-card-meta { font-size: 10px; margin-top: 2px; }
+.uc-cat-grid .cat-card-csr-icon { font-size: 16px; }
 
 .cat-membres { display: flex; flex-direction: column; gap: 2px; }
 .cat-membre {

@@ -18,8 +18,9 @@ const App = (() => {
       </div>`).join('');
   }
 
-  function renderPage() {
+  function renderPage(keepScroll = false) {
     const el = document.getElementById('content');
+    const saved = keepScroll ? el.scrollTop : 0;
     const { indices, produits } = donnees;
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
@@ -33,7 +34,7 @@ const App = (() => {
         break;
       }
     }
-    el.scrollTop = 0;
+    el.scrollTop = saved;
     renderNav();
     mettreAJourBadgeSource();
     if (state.page === 'dash') majCartesMarche();
@@ -170,15 +171,15 @@ const App = (() => {
     },
     setFilter(filter) {
       state = { ...state, filter };
-      renderPage();
+      renderPage(true);
     },
     setCat(cat) {
       state = { ...state, cat: state.cat === cat ? null : cat };
-      renderPage();
+      renderPage(true);
     },
     setUcCat(cat) {
       state = { ...state, ucCat: state.ucCat === cat ? null : cat };
-      renderPage();
+      renderPage(true);
     },
     prodSearch(q) {
       state = { ...state, q };
