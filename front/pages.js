@@ -654,7 +654,7 @@ function renderContrats(state) {
           ${perf.tranches.map((t, i) => `
           <div class="fe-perf-row${i % 2 === 1 ? ' alt' : ''}">
             <div class="fe-col-uc">${t.label}</div>
-            <div class="fe-col-rate tnum fe-rate">${t.inf150}</div>
+            <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.inf150}</div>
             <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.sup150}</div>
           </div>`).join('')}
         </div>
