@@ -1,6 +1,14 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
+function perfBadge(isin, ucPerfs) {
+  const v = ucPerfs ? ucPerfs[isin] : null;
+  if (v == null) return `<span class="uc-item-perf">—</span>`;
+  const up = v >= 0;
+  const label = (up ? '+' : '') + v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+  return `<span class="uc-item-perf ${up ? 'up' : 'dn'}">${label}</span>`;
+}
+
 function barrierCouleur(niveauPct, barrierePct, estBaisse) {
   const diff = estBaisse ? barrierePct - niveauPct : niveauPct - barrierePct;
   if (diff >= 5)  return 'green';
@@ -599,7 +607,8 @@ function renderModalEditionCMS(valeurActuelle) {
 }
 
 // ── Page F€ & UC ──
-function renderContrats(state) {
+function renderContrats(state, ucPerfs) {
+  ucPerfs = ucPerfs || {};
   function srriDots(n) {
     const filled = Math.max(0, Math.min(7, n));
     let s = '';
@@ -623,9 +632,18 @@ function renderContrats(state) {
   };
   const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
   const nCsr = uc.filter(u => u.nom.includes('Conservateur')).length;
-  const ucFiltrees = ucCat === 'Conservateur'
-    ? uc.filter(u => u.nom.includes('Conservateur'))
-    : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
+  const hasPerfs = Object.keys(ucPerfs).length > 0;
+  const ucFiltrees = (() => {
+    const base = ucCat === 'Conservateur'
+      ? uc.filter(u => u.nom.includes('Conservateur'))
+      : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
+    if (!hasPerfs) return base;
+    return [...base].sort((a, b) => {
+      const pa = ucPerfs[a.isin] ?? -Infinity;
+      const pb = ucPerfs[b.isin] ?? -Infinity;
+      return pb - pa;
+    });
+  })();
 
   return `
   <div>
@@ -667,8 +685,8 @@ function renderContrats(state) {
 
       <!-- ── Unités de compte ── -->
       <div class="flex-sb mb-12">
-        <span class="section-label">Unités de compte suivies</span>
-        <span class="section-hint">${uc.length} UC · cliquer pour le graphique</span>
+        <span class="section-label">Unités de compte</span>
+        <span class="section-hint">${uc.length} UC${hasPerfs ? ' · ↓ Perf. 1 an' : ' · chargement…'}</span>
       </div>
 
       <div class="cat-block">
@@ -690,7 +708,7 @@ function renderContrats(state) {
         ${ucFiltrees.map(u => `
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
-            <span class="uc-item-rang${u.gerant === 'C' ? ' csr' : ''}">${u.gerant || u.rang}</span>
+            ${perfBadge(u.isin, ucPerfs)}
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
               <div class="uc-item-isin tnum">${u.isin}</div>

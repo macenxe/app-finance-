@@ -456,7 +456,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Bouton Conservateur (UC) ── */
 .cat-card-csr { border-color: #9a7020; background: #9a7020; display: flex; align-items: center; justify-content: center; }
-.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 22px; font-weight: 700; color: #16304f; line-height: 1; }
+.cat-card-csr-icon { font-family: 'Spectral', serif; font-size: 22px; font-weight: 700; color: #fff; line-height: 1; }
 .cat-card-csr:hover { border-color: #7a5810; background: #7a5810; }
 .cat-card-csr.active { background: #16304f; border-color: #16304f; }
 .cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
@@ -613,6 +613,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .uc-item-rang.csr {
   background: #9a7020; color: #fff; font-family: 'Spectral', serif; font-size: 12px;
 }
+.uc-item-perf {
+  flex: 0 0 auto; height: 22px; padding: 0 7px; border-radius: 11px;
+  background: #eef1f5; color: #9a8f7a; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; white-space: nowrap;
+  font-variant-numeric: tabular-nums; letter-spacing: .01em;
+}
+.uc-item-perf.up { background: #e6f4ed; color: #1d6f4c; }
+.uc-item-perf.dn { background: #fbeaea; color: #9a3535; }
 .uc-item-id { flex: 1 1 auto; min-width: 0; }
 .uc-item-nom { font-size: 13px; color: #16304f; font-weight: 600; }
 .uc-item-isin { font-size: 10.5px; color: #9a8f7a; margin-top: 2px; letter-spacing: .01em; }
@@ -667,7 +675,9 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .cat-grid { display: flex !important; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .cat-grid::-webkit-scrollbar { display: none; }
   .cat-grid > .cat-card { flex: 0 0 auto; min-width: 80px; }
-  .uc-cat-grid > .cat-card-csr { min-width: 44px; max-width: 44px; padding: 8px 6px; }
+  .uc-cat-grid { flex-wrap: wrap !important; overflow-x: visible !important; padding-bottom: 0; }
+  .uc-cat-grid > .cat-card { flex: 1 0 calc(33% - 6px); min-width: 0; }
+  .uc-cat-grid > .cat-card-csr { flex: 0 0 44px; min-width: 44px; max-width: 44px; padding: 8px 6px; }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }

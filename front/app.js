@@ -1,6 +1,29 @@
 const App = (() => {
   let state   = { page: 'dash', filter: 'tous', cat: null, q: '', detailIsin: null };
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
+  let ucPerfsCache = {};
+  let ucPerfsFetching = false;
+
+  async function chargerPerfsUC() {
+    if (ucPerfsFetching || typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
+    if (typeof UC_CATALOGUE === 'undefined') return;
+    ucPerfsFetching = true;
+    await Promise.allSettled(
+      UC_CATALOGUE.filter(u => u.graphId).map(async u => {
+        try {
+          const url = AppAPI.historyUrl(u.graphId, '1a');
+          const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+          if (!r.ok) return;
+          const pts = (await r.json()).points || [];
+          if (pts.length < 2) return;
+          const first = pts[0].c, last = pts[pts.length - 1].c;
+          if (first > 0) ucPerfsCache[u.isin] = (last - first) / first * 100;
+        } catch { /* on ignore */ }
+      })
+    );
+    ucPerfsFetching = false;
+    if (state.page === 'contrats') renderPage(true);
+  }
 
   const NAV = [
     { key: 'dash',     label: 'Tableau de bord'      },
@@ -25,7 +48,10 @@ const App = (() => {
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
       case 'prod':     el.innerHTML = renderProduits(produits, state);  break;
-      case 'contrats': el.innerHTML = renderContrats(state);            break;
+      case 'contrats':
+        el.innerHTML = renderContrats(state, ucPerfsCache);
+        if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
+        break;
       case 'alloc':    el.innerHTML = renderAllocation();               break;
       case 'veille':   el.innerHTML = renderVeille();                   break;
       case 'detail': {
