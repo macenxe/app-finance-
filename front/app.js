@@ -4,6 +4,30 @@ const App = (() => {
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
 
+  const CACHE_KEY = 'app-cache-v1';
+
+  function sauvegarderEtat() {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        page: state.page === 'detail' ? 'prod' : state.page,
+        ucCat: state.ucCat || null,
+        indices: donnees.indices,
+        taux: donnees.taux,
+        produits: donnees.produits,
+      }));
+    } catch {}
+  }
+
+  function restaurerEtat() {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return;
+      const c = JSON.parse(raw);
+      if (c.page) state = { ...state, page: c.page, ucCat: c.ucCat || null };
+      if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
+    } catch {}
+  }
+
   async function chargerPerfsUC() {
     if (ucPerfsFetching || typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
     if (typeof UC_CATALOGUE === 'undefined') return;
@@ -146,6 +170,7 @@ const App = (() => {
       ind.style.height = '52px';
       ind.classList.add('refreshing');
       donnees = await AppAPI.chargerDonnees();
+      sauvegarderEtat();
       renderPage();
       ind.classList.remove('refreshing');
       ind.style.height = '0';
@@ -174,9 +199,11 @@ const App = (() => {
   }
 
   async function init() {
+    restaurerEtat();
     renderPage();
     initPullToRefresh();
     donnees = await AppAPI.chargerDonnees();
+    sauvegarderEtat();
     renderPage();
   }
 
@@ -189,6 +216,7 @@ const App = (() => {
     },
     goto(page) {
       state = { ...state, page, q: '', detailIsin: null };
+      sauvegarderEtat();
       fermerFormulaire();
       // Ferme la sidebar sur mobile après navigation
       document.getElementById('sidebar')?.classList.remove('open');
@@ -205,6 +233,7 @@ const App = (() => {
     },
     setUcCat(cat) {
       state = { ...state, ucCat: state.ucCat === cat ? null : cat };
+      sauvegarderEtat();
       renderPage(true);
     },
     prodSearch(q) {
