@@ -188,22 +188,17 @@ function renderProduits(produits, state) {
     </header>
 
     <div style="padding:18px 30px 40px;">
-      <div class="summary-chips">
-        <div class="card chip-card green${f==='green'?' active':''}" onclick="App.setFilter('${f==='green'?'tous':'green'}')"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
-        <div class="card chip-card orange${f==='orange'?' active':''}" onclick="App.setFilter('${f==='orange'?'tous':'orange'}')"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
-        <div class="card chip-card red${f==='red'?' active':''}" onclick="App.setFilter('${f==='red'?'tous':'red'}')"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
+      <div class="uc-chips prod-chips">
+        <button class="uc-chip prod-chip-green${f==='green'?' active':''}" onclick="App.setFilter('green')">Rappel probable <span class="prod-chip-count">${count('green')}</span></button>
+        <button class="uc-chip prod-chip-orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')">Surveillance <span class="prod-chip-count">${count('orange')}</span></button>
+        <button class="uc-chip prod-chip-red${f==='red'?' active':''}" onclick="App.setFilter('red')">Risque <span class="prod-chip-count">${count('red')}</span></button>
       </div>
 
-      <div class="cat-block">
-        <div class="section-label mb-12">Sous-jacents par catégorie</div>
-        <div class="cat-grid">
-          ${grouperCategories(produits).map(c => `
-          <div class="card cat-card${catActive === c.cat ? ' active' : ''}" onclick="App.setCat('${c.cat}')">
-            <div class="cat-card-nom">${c.cat}</div>
-            <div class="cat-card-meta">${c.n} produit${c.n > 1 ? 's' : ''}</div>
-            <div class="cat-card-sj">${c.sjLabels}</div>
-          </div>`).join('')}
-        </div>
+      <div class="prod-chips-sep"></div>
+
+      <div class="uc-chips prod-chips prod-chips-cats">
+        ${grouperCategories(produits).map(c => `
+        <button class="uc-chip${catActive===c.cat?' active':''}" onclick="App.setCat('${c.cat}')">${c.cat}</button>`).join('')}
       </div>
 
 
@@ -225,27 +220,27 @@ function renderProduits(produits, state) {
             // CMS : on affiche directement le CMS 10 ans, coloré selon sa position vs la barrière
             // de coupon (rappelé/coupon si le taux passe sous la barrière). Vert = bon (sous la
             // barrière), orange = presque (juste au-dessus), rouge = au-dessus.
-            let pctStr, pctCouleur;
+            // couponColor / autoColor : vert si le niveau passe la barrière, rouge sinon (binaire).
+            // pctCouleur découle : vert si les deux verts, orange si coupon vert + autocall rouge, rouge sinon.
+            let pctStr, pctCouleur, couponColor, autoColor;
             if (niveauPct != null) {
               pctStr = niveauPct.toFixed(1) + ' %';
-              if (r.bAutoNum != null && niveauPct >= r.bAutoNum) pctCouleur = 'green';
-              else if (r.bCouponNum != null && niveauPct >= r.bCouponNum) pctCouleur = 'orange';
-              else pctCouleur = 'red';
-            } else if (r.type === 'cms' && r.bCouponNum) {
+              if (r.bCouponNum != null) couponColor = (r.estBaisse ? niveauPct <= r.bCouponNum : niveauPct >= r.bCouponNum) ? 'green' : 'red';
+              if (r.bAutoNum   != null) autoColor   = (r.estBaisse ? niveauPct <= r.bAutoNum   : niveauPct >= r.bAutoNum)   ? 'green' : 'red';
+            } else if (r.type === 'cms') {
               const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
               if (isFinite(niv)) {
                 pctStr = niv.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
-                // Vert si le CMS est au niveau du strike (barrière coupon) ou en dessous ;
-                // orange jusqu'à 0,15 pt au-dessus ; rouge au-delà.
-                const d = niv - r.bCouponNum;
-                pctCouleur = d <= 0 ? 'green' : d <= 0.15 ? 'orange' : 'red';
-              } else { pctStr = '—'; pctCouleur = null; }
-            } else { pctStr = '—'; pctCouleur = null; }
-            const barrCell = (val, pct, estBaisse) => {
+                if (r.bCouponNum != null) couponColor = niv <= r.bCouponNum ? 'green' : 'red';
+                if (r.bAutoNum   != null) autoColor   = niv <= r.bAutoNum   ? 'green' : 'red';
+              } else { pctStr = '—'; }
+            } else { pctStr = '—'; }
+            if (autoColor === 'green') pctCouleur = 'green';
+            else if (couponColor === 'green') pctCouleur = 'orange';
+            else if (autoColor === 'red' || couponColor === 'red') pctCouleur = 'red';
+            const barrCell = (val, color) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
-              const prefix = estBaisse ? '−' : '';
-              const c = (niveauPct != null && pct != null) ? barrierCouleur(niveauPct, pct, estBaisse) : r.k;
-              return `<span class="barrier-badge ${c}">${prefix}${val}</span>`;
+              return `<span class="barrier-badge ${color || r.k}">${val}</span>`;
             };
             return `
           <div class="products-table-row">
@@ -259,8 +254,8 @@ function renderProduits(produits, state) {
             <span class="col-center tnum">
               ${pctCouleur ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>` : `<span style="color:#b5ab95">${pctStr}</span>`}
             </span>
-            <span class="col-center">${barrCell(r.bCoupon, r.bCouponNum, false)}</span>
-            <span class="col-center">${barrCell(r.bAuto, r.bAutoNum, r.estBaisse)}</span>
+            <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
+            <span class="col-center">${barrCell(r.bAuto, autoColor)}</span>
             <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
           </div>`;
           }).join('')}
@@ -534,9 +529,9 @@ function escHtml(s) {
 function categorieProduit(p) {
   const n = p.nom || '';
   if (/^CAP\b/i.test(n))       return 'CAP';
-  if (/Autocall CMS/i.test(n)) return 'Autocall CMS';
+  if (/Autocall CMS/i.test(n)) return 'CMS';
   if (/Athena/i.test(n))       return 'Athena';
-  if (/Autocall/i.test(n))     return 'Autocall indice';
+  if (/Autocall/i.test(n))     return 'CAC';
   return 'Autres';
 }
 

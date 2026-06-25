@@ -186,6 +186,7 @@ function enrichirProduits(produits) {
     }
     let k;
     if (zoneAutocall === 'OUI') k = 'green';
+    else if (p.type === 'equity' && estBaisse) k = 'red';
     else if (p.type === 'equity' && (p.niveauNum / p.strikeNum) < 0.75) k = 'red';
     else k = 'orange';
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';

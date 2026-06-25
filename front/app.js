@@ -4,7 +4,7 @@ const App = (() => {
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
 
-  const CACHE_KEY = 'app-cache-v1';
+  const CACHE_KEY = 'app-cache-v2';
 
   function sauvegarderEtat() {
     try {
@@ -224,7 +224,7 @@ const App = (() => {
       renderPage();
     },
     setFilter(filter) {
-      state = { ...state, filter };
+      state = { ...state, filter: state.filter === filter ? 'tous' : filter };
       renderPage(true);
     },
     setCat(cat) {
