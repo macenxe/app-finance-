@@ -181,10 +181,9 @@ function renderProduits(produits, state) {
 
     <div style="padding:18px 30px 40px;">
       <div class="summary-chips">
-        <div class="card chip-card${f==='tous'?' active':''}" onclick="App.setFilter('tous')"><div class="chip-card-label">Produits suivis</div><div class="chip-card-val tnum">${produits.length}</div></div>
-        <div class="card chip-card green${f==='green'?' active':''}" onclick="App.setFilter('green')"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
-        <div class="card chip-card orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
-        <div class="card chip-card red${f==='red'?' active':''}" onclick="App.setFilter('red')"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
+        <div class="card chip-card green${f==='green'?' active':''}" onclick="App.setFilter('${f==='green'?'tous':'green'}')"><div class="chip-card-label">Rappel probable</div><div class="chip-card-val tnum">${count('green')}</div></div>
+        <div class="card chip-card orange${f==='orange'?' active':''}" onclick="App.setFilter('${f==='orange'?'tous':'orange'}')"><div class="chip-card-label">Sous surveillance</div><div class="chip-card-val tnum">${count('orange')}</div></div>
+        <div class="card chip-card red${f==='red'?' active':''}" onclick="App.setFilter('${f==='red'?'tous':'red'}')"><div class="chip-card-label">En risque</div><div class="chip-card-val tnum">${count('red')}</div></div>
       </div>
 
       <div class="cat-block">
@@ -221,7 +220,9 @@ function renderProduits(produits, state) {
             let pctStr, pctCouleur;
             if (niveauPct != null) {
               pctStr = niveauPct.toFixed(1) + ' %';
-              pctCouleur = barrierCouleur(niveauPct, 100, r.estBaisse);
+              if (r.bAutoNum != null && niveauPct >= r.bAutoNum) pctCouleur = 'green';
+              else if (r.bCouponNum != null && niveauPct >= r.bCouponNum) pctCouleur = 'orange';
+              else pctCouleur = 'red';
             } else if (r.type === 'cms' && r.bCouponNum) {
               const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
               if (isFinite(niv)) {

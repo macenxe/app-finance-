@@ -190,7 +190,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .barrier-badge.red    { background: #fbeaea; color: #9a3535; }
 
 /* ── Summary chips (produits page) ── */
-.summary-chips { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 18px; }
+.summary-chips { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 18px; }
 .chip-card { padding: 13px 16px; cursor: pointer; transition: box-shadow .15s, transform .15s; }
 .chip-card:hover { box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
 .chip-card-label { font-size: 11px; color: #6b6e73; }
@@ -647,7 +647,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .grid-5 { grid-template-columns: repeat(2, 1fr); }
   .grid-2, .grid-2-narrow, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .summary-chips { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }
@@ -715,6 +716,6 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
   #content { overflow-x: hidden; scrollbar-width: none; }
   #content::-webkit-scrollbar { display: none; }
-  .summary-chips { grid-template-columns: repeat(4, 1fr); }
+  .summary-chips { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(4, 1fr); }
 }
