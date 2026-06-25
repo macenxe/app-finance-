@@ -605,6 +605,18 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .val-clic { cursor: pointer; border-radius: 6px; transition: background .15s; }
 .val-clic:hover { background: #f7f4ec; }
 
+/* ── Bandeau tri UC ── */
+.uc-sort-banner {
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 10px; padding: 7px 12px;
+  background: #eef1f5; border-radius: 6px;
+  font-size: 12px; font-weight: 600; color: #16304f;
+  letter-spacing: .01em;
+}
+.uc-sort-banner.loading {
+  background: #f5f4f1; color: #9a8f7a; font-weight: 400;
+}
+
 /* Liste UC verticale (cliquable, sans défilement horizontal) */
 .uc-liste { display: flex; flex-direction: column; gap: 8px; }
 .uc-item {
@@ -628,6 +640,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .uc-item-perf.up { background: #e6f4ed; color: #1d6f4c; }
 .uc-item-perf.dn { background: #fbeaea; color: #9a3535; }
 .uc-item-bas { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
+.uc-srri-inline { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.uc-srri-label { font-size: 9px; font-weight: 700; color: #9a8f7a; letter-spacing: .04em; text-transform: uppercase; }
 .uc-expo { font-size: 11px; color: #6b6e73; }
 
 @media (max-width: 640px) {

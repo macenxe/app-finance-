@@ -686,7 +686,7 @@ function renderContrats(state, ucPerfs) {
       <!-- ── Unités de compte ── -->
       <div class="flex-sb mb-12">
         <span class="section-label">Unités de compte</span>
-        <span class="section-hint">${uc.length} UC${hasPerfs ? ' · ↓ Perf. 1 an' : ' · chargement…'}</span>
+        <span class="section-hint">${uc.length} UC</span>
       </div>
 
       <div class="uc-chips">
@@ -695,6 +695,10 @@ function renderContrats(state, ucPerfs) {
         <button class="uc-chip${ucCat === 'Actions' ? ' active' : ''}" onclick="App.setUcCat('Actions')">Actions</button>
         <button class="uc-chip${ucCat === 'Mixte / Flexible' ? ' active' : ''}" onclick="App.setUcCat('Mixte / Flexible')">Mixte</button>
         <button class="uc-chip${ucCat === 'Obligataire' ? ' active' : ''}" onclick="App.setUcCat('Obligataire')">Oblig.</button>
+      </div>
+
+      <div class="uc-sort-banner${hasPerfs ? '' : ' loading'}">
+        ${hasPerfs ? '↓ Trié par performance 1 an glissant' : '⟳ Chargement des performances…'}
       </div>
 
       <div class="uc-liste">
@@ -706,16 +710,13 @@ function renderContrats(state, ucPerfs) {
               <div class="uc-item-isin tnum">${u.isin}</div>
             </div>
             <div class="uc-item-right">
-              <div class="uc-item-perf-wrap">
-                <span class="uc-item-perf-label">Perf. 1 an</span>
-                ${perfBadge(u.isin, ucPerfs)}
-              </div>
-              ${srriDots(u.srri)}
+              ${perfBadge(u.isin, ucPerfs)}
             </div>
           </div>
           <div class="uc-item-bas">
             <span class="uc-cat-badge">${u.categorie}</span>
             <span class="uc-expo">Actions ${u.equity} %</span>
+            <span class="uc-srri-inline"><span class="uc-srri-label">SRI</span>${srriDots(u.srri)}</span>
           </div>
         </div>`).join('')}
       </div>
