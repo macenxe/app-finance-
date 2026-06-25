@@ -112,6 +112,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .index-clic { cursor: pointer; transition: border-color .15s, box-shadow .15s, transform .15s; }
 .index-clic:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
 .index-name  { font-size: 11px; color: #6b6e73; font-weight: 500; }
+.index-name-taux { display: flex; align-items: center; justify-content: center; gap: 4px; }
 .index-val   { font-family: 'Spectral', serif; font-size: 19px; font-weight: 600; color: #16304f; margin: 4px 0 2px; white-space: nowrap; }
 .index-var   { font-size: 11.5px; font-weight: 600; }
 .index-var.up   { color: #1d6f4c; }
@@ -645,11 +646,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   /* ── Grilles empilées verticalement (aucun défilement horizontal) ── */
   .grid-5 { grid-template-columns: repeat(2, 1fr); }
   .grid-2, .grid-2-narrow, .grid-4, .grid-dash-bottom, .reco-grid, .detail-grid { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .taux-grid, .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  .macro-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .macro-grid .taux-val { font-size: 17px; }
-  .macro-grid .taux-item-name { font-size: 10.5px; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .summary-chips, .cat-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
   .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 38px 56px 48px 48px; gap: 5px; }
@@ -673,10 +671,11 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .veille-tags, .filter-chips { flex-wrap: wrap; }
 
   /* ── Index cards compactes (tableau de bord) ── */
-  .index-card { padding: 8px 10px; }
-  .index-val  { font-size: 15px; margin: 2px 0 1px; }
-  .index-name { font-size: 10px; }
-  .index-var  { font-size: 10px; }
+  .index-card { padding: 7px 8px; }
+  .index-val  { font-size: 13px; margin: 2px 0 1px; }
+  .index-name { font-size: 9.5px; }
+  .index-var  { font-size: 9.5px; }
+  .taux-var   { font-size: 9.5px; }
 }
 
 /* ── Paysage mobile : sidebar overlay + tableau toutes colonnes ── */

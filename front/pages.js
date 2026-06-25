@@ -57,7 +57,7 @@ function renderDashboard(indices, produits, taux) {
     </header>
 
     <div class="page-body">
-      <!-- Indices -->
+      <!-- Indices clés -->
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
       </div>
@@ -73,44 +73,40 @@ function renderDashboard(indices, produits, taux) {
         </div>`; }).join('')}
       </div>
 
-      <!-- Taux & obligations -->
+      <!-- Actifs -->
       <div class="flex-sb mb-12">
-        <span class="section-label">Taux &amp; obligations</span>
+        <span class="section-label">Actifs</span>
       </div>
-      <div class="card p-18 mb-16">
-        <div class="taux-grid">
-          ${[...taux, { nom: 'Inflation zone €' }].map(t => {
-            const gid = graphIdPour(t.nom);
-            const h = (gid && typeof HISTO_DERNIER !== 'undefined') ? HISTO_DERNIER[gid] : null;
-            const valeur = h ? h.valeur : t.valeur;
-            const vr = h ? h.var : t.var;
-            const hausse = h ? h.hausse : t.hausse;
-            return `
-          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
-            <div class="taux-item-name">
-              ${t.nom}
-              ${t.nom.indexOf('CMS') !== -1 ? `<span class="source-badge offline" style="font-size:9px;padding:1px 5px;vertical-align:middle;">statique</span><button class="btn-pencil" onclick="event.stopPropagation();App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
-            </div>
-            <div class="taux-val tnum">${valeur}</div>
-            <div class="taux-var tnum ${hausse === null ? 'flat' : hausse ? 'up' : 'down'}">${vr || ''}</div>
-            ${t.manuel && t.dateMaj ? `<div class="taux-maj">saisie du ${t.dateMaj}</div>` : ''}
-          </div>`; }).join('')}
-        </div>
+      <div class="grid-3 mb-24">
+        ${MACRO.map(m => { const gid = graphIdPour(m.nom); return `
+        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
+          <div class="index-name">${m.nom}</div>
+          <div class="index-val tnum" data-macro-val>${m.valeur}</div>
+          <div class="index-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}" data-macro-var>${m.hausse ? '▲' : '▼'} ${m.var}</div>
+        </div>`; }).join('')}
       </div>
 
-      <!-- Indicateurs macro & actifs -->
+      <!-- Taux et indicateurs macro -->
       <div class="flex-sb mb-12">
-        <span class="section-label">Indicateurs macro &amp; actifs</span>
+        <span class="section-label">Taux &amp; indicateurs macro</span>
       </div>
-      <div class="card p-18 mb-24">
-        <div class="macro-grid">
-          ${MACRO.map(m => { const gid = graphIdPour(m.nom); return `
-          <div class="${gid ? 'val-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
-            <div class="taux-item-name">${m.nom}</div>
-            <div class="taux-val tnum" data-macro-val>${m.valeur}</div>
-            <div class="taux-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}" data-macro-var>${m.var}</div>
-          </div>`; }).join('')}
-        </div>
+      <div class="grid-3 mb-24">
+        ${[...taux, { nom: 'Inflation zone €' }].map(t => {
+          const gid = graphIdPour(t.nom);
+          const h = (gid && typeof HISTO_DERNIER !== 'undefined') ? HISTO_DERNIER[gid] : null;
+          const valeur = h ? h.valeur : t.valeur;
+          const vr = h ? h.var : t.var;
+          const hausse = h ? h.hausse : t.hausse;
+          return `
+        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
+          <div class="index-name index-name-taux">
+            ${t.nom}
+            ${t.nom.indexOf('CMS') !== -1 ? `<button class="btn-pencil" onclick="event.stopPropagation();App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
+          </div>
+          <div class="index-val tnum">${valeur || '—'}</div>
+          <div class="taux-var tnum ${hausse === null ? 'flat' : hausse ? 'up' : 'down'}">${vr || ''}</div>
+          ${t.manuel && t.dateMaj ? `<div class="taux-maj">${t.dateMaj}</div>` : ''}
+        </div>`; }).join('')}
       </div>
 
       <!-- Événements macro pleine largeur -->
@@ -129,7 +125,10 @@ function renderDashboard(indices, produits, taux) {
       <!-- Prochaines dates clés — pleine largeur -->
       <div class="card p-18">
         <div class="flex-sb mb-12">
-          <div class="card-title">Prochaines dates clés <span style="font-size:11px;font-weight:400;color:#9a8f7a;margin-left:6px;">· Produits structurés · 60 jours</span></div>
+          <div>
+            <div class="card-title">Prochaines dates clés</div>
+            <div style="font-size:11px;color:#9a8f7a;margin-top:3px;">Produits structurés · 60 prochains jours</div>
+          </div>
           <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
         </div>
         ${prochainsDates.length === 0
