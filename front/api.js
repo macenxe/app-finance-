@@ -34,6 +34,7 @@ const AppAPI = (() => {
     const niveauNum = p.cours?.dernierCours ?? null;
     const estBaisse = p.typeProduit === 'cms' ||
       (p.typeProduit === 'equity' && p.barriereAutocall != null && p.barriereAutocall < 100);
+    const staticP = typeof PRODUITS !== 'undefined' ? PRODUITS.find(x => x.isin === p.isin) : null;
 
     return {
       id:          p.id,
@@ -59,6 +60,7 @@ const AppAPI = (() => {
       estBaisse,
       statut:      statuts[k],
       pct,
+      protection:  staticP ? (staticP.protection ?? null) : null,
     };
   }
 

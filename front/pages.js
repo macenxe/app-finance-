@@ -23,6 +23,8 @@ function abregerMois(nom) {
     Jan:'01', Fév:'02', Mar:'03', Avr:'04', Juil:'07', Aoû:'08', Sep:'09', Oct:'10', Nov:'11', Déc:'12',
   };
   return nom
+    .replace(/\bConservateur\s+/g, '')
+    .replace(/\bLC\s+/g, '')
     .replace(/\bAutocall\s+/g, '')
     .replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre|Jan|Fév|Mar|Avr|Juil|Aoû|Sep|Oct|Nov|Déc)\s+(\d{4})\b/g,
       (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
@@ -149,7 +151,7 @@ function renderDashboard(indices, produits, taux) {
           <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
             <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
             <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
-            <span class="dates-cles-nom">${p.nom.replace('Conservateur ', 'C. ')}</span>
+            <span class="dates-cles-nom">${abregerMois(p.nom)}</span>
             <span class="col-right"><span class="badge ${p.k}">${p.statut}</span></span>
           </div>`).join('')}
         </div>`}
@@ -165,6 +167,8 @@ function renderProduits(produits, state) {
   let rows = f === 'tous' ? produits : produits.filter(r => r.k === f);
   if (catActive) rows = rows.filter(r => categorieProduit(r) === catActive);
   if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
+  const parseConstat = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? new Date(+m[3], +m[2]-1, +m[1]) : new Date(0); };
+  rows = [...rows].sort((a, b) => parseConstat(a.constat) - parseConstat(b.constat));
 
   const count = k => produits.filter(r => r.k === k).length;
 
@@ -206,22 +210,18 @@ function renderProduits(produits, state) {
         <div class="products-table">
           <div class="products-table-header">
             <span>Nom commercial</span>
-            <span>Prochaine const.</span>
-            <span class="col-right">Coupon</span>
+            <span>Prochaine const. ↑</span>
+            <span class="col-center">Coupon</span>
             <span class="col-landscape col-right">Strike</span>
             <span class="col-center">% Strike</span>
             <span class="col-center">B. Coupon</span>
             <span class="col-center">B. Autocall</span>
             <span class="col-landscape">Statut</span>
           </div>
-          ${rows.map(r => {
+          ${grouperLignes(rows).map(g => {
+            const r = g.type === 'group' ? g.ref : g.r;
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
-            // CMS : on affiche directement le CMS 10 ans, coloré selon sa position vs la barrière
-            // de coupon (rappelé/coupon si le taux passe sous la barrière). Vert = bon (sous la
-            // barrière), orange = presque (juste au-dessus), rouge = au-dessus.
-            // couponColor / autoColor : vert si le niveau passe la barrière, rouge sinon (binaire).
-            // pctCouleur découle : vert si les deux verts, orange si coupon vert + autocall rouge, rouge sinon.
             let pctStr, pctCouleur, couponColor, autoColor;
             if (niveauPct != null) {
               pctStr = niveauPct.toFixed(1) + ' %';
@@ -242,18 +242,39 @@ function renderProduits(produits, state) {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
               return `<span class="barrier-badge ${color || r.k}">${val}</span>`;
             };
+            const pctBadge = pctCouleur
+              ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>`
+              : `<span style="color:#b5ab95">${pctStr}</span>`;
+
+            if (g.type === 'group') {
+              const groupName = abregerMois(r.nom).replace(/\s+\d{2}\s+/, ' ');
+              const cp = 'padding-top:32px;';
+              return `
+          <div class="products-table-row" style="align-items:flex-start;">
+            <span class="col-nom">
+              <span class="col-nom-text">${groupName}</span>
+              <div class="col-nom-vars">
+                ${g.membres.map(m => `<span class="col-nom-var" onclick="App.voirDetail('${m.isin}')">${m.protection || ''}</span>`).join('')}
+              </div>
+            </span>
+            <span class="tnum col-dim" style="font-size:11.5px;${cp}">${r.constat}</span>
+            <span class="tnum col-center" style="display:flex;flex-direction:column;gap:4px;padding-top:22px;">${g.membres.map(m => `<span style="height:20px;display:flex;align-items:center;justify-content:center;">${m.coupon}</span>`).join('')}</span>
+            <span class="col-landscape tnum col-right" style="font-size:11.5px;${cp}">${r.strike || '—'}</span>
+            <span class="col-center tnum" style="${cp}">${pctBadge}</span>
+            <span class="col-center" style="${cp}">${barrCell(r.bCoupon, couponColor)}</span>
+            <span class="col-center" style="${cp}">${barrCell(r.bAuto, autoColor)}</span>
+            <span class="col-landscape" style="${cp}"><span class="badge ${r.k}">${r.statut}</span></span>
+          </div>`;
+            }
             return `
           <div class="products-table-row">
             <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
-              <span class="col-nom-text">${abregerMois(r.nom.replace('Conservateur ', 'C. '))}</span>
-              <span class="col-nom-hint">voir détail</span>
+              <span class="col-nom-text">${abregerMois(r.nom)}</span>
             </span>
             <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
-            <span class="tnum col-right">${r.coupon}</span>
+            <span class="tnum col-center">${r.coupon}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-center tnum">
-              ${pctCouleur ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>` : `<span style="color:#b5ab95">${pctStr}</span>`}
-            </span>
+            <span class="col-center tnum">${pctBadge}</span>
             <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
             <span class="col-center">${barrCell(r.bAuto, autoColor)}</span>
             <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
@@ -420,6 +441,11 @@ function renderDetail(produit) {
               <span class="detail-key">Zone autocall</span>
               <span class="detail-val">${produit.zoneAutocall === 'OUI' ? '<span style="color:#1d6f4c;font-weight:600;">OUI ✓</span>' : 'NON'}</span>
             </div>
+            ${produit.protection != null ? `
+            <div class="detail-row">
+              <span class="detail-key">Protection capital</span>
+              <span class="detail-val tnum" style="font-weight:600;color:#1d6f4c;white-space:nowrap;">${escHtml(String(produit.protection))}</span>
+            </div>` : ''}
           </div>
         </div>
 
@@ -533,6 +559,28 @@ function categorieProduit(p) {
   if (/Athena/i.test(n))       return 'Athena';
   if (/Autocall/i.test(n))     return 'CAC';
   return 'Autres';
+}
+
+// Regroupe les lignes CAP qui partagent la même date de constatation et d'échéance.
+function grouperLignes(rows) {
+  const groupes = [];
+  const used = new Set();
+  rows.forEach((r, i) => {
+    if (used.has(i)) return;
+    used.add(i);
+    if (categorieProduit(r) !== 'CAP') { groupes.push({ type: 'single', r }); return; }
+    const membres = [r];
+    rows.forEach((r2, j) => {
+      if (j <= i || used.has(j)) return;
+      if (categorieProduit(r2) === 'CAP' && r2.constat === r.constat && r2.ech === r.ech) {
+        membres.push(r2); used.add(j);
+      }
+    });
+    groupes.push(membres.length > 1
+      ? { type: 'group', membres, ref: membres[0] }
+      : { type: 'single', r: membres[0] });
+  });
+  return groupes;
 }
 
 // Regroupe les produits par catégorie (ordre d'apparition conservé).
