@@ -230,6 +230,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .products-table-row:last-child { border-bottom: none; }
 .products-table-row:hover { background: #faf8f3; }
+.month-sep {
+  display: flex; align-items: center; gap: 7px;
+  padding: 10px 16px 4px;
+  font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #9a8f7a;
+  border-top: 2px solid #ece7dc;
+}
+.month-sep:first-child { border-top: none; padding-top: 4px; }
+.month-sep::before { content: ''; display: inline-block; width: 3px; height: 11px; background: #c9a96a; border-radius: 2px; flex-shrink: 0; }
 /* Centrage des colonnes (notre principe appliqué à la table simplifiée) */
 .products-table-header span, .products-table-row > span { text-align: center; }
 .products-table-header span:first-child { text-align: left; }

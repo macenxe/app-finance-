@@ -153,13 +153,22 @@ function renderDashboard(indices, produits, taux) {
           <div class="dates-cles-header">
             <span>Date</span><span class="col-right">Dans</span><span>Produit</span><span class="col-right">Statut</span>
           </div>
-          ${prochainsDates.map(({ p, d, jours }) => `
+          ${prochainsDates.map(({ p, d, jours }) => {
+            const couponColor = p.bCouponNum != null ? (p.couponAtteint ? 'green' : 'red') : null;
+            const autoColor   = p.zoneAutocall === 'OUI' ? 'green' : 'red';
+            const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
+            const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
+            const statutCell = p.belowProtection
+              ? `<span class="badge red">Risque</span>`
+              : `<div class="statut-pills">${cPill}${rPill}</div>`;
+            return `
           <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
             <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
             <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
             <span class="dates-cles-nom">${abregerMois(p.nom)}</span>
-            <span class="col-right"><span class="badge ${p.k}">${p.statut}</span></span>
-          </div>`).join('')}
+            <span class="col-right">${statutCell}</span>
+          </div>`;
+          }).join('')}
         </div>`}
       </div>
     </div>
@@ -170,13 +179,18 @@ function renderProduits(produits, state) {
   const q = (state.q || '').trim().toLowerCase();
   const f = state.filter || 'tous';
   const catActive = state.cat || null;
-  let rows = f === 'tous' ? produits : produits.filter(r => r.k === f);
+  let rows = produits;
+  if      (f === 'green')  rows = produits.filter(r => r.zoneAutocall === 'OUI');
+  else if (f === 'orange') rows = produits.filter(r => r.couponAtteint === true);
+  else if (f === 'red')    rows = produits.filter(r => r.belowProtection === true);
   if (catActive) rows = rows.filter(r => categorieProduit(r) === catActive);
   if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
   const parseConstat = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? new Date(+m[3], +m[2]-1, +m[1]) : new Date(0); };
   rows = [...rows].sort((a, b) => parseConstat(a.constat) - parseConstat(b.constat));
 
-  const count = k => produits.filter(r => r.k === k).length;
+  const countVert   = produits.filter(r => r.zoneAutocall === 'OUI').length;
+  const countCoupon = produits.filter(r => r.couponAtteint === true).length;
+  const countRisque = produits.filter(r => r.belowProtection === true).length;
 
   const chips = [
     { key:'tous',   label:`Tous (${produits.length})` },
@@ -200,13 +214,13 @@ function renderProduits(produits, state) {
     <div style="padding:18px 30px 40px;">
       <div class="prod-stat-chips">
         <button class="prod-stat-chip prod-stat-green${f==='green'?' active':''}" onclick="App.setFilter('green')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('green')}</span><span class="prod-stat-label">Zone Rappel</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countVert}</span><span class="prod-stat-label">Zone Rappel</span>
         </button>
         <button class="prod-stat-chip prod-stat-orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('orange')}</span><span class="prod-stat-label">Zone Coupon</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countCoupon}</span><span class="prod-stat-label">Zone Coupon</span>
         </button>
         <button class="prod-stat-chip prod-stat-red${f==='red'?' active':''}" onclick="App.setFilter('red')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('red')}</span><span class="prod-stat-label">Risque</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countRisque}</span><span class="prod-stat-label">Risque</span>
         </button>
       </div>
 
@@ -230,8 +244,15 @@ function renderProduits(produits, state) {
             <span class="col-center">B. Auto</span>
             <span class="col-landscape">Statut</span>
           </div>
-          ${grouperLignes(rows).map(g => {
+          ${(() => {
+            const MOIS_FR_TAB = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+            const moisClef = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? `${m[2]}-${m[3]}` : null; };
+            const moisLabel = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? `${MOIS_FR_TAB[parseInt(m[2])-1]} ${m[3]}` : null; };
+            let dernierMois = null;
+            return grouperLignes(rows).map(g => {
             const r = g.type === 'group' ? g.ref : g.r;
+            const clef = moisClef(r.constat);
+            const sep = (clef && clef !== dernierMois) ? (() => { dernierMois = clef; return `<div class="month-sep"><span>${moisLabel(r.constat)}</span></div>`; })() : (dernierMois = dernierMois, '');
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
             let pctStr, pctCouleur, couponColor, autoColor;
@@ -277,7 +298,7 @@ function renderProduits(produits, state) {
               const cpnVals = g.membres.map(m => parseFloat(String(m.coupon).replace(',', '.'))).filter(v => !isNaN(v));
               const cpnMin = Math.min(...cpnVals), cpnMax = Math.max(...cpnVals);
               const cpnRange = cpnVals.length > 1 && cpnMin !== cpnMax ? `${cpnMin}–${cpnMax} %` : r.coupon;
-              return `
+              return sep + `
           <div class="products-table-row">
             <span class="col-nom" onclick="App.voirDetail('${g.membres[0].isin}')">
               <span class="col-nom-text">${groupName}</span>
@@ -291,7 +312,7 @@ function renderProduits(produits, state) {
             <span class="col-landscape">${statutCell}</span>
           </div>`;
             }
-            return `
+            return sep + `
           <div class="products-table-row">
             <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
               <span class="col-nom-text">${abregerMois(r.nom)}</span>
@@ -304,7 +325,7 @@ function renderProduits(produits, state) {
             <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
             <span class="col-landscape">${statutCell}</span>
           </div>`;
-          }).join('')}
+          }).join(''); })()}
         </div>
       </div>
       <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
