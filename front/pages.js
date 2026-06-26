@@ -407,6 +407,8 @@ function renderDetail(produit) {
     </header>
 
     <div style="padding:18px 30px 40px;">
+      <div id="detail-chart-inline" class="detail-chart-inline"></div>
+
       <div class="detail-status-row">
         <span class="badge ${produit.k} badge-lg">${produit.statut}</span>
         ${produit.zoneAutocall === 'OUI' ? `<span class="detail-autocall-tag">Zone autocall franchie</span>` : ''}

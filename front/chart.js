@@ -290,7 +290,32 @@ const Chart = (() => {
       <div class="chart-compo-note">Répartition géographique non disponible en source gratuite. Source : Yahoo Finance / Morningstar, dernier reporting connu.</div>`;
   }
 
-  return { ouvrir, fermer, changer, retour };
+  function ouvrirInline(containerId, ticker, label, opts) {
+    opts = opts || {};
+    etat = {
+      ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
+      lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
+      compoIsin: null, inlineId: containerId,
+    };
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    const esc = (s) => (window.escHtml ? escHtml(s) : s);
+    el.innerHTML = `
+      <div class="chart-readout">
+        <div class="chart-prix tnum" id="chart-prix">—</div>
+        <div class="chart-meta">
+          <span class="chart-var tnum" id="chart-var"></span>
+          <span class="chart-date" id="chart-date"></span>
+        </div>
+      </div>
+      <div class="chart-zone" id="chart-zone"><div class="chart-loading">Chargement…</div></div>
+      <div class="chart-periodes">
+        ${PERIODES.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
+      </div>`;
+    charger(DEFAUT);
+  }
+
+  return { ouvrir, ouvrirInline, fermer, changer, retour };
 })();
 
 window.Chart = Chart;

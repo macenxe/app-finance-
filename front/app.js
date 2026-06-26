@@ -81,6 +81,20 @@ const App = (() => {
       case 'detail': {
         const p = produits.find(p => p.isin === state.detailIsin);
         el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
+        if (p && window.Chart) {
+          const lignes = [];
+          if (p.type === 'equity' && p.strikeNum) {
+            lignes.push({ valeur: p.strikeNum, label: 'Strike', couleur: '#16304f' });
+            if (p.bAutoNum != null) {
+              const v = (p.bAutoNum / 100) * p.strikeNum;
+              if (Math.abs(v - p.strikeNum) > p.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+            }
+            if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
+          }
+          Chart.ouvrirInline('detail-chart-inline', p.ticker || p.sjLabel || p.sj, p.nom, {
+            lignes, sous: p.sjLabel || p.sj,
+          });
+        }
         break;
       }
     }
