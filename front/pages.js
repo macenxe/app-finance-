@@ -406,7 +406,7 @@ function renderDetail(produit) {
       </div>
     </header>
 
-    <div style="padding:18px 30px 40px;">
+    <div class="detail-content">
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
       <div class="detail-status-row">
