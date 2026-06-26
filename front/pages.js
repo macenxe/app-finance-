@@ -194,18 +194,15 @@ function renderProduits(produits, state) {
     <div style="padding:18px 30px 40px;">
       <div class="prod-stat-chips">
         <button class="prod-stat-chip prod-stat-green${f==='green'?' active':''}" onclick="App.setFilter('green')">
-          <span class="prod-stat-icon">✓</span>
-          <span class="prod-stat-count">${count('green')}</span>
+          <div class="prod-stat-top"><span class="prod-stat-icon">✓</span><span class="prod-stat-count">${count('green')}</span></div>
           <span class="prod-stat-label">Rappel probable</span>
         </button>
         <button class="prod-stat-chip prod-stat-orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')">
-          <span class="prod-stat-icon">⚠</span>
-          <span class="prod-stat-count">${count('orange')}</span>
+          <div class="prod-stat-top"><span class="prod-stat-icon">⚠</span><span class="prod-stat-count">${count('orange')}</span></div>
           <span class="prod-stat-label">Surveillance</span>
         </button>
         <button class="prod-stat-chip prod-stat-red${f==='red'?' active':''}" onclick="App.setFilter('red')">
-          <span class="prod-stat-icon">✕</span>
-          <span class="prod-stat-count">${count('red')}</span>
+          <div class="prod-stat-top"><span class="prod-stat-icon">✕</span><span class="prod-stat-count">${count('red')}</span></div>
           <span class="prod-stat-label">Risque</span>
         </button>
       </div>
