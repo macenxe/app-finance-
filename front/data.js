@@ -25,7 +25,7 @@ const PRODUITS = [
 const INDICES_MARCHE = [
   { nom:'CAC 40',           ticker:'^FCHI',     valeur:'8 351,20', var:'−0,23 %', hausse:false },
   { nom:'Euro Stoxx 50',    ticker:'^STOXX50E', valeur:'5 124,30', var:'+0,42 %', hausse:true  },
-  { nom:'Euro Stoxx Banks', ticker:'SX7E.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true  },
+  { nom:'Euro Stoxx Banks', ticker:'BNKE.PA',   valeur:'277,95',   var:'+0,87 %', hausse:true  },
   { nom:'S&P 500',          ticker:'^GSPC',     valeur:'5 487,12', var:'+0,18 %', hausse:true  },
   { nom:'Nasdaq',           ticker:'^IXIC',     valeur:'26 166,6', var:'+0,55 %', hausse:true  },
   { nom:'MSCI World',       ticker:'IWDA.AS',   valeur:'4 102,50', var:'+0,31 %', hausse:true  },
@@ -134,7 +134,7 @@ const VEILLE = [
 
 // Ticker Yahoo des sous-jacents (pour le graphique en mode statique hors-ligne).
 const TICKERS_SJ = {
-  'CAC 40':'^FCHI', 'ES Banks':'SX7E.PA', 'CMS 10 ans':'CMS10',
+  'CAC 40':'^FCHI', 'ES Banks':'BNKE.PA', 'CMS 10 ans':'CMS10',
   'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA',
 };
 
