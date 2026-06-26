@@ -206,9 +206,6 @@ function renderProduits(produits, state) {
         <div class="page-title">Autocalls · Produits structurés</div>
         <div class="page-sub">${produits.length} produits suivis</div>
       </div>
-      <div class="header-actions">
-        <button class="btn-primary" onclick="App.ouvrirFormulaire()">+ Ajouter un produit</button>
-      </div>
     </header>
 
     <div style="padding:18px 30px 40px;">
