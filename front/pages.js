@@ -180,8 +180,8 @@ function renderProduits(produits, state) {
 
   const chips = [
     { key:'tous',   label:`Tous (${produits.length})` },
-    { key:'green',  label:'Rappel probable' },
-    { key:'orange', label:'Surveillance' },
+    { key:'green',  label:'Zone Rappel' },
+    { key:'orange', label:'Zone Coupon' },
     { key:'red',    label:'Risque' },
   ];
 
@@ -435,8 +435,15 @@ function renderDetail(produit) {
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
       <div class="detail-status-row">
-        <span class="badge ${produit.k} badge-lg">${produit.statut}</span>
-        ${produit.zoneAutocall === 'OUI' ? `<span class="detail-autocall-tag">Zone autocall franchie</span>` : ''}
+        ${(() => {
+          const couponColor = produit.bCouponNum != null ? (produit.couponAtteint ? 'green' : 'red') : null;
+          const autoColor = produit.zoneAutocall === 'OUI' ? 'green' : 'red';
+          const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
+          const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
+          return produit.belowProtection
+            ? `<span class="badge red badge-lg">Risque</span>`
+            : `<div class="statut-pills">${cPill}${rPill}</div>`;
+        })()}
       </div>
 
       <div class="detail-grid">
