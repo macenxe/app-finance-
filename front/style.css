@@ -484,7 +484,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
 
 /* ── Chips filtres UC ── */
-.uc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.uc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; justify-content: center; }
 .uc-chip {
   height: 28px; padding: 0 12px; border-radius: 14px;
   border: 1.5px solid #ece7dc; background: #fff;
