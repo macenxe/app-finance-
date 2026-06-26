@@ -246,7 +246,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .col-center   { text-align: center; }
 .col-nom      { cursor: pointer; text-align: left; }
 .col-nom:hover .col-nom-text { text-decoration: underline; }
-.col-nom-text { display: block; color: #16304f; font-weight: 500; text-align: left; }
+.col-nom-text { display: block; color: #16304f; font-weight: 500; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .col-nom-hint { display: block; font-size: 9px; color: #c0b89a; letter-spacing: .02em; font-weight: 400; margin-top: 1px; }
 .statut-pills { display: flex; flex-direction: row; gap: 4px; align-items: center; flex-wrap: nowrap; justify-content: flex-end; }
 .statut-pill { display: inline-block; font-size: 9px; font-weight: 600; padding: 1px 7px; border-radius: 8px; white-space: nowrap; }
