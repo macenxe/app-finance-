@@ -4,7 +4,26 @@ const App = (() => {
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
 
-  const CACHE_KEY = 'app-cache-v3';
+  const CACHE_KEY       = 'app-cache-v3';
+  const CMS_OVERRIDE_KEY = 'cms-taux-override';
+
+  function appliquerCMSInterne(valeur) {
+    const fmt2 = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    donnees.taux = donnees.taux.map(t => {
+      if (t.nom !== 'CMS 10 ans') return t;
+      return { ...t, valeur: fmt2(valeur) + ' %', dateMaj: new Date().toISOString().slice(0, 10) };
+    });
+    donnees.produits = donnees.produits.map(p => {
+      if (p.type !== 'cms') return p;
+      const niveauNum = valeur;
+      const niveau = fmt2(valeur);
+      const zoneAutocall = p.bAutoNum != null ? (niveauNum <= p.bAutoNum ? 'OUI' : 'NON') : p.zoneAutocall;
+      const couponAtteint = p.bCouponNum != null ? niveauNum <= p.bCouponNum : false;
+      const k = zoneAutocall === 'OUI' ? 'green' : 'orange';
+      const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
+      return { ...p, niveauNum, niveau, zoneAutocall, couponAtteint, k, statut: statuts[k] };
+    });
+  }
 
   function sauvegarderEtat() {
     try {
@@ -217,6 +236,16 @@ const App = (() => {
     renderPage();
     initPullToRefresh();
     donnees = await AppAPI.chargerDonnees();
+    if (donnees.source !== 'api') {
+      // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.
+      try {
+        const raw = localStorage.getItem(CMS_OVERRIDE_KEY);
+        if (raw) { const v = parseFloat(raw); if (!isNaN(v) && v > 0) appliquerCMSInterne(v); }
+      } catch {}
+    } else {
+      // Back disponible : il est la source de vérité, l'override local est obsolète.
+      try { localStorage.removeItem(CMS_OVERRIDE_KEY); } catch {}
+    }
     sauvegarderEtat();
     renderPage();
   }
@@ -318,29 +347,7 @@ const App = (() => {
         lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
       });
     },
-    appliquerCMSLocal(valeur) {
-      const fmt2 = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      // Met à jour l'affichage du taux dans donnees.taux
-      donnees.taux = donnees.taux.map(t => {
-        if (t.nom !== 'CMS 10 ans') return t;
-        return { ...t, valeur: fmt2(valeur) + ' %', dateMaj: new Date().toISOString().slice(0, 10) };
-      });
-      // Recalcule les produits CMS avec le nouveau niveau
-      donnees.produits = donnees.produits.map(p => {
-        if (p.type !== 'cms') return p;
-        const niveauNum = valeur;
-        const niveau = fmt2(valeur);
-        const bAutoRaw  = p.bAutoNum;
-        const bCouponNum = p.bCouponNum;
-        const zoneAutocall = bAutoRaw != null ? (niveauNum <= bAutoRaw ? 'OUI' : 'NON') : p.zoneAutocall;
-        const couponAtteint = bCouponNum != null ? niveauNum <= bCouponNum : false;
-        let k;
-        if (zoneAutocall === 'OUI') k = 'green';
-        else k = 'orange';
-        const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
-        return { ...p, niveauNum, niveau, zoneAutocall, couponAtteint, k, statut: statuts[k] };
-      });
-    },
+    appliquerCMSLocal(valeur) { appliquerCMSInterne(valeur); },
     ouvrirEditionCMS() {
       const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
       const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;
@@ -366,10 +373,14 @@ const App = (() => {
       try {
         await AppAPI.mettreAJourCMS(valeur);
         donnees = await AppAPI.chargerDonnees();
+        // Back dispo : il persiste la valeur — on efface l'override local devenu inutile.
+        try { localStorage.removeItem(CMS_OVERRIDE_KEY); } catch {}
       } catch {
-        // Pas de back local : applique le taux CMS en mémoire sans passer par l'API.
-        App.appliquerCMSLocal(valeur);
+        // Back indisponible : applique en mémoire et persiste localement.
+        appliquerCMSInterne(valeur);
+        try { localStorage.setItem(CMS_OVERRIDE_KEY, String(valeur)); } catch {}
       }
+      sauvegarderEtat();
       const root = document.getElementById('modal-root');
       if (root) root.innerHTML = '';
       renderPage();
