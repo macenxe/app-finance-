@@ -252,7 +252,12 @@ function renderProduits(produits, state) {
             return grouperLignes(rows).map(g => {
             const r = g.type === 'group' ? g.ref : g.r;
             const clef = moisClef(r.constat);
-            const sep = (clef && clef !== dernierMois) ? (() => { dernierMois = clef; return `<div class="month-sep"><span>${moisLabel(r.constat)}</span></div>`; })() : (dernierMois = dernierMois, '');
+            const labelFallback = r.constat && !clef ? 'Constatation mensuelle' : null;
+            const sep = clef && clef !== dernierMois
+              ? (() => { dernierMois = clef; return `<div class="month-sep"><span>${moisLabel(r.constat)}</span></div>`; })()
+              : (!clef && labelFallback && dernierMois !== '__mensuel__')
+                ? (() => { dernierMois = '__mensuel__'; return `<div class="month-sep month-sep--info"><span>${labelFallback}</span></div>`; })()
+                : '';
             const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
               ? (r.niveauNum / r.strikeNum * 100) : null;
             let pctStr, pctCouleur, couponColor, autoColor;

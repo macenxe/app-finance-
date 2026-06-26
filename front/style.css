@@ -238,6 +238,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .month-sep:first-child { border-top: none; padding-top: 4px; }
 .month-sep::before { content: ''; display: inline-block; width: 3px; height: 11px; background: #c9a96a; border-radius: 2px; flex-shrink: 0; }
+.month-sep--info::before { background: #9a8f7a; }
+.month-sep--info span { font-style: italic; letter-spacing: .03em; }
 /* Centrage des colonnes (notre principe appliqué à la table simplifiée) */
 .products-table-header span, .products-table-row > span { text-align: center; }
 .products-table-header span:first-child { text-align: left; }
