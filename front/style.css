@@ -233,14 +233,21 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* Centrage des colonnes (notre principe appliqué à la table simplifiée) */
 .products-table-header span, .products-table-row > span { text-align: center; }
 .products-table-header span:first-child { text-align: left; }
+.products-table-header span { white-space: nowrap; }
 .col-right    { text-align: right; }
 .col-center   { text-align: center; }
 .col-nom      { cursor: pointer; text-align: left; }
 .col-nom:hover .col-nom-text { text-decoration: underline; }
 .col-nom-text { display: block; color: #16304f; font-weight: 500; text-align: left; }
 .col-nom-hint { display: block; font-size: 9px; color: #c0b89a; letter-spacing: .02em; font-weight: 400; margin-top: 1px; }
+.statut-pills { display: flex; flex-direction: row; gap: 4px; align-items: center; flex-wrap: nowrap; justify-content: flex-end; }
+.statut-pill { display: inline-block; font-size: 9px; font-weight: 600; padding: 1px 7px; border-radius: 8px; white-space: nowrap; }
+.statut-pill.green { background: #d4eddf; color: #1d6f4c; }
+.statut-pill.red   { background: #f5dada; color: #9a3535; }
+.statut-pill.grey  { background: #f0ece4; color: #9a9585; }
 .col-dim      { color: #6b6e73; }
 .col-landscape { display: none; }
+.barr-landscape { display: none; }
 .table-note { font-size: 11px; color: #b5ab95; margin-top: 10px; }
 
 /* ── Indicateurs OK (icônes produits) ── */
@@ -484,23 +491,22 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .prod-chips-cats::-webkit-scrollbar { display: none; }
 
 /* ── Stat chips (Rappel / Surveillance / Risque) ── */
-.prod-stat-chips { display: flex; justify-content: center; gap: 10px; margin-bottom: 6px; }
+.prod-stat-chips { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; }
 .prod-stat-chip {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 1px; padding: 7px 18px 6px; border-radius: 12px; min-width: 100px;
-  border: 2px solid; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s;
-  font-family: inherit;
+  display: flex; align-items: center; gap: 6px;
+  height: 26px; padding: 0 9px; border-radius: 13px;
+  border: 1.5px solid #ece7dc; background: #fff;
+  cursor: pointer; transition: border-color 0.15s, background 0.15s;
+  font-family: inherit; white-space: nowrap;
 }
-.prod-stat-top   { display: flex; align-items: center; gap: 6px; }
-.prod-stat-icon  { font-size: 15px; line-height: 1; }
-.prod-stat-count { font-size: 22px; font-weight: 700; font-family: 'Spectral', serif; line-height: 1.2; }
-.prod-stat-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
-.prod-stat-green  { background: #eaf5ef; border-color: #a8d5bb; color: #1d6f4c; }
-.prod-stat-green:hover, .prod-stat-green.active  { background: #1d6f4c; border-color: #1d6f4c; color: #fff; }
-.prod-stat-orange { background: #fdf5e8; border-color: #e5c57a; color: #8a5a00; }
-.prod-stat-orange:hover, .prod-stat-orange.active { background: #c9a96a; border-color: #c9a96a; color: #fff; }
-.prod-stat-red    { background: #fdf0f0; border-color: #e5a0a0; color: #9a3535; }
-.prod-stat-red:hover, .prod-stat-red.active    { background: #9a3535; border-color: #9a3535; color: #fff; }
+.prod-stat-chip:hover  { border-color: #c9a96a; background: #faf8f3; }
+.prod-stat-chip.active { border-color: #16304f; background: #f5f3ee; }
+.prod-stat-dot   { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.prod-stat-green  .prod-stat-dot { background: #1d6f4c; }
+.prod-stat-orange .prod-stat-dot { background: #b06a1a; }
+.prod-stat-red    .prod-stat-dot { background: #9a3535; }
+.prod-stat-count { font-family: 'Spectral', serif; font-size: 15px; font-weight: 700; color: #16304f; line-height: 1; }
+.prod-stat-label { font-size: 12px; color: #6b6e73; }
 
 .col-nom-vars { display: flex; flex-direction: column; flex-wrap: nowrap; gap: 4px; margin-top: 5px; align-items: flex-start; }
 .col-nom-var { font-size: 10.5px; font-weight: 600; color: #16304f; background: #eef0f5; border-radius: 4px; padding: 0 7px; cursor: pointer; white-space: nowrap; border: 1px solid #dde2eb; height: 20px; display: inline-flex; align-items: center; box-sizing: border-box; }
@@ -723,11 +729,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .cat-grid > .cat-card { flex: 0 0 auto; min-width: 80px; }
   .uc-cat-grid > .cat-card-csr { flex: 0 0 44px; min-width: 44px; max-width: 44px; padding: 8px 6px; }
 
-  /* ── Tableau produits mobile : Nom | Coupon | % Strike | B.Coupon | B.Autocall ── */
-  .products-table-header, .products-table-row { grid-template-columns: minmax(50px,1fr) 46px 56px 48px 48px; gap: 5px; }
-  /* Masquer Prochaine const. (col 2) en portrait */
-  .products-table-header > span:nth-child(2),
-  .products-table-row    > span:nth-child(2) { display: none; }
+  /* ── Tableau produits mobile : Nom | Constat. | Coupon | B.Coupon | B.Auto ── */
+  .products-table-header, .products-table-row { grid-template-columns: minmax(45px,1fr) 60px 44px 36px 36px; gap: 6px; }
+  .products-table-header { font-size: 8.5px; }
+  .products-table-header span { overflow: hidden; }
+  /* Masquer % Strike (col 5) en portrait */
+  .col-pct { display: none; }
   /* Tronquer les noms trop longs */
   .col-nom-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
@@ -789,11 +796,13 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
   .search-box { width: 100%; }
 
-  /* Tableau : toutes les 8 colonnes (Nom Prochaine Coupon Strike %Strike B.Coupon B.Autocall Statut) */
+  /* Tableau : 8 colonnes (Nom | Constat | Strike | %Strike | Coupon | B.Coupon | B.Auto | Statut) */
   .col-landscape { display: revert; }
+  .barr-portrait { display: none; }
+  .barr-landscape { display: inline-block; }
   .products-table-header, .products-table-row {
-    grid-template-columns: minmax(100px,1.5fr) minmax(70px,1fr) 46px 60px 54px 62px 62px 100px;
-    column-gap: 14px;
+    grid-template-columns: minmax(100px,1.5fr) minmax(64px,1fr) 64px 58px 44px 72px 72px 90px;
+    column-gap: 12px;
   }
 
   #content { overflow-x: hidden; scrollbar-width: none; }

@@ -26,8 +26,14 @@ function abregerMois(nom) {
     .replace(/\bConservateur\s+/g, '')
     .replace(/\bLC\s+/g, '')
     .replace(/\bAutocall\s+/g, '')
+    .replace(/\bAthena\s+/g, 'Ath. ')
     .replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre|Jan|Fév|Mar|Avr|Juil|Aoû|Sep|Oct|Nov|Déc)\s+(\d{4})\b/g,
       (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
+}
+
+function abregerDate(s) {
+  if (!s) return s;
+  return s.replace('1er j./mois', 'j./mois').replace(/\d{2}(\d{2})$/, '$1');
 }
 
 function renderDashboard(indices, produits, taux) {
@@ -194,16 +200,13 @@ function renderProduits(produits, state) {
     <div style="padding:18px 30px 40px;">
       <div class="prod-stat-chips">
         <button class="prod-stat-chip prod-stat-green${f==='green'?' active':''}" onclick="App.setFilter('green')">
-          <div class="prod-stat-top"><span class="prod-stat-icon">✓</span><span class="prod-stat-count">${count('green')}</span></div>
-          <span class="prod-stat-label">Rappel probable</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('green')}</span><span class="prod-stat-label">Zone Rappel</span>
         </button>
         <button class="prod-stat-chip prod-stat-orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')">
-          <div class="prod-stat-top"><span class="prod-stat-icon">⚠</span><span class="prod-stat-count">${count('orange')}</span></div>
-          <span class="prod-stat-label">Surveillance</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('orange')}</span><span class="prod-stat-label">Zone Coupon</span>
         </button>
         <button class="prod-stat-chip prod-stat-red${f==='red'?' active':''}" onclick="App.setFilter('red')">
-          <div class="prod-stat-top"><span class="prod-stat-icon">✕</span><span class="prod-stat-count">${count('red')}</span></div>
-          <span class="prod-stat-label">Risque</span>
+          <span class="prod-stat-dot"></span><span class="prod-stat-count">${count('red')}</span><span class="prod-stat-label">Risque</span>
         </button>
       </div>
 
@@ -219,12 +222,12 @@ function renderProduits(produits, state) {
         <div class="products-table">
           <div class="products-table-header">
             <span>Nom commercial</span>
-            <span>Prochaine const. ↑</span>
-            <span class="col-center">Coupon</span>
+            <span>Constat. ↑</span>
             <span class="col-landscape col-right">Strike</span>
-            <span class="col-center">% Strike</span>
+            <span class="col-center col-pct">Niveau</span>
+            <span class="col-center">Coupon</span>
             <span class="col-center">B. Coupon</span>
-            <span class="col-center">B. Autocall</span>
+            <span class="col-center">B. Auto</span>
             <span class="col-landscape">Statut</span>
           </div>
           ${grouperLignes(rows).map(g => {
@@ -233,46 +236,59 @@ function renderProduits(produits, state) {
               ? (r.niveauNum / r.strikeNum * 100) : null;
             let pctStr, pctCouleur, couponColor, autoColor;
             if (niveauPct != null) {
-              pctStr = niveauPct.toFixed(1) + ' %';
               if (r.bCouponNum != null) couponColor = (r.estBaisse ? niveauPct <= r.bCouponNum : niveauPct >= r.bCouponNum) ? 'green' : 'red';
               if (r.bAutoNum   != null) autoColor   = (r.estBaisse ? niveauPct <= r.bAutoNum   : niveauPct >= r.bAutoNum)   ? 'green' : 'red';
             } else if (r.type === 'cms') {
               const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
               if (isFinite(niv)) {
-                pctStr = niv.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
                 if (r.bCouponNum != null) couponColor = niv <= r.bCouponNum ? 'green' : 'red';
                 if (r.bAutoNum   != null) autoColor   = niv <= r.bAutoNum   ? 'green' : 'red';
-              } else { pctStr = '—'; }
-            } else { pctStr = '—'; }
+              }
+            }
             if (autoColor === 'green') pctCouleur = 'green';
             else if (couponColor === 'green') pctCouleur = 'orange';
             else if (autoColor === 'red' || couponColor === 'red') pctCouleur = 'red';
-            const barrCell = (val, color) => {
+            const barrCell = (val, color, isBaisse = false) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
-              return `<span class="barrier-badge ${color || r.k}">${val}</span>`;
+              const c = color || r.k;
+              const displayVal = isBaisse ? `-${val}` : val;
+              return `<span class="barrier-badge ${c} barr-portrait">${color === 'green' ? 'OUI' : 'NON'}</span>`
+                   + `<span class="barrier-badge ${c} barr-landscape">${displayVal}</span>`;
             };
-            const pctBadge = pctCouleur
-              ? `<span class="barrier-badge ${pctCouleur}">${pctStr}</span>`
-              : `<span style="color:#b5ab95">${pctStr}</span>`;
+            const niveauBadge = pctCouleur
+              ? `<span class="barrier-badge ${pctCouleur}">${r.niveau || '—'}</span>`
+              : `<span style="color:#b5ab95">${r.niveau || '—'}</span>`;
+
+            // Vérification barrière de protection (ex : '-70 %' → seuil = strike × 30%)
+            let belowProtection = r.belowProtection ?? false;
+            if (!r.belowProtection && r.type === 'equity' && r.strikeNum && r.niveauNum && r.protection) {
+              const m = String(r.protection).match(/-(\d+)/);
+              if (m) belowProtection = r.niveauNum < r.strikeNum * (1 - parseInt(m[1]) / 100);
+            }
+            const cPill = r.bCouponNum != null
+              ? `<span class="statut-pill ${couponColor || 'grey'}">Coupon</span>` : '';
+            const rPill = `<span class="statut-pill ${autoColor || (r.zoneAutocall === 'OUI' ? 'green' : 'red')}">Rappel</span>`;
+            const statutCell = belowProtection
+              ? `<span class="badge red">Risque</span>`
+              : `<div class="statut-pills">${cPill}${rPill}</div>`;
 
             if (g.type === 'group') {
               const groupName = abregerMois(r.nom).replace(/\s+\d{2}\s+/, ' ');
-              const cp = 'padding-top:32px;';
+              const cpnVals = g.membres.map(m => parseFloat(String(m.coupon).replace(',', '.'))).filter(v => !isNaN(v));
+              const cpnMin = Math.min(...cpnVals), cpnMax = Math.max(...cpnVals);
+              const cpnRange = cpnVals.length > 1 && cpnMin !== cpnMax ? `${cpnMin}–${cpnMax} %` : r.coupon;
               return `
-          <div class="products-table-row" style="align-items:flex-start;">
-            <span class="col-nom">
+          <div class="products-table-row">
+            <span class="col-nom" onclick="App.voirDetail('${g.membres[0].isin}')">
               <span class="col-nom-text">${groupName}</span>
-              <div class="col-nom-vars">
-                ${g.membres.map(m => `<span class="col-nom-var" onclick="App.voirDetail('${m.isin}')">${m.protection || ''}</span>`).join('')}
-              </div>
             </span>
-            <span class="tnum col-dim" style="font-size:11.5px;${cp}">${r.constat}</span>
-            <span class="tnum col-center" style="display:flex;flex-direction:column;gap:4px;padding-top:22px;">${g.membres.map(m => `<span style="height:20px;display:flex;align-items:center;justify-content:center;">${m.coupon}</span>`).join('')}</span>
-            <span class="col-landscape tnum col-right" style="font-size:11.5px;${cp}">${r.strike || '—'}</span>
-            <span class="col-center tnum" style="${cp}">${pctBadge}</span>
-            <span class="col-center" style="${cp}">${barrCell(r.bCoupon, couponColor)}</span>
-            <span class="col-center" style="${cp}">${barrCell(r.bAuto, autoColor)}</span>
-            <span class="col-landscape" style="${cp}"><span class="badge ${r.k}">${r.statut}</span></span>
+            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}</span>
+            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
+            <span class="col-center col-pct tnum">${niveauBadge}</span>
+            <span class="tnum col-center">${cpnRange}</span>
+            <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
+            <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
+            <span class="col-landscape">${statutCell}</span>
           </div>`;
             }
             return `
@@ -280,13 +296,13 @@ function renderProduits(produits, state) {
             <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
               <span class="col-nom-text">${abregerMois(r.nom)}</span>
             </span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${r.constat}</span>
-            <span class="tnum col-center">${r.coupon}</span>
+            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-center tnum">${pctBadge}</span>
+            <span class="col-center col-pct tnum">${niveauBadge}</span>
+            <span class="tnum col-center">${r.coupon}</span>
             <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
-            <span class="col-center">${barrCell(r.bAuto, autoColor)}</span>
-            <span class="col-landscape"><span class="badge ${r.k}">${r.statut}</span></span>
+            <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
+            <span class="col-landscape">${statutCell}</span>
           </div>`;
           }).join('')}
         </div>

@@ -184,16 +184,28 @@ function enrichirProduits(produits) {
     } else {
       zoneAutocall = p.zoneAutocall;
     }
+    const bCouponNum = parseNum(p.bCoupon);
+    let couponAtteint = false;
+    if (!isNaN(bCouponNum)) {
+      if (p.type === 'equity' && p.strikeNum && p.niveauNum) {
+        const nPct = p.niveauNum / p.strikeNum * 100;
+        couponAtteint = estBaisse ? nPct <= bCouponNum : nPct >= bCouponNum;
+      } else if (p.type === 'cms') {
+        const niv = parseNum(p.niveau);
+        couponAtteint = !isNaN(niv) && niv <= bCouponNum;
+      }
+    }
+    const protMatch = String(p.protection || '').match(/-(\d+)/);
+    const belowProtection = !!(protMatch && p.type === 'equity' && p.strikeNum && p.niveauNum
+      && p.niveauNum < p.strikeNum * (1 - parseInt(protMatch[1]) / 100));
     let k;
     if (zoneAutocall === 'OUI') k = 'green';
-    else if (p.type === 'equity' && estBaisse) k = 'red';
-    else if (p.type === 'equity' && (p.niveauNum / p.strikeNum) < 0.75) k = 'red';
+    else if (belowProtection) k = 'red';
     else k = 'orange';
-    const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '—';
-    const statuts = { green:'Rappel probable', orange:'Surveillance', red:'Risque' };
-    const bCouponNum = parseNum(p.bCoupon);
+    const statuts = { green:'Zone Rappel', orange:'Zone Coupon', red:'Risque' };
+    const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '-';
     return {
-      ...p, zoneAutocall, k, estBaisse, statut: statuts[k], pct,
+      ...p, zoneAutocall, k, estBaisse, couponAtteint, belowProtection, statut: statuts[k], pct,
       ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
       bAutoNum:   isNaN(bAutoRaw)   ? null : bAutoRaw,
       bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,

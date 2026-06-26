@@ -27,14 +27,40 @@ const AppAPI = (() => {
       ? pctNum.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
       : '—';
 
-    const zoneMap = { rappel_probable: 'green', surveillance: 'orange', risque: 'red' };
-    const k = p.indicateurs?.statutZone ? (zoneMap[p.indicateurs.statutZone] ?? 'orange') : 'orange';
     const statuts = { green: 'Rappel probable', orange: 'Surveillance', red: 'Risque' };
 
     const niveauNum = p.cours?.dernierCours ?? null;
+    const bAutoRaw  = p.barriereAutocall;
     const estBaisse = p.typeProduit === 'cms' ||
-      (p.typeProduit === 'equity' && p.barriereAutocall != null && p.barriereAutocall < 100);
+      (p.typeProduit === 'equity' && bAutoRaw != null && bAutoRaw < 100);
+
+    // Recalcul dynamique (même logique que enrichirProduits dans data.js)
+    let zoneAutoFresh;
+    if (p.typeProduit === 'equity' && p.strike && niveauNum != null && bAutoRaw != null) {
+      const seuil = p.strike * bAutoRaw / 100;
+      zoneAutoFresh = estBaisse ? (niveauNum <= seuil ? 'OUI' : 'NON') : (niveauNum >= seuil ? 'OUI' : 'NON');
+    } else if (p.typeProduit === 'cms' && niveauNum != null && bAutoRaw != null) {
+      zoneAutoFresh = niveauNum <= bAutoRaw ? 'OUI' : 'NON';
+    } else {
+      zoneAutoFresh = p.indicateurs?.zoneAutocall ? 'OUI' : 'NON';
+    }
+    let couponAtteint = false;
+    if (p.barriereCoupon != null) {
+      if (p.typeProduit === 'equity' && p.strike && niveauNum != null) {
+        const nPct = niveauNum / p.strike * 100;
+        couponAtteint = estBaisse ? nPct <= p.barriereCoupon : nPct >= p.barriereCoupon;
+      } else if (p.typeProduit === 'cms' && niveauNum != null) {
+        couponAtteint = niveauNum <= p.barriereCoupon;
+      }
+    }
     const staticP = typeof PRODUITS !== 'undefined' ? PRODUITS.find(x => x.isin === p.isin) : null;
+    const protMatch = String((staticP?.protection) || '').match(/-(\d+)/);
+    const belowProtection = !!(protMatch && p.typeProduit === 'equity' && p.strike && niveauNum != null
+      && niveauNum < p.strike * (1 - parseInt(protMatch[1]) / 100));
+    let k;
+    if (zoneAutoFresh === 'OUI') k = 'green';
+    else if (belowProtection) k = 'red';
+    else k = 'orange';
 
     return {
       id:          p.id,
@@ -55,9 +81,11 @@ const AppAPI = (() => {
       sjLabel:     p.sousJacentLabel,
       bAutoNum:    p.barriereAutocall,
       bCouponNum:  p.barriereCoupon,
-      zoneAutocall: p.indicateurs?.zoneAutocall ? 'OUI' : 'NON',
+      zoneAutocall: zoneAutoFresh,
       k,
       estBaisse,
+      couponAtteint,
+      belowProtection,
       statut:      statuts[k],
       pct,
       protection:  staticP ? (staticP.protection ?? null) : null,

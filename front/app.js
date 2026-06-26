@@ -4,7 +4,7 @@ const App = (() => {
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
 
-  const CACHE_KEY = 'app-cache-v2';
+  const CACHE_KEY = 'app-cache-v3';
 
   function sauvegarderEtat() {
     try {
@@ -318,6 +318,29 @@ const App = (() => {
         lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
       });
     },
+    appliquerCMSLocal(valeur) {
+      const fmt2 = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      // Met à jour l'affichage du taux dans donnees.taux
+      donnees.taux = donnees.taux.map(t => {
+        if (t.nom !== 'CMS 10 ans') return t;
+        return { ...t, valeur: fmt2(valeur) + ' %', dateMaj: new Date().toISOString().slice(0, 10) };
+      });
+      // Recalcule les produits CMS avec le nouveau niveau
+      donnees.produits = donnees.produits.map(p => {
+        if (p.type !== 'cms') return p;
+        const niveauNum = valeur;
+        const niveau = fmt2(valeur);
+        const bAutoRaw  = p.bAutoNum;
+        const bCouponNum = p.bCouponNum;
+        const zoneAutocall = bAutoRaw != null ? (niveauNum <= bAutoRaw ? 'OUI' : 'NON') : p.zoneAutocall;
+        const couponAtteint = bCouponNum != null ? niveauNum <= bCouponNum : false;
+        let k;
+        if (zoneAutocall === 'OUI') k = 'green';
+        else k = 'orange';
+        const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
+        return { ...p, niveauNum, niveau, zoneAutocall, couponAtteint, k, statut: statuts[k] };
+      });
+    },
     ouvrirEditionCMS() {
       const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
       const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;
@@ -343,14 +366,13 @@ const App = (() => {
       try {
         await AppAPI.mettreAJourCMS(valeur);
         donnees = await AppAPI.chargerDonnees();
-        const root = document.getElementById('modal-root');
-        if (root) root.innerHTML = '';
-        renderPage();
-      } catch (err) {
-        errEl.textContent = 'Erreur : ' + (err.message || 'serveur indisponible');
-        errEl.style.display = 'block';
-        if (btn) { btn.disabled = false; btn.textContent = 'Enregistrer'; }
+      } catch {
+        // Pas de back local : applique le taux CMS en mémoire sans passer par l'API.
+        App.appliquerCMSLocal(valeur);
       }
+      const root = document.getElementById('modal-root');
+      if (root) root.innerHTML = '';
+      renderPage();
     },
     toggleStrikeField(type) {
       const f = document.getElementById('field-strike');
