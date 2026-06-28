@@ -20,6 +20,7 @@ const PRODUITS = [
   { isin:'FRF0000001C8', nom:'LC Athena BNP Juillet 2030',                   sj:'BNP Paribas', coupon:'10 %',  strike:'77,84',  niveau:'96,69',  bAuto:'100 %',  bCoupon:'NA',   constat:'20/07/2026',   ech:'31/07/2030', type:'equity', strikeNum:77.84,  niveauNum:96.69,  zoneAutocall:'OUI', protection:'-70 %' },
   { isin:'FRBCP1260215', nom:'LC Athena Stellantis Novembre 2030',           sj:'Stellantis',  coupon:'11 %',  strike:'8,45',   niveau:'5,90',   bAuto:'100 %',  bCoupon:'NA',   constat:'16/11/2026',   ech:'28/11/2030', type:'equity', strikeNum:8.45,   niveauNum:5.90,   zoneAutocall:'NON', protection:'-70 %' },
   { isin:'FR0014015OJ4', nom:'LC Athena Capgemini Mai 2031',                 sj:'Capgemini',   coupon:'10 %',  strike:'106,10', niveau:'96,72',  bAuto:'100 %',  bCoupon:'NA',   constat:'04/05/2027',   ech:'12/05/2031', type:'equity', strikeNum:106.10, niveauNum:96.72,  zoneAutocall:'NON', protection:'-50 %' },
+  { isin:'FRBCP1260678', nom:'LC Athena Rheinmetall Juin 2031',             sj:'Rheinmetall', coupon:'10 %',  strike:'1 150,20', niveau:'1 150,20', bAuto:'100 %', bCoupon:'NA',  constat:'15/06/2027',   ech:'23/06/2031', type:'equity', strikeNum:1150.20, niveauNum:1150.20, zoneAutocall:'NON', protection:'-50 %' },
 ];
 
 const INDICES_MARCHE = [
@@ -135,7 +136,7 @@ const VEILLE = [
 // Ticker Yahoo des sous-jacents (pour le graphique en mode statique hors-ligne).
 const TICKERS_SJ = {
   'CAC 40':'^FCHI', 'ES Banks':'BNKE.PA', 'CMS 10 ans':'CMS10',
-  'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA',
+  'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA', 'Rheinmetall':'RHM.DE',
 };
 
 // Identifiant de graphique par nom d'élément (indices « statiques », taux, macro).
