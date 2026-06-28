@@ -31,6 +31,23 @@ const App = (() => {
     return t;
   }
 
+  function lignesPour(p) {
+    const lignes = [];
+    if (p.type === 'equity' && p.strikeNum) {
+      lignes.push({ valeur: p.strikeNum, label: 'Strike', couleur: '#16304f' });
+      if (p.bAutoNum != null) {
+        const v = (p.bAutoNum / 100) * p.strikeNum;
+        if (Math.abs(v - p.strikeNum) > p.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+      }
+      if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
+      if (p.protection) {
+        const pm = String(p.protection).match(/-(\d+)/);
+        if (pm) lignes.push({ valeur: p.strikeNum * (1 - parseInt(pm[1], 10) / 100), label: 'Protection −' + pm[1] + ' %', couleur: '#b06a1a' });
+      }
+    }
+    return lignes;
+  }
+
   function sauvegarderEtat() {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
@@ -107,15 +124,7 @@ const App = (() => {
         const p = produits.find(p => p.isin === state.detailIsin);
         el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
         if (p && window.Chart) {
-          const lignes = [];
-          if (p.type === 'equity' && p.strikeNum) {
-            lignes.push({ valeur: p.strikeNum, label: 'Strike', couleur: '#16304f' });
-            if (p.bAutoNum != null) {
-              const v = (p.bAutoNum / 100) * p.strikeNum;
-              if (Math.abs(v - p.strikeNum) > p.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-            }
-            if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
-          }
+          const lignes = lignesPour(p);
           Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
             lignes, sous: p.sjLabel || p.sj,
           });
@@ -127,17 +136,10 @@ const App = (() => {
         el.innerHTML = membres.length > 0 ? renderDetailGroupe(membres) : renderProduits(produits, state);
         if (membres.length > 0 && window.Chart) {
           const ref = membres[0];
-          if (ref.type === 'equity' && ref.strikeNum) {
-            const lignes = [{ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' }];
-            if (ref.bAutoNum != null) {
-              const v = (ref.bAutoNum / 100) * ref.strikeNum;
-              if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-            }
-            if (ref.bCouponNum != null) lignes.push({ valeur: (ref.bCouponNum / 100) * ref.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
-            Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
-              lignes, sous: ref.sjLabel || ref.sj,
-            });
-          }
+          const lignes = lignesPour(ref);
+          Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
+            lignes, sous: ref.sjLabel || ref.sj,
+          });
         }
         break;
       }
@@ -361,16 +363,7 @@ const App = (() => {
       if (!window.Chart) return;
       const p = donnees.produits.find(x => x.isin === isin);
       if (!p) return;
-      // Repères fins : strike, barrière autocall, barrière coupon (produits actions).
-      const lignes = [];
-      if (p.type === 'equity' && p.strikeNum) {
-        lignes.push({ valeur: p.strikeNum, label: 'Strike', couleur: '#16304f' });
-        if (p.bAutoNum != null) {
-          const v = (p.bAutoNum / 100) * p.strikeNum;
-          if (Math.abs(v - p.strikeNum) > p.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-        }
-        if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
-      }
+      const lignes = lignesPour(p);
       const cat = categorieProduit(p);
       Chart.ouvrir(chartTickerPour(p), p.nom, {
         lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),

@@ -628,14 +628,12 @@ function renderDetailGroupe(membres) {
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
       <div class="detail-groupe-section">
-        <div class="detail-groupe-titre">Choisir votre niveau de protection</div>
+        <div class="detail-groupe-titre">Niveaux de protection disponibles</div>
         <div class="detail-groupe-table">
           <div class="detail-groupe-header">
             <span>Protection</span>
             <span class="col-center">Coupon</span>
-            <span class="col-center">B. Coupon</span>
             <span class="col-center">Statut</span>
-            <span></span>
           </div>
           ${membres.map(m => {
             const couponColor = m.bCouponNum != null ? (m.couponAtteint ? 'green' : 'red') : null;
@@ -647,12 +645,10 @@ function renderDetailGroupe(membres) {
               : `<div class="statut-pills">${cPill}${rPill}</div>`;
             const prot = m.protection || '—';
             return `
-          <div class="detail-groupe-row" onclick="App.voirDetail('${m.isin}')">
+          <div class="detail-groupe-row">
             <span class="detail-groupe-prot tnum">${escHtml(String(prot))}</span>
             <span class="col-center tnum">${escHtml(String(m.coupon))}</span>
-            <span class="col-center tnum">${m.bCoupon && m.bCoupon !== 'NA' && m.bCoupon !== '—' ? escHtml(String(m.bCoupon)) : '—'}</span>
             <span class="col-center">${statut}</span>
-            <span class="detail-groupe-go">→</span>
           </div>`;
           }).join('')}
         </div>
