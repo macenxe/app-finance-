@@ -27,6 +27,7 @@ export const PRODUITS: NouveauProduit[] = [
   { isin:'FRF0000001C8', nom:'LC Athena BNP Juillet 2030',             sousJacent:'BNP.PA',  sousJacentLabel:'BNP Paribas',typeProduit:'equity', strike:77.84,  barriereAutocall:100,  barriereCoupon:null, echeance:'2030-07-31', constat:'20/07/2026',  coupon:10   },
   { isin:'FRBCP1260215', nom:'LC Athena Stellantis Novembre 2030',     sousJacent:'STLAM.MI',sousJacentLabel:'Stellantis', typeProduit:'equity', strike:8.45,   barriereAutocall:100,  barriereCoupon:null, echeance:'2030-11-28', constat:'16/11/2026',  coupon:11   },
   { isin:'FR0014015OJ4', nom:'LC Athena Capgemini Mai 2031',           sousJacent:'CAP.PA',  sousJacentLabel:'Capgemini',  typeProduit:'equity', strike:106.10, barriereAutocall:100,  barriereCoupon:null, echeance:'2031-05-12', constat:'04/05/2027',  coupon:10   },
+  { isin:'FRBCP1260678', nom:'LC Athena Rheinmetall Juin 2031',        sousJacent:'RHM.DE',  sousJacentLabel:'Rheinmetall', typeProduit:'equity', strike:1150.20, barriereAutocall:100, barriereCoupon:null, echeance:'2031-06-23', constat:'15/06/2027', coupon:10   },
 ];
 
 // Taux CMS 10 ans (EUR IRS 10Y), saisi à la main car non disponible en source gratuite.
