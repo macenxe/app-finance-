@@ -136,7 +136,21 @@ const App = (() => {
         el.innerHTML = membres.length > 0 ? renderDetailGroupe(membres) : renderProduits(produits, state);
         if (membres.length > 0 && window.Chart) {
           const ref = membres[0];
-          const lignes = lignesPour(ref);
+          const lignes = [];
+          if (ref.type === 'equity' && ref.strikeNum) {
+            lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
+            if (ref.bAutoNum != null) {
+              const v = (ref.bAutoNum / 100) * ref.strikeNum;
+              if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+            }
+            const protCouleurs = ['#e8a030', '#b06a1a', '#7a3010'];
+            membres.forEach((m, i) => {
+              if (m.protection) {
+                const pm = String(m.protection).match(/-(\d+)/);
+                if (pm) lignes.push({ valeur: m.strikeNum * (1 - parseInt(pm[1], 10) / 100), label: 'Prot. ' + pm[1] + ' %', couleur: protCouleurs[i] || '#b06a1a' });
+              }
+            });
+          }
           Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
             lignes, sous: ref.sjLabel || ref.sj,
           });
