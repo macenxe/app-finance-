@@ -654,7 +654,7 @@ function renderDetailGroupe(membres) {
         </div>
       </div>
 
-      <div class="detail-grid" style="margin-top:16px;">
+      <div style="margin-top:16px;">
         <div class="card p-18">
           <div class="card-title mb-12">Données communes</div>
           <div class="detail-rows">
