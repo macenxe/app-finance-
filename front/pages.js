@@ -302,7 +302,7 @@ function renderProduits(produits, state) {
               const cpnRange = cpnVals.length > 1 && cpnMin !== cpnMax ? `${cpnMin}–${cpnMax} %` : r.coupon;
               return sep + `
           <div class="products-table-row">
-            <span class="col-nom" onclick="App.voirDetail('${g.membres[0].isin}')">
+            <span class="col-nom" onclick="App.voirDetailGroupe('${g.membres.map(m=>m.isin).join(',')}')">
               <span class="col-nom-text">${groupName}</span>
             </span>
             <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}</span>
@@ -600,6 +600,83 @@ function renderFormulaireAjout() {
         <button type="button" class="btn-secondary" onclick="App.fermerFormulaire()">Annuler</button>
         <button type="submit" form="form-ajout" class="btn-primary" id="form-submit">Enregistrer le produit</button>
       </div>
+    </div>
+  </div>`;
+}
+
+function renderDetailGroupe(membres) {
+  const ref = membres[0];
+  const groupNom = ref.nom.replace(/\bCAP\s+\d+\s+/, 'CAP ');
+  const niveauPct = (ref.strikeNum && ref.niveauNum)
+    ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
+    : '—';
+  const pctColor = ref.k === 'red' ? '#9a3535' : ref.k === 'orange' ? '#b06a1a' : '#1d6f4c';
+
+  return `
+  <div>
+    <header class="page-header">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <button class="btn-back" onclick="App.fermerDetail()">← Retour</button>
+        <div>
+          <div class="page-title">${escHtml(groupNom)}</div>
+          <div class="page-sub">${escHtml(ref.sj)} · Constat. ${escHtml(ref.constat)} · Échéance ${escHtml(ref.ech)}</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="detail-content">
+      <div id="detail-chart-inline" class="detail-chart-inline"></div>
+
+      <div class="detail-groupe-section">
+        <div class="detail-groupe-titre">Choisir votre niveau de protection</div>
+        <div class="detail-groupe-table">
+          <div class="detail-groupe-header">
+            <span>Protection</span>
+            <span class="col-center">Coupon</span>
+            <span class="col-center">B. Coupon</span>
+            <span class="col-center">Statut</span>
+            <span></span>
+          </div>
+          ${membres.map(m => {
+            const couponColor = m.bCouponNum != null ? (m.couponAtteint ? 'green' : 'red') : null;
+            const autoColor   = m.zoneAutocall === 'OUI' ? 'green' : 'red';
+            const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
+            const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
+            const statut = m.belowProtection
+              ? `<span class="badge red">Risque</span>`
+              : `<div class="statut-pills">${cPill}${rPill}</div>`;
+            const prot = m.protection || '—';
+            return `
+          <div class="detail-groupe-row" onclick="App.voirDetail('${m.isin}')">
+            <span class="detail-groupe-prot tnum">${escHtml(String(prot))}</span>
+            <span class="col-center tnum">${escHtml(String(m.coupon))}</span>
+            <span class="col-center tnum">${m.bCoupon && m.bCoupon !== 'NA' && m.bCoupon !== '—' ? escHtml(String(m.bCoupon)) : '—'}</span>
+            <span class="col-center">${statut}</span>
+            <span class="detail-groupe-go">→</span>
+          </div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <div class="detail-grid" style="margin-top:16px;">
+        <div class="card p-18">
+          <div class="card-title mb-12">Données communes</div>
+          <div class="detail-rows">
+            <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(ref.sj)}</span></div>
+            <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(String(ref.strike))}</span></div>
+            <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(String(ref.niveau))}</span></div>
+            <div class="detail-row">
+              <span class="detail-key">% du strike</span>
+              <span class="detail-val tnum" style="font-weight:600;color:${pctColor};">${niveauPct}</span>
+            </div>
+            <div class="detail-row"><span class="detail-key">Barrière autocall</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
+            <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(ref.constat)}</span></div>
+            <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(ref.ech)}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
     </div>
   </div>`;
 }

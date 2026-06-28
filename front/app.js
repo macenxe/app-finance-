@@ -25,10 +25,16 @@ const App = (() => {
     });
   }
 
+  function chartTickerPour(p) {
+    const t = p.ticker || p.sj || '';
+    if (t === 'SX7E.PA' || t === 'ES Banks') return 'BNKE.PA';
+    return t;
+  }
+
   function sauvegarderEtat() {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        page: state.page === 'detail' ? 'prod' : state.page,
+        page: 'dash',
         ucCat: state.ucCat || null,
         indices: donnees.indices,
         taux: donnees.taux,
@@ -77,7 +83,7 @@ const App = (() => {
   ];
 
   function renderNav() {
-    const activeKey = state.page === 'detail' ? 'prod' : state.page;
+    const activeKey = (state.page === 'detail' || state.page === 'detail-groupe') ? 'prod' : state.page;
     document.getElementById('nav').innerHTML = NAV.map(item => `
       <div class="nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
         <span class="nav-dot"></span>${item.label}
@@ -110,9 +116,28 @@ const App = (() => {
             }
             if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
           }
-          Chart.ouvrirInline('detail-chart-inline', p.ticker || p.sjLabel || p.sj, p.nom, {
+          Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
             lignes, sous: p.sjLabel || p.sj,
           });
+        }
+        break;
+      }
+      case 'detail-groupe': {
+        const membres = (state.detailIsins || []).map(isin => produits.find(p => p.isin === isin)).filter(Boolean);
+        el.innerHTML = membres.length > 0 ? renderDetailGroupe(membres) : renderProduits(produits, state);
+        if (membres.length > 0 && window.Chart) {
+          const ref = membres[0];
+          if (ref.type === 'equity' && ref.strikeNum) {
+            const lignes = [{ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' }];
+            if (ref.bAutoNum != null) {
+              const v = (ref.bAutoNum / 100) * ref.strikeNum;
+              if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+            }
+            if (ref.bCouponNum != null) lignes.push({ valeur: (ref.bCouponNum / 100) * ref.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
+            Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
+              lignes, sous: ref.sjLabel || ref.sj,
+            });
+          }
         }
         break;
       }
@@ -291,6 +316,10 @@ const App = (() => {
       state = { ...state, page: 'detail', detailIsin: isin };
       renderPage();
     },
+    voirDetailGroupe(isinsStr) {
+      state = { ...state, page: 'detail-groupe', detailIsins: isinsStr.split(','), detailIsin: null };
+      renderPage();
+    },
     fermerDetail() {
       state = { ...state, page: 'prod', detailIsin: null };
       renderPage();
@@ -343,7 +372,7 @@ const App = (() => {
         if (p.bCouponNum != null) lignes.push({ valeur: (p.bCouponNum / 100) * p.strikeNum, label: 'B. coupon', couleur: '#9a3535' });
       }
       const cat = categorieProduit(p);
-      Chart.ouvrir(p.ticker || p.sjLabel || p.sj, p.nom, {
+      Chart.ouvrir(chartTickerPour(p), p.nom, {
         lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
       });
     },
