@@ -189,6 +189,23 @@ const App = (() => {
     }
   }
 
+  // Récupère la valeur courante du CMS 10 ans (vrai swap EUR 10y via FT, proxifié par le
+  // Worker) et l'applique au tableau de bord et aux produits CMS. Repli sur la saisie manuelle.
+  async function majCMS() {
+    if (typeof AppAPI === 'undefined' || !AppAPI.cmsUrl) return;
+    try {
+      const r = await fetch(AppAPI.cmsUrl(), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      if (!r.ok) return;
+      const d = await r.json();
+      if (d.valeur == null) return;
+      const valStr = d.valeur.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
+      const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
+      if (t) { t.valeur = valStr; t.var = 'FT'; t.hausse = null; t.manuel = false; t.dateMaj = null; }
+      (donnees.produits || []).forEach(p => { if (p.type === 'cms') p.niveau = valStr; });
+      renderPage();
+    } catch (_) { /* on garde la valeur saisie */ }
+  }
+
   function mettreAJourBadgeSource() {
     const badge = document.getElementById('source-badge');
     if (!badge) return;
@@ -246,6 +263,7 @@ const App = (() => {
       donnees = await AppAPI.chargerDonnees();
       sauvegarderEtat();
       renderPage();
+      majCMS();
       ind.classList.remove('refreshing');
       ind.style.height = '0';
       setTimeout(() => { ind.style.transition = ''; refreshing = false; }, 200);
@@ -289,6 +307,7 @@ const App = (() => {
     }
     sauvegarderEtat();
     renderPage();
+    majCMS();
   }
 
   return {

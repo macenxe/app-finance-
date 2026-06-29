@@ -242,5 +242,12 @@ const AppAPI = (() => {
     return `${WORKER}?${q}`;
   }
 
-  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl };
+  // URL de la valeur courante du CMS 10 ans (swap EUR 10y via FT, proxifié).
+  function cmsUrl() {
+    const h = location.hostname;
+    if (h === 'localhost' || h === '127.0.0.1') return `${location.origin}/__cms`;
+    return `${WORKER}?cms=1`;
+  }
+
+  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };
 })();

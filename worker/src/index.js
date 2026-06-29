@@ -116,17 +116,57 @@ async function historiqueHicp(series, periode, key) {
   return { ticker: 'hicp:' + series, periode, points, devise: '%' };
 }
 
-// CMS 10 ans EUR : pas de source gratuite fiable pour le swap → proxy rendement 10 ans zone euro.
-async function historiqueCms(periode, key) {
-  const h = await historiqueFred(FRED_PROXY_CMS, periode, key);
-  if (h) h.proxy = 'Proxy : rendement 10 ans zone euro';
-  return h;
+// ── CMS 10 ans EUR : vrai swap via FT Markets (« Euro 10 yr Swap ») ──
+// FT n'est pas protégé par Cloudflare → récupérable côté serveur ; on ajoute le CORS.
+const FT_CMS_SYM = 'A@?EURIRSXY:RCT';
+const FT_CMS_XID = '5767342';
+const FT_TEARSHEET = `https://markets.ft.com/data/indices/tearsheet/summary?s=${encodeURIComponent(FT_CMS_SYM)}`;
+const FT_PERIODES = {
+  '1j': { days: 3, p: 'Day' }, '1s': { days: 10, p: 'Day' }, '1m': { days: 35, p: 'Day' },
+  '6m': { days: 190, p: 'Day' }, '1a': { days: 370, p: 'Day' },
+  '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
+};
+
+// Valeur courante du CMS 10 ans (clôture FT).
+async function coursCmsFT() {
+  const r = await fetch(FT_TEARSHEET, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 900 } });
+  if (!r.ok) return null;
+  const m = (await r.text()).match(/mod-ui-data-list__value">([0-9.]+)/);
+  if (!m) return null;
+  return { nom: 'CMS 10 ans', valeur: parseFloat(m[1]), source: 'FT Markets · Euro 10y swap', heure: new Date().toISOString() };
+}
+
+// Historique du CMS 10 ans (FT chartapi).
+async function historiqueCmsFT(periode) {
+  const cfg = FT_PERIODES[periode] || (periode === 'ytd'
+    ? { days: Math.max(2, Math.ceil((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000)), p: 'Day' }
+    : FT_PERIODES['6m']);
+  const body = JSON.stringify({
+    days: cfg.days, dataNormalized: false, dataPeriod: cfg.p, dataInterval: 1, realtime: false,
+    yFormat: '0.###', timeServiceFormat: 'JSON', returnDateType: 'ISO8601',
+    elements: [{ Type: 'price', Symbol: FT_CMS_XID, OverlayIndicators: [], Params: {} }],
+  });
+  const r = await fetch('https://markets.ft.com/data/chartapi/series', {
+    method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/json' }, body, cf: { cacheTtl: 900 },
+  });
+  if (!r.ok) return null;
+  const d = await r.json();
+  const dates = d.Dates || [];
+  const cs = d.Elements?.[0]?.ComponentSeries || [];
+  const vals = (cs.find((s) => s.Type === 'Close') || cs[0])?.Values || [];
+  const points = [];
+  for (let i = 0; i < dates.length; i++) {
+    const c = vals[i];
+    if (c != null) points.push({ t: Math.floor(Date.parse(dates[i]) / 1000), c });
+  }
+  if (points.length < 2) return null;
+  return { ticker: 'scrape:cms', periode, points, devise: '%' };
 }
 
 function historique(id, periode, env) {
   if (id.startsWith('fred:')) return historiqueFred(id.slice(5), periode, env?.FRED_API_KEY);
   if (id.startsWith('hicp:')) return historiqueHicp(id.slice(5), periode, env?.FRED_API_KEY);
-  if (id === 'scrape:cms')    return historiqueCms(periode, env?.FRED_API_KEY);
+  if (id === 'scrape:cms')    return historiqueCmsFT(periode);
   return historiqueYahoo(id, periode);
 }
 
@@ -158,8 +198,19 @@ export default {
       return new Response(null, { headers: { ...CORS, 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
     }
 
-    // Endpoint historique : ?history=TICKER&period=6m
     const u = new URL(request.url);
+
+    // Valeur courante du CMS 10 ans : ?cms=1
+    if (u.searchParams.get('cms')) {
+      try {
+        const c = await coursCmsFT();
+        return new Response(JSON.stringify(c || { error: 'no data' }), { status: c ? 200 : 404, headers: JSON_HEADERS });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: String(e?.message || e) }), { status: 502, headers: JSON_HEADERS });
+      }
+    }
+
+    // Endpoint historique : ?history=TICKER&period=6m
     const hist = u.searchParams.get('history');
     if (hist) {
       try {

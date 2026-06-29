@@ -271,6 +271,15 @@ function renderProduits(produits, state) {
             if (autoColor === 'green') pctCouleur = 'green';
             else if (couponColor === 'green') pctCouleur = 'orange';
             else if (autoColor === 'red' || couponColor === 'red') pctCouleur = 'red';
+            // CMS : règle dédiée pour la pastille de niveau — vert si le taux <= barrière de
+            // coupon (strike), orange jusqu'à +0,15 pt au-dessus, rouge au-delà.
+            if (r.type === 'cms' && r.bCouponNum != null) {
+              const nivCms = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
+              if (isFinite(nivCms)) {
+                const dd = nivCms - r.bCouponNum;
+                pctCouleur = dd <= 0 ? 'green' : dd <= 0.15 ? 'orange' : 'red';
+              }
+            }
             const barrCell = (val, color, isBaisse = false) => {
               if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
               const c = color || r.k;

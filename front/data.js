@@ -150,7 +150,7 @@ const GRAPH_IDS_SUB = [
   ['OAT',              'fred:IRLTLT01FRM156N'],
   ['Bund',             'fred:IRLTLT01DEM156N'],
   ['US 10',            'fred:DGS10'],
-  // CMS 10 ans : graphique désactivé en attendant une vraie source de swap CMS (valeur statique/saisie).
+  ['CMS',              'scrape:cms'],         // vrai swap EUR 10y via FT (Worker)
   ['Inflation',        'hicp:CP0000EZ19M086NEST'],
   ['Brent',            'BZ=F'],
   ['Bitcoin',          'BTC-USD'],
