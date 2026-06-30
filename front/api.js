@@ -250,7 +250,9 @@ const AppAPI = (() => {
   }
 
   async function chargerNews() {
-    return fetchJson(`${BASE}/news`, 12000);
+    const h = location.hostname;
+    if (h === 'localhost' || h === '127.0.0.1') return fetchJson(`${BASE}/news`, 12000);
+    return fetchJson(`${WORKER}?news=1`, 12000);
   }
 
   return { chargerDonnees, chargerNews, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };

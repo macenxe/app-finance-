@@ -191,6 +191,105 @@ function calculerIndicateurs(p, cours) {
   return { produitId: p.id, pctStrike, zoneAutocall, statutZone };
 }
 
+// ── Actualités économiques via Google News RSS ────────────────────────────────
+const SOURCES_AUTORISEES = [
+  'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
+  'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
+];
+const MOTS_IMPACT = [
+  'bourse','cours','cac','stoxx','nasdaq','s&p','action','titre','marché','marchés',
+  'taux','inflation','récession','croissance','pib','fed','bce','banque centrale',
+  'résultats','bénéfices','chiffre d\'affaires','dividende','rachat','fusion','acquisition',
+  'avertissement','profit warning','révision','objectif','recommandation','analyste',
+  'hausse','baisse','chute','rebond','record','correction','volatilité','spread',
+  'obligation','dette','souverain','swap','irs','liquidité','crédit',
+  'secteur bancaire','banques','énergie','défense','technologie',
+  'capgemini','bnp','stellantis','rheinmetall',
+];
+const MOTS_POSITIFS = [
+  'hausse','en hausse','rebond','rebondit','progression','progresse','croissance','record',
+  'gains','gain','surperformance','relève','relèvement','optimisme','accord','allège',
+  'dépasse','accélère','amélioration','améliore','surperforme','bond','bondit','monte',
+  'favorable','soutien','solide','achat','surpondérer','objectif relevé','confiance',
+  'reprise','dynamisme','expansion','résilience','résistant','résiste','surpasse',
+];
+const MOTS_NEGATIFS = [
+  'baisse','en baisse','à la baisse','chute','chute de','plonge','plongée','recul','recule',
+  'repli','crainte','risque','perte','pertes','tension','alerte','prudence','déception',
+  'décevant','décevants','décevante','incertitude','ralentissement','contraction',
+  'correction','avertissement','effondrement','s\'effondre','effondre','faillite',
+  'défaut','crise','stress','déficit','inquiétude','menace','pression','vente','vendez',
+  'sous-pondérer','objectif abaissé','profit warning','révision à la baisse',
+  'récession','dégradation','fragilité','dévisse','fléchit','cède','décroche',
+];
+const FLUX_GLOBAUX = [
+  { url: 'https://news.google.com/rss/search?q=BCE+d%C3%A9cision+taux+march%C3%A9s+impact&hl=fr&gl=FR&ceid=FR:fr', tag: 'BCE / Taux' },
+  { url: 'https://news.google.com/rss/search?q=Fed+taux+d%C3%A9cision+bourse+impact&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
+  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse&hl=fr&gl=FR&ceid=FR:fr',              tag: 'Inflation'  },
+  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+march%C3%A9s+actions+analyse&hl=fr&gl=FR&ceid=FR:fr',  tag: 'Marchés'    },
+  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund&hl=fr&gl=FR&ceid=FR:fr',           tag: 'Obligataire'},
+];
+const FLUX_PRODUITS = [
+  { query: 'BNP Paribas cours bourse résultats analyste',         tag: 'BNP Paribas' },
+  { query: 'Stellantis cours bourse résultats objectif',          tag: 'Stellantis'  },
+  { query: 'Capgemini cours bourse résultats analyste',           tag: 'Capgemini'   },
+  { query: 'Rheinmetall cours bourse résultats défense',          tag: 'Rheinmetall' },
+  { query: 'CAC 40 analyse technique niveaux résistance support', tag: 'CAC 40'      },
+  { query: 'secteur bancaire européen Stoxx Banks résultats taux',tag: 'ES Banks'    },
+];
+
+function analyserSentiment(titre) {
+  const t = titre.toLowerCase();
+  let score = 0;
+  for (const m of MOTS_POSITIFS) if (t.includes(m)) score++;
+  for (const m of MOTS_NEGATIFS) if (t.includes(m)) score--;
+  return score > 0 ? 'positive' : score < 0 ? 'negative' : 'neutre';
+}
+
+function parseItemsRSS(xml, tag, max = 6) {
+  const items = [];
+  const itemRe = /<item>([\s\S]*?)<\/item>/g;
+  let m;
+  while ((m = itemRe.exec(xml)) !== null) {
+    const bloc = m[1];
+    const titre  = (/<title><!\[CDATA\[(.*?)\]\]><\/title>/.exec(bloc) ?? /<title>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '';
+    const lien   = (/<link>(.*?)<\/link>/.exec(bloc))?.[1]?.trim() ?? '';
+    const date   = (/<pubDate>(.*?)<\/pubDate>/.exec(bloc))?.[1]?.trim() ?? '';
+    const source = (/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() ?? '';
+    const tLow   = titre.toLowerCase();
+    const sLow   = source.toLowerCase();
+    const impactant = MOTS_IMPACT.some(w => tLow.includes(w));
+    const autorisee = SOURCES_AUTORISEES.some(a => sLow.includes(a));
+    if (titre && impactant && autorisee) {
+      items.push({ titre, source, date, lien, tag, sentiment: analyserSentiment(titre) });
+      if (items.length >= max) break;
+    }
+  }
+  return items;
+}
+
+async function fetchRSSWorker(url, tag, max = 4) {
+  try {
+    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 900 } });
+    if (!r.ok) return [];
+    const xml = await r.text();
+    return parseItemsRSS(xml, tag, max);
+  } catch { return []; }
+}
+
+async function recupererNews() {
+  const globalesP = Promise.allSettled(FLUX_GLOBAUX.map(f => fetchRSSWorker(f.url, f.tag, 3)));
+  const produitsP = Promise.allSettled(FLUX_PRODUITS.map(f => {
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}&hl=fr&gl=FR&ceid=FR:fr`;
+    return fetchRSSWorker(url, f.tag, 3);
+  }));
+  const [gr, pr] = await Promise.all([globalesP, produitsP]);
+  return {
+    globales: gr.flatMap(r => r.status === 'fulfilled' ? r.value : []),
+    produits: pr.flatMap(r => r.status === 'fulfilled' ? r.value : []),
+  };
+}
+
 export default {
   async fetch(request, env) {
     // Pré-vol CORS (par sécurité ; les requêtes GET simples n'en déclenchent pas).
@@ -199,6 +298,16 @@ export default {
     }
 
     const u = new URL(request.url);
+
+    // Actualités économiques : ?news=1
+    if (u.searchParams.get('news')) {
+      try {
+        const news = await recupererNews();
+        return new Response(JSON.stringify(news), { headers: JSON_HEADERS });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: String(e?.message || e) }), { status: 502, headers: JSON_HEADERS });
+      }
+    }
 
     // Valeur courante du CMS 10 ans : ?cms=1
     if (u.searchParams.get('cms')) {
