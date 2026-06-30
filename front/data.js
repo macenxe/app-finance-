@@ -112,27 +112,6 @@ function prochainsEvenementsMacro(n) {
   return evts.filter(e => e.d >= today).sort((a, b) => a.d - b.d).slice(0, n);
 }
 
-const VEILLE = [
-  { tag:'BCE',        tagBg:'#eaf0f6', tagColor:'#16304f', date:'20 juin 2026',
-    titre:'La BCE maintient son taux de dépôt à 2,25 % et confirme un biais prudent',
-    corps:'Christine Lagarde évoque une désinflation « en bonne voie » tout en restant dépendante des données. Marché anticipe une dernière baisse au S2.' },
-  { tag:'Fed',        tagBg:'#eaf0f6', tagColor:'#16304f', date:'19 juin 2026',
-    titre:'La Fed laisse ses taux inchangés, inflation US jugée « collante »',
-    corps:'Le FOMC reporte ses prévisions de baisse. Dollar ferme, 10 ans US à 4,28 %. Pression maintenue sur les sous-jacents technologiques.' },
-  { tag:'Inflation',  tagBg:'#f3eee2', tagColor:'#8a6d2e', date:'18 juin 2026',
-    titre:'Inflation zone euro stable à 2,1 % en mai',
-    corps:'Le sous-jacent des services reste élevé. Cible des 2 % en approche, soutenant la trajectoire de taux directeurs.' },
-  { tag:'Géopolitique', tagBg:'#f0ecec', tagColor:'#8a4a4a', date:'17 juin 2026',
-    titre:'Tensions commerciales : regain de volatilité sur les marchés actions',
-    corps:'Nouveaux droits de douane évoqués — secteurs cycliques sous pression. Surveillance accrue des barrières de protection.' },
-  { tag:'Immobilier', tagBg:'#e9efe9', tagColor:'#3f6b46', date:'16 juin 2026',
-    titre:'SCPI : stabilisation des valorisations après deux ans de correction',
-    corps:'La baisse des taux longs redonne de l\'attractivité à la pierre-papier. Sélectivité recommandée sur les actifs de bureau.' },
-  { tag:'Fiscalité',  tagBg:'#efeae0', tagColor:'#7a6a45', date:'13 juin 2026',
-    titre:'Assurance-vie & transmission : rappel des abattements en vigueur',
-    corps:'Point de cadrage interne sur la fiscalité patrimoniale 2026. Aucun changement réglementaire majeur à ce jour — à confirmer.' },
-];
-
 // Ticker Yahoo des sous-jacents (pour le graphique en mode statique hors-ligne).
 const TICKERS_SJ = {
   'CAC 40':'^FCHI', 'ES Banks':'BNKE.PA', 'CMS 10 ans':'CMS10',

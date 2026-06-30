@@ -92,11 +92,10 @@ const App = (() => {
   }
 
   const NAV = [
-    { key: 'dash',     label: 'Tableau de bord'      },
-    { key: 'prod',     label: 'Autocalls'             },
-    { key: 'contrats', label: 'Fonds € et UC'          },
-    { key: 'alloc',    label: 'Allocation & Marchés' },
-    { key: 'veille',   label: 'Veille économique'    },
+    { key: 'dash',     label: 'Tableau de bord'        },
+    { key: 'actus',    label: 'Actualités économiques'  },
+    { key: 'prod',     label: 'Autocalls'               },
+    { key: 'contrats', label: 'Fonds € et UC'           },
   ];
 
   function renderNav() {
@@ -114,12 +113,11 @@ const App = (() => {
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
       case 'prod':     el.innerHTML = renderProduits(produits, state);  break;
+      case 'actus':    el.innerHTML = renderActus(); chargerActus(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
         break;
-      case 'alloc':    el.innerHTML = renderAllocation();               break;
-      case 'veille':   el.innerHTML = renderVeille();                   break;
       case 'detail': {
         const p = produits.find(p => p.isin === state.detailIsin);
         el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
@@ -162,6 +160,24 @@ const App = (() => {
     renderNav();
     mettreAJourBadgeSource();
     if (state.page === 'dash') majCartesMarche();
+  }
+
+  async function chargerActus() {
+    const el = document.getElementById('news-section');
+    if (!el) return;
+    try {
+      const news = await AppAPI.chargerNews();
+      const html = renderNewsSection(news);
+      if (document.getElementById('news-section')) {
+        document.getElementById('news-section').innerHTML = html;
+        document.getElementById('news-section').className = '';
+      }
+    } catch {
+      if (document.getElementById('news-section')) {
+        document.getElementById('news-section').innerHTML = '<p class="news-empty">Actualités indisponibles (back local requis).</p>';
+        document.getElementById('news-section').className = '';
+      }
+    }
   }
 
   // Met à jour les cartes macro Yahoo (Brent, Or, Bitcoin) avec le dernier cours,
@@ -403,43 +419,6 @@ const App = (() => {
       });
     },
     appliquerCMSLocal(valeur) { appliquerCMSInterne(valeur); },
-    ouvrirEditionCMS() {
-      const tausCMS = donnees.taux.find(t => t.nom === 'CMS 10 ans');
-      const valActuelle = tausCMS ? parseFloat(tausCMS.valeur) || null : null;
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = renderModalEditionCMS(valActuelle);
-      setTimeout(() => { const inp = document.getElementById('cms-input'); if (inp) inp.focus(); }, 50);
-    },
-    fermerEditionCMS() {
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = '';
-    },
-    async soumettreEditionCMS() {
-      const input = document.getElementById('cms-input');
-      const errEl = document.getElementById('cms-error');
-      const valeur = parseFloat(input.value.replace(',', '.'));
-      if (isNaN(valeur) || valeur <= 0 || valeur > 20) {
-        errEl.textContent = 'Valeur invalide — entrez un taux entre 0 et 20 (ex : 3.15).';
-        errEl.style.display = 'block';
-        return;
-      }
-      const btn = document.querySelector('.modal-footer .btn-primary');
-      if (btn) { btn.disabled = true; btn.textContent = 'Enregistrement…'; }
-      try {
-        await AppAPI.mettreAJourCMS(valeur);
-        donnees = await AppAPI.chargerDonnees();
-        // Back dispo : il persiste la valeur — on efface l'override local devenu inutile.
-        try { localStorage.removeItem(CMS_OVERRIDE_KEY); } catch {}
-      } catch {
-        // Back indisponible : applique en mémoire et persiste localement.
-        appliquerCMSInterne(valeur);
-        try { localStorage.setItem(CMS_OVERRIDE_KEY, String(valeur)); } catch {}
-      }
-      sauvegarderEtat();
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = '';
-      renderPage();
-    },
     toggleStrikeField(type) {
       const f = document.getElementById('field-strike');
       if (f) f.classList.toggle('disabled-field', type === 'cms');

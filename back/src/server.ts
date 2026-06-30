@@ -4,6 +4,7 @@ import { cors } from 'hono/cors';
 import { ouvrirBase, listerProduits, enregistrerCours, lireCours, listerCours, lireTauxManuel, sauvegarderTauxManuel } from './db';
 import { calculerIndicateurs } from './calc';
 import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, TICKERS_PRODUITS } from './indices';
+import { recupererNewsGlobales, recupererNewsProduits } from './news';
 import { seederBase } from './seed';
 import { ProduitEnrichi } from './types';
 
@@ -139,6 +140,19 @@ app.put('/api/taux/cms', async (c) => {
   } finally {
     db.close();
   }
+});
+
+// ── GET /api/news ────────────────────────────────────────────────────────────
+// Renvoie les actualités économiques globales + par sous-jacent produit.
+app.get('/api/news', async (c) => {
+  const [globales, produits] = await Promise.allSettled([
+    recupererNewsGlobales(3),
+    recupererNewsProduits(3),
+  ]);
+  return c.json({
+    globales: globales.status === 'fulfilled' ? globales.value : [],
+    produits: produits.status === 'fulfilled' ? produits.value : [],
+  });
 });
 
 // ── Démarrage ───────────────────────────────────────────────────────────────

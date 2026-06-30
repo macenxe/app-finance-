@@ -249,5 +249,9 @@ const AppAPI = (() => {
     return `${WORKER}?cms=1`;
   }
 
-  return { chargerDonnees, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };
+  async function chargerNews() {
+    return fetchJson(`${BASE}/news`, 12000);
+  }
+
+  return { chargerDonnees, chargerNews, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };
 })();

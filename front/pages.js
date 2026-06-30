@@ -117,7 +117,6 @@ function renderDashboard(indices, produits, taux) {
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
           <div class="index-name index-name-taux">
             ${t.nom}
-            ${t.nom.indexOf('CMS') !== -1 ? `<button class="btn-pencil" onclick="event.stopPropagation();App.ouvrirEditionCMS()" title="Mettre à jour">✎</button>` : ''}
           </div>
           <div class="index-val tnum">${valeur || '—'}</div>
           <div class="taux-var tnum ${hausse === null ? 'flat' : hausse ? 'up' : 'down'}">${vr || ''}</div>
@@ -173,6 +172,67 @@ function renderDashboard(indices, produits, taux) {
       </div>
     </div>
   </div>`;
+}
+
+function renderActus() {
+  return `
+  <div>
+    <header class="page-header">
+      <div>
+        <div class="page-title">Actualités économiques</div>
+        <div class="page-sub">Flux en direct · économie globale & vos produits</div>
+      </div>
+    </header>
+    <div class="page-body">
+      <div id="news-section" class="news-loading">
+        <div class="news-spinner">Chargement des actualités…</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderNewsSection(news) {
+  const TAG_AUTOCALLS = {
+    'BNP Paribas':  ['Ath. BNP'],
+    'Stellantis':   ['Ath. Stellantis'],
+    'Capgemini':    ['Ath. Capgemini'],
+    'Rheinmetall':  ['Ath. Rheinmetall'],
+    'CAC 40':       ['CAC 90%'],
+    'ES Banks':     ['CAP'],
+    'BCE / Taux':   ['CMS'],
+    'Inflation':    ['CMS'],
+  };
+
+  const fmtDate = (rssDate) => {
+    if (!rssDate) return '';
+    try {
+      return new Date(rssDate).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
+    } catch { return ''; }
+  };
+
+  const articleHtml = (a) => {
+    const autocalls = TAG_AUTOCALLS[a.tag] || [];
+    const s = a.sentiment || 'neutre';
+    return `
+    <a class="news-article news-article--${s}" href="${escHtml(a.lien)}" target="_blank" rel="noopener">
+      <div class="news-badges">
+        ${a.tag ? `<span class="news-tag news-tag--${s}">${escHtml(a.tag)}</span>` : ''}
+        ${autocalls.map(p => `<span class="news-badge-prod news-badge-prod--${s}">${escHtml(p)}</span>`).join('')}
+      </div>
+      <div class="news-titre">${escHtml(a.titre)}</div>
+      <div class="news-meta">${escHtml(a.source)}${a.date ? ' · ' + fmtDate(a.date) : ''}</div>
+    </a>`;
+  };
+
+  const tous = [...(news.globales || []), ...(news.produits || [])]
+    .sort((a, b) => {
+      const da = a.date ? new Date(a.date).getTime() : 0;
+      const db = b.date ? new Date(b.date).getTime() : 0;
+      return db - da;
+    });
+
+  if (!tous.length) return '<p class="news-empty">Aucune actualité disponible.</p>';
+  return `<div class="news-articles-grid">${tous.map(articleHtml).join('')}</div>`;
 }
 
 function renderProduits(produits, state) {
@@ -344,7 +404,7 @@ function renderProduits(produits, state) {
   </div>`;
 }
 
-function renderAllocation() {
+function _renderAllocation_supprime() {
   return `
   <div>
     <header class="page-header">
@@ -410,7 +470,7 @@ function renderAllocation() {
   </div>`;
 }
 
-function renderVeille() {
+function _renderVeille_supprime() {
   return `
   <div>
     <header class="page-header">
@@ -761,32 +821,6 @@ function renderModalCategorie(cat, membres) {
   </div>`;
 }
 
-function renderModalEditionCMS(valeurActuelle) {
-  const placeholder = valeurActuelle ? String(valeurActuelle).replace(',', '.') : '3.15';
-  return `
-  <div class="modal-overlay" onclick="if(event.target===this)App.fermerEditionCMS()">
-    <div class="modal-panel modal-panel--sm">
-      <div class="modal-header">
-        <span class="modal-title">CMS 10 ans — EUR IRS 10Y</span>
-        <button class="modal-close" onclick="App.fermerEditionCMS()">✕</button>
-      </div>
-      <div class="modal-body">
-        <p class="cms-modal-hint">EUR 10Y Interest Rate Swap · Source : Bloomberg / Reuters<br>Saisir le taux en pourcentage (ex : 3,15 pour 3,15 %).</p>
-        <div class="form-field">
-          <label>Nouveau taux (%)</label>
-          <input id="cms-input" type="number" step="0.01" min="0" max="20"
-                 placeholder="${placeholder}" autofocus
-                 onkeydown="if(event.key==='Enter')App.soumettreEditionCMS()">
-        </div>
-        <div id="cms-error" style="color:#9a3535;font-size:12px;margin-top:4px;display:none;"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn-secondary" onclick="App.fermerEditionCMS()">Annuler</button>
-        <button class="btn-primary" onclick="App.soumettreEditionCMS()">Enregistrer</button>
-      </div>
-    </div>
-  </div>`;
-}
 
 // ── Page F€ & UC ──
 function renderContrats(state, ucPerfs) {
@@ -884,11 +918,20 @@ function renderContrats(state, ucPerfs) {
       </div>
 
       <div class="uc-liste">
-        ${ucFiltrees.map(u => `
+        ${ucFiltrees.map(u => {
+          const filterLabel = u.nom.includes('Conservateur') ? 'C'
+            : CAT_MAP[u.categorie] === 'Actions thématique' ? 'Thématique'
+            : CAT_MAP[u.categorie] === 'Actions'            ? 'Actions'
+            : CAT_MAP[u.categorie] === 'Mixte / Flexible'   ? 'Mixte'
+            : CAT_MAP[u.categorie] === 'Obligataire'        ? 'Oblig.'
+            : u.categorie;
+          return `
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <div class="uc-item-id">
-              <div class="uc-item-nom">${u.nom}</div>
+              <div class="uc-item-nom">
+                ${u.nom}<span class="uc-filtre-badge">${filterLabel}</span>
+              </div>
               <div class="uc-item-isin tnum">${u.isin}</div>
             </div>
             <div class="uc-item-right">
@@ -896,11 +939,11 @@ function renderContrats(state, ucPerfs) {
             </div>
           </div>
           <div class="uc-item-bas">
-            <span class="uc-cat-badge">${u.categorie}</span>
             <span class="uc-expo">Actions ${u.equity} %</span>
             <span class="uc-srri-inline"><span class="uc-srri-label">SRI</span>${srriDots(u.srri)}</span>
           </div>
-        </div>`).join('')}
+        </div>`;
+        }).join('')}
       </div>
 
       <div class="table-note mt-16">Taux FE nets de frais de gestion · performances UC indicatives · sources internes.</div>
