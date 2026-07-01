@@ -29,7 +29,8 @@ const Chart = (() => {
 
   function fmtDate(ts, periode) {
     const d = new Date(ts * 1000);
-    const intraday = periode === '1j' || periode === '1s';
+    // Séries journalières (taux, CMS) : pas d'intraday → on n'affiche jamais l'heure.
+    const intraday = !etat.dateOnly && (periode === '1j' || periode === '1s');
     return d.toLocaleString('fr-FR', intraday
       ? { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }
       : { day: '2-digit', month: 'short', year: 'numeric' });
@@ -38,10 +39,13 @@ const Chart = (() => {
   // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN' }
   function ouvrir(ticker, label, opts) {
     opts = opts || {};
+    // Séries journalières (FRED, inflation, swap CMS) : pas d'intraday → on retire « Jour ».
+    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker);
+    const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: opts.retour || null, sous: opts.sous || '',
-      compoIsin: opts.compoIsin || null,
+      compoIsin: opts.compoIsin || null, dateOnly, periodes,
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
@@ -83,7 +87,7 @@ const Chart = (() => {
             <div class="chart-loading">Chargement…</div>
           </div>
           <div class="chart-periodes">
-            ${PERIODES.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
+            ${etat.periodes.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
           </div>
           <div class="chart-compo" id="chart-compo"></div>
         </div>

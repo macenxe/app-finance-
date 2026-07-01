@@ -129,13 +129,13 @@ const FT_PERIODES = {
   '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
 };
 
-// Valeur courante du CMS 10 ans (clôture FT).
+// Valeur courante du CMS 10 ans = dernier point du graphique (dernière clôture FT),
+// pour que le tableau de bord et le graphique affichent exactement la même valeur.
 async function coursCmsFT() {
-  const r = await fetch(FT_TEARSHEET, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 900 } });
-  if (!r.ok) return null;
-  const m = (await r.text()).match(/mod-ui-data-list__value">([0-9.]+)/);
-  if (!m) return null;
-  return { nom: 'CMS 10 ans', valeur: parseFloat(m[1]), source: 'FT Markets · Euro 10y swap', heure: new Date().toISOString() };
+  const h = await historiqueCmsFT('1s');
+  const last = h?.points?.[h.points.length - 1];
+  if (!last) return null;
+  return { nom: 'CMS 10 ans', valeur: last.c, source: 'FT Markets · Euro 10y swap', heure: new Date(last.t * 1000).toISOString() };
 }
 
 // Historique du CMS 10 ans (FT chartapi).
