@@ -94,11 +94,14 @@ function renderDashboard(indices, produits, taux) {
         <span class="section-label">Actifs</span>
       </div>
       <div class="grid-3 mb-24">
-        ${MACRO.map(m => { const gid = graphIdPour(m.nom); return `
+        ${MACRO.map(m => { const gid = graphIdPour(m.nom);
+          // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
+          const favorable = m.hausse === null ? null : (/Brent/i.test(m.nom) ? !m.hausse : m.hausse);
+          return `
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
           <div class="index-name">${m.nom}</div>
           <div class="index-val tnum" data-macro-val>${m.valeur}</div>
-          <div class="index-var tnum ${m.hausse === null ? 'flat' : m.hausse ? 'up' : 'down'}" data-macro-var>${m.hausse ? '▲' : '▼'} ${m.var}</div>
+          <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var}</div>
         </div>`; }).join('')}
       </div>
 

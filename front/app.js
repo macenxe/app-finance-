@@ -56,11 +56,13 @@ const App = (() => {
   function sauvegarderEtat() {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        page: 'dash',
+        // Restaure la page courante au rafraîchissement (les fiches détail reviennent à la liste).
+        page: (state.page === 'detail' || state.page === 'detail-groupe') ? 'prod' : state.page,
         ucCat: state.ucCat || null,
         indices: donnees.indices,
         taux: donnees.taux,
         produits: donnees.produits,
+        macro: (typeof MACRO !== 'undefined') ? MACRO.map(m => ({ nom: m.nom, valeur: m.valeur, var: m.var, hausse: m.hausse })) : null,
       }));
     } catch {}
   }
@@ -72,6 +74,10 @@ const App = (() => {
       const c = JSON.parse(raw);
       if (c.page) state = { ...state, page: c.page, ucCat: c.ucCat || null };
       if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
+      // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
+      if (c.macro && typeof MACRO !== 'undefined') {
+        c.macro.forEach(s => { const m = MACRO.find(x => x.nom === s.nom); if (m) { m.valeur = s.valeur; m.var = s.var; m.hausse = s.hausse; } });
+      }
     } catch {}
   }
 
@@ -185,28 +191,46 @@ const App = (() => {
     }
   }
 
-  // Met à jour les cartes macro Yahoo (Brent, Or, Bitcoin) avec le dernier cours,
-  // pour que la valeur affichée colle au dernier point du graphique.
+  // Met à jour les cartes Actifs (Brent, Or, Bitcoin) avec le dernier cours. La garde évite
+  // les mises à jour concurrentes (chiffres qui s'affolent) ; les valeurs live sont écrites
+  // dans MACRO pour qu'un re-rendu ne repasse pas aux valeurs statiques.
+  let majMarcheEnCours = false;
   async function majCartesMarche() {
-    if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
-    for (const card of document.querySelectorAll('[data-macro]')) {
-      const gid = card.getAttribute('data-macro');
-      if (!gid || gid.indexOf('fred:') === 0 || gid.indexOf('hicp:') === 0) continue;
-      try {
-        const r = await fetch(AppAPI.historyUrl(gid, '1j'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
-        if (!r.ok) continue;
-        const pts = (await r.json()).points || [];
-        if (pts.length < 2) continue;
-        const last = pts[pts.length - 1].c, first = pts[0].c;
-        const valEl = card.querySelector('[data-macro-val]');
-        const varEl = card.querySelector('[data-macro-var]');
-        if (valEl) valEl.textContent = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
-        if (varEl && first) {
-          const pct = (last - first) / first * 100, up = pct >= 0;
-          varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-          varEl.className = 'taux-var tnum ' + (up ? 'up' : 'down');
-        }
-      } catch (_) { /* on garde la valeur affichée */ }
+    if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl || majMarcheEnCours) return;
+    majMarcheEnCours = true;
+    try {
+      for (const card of document.querySelectorAll('[data-macro]')) {
+        const gid = card.getAttribute('data-macro');
+        if (!gid || gid.indexOf('fred:') === 0 || gid.indexOf('hicp:') === 0) continue;
+        try {
+          const r = await fetch(AppAPI.historyUrl(gid, '1j'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+          if (!r.ok) continue;
+          const pts = (await r.json()).points || [];
+          if (pts.length < 2) continue;
+          const last = pts[pts.length - 1].c, first = pts[0].c;
+          const nomActif = card.querySelector('.index-name')?.textContent || '';
+          const valStr = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
+          const valEl = card.querySelector('[data-macro-val]');
+          const varEl = card.querySelector('[data-macro-var]');
+          if (valEl) valEl.textContent = valStr;
+          let varStr = null, up = null;
+          if (first) {
+            const pct = (last - first) / first * 100; up = pct >= 0;
+            varStr = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+            // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge).
+            const favorable = /Brent/i.test(nomActif) ? !up : up;
+            if (varEl) { varEl.textContent = varStr; varEl.className = 'index-var tnum ' + (favorable ? 'up' : 'down'); }
+          }
+          // Persiste dans MACRO (direction brute dans hausse ; la couleur est calculée au rendu).
+          if (typeof MACRO !== 'undefined') {
+            const m = MACRO.find(x => graphIdPour(x.nom) === gid);
+            if (m) { m.valeur = valStr; if (varStr != null) { m.var = varStr; m.hausse = up; } }
+          }
+        } catch (_) { /* on garde la valeur affichée */ }
+      }
+      sauvegarderEtat();
+    } finally {
+      majMarcheEnCours = false;
     }
   }
 

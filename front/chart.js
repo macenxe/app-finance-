@@ -154,9 +154,9 @@ const Chart = (() => {
     const X = i => padL + (i / (n - 1)) * plotW;
     const Y = c => padT + (1 - (c - min) / (max - min)) * plotH;
 
-    // CMS (taux) : une baisse est favorable → couleur inversée (baisse = vert, hausse = rouge).
+    // Taux & indicateurs (fred/hicp/CMS) : une baisse est favorable → couleur inversée.
     const monte = pts[n - 1].c >= pts[0].c;
-    const favorable = /^scrape:/.test(etat.ticker) ? !monte : monte;
+    const favorable = /^(fred:|hicp:|scrape:)/.test(etat.ticker) ? !monte : monte;
     const couleur = favorable ? '#1d6f4c' : '#9a3535';
 
     let d = '';
@@ -207,9 +207,8 @@ const Chart = (() => {
     prixEl.textContent = fmtPrix(p.c);
     dateEl.textContent = fmtDate(p.t, etat.periode);
     const base = etat.points[0].c;
-    if (/^scrape:/.test(etat.ticker)) {
-      // CMS (taux) : variation en points de base (le % explose quand le taux frôle 0).
-      // Baisse favorable → couleur inversée (baisse = vert, hausse = rouge).
+    if (/^(fred:|hicp:|scrape:)/.test(etat.ticker)) {
+      // Taux & indicateurs : variation en points de base + baisse favorable → couleur inversée.
       const pb = Math.round((p.c - base) * 100);
       varEl.textContent = (pb > 0 ? '+' : '') + pb + ' pb sur la période';
       varEl.className = 'chart-var tnum ' + (pb === 0 ? 'flat' : pb < 0 ? 'up' : 'down');
