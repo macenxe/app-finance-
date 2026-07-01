@@ -281,7 +281,8 @@ function parseItemsRSS(xml, tag, max = 6) {
 
 async function fetchRSSWorker(url, tag, max = 4) {
   try {
-    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 900 } });
+    // Timeout par flux : un flux Google News lent ne doit pas bloquer l'ensemble.
+    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
     if (!r.ok) return [];
     const xml = await r.text();
     return parseItemsRSS(xml, tag, max);
@@ -310,11 +311,19 @@ export default {
 
     const u = new URL(request.url);
 
-    // Actualités économiques : ?news=1
+    // Actualités économiques : ?news=1 (10 flux RSS = lent → cache de sortie 15 min).
     if (u.searchParams.get('news')) {
+      const cache = caches.default;
+      const cleCache = new Request(new URL('/?news=cache', u.origin).toString());
+      const enCache = await cache.match(cleCache);
+      if (enCache) return enCache;
       try {
         const news = await recupererNews();
-        return new Response(JSON.stringify(news), { headers: JSON_HEADERS });
+        const resp = new Response(JSON.stringify(news), {
+          headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=900' },
+        });
+        await cache.put(cleCache, resp.clone());
+        return resp;
       } catch (e) {
         return new Response(JSON.stringify({ error: String(e?.message || e) }), { status: 502, headers: JSON_HEADERS });
       }

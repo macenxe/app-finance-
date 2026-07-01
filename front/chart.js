@@ -39,8 +39,9 @@ const Chart = (() => {
   // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN' }
   function ouvrir(ticker, label, opts) {
     opts = opts || {};
-    // Séries journalières (FRED, inflation, swap CMS) : pas d'intraday → on retire « Jour ».
-    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker);
+    // Séries sans intraday (FRED, inflation, swap CMS, fonds Yahoo 0P…F) : pas d'heure ni
+    // « Jour » (un fonds n'a qu'une VL par jour → Yahoo renvoie 404 en 1j).
+    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker) || /^0P\w+\.F$/i.test(ticker);
     const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
@@ -306,9 +307,9 @@ const Chart = (() => {
 
   function ouvrirInline(containerId, ticker, label, opts) {
     opts = opts || {};
-    // Séries journalières (FRED, inflation, swap CMS) : pas d'intraday → dates sans heure
-    // et pas de « Jour » (la période perdrait son sens sans donnée intraday).
-    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker);
+    // Séries sans intraday (FRED, inflation, swap CMS, fonds Yahoo 0P…F) : pas d'heure ni
+    // « Jour » (un fonds n'a qu'une VL par jour → Yahoo renvoie 404 en 1j).
+    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker) || /^0P\w+\.F$/i.test(ticker);
     const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,

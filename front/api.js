@@ -252,7 +252,8 @@ const AppAPI = (() => {
   async function chargerNews() {
     const h = location.hostname;
     if (h === 'localhost' || h === '127.0.0.1') return fetchJson(`${BASE}/news`, 12000);
-    return fetchJson(`${WORKER}?news=1`, 12000);
+    // Le Worker agrège 10 flux RSS (lent au premier appel, puis en cache) : délai large.
+    return fetchJson(`${WORKER}?news=1`, 18000);
   }
 
   return { chargerDonnees, chargerNews, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };

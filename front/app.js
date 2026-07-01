@@ -344,6 +344,8 @@ const App = (() => {
       const backdrop = document.getElementById('sidebar-backdrop');
       const isOpen   = sidebar.classList.toggle('open');
       if (backdrop) backdrop.classList.toggle('open', isOpen);
+      const ham = document.querySelector('.btn-hamburger');
+      if (ham) ham.textContent = isOpen ? '✕' : '☰';
     },
     goto(page) {
       state = { ...state, page, q: '', detailIsin: null };
@@ -352,6 +354,8 @@ const App = (() => {
       // Ferme la sidebar sur mobile après navigation
       document.getElementById('sidebar')?.classList.remove('open');
       document.getElementById('sidebar-backdrop')?.classList.remove('open');
+      const ham = document.querySelector('.btn-hamburger');
+      if (ham) ham.textContent = '☰';
       renderPage();
     },
     setFilter(filter) {
