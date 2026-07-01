@@ -37,13 +37,15 @@ const TAUX = [
   { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:false },
   { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:false },
   { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:true  },
-  { nom:'CMS 10 ans',        valeur:'3,04 %', var:'stable', hausse:null  },
+  { nom:'CMS 10 ans',        valeur:null,     var:null,     hausse:null  }, // live via majCMS
 ];
 
+// Valeurs récupérées en direct (Yahoo via Worker, majCartesMarche) : pas de valeur fixe,
+// on affiche « — » tant que le live n'est pas chargé (évite le saut valeur figée → live).
 const MACRO = [
-  { nom:'Pétrole Brent', valeur:'84,20 $',  var:'+0,6 %', hausse:true  },
-  { nom:'Or',            valeur:'2 321 $',  var:'+0,3 %', hausse:true  },
-  { nom:'Bitcoin',       valeur:'63 400 $', var:'−1,2 %', hausse:false },
+  { nom:'Pétrole Brent', valeur:null, var:null, hausse:null },
+  { nom:'Or',            valeur:null, var:null, hausse:null },
+  { nom:'Bitcoin',       valeur:null, var:null, hausse:null },
 ];
 
 // Dernière valeur connue des séries FRED (générée depuis front/data/history/),

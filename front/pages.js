@@ -100,8 +100,8 @@ function renderDashboard(indices, produits, taux) {
           return `
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
           <div class="index-name">${m.nom}</div>
-          <div class="index-val tnum" data-macro-val>${m.valeur}</div>
-          <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var}</div>
+          <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
+          <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
         </div>`; }).join('')}
       </div>
 
