@@ -118,31 +118,19 @@ async function historiqueHicp(series, periode, key) {
 
 // ── CMS 10 ans EUR : vrai swap via FT Markets (« Euro 10 yr Swap ») ──
 // FT n'est pas protégé par Cloudflare → récupérable côté serveur ; on ajoute le CORS.
-const FT_CMS_SYM = 'A@?EURIRSXY:RCT';
 const FT_CMS_XID = '5767342';
-const FT_TEARSHEET = `https://markets.ft.com/data/indices/tearsheet/summary?s=${encodeURIComponent(FT_CMS_SYM)}`;
-// FT ne donne que des points journaliers (pas d'intraday) pour le swap : on élargit les
-// périodes courtes pour garantir au moins deux points même après un week-end / jour férié.
+// FT ne publie qu'une valeur par jour pour ce swap (aucun intraday, même en demandant
+// « Minute »/« Hour »). La valeur « du moment » = la dernière clôture quotidienne connue.
+// On élargit les périodes courtes pour garantir au moins deux points même après un
+// week-end / jour férié.
 const FT_PERIODES = {
   '1j': { days: 8, p: 'Day' }, '1s': { days: 14, p: 'Day' }, '1m': { days: 40, p: 'Day' },
   '6m': { days: 190, p: 'Day' }, '1a': { days: 370, p: 'Day' },
   '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
 };
 
-// Valeur intraday du CMS 10 ans = « Price » de la fiche FT (différée ~15 min).
-async function prixCmsFT() {
-  const r = await fetch(FT_TEARSHEET, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 900 } });
-  if (!r.ok) return null;
-  const m = (await r.text()).match(/mod-ui-data-list__value">([0-9.]+)/);
-  return m ? parseFloat(m[1]) : null;
-}
-async function coursCmsFT() {
-  const v = await prixCmsFT();
-  return v == null ? null : { nom: 'CMS 10 ans', valeur: v, source: 'FT Markets · Euro 10y swap', heure: new Date().toISOString() };
-}
-
-// Historique du CMS 10 ans (FT chartapi).
-async function historiqueCmsFT(periode) {
+// Série de clôtures FT (chartapi) pour une période donnée.
+async function serieCmsFT(periode) {
   const cfg = FT_PERIODES[periode] || (periode === 'ytd'
     ? { days: Math.max(2, Math.ceil((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000)), p: 'Day' }
     : FT_PERIODES['6m']);
@@ -164,15 +152,22 @@ async function historiqueCmsFT(periode) {
     const c = vals[i];
     if (c != null) points.push({ t: Math.floor(Date.parse(dates[i]) / 1000), c });
   }
-  if (points.length < 2) return null;
-  // Dernier point = valeur intraday courante (« live »), pour coller au tableau de bord.
-  const live = await prixCmsFT();
-  if (live != null) {
-    const nowT = Math.floor(Date.now() / 1000);
-    const last = points[points.length - 1];
-    if (Math.floor(nowT / 86400) === Math.floor(last.t / 86400)) last.c = live;
-    else points.push({ t: nowT, c: live });
-  }
+  return points;
+}
+
+// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue.
+async function coursCmsFT() {
+  const points = await serieCmsFT('1m');
+  if (!points || !points.length) return null;
+  const v = points[points.length - 1].c;
+  return { nom: 'CMS 10 ans', valeur: v, source: 'FT Markets · Euro 10y swap (clôture)', heure: new Date().toISOString() };
+}
+
+// Historique du CMS 10 ans. Pas de « Jour » : le swap n'a pas d'intraday (une valeur par
+// jour), donc « 1j » perdrait son sens ; la période est retirée côté front (chart.js).
+async function historiqueCmsFT(periode) {
+  const points = await serieCmsFT(periode);
+  if (!points || points.length < 2) return null;
   return { ticker: 'scrape:cms', periode, points, devise: '%' };
 }
 

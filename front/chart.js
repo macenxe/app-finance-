@@ -296,10 +296,14 @@ const Chart = (() => {
 
   function ouvrirInline(containerId, ticker, label, opts) {
     opts = opts || {};
+    // Séries journalières (FRED, inflation, swap CMS) : pas d'intraday → dates sans heure
+    // et pas de « Jour » (la période perdrait son sens sans donnée intraday).
+    const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker);
+    const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
-      compoIsin: null, inlineId: containerId,
+      compoIsin: null, inlineId: containerId, dateOnly, periodes,
     };
     const el = document.getElementById(containerId);
     if (!el) return;
@@ -314,7 +318,7 @@ const Chart = (() => {
       </div>
       <div class="chart-zone" id="chart-zone"><div class="chart-loading">Chargement…</div></div>
       <div class="chart-periodes">
-        ${PERIODES.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
+        ${periodes.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
       </div>`;
     charger(DEFAUT);
   }
