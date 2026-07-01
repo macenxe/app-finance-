@@ -6,6 +6,17 @@ const App = (() => {
 
   const CACHE_KEY       = 'app-cache-v3';
   const CMS_OVERRIDE_KEY = 'cms-taux-override';
+  const CMS_LIVE_KEY = 'cms-live-v1';
+  // Dernière valeur live connue du CMS (FT), mémorisée pour éviter le saut de valeur au
+  // rafraîchissement : chargerDonnees renvoie une valeur snapshot qu'on remplace aussitôt.
+  let dernierCMS = null;
+
+  function appliquerCMSLive() {
+    if (!dernierCMS) return;
+    const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
+    if (t) { t.valeur = dernierCMS.valeur; t.var = dernierCMS.var; t.hausse = dernierCMS.hausse; t.manuel = false; t.dateMaj = null; }
+    (donnees.produits || []).forEach(p => { if (p.type === 'cms') p.niveau = dernierCMS.valeur; });
+  }
 
   function appliquerCMSInterne(valeur) {
     const fmt2 = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -68,17 +79,20 @@ const App = (() => {
   }
 
   function restaurerEtat() {
+    try { const rc = localStorage.getItem(CMS_LIVE_KEY); if (rc) dernierCMS = JSON.parse(rc); } catch {}
     try {
       const raw = localStorage.getItem(CACHE_KEY);
-      if (!raw) return;
-      const c = JSON.parse(raw);
-      if (c.page) state = { ...state, page: c.page, ucCat: c.ucCat || null };
-      if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
-      // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
-      if (c.macro && typeof MACRO !== 'undefined') {
-        c.macro.forEach(s => { const m = MACRO.find(x => x.nom === s.nom); if (m) { m.valeur = s.valeur; m.var = s.var; m.hausse = s.hausse; } });
+      if (raw) {
+        const c = JSON.parse(raw);
+        if (c.page) state = { ...state, page: c.page, ucCat: c.ucCat || null };
+        if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
+        // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
+        if (c.macro && typeof MACRO !== 'undefined') {
+          c.macro.forEach(s => { const m = MACRO.find(x => x.nom === s.nom); if (m) { m.valeur = s.valeur; m.var = s.var; m.hausse = s.hausse; } });
+        }
       }
     } catch {}
+    appliquerCMSLive();
   }
 
   async function chargerPerfsUC() {
@@ -236,26 +250,27 @@ const App = (() => {
 
   // Récupère la valeur courante du CMS 10 ans (vrai swap EUR 10y via FT, proxifié par le
   // Worker) et l'applique au tableau de bord et aux produits CMS. Repli sur la saisie manuelle.
+  let majCMSEnCours = false;
   async function majCMS() {
-    if (typeof AppAPI === 'undefined' || !AppAPI.cmsUrl) return;
+    if (typeof AppAPI === 'undefined' || !AppAPI.cmsUrl || majCMSEnCours) return;
+    majCMSEnCours = true;
     try {
       const r = await fetch(AppAPI.cmsUrl(), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
       if (!r.ok) return;
       const d = await r.json();
       if (d.valeur == null) return;
       const valStr = d.valeur.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
-      const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
-      if (t) {
-        // Variation en pb comme les autres taux ; hausse = true → rouge, baisse → vert.
-        const dp = d.deltaPb;
-        t.valeur = valStr;
-        t.var = dp == null ? '' : (dp > 0 ? '+' : '') + dp + ' pb';
-        t.hausse = dp == null || dp === 0 ? null : dp > 0;
-        t.manuel = false; t.dateMaj = null;
-      }
-      (donnees.produits || []).forEach(p => { if (p.type === 'cms') p.niveau = valStr; });
+      // Variation en pb comme les autres taux ; hausse = true → rouge, baisse → vert.
+      const dp = d.deltaPb;
+      dernierCMS = {
+        valeur: valStr,
+        var: dp == null ? '' : (dp > 0 ? '+' : '') + dp + ' pb',
+        hausse: dp == null || dp === 0 ? null : dp > 0,
+      };
+      try { localStorage.setItem(CMS_LIVE_KEY, JSON.stringify(dernierCMS)); } catch {}
+      appliquerCMSLive();
       renderPage();
-    } catch (_) { /* on garde la valeur saisie */ }
+    } catch (_) { /* on garde la valeur saisie */ } finally { majCMSEnCours = false; }
   }
 
   function mettreAJourBadgeSource() {
@@ -313,6 +328,7 @@ const App = (() => {
       ind.style.height = '52px';
       ind.classList.add('refreshing');
       donnees = await AppAPI.chargerDonnees();
+      appliquerCMSLive();
       sauvegarderEtat();
       renderPage();
       majCMS();
@@ -357,6 +373,8 @@ const App = (() => {
       // Back disponible : il est la source de vérité, l'override local est obsolète.
       try { localStorage.removeItem(CMS_OVERRIDE_KEY); } catch {}
     }
+    // Réapplique le dernier CMS live (FT) sur les données fraîches, avant le rendu.
+    appliquerCMSLive();
     sauvegarderEtat();
     renderPage();
     majCMS();
