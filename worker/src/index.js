@@ -121,8 +121,10 @@ async function historiqueHicp(series, periode, key) {
 const FT_CMS_SYM = 'A@?EURIRSXY:RCT';
 const FT_CMS_XID = '5767342';
 const FT_TEARSHEET = `https://markets.ft.com/data/indices/tearsheet/summary?s=${encodeURIComponent(FT_CMS_SYM)}`;
+// FT ne donne que des points journaliers (pas d'intraday) pour le swap : on élargit les
+// périodes courtes pour garantir au moins deux points même après un week-end / jour férié.
 const FT_PERIODES = {
-  '1j': { days: 3, p: 'Day' }, '1s': { days: 10, p: 'Day' }, '1m': { days: 35, p: 'Day' },
+  '1j': { days: 8, p: 'Day' }, '1s': { days: 14, p: 'Day' }, '1m': { days: 40, p: 'Day' },
   '6m': { days: 190, p: 'Day' }, '1a': { days: 370, p: 'Day' },
   '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
 };
