@@ -206,12 +206,18 @@ const Chart = (() => {
     prixEl.textContent = fmtPrix(p.c);
     dateEl.textContent = fmtDate(p.t, etat.periode);
     const base = etat.points[0].c;
-    const pct = base ? (p.c - base) / base * 100 : 0;
-    const up = pct >= 0;
-    varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' % sur la période';
-    // CMS (taux) : baisse favorable → couleur inversée (baisse = vert, hausse = rouge).
-    const favorable = /^scrape:/.test(etat.ticker) ? !up : up;
-    varEl.className = 'chart-var tnum ' + (favorable ? 'up' : 'down');
+    if (/^scrape:/.test(etat.ticker)) {
+      // CMS (taux) : variation en points de base (le % explose quand le taux frôle 0).
+      // Baisse favorable → couleur inversée (baisse = vert, hausse = rouge).
+      const pb = Math.round((p.c - base) * 100);
+      varEl.textContent = (pb > 0 ? '+' : '') + pb + ' pb sur la période';
+      varEl.className = 'chart-var tnum ' + (pb === 0 ? 'flat' : pb < 0 ? 'up' : 'down');
+    } else {
+      const pct = base ? (p.c - base) / base * 100 : 0;
+      const up = pct >= 0;
+      varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' % sur la période';
+      varEl.className = 'chart-var tnum ' + (up ? 'up' : 'down');
+    }
   }
 
   function attacherSurvol() {
