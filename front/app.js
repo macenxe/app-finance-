@@ -28,6 +28,7 @@ const App = (() => {
   function chartTickerPour(p) {
     const t = p.ticker || p.sj || '';
     if (t === 'SX7E.PA' || t === 'ES Banks') return 'BNKE.PA';
+    if (t === 'CMS10' || p.type === 'cms')   return 'scrape:cms'; // swap EUR 10y via FT
     return t;
   }
 
@@ -44,6 +45,10 @@ const App = (() => {
         const pm = String(p.protection).match(/-(\d+)/);
         if (pm) lignes.push({ valeur: p.strikeNum * (1 - parseInt(pm[1], 10) / 100), label: 'Protection −' + pm[1] + ' %', couleur: '#b06a1a' });
       }
+    } else if (p.type === 'cms') {
+      // Le graphique CMS est en % : on place les barrières (en %) comme repères.
+      if (p.bCouponNum != null) lignes.push({ valeur: p.bCouponNum, label: 'B. coupon',   couleur: '#9a3535' });
+      if (p.bAutoNum   != null) lignes.push({ valeur: p.bAutoNum,   label: 'B. autocall', couleur: '#1d6f4c' });
     }
     return lignes;
   }

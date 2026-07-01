@@ -129,13 +129,16 @@ const FT_PERIODES = {
   '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
 };
 
-// Valeur courante du CMS 10 ans = dernier point du graphique (dernière clôture FT),
-// pour que le tableau de bord et le graphique affichent exactement la même valeur.
+// Valeur intraday du CMS 10 ans = « Price » de la fiche FT (différée ~15 min).
+async function prixCmsFT() {
+  const r = await fetch(FT_TEARSHEET, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 900 } });
+  if (!r.ok) return null;
+  const m = (await r.text()).match(/mod-ui-data-list__value">([0-9.]+)/);
+  return m ? parseFloat(m[1]) : null;
+}
 async function coursCmsFT() {
-  const h = await historiqueCmsFT('1s');
-  const last = h?.points?.[h.points.length - 1];
-  if (!last) return null;
-  return { nom: 'CMS 10 ans', valeur: last.c, source: 'FT Markets · Euro 10y swap', heure: new Date(last.t * 1000).toISOString() };
+  const v = await prixCmsFT();
+  return v == null ? null : { nom: 'CMS 10 ans', valeur: v, source: 'FT Markets · Euro 10y swap', heure: new Date().toISOString() };
 }
 
 // Historique du CMS 10 ans (FT chartapi).
@@ -162,6 +165,14 @@ async function historiqueCmsFT(periode) {
     if (c != null) points.push({ t: Math.floor(Date.parse(dates[i]) / 1000), c });
   }
   if (points.length < 2) return null;
+  // Dernier point = valeur intraday courante (« live »), pour coller au tableau de bord.
+  const live = await prixCmsFT();
+  if (live != null) {
+    const nowT = Math.floor(Date.now() / 1000);
+    const last = points[points.length - 1];
+    if (Math.floor(nowT / 86400) === Math.floor(last.t / 86400)) last.c = live;
+    else points.push({ t: nowT, c: live });
+  }
   return { ticker: 'scrape:cms', periode, points, devise: '%' };
 }
 
