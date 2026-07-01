@@ -221,7 +221,14 @@ const App = (() => {
       if (d.valeur == null) return;
       const valStr = d.valeur.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
       const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
-      if (t) { t.valeur = valStr; t.var = 'FT'; t.hausse = null; t.manuel = false; t.dateMaj = null; }
+      if (t) {
+        // Variation en pb comme les autres taux ; hausse = true → rouge, baisse → vert.
+        const dp = d.deltaPb;
+        t.valeur = valStr;
+        t.var = dp == null ? '' : (dp > 0 ? '+' : '') + dp + ' pb';
+        t.hausse = dp == null || dp === 0 ? null : dp > 0;
+        t.manuel = false; t.dateMaj = null;
+      }
       (donnees.produits || []).forEach(p => { if (p.type === 'cms') p.niveau = valStr; });
       renderPage();
     } catch (_) { /* on garde la valeur saisie */ }

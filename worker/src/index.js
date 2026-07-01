@@ -155,12 +155,15 @@ async function serieCmsFT(periode) {
   return points;
 }
 
-// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue.
+// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue,
+// avec la variation en points de base (pb) vs la clôture précédente.
 async function coursCmsFT() {
   const points = await serieCmsFT('1m');
   if (!points || !points.length) return null;
   const v = points[points.length - 1].c;
-  return { nom: 'CMS 10 ans', valeur: v, source: 'FT Markets · Euro 10y swap (clôture)', heure: new Date().toISOString() };
+  const prev = points.length >= 2 ? points[points.length - 2].c : null;
+  const deltaPb = prev != null ? Math.round((v - prev) * 100) : null;
+  return { nom: 'CMS 10 ans', valeur: v, deltaPb, source: 'FT Markets · Euro 10y swap (clôture)', heure: new Date().toISOString() };
 }
 
 // Historique du CMS 10 ans. Pas de « Jour » : le swap n'a pas d'intraday (une valeur par

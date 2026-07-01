@@ -153,8 +153,10 @@ const Chart = (() => {
     const X = i => padL + (i / (n - 1)) * plotW;
     const Y = c => padT + (1 - (c - min) / (max - min)) * plotH;
 
-    const hausse = pts[n - 1].c >= pts[0].c;
-    const couleur = hausse ? '#1d6f4c' : '#9a3535';
+    // CMS (taux) : une baisse est favorable → couleur inversée (baisse = vert, hausse = rouge).
+    const monte = pts[n - 1].c >= pts[0].c;
+    const favorable = /^scrape:/.test(etat.ticker) ? !monte : monte;
+    const couleur = favorable ? '#1d6f4c' : '#9a3535';
 
     let d = '';
     for (let i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(pts[i].c).toFixed(1) + ' ';
@@ -207,7 +209,9 @@ const Chart = (() => {
     const pct = base ? (p.c - base) / base * 100 : 0;
     const up = pct >= 0;
     varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' % sur la période';
-    varEl.className = 'chart-var tnum ' + (up ? 'up' : 'down');
+    // CMS (taux) : baisse favorable → couleur inversée (baisse = vert, hausse = rouge).
+    const favorable = /^scrape:/.test(etat.ticker) ? !up : up;
+    varEl.className = 'chart-var tnum ' + (favorable ? 'up' : 'down');
   }
 
   function attacherSurvol() {
