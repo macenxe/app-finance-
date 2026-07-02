@@ -290,27 +290,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .news-article { display: block; background: #fff; border: 1px solid #e6e0d2; border-radius: 6px; padding: 12px 14px; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
 .news-article:hover { border-color: #c9a96a; box-shadow: 0 2px 8px rgba(22,48,79,.07); }
 .news-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
-.news-tag, .news-badge-prod { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: .04em; }
-/* neutre (défaut) */
-.news-tag               { background: #eef1f5; color: #4a6080; }
-.news-badge-prod        { background: #eef1f5; color: #4a6080; }
-/* neutre */
-.news-tag--neutre,
-.news-badge-prod--neutre { background: #fdf3e3; color: #8a6a20; }
-/* positif */
-.news-tag--positive,
-.news-badge-prod--positive { background: #e6f2ec; color: #1d6f4c; }
-/* négatif */
-.news-tag--negative,
-.news-badge-prod--negative { background: #faeaea; color: #9a3535; }
-/* bordure gauche sur la carte selon sentiment */
-.news-article--neutre   { border-left: 3px solid #c9a96a; }
-.news-article--positive { border-left: 3px solid #1d6f4c; }
-.news-article--negative { border-left: 3px solid #9a3535; }
+/* Badge thème : fond plein discret */
+.news-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: .04em; background: #e8e2d6; color: #5a5040; }
+/* Badge produit concerné : outlined pour se différencier du thème */
+.news-badge-prod { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 3px; letter-spacing: .03em; background: transparent; border: 1px solid #b8a880; color: #7a6840; }
 .news-titre { font-size: 12.5px; font-weight: 600; color: #16304f; line-height: 1.4; margin-bottom: 5px; }
 .news-meta { font-size: 11px; color: #9a8f7a; }
 .news-empty { font-size: 12.5px; color: #9a8f7a; margin: 0; }
-@media (max-width: 640px) { .news-articles-grid { grid-template-columns: 1fr; } }
+/* 2 colonnes conservées sur mobile */
 
 /* ── Footer compliance ── */
 #footer {
@@ -791,6 +778,19 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 
 /* ── Paysage mobile : sidebar overlay + tableau toutes colonnes ── */
+/* Tableau en mode paysage sur desktop */
+@media (min-width: 780px) and (hover: hover) {
+  .col-landscape { display: revert; }
+  .barr-portrait { display: none; }
+  .barr-landscape { display: inline-block; }
+  .products-table-header, .products-table-row {
+    grid-template-columns: minmax(80px,1.5fr) minmax(52px,0.8fr) 46px 50px 36px 48px 48px 72px;
+    column-gap: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media (max-height: 500px) and (orientation: landscape) {
   /* Sidebar en overlay (même comportement qu'en portrait) */
   #sidebar {

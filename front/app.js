@@ -118,9 +118,9 @@ const App = (() => {
 
   const NAV = [
     { key: 'dash',     label: 'Tableau de bord'        },
-    { key: 'actus',    label: 'Actualités économiques'  },
     { key: 'prod',     label: 'Autocalls'               },
     { key: 'contrats', label: 'Fonds € et UC'           },
+    { key: 'actus',    label: 'Actualités économiques'  },
   ];
 
   function renderNav() {
@@ -190,15 +190,28 @@ const App = (() => {
   async function chargerActus() {
     const el = document.getElementById('news-section');
     if (!el) return;
+    const CACHE_KEY = 'news_cache_v1';
+    // Affiche immédiatement le cache si disponible
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const news = JSON.parse(cached);
+        if (document.getElementById('news-section')) {
+          document.getElementById('news-section').innerHTML = renderNewsSection(news);
+          document.getElementById('news-section').className = '';
+        }
+      }
+    } catch {}
+    // Puis actualise en arrière-plan
     try {
       const news = await AppAPI.chargerNews();
-      const html = renderNewsSection(news);
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify(news)); } catch {}
       if (document.getElementById('news-section')) {
-        document.getElementById('news-section').innerHTML = html;
+        document.getElementById('news-section').innerHTML = renderNewsSection(news);
         document.getElementById('news-section').className = '';
       }
     } catch {
-      if (document.getElementById('news-section')) {
+      if (!localStorage.getItem(CACHE_KEY) && document.getElementById('news-section')) {
         document.getElementById('news-section').innerHTML = '<p class="news-empty">Actualités indisponibles (back local requis).</p>';
         document.getElementById('news-section').className = '';
       }

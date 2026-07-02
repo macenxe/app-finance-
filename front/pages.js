@@ -215,12 +215,11 @@ function renderNewsSection(news) {
 
   const articleHtml = (a) => {
     const autocalls = TAG_AUTOCALLS[a.tag] || [];
-    const s = a.sentiment || 'neutre';
     return `
-    <a class="news-article news-article--${s}" href="${escHtml(a.lien)}" target="_blank" rel="noopener">
+    <a class="news-article" href="${escHtml(a.lien)}" target="_blank" rel="noopener">
       <div class="news-badges">
-        ${a.tag ? `<span class="news-tag news-tag--${s}">${escHtml(a.tag)}</span>` : ''}
-        ${autocalls.map(p => `<span class="news-badge-prod news-badge-prod--${s}">${escHtml(p)}</span>`).join('')}
+        ${a.tag ? `<span class="news-tag">${escHtml(a.tag)}</span>` : ''}
+        ${autocalls.map(p => `<span class="news-badge-prod">${escHtml(p)}</span>`).join('')}
       </div>
       <div class="news-titre">${escHtml(a.titre)}</div>
       <div class="news-meta">${escHtml(a.source)}${a.date ? ' · ' + fmtDate(a.date) : ''}</div>
