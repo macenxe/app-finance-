@@ -79,12 +79,16 @@ const App = (() => {
   }
 
   function restaurerEtat() {
+    // sessionStorage survit au F5 mais est effacé à la fermeture de l'onglet.
+    // Si absent → ouverture fraîche → on reste sur le tableau de bord.
+    const estRafraichissement = !!sessionStorage.getItem('session_active');
+    sessionStorage.setItem('session_active', '1');
     try { const rc = localStorage.getItem(CMS_LIVE_KEY); if (rc) dernierCMS = JSON.parse(rc); } catch {}
     try {
       const raw = localStorage.getItem(CACHE_KEY);
       if (raw) {
         const c = JSON.parse(raw);
-        if (c.page) state = { ...state, page: c.page, ucCat: c.ucCat || null };
+        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
         if (c.macro && typeof MACRO !== 'undefined') {
