@@ -197,37 +197,6 @@ const AppAPI = (() => {
     };
   }
 
-  async function ajouterProduit(data) {
-    const r = await fetch(`${BASE}/produits`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-      signal: AbortSignal.timeout(8000),
-    });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  }
-
-  async function supprimerProduit(id) {
-    const r = await fetch(`${BASE}/produits/${id}`, {
-      method: 'DELETE',
-      signal: AbortSignal.timeout(4000),
-    });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return true;
-  }
-
-  async function mettreAJourCMS(valeur) {
-    const r = await fetch(`${BASE}/taux/cms`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ valeur }),
-      signal: AbortSignal.timeout(5000),
-    });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  }
-
   // URL de l'historique d'un graphique.
   // Taux & inflation (fred:/hicp:) : fichiers JSON statiques pré-générés, servis en même
   // origine (pas de CORS, pas de clé, pas de Worker). Le reste (cours Yahoo) passe par le
@@ -256,5 +225,5 @@ const AppAPI = (() => {
     return fetchJson(`${WORKER}?news=1`, 18000);
   }
 
-  return { chargerDonnees, chargerNews, estConnecte: () => backOk, ajouterProduit, supprimerProduit, mettreAJourCMS, worker: WORKER, historyUrl, cmsUrl };
+  return { chargerDonnees, chargerNews, worker: WORKER, historyUrl, cmsUrl };
 })();

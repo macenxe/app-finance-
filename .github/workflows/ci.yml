@@ -1,0 +1,31 @@
+name: Vérifications (typecheck + tests)
+
+# Le back porte la logique de calcul (calc.ts) copiée dans le Worker et le front : un test
+# sur calculerIndicateurs aurait attrapé la contradiction >=/<= sur les produits CMS.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verifs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: back/package-lock.json
+      - name: Installer les dépendances
+        working-directory: back
+        run: npm ci
+      - name: Typecheck
+        working-directory: back
+        run: npm run typecheck
+      - name: Tests
+        working-directory: back
+        run: npm test

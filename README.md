@@ -29,3 +29,17 @@ npm run dev      # lance le back en mode développement
 1. `git pull` avant de commencer à coder (récupérer le travail de l'autre).
 2. Travailler dans son dossier (`front/` ou `back/`).
 3. `git add`, `git commit`, puis `git push` une fois le travail fait.
+
+## Produits (ajout / modification / retrait)
+
+La liste des produits existe en **deux exemplaires** qu'il faut garder synchronisés :
+
+- `back/src/produits.ts` : source de vérité (typée). Alimente le snapshot publié en ligne.
+- `front/data.js` (`const PRODUITS`) : repli statique affiché hors-ligne, avec la mise en
+  forme d'écran (chaînes « 215,10 », « 7 % », niveau de repli, etc.).
+
+Pour chaque changement : éditer **les deux** fichiers. Après modification de `produits.ts`,
+le workflow `snapshot.yml` régénère automatiquement `front/data/snapshot.json`.
+
+> Un vrai « source unique » (générateur de `PRODUITS` depuis `produits.ts`) reste à faire :
+> les chaînes du front sont mises en forme à la main, un générateur changerait leur rendu.

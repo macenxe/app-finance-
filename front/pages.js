@@ -61,7 +61,7 @@ function renderDashboard(indices, produits, taux) {
 
   const heureRef = indices[0]?.heureCours
     ? fmtHeure(indices[0].heureCours)
-    : '20 juin 2026, 17:35 · clôture provisoire';
+    : 'heure de cotation indisponible';
 
   return `
   <div>
@@ -116,6 +116,11 @@ function renderDashboard(indices, produits, taux) {
           const valeur = h ? h.valeur : t.valeur;
           const vr = h ? h.var : t.var;
           const hausse = h ? h.hausse : t.hausse;
+          // Fraîcheur : date pré-formatée pour les séries FRED (HISTO_DERNIER), sinon date ISO
+          // du CMS (live FT) convertie en « au JJ/MM ».
+          const dateLbl = (h && h.date) ? h.date
+            : (t.dateMaj && /^\d{4}-\d{2}-\d{2}/.test(t.dateMaj)) ? 'au ' + t.dateMaj.slice(8, 10) + '/' + t.dateMaj.slice(5, 7)
+            : '';
           return `
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
           <div class="index-name index-name-taux">
@@ -123,7 +128,7 @@ function renderDashboard(indices, produits, taux) {
           </div>
           <div class="index-val tnum">${valeur || '—'}</div>
           <div class="taux-var tnum ${hausse === null ? 'flat' : hausse ? 'up' : 'down'}">${vr || ''}</div>
-          ${t.manuel && t.dateMaj ? `<div class="taux-maj">${t.dateMaj}</div>` : ''}
+          ${dateLbl ? `<div class="taux-maj">${escHtml(dateLbl)}</div>` : ''}
         </div>`; }).join('')}
       </div>
 
@@ -406,112 +411,8 @@ function renderProduits(produits, state) {
   </div>`;
 }
 
-function _renderAllocation_supprime() {
-  return `
-  <div>
-    <header class="page-header">
-      <div>
-        <div class="page-title">Allocation & Marchés</div>
-        <div class="page-sub">Lecture macro interne · non personnalisée · 20 juin 2026</div>
-      </div>
-    </header>
-
-    <div class="page-body">
-      <div class="card alloc-intro mb-18">
-        <div class="card-title mb-12" style="font-size:16px;">Contexte économique</div>
-        <p>Désinflation confirmée en zone euro (2,1 %), permettant à la BCE de maintenir un biais accommodant mesuré. Croissance modérée mais résiliente, soutenue par la consommation. Aux États-Unis, la Fed reste prudente face à une inflation collante. Les marchés actions évoluent près de leurs plus hauts ; la pentification des courbes profite aux produits de taux. Environnement globalement porteur pour les structures de rappel, sous réserve de la volatilité bancaire européenne.</p>
-      </div>
-
-      <div class="grid-3 mb-18">
-        <div class="card alloc-asset-card">
-          <div class="alloc-asset-header"><div class="card-title">Actions</div><span class="alloc-badge favorable">Favorable</span></div>
-          <p class="alloc-asset-body">Indices proches des plus hauts. Préférence pour les grandes capitalisations européennes de qualité. Banques EU volatiles — vigilance sur les sous-jacents bancaires des CAP.</p>
-        </div>
-        <div class="card alloc-asset-card">
-          <div class="alloc-asset-header"><div class="card-title">Obligations</div><span class="alloc-badge neutre">Neutre +</span></div>
-          <p class="alloc-asset-body">Portage attractif sur le 10 ans souverain. Pentification favorable aux autocalls indexés CMS. Sensibilité au calendrier BCE/Fed.</p>
-        </div>
-        <div class="card alloc-asset-card">
-          <div class="alloc-asset-header"><div class="card-title">Monétaire</div><span class="alloc-badge baisse">Rendement en baisse</span></div>
-          <p class="alloc-asset-body">Rémunération du monétaire orientée à la baisse avec l'assouplissement BCE. Incite à redéployer la trésorerie longue vers le structuré ou l'obligataire.</p>
-        </div>
-      </div>
-
-      <div class="grid-2 mb-18">
-        <div class="card p-18">
-          <div class="card-title mb-12">Risques macro</div>
-          <div class="risk-list">
-            <div class="risk-item"><span class="risk-dot" style="background:#9a3535;"></span><div class="risk-text">Stress bancaire européen — impact direct sur les sous-jacents Euro Stoxx Banks.</div></div>
-            <div class="risk-item"><span class="risk-dot" style="background:#b06a1a;"></span><div class="risk-text">Reprise de l'inflation US retardant les baisses de taux Fed.</div></div>
-            <div class="risk-item"><span class="risk-dot" style="background:#b06a1a;"></span><div class="risk-text">Tensions géopolitiques et énergie — volatilité ponctuelle.</div></div>
-          </div>
-        </div>
-        <div class="card p-18">
-          <div class="card-title mb-12">Opportunités d'allocation</div>
-          <div class="risk-list">
-            <div class="risk-item"><span class="risk-dot" style="background:#1d6f4c;"></span><div class="risk-text">Autocalls CMS — portage de taux décorrélé des actions.</div></div>
-            <div class="risk-item"><span class="risk-dot" style="background:#1d6f4c;"></span><div class="risk-text">Réinvestissement des capitaux rappelés vers de nouvelles structures.</div></div>
-            <div class="risk-item"><span class="risk-dot" style="background:#1d6f4c;"></span><div class="risk-text">Obligataire souverain 7-10 ans pour le socle de rendement.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reco-box">
-        <div class="reco-header">
-          <div class="card-title">Recommandations internes</div>
-          <span class="reco-tag">Non personnalisées</span>
-        </div>
-        <div class="reco-grid">
-          <div class="reco-item"><b style="color:#16304f;">Surpondérer</b> les structures de taux (CMS) en cœur de portefeuille de rendement.</div>
-          <div class="reco-item"><b style="color:#16304f;">Surveiller</b> l'exposition aux banques EU concentrée sur les CAP.</div>
-          <div class="reco-item"><b style="color:#16304f;">Préparer</b> le réemploi des capitaux issus des rappels probables (T3 2026).</div>
-        </div>
-        <div class="reco-footer">Aide à l'analyse à usage interne — ne constitue pas un conseil personnalisé. Toute application à un client requiert une validation humaine et une étude d'adéquation.</div>
-      </div>
-    </div>
-  </div>`;
-}
-
-function _renderVeille_supprime() {
-  return `
-  <div>
-    <header class="page-header">
-      <div>
-        <div class="page-title">Veille économique</div>
-        <div class="page-sub">Actualités marchés, taux & patrimoine</div>
-      </div>
-      <button class="btn-primary">Résumer l'impact pour l'allocation</button>
-    </header>
-
-    <div class="page-body">
-      <div class="veille-tags">
-        <div class="veille-tag active">Tout</div>
-        <div class="veille-tag">BCE / Fed</div>
-        <div class="veille-tag">Inflation & taux</div>
-        <div class="veille-tag">Géopolitique</div>
-        <div class="veille-tag">Immobilier</div>
-        <div class="veille-tag">Fiscalité patrimoniale</div>
-      </div>
-
-      <div class="grid-2">
-        ${VEILLE.map(v => `
-        <div class="card veille-card">
-          <div class="veille-card-header">
-            <span class="veille-tag-pill" style="background:${v.tagBg};color:${v.tagColor};">${v.tag}</span>
-            <span class="veille-date tnum">${v.date}</span>
-          </div>
-          <div class="veille-titre">${v.titre}</div>
-          <p class="veille-corps">${v.corps}</p>
-          <div class="veille-link">Résumer l'impact pour l'allocation →</div>
-        </div>`).join('')}
-      </div>
-    </div>
-  </div>`;
-}
-
 function renderDetail(produit) {
   const typLabel = produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
-  const canDelete = produit.id != null;
 
   return `
   <div>
@@ -587,90 +488,6 @@ function renderDetail(produit) {
       </div>
 
       <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
-    </div>
-  </div>`;
-}
-
-function renderFormulaireAjout() {
-  return `
-  <div class="modal-overlay" onclick="if(event.target===this)App.fermerFormulaire()">
-    <div class="modal-panel">
-      <div class="modal-header">
-        <div class="modal-title">Ajouter un produit structuré</div>
-        <button class="modal-close" onclick="App.fermerFormulaire()">✕</button>
-      </div>
-      <div class="modal-body">
-        <form id="form-ajout" onsubmit="App.soumettreFormulaire(event)">
-          <div class="form-section-label">Identification</div>
-          <div class="form-grid-2">
-            <div class="form-field">
-              <label for="f-isin">Code ISIN <span class="form-req">*</span></label>
-              <input id="f-isin" name="isin" placeholder="FR001400XXXX" required maxlength="12" style="text-transform:uppercase;">
-            </div>
-            <div class="form-field">
-              <label for="f-type">Type de produit <span class="form-req">*</span></label>
-              <select id="f-type" name="typeProduit" onchange="App.toggleStrikeField(this.value)">
-                <option value="equity">Actions (equity)</option>
-                <option value="cms">Taux (CMS)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="f-nom">Nom commercial <span class="form-req">*</span></label>
-            <input id="f-nom" name="nom" placeholder="Ex : Conservateur Autocall CAC 90% Déc 2026" required>
-          </div>
-
-          <div class="form-section-label">Sous-jacent</div>
-          <div class="form-grid-2">
-            <div class="form-field">
-              <label for="f-sj">Ticker Yahoo Finance <span class="form-req">*</span></label>
-              <input id="f-sj" name="sousJacent" placeholder="Ex : ^STOXX50E, SX7E.PA" required>
-            </div>
-            <div class="form-field">
-              <label for="f-sjlabel">Libellé affiché <span class="form-req">*</span></label>
-              <input id="f-sjlabel" name="sousJacentLabel" placeholder="Ex : Euro Stoxx 50" required>
-            </div>
-          </div>
-
-          <div class="form-section-label">Caractéristiques financières</div>
-          <div class="form-grid-3">
-            <div class="form-field">
-              <label for="f-coupon">Coupon (%) <span class="form-req">*</span></label>
-              <input id="f-coupon" name="coupon" type="number" step="0.01" min="0" placeholder="6.00" required>
-            </div>
-            <div class="form-field" id="field-strike">
-              <label for="f-strike">Strike initial</label>
-              <input id="f-strike" name="strike" type="number" step="0.01" placeholder="7 346">
-            </div>
-            <div class="form-field">
-              <label for="f-bauto">Barrière autocall (%) <span class="form-req">*</span></label>
-              <input id="f-bauto" name="barriereAutocall" type="number" step="0.01" min="0" placeholder="100" required>
-            </div>
-            <div class="form-field">
-              <label for="f-bcoupon">Barrière coupon (%)</label>
-              <input id="f-bcoupon" name="barriereCoupon" type="number" step="0.01" min="0" placeholder="80">
-            </div>
-          </div>
-
-          <div class="form-section-label">Dates</div>
-          <div class="form-grid-2">
-            <div class="form-field">
-              <label for="f-constat">Prochaine constatation <span class="form-req">*</span></label>
-              <input id="f-constat" name="constat" placeholder="Ex : 13/07/2026" required>
-            </div>
-            <div class="form-field">
-              <label for="f-ech">Échéance finale <span class="form-req">*</span></label>
-              <input id="f-ech" name="echeance" type="date" required>
-            </div>
-          </div>
-
-          <div id="form-error" class="form-error" style="display:none;"></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-secondary" onclick="App.fermerFormulaire()">Annuler</button>
-        <button type="submit" form="form-ajout" class="btn-primary" id="form-submit">Enregistrer le produit</button>
-      </div>
     </div>
   </div>`;
 }

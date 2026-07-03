@@ -1,0 +1,29 @@
+name: Déploiement du Worker Cloudflare
+
+# Déploie worker/src/index.js à chaque push qui le touche (fini le « wrangler deploy »
+# manuel depuis la machine de l'auteur : le front partait seul sur Pages, le Worker restait
+# en arrière). Nécessite le secret GitHub CLOUDFLARE_API_TOKEN (droit Workers Scripts:Edit).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Déployer le Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: worker

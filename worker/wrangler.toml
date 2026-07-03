@@ -1,3 +1,5 @@
 name = "app-finance-live"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
+# Identifiant de compte (non secret) : évite d'avoir à le passer en CI et fige la cible.
+account_id = "690d11248f86848c1366339e96eaea96"

@@ -8,7 +8,8 @@
     "start":     "node --env-file=.env node_modules/tsx/dist/cli.mjs src/server.ts",
     "snapshot":  "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/snapshot.ts",
     "build":     "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test":      "node --import tsx --test src/calc.test.ts"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",

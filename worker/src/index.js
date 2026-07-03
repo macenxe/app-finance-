@@ -12,19 +12,24 @@ const JSON_HEADERS = { ...CORS, 'Content-Type': 'application/json; charset=utf-8
 const estYahoo = (t) => !!t && t !== 'CMS10' && !t.startsWith('IRLTLT');
 
 async function coursYahoo(ticker) {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=1d`;
-  // cacheTtl: 0 → on force Cloudflare à toujours rechercher la dernière valeur Yahoo.
-  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 0 } });
-  if (!r.ok) return null;
-  const m = (await r.json())?.chart?.result?.[0]?.meta;
-  if (!m || m.regularMarketPrice == null) return null;
-  const prev = m.chartPreviousClose ?? m.previousClose ?? null;
-  return {
-    sousJacent: ticker,
-    dernierCours: m.regularMarketPrice,
-    heureCours: new Date((m.regularMarketTime ?? 0) * 1000).toISOString(),
-    variationPct: prev && prev !== 0 ? ((m.regularMarketPrice - prev) / prev) * 100 : undefined,
-  };
+  // Tout est protégé : si Yahoo renvoie du HTML (page anti-bot / rate-limit), pend, ou
+  // répond mal, on renvoie null pour qu'un seul ticker en échec n'entraîne pas tout le
+  // snapshot en 502 (le contrat « on garde l'ancienne valeur » n'est tenu que si null).
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=1d`;
+    // cacheTtl: 0 → on force Cloudflare à toujours rechercher la dernière valeur Yahoo.
+    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 0 }, signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return null;
+    const m = (await r.json())?.chart?.result?.[0]?.meta;
+    if (!m || m.regularMarketPrice == null) return null;
+    const prev = m.chartPreviousClose ?? m.previousClose ?? null;
+    return {
+      sousJacent: ticker,
+      dernierCours: m.regularMarketPrice,
+      heureCours: new Date((m.regularMarketTime ?? 0) * 1000).toISOString(),
+      variationPct: prev && prev !== 0 ? ((m.regularMarketPrice - prev) / prev) * 100 : undefined,
+    };
+  } catch { return null; }
 }
 
 // Périodes du graphique → paramètres range/interval de Yahoo.
@@ -155,15 +160,38 @@ async function serieCmsFT(periode) {
   return points;
 }
 
-// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue,
-// avec la variation en points de base (pb) vs la clôture précédente.
+// Repli si FT est indisponible : rendement 10 ans zone euro via FRED (fredgraph.csv, sans
+// clé, mensuel). Approximation explicite du swap, mieux qu'une valeur figée sans date.
+async function coursCmsFredFallback() {
+  try {
+    const r = await fetch(`https://fred.stlouisfed.org/graph/fredgraph.csv?id=${FRED_PROXY_CMS}`, { cf: { cacheTtl: 3600 }, signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return null;
+    const lignes = (await r.text()).trim().split('\n').slice(1);
+    let last = null, prev = null;
+    for (const l of lignes) {
+      const [date, val] = l.split(',');
+      const num = parseFloat(val);
+      if (isFinite(num)) { prev = last; last = { date, v: num }; }
+    }
+    if (!last) return null;
+    const deltaPb = prev ? Math.round((last.v - prev.v) * 100) : null;
+    return { nom: 'CMS 10 ans', valeur: last.v, deltaPb, source: 'FRED · rendement 10 ans zone euro (approximation)', heure: last.date + 'T00:00:00Z', date: last.date };
+  } catch { return null; }
+}
+
+// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue, avec la variation
+// en points de base (pb) vs la clôture précédente et la DATE de cette clôture (pour rendre la
+// fraîcheur visible côté front). Repli FRED si FT tombe.
 async function coursCmsFT() {
   const points = await serieCmsFT('1m');
-  if (!points || !points.length) return null;
-  const v = points[points.length - 1].c;
-  const prev = points.length >= 2 ? points[points.length - 2].c : null;
-  const deltaPb = prev != null ? Math.round((v - prev) * 100) : null;
-  return { nom: 'CMS 10 ans', valeur: v, deltaPb, source: 'FT Markets · Euro 10y swap (clôture)', heure: new Date().toISOString() };
+  if (points && points.length) {
+    const dernier = points[points.length - 1];
+    const prev = points.length >= 2 ? points[points.length - 2].c : null;
+    const deltaPb = prev != null ? Math.round((dernier.c - prev) * 100) : null;
+    const dateISO = new Date(dernier.t * 1000).toISOString();
+    return { nom: 'CMS 10 ans', valeur: dernier.c, deltaPb, source: 'FT Markets · Euro 10y swap (clôture)', heure: dateISO, date: dateISO.slice(0, 10) };
+  }
+  return await coursCmsFredFallback();
 }
 
 // Historique du CMS 10 ans. Pas de « Jour » : le swap n'a pas d'intraday (une valeur par
@@ -191,13 +219,16 @@ function calculerIndicateurs(p, cours) {
   let statutZone = 'surveillance';
   if (p.typeProduit === 'equity') {
     if (p.barriereAutocall !== null && p.strike !== null) {
-      zoneAutocall = niveau >= (p.barriereAutocall / 100) * p.strike;
+      // Autocall « à la baisse » si barrière < 100 % du strike, sinon autocall classique.
+      const seuilAbs = (p.barriereAutocall / 100) * p.strike;
+      zoneAutocall = p.barriereAutocall < 100 ? niveau <= seuilAbs : niveau >= seuilAbs;
     }
     if (zoneAutocall) statutZone = 'rappel_probable';
     else if (pctStrike !== null && pctStrike < 75) statutZone = 'risque';
   } else if (p.typeProduit === 'cms') {
-    if (p.barriereAutocall !== null && niveau >= p.barriereAutocall) { zoneAutocall = true; statutZone = 'rappel_probable'; }
-    else if (p.barriereCoupon !== null && niveau < p.barriereCoupon) statutZone = 'risque';
+    // CMS = produit de taux à la baisse : rappelé quand le taux descend à / sous la barrière.
+    if (p.barriereAutocall !== null && niveau <= p.barriereAutocall) { zoneAutocall = true; statutZone = 'rappel_probable'; }
+    else if (p.barriereCoupon !== null && niveau > p.barriereCoupon) statutZone = 'risque';
   }
   return { produitId: p.id, pctStrike, zoneAutocall, statutZone };
 }
@@ -304,6 +335,17 @@ async function recupererNews() {
 
 export default {
   async fetch(request, env) {
+    // Anti-proxy ouvert : une requête de navigateur venant d'un autre site porte un en-tête
+    // Origin ≠ la PWA → 403. Les appels sans Origin (curl, serveur) restent possibles (on ne
+    // peut pas les bloquer sans authentification), mais l'abus depuis une page web tierce est
+    // coupé. La PWA (https://macenxe.github.io) et le dev local passent.
+    const origin = request.headers.get('Origin');
+    if (origin && origin !== 'https://macenxe.github.io' && !origin.startsWith('http://localhost')) {
+      return new Response(JSON.stringify({ error: 'origin non autorisé' }), {
+        status: 403, headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      });
+    }
+
     // Pré-vol CORS (par sécurité ; les requêtes GET simples n'en déclenchent pas).
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: { ...CORS, 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
@@ -352,7 +394,12 @@ export default {
     }
 
     try {
-      const snap = await (await fetch(SNAPSHOT_URL, { cf: { cacheTtl: 0 } })).json();
+      // Le snapshot GitHub Pages porte les définitions produits : si Pages renvoie une 404
+      // HTML ou pend, on lève une erreur claire (502) plutôt qu'un plantage de JSON.parse ;
+      // le front bascule alors sur sa propre copie same-origin de snapshot.json.
+      const snapRes = await fetch(SNAPSHOT_URL, { cf: { cacheTtl: 0 }, signal: AbortSignal.timeout(8000) });
+      if (!snapRes.ok) throw new Error(`snapshot HTTP ${snapRes.status}`);
+      const snap = await snapRes.json();
 
       // Tickers Yahoo à rafraîchir : indices + taux Yahoo + sous-jacents des produits
       const tickers = [...new Set(

@@ -11,29 +11,36 @@ const App = (() => {
   // rafraîchissement : chargerDonnees renvoie une valeur snapshot qu'on remplace aussitôt.
   let dernierCMS = null;
 
+  // Source unique : applique une valeur numérique de CMS au tableau de bord ET recalcule
+  // tous les indicateurs des produits CMS (niveau, zone autocall, coupon, statut). Sert la
+  // valeur live (FT) comme la saisie manuelle, pour ne jamais laisser des pastilles calculées
+  // sur une ancienne valeur pendant que le niveau affiché, lui, a changé.
+  function appliquerCMS(valeurNum, meta) {
+    if (valeurNum == null || isNaN(valeurNum)) return;
+    meta = meta || {};
+    const valeur = valeurNum.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
+    const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
+    if (t) { t.valeur = valeur; t.var = meta.var ?? ''; t.hausse = meta.hausse ?? null; t.manuel = false; t.dateMaj = meta.dateMaj ?? null; }
+    const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
+    (donnees.produits || []).forEach(p => {
+      if (p.type !== 'cms') return;
+      p.niveauNum = valeurNum;
+      p.niveau = valeur;
+      p.zoneAutocall = p.bAutoNum != null ? (valeurNum <= p.bAutoNum ? 'OUI' : 'NON') : p.zoneAutocall;
+      p.couponAtteint = p.bCouponNum != null ? valeurNum <= p.bCouponNum : false;
+      p.k = p.zoneAutocall === 'OUI' ? 'green' : 'orange';
+      p.statut = statuts[p.k];
+    });
+  }
+
   function appliquerCMSLive() {
     if (!dernierCMS) return;
-    const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
-    if (t) { t.valeur = dernierCMS.valeur; t.var = dernierCMS.var; t.hausse = dernierCMS.hausse; t.manuel = false; t.dateMaj = null; }
-    (donnees.produits || []).forEach(p => { if (p.type === 'cms') p.niveau = dernierCMS.valeur; });
+    const num = dernierCMS.valeurNum != null ? dernierCMS.valeurNum : parseFloat(String(dernierCMS.valeur).replace(',', '.'));
+    appliquerCMS(num, { var: dernierCMS.var, hausse: dernierCMS.hausse, dateMaj: dernierCMS.dateMaj || null });
   }
 
   function appliquerCMSInterne(valeur) {
-    const fmt2 = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    donnees.taux = donnees.taux.map(t => {
-      if (t.nom !== 'CMS 10 ans') return t;
-      return { ...t, valeur: fmt2(valeur) + ' %', dateMaj: new Date().toISOString().slice(0, 10) };
-    });
-    donnees.produits = donnees.produits.map(p => {
-      if (p.type !== 'cms') return p;
-      const niveauNum = valeur;
-      const niveau = fmt2(valeur);
-      const zoneAutocall = p.bAutoNum != null ? (niveauNum <= p.bAutoNum ? 'OUI' : 'NON') : p.zoneAutocall;
-      const couponAtteint = p.bCouponNum != null ? niveauNum <= p.bCouponNum : false;
-      const k = zoneAutocall === 'OUI' ? 'green' : 'orange';
-      const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
-      return { ...p, niveauNum, niveau, zoneAutocall, couponAtteint, k, statut: statuts[k] };
-    });
+    appliquerCMS(valeur, { dateMaj: new Date().toISOString().slice(0, 10) });
   }
 
   function chartTickerPour(p) {
@@ -276,17 +283,21 @@ const App = (() => {
       if (!r.ok) return;
       const d = await r.json();
       if (d.valeur == null) return;
-      const valStr = d.valeur.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
       // Variation en pb comme les autres taux ; hausse = true → rouge, baisse → vert.
       const dp = d.deltaPb;
-      dernierCMS = {
-        valeur: valStr,
+      const nouveau = {
+        valeurNum: d.valeur,
         var: dp == null ? '' : (dp > 0 ? '+' : '') + dp + ' pb',
         hausse: dp == null || dp === 0 ? null : dp > 0,
+        dateMaj: d.date || null,
       };
+      // Ne re-rend que si la valeur a changé, et sans réinitialiser le scroll ni le graphique
+      // de la fiche en cours (renderPage(true)) : évite le saut en haut de page après ~1-8 s.
+      const inchange = dernierCMS && dernierCMS.valeurNum === nouveau.valeurNum && dernierCMS.var === nouveau.var;
+      dernierCMS = nouveau;
       try { localStorage.setItem(CMS_LIVE_KEY, JSON.stringify(dernierCMS)); } catch {}
       appliquerCMSLive();
-      renderPage();
+      if (!inchange) renderPage(true);
     } catch (_) { /* on garde la valeur saisie */ } finally { majCMSEnCours = false; }
   }
 
@@ -450,21 +461,6 @@ const App = (() => {
       state = { ...state, page: 'prod', detailIsin: null };
       renderPage();
     },
-    async supprimerProduit(id) {
-      if (!confirm('Supprimer ce produit définitivement ?')) return;
-      try {
-        await AppAPI.supprimerProduit(id);
-        donnees = await AppAPI.chargerDonnees();
-        state = { ...state, page: 'prod', detailIsin: null };
-        renderPage();
-      } catch (err) {
-        alert('Erreur : ' + (err.message || 'serveur indisponible'));
-      }
-    },
-    ouvrirFormulaire() {
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = renderFormulaireAjout();
-    },
     fermerFormulaire,
     ouvrirGraphique(id, label, sous) {
       if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '' });
@@ -492,48 +488,6 @@ const App = (() => {
       Chart.ouvrir(chartTickerPour(p), p.nom, {
         lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
       });
-    },
-    appliquerCMSLocal(valeur) { appliquerCMSInterne(valeur); },
-    toggleStrikeField(type) {
-      const f = document.getElementById('field-strike');
-      if (f) f.classList.toggle('disabled-field', type === 'cms');
-    },
-    async soumettreFormulaire(e) {
-      e.preventDefault();
-      const form = e.target;
-      const submitBtn = document.getElementById('form-submit');
-      const errEl    = document.getElementById('form-error');
-
-      const data = {
-        isin:             form.isin.value.trim().toUpperCase(),
-        nom:              form.nom.value.trim(),
-        sousJacent:       form.sousJacent.value.trim(),
-        sousJacentLabel:  form.sousJacentLabel.value.trim(),
-        typeProduit:      form.typeProduit.value,
-        coupon:           parseFloat(form.coupon.value),
-        strike:           form.strike.value ? parseFloat(form.strike.value) : null,
-        barriereAutocall: parseFloat(form.barriereAutocall.value),
-        barriereCoupon:   form.barriereCoupon.value ? parseFloat(form.barriereCoupon.value) : null,
-        constat:          form.constat.value.trim(),
-        echeance:         form.echeance.value,
-      };
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enregistrement…';
-      errEl.style.display = 'none';
-
-      try {
-        await AppAPI.ajouterProduit(data);
-        donnees = await AppAPI.chargerDonnees();
-        fermerFormulaire();
-        state = { ...state, page: 'prod' };
-        renderPage();
-      } catch (err) {
-        errEl.textContent = 'Erreur : ' + (err.message || 'impossible de contacter le serveur');
-        errEl.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Enregistrer le produit';
-      }
     },
     init,
   };
