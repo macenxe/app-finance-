@@ -1,4 +1,6 @@
-// Données statiques des produits structurés (à remplacer par l'API back)
+// Repli statique hors-ligne des produits structurés (mise en forme d'affichage).
+// ⚠️ LISTE DUPLIQUÉE : la source de vérité est back/src/produits.ts. Tout ajout / retrait /
+// modification doit être répercuté dans LES DEUX fichiers (voir README, section « Produits »).
 const PRODUITS = [
   { isin:'FR001400KP78', nom:'Conservateur Autocall CAC 90% Déc 2026',      sj:'CAC 40',     coupon:'6 %',    strike:'7 346',  niveau:'8 351',  bAuto:'90 %',   bCoupon:'—',    constat:'1er j./mois*', ech:'15/12/2026', type:'equity', strikeNum:7346,   niveauNum:8351,  zoneAutocall:'NON', protection:null },
   { isin:'FRF0000001M7', nom:'CAP 40 Août 2030',                             sj:'ES Banks',   coupon:'7 %',    strike:'215,10', niveau:'277,95', bAuto:'100 %',  bCoupon:'80 %', constat:'29/07/2026',   ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI', protection:'-40 %' },
@@ -51,25 +53,12 @@ const MACRO = [
 // Dernière valeur connue des séries FRED (générée depuis front/data/history/),
 // affichée sur le tableau de bord pour coller au dernier point du graphique.
 const HISTO_DERNIER = {
-  'fred:DGS10':                 { valeur:'4,50 %', var:'-1 pb',   hausse:false },
-  'fred:IRLTLT01FRM156N':       { valeur:'3,74 %', var:'+7 pb',   hausse:true  },
-  'fred:IRLTLT01DEM156N':       { valeur:'3,05 %', var:'+5 pb',   hausse:true  },
-  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,18 %', var:'stable',  hausse:null  },
-  'hicp:CP0000EZ19M086NEST':    { valeur:'3,1 %',  var:'+0,1 pt', hausse:true  },
+  'fred:DGS10':                 { valeur:'4,44 %', var:'+6 pb',   hausse:true,  date:'au 30/06' },
+  'fred:IRLTLT01FRM156N':       { valeur:'3,74 %', var:'+7 pb',   hausse:true,  date:'mai 2026' },
+  'fred:IRLTLT01DEM156N':       { valeur:'3,05 %', var:'+5 pb',   hausse:true,  date:'mai 2026' },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,18 %', var:'stable',  hausse:null,  date:'au 30/06' },
+  'hicp:CP0000EZ19M086NEST':    { valeur:'3,1 %',  var:'+0,1 pt', hausse:true,  date:'mai 2026' },
 };
-
-const ALERTES = [
-  { couleur:'#9a3535', texte:'<b>LC Athena Stellantis</b> — sous-jacent à 69,8 % du strike, surveillance renforcée du capital.' },
-  { couleur:'#b06a1a', texte:'<b>Autocall CMS Juillet 2030</b> — 1ère constatation dans 23 jours (13/07/2026).' },
-  { couleur:'#1d6f4c', texte:'<b>13 produits</b> en zone de rappel probable à la prochaine constatation.' },
-];
-
-const EVENEMENTS = [
-  { date:'24 juin', label:'IFO climat des affaires — Allemagne', zone:'DE', important:false },
-  { date:'02 juil', label:'Inflation flash zone euro (juin)',    zone:'UE', important:false },
-  { date:'17 juil', label:'Réunion BCE — décision de taux',     zone:'UE', important:true  },
-  { date:'30 juil', label:'Réunion Fed / FOMC',                 zone:'US', important:true  },
-];
 
 // Calendrier officiel des décisions de taux BCE et Fed (jour de l'annonce), 2026-2027.
 // Dates publiées à l'avance par les banques centrales. À revalider une fois par an.
@@ -272,4 +261,27 @@ const CONTRATS = [
     },
     uc: [],
   },
+];
+
+// ── Veille économique (page Actualités) ──
+// Actualisée à la maj mensuelle. Ton factuel, sans recommandation. Champs : tag/tagBg/tagColor/date/titre/corps.
+const VEILLE = [
+  { tag:'BCE',          tagBg:'#eaf0f6', tagColor:'#16304f', date:'11 juin 2026',
+    titre:'La BCE relève ses taux de 25 pb, première hausse depuis 2023',
+    corps:'Le taux de dépôt passe à 2,25 % (refinancement 2,40 %) à compter du 17 juin, sur fond de projections d\'inflation revues en hausse. Christine Lagarde confirme une approche « réunion par réunion ». Les taux souverains longs se sont tendus dans la foulée (OAT 10 ans 3,74 %, Bund 3,05 %).' },
+  { tag:'Fed',          tagBg:'#eaf0f6', tagColor:'#16304f', date:'17 juin 2026',
+    titre:'La Fed maintient ses taux à 3,50-3,75 %, biais désormais restrictif',
+    corps:'Première réunion présidée par Kevin Warsh, successeur de Jerome Powell. Le communiqué, raccourci, abandonne le biais accommodant ; la médiane des projections vise 3,8 % fin 2026, soit au moins une hausse envisagée. Le 10 ans américain remonte à 4,44 %.' },
+  { tag:'Inflation',    tagBg:'#f3eee2', tagColor:'#8a6d2e', date:'1er juillet 2026',
+    titre:'Inflation zone euro en net recul à 2,8 % en juin',
+    corps:'L\'estimation flash Eurostat ressort à 2,8 % sur un an, contre 3,2 % en mai et sous le consensus. Le sous-jacent reflue à 2,4 %, l\'énergie décélère après le pic de mai. Premier repli mensuel des prix de l\'année (-0,1 %).' },
+  { tag:'Géopolitique', tagBg:'#f0ecec', tagColor:'#8a4a4a', date:'30 juin 2026',
+    titre:'Détente au Moyen-Orient : rebond des actions, chute du pétrole',
+    corps:'L\'accord Iran-États-Unis fait refluer le baril et redistribue les secteurs. Le CAC 40 gagne 2,70 % en juin (+7,51 % sur le trimestre, meilleur T2 depuis 2024) ; l\'Euro Stoxx 50 progresse de près de 10 % depuis janvier. Défense et banques surperforment, l\'énergie décroche.' },
+  { tag:'Immobilier',   tagBg:'#e9efe9', tagColor:'#3f6b46', date:'25 juin 2026',
+    titre:'SCPI : rendement moyen autour de 4,5 %, collecte en reprise',
+    corps:'Le marché des SCPI de rendement se stabilise autour de 4,5 % en moyenne en 2026, avec des écarts marqués entre véhicules. La collecte nette 2025 a atteint 4,6 Md€ (+29 % sur un an), signe d\'un regain d\'intérêt pour la pierre-papier.' },
+  { tag:'Fiscalité',    tagBg:'#efeae0', tagColor:'#7a6a45', date:'20 juin 2026',
+    titre:'Assurance-vie : fonds euros attendus autour de 2,3 à 2,8 % en 2026',
+    corps:'Les projections de marché situent le rendement moyen des fonds en euros entre 2,3 % et 2,8 % nets pour 2026, globalement stable. Loger une SCPI en unités de compte cumule les frais et ramène le rendement net à 3,2-3,5 % avant fiscalité. Aucun changement réglementaire majeur à ce jour.' },
 ];
