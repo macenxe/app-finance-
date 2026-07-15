@@ -1,50 +1,50 @@
 {
-  "genere": "2026-07-03T06:54:24.643Z",
+  "genere": "2026-07-15T19:16:54.078Z",
   "indices": [
     {
       "sousJacent": "^STOXX50E",
-      "dernierCours": 6360.47,
-      "heureCours": "2026-07-02T16:00:00.000Z",
-      "variationPct": 1.2410699,
+      "dernierCours": 6265.58,
+      "heureCours": "2026-07-15T16:00:00.000Z",
+      "variationPct": -0.2326341,
       "nom": "Euro Stoxx 50"
     },
     {
       "sousJacent": "^GSPC",
-      "dernierCours": 7483.24,
-      "heureCours": "2026-07-02T20:42:15.000Z",
-      "variationPct": 0.00013702514,
+      "dernierCours": 7562.25,
+      "heureCours": "2026-07-15T19:16:52.000Z",
+      "variationPct": 0.24736112,
       "nom": "S&P 500"
     },
     {
       "sousJacent": "^IXIC",
-      "dernierCours": 25832.672,
-      "heureCours": "2026-07-02T21:15:59.000Z",
-      "variationPct": -0.79631,
+      "dernierCours": 26212.262,
+      "heureCours": "2026-07-15T19:16:52.000Z",
+      "variationPct": 0.40316817,
       "nom": "Nasdaq"
     },
     {
       "sousJacent": "^FCHI",
-      "dernierCours": 8474.86,
-      "heureCours": "2026-07-02T16:05:02.000Z",
-      "variationPct": 1.6500603,
+      "dernierCours": 8382.43,
+      "heureCours": "2026-07-15T16:05:02.000Z",
+      "variationPct": 0.186212,
       "nom": "CAC 40"
     }
   ],
   "taux": [
     {
       "sousJacent": "^TNX",
-      "dernierCours": 4.4849997,
-      "heureCours": "2026-07-02T18:59:56.000Z",
-      "variationPct": 0.22345816,
+      "dernierCours": 4.545,
+      "heureCours": "2026-07-15T18:59:55.000Z",
+      "variationPct": -0.87240916,
       "nom": "US 10 ans"
     },
     {
       "nom": "CMS 10 ans",
       "sousJacent": "CMS10",
       "dernierCours": 3.04,
-      "heureCours": "2026-07-03T06:54:24.643Z",
+      "heureCours": "2026-07-15T19:16:54.078Z",
       "manuel": true,
-      "dateMaj": "03/07/2026"
+      "dateMaj": "15/07/2026"
     }
   ],
   "produits": [
@@ -58,20 +58,21 @@
       "barriereAutocall": 90,
       "barriereCoupon": null,
       "protection": null,
+      "emission": "2023-12-15",
       "echeance": "2026-12-15",
       "constat": "1er j./mois*",
       "coupon": 6,
       "id": 1,
       "cours": {
         "sousJacent": "^FCHI",
-        "dernierCours": 8474.86,
-        "heureCours": "2026-07-02T16:05:02.000Z",
-        "variationPct": 1.6500603,
+        "dernierCours": 8382.43,
+        "heureCours": "2026-07-15T16:05:02.000Z",
+        "variationPct": 0.186212,
         "nom": "CAC 40"
       },
       "indicateurs": {
         "produitId": 1,
-        "pctStrike": 115.36700245031311,
+        "pctStrike": 114.1087666757419,
         "zoneAutocall": false,
         "statutZone": "surveillance"
       }
@@ -86,6 +87,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-40 %",
+      "emission": "2025-07-29",
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 7,
@@ -93,7 +95,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 2,
@@ -112,6 +114,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-50 %",
+      "emission": "2025-07-29",
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 6,
@@ -119,7 +122,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 3,
@@ -138,6 +141,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-60 %",
+      "emission": "2025-07-29",
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 5,
@@ -145,7 +149,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 4,
@@ -164,6 +168,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-40 %",
+      "emission": "2025-11-30",
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 7,
@@ -171,7 +176,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 5,
@@ -190,6 +195,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-50 %",
+      "emission": "2025-11-30",
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 6,
@@ -197,7 +203,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 6,
@@ -216,6 +222,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-60 %",
+      "emission": "2025-11-30",
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 5,
@@ -223,7 +230,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 7,
@@ -242,6 +249,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-40 %",
+      "emission": "2026-02-26",
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 7,
@@ -249,7 +257,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 8,
@@ -268,6 +276,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-50 %",
+      "emission": "2026-02-26",
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 6,
@@ -275,7 +284,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 9,
@@ -294,6 +303,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-60 %",
+      "emission": "2026-02-26",
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 5,
@@ -301,7 +311,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 10,
@@ -320,6 +330,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-40 %",
+      "emission": "2026-04-27",
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 7,
@@ -327,7 +338,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 11,
@@ -346,6 +357,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-50 %",
+      "emission": "2026-04-27",
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 6,
@@ -353,7 +365,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 12,
@@ -372,6 +384,7 @@
       "barriereAutocall": 100,
       "barriereCoupon": 80,
       "protection": "-60 %",
+      "emission": "2026-04-27",
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 5,
@@ -379,7 +392,7 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 13,
@@ -398,6 +411,7 @@
       "barriereAutocall": 2.5,
       "barriereCoupon": 3,
       "protection": "Capital garanti",
+      "emission": "2025-07-13",
       "echeance": "2030-07-25",
       "constat": "13/07/2026",
       "coupon": 4.25,
@@ -405,7 +419,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 14,
@@ -424,6 +438,7 @@
       "barriereAutocall": 2.25,
       "barriereCoupon": 2.75,
       "protection": "Capital garanti",
+      "emission": "2025-10-16",
       "echeance": "2030-10-30",
       "constat": "16/10/2026",
       "coupon": 4,
@@ -431,7 +446,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 15,
@@ -450,6 +465,7 @@
       "barriereAutocall": 2.2,
       "barriereCoupon": 2.85,
       "protection": "Capital garanti",
+      "emission": "2026-01-18",
       "echeance": "2031-02-03",
       "constat": "18/01/2027",
       "coupon": 4,
@@ -457,7 +473,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 16,
@@ -476,6 +492,7 @@
       "barriereAutocall": 2.5,
       "barriereCoupon": 3,
       "protection": "Capital garanti",
+      "emission": "2026-04-12",
       "echeance": "2031-05-02",
       "constat": "12/04/2027",
       "coupon": 4,
@@ -483,7 +500,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-03T06:54:24.643Z"
+        "heureCours": "2026-07-15T19:16:54.078Z"
       },
       "indicateurs": {
         "produitId": 17,
@@ -502,19 +519,20 @@
       "barriereAutocall": 100,
       "barriereCoupon": null,
       "protection": "-70 %",
+      "emission": "2025-07-20",
       "echeance": "2030-07-31",
       "constat": "20/07/2026",
       "coupon": 10,
       "id": 18,
       "cours": {
         "sousJacent": "BNP.PA",
-        "dernierCours": 102.32,
-        "heureCours": "2026-07-02T15:37:55.000Z",
-        "variationPct": 1.1466944
+        "dernierCours": 102.64,
+        "heureCours": "2026-07-15T15:35:19.000Z",
+        "variationPct": 0.31274402
       },
       "indicateurs": {
         "produitId": 18,
-        "pctStrike": 131.44912641315517,
+        "pctStrike": 131.86022610483042,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
       }
@@ -529,19 +547,20 @@
       "barriereAutocall": 100,
       "barriereCoupon": null,
       "protection": "-70 %",
+      "emission": "2025-11-16",
       "echeance": "2030-11-28",
       "constat": "16/11/2026",
       "coupon": 11,
       "id": 19,
       "cours": {
         "sousJacent": "STLAM.MI",
-        "dernierCours": 5.115,
-        "heureCours": "2026-07-02T15:39:13.000Z",
-        "variationPct": -0.5250958
+        "dernierCours": 5.166,
+        "heureCours": "2026-07-15T15:39:16.000Z",
+        "variationPct": 3.3406644
       },
       "indicateurs": {
         "produitId": 19,
-        "pctStrike": 60.532544378698226,
+        "pctStrike": 61.13609467455622,
         "zoneAutocall": false,
         "statutZone": "risque"
       }
@@ -556,19 +575,20 @@
       "barriereAutocall": 100,
       "barriereCoupon": null,
       "protection": "-50 %",
+      "emission": "2026-05-04",
       "echeance": "2031-05-12",
       "constat": "04/05/2027",
       "coupon": 10,
       "id": 20,
       "cours": {
         "sousJacent": "CAP.PA",
-        "dernierCours": 91.56,
-        "heureCours": "2026-07-02T15:39:35.000Z",
-        "variationPct": 0.92592186
+        "dernierCours": 92.92,
+        "heureCours": "2026-07-15T15:35:09.000Z",
+        "variationPct": 3.0840902
       },
       "indicateurs": {
         "produitId": 20,
-        "pctStrike": 86.29594721960416,
+        "pctStrike": 87.57775683317625,
         "zoneAutocall": false,
         "statutZone": "surveillance"
       }
@@ -583,19 +603,20 @@
       "barriereAutocall": 100,
       "barriereCoupon": null,
       "protection": "-60 %",
+      "emission": "2026-06-15",
       "echeance": "2031-06-23",
       "constat": "15/06/2027",
       "coupon": 10,
       "id": 21,
       "cours": {
         "sousJacent": "RHM.DE",
-        "dernierCours": 1115,
-        "heureCours": "2026-07-02T15:39:59.000Z",
-        "variationPct": 6.1298327
+        "dernierCours": 976.1,
+        "heureCours": "2026-07-15T15:36:39.000Z",
+        "variationPct": -0.38779965
       },
       "indicateurs": {
         "produitId": 21,
-        "pctStrike": 96.93966266736219,
+        "pctStrike": 84.86350199965223,
         "zoneAutocall": false,
         "statutZone": "surveillance"
       }
