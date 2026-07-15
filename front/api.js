@@ -74,6 +74,7 @@ const AppAPI = (() => {
       bCoupon:     p.barriereCoupon   != null ? p.barriereCoupon   + ' %' : 'NA',
       constat:     p.constat,
       ech:         p.echeance,
+      emission:    p.emission ?? staticP?.emission ?? null,
       type:        p.typeProduit,
       strikeNum:   p.strike,
       niveauNum,

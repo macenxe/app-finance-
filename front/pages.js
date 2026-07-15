@@ -242,8 +242,12 @@ function renderNewsSection(news) {
   return `<div class="news-articles-grid">${tous.map(articleHtml).join('')}</div>`;
 }
 
-function renderProduits(produits, state) {
+function renderProduits(produits, state, rappeles) {
   const q = (state.q || '').trim().toLowerCase();
+  const fmtRes = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  const rapNote = (rappeles && rappeles.length > 0)
+    ? ` · ${rappeles.length} rappelé${rappeles.length > 1 ? 's' : ''} (retiré${rappeles.length > 1 ? 's' : ''} de la liste)`
+    : '';
   const f = state.filter || 'tous';
   const catActive = state.cat || null;
   let rows = produits;
@@ -271,7 +275,7 @@ function renderProduits(produits, state) {
     <header class="page-header">
       <div>
         <div class="page-title">Autocalls · Produits structurés</div>
-        <div class="page-sub">${produits.length} produits suivis</div>
+        <div class="page-sub">${produits.length} produits suivis${rapNote}</div>
       </div>
     </header>
 
@@ -376,29 +380,39 @@ function renderProduits(produits, state) {
               const cpnVals = g.membres.map(m => parseFloat(String(m.coupon).replace(',', '.'))).filter(v => !isNaN(v));
               const cpnMin = Math.min(...cpnVals), cpnMax = Math.max(...cpnVals);
               const cpnRange = cpnVals.length > 1 && cpnMin !== cpnMax ? `${cpnMin}–${cpnMax} %` : r.coupon;
+              const resVals = g.membres.map(m => m.couponsReserve || 0).filter(v => v > 0);
+              let resGroupHtml = '';
+              if (resVals.length > 0) {
+                const rmin = Math.min(...resVals), rmax = Math.max(...resVals);
+                const lbl = rmin === rmax ? `+${fmtRes(rmin)} % réserve` : `+${fmtRes(rmin)}-${fmtRes(rmax)} % réserve`;
+                resGroupHtml = `<span class="coupon-reserve">${lbl}</span>`;
+              }
+              const nplusGroup = r.nPlusX ? `<span class="badge-nplus">${r.nPlusX}</span>` : '';
               return sep + `
           <div class="products-table-row">
             <span class="col-nom" onclick="App.voirDetailGroupe('${g.membres.map(m=>m.isin).join(',')}')">
               <span class="col-nom-text">${groupName}</span>
             </span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}</span>
+            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}${nplusGroup}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
             <span class="col-center col-pct tnum">${niveauBadge}</span>
-            <span class="tnum col-center">${cpnRange}</span>
+            <span class="tnum col-center col-coupon">${cpnRange}${resGroupHtml}</span>
             <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
             <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
             <span class="col-landscape">${statutCell}</span>
           </div>`;
             }
+            const resHtml = r.couponsReserve > 0 ? `<span class="coupon-reserve">+${fmtRes(r.couponsReserve)} % réserve</span>` : '';
+            const nplusHtml = r.nPlusX ? `<span class="badge-nplus">${r.nPlusX}</span>` : '';
             return sep + `
           <div class="products-table-row">
             <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
               <span class="col-nom-text">${abregerMois(r.nom)}</span>
             </span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}</span>
+            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}${nplusHtml}</span>
             <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
             <span class="col-center col-pct tnum">${niveauBadge}</span>
-            <span class="tnum col-center">${r.coupon}</span>
+            <span class="tnum col-center col-coupon">${r.coupon}${resHtml}</span>
             <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
             <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
             <span class="col-landscape">${statutCell}</span>
@@ -413,6 +427,7 @@ function renderProduits(produits, state) {
 
 function renderDetail(produit) {
   const typLabel = produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
+  const fmtC = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
   return `
   <div>
@@ -479,6 +494,19 @@ function renderDetail(produit) {
         </div>
 
         <div class="card p-18">
+          <div class="card-title mb-12">Coupons</div>
+          <div class="detail-rows">
+            <div class="detail-row"><span class="detail-key">Période en cours</span><span class="detail-val tnum">${escHtml(produit.nPlusX ?? 'N+1')}</span></div>
+            <div class="detail-row"><span class="detail-key">Coupons versés</span><span class="detail-val tnum">${fmtC(produit.couponsVerses ?? 0)} %</span></div>
+            <div class="detail-row"><span class="detail-key">Coupons en réserve</span><span class="detail-val tnum"${(produit.couponsReserve ?? 0) > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${fmtC(produit.couponsReserve ?? 0)} %</span></div>
+          </div>
+          <div class="detail-note" style="margin-top:10px;">${produit.bCouponNum != null
+            ? 'Effet mémoire : les coupons en réserve sont versés à la première constatation où la barrière de coupon est franchie.'
+            : 'Coupons capitalisés : versés en une fois au rappel ou à l\'échéance.'}</div>
+          ${produit.evaluationIncomplete ? `<div class="detail-note" style="margin-top:6px;color:#9a3535;">Historique de cours incomplet : réserve indicative.</div>` : ''}
+        </div>
+
+        <div class="card p-18">
           <div class="card-title mb-12">Dates clés</div>
           <div class="detail-rows">
             <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(produit.constat)}</span></div>
@@ -494,6 +522,7 @@ function renderDetail(produit) {
 
 function renderDetailGroupe(membres) {
   const ref = membres[0];
+  const fmtC = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
   const groupNom = ref.nom.replace(/\bCAP\s+\d+\s+/, 'CAP ');
   const niveauPct = (ref.strikeNum && ref.niveauNum)
     ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
@@ -521,6 +550,7 @@ function renderDetailGroupe(membres) {
           <div class="detail-groupe-header">
             <span>Protection</span>
             <span class="col-center">Coupon</span>
+            <span class="col-center">Réserve</span>
             <span class="col-center">Statut</span>
           </div>
           ${membres.map(m => {
@@ -536,6 +566,7 @@ function renderDetailGroupe(membres) {
           <div class="detail-groupe-row">
             <span class="detail-groupe-prot tnum">${escHtml(String(prot))}</span>
             <span class="col-center tnum">${escHtml(String(m.coupon))}</span>
+            <span class="col-center tnum">${m.couponsReserve > 0 ? '+' + fmtC(m.couponsReserve) + ' %' : '—'}</span>
             <span class="col-center">${statut}</span>
           </div>`;
           }).join('')}

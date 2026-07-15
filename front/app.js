@@ -80,6 +80,7 @@ const App = (() => {
         indices: donnees.indices,
         taux: donnees.taux,
         produits: donnees.produits,
+        rappeles: donnees.rappeles || [],
         macro: (typeof MACRO !== 'undefined') ? MACRO.map(m => ({ nom: m.nom, valeur: m.valeur, var: m.var, hausse: m.hausse })) : null,
       }));
     } catch {}
@@ -97,6 +98,7 @@ const App = (() => {
         const c = JSON.parse(raw);
         if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
+        donnees.rappeles = c.rappeles || [];
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
         if (c.macro && typeof MACRO !== 'undefined') {
           c.macro.forEach(s => { const m = MACRO.find(x => x.nom === s.nom); if (m) { m.valeur = s.valeur; m.var = s.var; m.hausse = s.hausse; } });
@@ -148,7 +150,7 @@ const App = (() => {
     const { indices, produits } = donnees;
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
-      case 'prod':     el.innerHTML = renderProduits(produits, state);  break;
+      case 'prod':     el.innerHTML = renderProduits(produits, state, donnees.rappeles);  break;
       case 'actus':    el.innerHTML = renderActus(); chargerActus(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache);
@@ -359,6 +361,15 @@ const App = (() => {
       appliquerCMSLive();
       sauvegarderEtat();
       renderPage();
+      if (typeof Autocall !== 'undefined') {
+        Autocall.appliquer(donnees.produits).then(({ actifs, rappeles }) => {
+          donnees.produits = actifs;
+          donnees.rappeles = rappeles;
+          appliquerCMSLive();
+          sauvegarderEtat();
+          renderPage(true);
+        }).catch(() => {});
+      }
       majCMS();
       ind.classList.remove('refreshing');
       ind.style.height = '0';
@@ -405,6 +416,16 @@ const App = (() => {
     appliquerCMSLive();
     sauvegarderEtat();
     renderPage();
+    // Rappel automatique (asynchrone, non bloquant) : masque les produits rappelés.
+    if (typeof Autocall !== 'undefined') {
+      Autocall.appliquer(donnees.produits).then(({ actifs, rappeles }) => {
+        donnees.produits = actifs;
+        donnees.rappeles = rappeles;
+        appliquerCMSLive();
+        sauvegarderEtat();
+        renderPage(true);
+      }).catch(() => {});
+    }
     majCMS();
   }
 

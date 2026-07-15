@@ -15,6 +15,7 @@ export interface ProduitStructure {
   barriereCoupon: number | null;   // seuil de versement du coupon (null si N/A)
   barriereAutocall: number | null; // seuil de rappel automatique
   protection: string | null;       // barrière de protection du capital, ex. '-40 %' (null si garanti)
+  emission: string;          // ISO date de constatation initiale (strike), estimée si non connue
   echeance: string;          // ISO date, ex. '2030-07-25'
   constat: string;           // libellé de la prochaine date de constatation
   coupon: number;            // en %, ex. 8 pour 8 %

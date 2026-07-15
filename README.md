@@ -43,3 +43,18 @@ le workflow `snapshot.yml` régénère automatiquement `front/data/snapshot.json
 
 > Un vrai « source unique » (générateur de `PRODUITS` depuis `produits.ts`) reste à faire :
 > les chaînes du front sont mises en forme à la main, un générateur changerait leur rendu.
+
+## Rappel automatique et coupons
+
+Chaque produit porte une date d'`emission` (constatation initiale du strike). Ces dates sont
+estimées (prochaine constatation moins un an) et doivent être corrigées avec les termsheets.
+
+À l'ouverture, le module `front/autocall.js` rejoue les constatations passées à partir de
+l'historique de cours. Un produit dont la barrière autocall a été franchie est masqué de la
+liste (compté dans les « rappelés »). Le retrait définitif des deux listes (`back/src/produits.ts`
+et `front/data.js`) reste manuel.
+
+La comptabilité suit la période en cours (N+X) et la réserve de coupons avec effet mémoire :
+un coupon manqué est mis en réserve et versé à la première constatation favorable ; les produits
+sans barrière de coupon capitalisent jusqu'au rappel ou à l'échéance. Les résultats des dates
+passées sont figés dans le cache localStorage `autocall-eval-v1` pour éviter les refetch.

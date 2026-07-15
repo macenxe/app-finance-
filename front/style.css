@@ -365,7 +365,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .detail-groupe-table { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; overflow: hidden; }
 .detail-groupe-header, .detail-groupe-row {
   display: grid;
-  grid-template-columns: minmax(70px, 1fr) 80px auto;
+  grid-template-columns: minmax(70px, 1.2fr) 0.8fr 0.9fr 1.1fr;
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
@@ -834,3 +834,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .summary-chips { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ── Rappel auto & coupons ── */
+.coupon-reserve { display: block; font-size: 10px; color: #b06a1a; white-space: nowrap; }
+.badge-nplus { display: block; font-size: 9.5px; color: #9a8f7a; letter-spacing: .02em; }

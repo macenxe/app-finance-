@@ -5,7 +5,7 @@ import type { ProduitStructure, CoursMarche } from './types';
 
 const base = {
   id: 1, isin: 'X', nom: 'X', sousJacent: 'X', sousJacentLabel: 'X',
-  echeance: '2030-01-01', constat: '', coupon: 5,
+  emission: '', echeance: '2030-01-01', constat: '', coupon: 5,
 };
 const prod = (o: Partial<ProduitStructure>): ProduitStructure => ({
   ...base, typeProduit: 'equity', strike: null, barriereAutocall: null, barriereCoupon: null, protection: null, ...o,
