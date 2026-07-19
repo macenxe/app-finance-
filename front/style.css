@@ -704,7 +704,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .cat-grid { gap: 18px; }
   .summary-chips { gap: 18px; }
 
-  .index-card { padding: 14px 16px; }
+  .index-card { padding: 18px 20px; }
   .chip-card  { padding: 16px 18px; }
   .cat-card   { padding: 18px 20px; }
   .uc-item    { padding: 14px 18px; }
@@ -715,15 +715,27 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .mb-24 { margin-bottom: 32px; }
 
   .products-table-header { padding: 13px 20px; }
-  .products-table-row    { padding: 12px 20px; }
+  .products-table-row    { padding: 14px 20px; font-size: 13px; }
   .autocall-header { padding-bottom: 10px; }
-  .autocall-row    { padding: 12px 0; }
-  .dates-cles-row  { padding: 10px 0; }
-  .detail-row      { padding: 12px 0; }
-  .event-item      { padding: 11px 0; }
-  .alert-item      { padding: 13px 0; }
-  .news-articles-grid { gap: 14px; }
-  .news-article    { padding: 15px 17px; }
+  .autocall-row    { padding: 13px 0; font-size: 13px; }
+  .dates-cles-row  { padding: 11px 0; font-size: 13px; }
+  .detail-row      { padding: 13px 0; }
+  .detail-key, .detail-val { font-size: 13px; }
+  .event-item      { padding: 12px 0; }
+  .alert-item      { padding: 14px 0; }
+  .alert-text      { font-size: 13px; line-height: 1.55; }
+  .news-articles-grid { gap: 16px; }
+  .news-article    { padding: 16px 18px; }
+  .news-titre      { font-size: 13.5px; margin-bottom: 7px; }
+
+  /* Cartes indices/taux/macro : valeurs plus lisibles, lignes plus aérées */
+  .index-name, .taux-item-name { font-size: 11.5px; }
+  .index-val { font-size: 23px; margin: 8px 0 5px; }
+  .index-var { font-size: 12.5px; }
+  .taux-val  { font-size: 20px; margin-top: 7px; }
+  .taux-var  { font-size: 11.5px; margin-top: 4px; }
+  .taux-maj  { margin-top: 5px; }
+  .chip-card-val { font-size: 25px; margin-top: 5px; }
 }
 
 @media (max-width: 640px) {
