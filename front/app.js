@@ -196,7 +196,7 @@ const App = (() => {
     }
     el.scrollTop = saved;
     renderNav();
-    mettreAJourBadgeSource();
+    mettreAJourMarche();
     if (state.page === 'dash') majCartesMarche();
   }
 
@@ -303,22 +303,65 @@ const App = (() => {
     } catch (_) { /* on garde la valeur saisie */ } finally { majCMSEnCours = false; }
   }
 
-  function mettreAJourBadgeSource() {
-    const dot = document.getElementById('source-dot');
-    const label = document.getElementById('source-label');
-    const time = document.getElementById('source-time');
-    if (!dot || !label) return;
-    const enLigne = donnees.source === 'api' || donnees.source === 'snapshot';
-    dot.className = 'status-dot ' + (enLigne ? 'live' : 'offline');
-    label.textContent = enLigne ? 'Données en ligne' : 'Données statiques';
-    if (time) {
-      if (donnees.genere) {
-        const d = new Date(donnees.genere);
-        time.textContent = 'MàJ ' + d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' })
-          + ' ' + d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-      } else {
-        time.textContent = enLigne ? 'Temps réel' : '';
-      }
+  const METEO_COORDS = { lat: 49.8942, lon: 2.2957, ville: 'Amiens' };
+  const METEO_CODES = {
+    0: '☀️ Ciel dégagé', 1: '🌤️ Peu nuageux', 2: '⛅ Partiellement nuageux', 3: '☁️ Couvert',
+    45: '🌫️ Brouillard', 48: '🌫️ Brouillard givrant',
+    51: '🌦️ Bruine légère', 53: '🌦️ Bruine', 55: '🌦️ Bruine forte',
+    61: '🌧️ Pluie légère', 63: '🌧️ Pluie', 65: '🌧️ Pluie forte',
+    71: '🌨️ Neige légère', 73: '🌨️ Neige', 75: '🌨️ Neige forte',
+    80: '🌦️ Averses', 81: '🌦️ Averses', 82: '⛈️ Averses violentes',
+    95: '⛈️ Orage', 96: '⛈️ Orage de grêle', 99: '⛈️ Orage de grêle',
+  };
+
+  function mettreAJourHorloge() {
+    const heureEl = document.getElementById('infos-heure');
+    const dateEl = document.getElementById('infos-date');
+    if (!heureEl || !dateEl) return;
+    const now = new Date();
+    heureEl.textContent = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    const jourMois = now.toLocaleDateString('fr-FR', { weekday: 'short', day: '2-digit', month: 'short' });
+    const cle = String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+    const fete = (typeof FETES_JOUR !== 'undefined') ? FETES_JOUR[cle] : null;
+    dateEl.textContent = jourMois + (fete ? ' · ' + fete : '');
+  }
+
+  // Marché : ouverture Euronext Paris 9h-17h30, lun-ven, heure locale (jours fériés non exclus).
+  function mettreAJourMarche() {
+    const el = document.getElementById('infos-marche');
+    if (!el) return;
+    const parisStr = new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' });
+    const paris = new Date(parisStr);
+    const jour = paris.getDay();
+    const minutes = paris.getHours() * 60 + paris.getMinutes();
+    const ouvert = jour >= 1 && jour <= 5 && minutes >= 9 * 60 && minutes < 17 * 60 + 30;
+    const nbAutocall = (donnees.produits || []).filter(p => p.zoneAutocall === 'OUI').length;
+    el.innerHTML = `<span class="infos-dot ${ouvert ? 'ouvert' : 'ferme'}"></span>Marché ${ouvert ? 'ouvert' : 'fermé'} · ${nbAutocall} en zone d'autocall`;
+  }
+
+  let meteoChargee = false;
+  async function chargerMeteo() {
+    const el = document.getElementById('infos-meteo');
+    if (!el || meteoChargee) return;
+    meteoChargee = true;
+    const CACHE_KEY = 'meteo-cache-v1';
+    try {
+      const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (cached && Date.now() - cached.ts < 30 * 60 * 1000) el.textContent = cached.txt;
+    } catch {}
+    try {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${METEO_COORDS.lat}&longitude=${METEO_COORDS.lon}&current_weather=true`;
+      const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
+      const j = await r.json();
+      const cw = j.current_weather;
+      const desc = METEO_CODES[cw.weathercode] || '—';
+      const txt = `${desc} · ${Math.round(cw.temperature)} °C · ${METEO_COORDS.ville}`;
+      el.textContent = txt;
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ txt, ts: Date.now() })); } catch {}
+    } catch {
+      if (!el.textContent || el.textContent === 'Météo…') el.textContent = 'Météo indisponible';
+    } finally {
+      meteoChargee = false;
     }
   }
 
@@ -408,6 +451,10 @@ const App = (() => {
     restaurerEtat();
     renderPage();
     initPullToRefresh();
+    mettreAJourHorloge();
+    setInterval(mettreAJourHorloge, 30000);
+    chargerMeteo();
+    setInterval(chargerMeteo, 30 * 60000);
     donnees = await AppAPI.chargerDonnees();
     if (donnees.source !== 'api') {
       // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.
