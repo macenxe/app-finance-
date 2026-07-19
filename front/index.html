@@ -7,7 +7,7 @@
   <title>SP Track</title>
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-  <link rel="stylesheet" href="./style.css?v=88">
+  <link rel="stylesheet" href="./style.css?v=89">
 </head>
 <body>
   <div id="app">
@@ -21,8 +21,22 @@
       <div class="sidebar-infos">
         <div class="infos-heure" id="infos-heure">--:--</div>
         <div class="infos-date" id="infos-date">—</div>
-        <div class="infos-ligne" id="infos-meteo">Météo…</div>
-        <div class="infos-ligne" id="infos-marche">—</div>
+
+        <div class="infos-item">
+          <span class="infos-marker" id="infos-meteo-icon">—</span>
+          <div>
+            <div class="infos-primaire" id="infos-meteo-temp">—</div>
+            <div class="infos-secondaire" id="infos-meteo-desc">Météo…</div>
+          </div>
+        </div>
+
+        <div class="infos-item">
+          <span class="infos-marker"><span class="infos-dot" id="infos-marche-dot"></span></span>
+          <div>
+            <div class="infos-primaire" id="infos-marche-statut">—</div>
+            <div class="infos-secondaire" id="infos-marche-autocall">—</div>
+          </div>
+        </div>
       </div>
     </aside>
 
@@ -43,12 +57,12 @@
   </div>
 
   <div id="modal-root"></div>
-  <script src="./data.js?v=95"></script>
-  <script src="./feteJour.js?v=95"></script>
-  <script src="./api.js?v=95"></script>
-  <script src="./autocall.js?v=95"></script>
-  <script src="./chart.js?v=95"></script>
-  <script src="./pages.js?v=95"></script>
-  <script src="./app.js?v=95"></script>
+  <script src="./data.js?v=96"></script>
+  <script src="./feteJour.js?v=96"></script>
+  <script src="./api.js?v=96"></script>
+  <script src="./autocall.js?v=96"></script>
+  <script src="./chart.js?v=96"></script>
+  <script src="./pages.js?v=96"></script>
+  <script src="./app.js?v=96"></script>
 </body>
 </html>
