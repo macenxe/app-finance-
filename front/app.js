@@ -304,14 +304,21 @@ const App = (() => {
   }
 
   function mettreAJourBadgeSource() {
-    const badge = document.getElementById('source-badge');
-    if (!badge) return;
-    if (donnees.source === 'api' || donnees.source === 'snapshot') {
-      badge.textContent = '● Données en ligne';
-      badge.className = 'source-badge live';
-    } else {
-      badge.textContent = '○ Données statiques';
-      badge.className = 'source-badge offline';
+    const dot = document.getElementById('source-dot');
+    const label = document.getElementById('source-label');
+    const time = document.getElementById('source-time');
+    if (!dot || !label) return;
+    const enLigne = donnees.source === 'api' || donnees.source === 'snapshot';
+    dot.className = 'status-dot ' + (enLigne ? 'live' : 'offline');
+    label.textContent = enLigne ? 'Données en ligne' : 'Données statiques';
+    if (time) {
+      if (donnees.genere) {
+        const d = new Date(donnees.genere);
+        time.textContent = 'MàJ ' + d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' })
+          + ' ' + d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+      } else {
+        time.textContent = enLigne ? 'Temps réel' : '';
+      }
     }
   }
 

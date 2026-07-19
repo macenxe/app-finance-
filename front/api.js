@@ -185,7 +185,7 @@ const AppAPI = (() => {
     try {
       const snap = await fetchJson('./data/snapshot.json');
       backOk = false;
-      return assembler('snapshot', snap.indices ?? [], snap.produits ?? [], snap.taux ?? []);
+      return { ...assembler('snapshot', snap.indices ?? [], snap.produits ?? [], snap.taux ?? []), genere: snap.genere };
     } catch { /* pas de snapshot : on tombe sur le statique */ }
 
     // 4. Données statiques de data.js (dernier recours)
