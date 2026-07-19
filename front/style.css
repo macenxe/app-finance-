@@ -37,12 +37,12 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .nav-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.22); flex: none; }
 .nav-item.active .nav-dot { background: #c9a96a; }
 
-.sidebar-infos { padding: 14px 18px; border-top: 1px solid rgba(255,255,255,.08); }
+.sidebar-infos { padding: 16px 18px 26px; border-top: 1px solid rgba(255,255,255,.08); }
 .infos-heure { font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #fff; font-variant-numeric: tabular-nums; }
-.infos-date  { font-size: 10.5px; color: #c9a96a; margin-top: 1px; }
+.infos-date  { font-size: 10.5px; color: #c9a96a; margin-top: 3px; }
 .infos-ligne {
-  font-size: 10.5px; color: #7e8ba0; margin-top: 4px;
-  display: flex; align-items: center; gap: 5px;
+  font-size: 10.5px; color: #7e8ba0; margin-top: 7px; line-height: 1.4;
+  display: flex; align-items: center; gap: 6px;
 }
 .infos-dot { width: 6px; height: 6px; border-radius: 50%; flex: none; background: #7e8ba0; }
 .infos-dot.ouvert { background: #4caf7d; }
