@@ -201,21 +201,17 @@ const AppAPI = (() => {
   // URL de l'historique d'un graphique.
   // Taux & inflation (fred:/hicp:) : fichiers JSON statiques pré-générés, servis en même
   // origine (pas de CORS, pas de clé, pas de Worker). Le reste (cours Yahoo) passe par le
-  // Worker en prod, ou le serveur de dev en local.
+  // Worker, qui autorise le CORS cross-origin (y compris depuis localhost en dev).
   function historyUrl(id, period) {
     if (id.indexOf('fred:') === 0 || id.indexOf('hicp:') === 0) {
       return `./data/history/${id.slice(5)}.json`;
     }
     const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(period)}`;
-    const h = location.hostname;
-    if (h === 'localhost' || h === '127.0.0.1') return `${location.origin}/__history?${q}`;
     return `${WORKER}?${q}`;
   }
 
   // URL de la valeur courante du CMS 10 ans (swap EUR 10y via FT, proxifié).
   function cmsUrl() {
-    const h = location.hostname;
-    if (h === 'localhost' || h === '127.0.0.1') return `${location.origin}/__cms`;
     return `${WORKER}?cms=1`;
   }
 

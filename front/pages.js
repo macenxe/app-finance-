@@ -86,6 +86,7 @@ function renderDashboard(indices, produits, taux) {
             ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
             : `<div class="index-var tnum" style="color:#9a8f7a;">—</div>`
           }
+          ${gid ? `<div class="index-spark" data-spark="${gid}"></div>` : ''}
         </div>`; }).join('')}
       </div>
 

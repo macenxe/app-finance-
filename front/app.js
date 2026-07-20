@@ -197,7 +197,7 @@ const App = (() => {
     el.scrollTop = saved;
     renderNav();
     mettreAJourMarche();
-    if (state.page === 'dash') majCartesMarche();
+    if (state.page === 'dash') { majCartesMarche(); chargerSparklines(); }
   }
 
   async function chargerActus() {
@@ -228,6 +228,46 @@ const App = (() => {
         document.getElementById('news-section').innerHTML = '<p class="news-empty">Actualités indisponibles (back local requis).</p>';
         document.getElementById('news-section').className = '';
       }
+    }
+  }
+
+  // Mini-graphiques des cartes « Indices clés » (tableau de bord). Un seul fetch par indice,
+  // mis en cache pour éviter de re-solliciter le Worker à chaque re-rendu du tableau de bord.
+  let sparkCache = {};
+  let sparkFetching = false;
+  function sparklineSvg(pts) {
+    const vals = pts.map(p => p.c);
+    const min = Math.min(...vals), max = Math.max(...vals);
+    const w = 100, h = 24, pad = 2, range = (max - min) || 1;
+    const X = i => pad + (i / (pts.length - 1)) * (w - pad * 2);
+    const Y = v => pad + (1 - (v - min) / range) * (h - pad * 2);
+    let d = '';
+    pts.forEach((p, i) => { d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(p.c).toFixed(1) + ' '; });
+    const couleur = vals[vals.length - 1] >= vals[0] ? '#1d6f4c' : '#9a3535';
+    return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="${couleur}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+  }
+  async function chargerSparklines() {
+    if (sparkFetching || typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
+    const els = document.querySelectorAll('[data-spark]');
+    if (!els.length) return;
+    sparkFetching = true;
+    try {
+      await Promise.allSettled(Array.from(els).map(async el => {
+        const gid = el.getAttribute('data-spark');
+        if (!gid) return;
+        let pts = sparkCache[gid];
+        if (!pts) {
+          try {
+            const r = await fetch(AppAPI.historyUrl(gid, '1m'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+            if (!r.ok) return;
+            pts = (await r.json()).points || [];
+            if (pts.length >= 2) sparkCache[gid] = pts;
+          } catch { return; }
+        }
+        if (pts && pts.length >= 2) el.innerHTML = sparklineSvg(pts);
+      }));
+    } finally {
+      sparkFetching = false;
     }
   }
 

@@ -120,6 +120,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .index-var   { font-size: 11.5px; font-weight: 600; }
 .index-var.up   { color: #1d6f4c; }
 .index-var.down { color: #9a3535; }
+.index-spark { height: 24px; margin-top: 6px; }
+.index-spark svg { display: block; width: 100%; height: 100%; }
 
 /* ── Section labels ── */
 .section-label { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #9a8f7a; font-weight: 600; }
@@ -732,6 +734,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .index-name, .taux-item-name { font-size: 11.5px; }
   .index-val { font-size: 23px; margin: 8px 0 5px; }
   .index-var { font-size: 12.5px; }
+  .index-spark { height: 30px; margin-top: 8px; }
   .taux-val  { font-size: 20px; margin-top: 7px; }
   .taux-var  { font-size: 11.5px; margin-top: 4px; }
   .taux-maj  { margin-top: 5px; }
@@ -822,6 +825,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   .index-val  { font-size: 16px; margin: 3px 0 2px; }
   .index-name { font-size: 10.5px; }
   .index-var  { font-size: 10.5px; }
+  .index-spark { height: 20px; margin-top: 4px; }
   .taux-val   { font-size: 15px; }
   .taux-item-name { font-size: 10.5px; }
   .taux-var   { font-size: 10.5px; }
