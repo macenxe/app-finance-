@@ -258,7 +258,7 @@ const App = (() => {
         let pts = sparkCache[gid];
         if (!pts) {
           try {
-            const r = await fetch(AppAPI.historyUrl(gid, '1m'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+            const r = await fetch(AppAPI.historyUrl(gid, '5a'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
             if (!r.ok) return;
             pts = (await r.json()).points || [];
             if (pts.length >= 2) sparkCache[gid] = pts;
