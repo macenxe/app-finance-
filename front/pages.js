@@ -86,7 +86,6 @@ function renderDashboard(indices, produits, taux) {
             ? `<div class="index-var tnum ${i.hausse ? 'up' : 'down'}">${i.hausse ? '▲' : '▼'} ${i.var}</div>`
             : `<div class="index-var tnum" style="color:#9a8f7a;">—</div>`
           }
-          ${gid ? `<div class="index-spark" data-spark="${gid}"></div>` : ''}
         </div>`; }).join('')}
       </div>
 
@@ -248,27 +247,12 @@ function renderProduits(produits, state, rappeles) {
   const rapNote = (rappeles && rappeles.length > 0)
     ? ` · ${rappeles.length} rappelé${rappeles.length > 1 ? 's' : ''} (retiré${rappeles.length > 1 ? 's' : ''} de la liste)`
     : '';
-  const f = state.filter || 'tous';
   const catActive = state.cat || null;
   let rows = produits;
-  if      (f === 'green')  rows = produits.filter(r => r.zoneAutocall === 'OUI');
-  else if (f === 'orange') rows = produits.filter(r => r.couponAtteint === true);
-  else if (f === 'red')    rows = produits.filter(r => r.belowProtection === true);
   if (catActive) rows = rows.filter(r => categorieProduit(r) === catActive);
   if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
   const parseConstat = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? new Date(+m[3], +m[2]-1, +m[1]) : new Date(0); };
   rows = [...rows].sort((a, b) => parseConstat(a.constat) - parseConstat(b.constat));
-
-  const countVert   = produits.filter(r => r.zoneAutocall === 'OUI').length;
-  const countCoupon = produits.filter(r => r.couponAtteint === true).length;
-  const countRisque = produits.filter(r => r.belowProtection === true).length;
-
-  const chips = [
-    { key:'tous',   label:`Tous (${produits.length})` },
-    { key:'green',  label:'Zone Rappel' },
-    { key:'orange', label:'Zone Coupon' },
-    { key:'red',    label:'Risque' },
-  ];
 
   return `
   <div>
@@ -280,23 +264,9 @@ function renderProduits(produits, state, rappeles) {
     </header>
 
     <div style="padding:18px 30px 40px;">
-      <div class="prod-stat-chips">
-        <button class="prod-stat-chip prod-stat-green${f==='green'?' active':''}" onclick="App.setFilter('green')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countVert}</span><span class="prod-stat-label">Zone Rappel</span>
-        </button>
-        <button class="prod-stat-chip prod-stat-orange${f==='orange'?' active':''}" onclick="App.setFilter('orange')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countCoupon}</span><span class="prod-stat-label">Zone Coupon</span>
-        </button>
-        <button class="prod-stat-chip prod-stat-red${f==='red'?' active':''}" onclick="App.setFilter('red')">
-          <span class="prod-stat-dot"></span><span class="prod-stat-count">${countRisque}</span><span class="prod-stat-label">Risque</span>
-        </button>
-      </div>
-
-      <div class="prod-chips-sep"></div>
-
-      <div class="uc-chips prod-chips prod-chips-cats">
+      <div class="uc-chips prod-chips prod-chips-cats prod-chips-cats-big">
         ${grouperCategories(produits).map(c => `
-        <button class="uc-chip${catActive===c.cat?' active':''}" onclick="App.setCat('${c.cat}')">${c.cat}</button>`).join('')}
+        <button class="uc-chip uc-chip-big${catActive===c.cat?' active':''}" onclick="App.setCat('${c.cat}')">${c.cat}</button>`).join('')}
       </div>
 
 
