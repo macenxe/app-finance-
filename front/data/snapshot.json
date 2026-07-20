@@ -49,35 +49,6 @@
   ],
   "produits": [
     {
-      "isin": "FR001400KP78",
-      "nom": "Conservateur Autocall CAC 90% Déc 2026",
-      "sousJacent": "^FCHI",
-      "sousJacentLabel": "CAC 40",
-      "typeProduit": "equity",
-      "strike": 7346,
-      "barriereAutocall": 90,
-      "barriereCoupon": null,
-      "protection": null,
-      "emission": "2023-12-15",
-      "echeance": "2026-12-15",
-      "constat": "1er j./mois*",
-      "coupon": 6,
-      "id": 1,
-      "cours": {
-        "sousJacent": "^FCHI",
-        "dernierCours": 8382.43,
-        "heureCours": "2026-07-15T16:05:02.000Z",
-        "variationPct": 0.186212,
-        "nom": "CAC 40"
-      },
-      "indicateurs": {
-        "produitId": 1,
-        "pctStrike": 114.1087666757419,
-        "zoneAutocall": false,
-        "statutZone": "surveillance"
-      }
-    },
-    {
       "isin": "FRF0000001M7",
       "nom": "CAP 40 Août 2030",
       "sousJacent": "SX7E.PA",

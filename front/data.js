@@ -2,7 +2,6 @@
 // ⚠️ LISTE DUPLIQUÉE : la source de vérité est back/src/produits.ts. Tout ajout / retrait /
 // modification doit être répercuté dans LES DEUX fichiers (voir README, section « Produits »).
 const PRODUITS = [
-  { isin:'FR001400KP78', nom:'Conservateur Autocall CAC 90% Déc 2026',      sj:'CAC 40',     coupon:'6 %',    strike:'7 346',  niveau:'8 351',  bAuto:'90 %',   bCoupon:'—',    constat:'1er j./mois*', emission:'2023-12-15', ech:'15/12/2026', type:'equity', strikeNum:7346,   niveauNum:8351,  zoneAutocall:'NON', protection:null },
   { isin:'FRF0000001M7', nom:'CAP 40 Août 2030',                             sj:'ES Banks',   coupon:'7 %',    strike:'215,10', niveau:'277,95', bAuto:'100 %',  bCoupon:'80 %', constat:'29/07/2026',   emission:'2025-07-29', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI', protection:'-40 %' },
   { isin:'FRF0000001K1', nom:'CAP 50 Août 2030',                             sj:'ES Banks',   coupon:'6 %',    strike:'215,10', niveau:'277,95', bAuto:'100 %',  bCoupon:'80 %', constat:'29/07/2026',   emission:'2025-07-29', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI', protection:'-50 %' },
   { isin:'FRF0000001L9', nom:'CAP 60 Août 2030',                             sj:'ES Banks',   coupon:'5 %',    strike:'215,10', niveau:'277,95', bAuto:'100 %',  bCoupon:'80 %', constat:'29/07/2026',   emission:'2025-07-29', ech:'13/08/2030', type:'equity', strikeNum:215.10, niveauNum:277.95, zoneAutocall:'OUI', protection:'-60 %' },

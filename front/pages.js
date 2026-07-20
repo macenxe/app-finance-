@@ -205,7 +205,6 @@ function renderNewsSection(news) {
     'Stellantis':   ['Ath. Stellantis'],
     'Capgemini':    ['Ath. Capgemini'],
     'Rheinmetall':  ['Ath. Rheinmetall'],
-    'CAC 40':       ['CAC 90%'],
     'ES Banks':     ['CAP'],
     'BCE / Taux':   ['CMS'],
     'Inflation':    ['CMS'],

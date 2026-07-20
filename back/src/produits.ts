@@ -12,7 +12,6 @@ const ESB = 'SX7E.PA'; // Euro Stoxx Banks — ticker Yahoo Finance
 
 // Dates d'émission estimées (constat initial). À corriger avec les termsheets.
 export const PRODUITS: NouveauProduit[] = [
-  { isin:'FR001400KP78', nom:'Conservateur Autocall CAC 90% Déc 2026', sousJacent:'^FCHI',   sousJacentLabel:'CAC 40',     typeProduit:'equity', strike:7346,   barriereAutocall:90,   barriereCoupon:null, protection:null, emission:'2023-12-15', echeance:'2026-12-15', constat:'1er j./mois*', coupon:6    },
   { isin:'FRF0000001M7', nom:'CAP 40 Août 2030',                       sousJacent:ESB,       sousJacentLabel:'ES Banks',   typeProduit:'equity', strike:215.10, barriereAutocall:100,  barriereCoupon:80, protection:'-40 %',   emission:'2025-07-29', echeance:'2030-08-13', constat:'29/07/2026',  coupon:7    },
   { isin:'FRF0000001K1', nom:'CAP 50 Août 2030',                       sousJacent:ESB,       sousJacentLabel:'ES Banks',   typeProduit:'equity', strike:215.10, barriereAutocall:100,  barriereCoupon:80, protection:'-50 %',   emission:'2025-07-29', echeance:'2030-08-13', constat:'29/07/2026',  coupon:6    },
   { isin:'FRF0000001L9', nom:'CAP 60 Août 2030',                       sousJacent:ESB,       sousJacentLabel:'ES Banks',   typeProduit:'equity', strike:215.10, barriereAutocall:100,  barriereCoupon:80, protection:'-60 %',   emission:'2025-07-29', echeance:'2030-08-13', constat:'29/07/2026',  coupon:5    },
