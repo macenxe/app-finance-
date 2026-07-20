@@ -1,50 +1,50 @@
 {
-  "genere": "2026-07-15T19:16:54.078Z",
+  "genere": "2026-07-20T16:29:29.257Z",
   "indices": [
     {
       "sousJacent": "^STOXX50E",
-      "dernierCours": 6265.58,
-      "heureCours": "2026-07-15T16:00:00.000Z",
-      "variationPct": -0.2326341,
+      "dernierCours": 6227.4,
+      "heureCours": "2026-07-20T16:00:00.000Z",
+      "variationPct": -0.055693906,
       "nom": "Euro Stoxx 50"
     },
     {
       "sousJacent": "^GSPC",
-      "dernierCours": 7562.25,
-      "heureCours": "2026-07-15T19:16:52.000Z",
-      "variationPct": 0.24736112,
+      "dernierCours": 7490.69,
+      "heureCours": "2026-07-20T16:29:28.000Z",
+      "variationPct": 0.44249272,
       "nom": "S&P 500"
     },
     {
       "sousJacent": "^IXIC",
-      "dernierCours": 26212.262,
-      "heureCours": "2026-07-15T19:16:52.000Z",
-      "variationPct": 0.40316817,
+      "dernierCours": 25737.963,
+      "heureCours": "2026-07-20T16:29:27.000Z",
+      "variationPct": 0.85312253,
       "nom": "Nasdaq"
     },
     {
       "sousJacent": "^FCHI",
-      "dernierCours": 8382.43,
-      "heureCours": "2026-07-15T16:05:02.000Z",
-      "variationPct": 0.186212,
+      "dernierCours": 8340.11,
+      "heureCours": "2026-07-20T16:05:02.000Z",
+      "variationPct": 0.015599124,
       "nom": "CAC 40"
     }
   ],
   "taux": [
     {
       "sousJacent": "^TNX",
-      "dernierCours": 4.545,
-      "heureCours": "2026-07-15T18:59:55.000Z",
-      "variationPct": -0.87240916,
+      "dernierCours": 4.594,
+      "heureCours": "2026-07-20T16:14:23.000Z",
+      "variationPct": 1.1671432,
       "nom": "US 10 ans"
     },
     {
       "nom": "CMS 10 ans",
       "sousJacent": "CMS10",
       "dernierCours": 3.04,
-      "heureCours": "2026-07-15T19:16:54.078Z",
+      "heureCours": "2026-07-20T16:29:29.257Z",
       "manuel": true,
-      "dateMaj": "15/07/2026"
+      "dateMaj": "20/07/2026"
     }
   ],
   "produits": [
@@ -62,14 +62,14 @@
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 7,
-      "id": 2,
+      "id": 1,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 2,
+        "produitId": 1,
         "pctStrike": 129.2189679218968,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -89,14 +89,14 @@
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 6,
-      "id": 3,
+      "id": 2,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 3,
+        "produitId": 2,
         "pctStrike": 129.2189679218968,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -116,14 +116,14 @@
       "echeance": "2030-08-13",
       "constat": "29/07/2026",
       "coupon": 5,
-      "id": 4,
+      "id": 3,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 4,
+        "produitId": 3,
         "pctStrike": 129.2189679218968,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -143,14 +143,14 @@
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 7,
-      "id": 5,
+      "id": 4,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 5,
+        "produitId": 4,
         "pctStrike": 114.23698162837532,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -170,14 +170,14 @@
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 6,
-      "id": 6,
+      "id": 5,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 6,
+        "produitId": 5,
         "pctStrike": 114.23698162837532,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -197,14 +197,14 @@
       "echeance": "2030-12-16",
       "constat": "30/11/2026",
       "coupon": 5,
-      "id": 7,
+      "id": 6,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 7,
+        "produitId": 6,
         "pctStrike": 114.23698162837532,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -224,14 +224,14 @@
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 7,
-      "id": 8,
+      "id": 7,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 8,
+        "produitId": 7,
         "pctStrike": 101.76472741917767,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -251,14 +251,14 @@
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 6,
-      "id": 9,
+      "id": 8,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 9,
+        "produitId": 8,
         "pctStrike": 101.76472741917767,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -278,14 +278,14 @@
       "echeance": "2031-03-17",
       "constat": "26/02/2027",
       "coupon": 5,
-      "id": 10,
+      "id": 9,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 10,
+        "produitId": 9,
         "pctStrike": 101.76472741917767,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -305,14 +305,14 @@
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 7,
-      "id": 11,
+      "id": 10,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 11,
+        "produitId": 10,
         "pctStrike": 107.84960422163587,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -332,14 +332,14 @@
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 6,
-      "id": 12,
+      "id": 11,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 12,
+        "produitId": 11,
         "pctStrike": 107.84960422163587,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -359,14 +359,14 @@
       "echeance": "2031-05-12",
       "constat": "27/04/2027",
       "coupon": 5,
-      "id": 13,
+      "id": 12,
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 13,
+        "produitId": 12,
         "pctStrike": 107.84960422163587,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
@@ -386,14 +386,14 @@
       "echeance": "2030-07-25",
       "constat": "13/07/2026",
       "coupon": 4.25,
-      "id": 14,
+      "id": 13,
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 14,
+        "produitId": 13,
         "pctStrike": null,
         "zoneAutocall": false,
         "statutZone": "risque"
@@ -413,14 +413,14 @@
       "echeance": "2030-10-30",
       "constat": "16/10/2026",
       "coupon": 4,
-      "id": 15,
+      "id": 14,
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 15,
+        "produitId": 14,
         "pctStrike": null,
         "zoneAutocall": false,
         "statutZone": "risque"
@@ -440,14 +440,14 @@
       "echeance": "2031-02-03",
       "constat": "18/01/2027",
       "coupon": 4,
-      "id": 16,
+      "id": 15,
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 16,
+        "produitId": 15,
         "pctStrike": null,
         "zoneAutocall": false,
         "statutZone": "risque"
@@ -467,14 +467,14 @@
       "echeance": "2031-05-02",
       "constat": "12/04/2027",
       "coupon": 4,
-      "id": 17,
+      "id": 16,
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-15T19:16:54.078Z"
+        "heureCours": "2026-07-20T16:29:29.257Z"
       },
       "indicateurs": {
-        "produitId": 17,
+        "produitId": 16,
         "pctStrike": null,
         "zoneAutocall": false,
         "statutZone": "risque"
@@ -494,16 +494,16 @@
       "echeance": "2030-07-31",
       "constat": "20/07/2026",
       "coupon": 10,
-      "id": 18,
+      "id": 17,
       "cours": {
         "sousJacent": "BNP.PA",
-        "dernierCours": 102.64,
-        "heureCours": "2026-07-15T15:35:19.000Z",
-        "variationPct": 0.31274402
+        "dernierCours": 103.3,
+        "heureCours": "2026-07-20T15:35:01.000Z",
+        "variationPct": 1.3341186
       },
       "indicateurs": {
-        "produitId": 18,
-        "pctStrike": 131.86022610483042,
+        "produitId": 17,
+        "pctStrike": 132.70811921891058,
         "zoneAutocall": true,
         "statutZone": "rappel_probable"
       }
@@ -522,16 +522,16 @@
       "echeance": "2030-11-28",
       "constat": "16/11/2026",
       "coupon": 11,
-      "id": 19,
+      "id": 18,
       "cours": {
         "sousJacent": "STLAM.MI",
-        "dernierCours": 5.166,
-        "heureCours": "2026-07-15T15:39:16.000Z",
-        "variationPct": 3.3406644
+        "dernierCours": 5.052,
+        "heureCours": "2026-07-20T15:38:06.000Z",
+        "variationPct": -0.6685002
       },
       "indicateurs": {
-        "produitId": 19,
-        "pctStrike": 61.13609467455622,
+        "produitId": 18,
+        "pctStrike": 59.786982248520715,
         "zoneAutocall": false,
         "statutZone": "risque"
       }
@@ -550,16 +550,16 @@
       "echeance": "2031-05-12",
       "constat": "04/05/2027",
       "coupon": 10,
-      "id": 20,
+      "id": 19,
       "cours": {
         "sousJacent": "CAP.PA",
-        "dernierCours": 92.92,
-        "heureCours": "2026-07-15T15:35:09.000Z",
-        "variationPct": 3.0840902
+        "dernierCours": 91.58,
+        "heureCours": "2026-07-20T15:35:02.000Z",
+        "variationPct": 0.28471544
       },
       "indicateurs": {
-        "produitId": 20,
-        "pctStrike": 87.57775683317625,
+        "produitId": 19,
+        "pctStrike": 86.31479736098021,
         "zoneAutocall": false,
         "statutZone": "surveillance"
       }
@@ -578,16 +578,16 @@
       "echeance": "2031-06-23",
       "constat": "15/06/2027",
       "coupon": 10,
-      "id": 21,
+      "id": 20,
       "cours": {
         "sousJacent": "RHM.DE",
-        "dernierCours": 976.1,
-        "heureCours": "2026-07-15T15:36:39.000Z",
-        "variationPct": -0.38779965
+        "dernierCours": 990.3,
+        "heureCours": "2026-07-20T15:38:44.000Z",
+        "variationPct": 0.61979026
       },
       "indicateurs": {
-        "produitId": 21,
-        "pctStrike": 84.86350199965223,
+        "produitId": 20,
+        "pctStrike": 86.0980699008868,
         "zoneAutocall": false,
         "statutZone": "surveillance"
       }
