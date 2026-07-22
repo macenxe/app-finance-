@@ -307,21 +307,53 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* ── Page actualités ── */
 .news-loading { padding: 18px 0; }
 .news-spinner { font-size: 12.5px; color: #9a8f7a; }
-.news-section { }
-.news-col-title { font-size: 11px; font-weight: 700; color: #9a8f7a; text-transform: uppercase; letter-spacing: .08em; }
-.mb-10 { margin-bottom: 10px; }
-.news-articles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.news-article { display: block; background: #fff; border: 1px solid #e6e0d2; border-radius: 6px; padding: 12px 14px; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
-.news-article:hover { border-color: #c9a96a; box-shadow: 0 2px 8px rgba(22,48,79,.07); }
-.news-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
-/* Badge thème : fond plein discret */
-.news-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: .04em; background: #e8e2d6; color: #5a5040; }
-/* Badge produit concerné : outlined pour se différencier du thème */
-.news-badge-prod { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 3px; letter-spacing: .03em; background: transparent; border: 1px solid #b8a880; color: #7a6840; }
-.news-titre { font-size: 12.5px; font-weight: 600; color: #16304f; line-height: 1.4; margin-bottom: 5px; }
-.news-meta { font-size: 11px; color: #9a8f7a; }
 .news-empty { font-size: 12.5px; color: #9a8f7a; margin: 0; }
-/* 2 colonnes conservées sur mobile */
+
+/* Sections (« À la une » curée, puis « Fil en direct » RSS) */
+.news-group { margin-bottom: 24px; }
+.news-group:last-child { margin-bottom: 0; }
+.news-group-title {
+  font-family: 'Spectral', serif; font-size: 15px; font-weight: 600;
+  color: #16304f; margin: 0 0 12px;
+}
+
+/* Cartes éditoriales : avatar-lettre + catégorie + titre + résumé + méta */
+.news-cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.news-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: #fff; border: 1px solid #e6e0d2; border-radius: 12px;
+  padding: 16px; text-decoration: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); }
+.news-avatar {
+  flex: none; width: 46px; height: 46px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: 'Spectral', serif; font-size: 20px; font-weight: 600;
+}
+.news-card-body { min-width: 0; }
+.news-card-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 10px; margin-bottom: 5px;
+}
+.news-cat {
+  display: flex; align-items: center; min-width: 0;
+  font-size: 11px; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.news-cat-dot { display: inline-block; flex: none; width: 5px; height: 5px; border-radius: 50%; margin-left: 7px; }
+.news-card-date { flex: none; font-size: 12px; color: #9a8f7a; white-space: nowrap; }
+.news-card-titre {
+  font-family: 'Spectral', serif; font-size: 16px; font-weight: 600;
+  line-height: 1.32; color: #16304f; margin-bottom: 6px;
+}
+.news-card-resume { font-size: 13px; line-height: 1.5; color: #6b6253; margin-bottom: 8px; }
+.news-card-meta { font-size: 12px; color: #9a8f7a; }
+
+/* Desktop : deux colonnes */
+@media (min-width: 641px) {
+  .news-cards { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
 
 /* ── Footer compliance ── */
 #footer {
@@ -483,6 +515,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* ── Top bar mobile + nav du bas (cachés sur desktop) ── */
 #mobile-topbar { display: none; }
 #bottom-nav { display: none; }
+/* Barre d'onglets bureau : masquée par défaut, activée en desktop (≥641px) uniquement */
+#desktop-topbar { display: none; }
 
 /* ── Centrage des cellules sans bordure interne ── */
 .index-card { text-align: center; }
@@ -712,51 +746,126 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .uc-srri-label { font-size: 9px; font-weight: 700; color: #9a8f7a; letter-spacing: .04em; text-transform: uppercase; }
 .uc-expo { font-size: 11px; color: #6b6e73; }
 
-/* ── Aération desktop : plus d'air entre les blocs, sans toucher au mobile ── */
+/* ── Base tiroir (masqué sur mobile, activé en desktop) ── */
+.sheet-close { display: none; }
+.sheet-panel .modal-close { display: none; }
+
+/* ── Bureau (≥641px) : navigation en onglets, densité accrue, tiroir latéral droit ── */
 @media (min-width: 641px) {
-  .page-body   { padding: 30px 40px 48px; }
-  .page-header { padding: 22px 40px; }
-  .detail-content { padding: 22px 40px 48px; }
+  /* Sidebar remplacée par une barre d'onglets clairs en haut */
+  #sidebar { display: none; }
+  #desktop-topbar {
+    display: flex; align-items: stretch; flex: none;
+    background: #fbfaf7; border-bottom: 1px solid #e6e0d2;
+    padding: 0 28px; height: 54px;
+  }
+  .dt-brand {
+    display: flex; flex-direction: column; justify-content: center; flex: none;
+    padding-right: 22px; margin-right: 4px; border-right: 1px solid #ece7dc;
+  }
+  .dt-logo { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; color: #16304f; letter-spacing: .01em; line-height: 1.1; }
+  .dt-sub  { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: #c9a96a; margin-top: 2px; }
+  #top-nav { display: flex; align-items: stretch; gap: 2px; }
+  .top-nav-item {
+    display: flex; align-items: center; gap: 7px;
+    padding: 0 15px; font-size: 13px; font-weight: 500; color: #6b6e73;
+    cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+    transition: color .15s, border-color .15s;
+  }
+  .top-nav-item svg { width: 15px; height: 15px; opacity: .65; transition: opacity .15s; }
+  .top-nav-item:hover { color: #16304f; }
+  .top-nav-item:hover svg { opacity: 1; }
+  .top-nav-item.active { color: #16304f; font-weight: 600; border-bottom-color: #c9a96a; }
+  .top-nav-item.active svg { opacity: 1; }
 
-  .grid-5, .grid-4, .grid-3 { gap: 18px; }
-  .grid-2 { gap: 20px; }
-  .grid-2-narrow { gap: 22px; }
-  .grid-dash-bottom { gap: 22px; }
-  .taux-grid, .macro-grid { gap: 18px; }
-  .cat-grid { gap: 18px; }
-  .summary-chips { gap: 18px; }
+  /* Densité : espacements resserrés (la place est disponible) */
+  .page-body   { padding: 20px 28px 36px; }
+  .page-header { padding: 15px 28px; }
+  .detail-content { padding: 18px 26px 30px; }
 
-  .index-card { padding: 18px 20px; }
-  .chip-card  { padding: 16px 18px; }
-  .cat-card   { padding: 18px 20px; }
-  .uc-item    { padding: 14px 18px; }
-  .uc-liste   { gap: 10px; }
+  .grid-5, .grid-4, .grid-3 { gap: 12px; }
+  .grid-2 { gap: 14px; }
+  .grid-2-narrow { gap: 16px; }
+  .grid-dash-bottom { gap: 16px; }
+  .taux-grid, .macro-grid { gap: 12px; }
+  .cat-grid { gap: 12px; }
+  .summary-chips { gap: 12px; }
 
-  .mb-12 { margin-bottom: 16px; }
-  .mb-18 { margin-bottom: 24px; }
-  .mb-24 { margin-bottom: 32px; }
+  /* Cartes indices/actifs/taux : compactes et plus nombreuses par ligne */
+  .grid-3 { grid-template-columns: repeat(4, 1fr); }
+  .index-card { padding: 11px 12px; }
+  .chip-card  { padding: 12px 14px; }
+  .cat-card   { padding: 12px 14px; }
+  .uc-item    { padding: 11px 14px; }
+  .uc-liste   { gap: 8px; }
 
-  .ac-card         { padding: 22px 24px; }
-  .autocall-header { padding-bottom: 10px; }
-  .autocall-row    { padding: 13px 0; font-size: 13px; }
-  .dates-cles-row  { padding: 11px 0; font-size: 13px; }
-  .detail-row      { padding: 13px 0; }
-  .detail-key, .detail-val { font-size: 13px; }
-  .event-item      { padding: 12px 0; }
-  .alert-item      { padding: 14px 0; }
-  .alert-text      { font-size: 13px; line-height: 1.55; }
-  .news-articles-grid { gap: 16px; }
-  .news-article    { padding: 16px 18px; }
-  .news-titre      { font-size: 13.5px; margin-bottom: 7px; }
+  .index-name, .taux-item-name { font-size: 11px; }
+  .index-val { font-size: 19px; margin: 5px 0 3px; }
+  .index-var { font-size: 11.5px; }
+  .taux-val  { font-size: 16.5px; margin-top: 4px; }
+  .taux-var  { font-size: 11px; margin-top: 3px; }
+  .taux-maj  { margin-top: 3px; }
+  .chip-card-val { font-size: 21px; margin-top: 3px; }
 
-  /* Cartes indices/taux/macro : valeurs plus lisibles, lignes plus aérées */
-  .index-name, .taux-item-name { font-size: 11.5px; }
-  .index-val { font-size: 23px; margin: 8px 0 5px; }
-  .index-var { font-size: 12.5px; }
-  .taux-val  { font-size: 20px; margin-top: 7px; }
-  .taux-var  { font-size: 11.5px; margin-top: 4px; }
-  .taux-maj  { margin-top: 5px; }
-  .chip-card-val { font-size: 25px; margin-top: 5px; }
+  .mb-12 { margin-bottom: 12px; }
+  .mb-18 { margin-bottom: 18px; }
+  .mb-24 { margin-bottom: 22px; }
+
+  .ac-card         { padding: 16px 20px; }
+  .autocall-header { padding-bottom: 9px; }
+  .autocall-row    { padding: 10px 0; font-size: 12.5px; }
+  .dates-cles-row  { padding: 9px 0; font-size: 12.5px; }
+  .detail-row      { padding: 10px 0; }
+  .detail-key, .detail-val { font-size: 12.5px; }
+  .event-item      { padding: 9px 0; }
+  .alert-item      { padding: 11px 0; }
+  .alert-text      { font-size: 12.5px; line-height: 1.5; }
+  .news-cards      { gap: 12px; }
+  .news-card       { padding: 14px 16px; }
+  .news-card-titre { font-size: 15px; }
+  .news-card-resume { font-size: 12.5px; }
+
+  /* Événements macro : deux colonnes plutôt qu'une longue liste */
+  .events-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+
+  /* ── Fiches détail & graphiques : tiroir latéral droit (fond non assombri) ── */
+  .sheet-backdrop {
+    align-items: stretch; justify-content: flex-end;
+    background: transparent !important; pointer-events: none;
+  }
+  .sheet-panel {
+    position: relative; pointer-events: auto;
+    width: 460px; max-width: 44vw; height: 100%; max-height: none;
+    border: none; border-left: 1px solid #e2dccc; border-radius: 0;
+    box-shadow: -12px 0 40px rgba(22,48,79,.13);
+    transform: translateX(100%);
+    transition: transform .32s cubic-bezier(.22,.61,.36,1);
+  }
+  .sheet-backdrop.sheet-open .sheet-panel { transform: translateX(0); }
+  .sheet-panel.sheet-expanded { max-height: none; }
+  .sheet-handle { display: none; }
+  .sheet-panel.chart-panel { width: 560px; max-width: 50vw; }
+  .sheet-header { padding: 18px 54px 14px 26px; }
+
+  /* Bouton de fermeture du tiroir (injecté pour les fiches, natif pour les graphiques) */
+  .sheet-close {
+    position: absolute; top: 12px; right: 14px; z-index: 3;
+    width: 30px; height: 30px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    background: #f2ede0; color: #6b6e73; border: none; cursor: pointer;
+    font-family: inherit; font-size: 15px; line-height: 1;
+    transition: background .15s, color .15s;
+  }
+  .sheet-close:hover { background: #e6ddca; color: #16304f; }
+  .sheet-panel .modal-close { display: block; }
+}
+
+/* Large écran : cartes marché 6 par ligne, listes Autocalls / UC sur deux colonnes */
+@media (min-width: 1080px) {
+  .grid-3   { grid-template-columns: repeat(6, 1fr); }
+  .ac-list  { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+  .uc-liste { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
+  .events-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -859,6 +968,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 @media (max-height: 500px) and (orientation: landscape) {
   #sidebar { display: none; }
+  /* Mobile paysage : conserver la nav du bas, masquer la barre d'onglets bureau */
+  #desktop-topbar { display: none; }
   #main { width: 100%; }
 
   #mobile-topbar {

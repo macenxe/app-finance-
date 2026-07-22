@@ -237,6 +237,8 @@ function calculerIndicateurs(p, cours) {
 const SOURCES_AUTORISEES = [
   'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
   'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
+  // Régulateurs & institutions (indispensables pour le flux Régulation / produits structurés)
+  'amf', 'autorité des marchés', 'esma', 'acpr', 'banque de france', 'fmi', 'ocde',
 ];
 const MOTS_IMPACT = [
   'bourse','cours','cac','stoxx','nasdaq','s&p','action','titre','marché','marchés',
@@ -247,6 +249,11 @@ const MOTS_IMPACT = [
   'obligation','dette','souverain','swap','irs','liquidité','crédit',
   'secteur bancaire','banques','énergie','défense','technologie',
   'capgemini','bnp','stellantis','rheinmetall',
+  // Régulation & produits structurés
+  'régulation','réglementation','amf','esma','mifid','directive','prospectus',
+  'produit structuré','produits structurés','structuré','structurés','autocall','commercialisation',
+  // International / macro mondiale
+  'fmi','ocde','mondiale','mondial','international','émergents','chine','états-unis','géopolitique',
 ];
 const MOTS_POSITIFS = [
   'hausse','en hausse','rebond','rebondit','progression','progresse','croissance','record',
@@ -265,11 +272,13 @@ const MOTS_NEGATIFS = [
   'récession','dégradation','fragilité','dévisse','fléchit','cède','décroche',
 ];
 const FLUX_GLOBAUX = [
-  { url: 'https://news.google.com/rss/search?q=BCE+d%C3%A9cision+taux+march%C3%A9s+impact&hl=fr&gl=FR&ceid=FR:fr', tag: 'BCE / Taux' },
-  { url: 'https://news.google.com/rss/search?q=Fed+taux+d%C3%A9cision+bourse+impact&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
-  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse&hl=fr&gl=FR&ceid=FR:fr',              tag: 'Inflation'  },
-  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+march%C3%A9s+actions+analyse&hl=fr&gl=FR&ceid=FR:fr',  tag: 'Marchés'    },
-  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund&hl=fr&gl=FR&ceid=FR:fr',           tag: 'Obligataire'},
+  { url: 'https://news.google.com/rss/search?q=BCE+d%C3%A9cision+taux+march%C3%A9s+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'BCE / Taux' },
+  { url: 'https://news.google.com/rss/search?q=Fed+taux+d%C3%A9cision+bourse+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
+  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse+when:7d&hl=fr&gl=FR&ceid=FR:fr',              tag: 'Inflation'  },
+  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+march%C3%A9s+actions+analyse+when:7d&hl=fr&gl=FR&ceid=FR:fr',  tag: 'Marchés'    },
+  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund+when:7d&hl=fr&gl=FR&ceid=FR:fr',           tag: 'Obligataire'},
+  { url: 'https://news.google.com/rss/search?q=produits+structur%C3%A9s+AMF+ESMA+r%C3%A9gulation+commercialisation+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'Régulation'   },
+  { url: 'https://news.google.com/rss/search?q=%C3%A9conomie+mondiale+croissance+FMI+international+march%C3%A9s+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'International' },
 ];
 const FLUX_PRODUITS = [
   { query: 'BNP Paribas cours bourse résultats analyste',         tag: 'BNP Paribas' },
@@ -323,7 +332,7 @@ async function fetchRSSWorker(url, tag, max = 4) {
 async function recupererNews() {
   const globalesP = Promise.allSettled(FLUX_GLOBAUX.map(f => fetchRSSWorker(f.url, f.tag, 3)));
   const produitsP = Promise.allSettled(FLUX_PRODUITS.map(f => {
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}&hl=fr&gl=FR&ceid=FR:fr`;
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`;
     return fetchRSSWorker(url, f.tag, 3);
   }));
   const [gr, pr] = await Promise.all([globalesP, produitsP]);

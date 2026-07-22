@@ -14,6 +14,8 @@ export interface Article {
 const SOURCES_AUTORISEES = [
   'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
   'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
+  // Régulateurs & institutions (indispensables pour le flux Régulation / produits structurés)
+  'amf', 'autorité des marchés', 'esma', 'acpr', 'banque de france', 'fmi', 'ocde',
 ];
 
 function sourceAutorisee(source: string): boolean {
@@ -31,6 +33,11 @@ const MOTS_IMPACT = [
   'obligation','dette','souverain','swap','irs','liquidité','crédit',
   'secteur bancaire','banques','énergie','défense','technologie',
   'capgemini','bnp','stellantis','rheinmetall',
+  // Régulation & produits structurés
+  'régulation','réglementation','amf','esma','mifid','directive','prospectus',
+  'produit structuré','produits structurés','structuré','structurés','autocall','commercialisation',
+  // International / macro mondiale
+  'fmi','ocde','mondiale','mondial','international','émergents','chine','états-unis','géopolitique',
 ];
 
 // Sentiment positif
@@ -74,11 +81,13 @@ function estImpactant(titre: string): boolean {
 
 // Flux globaux — requêtes ciblées sur les décisions et impacts marché
 const FLUX_GLOBAUX = [
-  { url: 'https://news.google.com/rss/search?q=BCE+décision+taux+marchés+impact&hl=fr&gl=FR&ceid=FR:fr',       tag: 'BCE / Taux' },
-  { url: 'https://news.google.com/rss/search?q=Fed+taux+décision+bourse+impact&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
-  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse&hl=fr&gl=FR&ceid=FR:fr',         tag: 'Inflation'  },
-  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+marchés+actions+analyse&hl=fr&gl=FR&ceid=FR:fr',   tag: 'Marchés'    },
-  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund&hl=fr&gl=FR&ceid=FR:fr',      tag: 'Obligataire'},
+  { url: 'https://news.google.com/rss/search?q=BCE+décision+taux+marchés+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',       tag: 'BCE / Taux' },
+  { url: 'https://news.google.com/rss/search?q=Fed+taux+décision+bourse+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
+  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse+when:7d&hl=fr&gl=FR&ceid=FR:fr',         tag: 'Inflation'  },
+  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+marchés+actions+analyse+when:7d&hl=fr&gl=FR&ceid=FR:fr',   tag: 'Marchés'    },
+  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'Obligataire'},
+  { url: 'https://news.google.com/rss/search?q=produits+structurés+AMF+ESMA+régulation+commercialisation+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'Régulation'   },
+  { url: 'https://news.google.com/rss/search?q=économie+mondiale+croissance+FMI+international+marchés+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'International' },
 ];
 
 // Flux par sous-jacent — requêtes orientées bourse et résultats
@@ -92,7 +101,7 @@ export const FLUX_PRODUITS: { query: string; tag: string }[] = [
 ];
 
 function rssUrl(query: string): string {
-  return `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=fr&gl=FR&ceid=FR:fr`;
+  return `https://news.google.com/rss/search?q=${encodeURIComponent(query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`;
 }
 
 function parseItems(xml: string, tag?: string, max = 6): Article[] {

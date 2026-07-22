@@ -115,52 +115,112 @@ function renderDashboard(indices, produits, taux) {
   </div>`;
 }
 
+// ── Actualités : catégories éditoriales (couleur d'avatar) ──
+// Une catégorie → une couleur ; la lettre de l'avatar est la 1re lettre du libellé affiché.
+const NEWS_CATS = {
+  'TAUX':          '#b0862f', // or / ocre
+  'INFLATION':     '#a15a3a', // terracotta
+  'MARCHÉS':       '#16304f', // bleu nuit
+  'INTERNATIONAL': '#4d7a4f', // vert
+  'RÉGULATION':    '#3f6cc4', // bleu
+};
+const NEWS_CAT_DEFAUT = '#7a6840';
+
+// Mappe un tag de flux RSS (renvoyé par le back/Worker) vers une catégorie connue,
+// pour partager la palette avec la veille curée.
+const RSS_TAG_CAT = {
+  'BCE / Taux':'TAUX', 'Fed / Taux':'TAUX', 'Obligataire':'TAUX', 'Inflation':'INFLATION',
+  'Marchés':'MARCHÉS', 'CAC 40':'MARCHÉS', 'Régulation':'RÉGULATION', 'International':'INTERNATIONAL',
+  'BNP Paribas':'MARCHÉS', 'Stellantis':'MARCHÉS', 'Capgemini':'MARCHÉS',
+  'Rheinmetall':'MARCHÉS', 'ES Banks':'MARCHÉS',
+};
+
+function newsCatColor(cat) {
+  return NEWS_CATS[String(cat || '').toUpperCase()] || NEWS_CAT_DEFAUT;
+}
+
+// Parse une date FR ("11 juin 2026", "1er juillet 2026") → timestamp, pour le tri. 0 si illisible.
+const NEWS_MOIS_FR = {
+  janvier:0, 'février':1, fevrier:1, mars:2, avril:3, mai:4, juin:5, juillet:6,
+  'août':7, aout:7, septembre:8, octobre:9, novembre:10, 'décembre':11, decembre:11,
+};
+function newsDateTs(s) {
+  if (!s) return 0;
+  const m = String(s).toLowerCase().match(/(\d{1,2})(?:er)?\s+([a-zàâäéèêëîïôöûü]+)\s+(\d{4})/);
+  if (!m) { const d = new Date(s); return isNaN(d) ? 0 : d.getTime(); }
+  const mois = NEWS_MOIS_FR[m[2]];
+  if (mois == null) return 0;
+  return new Date(+m[3], mois, +m[1]).getTime();
+}
+
+// Carte d'actualité unifiée — utilisée par la veille curée ET le fil RSS.
+// opts : { label, color, titre, resume?, date?, meta?, lien? }
+//   date → affichée en haut à droite ; meta → ligne discrète en bas (ex. source RSS).
+function newsCardHtml({ label, color, titre, resume, date, meta, lien }) {
+  const lettre = String(label || '?').trim().charAt(0).toUpperCase();
+  const inner = `
+    <div class="news-avatar" style="background:${color}">${escHtml(lettre)}</div>
+    <div class="news-card-body">
+      <div class="news-card-head">
+        ${label ? `<div class="news-cat" style="color:${color}">${escHtml(label)}<span class="news-cat-dot" style="background:${color}"></span></div>` : '<span></span>'}
+        ${date ? `<div class="news-card-date">${escHtml(date)}</div>` : ''}
+      </div>
+      <div class="news-card-titre">${escHtml(titre || '')}</div>
+      ${resume ? `<div class="news-card-resume">${escHtml(resume)}</div>` : ''}
+      ${meta ? `<div class="news-card-meta">${escHtml(meta)}</div>` : ''}
+    </div>`;
+  return lien
+    ? `<a class="news-card" href="${escHtml(lien)}" target="_blank" rel="noopener">${inner}</a>`
+    : `<div class="news-card">${inner}</div>`;
+}
+
+// Section « À la une » — veille curée (data.js VEILLE). Vide si le tableau est absent/vide.
+function renderCuratedNews() {
+  if (typeof VEILLE === 'undefined' || !Array.isArray(VEILLE) || !VEILLE.length) return '';
+  const cards = [...VEILLE]
+    .sort((a, b) => newsDateTs(b.date) - newsDateTs(a.date))
+    .map(v => newsCardHtml({
+      label: v.categorie,
+      color: newsCatColor(v.categorie),
+      titre: v.titre,
+      resume: v.resume,
+      date: v.date,
+    })).join('');
+  return `
+    <div class="news-group">
+      <div class="news-group-title">À la une</div>
+      <div class="news-cards">${cards}</div>
+    </div>`;
+}
+
 function renderActus() {
   return `
   <div>
     <header class="page-header">
       <div>
         <div class="page-title">Actualités économiques</div>
-        <div class="page-sub">Flux en direct · économie globale & vos produits</div>
+        <div class="page-sub">Sélection du cabinet · fil marché en direct</div>
       </div>
     </header>
     <div class="page-body">
-      <div id="news-section" class="news-loading">
-        <div class="news-spinner">Chargement des actualités…</div>
+      ${renderCuratedNews()}
+      <div class="news-group">
+        <div class="news-group-title">Fil en direct</div>
+        <div id="news-section" class="news-loading">
+          <div class="news-spinner">Chargement des actualités…</div>
+        </div>
       </div>
     </div>
   </div>`;
 }
 
+// Rendu du fil RSS live (injecté dans #news-section par chargerActus).
 function renderNewsSection(news) {
-  const TAG_AUTOCALLS = {
-    'BNP Paribas':  ['Ath. BNP'],
-    'Stellantis':   ['Ath. Stellantis'],
-    'Capgemini':    ['Ath. Capgemini'],
-    'Rheinmetall':  ['Ath. Rheinmetall'],
-    'ES Banks':     ['CAP'],
-    'BCE / Taux':   ['CMS'],
-    'Inflation':    ['CMS'],
-  };
-
   const fmtDate = (rssDate) => {
     if (!rssDate) return '';
     try {
       return new Date(rssDate).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
     } catch { return ''; }
-  };
-
-  const articleHtml = (a) => {
-    const autocalls = TAG_AUTOCALLS[a.tag] || [];
-    return `
-    <a class="news-article" href="${escHtml(a.lien)}" target="_blank" rel="noopener">
-      <div class="news-badges">
-        ${a.tag ? `<span class="news-tag">${escHtml(a.tag)}</span>` : ''}
-        ${autocalls.map(p => `<span class="news-badge-prod">${escHtml(p)}</span>`).join('')}
-      </div>
-      <div class="news-titre">${escHtml(a.titre)}</div>
-      <div class="news-meta">${escHtml(a.source)}${a.date ? ' · ' + fmtDate(a.date) : ''}</div>
-    </a>`;
   };
 
   const tous = [...(news.globales || []), ...(news.produits || [])]
@@ -171,7 +231,19 @@ function renderNewsSection(news) {
     });
 
   if (!tous.length) return '<p class="news-empty">Aucune actualité disponible.</p>';
-  return `<div class="news-articles-grid">${tous.map(articleHtml).join('')}</div>`;
+
+  const cards = tous.map(a => {
+    const cat = RSS_TAG_CAT[a.tag] || 'MARCHÉS';
+    return newsCardHtml({
+      label: a.tag || cat,
+      color: newsCatColor(cat),
+      titre: a.titre,
+      date: fmtDate(a.date),
+      meta: a.source,
+      lien: a.lien,
+    });
+  }).join('');
+  return `<div class="news-cards">${cards}</div>`;
 }
 
 // ── Page Autocall : formatage dates ──

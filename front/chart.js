@@ -89,7 +89,7 @@ const Chart = (() => {
             <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
           </span>
         </div>
-        ${etat.sheet ? '' : `<button class="modal-close" onclick="Chart.fermer()">✕</button>`}
+        <button class="modal-close" onclick="Chart.fermer()">✕</button>${''/* en tiroir bureau, affiché via CSS ; masqué en mobile où la poignée ferme */}
       </div>
       <div class="modal-body chart-body">
         <div class="chart-readout">

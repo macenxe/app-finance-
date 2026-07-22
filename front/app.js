@@ -157,6 +157,15 @@ const App = (() => {
           <span>${item.court}</span>
         </button>`).join('');
     }
+    // Onglets bureau (barre du haut, remplace la sidebar sur desktop)
+    const topNav = document.getElementById('top-nav');
+    if (topNav) {
+      topNav.innerHTML = NAV.map(item => `
+        <div class="top-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${NAV_ICONS[item.key]}</svg>
+          <span>${item.label}</span>
+        </div>`).join('');
+    }
   }
 
   function renderPage(keepScroll = false) {
@@ -188,6 +197,17 @@ const App = (() => {
     backdrop.classList.add('sheet-open');
     const panel = backdrop.querySelector('.sheet-panel');
     if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, fermerSheet);
+    // Bureau : le tiroir latéral n'a pas de poignée de fermeture — on injecte un bouton ✕.
+    // Masqué en mobile via CSS (.sheet-close), où la poignée reste le moyen de fermeture.
+    if (panel && !panel.querySelector('.sheet-close')) {
+      const btn = document.createElement('button');
+      btn.className = 'sheet-close';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Fermer');
+      btn.innerHTML = '✕';
+      btn.addEventListener('click', () => App.fermerDetail());
+      panel.appendChild(btn);
+    }
   }
 
   function fermerSheet() {
@@ -465,6 +485,14 @@ const App = (() => {
     renderPage();
     initPullToRefresh();
     initSwipeTabs();
+    // Échap ferme le tiroir latéral / la modale ouverte (confort bureau).
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const root = document.getElementById('modal-root');
+      if (!root || !root.firstChild) return;
+      if (root.querySelector('.sheet-backdrop')) fermerSheet();
+      else root.innerHTML = '';
+    });
     donnees = await AppAPI.chargerDonnees();
     if (donnees.source !== 'api') {
       // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.

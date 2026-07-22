@@ -263,25 +263,35 @@ const CONTRATS = [
   },
 ];
 
-// ── Veille économique (page Actualités) ──
-// Actualisée à la maj mensuelle. Ton factuel, sans recommandation. Champs : tag/tagBg/tagColor/date/titre/corps.
+// ── À la une — veille éditoriale curée (page Actualités) ──
+// Cartes rédigées à la main, affichées en tête de l'onglet Actus (section « À la une »),
+// AU-DESSUS du fil RSS en direct. À réserver aux sujets qui comptent pour le cabinet :
+// régulation des produits structurés, décisions de taux, macro. À actualiser quand une
+// actualité le mérite (ce n'est pas un rendez-vous mensuel obligé).
+// Champs : categorie / date / titre / resume.
+//   categorie ∈ TAUX · INFLATION · MARCHÉS · INTERNATIONAL · RÉGULATION
+//   → couleur d'avatar + lettre dérivées automatiquement (cf. NEWS_CATS dans pages.js).
+// Pour ajouter une carte, copier une ligne et adapter les 4 champs. Ex. régulation produits structurés :
+//   { categorie:'RÉGULATION', date:'9 juillet 2026',
+//     titre:'Nouvelles règles européennes sur la commercialisation des produits structurés',
+//     resume:'Un renforcement des obligations d\'information est attendu pour les produits à mécanisme de rappel automatique.' },
 const VEILLE = [
-  { tag:'BCE',          tagBg:'#eaf0f6', tagColor:'#16304f', date:'11 juin 2026',
+  { categorie:'TAUX', date:'11 juin 2026',
     titre:'La BCE relève ses taux de 25 pb, première hausse depuis 2023',
-    corps:'Le taux de dépôt passe à 2,25 % (refinancement 2,40 %) à compter du 17 juin, sur fond de projections d\'inflation revues en hausse. Christine Lagarde confirme une approche « réunion par réunion ». Les taux souverains longs se sont tendus dans la foulée (OAT 10 ans 3,74 %, Bund 3,05 %).' },
-  { tag:'Fed',          tagBg:'#eaf0f6', tagColor:'#16304f', date:'17 juin 2026',
+    resume:'Le taux de dépôt passe à 2,25 % (refinancement 2,40 %) à compter du 17 juin, sur fond de projections d\'inflation revues en hausse. Christine Lagarde confirme une approche « réunion par réunion ». Les taux souverains longs se sont tendus dans la foulée (OAT 10 ans 3,74 %, Bund 3,05 %).' },
+  { categorie:'TAUX', date:'17 juin 2026',
     titre:'La Fed maintient ses taux à 3,50-3,75 %, biais désormais restrictif',
-    corps:'Première réunion présidée par Kevin Warsh, successeur de Jerome Powell. Le communiqué, raccourci, abandonne le biais accommodant ; la médiane des projections vise 3,8 % fin 2026, soit au moins une hausse envisagée. Le 10 ans américain remonte à 4,44 %.' },
-  { tag:'Inflation',    tagBg:'#f3eee2', tagColor:'#8a6d2e', date:'1er juillet 2026',
+    resume:'Première réunion présidée par Kevin Warsh, successeur de Jerome Powell. Le communiqué, raccourci, abandonne le biais accommodant ; la médiane des projections vise 3,8 % fin 2026, soit au moins une hausse envisagée. Le 10 ans américain remonte à 4,44 %.' },
+  { categorie:'INFLATION', date:'1er juillet 2026',
     titre:'Inflation zone euro en net recul à 2,8 % en juin',
-    corps:'L\'estimation flash Eurostat ressort à 2,8 % sur un an, contre 3,2 % en mai et sous le consensus. Le sous-jacent reflue à 2,4 %, l\'énergie décélère après le pic de mai. Premier repli mensuel des prix de l\'année (-0,1 %).' },
-  { tag:'Géopolitique', tagBg:'#f0ecec', tagColor:'#8a4a4a', date:'30 juin 2026',
+    resume:'L\'estimation flash Eurostat ressort à 2,8 % sur un an, contre 3,2 % en mai et sous le consensus. Le sous-jacent reflue à 2,4 %, l\'énergie décélère après le pic de mai. Premier repli mensuel des prix de l\'année (-0,1 %).' },
+  { categorie:'INTERNATIONAL', date:'30 juin 2026',
     titre:'Détente au Moyen-Orient : rebond des actions, chute du pétrole',
-    corps:'L\'accord Iran-États-Unis fait refluer le baril et redistribue les secteurs. Le CAC 40 gagne 2,70 % en juin (+7,51 % sur le trimestre, meilleur T2 depuis 2024) ; l\'Euro Stoxx 50 progresse de près de 10 % depuis janvier. Défense et banques surperforment, l\'énergie décroche.' },
-  { tag:'Immobilier',   tagBg:'#e9efe9', tagColor:'#3f6b46', date:'25 juin 2026',
+    resume:'L\'accord Iran-États-Unis fait refluer le baril et redistribue les secteurs. Le CAC 40 gagne 2,70 % en juin (+7,51 % sur le trimestre, meilleur T2 depuis 2024) ; l\'Euro Stoxx 50 progresse de près de 10 % depuis janvier. Défense et banques surperforment, l\'énergie décroche.' },
+  { categorie:'MARCHÉS', date:'25 juin 2026',
     titre:'SCPI : rendement moyen autour de 4,5 %, collecte en reprise',
-    corps:'Le marché des SCPI de rendement se stabilise autour de 4,5 % en moyenne en 2026, avec des écarts marqués entre véhicules. La collecte nette 2025 a atteint 4,6 Md€ (+29 % sur un an), signe d\'un regain d\'intérêt pour la pierre-papier.' },
-  { tag:'Fiscalité',    tagBg:'#efeae0', tagColor:'#7a6a45', date:'20 juin 2026',
+    resume:'Le marché des SCPI de rendement se stabilise autour de 4,5 % en moyenne en 2026, avec des écarts marqués entre véhicules. La collecte nette 2025 a atteint 4,6 Md€ (+29 % sur un an), signe d\'un regain d\'intérêt pour la pierre-papier.' },
+  { categorie:'RÉGULATION', date:'20 juin 2026',
     titre:'Assurance-vie : fonds euros attendus autour de 2,3 à 2,8 % en 2026',
-    corps:'Les projections de marché situent le rendement moyen des fonds en euros entre 2,3 % et 2,8 % nets pour 2026, globalement stable. Loger une SCPI en unités de compte cumule les frais et ramène le rendement net à 3,2-3,5 % avant fiscalité. Aucun changement réglementaire majeur à ce jour.' },
+    resume:'Les projections de marché situent le rendement moyen des fonds en euros entre 2,3 % et 2,8 % nets pour 2026, globalement stable. Loger une SCPI en unités de compte cumule les frais et ramène le rendement net à 3,2-3,5 % avant fiscalité. Aucun changement réglementaire majeur à ce jour.' },
 ];
