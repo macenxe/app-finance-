@@ -851,3 +851,62 @@ function renderContrats(state, ucPerfs) {
     </div>
   </div>`;
 }
+
+// ── Feuilles modales (bottom sheet) : poignée déplaçable au doigt ──
+// Partagé entre les fiches détail Autocall (app.js) et le graphique UC (chart.js), qui utilisent
+// tous les deux le même gabarit .sheet-backdrop/.sheet-panel/.sheet-handle.
+// Tirer vers le bas referme la feuille (ou la ramène en position repliée si elle est dépliée) ;
+// tirer vers le haut la déplie en plein écran. Un simple tap sans déplacement ne fait rien.
+function initSheetDrag(panel, onClose) {
+  const handle = panel && panel.querySelector('.sheet-handle');
+  if (!handle) return;
+  const SEUIL_FERMETURE = 90;
+  const SEUIL_DEPLI = 40;
+  let startY = 0, dragging = false, expanded = false;
+
+  function position(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
+
+  function onMove(e) {
+    if (!dragging) return;
+    let delta = position(e) - startY;
+    if (expanded) delta = Math.max(delta, 0); // depuis l'état déplié, on ne tire que vers le bas
+    else delta = Math.max(delta, -80);
+    if (e.cancelable) e.preventDefault();
+    panel.style.transform = `translateY(${delta}px)`;
+  }
+
+  function onEnd(e) {
+    if (!dragging) return;
+    dragging = false;
+    panel.classList.remove('sheet-dragging');
+    document.removeEventListener('touchmove', onMove);
+    document.removeEventListener('touchend', onEnd);
+    document.removeEventListener('touchcancel', onEnd);
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', onEnd);
+    const delta = (e.changedTouches ? e.changedTouches[0].clientY : e.clientY) - startY;
+    panel.style.transform = '';
+    if (delta > SEUIL_FERMETURE) {
+      if (expanded) { panel.classList.remove('sheet-expanded'); expanded = false; }
+      else if (onClose) onClose();
+    } else if (delta < -SEUIL_DEPLI && !expanded) {
+      panel.classList.add('sheet-expanded');
+      expanded = true;
+    }
+  }
+
+  function onStart(e) {
+    dragging = true;
+    startY = position(e);
+    panel.classList.add('sheet-dragging');
+    if (!e.touches) e.preventDefault(); // souris : évite la sélection de texte pendant le tirage
+    document.addEventListener('touchmove', onMove, { passive: false });
+    document.addEventListener('touchend', onEnd);
+    document.addEventListener('touchcancel', onEnd);
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onEnd);
+  }
+
+  handle.addEventListener('touchstart', onStart, { passive: true });
+  handle.addEventListener('mousedown', onStart);
+}

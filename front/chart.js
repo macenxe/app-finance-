@@ -58,6 +58,8 @@ const Chart = (() => {
       const backdrop = root.querySelector('.sheet-backdrop');
       void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
       backdrop.classList.add('sheet-open');
+      const panel = backdrop.querySelector('.sheet-panel');
+      if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, fermer);
     }
     charger(DEFAUT);
     if (etat.compoIsin) chargerCompo(etat.compoIsin);
@@ -87,7 +89,7 @@ const Chart = (() => {
             <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
           </span>
         </div>
-        <button class="modal-close" onclick="Chart.fermer()">✕</button>
+        ${etat.sheet ? '' : `<button class="modal-close" onclick="Chart.fermer()">✕</button>`}
       </div>
       <div class="modal-body chart-body">
         <div class="chart-readout">

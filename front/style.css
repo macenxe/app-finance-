@@ -195,7 +195,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .ac-legend-swatch--loss   { background: #e3a8a8; }
 .ac-legend-swatch--coupon { background: repeating-linear-gradient(to bottom, #1d6f4c 0, #1d6f4c 3px, transparent 3px, transparent 6px); width: 3px; height: 13px; }
 .ac-legend-swatch--auto   { background: #1d6f4c; width: 3px; height: 13px; border-radius: 1px; }
-.ac-legend-swatch--niveau { background: #2c5f8a; width: 8px; height: 8px; border-radius: 50%; }
+.ac-legend-swatch--niveau { background: radial-gradient(circle, transparent 0 2px, #2c5f8a 2.1px 100%); width: 8px; height: 8px; border-radius: 50%; }
 
 /* ── Page Autocall : liste de cartes ── */
 .ac-list { display: flex; flex-direction: column; gap: 12px; }
@@ -274,7 +274,8 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* Centré exactement sur l'axe de la frise (top doit correspondre au centre vertical de .ac-bar-track).
    Repère en trait fin (plutôt qu'un rond) pour pointer une position précise sur la frise. */
 .ac-bar-niveau { position: absolute; top: 25px; transform: translate(-50%, -50%); z-index: 2; }
-.ac-bar-niveau-dot { display: block; width: 10px; height: 10px; border-radius: 50%; background: #2c5f8a; }
+/* Centre transparent : si le niveau se superpose à une barrière sur la frise, elle reste visible. */
+.ac-bar-niveau-dot { display: block; width: 10px; height: 10px; border-radius: 50%; background: radial-gradient(circle, transparent 0 2.5px, #2c5f8a 2.6px 100%); }
 
 /* ── Indicateurs OK (icônes produits) ── */
 .ind-ok {
@@ -396,10 +397,19 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
   box-shadow: 0 -10px 34px rgba(22,48,79,.22);
   display: flex; flex-direction: column;
   transform: translateY(100%);
-  transition: transform .32s cubic-bezier(.22,.61,.36,1);
+  transition: transform .32s cubic-bezier(.22,.61,.36,1), max-height .28s ease;
 }
 .sheet-backdrop.sheet-open .sheet-panel { transform: translateY(0); }
-.sheet-handle { width: 40px; height: 4px; border-radius: 2px; background: #d9d2c2; margin: 10px auto 2px; flex: none; }
+/* Poignée tirée au doigt : pas de transition pendant le geste (suivi 1:1 du doigt), et pas de
+   sélection de texte parasite si le tirage (souris) passe sur le titre ou le contenu. */
+.sheet-panel.sheet-dragging { transition: none; user-select: none; }
+/* Dépliée en tirant la poignée vers le haut : occupe presque tout l'écran. */
+.sheet-panel.sheet-expanded { max-height: 96vh; }
+.sheet-handle {
+  width: 40px; height: 4px; border-radius: 2px; background: #d9d2c2; margin: 10px auto 2px; flex: none;
+  touch-action: none; cursor: grab;
+}
+.sheet-panel.sheet-dragging .sheet-handle { cursor: grabbing; }
 .sheet-header { padding: 6px 30px 16px; border-bottom: 1px solid #ece7dc; flex: none; }
 .sheet-header .page-title, .sheet-header .page-sub { white-space: normal; }
 .sheet-panel .detail-content { overflow-y: auto; flex: 1; }
@@ -520,7 +530,7 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 
 /* ── Graphique d'évolution ── */
 .chart-panel { width: 700px; }
-.chart-titre-zone { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.chart-titre-zone { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
 .chart-retour {
   background: none; border: 1px solid #d9d2c2; color: #16304f;
   font-size: 14px; line-height: 1; padding: 5px 10px; border-radius: 6px;

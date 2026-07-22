@@ -186,6 +186,8 @@ const App = (() => {
     if (!backdrop) return;
     void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
     backdrop.classList.add('sheet-open');
+    const panel = backdrop.querySelector('.sheet-panel');
+    if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, fermerSheet);
   }
 
   function fermerSheet() {
@@ -381,10 +383,88 @@ const App = (() => {
     });
   }
 
+  // Navigue vers un onglet (utilisé par la nav cliquée comme par le swipe).
+  function allerA(page) {
+    state = { ...state, page, detailIsin: null };
+    sauvegarderEtat();
+    fermerFormulaire();
+    renderPage();
+  }
+
+  // Comme allerA, mais avec un petit glissement + fondu dans le sens du swipe (direction : 1 =
+  // onglet suivant, le contenu sort vers la gauche et le nouveau entre par la droite ; -1 =
+  // l'inverse). Purement cosmétique : l'état et le rendu restent ceux d'allerA.
+  let animationOngletEnCours = false;
+  function allerAAnime(page, direction) {
+    const content = document.getElementById('content');
+    if (!content || animationOngletEnCours) { allerA(page); return; }
+    animationOngletEnCours = true;
+    const decalage = direction > 0 ? 22 : -22;
+    content.style.transition = 'transform .15s ease, opacity .15s ease';
+    content.style.transform = `translateX(${-decalage}px)`;
+    content.style.opacity = '0';
+    setTimeout(() => {
+      allerA(page);
+      content.style.transition = 'none';
+      content.style.transform = `translateX(${decalage}px)`;
+      content.style.opacity = '0';
+      void content.offsetWidth; // force le reflow avant de réactiver la transition
+      content.style.transition = 'transform .2s ease, opacity .2s ease';
+      content.style.transform = 'translateX(0)';
+      content.style.opacity = '1';
+      setTimeout(() => {
+        content.style.transition = '';
+        content.style.transform = '';
+        content.style.opacity = '';
+        animationOngletEnCours = false;
+      }, 210);
+    }, 150);
+  }
+
+  // Swipe gauche/droite sur le contenu = onglet suivant/précédent (Accueil ↔ Autocall ↔ Fonds
+  // ↔ Actus, dans l'ordre de NAV). Ignoré si le geste est plus vertical qu'horizontal (scroll),
+  // ou s'il démarre dans une zone qui défile elle-même horizontalement.
+  function initSwipeTabs() {
+    const content = document.getElementById('content');
+    if (!content) return;
+    const SEUIL_X = 60, RATIO_MIN = 1.4;
+    let startX = 0, startY = 0, tracking = false;
+
+    function scrolleHorizontalement(el) {
+      while (el && el !== content) {
+        if (el.scrollWidth > el.clientWidth + 1 && /(auto|scroll)/.test(getComputedStyle(el).overflowX)) return true;
+        el = el.parentElement;
+      }
+      return false;
+    }
+
+    content.addEventListener('touchstart', e => {
+      if (e.touches.length !== 1 || scrolleHorizontalement(e.target)) { tracking = false; return; }
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+
+    content.addEventListener('touchend', e => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) < SEUIL_X || Math.abs(dx) < Math.abs(dy) * RATIO_MIN) return;
+      const idx = NAV.findIndex(n => n.key === state.page);
+      if (idx === -1) return;
+      const direction = dx < 0 ? 1 : -1;
+      const suivant = idx + direction;
+      if (suivant < 0 || suivant >= NAV.length) return;
+      allerAAnime(NAV[suivant].key, direction);
+    }, { passive: true });
+  }
+
   async function init() {
     restaurerEtat();
     renderPage();
     initPullToRefresh();
+    initSwipeTabs();
     donnees = await AppAPI.chargerDonnees();
     if (donnees.source !== 'api') {
       // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.
@@ -414,12 +494,7 @@ const App = (() => {
   }
 
   return {
-    goto(page) {
-      state = { ...state, page, detailIsin: null };
-      sauvegarderEtat();
-      fermerFormulaire();
-      renderPage();
-    },
+    goto(page) { allerA(page); },
     setFamilleFiltre(tab) {
       state = { ...state, familleFiltre: tab };
       renderPage(true);
