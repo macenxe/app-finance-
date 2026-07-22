@@ -21,6 +21,8 @@ const AppAPI = (() => {
     const fmt2 = (n) => n != null
       ? n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
       : 'NA';
+    // Format court (virgule française, sans zéros inutiles) pour les taux/barrières en %.
+    const fmtPct = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
 
     const pctNum = p.indicateurs?.pctStrike ?? null;
     const pct = pctNum != null
@@ -67,11 +69,11 @@ const AppAPI = (() => {
       isin:        p.isin,
       nom:         p.nom,
       sj:          p.sousJacentLabel,
-      coupon:      p.coupon + ' %',
+      coupon:      p.coupon != null ? fmtPct(p.coupon) + ' %' : '—',
       strike:      p.strike != null ? fmt2(p.strike) : 'NA',
       niveau:      niveauNum != null ? fmt2(niveauNum) : '—',
-      bAuto:       p.barriereAutocall != null ? p.barriereAutocall + ' %' : '—',
-      bCoupon:     p.barriereCoupon   != null ? p.barriereCoupon   + ' %' : 'NA',
+      bAuto:       p.barriereAutocall != null ? fmtPct(p.barriereAutocall) + ' %' : '—',
+      bCoupon:     p.barriereCoupon   != null ? fmtPct(p.barriereCoupon)   + ' %' : 'NA',
       constat:     p.constat,
       ech:         p.echeance,
       emission:    p.emission ?? staticP?.emission ?? null,
@@ -90,6 +92,7 @@ const AppAPI = (() => {
       statut:      statuts[k],
       pct,
       protection:  staticP ? (staticP.protection ?? null) : null,
+      dateValorisation: p.cours?.heureCours ?? null,
     };
   }
 

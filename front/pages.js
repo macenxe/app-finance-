@@ -16,42 +16,8 @@ function barrierCouleur(niveauPct, barrierePct, estBaisse) {
   return 'red';
 }
 
-function abregerMois(nom) {
-  const m = {
-    Janvier:'01', Février:'02', Mars:'03', Avril:'04', Mai:'05', Juin:'06',
-    Juillet:'07', Août:'08', Septembre:'09', Octobre:'10', Novembre:'11', Décembre:'12',
-    Jan:'01', Fév:'02', Mar:'03', Avr:'04', Juil:'07', Aoû:'08', Sep:'09', Oct:'10', Nov:'11', Déc:'12',
-  };
-  return nom
-    .replace(/\bConservateur\s+/g, '')
-    .replace(/\bLC\s+/g, '')
-    .replace(/\bAutocall\s+/g, '')
-    .replace(/\bAthena\s+/g, 'Ath. ')
-    .replace(/\b(Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre|Jan|Fév|Mar|Avr|Juil|Aoû|Sep|Oct|Nov|Déc)\s+(\d{4})\b/g,
-      (_, mois, annee) => `${m[mois]}/${annee.slice(2)}`);
-}
-
-function abregerDate(s) {
-  if (!s) return s;
-  return s.replace('1er j./mois', 'j./mois').replace(/\d{2}(\d{2})$/, '$1');
-}
-
 function renderDashboard(indices, produits, taux) {
   taux = taux || TAUX;
-
-  // Prochaines dates clés : constatations à venir, triées par date croissante
-  const parseConstat = (str) => {
-    const m = str && str.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-    if (!m) return null;
-    return new Date(+m[3], +m[2] - 1, +m[1]);
-  };
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const fmtDateCle = (d) => d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
-  const prochainsDates = produits
-    .map(p => { const d = parseConstat(p.constat); return d && d >= today ? { p, d, jours: Math.ceil((d - today) / 86400000) } : null; })
-    .filter(x => x && x.jours <= 60)
-    .sort((a, b) => a.d - b.d)
-    .slice(0, 12);
 
   const fmtHeure = (iso) => {
     if (!iso) return '';
@@ -145,39 +111,6 @@ function renderDashboard(indices, produits, taux) {
         </div>
       </div>
 
-      <!-- Prochaines dates clés — pleine largeur -->
-      <div class="card p-18">
-        <div class="flex-sb mb-12">
-          <div>
-            <div class="card-title">Prochaines dates clés</div>
-            <div style="font-size:11px;color:#9a8f7a;margin-top:3px;">Produits structurés · 60 prochains jours</div>
-          </div>
-          <span class="voir-lien" onclick="App.goto('prod')">Tout voir →</span>
-        </div>
-        ${prochainsDates.length === 0
-          ? `<div style="font-size:12.5px;color:#9a8f7a;padding:8px 0;">Aucune constatation dans les 60 prochains jours.</div>`
-          : `<div class="dates-cles-table">
-          <div class="dates-cles-header">
-            <span>Date</span><span class="col-right">Dans</span><span>Produit</span><span class="col-right">Statut</span>
-          </div>
-          ${prochainsDates.map(({ p, d, jours }) => {
-            const couponColor = p.bCouponNum != null ? (p.couponAtteint ? 'green' : 'red') : null;
-            const autoColor   = p.zoneAutocall === 'OUI' ? 'green' : 'red';
-            const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
-            const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
-            const statutCell = p.belowProtection
-              ? `<span class="badge red">Risque</span>`
-              : `<div class="statut-pills">${cPill}${rPill}</div>`;
-            return `
-          <div class="dates-cles-row" onclick="App.voirDetail('${p.isin}')">
-            <span class="tnum dates-cles-date">${fmtDateCle(d)}</span>
-            <span class="tnum dates-cles-jours${jours <= 14 ? ' proche' : ''}">${jours}j</span>
-            <span class="dates-cles-nom">${abregerMois(p.nom)}</span>
-            <span class="col-right">${statutCell}</span>
-          </div>`;
-          }).join('')}
-        </div>`}
-      </div>
     </div>
   </div>`;
 }
@@ -241,311 +174,516 @@ function renderNewsSection(news) {
   return `<div class="news-articles-grid">${tous.map(articleHtml).join('')}</div>`;
 }
 
-function renderProduits(produits, state, rappeles) {
-  const q = (state.q || '').trim().toLowerCase();
+// ── Page Autocall : formatage dates ──
+function parseDateFlexible(s) {
+  if (!s) return null;
+  let m;
+  if ((m = s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/))) return new Date(+m[3], +m[2] - 1, +m[1]);
+  if ((m = s.match(/^(\d{4})-(\d{2})-(\d{2})/))) return new Date(+m[1], +m[2] - 1, +m[3]);
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? null : d;
+}
+function formatDateLongue(s) {
+  const d = parseDateFlexible(s);
+  if (!d) return s || '';
+  const MOIS = ['jan.','fév.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  return `${d.getDate()} ${MOIS[d.getMonth()]} ${d.getFullYear()}`;
+}
+// Format court JJ/MM/AA, utilisé partout où les dates doivent tenir sur une ligne compacte.
+function formatDateCourte(s) {
+  const d = parseDateFlexible(s);
+  if (!d) return null;
+  const p = n => String(n).padStart(2, '0');
+  return `${p(d.getDate())}/${p(d.getMonth() + 1)}/${String(d.getFullYear()).slice(2)}`;
+}
+// Délai avant une date : nombre de jours si ≤ 1 mois, sinon nombre de mois arrondi.
+function delaiRestant(s) {
+  const d = parseDateFlexible(s);
+  if (!d) return null;
+  const now = new Date();
+  const j = x => new Date(x.getFullYear(), x.getMonth(), x.getDate());
+  const diffJours = Math.round((j(d) - j(now)) / 86400000);
+  if (diffJours <= 0) return "Aujourd'hui";
+  if (diffJours <= 30) return `${diffJours} j`;
+  const mois = Math.round(diffJours / 30.44);
+  return `${mois} mois`;
+}
+// Format court MM/AAAA (le jour n'a pas de sens dans un titre de produit).
+function formatMoisAnnee(s) {
+  const d = parseDateFlexible(s);
+  if (!d) return null;
+  const p = n => String(n).padStart(2, '0');
+  return `${p(d.getMonth() + 1)}/${d.getFullYear()}`;
+}
+// Condense le suffixe « Mois AAAA » d'un nom de produit en MM/AAAA (à partir de l'échéance),
+// pour que le titre tienne sur une seule ligne quelle que soit sa longueur.
+const MOIS_TITRE_RE = /\s+(janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre)\s+\d{4}\s*$/i;
+function condenserTitreProduit(nom, ech) {
+  if (!nom) return nom;
+  const m = nom.match(MOIS_TITRE_RE);
+  if (!m) return nom;
+  const court = formatMoisAnnee(ech);
+  if (!court) return nom;
+  return `${nom.slice(0, m.index)} ${court}`;
+}
+
+// ── Page Autocall : géométrie de la barre de barrières ──
+// Calcule les positions (% de largeur) de la barrière coupon, de la barrière de rappel,
+// du niveau actuel et de la zone de perte en capital, dans l'unité native du produit
+// (€ pour equity, en niveau du strike ; % pour CMS).
+// Construit la fonction de positionnement (% de largeur) à partir de l'échelle du jeu de valeurs.
+// Pour un produit « à la baisse » (rappel déclenché par une chute du sous-jacent, ex. CMS),
+// on inverse l'axe : la zone de rappel reste visuellement du même côté que pour un produit
+// « à la hausse », au lieu de suivre l'ordre brut des valeurs (ce qui inversait la lecture).
+function creerPositionneur(vals, estBaisse) {
+  const hi = (Math.max(...vals) || 0) * 1.1 || 1;
+  return v => {
+    if (v == null || !isFinite(v)) return null;
+    const p = Math.min(97, Math.max(2, (v / hi) * 100));
+    return estBaisse ? 100 - p : p;
+  };
+}
+function geometrieBarre(r) {
+  const isCms = r.type === 'cms';
+  let couponVal = null, autoVal = null, niveauVal = null, protVal = null, protPct = null;
+  if (isCms) {
+    const parseNum = s => parseFloat(String(s == null ? '' : s).replace(/[^0-9,.-]/g, '').replace(',', '.'));
+    couponVal = r.bCouponNum;
+    autoVal   = r.bAutoNum;
+    niveauVal = parseNum(r.niveau);
+    if (isNaN(niveauVal)) niveauVal = r.niveauNum;
+  } else if (r.type === 'equity' && r.strikeNum) {
+    couponVal = r.bCouponNum != null ? r.strikeNum * r.bCouponNum / 100 : null;
+    autoVal   = r.bAutoNum   != null ? r.strikeNum * r.bAutoNum   / 100 : null;
+    niveauVal = r.niveauNum != null ? r.niveauNum : null;
+    const m = String(r.protection || '').match(/-(\d+)/);
+    if (m) { protPct = parseInt(m[1], 10); protVal = r.strikeNum * (1 - protPct / 100); }
+  }
+  const vals = [couponVal, autoVal, niveauVal, protVal].filter(v => v != null && isFinite(v));
+  if (!vals.length) return null;
+  const estBaisse = !!r.estBaisse;
+  const pos = creerPositionneur(vals, estBaisse);
+  return {
+    isCms, couponVal, autoVal, niveauVal, protVal, protPct, estBaisse,
+    couponPos: pos(couponVal), autoPos: pos(autoVal), niveauPos: pos(niveauVal), protPos: pos(protVal),
+  };
+}
+// Géométrie d'une carte CAP regroupée : mêmes barrières coupon/rappel et même niveau pour
+// tous les paliers de protection, mais une position par palier (40 %, 50 %, 60 %…).
+function geometrieBarreGroupe(r) {
+  if (r.type !== 'equity' || !r.strikeNum) return null;
+  const couponVal = r.bCouponNum != null ? r.strikeNum * r.bCouponNum / 100 : null;
+  const autoVal   = r.bAutoNum   != null ? r.strikeNum * r.bAutoNum   / 100 : null;
+  const niveauVal = r.niveauNum != null ? r.niveauNum : null;
+  const paliers = (r.paliers || []).map(p => ({
+    ...p, val: p.pct != null ? r.strikeNum * (1 - p.pct / 100) : null,
+  }));
+  const vals = [couponVal, autoVal, niveauVal, ...paliers.map(p => p.val)].filter(v => v != null && isFinite(v));
+  if (!vals.length) return null;
+  const estBaisse = !!r.estBaisse;
+  const pos = creerPositionneur(vals, estBaisse);
+  return {
+    isCms: false, couponVal, autoVal, niveauVal, estBaisse,
+    couponPos: pos(couponVal), autoPos: pos(autoVal), niveauPos: pos(niveauVal),
+    paliers: paliers.map(p => ({ ...p, pos: pos(p.val) })),
+  };
+}
+function fmtBarreNiveau(v, isCms) {
+  if (v == null || !isFinite(v)) return '—';
+  return isCms
+    ? v.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %'
+    : v.toLocaleString('fr-FR', { maximumFractionDigits: 0 });
+}
+function fmtBarreBarriere(v, isCms) {
+  if (v == null || !isFinite(v)) return '—';
+  return isCms
+    ? v.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %'
+    : v.toLocaleString('fr-FR', { maximumFractionDigits: 0 }) + ' €';
+}
+// Comme fmtBarreBarriere mais sans unité, pour les repères sur le graphique (plus lisible,
+// l'unité est déjà donnée par le niveau affiché en en-tête de carte).
+function fmtBarreBarriereCourt(v, isCms) {
+  if (v == null || !isFinite(v)) return '—';
+  return isCms
+    ? v.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : v.toLocaleString('fr-FR', { maximumFractionDigits: 0 });
+}
+// Zone du niveau actuel : risque (sous la protection), zone rappel (barrière franchie),
+// zone coupon (barrière coupon franchie sans déclencher le rappel), ou neutre (entre les deux).
+function zoneNiveau(r) {
+  if (r.belowProtection) return { cle: 'risque', label: 'Risque' };
+  if (r.zoneAutocall === 'OUI') return { cle: 'rappel', label: 'Zone rappel' };
+  if (r.couponAtteint) return { cle: 'coupon', label: 'Zone coupon' };
+  return { cle: 'neutre', label: 'Neutre' };
+}
+// Famille d'un produit autocall, déduite de son nom (CMS via le type, sinon Athena/CAP).
+function familleProduit(r) {
+  if (r.type === 'cms') return 'cms';
+  const nom = r.nom || '';
+  if (/^CAP\b/i.test(nom)) return 'cap';
+  if (/Athena/i.test(nom)) return 'athena';
+  return 'autre';
+}
+// Regroupe les CAP d'une même échéance (même sous-jacent, mêmes barrières, seul le palier de
+// protection change) en une seule carte listant les différents paliers.
+function grouperCapMemeDate(rows) {
+  const groupes = new Map();
+  const resultat = [];
+  for (const r of rows) {
+    if (r.rappele || familleProduit(r) !== 'cap') { resultat.push(r); continue; }
+    const clef = [r.sj, r.ech, r.strikeNum, r.bAuto, r.bCoupon, r.constat].join('|');
+    let groupe = groupes.get(clef);
+    if (!groupe) {
+      groupe = { ...r, isGroupeCap: true, paliers: [] };
+      groupes.set(clef, groupe);
+      resultat.push(groupe);
+    }
+    const m = String(r.protection || '').match(/-(\d+)/);
+    groupe.paliers.push({ pct: m ? parseInt(m[1], 10) : null, coupon: r.coupon, isin: r.isin });
+  }
+  resultat.forEach(r => { if (r.isGroupeCap) r.paliers.sort((a, b) => (a.pct ?? 0) - (b.pct ?? 0)); });
+  return resultat;
+}
+function reserveLabelAutocall(r) {
   const fmtRes = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
-  const rapNote = (rappeles && rappeles.length > 0)
-    ? ` · ${rappeles.length} rappelé${rappeles.length > 1 ? 's' : ''} (retiré${rappeles.length > 1 ? 's' : ''} de la liste)`
+  if (!r.couponsReserve || r.couponsReserve <= 0) return 'Aucun coupon en réserve';
+  const couponNum = parseFloat(String(r.coupon).replace(',', '.'));
+  const n = couponNum > 0 ? Math.round(r.couponsReserve / couponNum) : null;
+  const nLabel = n ? `${n} coupon${n > 1 ? 's' : ''} en réserve` : 'Coupons en réserve';
+  return `${nLabel} (+${fmtRes(r.couponsReserve)} %)`;
+}
+function fmtCouponAnnuel(coupon) {
+  const n = parseFloat(String(coupon).replace(',', '.'));
+  if (isNaN(n)) return coupon;
+  return '+' + n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %/an';
+}
+
+function cardAutocallHtml(r) {
+  if (r.isGroupeCap) return cardAutocallGroupeHtml(r);
+
+  const isCms = r.type === 'cms';
+  const geo = !r.rappele ? geometrieBarre(r) : null;
+  const zone = zoneNiveau(r);
+
+  const barSection = geo ? `
+      <div class="ac-bar-row">
+        <div class="ac-bar">
+          <div class="ac-bar-track"></div>
+          <div class="ac-bar-arrow"></div>
+          ${geo.protPos != null ? (geo.estBaisse
+              ? `<div class="ac-bar-loss" style="left:${geo.protPos}%; right:0;"></div>`
+              : `<div class="ac-bar-loss" style="left:0; width:${geo.protPos}%"></div>`) : ''}
+          ${geo.protPos != null ? `<div class="ac-bar-mark ac-bar-mark--protection" style="left:${geo.protPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.protVal, isCms)}</span></div>` : ''}
+          ${geo.couponPos != null ? `<div class="ac-bar-mark ac-bar-mark--coupon" style="left:${geo.couponPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.couponVal, isCms)}</span></div>` : ''}
+          ${geo.autoPos != null ? `<div class="ac-bar-mark ac-bar-mark--auto" style="left:${geo.autoPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.autoVal, isCms)}</span></div>` : ''}
+          ${geo.niveauPos != null ? `<div class="ac-bar-niveau" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-dot"></span></div>` : ''}
+        </div>
+      </div>`
     : '';
-  const catActive = state.cat || null;
-  let rows = produits;
-  if (catActive) rows = rows.filter(r => categorieProduit(r) === catActive);
-  if (q) rows = rows.filter(r => (r.nom + ' ' + r.isin + ' ' + r.sj).toLowerCase().includes(q));
-  const parseConstat = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? new Date(+m[3], +m[2]-1, +m[1]) : new Date(0); };
-  rows = [...rows].sort((a, b) => parseConstat(a.constat) - parseConstat(b.constat));
+
+  const protectionLabel = geo && geo.protPct != null ? `${geo.protPct} %` : (geo && isCms ? 'Capital garanti' : null);
+  const protectionInfo = protectionLabel ? `
+      <span class="ac-card-protection">
+        <svg class="ac-shield-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        ${protectionLabel}
+      </span>` : '';
+
+  const infoBlock = r.rappele ? `
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${r.aVerserAuRappel != null ? '+' + r.aVerserAuRappel.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
+      <div class="ac-info-row ac-info-row--constat">
+        <span class="ac-info-label">Rappelé le :</span>
+        <span class="ac-info-val">${escHtml(formatDateCourte(r.dateRappel) || formatDateLongue(r.dateRappel))}</span>
+      </div>
+      <div class="ac-info-statut"><span class="ac-statut-pill grey">Rappelé</span></div>`
+    : `
+      <div class="ac-info-row ac-info-row--constat">
+        <span class="ac-info-label">Proch. constat :</span>
+        <span class="ac-info-val">${escHtml(formatDateCourte(r.constat) || formatDateLongue(r.constat))}</span>
+      </div>`;
+
+  const niveauEnTete = geo && geo.niveauVal != null ? `
+      <div class="ac-card-niveau">
+        <span class="ac-card-niveau-label ac-card-niveau-label--${zone.cle}">${zone.label}</span>
+        <span class="ac-card-niveau-val ac-card-niveau-val--${zone.cle}">${fmtBarreBarriere(geo.niveauVal, isCms)}</span>
+      </div>` : '';
+
+  const titreCourt = condenserTitreProduit(r.nom, r.ech);
+
+  return `
+  <div class="ac-card${r.rappele ? ' ac-card--rappele' : ''}"${r.rappele ? '' : ` onclick="App.voirDetail('${r.isin}')"`}>
+    <div class="ac-card-left">
+      <div class="ac-card-top">
+        <div class="ac-card-titre">
+          <div class="ac-card-nom">${escHtml(titreCourt)}</div>
+          <div class="ac-card-sj"><span class="ac-card-sj-nom">${escHtml(r.sjLabel || r.sj || '')}</span>${protectionInfo}</div>
+        </div>
+        ${niveauEnTete}
+      </div>
+      ${barSection}
+    </div>
+    <div class="ac-info">${infoBlock}</div>
+  </div>`;
+}
+
+// Carte CAP regroupée : une ligne par échéance, avec un repère de protection par palier
+// (40 %, 50 %, 60 %…) plutôt qu'une carte séparée pour chaque palier.
+function cardAutocallGroupeHtml(r) {
+  const geo = geometrieBarreGroupe(r);
+  const zone = zoneNiveau(r);
+
+  // Les paliers sont proches les uns des autres : celui du milieu (ex. -50 %) passe au-dessus
+  // de la frise pour ne pas chevaucher les libellés des paliers voisins.
+  const paliersPos = (geo ? geo.paliers : []).filter(p => p.pos != null).sort((a, b) => a.pos - b.pos);
+  // Le palier le moins protégé (pct le plus faible, ex. -40 %) est le premier à être franchi :
+  // la zone de perte démarre donc à son niveau.
+  const paliersAsc = geo ? [...geo.paliers].sort((a, b) => (a.pct ?? 0) - (b.pct ?? 0)) : [];
+  const paliersMoinsProtege = paliersAsc.length ? paliersAsc[0] : null;
+
+  const barSection = geo ? `
+      <div class="ac-bar-row">
+        <div class="ac-bar">
+          <div class="ac-bar-track"></div>
+          <div class="ac-bar-arrow"></div>
+          ${paliersMoinsProtege && paliersMoinsProtege.pos != null ? (geo.estBaisse
+              ? `<div class="ac-bar-loss" style="left:${paliersMoinsProtege.pos}%; right:0;"></div>`
+              : `<div class="ac-bar-loss" style="left:0; width:${paliersMoinsProtege.pos}%"></div>`) : ''}
+          ${paliersPos.map((p, i) => `<div class="ac-bar-mark ac-bar-mark--protection${i % 2 === 1 ? ' ac-bar-mark--haut' : ''}" style="left:${p.pos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(p.val, false)}</span></div>`).join('')}
+          ${geo.couponPos != null ? `<div class="ac-bar-mark ac-bar-mark--coupon" style="left:${geo.couponPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.couponVal, false)}</span></div>` : ''}
+          ${geo.autoPos != null ? `<div class="ac-bar-mark ac-bar-mark--auto" style="left:${geo.autoPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.autoVal, false)}</span></div>` : ''}
+          ${geo.niveauPos != null ? `<div class="ac-bar-niveau" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-dot"></span></div>` : ''}
+        </div>
+      </div>`
+    : '';
+
+  const infoBlock = `
+      <div class="ac-info-row ac-info-row--constat">
+        <span class="ac-info-label">Proch. constat :</span>
+        <span class="ac-info-val">${escHtml(formatDateCourte(r.constat) || formatDateLongue(r.constat))}</span>
+      </div>`;
+
+  const niveauEnTete = geo && geo.niveauVal != null ? `
+      <div class="ac-card-niveau">
+        <span class="ac-card-niveau-label ac-card-niveau-label--${zone.cle}">${zone.label}</span>
+        <span class="ac-card-niveau-val ac-card-niveau-val--${zone.cle}">${fmtBarreBarriere(geo.niveauVal, false)}</span>
+      </div>` : '';
+
+  const titreGroupe = `CAP ${formatMoisAnnee(r.ech) || ''}`.trim();
+  const isinsGroupe = r.paliers.map(p => p.isin).filter(Boolean).join(',');
+
+  const paliersPct = r.paliers.map(p => p.pct).filter(n => n != null).sort((a, b) => a - b);
+  const protectionLabel = paliersPct.length
+    ? (paliersPct[0] === paliersPct[paliersPct.length - 1] ? `${paliersPct[0]} %` : `${paliersPct[0]} à ${paliersPct[paliersPct.length - 1]} %`)
+    : null;
+  const protectionInfo = protectionLabel ? `
+      <span class="ac-card-protection">
+        <svg class="ac-shield-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        ${protectionLabel}
+      </span>` : '';
+
+  return `
+  <div class="ac-card"${isinsGroupe ? ` onclick="App.voirDetailGroupe('${isinsGroupe}')"` : ''}>
+    <div class="ac-card-left">
+      <div class="ac-card-top">
+        <div class="ac-card-titre">
+          <div class="ac-card-nom">${escHtml(titreGroupe)}</div>
+          <div class="ac-card-sj"><span class="ac-card-sj-nom">${escHtml(r.sjLabel || r.sj || '')}</span>${protectionInfo}</div>
+        </div>
+        ${niveauEnTete}
+      </div>
+      ${barSection}
+    </div>
+    <div class="ac-info">${infoBlock}</div>
+  </div>`;
+}
+
+function renderProduits(produits, state, rappeles) {
+  rappeles = rappeles || [];
+  const famille = state.familleFiltre || 'tous';
+
+  let rows = [...produits, ...rappeles.map(r => ({ ...r, rappele: true }))];
+  if (famille !== 'tous') rows = rows.filter(r => familleProduit(r) === famille);
+  rows = grouperCapMemeDate(rows);
+
+  // Rappelés en fin de liste (plus de prochaine constatation) ; les autres du plus proche au plus lointain.
+  const dateTri = r => {
+    if (r.rappele) return Infinity;
+    const d = parseDateFlexible(r.constat);
+    return d ? d.getTime() : Infinity;
+  };
+  rows = [...rows].sort((a, b) => dateTri(a) - dateTri(b));
 
   return `
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">Autocalls · Produits structurés</div>
-        <div class="page-sub">${produits.length} produits suivis${rapNote}</div>
+        <div class="page-title">Autocall</div>
+        <div class="page-sub">Produits à mécanisme de rappel automatique</div>
       </div>
     </header>
 
-    <div style="padding:18px 30px 40px;">
-      <div class="uc-chips prod-chips prod-chips-cats prod-chips-cats-big">
-        ${grouperCategories(produits).map(c => `
-        <button class="uc-chip uc-chip-big${catActive===c.cat?' active':''}" onclick="App.setCat('${c.cat}')">${c.cat}</button>`).join('')}
-      </div>
-
-
-<div class="products-table-wrap">
-        <div class="products-table">
-          <div class="products-table-header">
-            <span>Nom commercial</span>
-            <span>Constat. ↑</span>
-            <span class="col-landscape col-right">Strike</span>
-            <span class="col-center col-pct">Niveau</span>
-            <span class="col-center">Coupon</span>
-            <span class="col-center">B. Coupon</span>
-            <span class="col-center">B. Auto</span>
-            <span class="col-landscape">Statut</span>
-          </div>
-          ${(() => {
-            const MOIS_FR_TAB = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
-            const moisClef = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? `${m[2]}-${m[3]}` : null; };
-            const moisLabel = s => { const m = s && s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); return m ? `${MOIS_FR_TAB[parseInt(m[2])-1]} ${m[3]}` : null; };
-            let dernierMois = null;
-            return grouperLignes(rows).map(g => {
-            const r = g.type === 'group' ? g.ref : g.r;
-            const clef = moisClef(r.constat);
-            const labelFallback = r.constat && !clef ? 'Constatation mensuelle' : null;
-            const sep = clef && clef !== dernierMois
-              ? (() => { dernierMois = clef; return `<div class="month-sep"><span>${moisLabel(r.constat)}</span></div>`; })()
-              : (!clef && labelFallback && dernierMois !== '__mensuel__')
-                ? (() => { dernierMois = '__mensuel__'; return `<div class="month-sep month-sep--info"><span>${labelFallback}</span></div>`; })()
-                : '';
-            const niveauPct = (r.type === 'equity' && r.strikeNum && r.niveauNum)
-              ? (r.niveauNum / r.strikeNum * 100) : null;
-            let pctStr, pctCouleur, couponColor, autoColor;
-            if (niveauPct != null) {
-              if (r.bCouponNum != null) couponColor = (r.estBaisse ? niveauPct <= r.bCouponNum : niveauPct >= r.bCouponNum) ? 'green' : 'red';
-              if (r.bAutoNum   != null) autoColor   = (r.estBaisse ? niveauPct <= r.bAutoNum   : niveauPct >= r.bAutoNum)   ? 'green' : 'red';
-            } else if (r.type === 'cms') {
-              const niv = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
-              if (isFinite(niv)) {
-                if (r.bCouponNum != null) couponColor = niv <= r.bCouponNum ? 'green' : 'red';
-                if (r.bAutoNum   != null) autoColor   = niv <= r.bAutoNum   ? 'green' : 'red';
-              }
-            }
-            if (autoColor === 'green') pctCouleur = 'green';
-            else if (couponColor === 'green') pctCouleur = 'orange';
-            else if (autoColor === 'red' || couponColor === 'red') pctCouleur = 'red';
-            // CMS : règle dédiée pour la pastille de niveau — vert si le taux <= barrière de
-            // coupon (strike), orange jusqu'à +0,15 pt au-dessus, rouge au-delà.
-            if (r.type === 'cms' && r.bCouponNum != null) {
-              const nivCms = parseFloat(String(r.niveau).replace(/[^0-9,.-]/g, '').replace(',', '.'));
-              if (isFinite(nivCms)) {
-                const dd = nivCms - r.bCouponNum;
-                pctCouleur = dd <= 0 ? 'green' : dd <= 0.15 ? 'orange' : 'red';
-              }
-            }
-            const barrCell = (val, color, isBaisse = false) => {
-              if (!val || val === '—' || val === 'NA') return '<span style="color:#b5ab95">—</span>';
-              const c = color || r.k;
-              const displayVal = isBaisse ? `-${val}` : val;
-              return `<span class="barrier-badge ${c} barr-portrait">${color === 'green' ? 'OUI' : 'NON'}</span>`
-                   + `<span class="barrier-badge ${c} barr-landscape">${displayVal}</span>`;
-            };
-            const niveauBadge = pctCouleur
-              ? `<span class="barrier-badge ${pctCouleur}">${r.niveau || '—'}</span>`
-              : `<span style="color:#b5ab95">${r.niveau || '—'}</span>`;
-
-            // Vérification barrière de protection (ex : '-70 %' → seuil = strike × 30%)
-            let belowProtection = r.belowProtection ?? false;
-            if (!r.belowProtection && r.type === 'equity' && r.strikeNum && r.niveauNum && r.protection) {
-              const m = String(r.protection).match(/-(\d+)/);
-              if (m) belowProtection = r.niveauNum < r.strikeNum * (1 - parseInt(m[1]) / 100);
-            }
-            const cPill = r.bCouponNum != null
-              ? `<span class="statut-pill ${couponColor || 'grey'}">Coupon</span>` : '';
-            const rPill = `<span class="statut-pill ${autoColor || (r.zoneAutocall === 'OUI' ? 'green' : 'red')}">Rappel</span>`;
-            const statutCell = belowProtection
-              ? `<span class="badge red">Risque</span>`
-              : `<div class="statut-pills">${cPill}${rPill}</div>`;
-
-            if (g.type === 'group') {
-              const groupName = abregerMois(r.nom).replace(/\s+\d{2}\s+/, ' ');
-              const cpnVals = g.membres.map(m => parseFloat(String(m.coupon).replace(',', '.'))).filter(v => !isNaN(v));
-              const cpnMin = Math.min(...cpnVals), cpnMax = Math.max(...cpnVals);
-              const cpnRange = cpnVals.length > 1 && cpnMin !== cpnMax ? `${cpnMin}–${cpnMax} %` : r.coupon;
-              const resVals = g.membres.map(m => m.couponsReserve || 0).filter(v => v > 0);
-              let resGroupHtml = '';
-              if (resVals.length > 0) {
-                const rmin = Math.min(...resVals), rmax = Math.max(...resVals);
-                const lbl = rmin === rmax ? `+${fmtRes(rmin)} % réserve` : `+${fmtRes(rmin)}-${fmtRes(rmax)} % réserve`;
-                resGroupHtml = `<span class="coupon-reserve">${lbl}</span>`;
-              }
-              const nplusGroup = r.nPlusX ? `<span class="badge-nplus">${r.nPlusX}</span>` : '';
-              return sep + `
-          <div class="products-table-row">
-            <span class="col-nom" onclick="App.voirDetailGroupe('${g.membres.map(m=>m.isin).join(',')}')">
-              <span class="col-nom-text">${groupName}</span>
-            </span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}${nplusGroup}</span>
-            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-center col-pct tnum">${niveauBadge}</span>
-            <span class="tnum col-center col-coupon">${cpnRange}${resGroupHtml}</span>
-            <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
-            <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
-            <span class="col-landscape">${statutCell}</span>
-          </div>`;
-            }
-            const resHtml = r.couponsReserve > 0 ? `<span class="coupon-reserve">+${fmtRes(r.couponsReserve)} % réserve</span>` : '';
-            const nplusHtml = r.nPlusX ? `<span class="badge-nplus">${r.nPlusX}</span>` : '';
-            return sep + `
-          <div class="products-table-row">
-            <span class="col-nom" onclick="App.voirDetail('${r.isin}')">
-              <span class="col-nom-text">${abregerMois(r.nom)}</span>
-            </span>
-            <span class="tnum col-dim" style="font-size:11.5px;">${abregerDate(r.constat)}${nplusHtml}</span>
-            <span class="col-landscape tnum col-right" style="font-size:11.5px;">${r.strike || '—'}</span>
-            <span class="col-center col-pct tnum">${niveauBadge}</span>
-            <span class="tnum col-center col-coupon">${r.coupon}${resHtml}</span>
-            <span class="col-center">${barrCell(r.bCoupon, couponColor)}</span>
-            <span class="col-center">${barrCell(r.bAuto, autoColor, r.type === 'equity' && r.estBaisse)}</span>
-            <span class="col-landscape">${statutCell}</span>
-          </div>`;
-          }).join(''); })()}
+    <div class="page-body">
+      <div class="ac-toolbar">
+        <div class="filter-chips ac-tabs">
+          <button class="filter-chip${famille === 'tous' ? ' active' : ''}" onclick="App.setFamilleFiltre('tous')">Tous</button>
+          <button class="filter-chip${famille === 'athena' ? ' active' : ''}" onclick="App.setFamilleFiltre('athena')">Athena</button>
+          <button class="filter-chip${famille === 'cap' ? ' active' : ''}" onclick="App.setFamilleFiltre('cap')">CAP</button>
+          <button class="filter-chip${famille === 'cms' ? ' active' : ''}" onclick="App.setFamilleFiltre('cms')">CMS</button>
         </div>
       </div>
+
+      <div class="ac-legend">
+        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--loss"></span><span class="ac-legend-full">Zone de perte en capital</span><span class="ac-legend-court">Perte en capital</span></span>
+        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--coupon"></span><span class="ac-legend-full">Barrière coupon</span><span class="ac-legend-court">Coupon</span></span>
+        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--auto"></span><span class="ac-legend-full">Barrière rappel</span><span class="ac-legend-court">Rappel</span></span>
+        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--niveau"></span>Niveau actuel</span>
+      </div>
+
+      <div class="uc-sort-banner">↓ Trié par date de constatation</div>
+
+      <div class="ac-list">
+        ${rows.length ? rows.map(cardAutocallHtml).join('') : `<div class="ac-empty">Aucun produit ne correspond à cette recherche.</div>`}
+      </div>
+
       <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
 
+// Grille de synthèse (coupon / protection / barrières) affichée en tête des fiches détail,
+// avant le graphique, pour donner l'essentiel d'un coup d'œil.
+function detailInfoGrid(boxes) {
+  return `<div class="detail-info-grid">${boxes.map(b => `
+    <div class="detail-info-box">
+      <div class="detail-info-label">${b.label}</div>
+      <div class="detail-info-val${b.cls ? ' ' + b.cls : ''}">${b.value}</div>
+    </div>`).join('')}</div>`;
+}
+
+// Barrière au format « % · Montant » (equity) ou juste « % » (CMS, déjà exprimé en taux).
+function detailBarriereTxt(strikeNum, pct, num, isCms) {
+  if (pct == null || pct === 'NA') return '—';
+  if (isCms || strikeNum == null || num == null) return escHtml(String(pct));
+  const montant = strikeNum * num / 100;
+  return `${escHtml(String(pct))} · ${montant.toLocaleString('fr-FR', { maximumFractionDigits: 0 })} €`;
+}
+
 function renderDetail(produit) {
   const typLabel = produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
-  const fmtC = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  const isCms = produit.type === 'cms';
+
+  // Coupon en mémoire : périodes où la barrière coupon n'a pas été franchie, dont le gain
+  // reste en réserve jusqu'à la prochaine constatation qui la franchit (ou le rappel/échéance).
+  const couponRate = parseFloat(String(produit.coupon).replace(',', '.'));
+  const reserveNum = produit.couponsReserve ?? 0;
+  const nbCoupons = couponRate > 0 ? Math.round(reserveNum / couponRate) : 0;
+  const couponMemoireVal = nbCoupons > 0
+    ? `${nbCoupons} coupon${nbCoupons > 1 ? 's' : ''} · +${reserveNum.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} %`
+    : '—';
+
+  const infoBoxes = [
+    { label: 'Coupon annuel', value: escHtml(produit.coupon) + ' / an', cls: 'green' },
+    { label: 'Protection', value: escHtml(String(produit.protection ?? '—')) },
+    { label: 'Barrière coupon', value: detailBarriereTxt(produit.strikeNum, produit.bCoupon, produit.bCouponNum, isCms) },
+    { label: 'Barrière rappel', value: detailBarriereTxt(produit.strikeNum, produit.bAuto, produit.bAutoNum, isCms) },
+  ];
 
   return `
-  <div>
-    <header class="page-header">
-      <div style="display:flex;align-items:center;gap:16px;">
-        <button class="btn-back" onclick="App.fermerDetail()">← Retour</button>
-        <div>
-          <div class="page-title">${escHtml(produit.nom)}</div>
-          <div class="page-sub">${escHtml(produit.isin)} · ${typLabel}</div>
-        </div>
+  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
+    <div class="sheet-panel">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="page-title">${escHtml(produit.nom)}</div>
+        <div class="page-sub">${escHtml(produit.isin)} · ${typLabel}</div>
       </div>
-    </header>
 
     <div class="detail-content">
+      ${detailInfoGrid(infoBoxes)}
+
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
-      <div class="detail-status-row">
-        ${(() => {
-          const couponColor = produit.bCouponNum != null ? (produit.couponAtteint ? 'green' : 'red') : null;
-          const autoColor = produit.zoneAutocall === 'OUI' ? 'green' : 'red';
-          const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
-          const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
-          return produit.belowProtection
-            ? `<span class="badge red badge-lg">Risque</span>`
-            : `<div class="statut-pills">${cPill}${rPill}</div>`;
-        })()}
-      </div>
-
-      <div class="detail-grid">
-        <div class="card p-18">
-          <div class="card-title mb-12">Identification</div>
-          <div class="detail-rows">
-            <div class="detail-row"><span class="detail-key">Code ISIN</span><span class="detail-val tnum">${escHtml(produit.isin)}</span></div>
-            <div class="detail-row"><span class="detail-key">Nom commercial</span><span class="detail-val">${escHtml(produit.nom)}</span></div>
-            <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(produit.sj)}</span></div>
-            <div class="detail-row"><span class="detail-key">Type de produit</span><span class="detail-val">${typLabel}</span></div>
-            <div class="detail-row"><span class="detail-key">Coupon annuel</span><span class="detail-val tnum">${escHtml(produit.coupon)}</span></div>
+      <div class="card p-18">
+        <div class="card-title mb-12">Description</div>
+        <div class="detail-rows">
+          <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(produit.sj)}</span></div>
+          ${produit.type === 'equity' ? `
+          <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(produit.strike)}</span></div>
+          <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>
+          <div class="detail-row">
+            <span class="detail-key">% du strike</span>
+            <span class="detail-val tnum" style="font-weight:600;color:${produit.k==='red'?'#9a3535':produit.k==='orange'?'#b06a1a':'#1d6f4c'};">${escHtml(produit.pct)}</span>
+          </div>` : `
+          <div class="detail-row"><span class="detail-key">Taux CMS 10 ans</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>`}
+          <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(produit.bCoupon)}</span></div>
+          <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(produit.bAuto)}</span></div>
+          <div class="detail-row">
+            <span class="detail-key">Coupon en mémoire</span>
+            <span class="detail-val tnum"${nbCoupons > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireVal}</span>
           </div>
+          <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(produit.constat)}</span></div>
+          <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(produit.ech)}</span></div>
         </div>
-
-        <div class="card p-18">
-          <div class="card-title mb-12">Niveaux de marché</div>
-          <div class="detail-rows">
-            ${produit.type === 'equity' ? `
-            <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(produit.strike)}</span></div>
-            <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>
-            <div class="detail-row">
-              <span class="detail-key">% du strike</span>
-              <span class="detail-val tnum" style="font-weight:600;color:${produit.k==='red'?'#9a3535':produit.k==='orange'?'#b06a1a':'#1d6f4c'};">${escHtml(produit.pct)}</span>
-            </div>` : `
-            <div class="detail-row"><span class="detail-key">Taux CMS 10 ans</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>`}
-            <div class="detail-row"><span class="detail-key">Barrière autocall</span><span class="detail-val tnum">${escHtml(produit.bAuto)}</span></div>
-            <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(produit.bCoupon)}</span></div>
-            <div class="detail-row">
-              <span class="detail-key">Zone autocall</span>
-              <span class="detail-val">${produit.zoneAutocall === 'OUI' ? '<span style="color:#1d6f4c;font-weight:600;">OUI ✓</span>' : 'NON'}</span>
-            </div>
-            ${produit.protection != null ? `
-            <div class="detail-row">
-              <span class="detail-key">Protection capital</span>
-              <span class="detail-val tnum" style="font-weight:600;color:#1d6f4c;white-space:nowrap;">${escHtml(String(produit.protection))}</span>
-            </div>` : ''}
-          </div>
-        </div>
-
-        <div class="card p-18">
-          <div class="card-title mb-12">Coupons</div>
-          <div class="detail-rows">
-            <div class="detail-row"><span class="detail-key">Période en cours</span><span class="detail-val tnum">${escHtml(produit.nPlusX ?? 'N+1')}</span></div>
-            <div class="detail-row"><span class="detail-key">Coupons versés</span><span class="detail-val tnum">${fmtC(produit.couponsVerses ?? 0)} %</span></div>
-            <div class="detail-row"><span class="detail-key">Coupons en réserve</span><span class="detail-val tnum"${(produit.couponsReserve ?? 0) > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${fmtC(produit.couponsReserve ?? 0)} %</span></div>
-          </div>
-          <div class="detail-note" style="margin-top:10px;">${produit.bCouponNum != null
-            ? 'Effet mémoire : les coupons en réserve sont versés à la première constatation où la barrière de coupon est franchie.'
-            : 'Coupons capitalisés : versés en une fois au rappel ou à l\'échéance.'}</div>
-          ${produit.evaluationIncomplete ? `<div class="detail-note" style="margin-top:6px;color:#9a3535;">Historique de cours incomplet : réserve indicative.</div>` : ''}
-        </div>
-
-        <div class="card p-18">
-          <div class="card-title mb-12">Dates clés</div>
-          <div class="detail-rows">
-            <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(produit.constat)}</span></div>
-            <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(produit.ech)}</span></div>
-          </div>
-        </div>
+        ${produit.evaluationIncomplete ? `<div class="detail-note" style="margin-top:10px;color:#9a3535;">Historique de cours incomplet : réserve indicative.</div>` : ''}
       </div>
 
       <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
+    </div>
     </div>
   </div>`;
 }
 
 function renderDetailGroupe(membres) {
   const ref = membres[0];
-  const fmtC = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
   const groupNom = ref.nom.replace(/\bCAP\s+\d+\s+/, 'CAP ');
   const niveauPct = (ref.strikeNum && ref.niveauNum)
     ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
     : '—';
   const pctColor = ref.k === 'red' ? '#9a3535' : ref.k === 'orange' ? '#b06a1a' : '#1d6f4c';
 
+  // Même ordre pour tous les champs par palier (protection croissante en valeur absolue,
+  // ex. -40/-50/-60) : coupon et gain en mémoire suivent, même si le coupon y est décroissant.
+  const membresParProtection = [...membres].sort((a, b) => {
+    const pa = Math.abs(parseInt(String(a.protection || '').match(/-?\d+/)?.[0], 10) || 0);
+    const pb = Math.abs(parseInt(String(b.protection || '').match(/-?\d+/)?.[0], 10) || 0);
+    return pa - pb;
+  });
+  const protVals = membresParProtection.map(m => String(m.protection || '').match(/-?\d+/)?.[0]).filter(Boolean);
+  const protectionTxt = protVals.length ? protVals.join('/') + ' %' : '—';
+  const couponsNum = membresParProtection.map(m => parseFloat(String(m.coupon).replace(',', '.'))).filter(n => !isNaN(n));
+  const couponTxt = couponsNum.length ? couponsNum.map(n => n.toLocaleString('fr-FR')).join('-') + ' % / an' : '—';
+
+  // Coupon en mémoire : même historique de franchissement pour tous les paliers (barrière
+  // coupon commune), donc même nombre de coupons en réserve — seul le gain % diffère (taux propre à chaque palier).
+  const refRate = parseFloat(String(ref.coupon).replace(',', '.'));
+  const nbCouponsGroupe = refRate > 0 ? Math.round((ref.couponsReserve ?? 0) / refRate) : 0;
+  const gainsMembres = membresParProtection.map(m => (m.couponsReserve ?? 0).toLocaleString('fr-FR', { maximumFractionDigits: 2 }));
+  const couponMemoireTxt = nbCouponsGroupe > 0
+    ? `${nbCouponsGroupe} coupon${nbCouponsGroupe > 1 ? 's' : ''} · +${gainsMembres.join('-')} %`
+    : '—';
+
+  const infoBoxes = [
+    { label: 'Coupon annuel', value: couponTxt, cls: 'green' },
+    { label: 'Protection', value: protectionTxt },
+    { label: 'Barrière coupon', value: detailBarriereTxt(ref.strikeNum, ref.bCoupon, ref.bCouponNum, false) },
+    { label: 'Barrière rappel', value: detailBarriereTxt(ref.strikeNum, ref.bAuto, ref.bAutoNum, false) },
+  ];
+
   return `
-  <div>
-    <header class="page-header">
-      <div style="display:flex;align-items:center;gap:16px;">
-        <button class="btn-back" onclick="App.fermerDetail()">← Retour</button>
-        <div>
-          <div class="page-title">${escHtml(groupNom)}</div>
-          <div class="page-sub">${escHtml(ref.sj)} · Constat. ${escHtml(ref.constat)} · Échéance ${escHtml(ref.ech)}</div>
-        </div>
+  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
+    <div class="sheet-panel">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="page-title">${escHtml(groupNom)}</div>
+        <div class="page-sub">${escHtml(ref.sj)} · Constat. ${escHtml(ref.constat)} · Échéance ${escHtml(ref.ech)}</div>
       </div>
-    </header>
 
     <div class="detail-content">
-      <div id="detail-chart-inline" class="detail-chart-inline"></div>
+      ${detailInfoGrid(infoBoxes)}
 
-      <div class="detail-groupe-section">
-        <div class="detail-groupe-titre">Niveaux de protection disponibles</div>
-        <div class="detail-groupe-table">
-          <div class="detail-groupe-header">
-            <span>Protection</span>
-            <span class="col-center">Coupon</span>
-            <span class="col-center">Réserve</span>
-            <span class="col-center">Statut</span>
-          </div>
-          ${membres.map(m => {
-            const couponColor = m.bCouponNum != null ? (m.couponAtteint ? 'green' : 'red') : null;
-            const autoColor   = m.zoneAutocall === 'OUI' ? 'green' : 'red';
-            const cPill = couponColor != null ? `<span class="statut-pill ${couponColor}">Coupon</span>` : '';
-            const rPill = `<span class="statut-pill ${autoColor}">Rappel</span>`;
-            const statut = m.belowProtection
-              ? `<span class="badge red">Risque</span>`
-              : `<div class="statut-pills">${cPill}${rPill}</div>`;
-            const prot = m.protection || '—';
-            return `
-          <div class="detail-groupe-row">
-            <span class="detail-groupe-prot tnum">${escHtml(String(prot))}</span>
-            <span class="col-center tnum">${escHtml(String(m.coupon))}</span>
-            <span class="col-center tnum">${m.couponsReserve > 0 ? '+' + fmtC(m.couponsReserve) + ' %' : '—'}</span>
-            <span class="col-center">${statut}</span>
-          </div>`;
-          }).join('')}
-        </div>
-      </div>
+      <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
       <div style="margin-top:16px;">
         <div class="card p-18">
-          <div class="card-title mb-12">Données communes</div>
+          <div class="card-title mb-12">Description</div>
           <div class="detail-rows">
             <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(ref.sj)}</span></div>
             <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(String(ref.strike))}</span></div>
@@ -554,7 +692,12 @@ function renderDetailGroupe(membres) {
               <span class="detail-key">% du strike</span>
               <span class="detail-val tnum" style="font-weight:600;color:${pctColor};">${niveauPct}</span>
             </div>
-            <div class="detail-row"><span class="detail-key">Barrière autocall</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
+            <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(String(ref.bCoupon))}</span></div>
+            <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
+            <div class="detail-row">
+              <span class="detail-key">Coupon en mémoire</span>
+              <span class="detail-val tnum"${nbCouponsGroupe > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireTxt}</span>
+            </div>
             <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(ref.constat)}</span></div>
             <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(ref.ech)}</span></div>
           </div>
@@ -563,84 +706,13 @@ function renderDetailGroupe(membres) {
 
       <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
     </div>
+    </div>
   </div>`;
 }
 
 function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-
-// ── Catégories de produits (CAP, Autocall CMS, Athena…) ──
-function categorieProduit(p) {
-  const n = p.nom || '';
-  if (/^CAP\b/i.test(n))       return 'CAP';
-  if (/Autocall CMS/i.test(n)) return 'CMS';
-  if (/Athena/i.test(n))       return 'Athena';
-  if (/Autocall/i.test(n))     return 'CAC';
-  return 'Autres';
-}
-
-// Regroupe les lignes CAP qui partagent la même date de constatation et d'échéance.
-function grouperLignes(rows) {
-  const groupes = [];
-  const used = new Set();
-  rows.forEach((r, i) => {
-    if (used.has(i)) return;
-    used.add(i);
-    if (categorieProduit(r) !== 'CAP') { groupes.push({ type: 'single', r }); return; }
-    const membres = [r];
-    rows.forEach((r2, j) => {
-      if (j <= i || used.has(j)) return;
-      if (categorieProduit(r2) === 'CAP' && r2.constat === r.constat && r2.ech === r.ech) {
-        membres.push(r2); used.add(j);
-      }
-    });
-    groupes.push(membres.length > 1
-      ? { type: 'group', membres, ref: membres[0] }
-      : { type: 'single', r: membres[0] });
-  });
-  return groupes;
-}
-
-// Regroupe les produits par catégorie (ordre d'apparition conservé).
-function grouperCategories(produits) {
-  const map = new Map();
-  produits.forEach(p => {
-    const c = categorieProduit(p);
-    if (!map.has(c)) map.set(c, []);
-    map.get(c).push(p);
-  });
-  return [...map.entries()].map(([cat, membres]) => ({
-    cat, membres, n: membres.length,
-    sjLabels: [...new Set(membres.map(m => m.sjLabel || m.sj))].join(', '),
-  }));
-}
-
-// Modale : liste des membres d'une catégorie. Clic sur un membre → graphique.
-function renderModalCategorie(cat, membres) {
-  return `
-  <div class="modal-overlay" onclick="if(event.target===this)App.fermerModal()">
-    <div class="modal-panel modal-panel--sm">
-      <div class="modal-header">
-        <span class="modal-title">${escHtml(cat)}</span>
-        <button class="modal-close" onclick="App.fermerModal()">✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="cat-membres">
-          ${membres.map(m => `
-          <div class="cat-membre" onclick="App.ouvrirGraphiqueProduit('${m.isin}')">
-            <div class="cat-membre-info">
-              <div class="cat-membre-nom">${escHtml(m.nom)}</div>
-              <div class="cat-membre-sj">${escHtml(m.sjLabel || m.sj)}${m.strike && m.strike !== 'NA' ? ' · strike ' + escHtml(String(m.strike)) : ''}</div>
-            </div>
-            <span class="cat-membre-go">graphique →</span>
-          </div>`).join('')}
-        </div>
-      </div>
-    </div>
-  </div>`;
-}
-
 
 // ── Page F€ & UC ──
 function renderContrats(state, ucPerfs) {
@@ -655,6 +727,7 @@ function renderContrats(state, ucPerfs) {
   const perf   = typeof FONDS_EUROS_PERF !== 'undefined' ? FONDS_EUROS_PERF : null;
   const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
   const ucCat  = (state && state.ucCat) || null;
+  const feOuvert = !!(state && state.feOuvert);
 
   // Regroupement des catégories UC en 4 groupes d'affichage
   const CAT_MAP = {
@@ -693,30 +766,40 @@ function renderContrats(state, ucPerfs) {
     <div class="page-body">
 
       ${perf ? `
-      <!-- ── Fonds en euros ── -->
-      <div class="flex-sb mb-12">
-        <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
+      <!-- ── Fonds en euros (dépliable, peu consulté au quotidien) ── -->
+      <div class="fe-toggle mb-12" onclick="App.toggleFondsEuros()" role="button" tabindex="0" aria-expanded="${feOuvert}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.toggleFondsEuros();}">
+        <div class="fe-toggle-main">
+          <span class="fe-toggle-icon${feOuvert ? ' open' : ''}">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+          </span>
+          <span class="section-label">Fonds en euros · Taux ${perf.annee}</span>
+        </div>
+        <span class="fe-toggle-hint">${feOuvert ? 'Masquer' : 'Afficher le détail'}</span>
       </div>
-      <div class="card p-18 mb-24">
-        <div class="fe-contrats mb-16">
-          Applicable aux contrats : <strong>${perf.contrats.join(' · ')}</strong>
-        </div>
-
-        <div class="fe-perf-table mb-16">
-          <div class="fe-perf-head">
-            <div class="fe-col-uc">% investi en UC</div>
-            <div class="fe-col-rate">&lt; 150 000 €</div>
-            <div class="fe-col-rate">≥ 150 000 €</div>
+      <div class="fe-collapse${feOuvert ? ' open' : ''}">
+        <div class="fe-collapse-inner">
+        <div class="card p-18 mb-24">
+          <div class="fe-contrats mb-16">
+            Applicable aux contrats : <strong>${perf.contrats.join(' · ')}</strong>
           </div>
-          ${perf.tranches.map((t, i) => `
-          <div class="fe-perf-row${i % 2 === 1 ? ' alt' : ''}">
-            <div class="fe-col-uc">${t.label}</div>
-            <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.inf150}</div>
-            <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.sup150}</div>
-          </div>`).join('')}
-        </div>
 
-        <div style="font-size:11px;color:#b5ab95;margin-top:4px;">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</div>
+          <div class="fe-perf-table mb-16">
+            <div class="fe-perf-head">
+              <div class="fe-col-uc">% investi en UC</div>
+              <div class="fe-col-rate">&lt; 150 000 €</div>
+              <div class="fe-col-rate">≥ 150 000 €</div>
+            </div>
+            ${perf.tranches.map((t, i) => `
+            <div class="fe-perf-row${i % 2 === 1 ? ' alt' : ''}">
+              <div class="fe-col-uc">${t.label}</div>
+              <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.inf150}</div>
+              <div class="fe-col-rate tnum fe-rate${i === 0 ? ' best' : ''}">${t.sup150}</div>
+            </div>`).join('')}
+          </div>
+
+          <div style="font-size:11px;color:#b5ab95;margin-top:4px;">Nets de frais de gestion · avant prélèvements sociaux et fiscaux</div>
+        </div>
+        </div>
       </div>` : ''}
 
       <!-- ── Unités de compte ── -->
@@ -734,7 +817,7 @@ function renderContrats(state, ucPerfs) {
       </div>
 
       <div class="uc-sort-banner${hasPerfs ? '' : ' loading'}">
-        ${hasPerfs ? '↓ Trié par performance 1 an glissant' : '⟳ Chargement des performances…'}
+        ${hasPerfs ? '↓ Trié par performance depuis le 01/01' : '⟳ Chargement des performances…'}
       </div>
 
       <div class="uc-liste">
@@ -749,10 +832,8 @@ function renderContrats(state, ucPerfs) {
         <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <div class="uc-item-id">
-              <div class="uc-item-nom">
-                ${u.nom}<span class="uc-filtre-badge">${filterLabel}</span>
-              </div>
-              <div class="uc-item-isin tnum">${u.isin}</div>
+              <div class="uc-item-nom">${u.nom}</div>
+              <div class="uc-item-isin tnum">${u.isin}<span class="uc-filtre-badge">${filterLabel}</span></div>
             </div>
             <div class="uc-item-right">
               ${perfBadge(u.isin, ucPerfs)}

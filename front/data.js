@@ -179,6 +179,7 @@ function enrichirProduits(produits) {
       ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
       bAutoNum:   isNaN(bAutoRaw)   ? null : bAutoRaw,
       bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,
+      dateValorisation: p.dateValorisation ?? null,
     };
   });
 }

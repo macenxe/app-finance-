@@ -1,5 +1,5 @@
 const App = (() => {
-  let state   = { page: 'dash', cat: null, q: '', detailIsin: null };
+  let state   = { page: 'dash', familleFiltre: 'tous', detailIsin: null };
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
@@ -75,8 +75,9 @@ const App = (() => {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
         // Restaure la page courante au rafraîchissement (les fiches détail reviennent à la liste).
-        page: (state.page === 'detail' || state.page === 'detail-groupe') ? 'prod' : state.page,
+        page: state.page,
         ucCat: state.ucCat || null,
+        feOuvert: !!state.feOuvert,
         indices: donnees.indices,
         taux: donnees.taux,
         produits: donnees.produits,
@@ -96,7 +97,7 @@ const App = (() => {
       const raw = localStorage.getItem(CACHE_KEY);
       if (raw) {
         const c = JSON.parse(raw);
-        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null };
+        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, feOuvert: !!c.feOuvert };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
         donnees.rappeles = c.rappeles || [];
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
@@ -115,7 +116,7 @@ const App = (() => {
     await Promise.allSettled(
       UC_CATALOGUE.filter(u => u.graphId).map(async u => {
         try {
-          const url = AppAPI.historyUrl(u.graphId, '1a');
+          const url = AppAPI.historyUrl(u.graphId, 'ytd');
           const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
           if (!r.ok) return;
           const pts = (await r.json()).points || [];
@@ -129,19 +130,33 @@ const App = (() => {
     if (state.page === 'contrats') renderPage(true);
   }
 
+  const NAV_ICONS = {
+    dash:     '<rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/>',
+    prod:     '<polyline points="3,17 9,11 13,15 21,6"/><polyline points="15,6 21,6 21,12"/>',
+    contrats: '<polygon points="12,4 20,9 12,14 4,9"/><polyline points="4,14 12,19 20,14"/>',
+    actus:    '<rect x="5" y="3" width="14" height="18" rx="1.5"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>',
+  };
   const NAV = [
-    { key: 'dash',     label: 'Tableau de bord'        },
-    { key: 'prod',     label: 'Autocalls'               },
-    { key: 'contrats', label: 'Fonds € et UC'           },
-    { key: 'actus',    label: 'Actualités économiques'  },
+    { key: 'dash',     label: 'Tableau de bord',       court: 'Accueil'  },
+    { key: 'prod',     label: 'Autocalls',              court: 'Autocall' },
+    { key: 'contrats', label: 'Fonds € et UC',          court: 'Fonds'    },
+    { key: 'actus',    label: 'Actualités économiques', court: 'Actus'    },
   ];
 
   function renderNav() {
-    const activeKey = (state.page === 'detail' || state.page === 'detail-groupe') ? 'prod' : state.page;
+    const activeKey = state.page;
     document.getElementById('nav').innerHTML = NAV.map(item => `
       <div class="nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
         <span class="nav-dot"></span>${item.label}
       </div>`).join('');
+    const bottomNav = document.getElementById('bottom-nav');
+    if (bottomNav) {
+      bottomNav.innerHTML = NAV.map(item => `
+        <button class="bottom-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${NAV_ICONS[item.key]}</svg>
+          <span>${item.court}</span>
+        </button>`).join('');
+    }
   }
 
   function renderPage(keepScroll = false) {
@@ -156,48 +171,29 @@ const App = (() => {
         el.innerHTML = renderContrats(state, ucPerfsCache);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
         break;
-      case 'detail': {
-        const p = produits.find(p => p.isin === state.detailIsin);
-        el.innerHTML = p ? renderDetail(p) : renderProduits(produits, state);
-        if (p && window.Chart) {
-          const lignes = lignesPour(p);
-          Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
-            lignes, sous: p.sjLabel || p.sj,
-          });
-        }
-        break;
-      }
-      case 'detail-groupe': {
-        const membres = (state.detailIsins || []).map(isin => produits.find(p => p.isin === isin)).filter(Boolean);
-        el.innerHTML = membres.length > 0 ? renderDetailGroupe(membres) : renderProduits(produits, state);
-        if (membres.length > 0 && window.Chart) {
-          const ref = membres[0];
-          const lignes = [];
-          if (ref.type === 'equity' && ref.strikeNum) {
-            lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
-            if (ref.bAutoNum != null) {
-              const v = (ref.bAutoNum / 100) * ref.strikeNum;
-              if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-            }
-            const protCouleurs = ['#e8a030', '#b06a1a', '#7a3010'];
-            membres.forEach((m, i) => {
-              if (m.protection) {
-                const pm = String(m.protection).match(/-(\d+)/);
-                if (pm) lignes.push({ valeur: m.strikeNum * (1 - parseInt(pm[1], 10) / 100), label: 'Prot. ' + pm[1] + ' %', couleur: protCouleurs[i] || '#b06a1a' });
-              }
-            });
-          }
-          Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
-            lignes, sous: ref.sjLabel || ref.sj,
-          });
-        }
-        break;
-      }
     }
     el.scrollTop = saved;
     renderNav();
-    mettreAJourMarche();
     if (state.page === 'dash') { majCartesMarche(); }
+  }
+
+  // Fiches détail Autocall : présentées en feuille modale (bottom sheet) plutôt qu'en page,
+  // pour rester dans le contexte de la liste (fermeture par clic en dehors de la feuille).
+  function ouvrirSheet(html) {
+    const root = document.getElementById('modal-root');
+    root.innerHTML = html;
+    const backdrop = root.querySelector('.sheet-backdrop');
+    if (!backdrop) return;
+    void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
+    backdrop.classList.add('sheet-open');
+  }
+
+  function fermerSheet() {
+    const root = document.getElementById('modal-root');
+    const backdrop = root.querySelector('.sheet-backdrop');
+    if (!backdrop) { root.innerHTML = ''; return; }
+    backdrop.classList.remove('sheet-open');
+    setTimeout(() => { root.innerHTML = ''; }, 300);
   }
 
   async function chargerActus() {
@@ -303,83 +299,6 @@ const App = (() => {
     } catch (_) { /* on garde la valeur saisie */ } finally { majCMSEnCours = false; }
   }
 
-  const METEO_COORDS = { lat: 49.8942, lon: 2.2957, ville: 'Amiens' };
-  const METEO_CODES = {
-    0: ['☀️', 'Ciel dégagé'], 1: ['🌤️', 'Peu nuageux'], 2: ['⛅', 'Partiellement nuageux'], 3: ['☁️', 'Couvert'],
-    45: ['🌫️', 'Brouillard'], 48: ['🌫️', 'Brouillard givrant'],
-    51: ['🌦️', 'Bruine légère'], 53: ['🌦️', 'Bruine'], 55: ['🌦️', 'Bruine forte'],
-    61: ['🌧️', 'Pluie légère'], 63: ['🌧️', 'Pluie'], 65: ['🌧️', 'Pluie forte'],
-    71: ['🌨️', 'Neige légère'], 73: ['🌨️', 'Neige'], 75: ['🌨️', 'Neige forte'],
-    80: ['🌦️', 'Averses'], 81: ['🌦️', 'Averses'], 82: ['⛈️', 'Averses violentes'],
-    95: ['⛈️', 'Orage'], 96: ['⛈️', 'Orage de grêle'], 99: ['⛈️', 'Orage de grêle'],
-  };
-
-  function mettreAJourHorloge() {
-    const heureEl = document.getElementById('infos-heure');
-    const dateEl = document.getElementById('infos-date');
-    if (!heureEl || !dateEl) return;
-    const now = new Date();
-    heureEl.textContent = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-    const jourMois = now.toLocaleDateString('fr-FR', { weekday: 'short', day: '2-digit', month: 'short' });
-    const cle = String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
-    const fete = (typeof FETES_JOUR !== 'undefined') ? FETES_JOUR[cle] : null;
-    dateEl.textContent = jourMois + (fete ? ' · ' + fete : '');
-  }
-
-  // Marché : ouverture Euronext Paris 9h-17h30, lun-ven, heure locale (jours fériés non exclus).
-  function mettreAJourMarche() {
-    const dot = document.getElementById('infos-marche-dot');
-    const statutEl = document.getElementById('infos-marche-statut');
-    const autocallEl = document.getElementById('infos-marche-autocall');
-    if (!dot || !statutEl) return;
-    const parisStr = new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' });
-    const paris = new Date(parisStr);
-    const jour = paris.getDay();
-    const minutes = paris.getHours() * 60 + paris.getMinutes();
-    const ouvert = jour >= 1 && jour <= 5 && minutes >= 9 * 60 && minutes < 17 * 60 + 30;
-    dot.className = 'infos-dot ' + (ouvert ? 'ouvert' : 'ferme');
-    statutEl.textContent = 'Marché ' + (ouvert ? 'ouvert' : 'fermé');
-    const nbAutocall = (donnees.produits || []).filter(p => p.zoneAutocall === 'OUI').length;
-    autocallEl.textContent = nbAutocall + (nbAutocall > 1 ? ' produits' : ' produit') + ' en zone d\'autocall';
-  }
-
-  function appliquerMeteo(data) {
-    const iconEl = document.getElementById('infos-meteo-icon');
-    const tempEl = document.getElementById('infos-meteo-temp');
-    const descEl = document.getElementById('infos-meteo-desc');
-    if (!iconEl) return;
-    iconEl.textContent = data.icone;
-    tempEl.textContent = data.temp + ' °C · ' + METEO_COORDS.ville;
-    descEl.textContent = data.desc;
-  }
-
-  let meteoChargee = false;
-  async function chargerMeteo() {
-    const tempEl = document.getElementById('infos-meteo-temp');
-    const descEl = document.getElementById('infos-meteo-desc');
-    if (!tempEl || meteoChargee) return;
-    meteoChargee = true;
-    const CACHE_KEY = 'meteo-cache-v2';
-    try {
-      const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
-      if (cached && Date.now() - cached.ts < 30 * 60 * 1000) appliquerMeteo(cached.data);
-    } catch {}
-    try {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${METEO_COORDS.lat}&longitude=${METEO_COORDS.lon}&current_weather=true`;
-      const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
-      const j = await r.json();
-      const cw = j.current_weather;
-      const [icone, desc] = METEO_CODES[cw.weathercode] || ['—', ''];
-      const data = { icone, desc, temp: Math.round(cw.temperature) };
-      appliquerMeteo(data);
-      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ data, ts: Date.now() })); } catch {}
-    } catch {
-      if (descEl && descEl.textContent === 'Météo…') descEl.textContent = 'Météo indisponible';
-    } finally {
-      meteoChargee = false;
-    }
-  }
-
   function fermerFormulaire() {
     const root = document.getElementById('modal-root');
     if (root) root.innerHTML = '';
@@ -466,10 +385,6 @@ const App = (() => {
     restaurerEtat();
     renderPage();
     initPullToRefresh();
-    mettreAJourHorloge();
-    setInterval(mettreAJourHorloge, 30000);
-    chargerMeteo();
-    setInterval(chargerMeteo, 30 * 60000);
     donnees = await AppAPI.chargerDonnees();
     if (donnees.source !== 'api') {
       // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.
@@ -499,27 +414,14 @@ const App = (() => {
   }
 
   return {
-    toggleSidebar() {
-      const sidebar  = document.getElementById('sidebar');
-      const backdrop = document.getElementById('sidebar-backdrop');
-      const isOpen   = sidebar.classList.toggle('open');
-      if (backdrop) backdrop.classList.toggle('open', isOpen);
-      const ham = document.querySelector('.btn-hamburger');
-      if (ham) ham.textContent = isOpen ? '✕' : '☰';
-    },
     goto(page) {
-      state = { ...state, page, q: '', detailIsin: null };
+      state = { ...state, page, detailIsin: null };
       sauvegarderEtat();
       fermerFormulaire();
-      // Ferme la sidebar sur mobile après navigation
-      document.getElementById('sidebar')?.classList.remove('open');
-      document.getElementById('sidebar-backdrop')?.classList.remove('open');
-      const ham = document.querySelector('.btn-hamburger');
-      if (ham) ham.textContent = '☰';
       renderPage();
     },
-    setCat(cat) {
-      state = { ...state, cat: state.cat === cat ? null : cat };
+    setFamilleFiltre(tab) {
+      state = { ...state, familleFiltre: tab };
       renderPage(true);
     },
     setUcCat(cat) {
@@ -527,25 +429,56 @@ const App = (() => {
       sauvegarderEtat();
       renderPage(true);
     },
-    prodSearch(q) {
-      state = { ...state, q };
-      const el = document.getElementById('content');
-      el.innerHTML = renderProduits(donnees.produits, state);
-      const input = document.getElementById('prod-search');
-      if (input) { input.focus(); input.setSelectionRange(q.length, q.length); }
-      renderNav();
+    toggleFondsEuros() {
+      state = { ...state, feOuvert: !state.feOuvert };
+      sauvegarderEtat();
+      renderPage(true);
     },
     voirDetail(isin) {
-      state = { ...state, page: 'detail', detailIsin: isin };
-      renderPage();
+      const p = donnees.produits.find(x => x.isin === isin);
+      if (!p) return;
+      state = { ...state, detailIsin: isin, detailIsins: null };
+      ouvrirSheet(renderDetail(p));
+      if (window.Chart) {
+        Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
+          lignes: lignesPour(p), sous: p.sjLabel || p.sj,
+        });
+      }
     },
     voirDetailGroupe(isinsStr) {
-      state = { ...state, page: 'detail-groupe', detailIsins: isinsStr.split(','), detailIsin: null };
-      renderPage();
+      const isins = isinsStr.split(',');
+      const membres = isins.map(isin => donnees.produits.find(p => p.isin === isin)).filter(Boolean);
+      if (membres.length === 0) return;
+      state = { ...state, detailIsins: isins, detailIsin: null };
+      ouvrirSheet(renderDetailGroupe(membres));
+      if (window.Chart) {
+        const ref = membres[0];
+        const lignes = [];
+        if (ref.type === 'equity' && ref.strikeNum) {
+          lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
+          if (ref.bAutoNum != null) {
+            const v = (ref.bAutoNum / 100) * ref.strikeNum;
+            if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+          }
+          // Synthèse : une seule ligne, celle du palier le moins protecteur (risque de perte le
+          // plus proche). Le détail des 3 paliers est déjà donné dans la case « Protection » au-dessus.
+          const pires = membres.reduce((min, m) => {
+            const pm = String(m.protection || '').match(/-(\d+)/);
+            const val = pm ? parseInt(pm[1], 10) : null;
+            return val != null && (min == null || val < min) ? val : min;
+          }, null);
+          if (pires != null) {
+            lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
+          }
+        }
+        Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
+          lignes, sous: ref.sjLabel || ref.sj,
+        });
+      }
     },
     fermerDetail() {
-      state = { ...state, page: 'prod', detailIsin: null };
-      renderPage();
+      fermerSheet();
+      state = { ...state, detailIsin: null, detailIsins: null };
     },
     fermerFormulaire,
     ouvrirGraphique(id, label, sous) {
@@ -554,26 +487,11 @@ const App = (() => {
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
-      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin });
-    },
-    ouvrirCategorie(cat) {
-      const membres = donnees.produits.filter(p => categorieProduit(p) === cat);
-      const root = document.getElementById('modal-root');
-      if (root) root.innerHTML = renderModalCategorie(cat, membres);
+      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin, sheet: true });
     },
     fermerModal() {
       const root = document.getElementById('modal-root');
       if (root) root.innerHTML = '';
-    },
-    ouvrirGraphiqueProduit(isin) {
-      if (!window.Chart) return;
-      const p = donnees.produits.find(x => x.isin === isin);
-      if (!p) return;
-      const lignes = lignesPour(p);
-      const cat = categorieProduit(p);
-      Chart.ouvrir(chartTickerPour(p), p.nom, {
-        lignes, sous: p.sjLabel || p.sj, retour: () => App.ouvrirCategorie(cat),
-      });
     },
     init,
   };

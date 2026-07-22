@@ -16,6 +16,9 @@ const Chart = (() => {
     { key: '5a',  label: '5 ans'   },
     { key: '10a', label: '10 ans'  },
   ];
+  // Version compacte (Jour / Semaine / 3 ans retirés) : tient sur une seule ligne. Utilisée
+  // pour les fiches détail Autocall et Fonds, où la lisibilité prime sur le choix fin de période.
+  const PERIODES_COMPACT = PERIODES.filter(p => !['1j', '1s', '3a'].includes(p.key));
   const DEFAUT = '6m';
 
   // Géométrie du tracé (unités viewBox).
@@ -36,62 +39,82 @@ const Chart = (() => {
       : { day: '2-digit', month: 'short', year: 'numeric' });
   }
 
-  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN' }
+  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN', sheet:bool }
   function ouvrir(ticker, label, opts) {
     opts = opts || {};
     // Séries sans intraday (FRED, inflation, swap CMS, fonds Yahoo 0P…F) : pas d'heure ni
     // « Jour » (un fonds n'a qu'une VL par jour → Yahoo renvoie 404 en 1j).
     const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker) || /^0P\w+\.F$/i.test(ticker);
-    const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
+    const periodes = opts.sheet ? PERIODES_COMPACT : (dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES);
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: opts.retour || null, sous: opts.sous || '',
-      compoIsin: opts.compoIsin || null, dateOnly, periodes,
+      compoIsin: opts.compoIsin || null, sheet: !!opts.sheet, dateOnly, periodes,
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
     root.innerHTML = gabarit();
+    if (etat.sheet) {
+      const backdrop = root.querySelector('.sheet-backdrop');
+      void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
+      backdrop.classList.add('sheet-open');
+    }
     charger(DEFAUT);
     if (etat.compoIsin) chargerCompo(etat.compoIsin);
   }
 
   function fermer() {
     const root = document.getElementById('modal-root');
-    if (root) root.innerHTML = '';
+    if (!root) return;
+    if (etat.sheet) {
+      const backdrop = root.querySelector('.sheet-backdrop');
+      if (!backdrop) { root.innerHTML = ''; return; }
+      backdrop.classList.remove('sheet-open');
+      setTimeout(() => { root.innerHTML = ''; }, 300);
+    } else {
+      root.innerHTML = '';
+    }
   }
 
   function gabarit() {
     const esc = (s) => (window.escHtml ? escHtml(s) : s);
     const titre = esc(etat.label);
-    return `
+    const corps = `
+        <div class="chart-titre-zone">
+          ${etat.retour ? `<button class="chart-retour" onclick="Chart.retour()" aria-label="Retour">←</button>` : ''}
+          <span style="min-width:0;">
+            <span class="modal-title">${titre}</span>
+            <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
+          </span>
+        </div>
+        <button class="modal-close" onclick="Chart.fermer()">✕</button>
+      </div>
+      <div class="modal-body chart-body">
+        <div class="chart-readout">
+          <div class="chart-prix tnum" id="chart-prix">—</div>
+          <div class="chart-meta">
+            <span class="chart-var tnum" id="chart-var"></span>
+            <span class="chart-date" id="chart-date"></span>
+          </div>
+        </div>
+        <div class="chart-zone" id="chart-zone">
+          <div class="chart-loading">Chargement…</div>
+        </div>
+        <div class="chart-periodes">
+          ${etat.periodes.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
+        </div>
+        <div class="chart-compo" id="chart-compo"></div>
+      </div>`;
+    return etat.sheet ? `
+    <div class="sheet-backdrop" onclick="if(event.target===this)Chart.fermer()">
+      <div class="sheet-panel chart-panel">
+        <div class="sheet-handle"></div>
+        <div class="modal-header">${corps}
+      </div>
+    </div>` : `
     <div class="modal-overlay" onclick="if(event.target===this)Chart.fermer()">
       <div class="modal-panel chart-panel">
-        <div class="modal-header">
-          <span class="chart-titre-zone">
-            ${etat.retour ? `<button class="chart-retour" onclick="Chart.retour()" aria-label="Retour">←</button>` : ''}
-            <span style="min-width:0;">
-              <span class="modal-title">${titre}</span>
-              <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
-            </span>
-          </span>
-          <button class="modal-close" onclick="Chart.fermer()">✕</button>
-        </div>
-        <div class="modal-body chart-body">
-          <div class="chart-readout">
-            <div class="chart-prix tnum" id="chart-prix">—</div>
-            <div class="chart-meta">
-              <span class="chart-var tnum" id="chart-var"></span>
-              <span class="chart-date" id="chart-date"></span>
-            </div>
-          </div>
-          <div class="chart-zone" id="chart-zone">
-            <div class="chart-loading">Chargement…</div>
-          </div>
-          <div class="chart-periodes">
-            ${etat.periodes.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
-          </div>
-          <div class="chart-compo" id="chart-compo"></div>
-        </div>
+        <div class="modal-header">${corps}
       </div>
     </div>`;
   }
@@ -309,7 +332,8 @@ const Chart = (() => {
     // Séries sans intraday (FRED, inflation, swap CMS, fonds Yahoo 0P…F) : pas d'heure ni
     // « Jour » (un fonds n'a qu'une VL par jour → Yahoo renvoie 404 en 1j).
     const dateOnly = /^(fred:|hicp:|scrape:)/.test(ticker) || /^0P\w+\.F$/i.test(ticker);
-    const periodes = dateOnly ? PERIODES.filter(p => p.key !== '1j') : PERIODES;
+    // Toujours utilisé en fiche détail Autocall : périodes compactes, une seule ligne.
+    const periodes = PERIODES_COMPACT;
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
