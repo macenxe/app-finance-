@@ -746,42 +746,56 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .uc-srri-label { font-size: 9px; font-weight: 700; color: #9a8f7a; letter-spacing: .04em; text-transform: uppercase; }
 .uc-expo { font-size: 11px; color: #6b6e73; }
 
-/* ── Base tiroir (masqué sur mobile, activé en desktop) ── */
-.sheet-close { display: none; }
-.sheet-panel .modal-close { display: none; }
+/* ── Éléments réservés au bureau (mobile : frise à point seul, pas de panneau détail) ── */
+.ac-bar-niveau-val { display: none; }
+/* Le split est neutre en mobile : la colonne liste s'affiche telle quelle, la fiche
+   reste présentée en feuille modale par App.voirDetail. */
+.ac-split { display: block; }
+.ac-col-detail { display: none; }
+/* Blocs ajoutés pour le bureau uniquement (le mobile reste strictement inchangé). */
+.bureau-seul { display: none; }
+.dash-split { display: block; }
+.news-split { display: block; }
 
-/* ── Bureau (≥641px) : navigation en onglets, densité accrue, tiroir latéral droit ── */
+/* ── Bureau (≥641px) : onglets en haut, densité accrue, détail déplié en ligne ── */
 @media (min-width: 641px) {
-  /* Sidebar remplacée par une barre d'onglets clairs en haut */
+  /* Sidebar remplacée par une barre d'onglets sombre en haut */
   #sidebar { display: none; }
   #desktop-topbar {
-    display: flex; align-items: stretch; flex: none;
-    background: #fbfaf7; border-bottom: 1px solid #e6e0d2;
-    padding: 0 28px; height: 54px;
+    display: flex; align-items: center; flex: none;
+    background: #16304f; padding: 0 40px; height: 64px; gap: 36px;
   }
-  .dt-brand {
-    display: flex; flex-direction: column; justify-content: center; flex: none;
-    padding-right: 22px; margin-right: 4px; border-right: 1px solid #ece7dc;
-  }
-  .dt-logo { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; color: #16304f; letter-spacing: .01em; line-height: 1.1; }
-  .dt-sub  { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: #c9a96a; margin-top: 2px; }
-  #top-nav { display: flex; align-items: stretch; gap: 2px; }
+  .dt-brand { flex: none; }
+  .dt-logo { font-family: 'Spectral', serif; font-size: 21px; font-weight: 700; color: #f7f4ec; letter-spacing: .02em; }
+  /* flex-direction/padding explicites : la règle de base `nav { flex-direction: column }`
+     visait la sidebar et empilerait sinon les onglets hors du bandeau. */
+  #top-nav { display: flex; flex-direction: row; align-items: center; gap: 6px; flex: 1; padding: 0; }
   .top-nav-item {
-    display: flex; align-items: center; gap: 7px;
-    padding: 0 15px; font-size: 13px; font-weight: 500; color: #6b6e73;
-    cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
-    transition: color .15s, border-color .15s;
+    display: flex; align-items: center; padding: 9px 18px; border-radius: 7px;
+    font-size: 14px; font-weight: 600; color: #b9c4d4; cursor: pointer;
+    white-space: nowrap; transition: background .15s, color .15s;
   }
-  .top-nav-item svg { width: 15px; height: 15px; opacity: .65; transition: opacity .15s; }
-  .top-nav-item:hover { color: #16304f; }
-  .top-nav-item:hover svg { opacity: 1; }
-  .top-nav-item.active { color: #16304f; font-weight: 600; border-bottom-color: #c9a96a; }
-  .top-nav-item.active svg { opacity: 1; }
+  .top-nav-item:hover { color: #fff; background: #22304e; }
+  /* Onglet actif : pastille claire (comme la maquette) */
+  .top-nav-item.active { background: #f7f4ec; color: #16304f; }
+  .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
+  .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
+  .dt-date { font-size: 13px; color: #9aa6bd; white-space: nowrap; }
 
-  /* Densité : espacements resserrés (la place est disponible) */
-  .page-body   { padding: 20px 28px 36px; }
-  .page-header { padding: 15px 28px; }
+  /* Conteneur centré + titre de page en gros serif, sans bandeau collant (comme la maquette) */
+  .page-header, .page-body {
+    max-width: 1600px; width: 100%; margin-left: auto; margin-right: auto;
+    padding-left: 40px; padding-right: 40px;
+  }
+  .page-header {
+    position: static; background: none; backdrop-filter: none; border-bottom: none;
+    padding-top: 30px; padding-bottom: 0;
+  }
+  .page-title { font-size: 30px; line-height: 1.15; }
+  .page-sub   { font-size: 13.5px; margin-top: 5px; }
+  .page-body  { padding-top: 22px; padding-bottom: 56px; }
   .detail-content { padding: 18px 26px 30px; }
+  .card { border-radius: 10px; }
 
   .grid-5, .grid-4, .grid-3 { gap: 12px; }
   .grid-2 { gap: 14px; }
@@ -791,21 +805,24 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .cat-grid { gap: 12px; }
   .summary-chips { gap: 12px; }
 
-  /* Cartes indices/actifs/taux : compactes et plus nombreuses par ligne */
-  .grid-3 { grid-template-columns: repeat(4, 1fr); }
-  .index-card { padding: 11px 12px; }
-  .chip-card  { padding: 12px 14px; }
-  .cat-card   { padding: 12px 14px; }
-  .uc-item    { padding: 11px 14px; }
-  .uc-liste   { gap: 8px; }
+  /* Cartes marché : gabarit de la maquette (aérées, valeur en serif) */
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .index-card { padding: 16px 18px; text-align: left; }
+  .chip-card  { padding: 14px 16px; }
+  .cat-card   { padding: 14px 16px; }
+  .uc-item    { padding: 13px 16px; }
+  .uc-liste   { gap: 10px; }
 
-  .index-name, .taux-item-name { font-size: 11px; }
-  .index-val { font-size: 19px; margin: 5px 0 3px; }
-  .index-var { font-size: 11.5px; }
-  .taux-val  { font-size: 16.5px; margin-top: 4px; }
-  .taux-var  { font-size: 11px; margin-top: 3px; }
-  .taux-maj  { margin-top: 3px; }
-  .chip-card-val { font-size: 21px; margin-top: 3px; }
+  .index-name, .taux-item-name { font-size: 13px; justify-content: flex-start; }
+  .index-val { font-size: 22px; margin: 6px 0 4px; }
+  .index-var { font-size: 13px; }
+  .taux-val  { font-size: 22px; margin-top: 6px; }
+  .taux-var  { font-size: 13px; margin-top: 2px; }
+  .taux-maj  { font-size: 12px; margin-top: 2px; }
+  .chip-card-val { font-size: 22px; margin-top: 3px; }
+  /* Les cellules marché sont alignées à gauche comme la maquette (le mobile reste centré) */
+  .taux-grid > div, .macro-grid > div { text-align: left; }
+  .section-label { font-size: 12px; letter-spacing: .06em; }
 
   .mb-12 { margin-bottom: 12px; }
   .mb-18 { margin-bottom: 18px; }
@@ -825,48 +842,128 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .news-card-titre { font-size: 15px; }
   .news-card-resume { font-size: 12.5px; }
 
-  /* Événements macro : deux colonnes plutôt qu'une longue liste */
-  .events-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+  /* ── Tableau de bord : colonne principale + colonne latérale (événements, alertes) ── */
+  .dash-split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+  .dash-col-principale, .dash-col-laterale { min-width: 0; }
+  /* Dans la colonne principale, les cartes marché tiennent sur 3 colonnes (comme la maquette) */
+  .dash-col-principale .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .bureau-seul { display: block; }
 
-  /* ── Fiches détail & graphiques : tiroir latéral droit (fond non assombri) ── */
-  .sheet-backdrop {
-    align-items: stretch; justify-content: flex-end;
-    background: transparent !important; pointer-events: none;
+  /* Alertes portefeuille */
+  .alertes-liste { display: flex; flex-direction: column; }
+  .alerte-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 0; border-top: 1px solid #f1ece1; cursor: pointer; transition: background .12s;
   }
-  .sheet-panel {
-    position: relative; pointer-events: auto;
-    width: 460px; max-width: 44vw; height: 100%; max-height: none;
-    border: none; border-left: 1px solid #e2dccc; border-radius: 0;
-    box-shadow: -12px 0 40px rgba(22,48,79,.13);
-    transform: translateX(100%);
-    transition: transform .32s cubic-bezier(.22,.61,.36,1);
-  }
-  .sheet-backdrop.sheet-open .sheet-panel { transform: translateX(0); }
-  .sheet-panel.sheet-expanded { max-height: none; }
-  .sheet-handle { display: none; }
-  .sheet-panel.chart-panel { width: 560px; max-width: 50vw; }
-  .sheet-header { padding: 18px 54px 14px 26px; }
+  .alerte-item:first-child { border-top: none; }
+  .alerte-item:hover { background: #faf8f4; }
+  .alerte-id { min-width: 0; }
+  .alerte-nom { font-size: 12.5px; font-weight: 600; color: #16304f; }
+  .alerte-statut { font-size: 11.5px; font-weight: 600; margin-top: 2px; }
+  .alerte-statut--risque { color: #9a3535; }
+  .alerte-statut--rappel, .alerte-statut--coupon { color: #1d6f4c; }
+  .alerte-statut--neutre { color: #b06a1a; }
+  .alerte-niveau { font-family: 'Spectral', serif; font-size: 14px; font-weight: 700; color: #16304f; flex: none; }
+  .alerte-vide { font-size: 12.5px; color: #9a8f7a; }
 
-  /* Bouton de fermeture du tiroir (injecté pour les fiches, natif pour les graphiques) */
-  .sheet-close {
-    position: absolute; top: 12px; right: 14px; z-index: 3;
-    width: 30px; height: 30px; border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
-    background: #f2ede0; color: #6b6e73; border: none; cursor: pointer;
-    font-family: inherit; font-size: 15px; line-height: 1;
-    transition: background .15s, color .15s;
+  /* Événements macro : la colonne latérale est étroite → une seule colonne */
+  .events-grid { display: flex; flex-direction: column; }
+
+  /* ── Autocall : split master-détail (liste compacte à gauche, fiche à droite) ── */
+  .ac-split { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 24px; align-items: start; }
+  .ac-col-liste, .ac-col-detail { min-width: 0; }
+  .ac-toolbar { justify-content: flex-start; margin-bottom: 12px; }
+  .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 6px 14px; margin-bottom: 12px; }
+  /* La liste défile seule : la fiche de droite reste visible en permanence. */
+  .ac-list {
+    display: flex; flex-direction: column; gap: 10px;
+    max-height: calc(100vh - 275px); overflow-y: auto; padding-right: 4px;
   }
-  .sheet-close:hover { background: #e6ddca; color: #16304f; }
-  .sheet-panel .modal-close { display: block; }
+  /* Page Fonds : la liste UC défile aussi, et l'UC sélectionnée est mise en avant */
+  .uc-liste { max-height: calc(100vh - 330px); overflow-y: auto; padding-right: 4px; }
+  .uc-item--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
+  .uc-chips { justify-content: flex-start; }
+
+  .ac-card { grid-template-columns: 1fr; gap: 0; padding: 14px 16px; cursor: pointer; }
+  .ac-card-left { grid-column: auto; grid-row: auto; }
+  .ac-card--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
+  /* Sous la carte : constatation à gauche, coupon à droite (le statut est déjà en tête). */
+  .ac-info {
+    display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;
+    gap: 10px; text-align: left; margin-top: 9px;
+  }
+  .ac-info-row--constat { order: 1; flex-wrap: nowrap; }
+  .ac-info-row--coupon  { order: 2; }
+  .ac-info-sub, .ac-info-statut { display: none; }
+  .ac-info-label { display: inline; }
+  .ac-info-row--coupon .ac-info-val { font-size: 13px; }
+  .ac-info-row--constat .ac-info-val { font-size: 12px; }
+
+  /* Niveau actuel : badge chiffré sur la frise + bloc statut conservé en tête de carte */
+  .ac-bar { margin-top: 22px; }
+  .ac-bar-niveau-val {
+    display: block; position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%);
+    padding: 1px 7px; border-radius: 5px; background: #fff; border: 1px solid #e0d9c8;
+    font-size: 10.5px; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums;
+  }
+  .ac-bar-niveau--risque .ac-bar-niveau-val { color: #9a3535; border-color: #eccccc; }
+  .ac-bar-niveau--coupon .ac-bar-niveau-val,
+  .ac-bar-niveau--rappel .ac-bar-niveau-val { color: #1d6f4c; border-color: #c8e2d4; }
+  .ac-bar-niveau--neutre .ac-bar-niveau-val { color: #16304f; }
+  .ac-bar-niveau--risque .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #9a3535 2.6px 100%); }
+  .ac-bar-niveau--coupon .ac-bar-niveau-dot,
+  .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
+
+  /* ── Graphique comparé (base 100) ── */
+  .chart-cmp-legende { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
+  .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
+  .chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .chart-cmp-perf.up   { color: #1d6f4c; }
+  .chart-cmp-perf.down { color: #9a3535; }
+  .chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 4px; }
+  .detail-cmp { margin-bottom: 10px; }
+  .detail-cmp-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #5b5e63; cursor: pointer; }
+  .detail-cmp-label input { accent-color: #16304f; cursor: pointer; }
+
+  /* ── Actualités : fil + colonne de filtres par thème ── */
+  .news-split { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; align-items: start; }
+  .news-col-fil { min-width: 0; }
+  .news-col-filtres { min-width: 0; }
+  .news-filtre {
+    padding: 9px 12px; border-radius: 7px; font-size: 13.5px; font-weight: 600;
+    color: #6b6e73; cursor: pointer; margin-bottom: 3px; transition: background .15s, color .15s;
+  }
+  .news-filtre:hover { background: #f7f4ec; color: #16304f; }
+  .news-filtre.active { background: #16304f; color: #fff; }
+
+  /* ── Panneau de détail permanent (colonne de droite) ── */
+  .ac-col-detail { display: block; }
+  .ac-detail-panneau {
+    background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 24px 28px;
+  }
+  .ac-detail-entete {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
+    margin-bottom: 20px;
+  }
+  .ac-detail-id { min-width: 0; }
+  .ac-detail-titre { font-family: 'Spectral', serif; font-size: 23px; font-weight: 600; color: #16304f; line-height: 1.2; }
+  .ac-detail-sous  { font-size: 13px; color: #9a8f7a; margin-top: 5px; }
+  .ac-detail-niveau { text-align: right; flex: none; }
+  .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 28px; font-weight: 700; color: #16304f; line-height: 1.1; }
+  .ac-detail-niveau-delta { font-size: 13px; font-weight: 600; margin-top: 3px; }
+  .ac-detail-niveau-delta.green  { color: #1d6f4c; }
+  .ac-detail-niveau-delta.orange { color: #b06a1a; }
+  .ac-detail-niveau-delta.red    { color: #9a3535; }
+  .ac-detail-panneau .detail-content { padding: 0; }
+  .ac-detail-panneau .detail-info-grid { grid-template-columns: repeat(4, 1fr); }
+  .ac-detail-vide {
+    background: #fff; border: 1px dashed #ddd5c2; border-radius: 10px;
+    padding: 44px 20px; text-align: center; color: #9a8f7a; font-size: 13px;
+  }
 }
 
-/* Large écran : cartes marché 6 par ligne, listes Autocalls / UC sur deux colonnes */
-@media (min-width: 1080px) {
-  .grid-3   { grid-template-columns: repeat(6, 1fr); }
-  .ac-list  { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
-  .uc-liste { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
-  .events-grid { grid-template-columns: repeat(3, 1fr); }
-}
+/* La liste UC reste sur une seule colonne : elle vit dans la colonne gauche du split. */
 
 @media (max-width: 640px) {
   /* ── Sidebar masquée (navigation via la barre du bas) ── */

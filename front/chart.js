@@ -89,7 +89,7 @@ const Chart = (() => {
             <div class="chart-sous" id="chart-sous"${etat.sous ? '' : ' style="display:none"'}>${etat.sous ? 'Sous-jacent : ' + esc(etat.sous) : ''}</div>
           </span>
         </div>
-        <button class="modal-close" onclick="Chart.fermer()">✕</button>${''/* en tiroir bureau, affiché via CSS ; masqué en mobile où la poignée ferme */}
+        ${etat.sheet ? '' : `<button class="modal-close" onclick="Chart.fermer()">✕</button>`}
       </div>
       <div class="modal-body chart-body">
         <div class="chart-readout">
@@ -339,7 +339,7 @@ const Chart = (() => {
     etat = {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
-      compoIsin: null, inlineId: containerId, dateOnly, periodes,
+      compoIsin: opts.compoIsin || null, inlineId: containerId, dateOnly, periodes,
     };
     const el = document.getElementById(containerId);
     if (!el) return;
@@ -355,11 +355,133 @@ const Chart = (() => {
       <div class="chart-zone" id="chart-zone"><div class="chart-loading">Chargement…</div></div>
       <div class="chart-periodes">
         ${periodes.map(p => `<button class="chart-per${p.key === etat.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changer('${p.key}')">${p.label}</button>`).join('')}
-      </div>`;
+      </div>
+      <div class="chart-compo" id="chart-compo"></div>`;
     charger(DEFAUT);
+    if (etat.compoIsin) chargerCompo(etat.compoIsin);
   }
 
-  return { ouvrir, ouvrirInline, fermer, changer, retour };
+  // ── Graphique comparé (plusieurs séries) ──────────────────────────────────────────────
+  // Les séries n'ont pas la même échelle (un indice à 8 000 pts et une action à 8 €) : on
+  // les ramène toutes en base 100 au début de la période. L'axe exprime donc une
+  // performance relative, pas un prix — les repères de barrières n'y ont pas de sens.
+  const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a'];
+  let etatCmp = null;
+
+  // series : [{ ticker, label, couleur? }]
+  function comparer(containerId, series, opts) {
+    opts = opts || {};
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    etatCmp = {
+      containerId,
+      series: (series || []).filter(s => s && s.ticker),
+      periode: opts.periode || DEFAUT,
+      periodes: PERIODES_COMPACT,
+      sets: [],
+    };
+    el.innerHTML = `
+      <div class="chart-cmp-legende" id="chart-cmp-legende"></div>
+      <div class="chart-zone" id="chart-cmp-zone"><div class="chart-loading">Chargement…</div></div>
+      <div class="chart-periodes">
+        ${etatCmp.periodes.map(p => `<button class="chart-per chart-per-cmp${p.key === etatCmp.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changerComparaison('${p.key}')">${p.label}</button>`).join('')}
+      </div>
+      <div class="chart-cmp-dates" id="chart-cmp-dates"></div>`;
+    chargerComparaison();
+  }
+
+  function changerComparaison(periode) {
+    if (!etatCmp || periode === etatCmp.periode) return;
+    etatCmp.periode = periode;
+    document.querySelectorAll('.chart-per-cmp').forEach(b => b.classList.toggle('active', b.dataset.per === periode));
+    chargerComparaison();
+  }
+
+  async function chargerComparaison() {
+    if (!etatCmp) return;
+    const zone = document.getElementById('chart-cmp-zone');
+    if (zone) zone.innerHTML = '<div class="chart-loading">Chargement…</div>';
+    const periode = etatCmp.periode;
+    const res = await Promise.all(etatCmp.series.map(async (s) => {
+      try {
+        const url = (typeof AppAPI !== 'undefined' && AppAPI.historyUrl)
+          ? AppAPI.historyUrl(s.ticker, periode)
+          : `${WORKER}?history=${encodeURIComponent(s.ticker)}&period=${periode}`;
+        const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+        if (!r.ok) return null;
+        const d = await r.json();
+        let pts = d.points || [];
+        if (/^(fred:|hicp:)/.test(s.ticker)) pts = filtrerPeriode(pts, periode);
+        return pts.length >= 2 ? { ...s, points: pts } : null;
+      } catch { return null; }
+    }));
+    // La période a pu changer pendant les requêtes : on ignore une réponse périmée.
+    if (!etatCmp || etatCmp.periode !== periode) return;
+    etatCmp.sets = res.filter(Boolean);
+    dessinerComparaison();
+  }
+
+  function dessinerComparaison() {
+    const zone = document.getElementById('chart-cmp-zone');
+    const leg  = document.getElementById('chart-cmp-legende');
+    const dts  = document.getElementById('chart-cmp-dates');
+    if (!zone || !etatCmp) return;
+    const esc = (s) => (window.escHtml ? escHtml(String(s)) : String(s));
+
+    if (!etatCmp.sets.length) {
+      zone.innerHTML = '<div class="chart-loading">Données indisponibles pour cette période.</div>';
+      if (leg) leg.innerHTML = '';
+      if (dts) dts.innerHTML = '';
+      return;
+    }
+
+    const normes = etatCmp.sets.map((s, idx) => {
+      const base = s.points[0].c;
+      return {
+        ...s,
+        vals: s.points.map(p => (base ? (p.c / base) * 100 : 100)),
+        couleur: s.couleur || CMP_COULEURS[idx % CMP_COULEURS.length],
+      };
+    });
+
+    const toutes = normes.reduce((acc, s) => acc.concat(s.vals), []);
+    let min = Math.min(...toutes), max = Math.max(...toutes);
+    if (min === max) { min -= 1; max += 1; }
+    const marge = (max - min) * 0.08; min -= marge; max += marge;
+    const Y = v => padT + (1 - (v - min) / (max - min)) * plotH;
+
+    const paths = normes.map(s => {
+      const n = s.vals.length;
+      const X = i => padL + (i / (n - 1)) * plotW;
+      let d = '';
+      for (let i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(s.vals[i]).toFixed(1) + ' ';
+      return `<path d="${d}" fill="none" stroke="${s.couleur}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>`;
+    }).join('');
+
+    // Repère du point de départ commun (base 100).
+    const base100 = (100 >= min && 100 <= max)
+      ? `<line x1="${padL}" y1="${Y(100).toFixed(1)}" x2="${VBW - padR}" y2="${Y(100).toFixed(1)}" class="chart-grid"/>` : '';
+
+    zone.innerHTML = `
+      <svg viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg">
+        ${base100}${paths}
+      </svg>`;
+
+    if (leg) leg.innerHTML = normes.map(s => {
+      const perf = s.vals[s.vals.length - 1] - 100;
+      const txt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+      return `<span class="chart-cmp-item">
+        <span class="chart-cmp-trait" style="background:${s.couleur}"></span>${esc(s.label)}
+        <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${txt}</span></span>`;
+    }).join('');
+
+    if (dts) {
+      const p0 = normes[0].points;
+      dts.innerHTML = `<span>${fmtDate(p0[0].t, etatCmp.periode)}</span><span>${fmtDate(p0[p0.length - 1].t, etatCmp.periode)}</span>`;
+    }
+  }
+
+  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, changerComparaison };
 })();
 
 window.Chart = Chart;

@@ -39,6 +39,8 @@ function renderDashboard(indices, produits, taux) {
     </header>
 
     <div class="page-body">
+     <div class="dash-split">
+      <div class="dash-col-principale">
       <!-- Indices clés -->
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
@@ -98,7 +100,15 @@ function renderDashboard(indices, produits, taux) {
         </div>`; }).join('')}
       </div>
 
-      <!-- Événements macro pleine largeur -->
+      <div class="card p-18 mb-24 bureau-seul">
+        <div class="card-title">Performance comparée des indices</div>
+        <div class="section-hint mb-12">Base 100 au début de la période</div>
+        <div id="cmp-indices"></div>
+      </div>
+      </div><!-- /dash-col-principale -->
+
+      <div class="dash-col-laterale">
+      <!-- Événements macro -->
       <div class="card p-18 mb-24">
         <div class="card-title mb-12">Prochains événements macro</div>
         <div class="events-grid">
@@ -111,8 +121,75 @@ function renderDashboard(indices, produits, taux) {
         </div>
       </div>
 
+      ${renderAlertesPortefeuille(produits)}
+      </div><!-- /dash-col-laterale -->
+     </div><!-- /dash-split -->
     </div>
   </div>`;
+}
+
+// Libellé d'une alerte : un CAP regroupé se lit « CAP 08/2030 » (sans le palier).
+function alerteNom(p) {
+  if (p.isGroupeCap) {
+    const d = parseDateFlexible(p.ech);
+    if (d) return `CAP ${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+    return 'CAP';
+  }
+  return condenserTitreProduit(p.nom, p.ech);
+}
+
+// Niveau exprimé en % du strike (colonne droite des alertes). Les CMS n'ont pas de strike :
+// on y affiche le taux courant.
+function pctDuStrike(p) {
+  if (p.type === 'cms' || !p.strikeNum || p.niveauNum == null) return String(p.niveau ?? '—');
+  return (p.niveauNum / p.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+}
+
+// Encart « Alertes portefeuille » (bureau) : produits en zone de rappel, en risque de perte
+// en capital, ou dont le niveau est proche d'une barrière. Masqué en mobile.
+function renderAlertesPortefeuille(produits) {
+  // Mêmes regroupements que la liste Autocall : les paliers d'un même CAP ne forment
+  // qu'une seule alerte (« CAP 08/2030 ») au lieu d'une ligne par palier.
+  const lignes = grouperCapMemeDate((produits || []).filter(p => !p.rappele))
+    .map(p => {
+      const zone = zoneNiveau(p);
+      // « Proche » : le niveau est à moins de 5 points de pourcentage d'une barrière.
+      const niveauPct = (p.strikeNum && p.niveauNum) ? (p.niveauNum / p.strikeNum * 100) : null;
+      let proche = null;
+      if (p.type !== 'cms' && niveauPct != null) {
+        if (p.bAutoNum != null && Math.abs(niveauPct - p.bAutoNum) < 5) proche = 'Proche barrière rappel';
+        else if (p.bCouponNum != null && Math.abs(niveauPct - p.bCouponNum) < 5) proche = 'Proche barrière coupon';
+      }
+      return { p, zone, proche };
+    })
+    .filter(x => x.zone.cle === 'rappel' || x.zone.cle === 'risque' || x.proche)
+    .sort((a, b) => {
+      const rang = { risque: 0, rappel: 1, neutre: 2, coupon: 2 };
+      return (rang[a.zone.cle] ?? 3) - (rang[b.zone.cle] ?? 3);
+    })
+    .slice(0, 6);
+
+  const corps = lignes.length
+    ? lignes.map(({ p, zone, proche }) => {
+        const clic = p.isGroupeCap
+          ? `App.voirDetailGroupe('${escHtml((p.paliers || []).map(x => x.isin).filter(Boolean).join(','))}')`
+          : `App.voirDetail('${escHtml(p.isin)}')`;
+        return `
+        <div class="alerte-item" onclick="${clic}">
+          <div class="alerte-id">
+            <div class="alerte-nom">${escHtml(alerteNom(p))}</div>
+            <div class="alerte-statut alerte-statut--${zone.cle}">${escHtml(proche || zone.label)}</div>
+          </div>
+          <div class="alerte-niveau tnum">${escHtml(pctDuStrike(p))}</div>
+        </div>`; }).join('')
+    : `<div class="alerte-vide">Aucun produit en alerte.</div>`;
+
+  return `
+      <div class="card p-18 mb-24 bureau-seul">
+        <div class="card-title">Alertes portefeuille</div>
+        <div class="section-hint mb-12">Produits en zone de rappel ou proches d'une barrière</div>
+        <div class="alertes-liste">${corps}</div>
+      </div>`;
 }
 
 // ── Actualités : catégories éditoriales (couleur d'avatar) ──
@@ -177,7 +254,11 @@ function newsCardHtml({ label, color, titre, resume, date, meta, lien }) {
 // Section « À la une » — veille curée (data.js VEILLE). Vide si le tableau est absent/vide.
 function renderCuratedNews() {
   if (typeof VEILLE === 'undefined' || !Array.isArray(VEILLE) || !VEILLE.length) return '';
-  const cards = [...VEILLE]
+  const source = NEWS_THEME_COURANT
+    ? VEILLE.filter(v => String(v.categorie || '').toUpperCase() === NEWS_THEME_COURANT)
+    : VEILLE;
+  if (!source.length) return '';
+  const cards = [...source]
     .sort((a, b) => newsDateTs(b.date) - newsDateTs(a.date))
     .map(v => newsCardHtml({
       label: v.categorie,
@@ -193,23 +274,43 @@ function renderCuratedNews() {
     </div>`;
 }
 
-function renderActus() {
+// Thème actif de la page Actualités. Mémorisé au niveau du module car renderNewsSection est
+// appelé plus tard par chargerActus (chargement asynchrone du fil), hors du rendu de la page.
+let NEWS_THEME_COURANT = null;
+const NEWS_THEMES = ['TAUX', 'INFLATION', 'MARCHÉS', 'INTERNATIONAL', 'RÉGULATION'];
+
+function renderActus(state) {
+  NEWS_THEME_COURANT = (state && state.newsTheme) || null;
+  const actif = NEWS_THEME_COURANT;
+  const bouton = (val, label) => `
+        <div class="news-filtre${(actif === val || (!actif && !val)) ? ' active' : ''}" onclick="App.setNewsTheme(${val ? `'${val}'` : 'null'})">${escHtml(label)}</div>`;
   return `
   <div>
     <header class="page-header">
       <div>
-        <div class="page-title">Actualités économiques</div>
+        <div class="page-title">Actualités</div>
         <div class="page-sub">Sélection du cabinet · fil marché en direct</div>
       </div>
     </header>
     <div class="page-body">
-      ${renderCuratedNews()}
-      <div class="news-group">
-        <div class="news-group-title">Fil en direct</div>
-        <div id="news-section" class="news-loading">
-          <div class="news-spinner">Chargement des actualités…</div>
+     <div class="news-split">
+      <div class="news-col-fil">
+        ${renderCuratedNews()}
+        <div class="news-group">
+          <div class="news-group-title">Fil en direct</div>
+          <div id="news-section" class="news-loading">
+            <div class="news-spinner">Chargement des actualités…</div>
+          </div>
         </div>
       </div>
+      <div class="news-col-filtres bureau-seul">
+        <div class="card p-18">
+          <div class="card-title mb-12">Filtrer par thème</div>
+          ${bouton(null, 'Tous')}
+          ${NEWS_THEMES.map(t => bouton(t, t.charAt(0) + t.slice(1).toLowerCase())).join('')}
+        </div>
+      </div>
+     </div>
     </div>
   </div>`;
 }
@@ -223,14 +324,20 @@ function renderNewsSection(news) {
     } catch { return ''; }
   };
 
-  const tous = [...(news.globales || []), ...(news.produits || [])]
+  let tous = [...(news.globales || []), ...(news.produits || [])]
     .sort((a, b) => {
       const da = a.date ? new Date(a.date).getTime() : 0;
       const db = b.date ? new Date(b.date).getTime() : 0;
       return db - da;
     });
 
-  if (!tous.length) return '<p class="news-empty">Aucune actualité disponible.</p>';
+  if (NEWS_THEME_COURANT) tous = tous.filter(a => (RSS_TAG_CAT[a.tag] || 'MARCHÉS') === NEWS_THEME_COURANT);
+
+  if (!tous.length) {
+    return NEWS_THEME_COURANT
+      ? '<p class="news-empty">Aucune actualité sur ce thème.</p>'
+      : '<p class="news-empty">Aucune actualité disponible.</p>';
+  }
 
   const cards = tous.map(a => {
     const cat = RSS_TAG_CAT[a.tag] || 'MARCHÉS';
@@ -429,6 +536,12 @@ function fmtCouponAnnuel(coupon) {
   if (isNaN(n)) return coupon;
   return '+' + n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %/an';
 }
+// Couleur de la pastille de statut à partir de la zone du niveau (bureau : colonne « Statut »).
+function statutPillClasse(cle) {
+  if (cle === 'risque') return 'red';
+  if (cle === 'rappel' || cle === 'coupon') return 'green';
+  return 'grey';
+}
 
 function cardAutocallHtml(r) {
   if (r.isGroupeCap) return cardAutocallGroupeHtml(r);
@@ -448,7 +561,7 @@ function cardAutocallHtml(r) {
           ${geo.protPos != null ? `<div class="ac-bar-mark ac-bar-mark--protection" style="left:${geo.protPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.protVal, isCms)}</span></div>` : ''}
           ${geo.couponPos != null ? `<div class="ac-bar-mark ac-bar-mark--coupon" style="left:${geo.couponPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.couponVal, isCms)}</span></div>` : ''}
           ${geo.autoPos != null ? `<div class="ac-bar-mark ac-bar-mark--auto" style="left:${geo.autoPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.autoVal, isCms)}</span></div>` : ''}
-          ${geo.niveauPos != null ? `<div class="ac-bar-niveau" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-dot"></span></div>` : ''}
+          ${geo.niveauPos != null ? `<div class="ac-bar-niveau ac-bar-niveau--${zone.cle}" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-val">${fmtBarreBarriereCourt(geo.niveauVal, isCms)}</span><span class="ac-bar-niveau-dot"></span></div>` : ''}
         </div>
       </div>`
     : '';
@@ -468,10 +581,13 @@ function cardAutocallHtml(r) {
       </div>
       <div class="ac-info-statut"><span class="ac-statut-pill grey">Rappelé</span></div>`
     : `
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Coupon :</span><span class="ac-info-val ac-info-val--coupon">${escHtml(fmtCouponAnnuel(r.coupon))}</span></div>
+      <div class="ac-info-sub">${escHtml(reserveLabelAutocall(r))}</div>
       <div class="ac-info-row ac-info-row--constat">
         <span class="ac-info-label">Proch. constat :</span>
         <span class="ac-info-val">${escHtml(formatDateCourte(r.constat) || formatDateLongue(r.constat))}</span>
-      </div>`;
+      </div>
+      <div class="ac-info-statut"><span class="ac-statut-pill ${statutPillClasse(zone.cle)}">${escHtml(zone.label)}</span></div>`;
 
   const niveauEnTete = geo && geo.niveauVal != null ? `
       <div class="ac-card-niveau">
@@ -522,16 +638,26 @@ function cardAutocallGroupeHtml(r) {
           ${paliersPos.map((p, i) => `<div class="ac-bar-mark ac-bar-mark--protection${i % 2 === 1 ? ' ac-bar-mark--haut' : ''}" style="left:${p.pos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(p.val, false)}</span></div>`).join('')}
           ${geo.couponPos != null ? `<div class="ac-bar-mark ac-bar-mark--coupon" style="left:${geo.couponPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.couponVal, false)}</span></div>` : ''}
           ${geo.autoPos != null ? `<div class="ac-bar-mark ac-bar-mark--auto" style="left:${geo.autoPos}%"><span class="ac-bar-mark-tick"></span><span class="ac-bar-mark-label">${fmtBarreBarriereCourt(geo.autoVal, false)}</span></div>` : ''}
-          ${geo.niveauPos != null ? `<div class="ac-bar-niveau" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-dot"></span></div>` : ''}
+          ${geo.niveauPos != null ? `<div class="ac-bar-niveau ac-bar-niveau--${zone.cle}" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-val">${fmtBarreBarriereCourt(geo.niveauVal, false)}</span><span class="ac-bar-niveau-dot"></span></div>` : ''}
         </div>
       </div>`
     : '';
 
+  // Coupon du groupe : un seul taux si tous les paliers partagent le même, sinon une fourchette.
+  const couponsGroupe = [...new Set(r.paliers.map(p => parseFloat(String(p.coupon).replace(',', '.'))).filter(n => !isNaN(n)))].sort((a, b) => a - b);
+  const fmtTaux = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const couponTxtGroupe = couponsGroupe.length === 0 ? '—'
+    : couponsGroupe.length === 1 ? '+' + fmtTaux(couponsGroupe[0]) + ' %/an'
+    : '+' + fmtTaux(couponsGroupe[0]) + ' à ' + fmtTaux(couponsGroupe[couponsGroupe.length - 1]) + ' %/an';
+
   const infoBlock = `
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Coupon :</span><span class="ac-info-val ac-info-val--coupon">${escHtml(couponTxtGroupe)}</span></div>
+      <div class="ac-info-sub">${escHtml(reserveLabelAutocall(r))}</div>
       <div class="ac-info-row ac-info-row--constat">
         <span class="ac-info-label">Proch. constat :</span>
         <span class="ac-info-val">${escHtml(formatDateCourte(r.constat) || formatDateLongue(r.constat))}</span>
-      </div>`;
+      </div>
+      <div class="ac-info-statut"><span class="ac-statut-pill ${statutPillClasse(zone.cle)}">${escHtml(zone.label)}</span></div>`;
 
   const niveauEnTete = geo && geo.niveauVal != null ? `
       <div class="ac-card-niveau">
@@ -584,6 +710,40 @@ function renderProduits(produits, state, rappeles) {
   };
   rows = [...rows].sort((a, b) => dateTri(a) - dateTri(b));
 
+  // Bureau : liste compacte à gauche, fiche du produit sélectionné à droite (split
+  // master-détail). Mobile : le panneau est masqué en CSS et la fiche s'ouvre en feuille.
+  const detailIsin  = state.detailIsin || null;
+  const detailIsins = state.detailIsins || null;
+
+  const estSelectionne = (r) => {
+    if (r.isGroupeCap) {
+      if (!detailIsins) return false;
+      const isinsRow = (r.paliers || []).map(p => p.isin).filter(Boolean);
+      return isinsRow.length > 0 && isinsRow.length === detailIsins.length && isinsRow.every(i => detailIsins.includes(i));
+    }
+    return !!detailIsin && r.isin === detailIsin;
+  };
+
+  // Le panneau de droite ne reste jamais vide : sans sélection explicite, il présente le
+  // premier produit actif de la liste.
+  const selectionExplicite = rows.find(estSelectionne) || null;
+  const selection = selectionExplicite || rows.find(r => !r.rappele) || null;
+
+  const carteHtml = (r) => {
+    const actif = selectionExplicite ? estSelectionne(r) : r === selection;
+    const c = cardAutocallHtml(r);
+    return actif ? c.replace('class="ac-card', 'class="ac-card ac-card--actif') : c;
+  };
+
+  const membresDe = (g) => (g.paliers || []).map(p => p.isin).map(i => produits.find(x => x.isin === i)).filter(Boolean);
+  let panneau = '<div class="ac-detail-vide">Sélectionnez un produit pour afficher sa fiche.</div>';
+  if (selection && selection.isGroupeCap) {
+    const membres = membresDe(selection);
+    if (membres.length) panneau = renderDetailPanneauGroupe(membres);
+  } else if (selection) {
+    panneau = renderDetailPanneau(selection);
+  }
+
   return `
   <div>
     <header class="page-header">
@@ -594,29 +754,35 @@ function renderProduits(produits, state, rappeles) {
     </header>
 
     <div class="page-body">
-      <div class="ac-toolbar">
-        <div class="filter-chips ac-tabs">
-          <button class="filter-chip${famille === 'tous' ? ' active' : ''}" onclick="App.setFamilleFiltre('tous')">Tous</button>
-          <button class="filter-chip${famille === 'athena' ? ' active' : ''}" onclick="App.setFamilleFiltre('athena')">Athena</button>
-          <button class="filter-chip${famille === 'cap' ? ' active' : ''}" onclick="App.setFamilleFiltre('cap')">CAP</button>
-          <button class="filter-chip${famille === 'cms' ? ' active' : ''}" onclick="App.setFamilleFiltre('cms')">CMS</button>
+      <div class="ac-split">
+        <div class="ac-col-liste">
+          <div class="ac-toolbar">
+            <div class="filter-chips ac-tabs">
+              <button class="filter-chip${famille === 'tous' ? ' active' : ''}" onclick="App.setFamilleFiltre('tous')">Tous</button>
+              <button class="filter-chip${famille === 'athena' ? ' active' : ''}" onclick="App.setFamilleFiltre('athena')">Athena</button>
+              <button class="filter-chip${famille === 'cap' ? ' active' : ''}" onclick="App.setFamilleFiltre('cap')">CAP</button>
+              <button class="filter-chip${famille === 'cms' ? ' active' : ''}" onclick="App.setFamilleFiltre('cms')">CMS</button>
+            </div>
+          </div>
+
+          <div class="ac-legend">
+            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--loss"></span><span class="ac-legend-full">Zone de perte en capital</span><span class="ac-legend-court">Perte en capital</span></span>
+            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--coupon"></span><span class="ac-legend-full">Barrière coupon</span><span class="ac-legend-court">Coupon</span></span>
+            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--auto"></span><span class="ac-legend-full">Barrière rappel</span><span class="ac-legend-court">Rappel</span></span>
+            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--niveau"></span>Niveau actuel</span>
+          </div>
+
+          <div class="uc-sort-banner">↓ Trié par date de constatation</div>
+
+          <div class="ac-list">
+            ${rows.length ? rows.map(carteHtml).join('') : `<div class="ac-empty">Aucun produit ne correspond à cette recherche.</div>`}
+          </div>
+
+          <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
         </div>
+
+        <div class="ac-col-detail">${panneau}</div>
       </div>
-
-      <div class="ac-legend">
-        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--loss"></span><span class="ac-legend-full">Zone de perte en capital</span><span class="ac-legend-court">Perte en capital</span></span>
-        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--coupon"></span><span class="ac-legend-full">Barrière coupon</span><span class="ac-legend-court">Coupon</span></span>
-        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--auto"></span><span class="ac-legend-full">Barrière rappel</span><span class="ac-legend-court">Rappel</span></span>
-        <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--niveau"></span>Niveau actuel</span>
-      </div>
-
-      <div class="uc-sort-banner">↓ Trié par date de constatation</div>
-
-      <div class="ac-list">
-        ${rows.length ? rows.map(cardAutocallHtml).join('') : `<div class="ac-empty">Aucun produit ne correspond à cette recherche.</div>`}
-      </div>
-
-      <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
     </div>
   </div>`;
 }
@@ -639,8 +805,9 @@ function detailBarriereTxt(strikeNum, pct, num, isCms) {
   return `${escHtml(String(pct))} · ${montant.toLocaleString('fr-FR', { maximumFractionDigits: 0 })} €`;
 }
 
-function renderDetail(produit) {
-  const typLabel = produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
+// Corps d'une fiche détail (synthèse + graphique + description), partagé par la feuille
+// mobile (renderDetail) et le dépliage en ligne du bureau (renderDetailInline).
+function detailCorpsHtml(produit) {
   const isCms = produit.type === 'cms';
 
   // Coupon en mémoire : périodes où la barrière coupon n'a pas été franchie, dont le gain
@@ -660,16 +827,16 @@ function renderDetail(produit) {
   ];
 
   return `
-  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
-    <div class="sheet-panel">
-      <div class="sheet-handle"></div>
-      <div class="sheet-header">
-        <div class="page-title">${escHtml(produit.nom)}</div>
-        <div class="page-sub">${escHtml(produit.isin)} · ${typLabel}</div>
-      </div>
-
     <div class="detail-content">
       ${detailInfoGrid(infoBoxes)}
+
+      ${produit.type === 'equity' ? `
+      <div class="detail-cmp bureau-seul">
+        <label class="detail-cmp-label">
+          <input type="checkbox" id="cmp-ref" onchange="App.toggleComparaisonRef(this.checked)">
+          Comparer à un indice de référence
+        </label>
+      </div>` : ''}
 
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
@@ -698,14 +865,73 @@ function renderDetail(produit) {
       </div>
 
       <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
-    </div>
+    </div>`;
+}
+
+function detailTypeLabel(produit) {
+  return produit.type === 'equity' ? 'Actions' : 'Taux (CMS)';
+}
+
+function renderDetail(produit) {
+  return `
+  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
+    <div class="sheet-panel">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="page-title">${escHtml(produit.nom)}</div>
+        <div class="page-sub">${escHtml(produit.isin)} · ${detailTypeLabel(produit)}</div>
+      </div>
+      ${detailCorpsHtml(produit)}
     </div>
   </div>`;
 }
 
-function renderDetailGroupe(membres) {
+// Niveau courant mis en avant en tête du panneau (valeur + écart au strike / zone).
+function detailNiveauHtml(produit) {
+  const zone = zoneNiveau(produit);
+  const isCms = produit.type === 'cms';
+  const sousTxt = (!isCms && produit.pct) ? escHtml(String(produit.pct)) + ' du strike' : zone.label;
+  const cls = produit.k === 'red' ? 'red' : produit.k === 'orange' ? 'orange' : 'green';
+  return `
+      <div class="ac-detail-niveau">
+        <div class="ac-detail-niveau-val tnum">${escHtml(String(produit.niveau ?? '—'))}</div>
+        <div class="ac-detail-niveau-delta ${cls}">${sousTxt}</div>
+      </div>`;
+}
+
+// Bureau : fiche affichée en permanence dans la colonne de droite (split master-détail).
+function renderDetailPanneau(produit) {
+  const sous = `${escHtml(produit.sjLabel || produit.sj || '')} · Constat. ${escHtml(fmtDatePanneau(produit.constat))} · Échéance ${escHtml(fmtDatePanneau(produit.ech))}`;
+  return `
+  <div class="ac-detail-panneau" data-isin="${escHtml(produit.isin)}">
+    <div class="ac-detail-entete">
+      <div class="ac-detail-id">
+        <div class="ac-detail-titre">${escHtml(produit.nom)}</div>
+        <div class="ac-detail-sous">${sous}</div>
+      </div>
+      ${detailNiveauHtml(produit)}
+    </div>
+    ${detailCorpsHtml(produit)}
+  </div>`;
+}
+
+function renderDetailPanneauGroupe(membres) {
   const ref = membres[0];
-  const groupNom = ref.nom.replace(/\bCAP\s+\d+\s+/, 'CAP ');
+  return `
+  <div class="ac-detail-panneau" data-isins="${escHtml(membres.map(m => m.isin).join(','))}">
+    <div class="ac-detail-entete">
+      <div class="ac-detail-id">
+        <div class="ac-detail-titre">${escHtml(detailGroupeNom(ref))}</div>
+        <div class="ac-detail-sous">${detailGroupeSous(ref)}</div>
+      </div>
+      ${detailNiveauHtml(ref)}
+    </div>
+    ${detailCorpsGroupeHtml(membres)}
+  </div>`;
+}
+
+function detailCorpsGroupeHtml(membres) {
+  const ref = membres[0];
   const niveauPct = (ref.strikeNum && ref.niveauNum)
     ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
     : '—';
@@ -740,16 +966,15 @@ function renderDetailGroupe(membres) {
   ];
 
   return `
-  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
-    <div class="sheet-panel">
-      <div class="sheet-handle"></div>
-      <div class="sheet-header">
-        <div class="page-title">${escHtml(groupNom)}</div>
-        <div class="page-sub">${escHtml(ref.sj)} · Constat. ${escHtml(ref.constat)} · Échéance ${escHtml(ref.ech)}</div>
-      </div>
-
     <div class="detail-content">
       ${detailInfoGrid(infoBoxes)}
+
+      <div class="detail-cmp bureau-seul">
+        <label class="detail-cmp-label">
+          <input type="checkbox" id="cmp-ref" onchange="App.toggleComparaisonRef(this.checked)">
+          Comparer à un indice de référence
+        </label>
+      </div>
 
       <div id="detail-chart-inline" class="detail-chart-inline"></div>
 
@@ -777,7 +1002,28 @@ function renderDetailGroupe(membres) {
       </div>
 
       <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
-    </div>
+    </div>`;
+}
+
+function detailGroupeNom(ref) { return ref.nom.replace(/\bCAP\s+\d+\s+/, 'CAP '); }
+function detailGroupeSous(ref) { return `${escHtml(ref.sjLabel || ref.sj)} · Constat. ${escHtml(fmtDatePanneau(ref.constat))} · Échéance ${escHtml(fmtDatePanneau(ref.ech))}`; }
+// Dates du panneau : format court cohérent avec les cartes, repli sur la valeur brute.
+function fmtDatePanneau(v) {
+  if (!v) return '—';
+  return formatDateCourte(v) || formatDateLongue(v) || String(v);
+}
+
+function renderDetailGroupe(membres) {
+  const ref = membres[0];
+  return `
+  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerDetail()">
+    <div class="sheet-panel">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="page-title">${escHtml(detailGroupeNom(ref))}</div>
+        <div class="page-sub">${detailGroupeSous(ref)}</div>
+      </div>
+      ${detailCorpsGroupeHtml(membres)}
     </div>
   </div>`;
 }
@@ -826,6 +1072,12 @@ function renderContrats(state, ucPerfs) {
     });
   })();
 
+  // Bureau : l'UC sélectionnée s'affiche dans le panneau de droite (jamais vide → 1re UC).
+  const ucSelExplicite = ucFiltrees.find(u => u.isin === (state && state.ucSel)) || null;
+  const ucCourante = ucSelExplicite || ucFiltrees.find(u => u.graphId) || ucFiltrees[0] || null;
+  const ucSel = ucCourante ? ucCourante.isin : null;
+  const ucPanneau = renderUCPanneau(ucCourante, ucPerfs);
+
   return `
   <div>
     <header class="page-header">
@@ -836,6 +1088,8 @@ function renderContrats(state, ucPerfs) {
     </header>
 
     <div class="page-body">
+     <div class="ac-split">
+      <div class="ac-col-liste">
 
       ${perf ? `
       <!-- ── Fonds en euros (dépliable, peu consulté au quotidien) ── -->
@@ -901,7 +1155,7 @@ function renderContrats(state, ucPerfs) {
             : CAT_MAP[u.categorie] === 'Obligataire'        ? 'Oblig.'
             : u.categorie;
           return `
-        <div class="uc-item${u.graphId ? ' clic' : ''}"${u.graphId ? ` onclick="App.ouvrirGraphiqueUC('${u.isin}')"` : ''}>
+        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel ? ' uc-item--actif' : ''}"${u.graphId ? ` onclick="App.ouvrirUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
@@ -920,7 +1174,34 @@ function renderContrats(state, ucPerfs) {
       </div>
 
       <div class="table-note mt-16">Taux FE nets de frais de gestion · performances UC indicatives · sources internes.</div>
+      </div><!-- /ac-col-liste -->
+
+      <div class="ac-col-detail">${ucPanneau}</div>
+     </div><!-- /ac-split -->
     </div>
+  </div>`;
+}
+
+// Panneau de droite de la page Fonds : identité de l'UC + graphique et composition.
+function renderUCPanneau(u, ucPerfs) {
+  if (!u) return '<div class="ac-detail-vide">Sélectionnez une unité de compte pour afficher sa fiche.</div>';
+  const p = ucPerfs ? ucPerfs[u.isin] : null;
+  const perfTxt = (p == null || isNaN(p)) ? '—'
+    : (p >= 0 ? '+' : '') + p.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+  const perfCls = (p == null || isNaN(p)) ? '' : (p >= 0 ? 'green' : 'red');
+  return `
+  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}">
+    <div class="ac-detail-entete">
+      <div class="ac-detail-id">
+        <div class="ac-detail-titre">${escHtml(u.nom)}</div>
+        <div class="ac-detail-sous">${escHtml(u.categorie || '')} · ${escHtml(u.isin)} · Actions ${escHtml(String(u.equity ?? '—'))} %</div>
+      </div>
+      <div class="ac-detail-niveau">
+        <div class="ac-detail-niveau-val tnum">${perfTxt}</div>
+        <div class="ac-detail-niveau-delta ${perfCls}">depuis le 01/01</div>
+      </div>
+    </div>
+    <div id="uc-chart-inline" class="detail-chart-inline"></div>
   </div>`;
 }
 

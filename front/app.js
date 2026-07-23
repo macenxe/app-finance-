@@ -77,6 +77,7 @@ const App = (() => {
         // Restaure la page courante au rafraîchissement (les fiches détail reviennent à la liste).
         page: state.page,
         ucCat: state.ucCat || null,
+        ucSel: state.ucSel || null,
         feOuvert: !!state.feOuvert,
         indices: donnees.indices,
         taux: donnees.taux,
@@ -97,7 +98,7 @@ const App = (() => {
       const raw = localStorage.getItem(CACHE_KEY);
       if (raw) {
         const c = JSON.parse(raw);
-        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, feOuvert: !!c.feOuvert };
+        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
         donnees.rappeles = c.rappeles || [];
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
@@ -137,10 +138,10 @@ const App = (() => {
     actus:    '<rect x="5" y="3" width="14" height="18" rx="1.5"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>',
   };
   const NAV = [
-    { key: 'dash',     label: 'Tableau de bord',       court: 'Accueil'  },
-    { key: 'prod',     label: 'Autocalls',              court: 'Autocall' },
-    { key: 'contrats', label: 'Fonds € et UC',          court: 'Fonds'    },
-    { key: 'actus',    label: 'Actualités économiques', court: 'Actus'    },
+    { key: 'dash',     label: 'Tableau de bord', court: 'Accueil'  },
+    { key: 'prod',     label: 'Autocall',        court: 'Autocall' },
+    { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds'    },
+    { key: 'actus',    label: 'Actualités',      court: 'Actus'    },
   ];
 
   function renderNav() {
@@ -161,11 +162,122 @@ const App = (() => {
     const topNav = document.getElementById('top-nav');
     if (topNav) {
       topNav.innerHTML = NAV.map(item => `
-        <div class="top-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${NAV_ICONS[item.key]}</svg>
-          <span>${item.label}</span>
-        </div>`).join('');
+        <div class="top-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">${item.label}</div>`).join('');
     }
+    const dtDate = document.querySelector('.dt-date');
+    if (dtDate && !dtDate.textContent) {
+      dtDate.textContent = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+  }
+
+  // Bureau : la fiche détail se déplie dans la liste. Mobile : feuille modale (inchangé).
+  function estBureau() { return window.innerWidth >= 641; }
+
+  // Indice de référence pour les comparaisons (base 100).
+  function indiceReference() {
+    const idx = (donnees.indices || []).find(i => /Euro Stoxx 50/i.test(i.nom))
+             || (donnees.indices || []).find(i => /CAC 40/i.test(i.nom));
+    if (!idx) return null;
+    const t = (typeof graphIdPour === 'function' ? graphIdPour(idx.nom) : null) || idx.ticker;
+    return t ? { ticker: t, label: idx.nom, couleur: '#9a8f7a' } : null;
+  }
+
+  function initChartDetail(p) {
+    if (!window.Chart) return;
+    // Mode comparé : les échelles diffèrent (indice vs action) → tracé en base 100, sans
+    // les repères de barrières qui n'ont de sens que sur une échelle de prix.
+    const ref = state.cmpRef ? indiceReference() : null;
+    if (ref) {
+      Chart.comparer('detail-chart-inline', [
+        { ticker: chartTickerPour(p), label: p.sjLabel || p.sj || p.nom, couleur: '#16304f' },
+        ref,
+      ]);
+      return;
+    }
+    Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
+      lignes: lignesPour(p), sous: p.sjLabel || p.sj,
+    });
+  }
+
+  // Carte « Performance comparée des indices » du tableau de bord.
+  function initComparaisonIndices() {
+    if (!estBureau() || state.page !== 'dash' || !window.Chart) return;
+    if (!document.getElementById('cmp-indices')) return;
+    const series = (donnees.indices || [])
+      .map(i => ({ ticker: (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker, label: i.nom }))
+      .filter(s => s.ticker)
+      .slice(0, 3);
+    if (series.length) Chart.comparer('cmp-indices', series);
+  }
+
+  function initChartDetailGroupe(membres) {
+    if (!window.Chart) return;
+    const ref = membres[0];
+    const indice = state.cmpRef ? indiceReference() : null;
+    if (indice) {
+      Chart.comparer('detail-chart-inline', [
+        { ticker: chartTickerPour(ref), label: ref.sjLabel || ref.sj || ref.nom, couleur: '#16304f' },
+        indice,
+      ]);
+      return;
+    }
+    const lignes = [];
+    if (ref.type === 'equity' && ref.strikeNum) {
+      lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
+      if (ref.bAutoNum != null) {
+        const v = (ref.bAutoNum / 100) * ref.strikeNum;
+        if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
+      }
+      // Synthèse : une seule ligne, celle du palier le moins protecteur (risque de perte le
+      // plus proche). Le détail des 3 paliers est déjà donné dans la case « Protection » au-dessus.
+      const pires = membres.reduce((min, m) => {
+        const pm = String(m.protection || '').match(/-(\d+)/);
+        const val = pm ? parseInt(pm[1], 10) : null;
+        return val != null && (min == null || val < min) ? val : min;
+      }, null);
+      if (pires != null) {
+        lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
+      }
+    }
+    Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
+      lignes, sous: ref.sjLabel || ref.sj,
+    });
+  }
+
+  // Réinstalle le graphique du panneau de détail après un re-rendu (le conteneur fait partie
+  // de la page en bureau : un renderPage le vide, contrairement à la feuille modale).
+  // On lit l'ISIN affiché sur le panneau : sans sélection explicite, il montre le 1er produit.
+  function rafraichirChartPanneau() {
+    if (!estBureau()) return;
+    const panneau = document.querySelector('.ac-detail-panneau');
+    if (!panneau) return;
+    // Page Fonds : graphique + composition de l'UC sélectionnée.
+    if (state.page === 'contrats') {
+      const gid = panneau.getAttribute('data-graph');
+      const isin = panneau.getAttribute('data-uc');
+      if (gid && window.Chart) {
+        const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
+        Chart.ouvrirInline('uc-chart-inline', gid, u ? u.nom : '', { sous: u ? u.categorie : '', compoIsin: isin });
+      }
+      return;
+    }
+    if (state.page !== 'prod') return;
+    majCaseComparaison();
+    const isins = panneau.getAttribute('data-isins');
+    if (isins) {
+      const membres = isins.split(',').map(i => donnees.produits.find(p => p.isin === i)).filter(Boolean);
+      if (membres.length) initChartDetailGroupe(membres);
+      return;
+    }
+    const isin = panneau.getAttribute('data-isin');
+    const p = isin ? donnees.produits.find(x => x.isin === isin) : null;
+    if (p) initChartDetail(p);
+  }
+
+  // Reflète l'état de la case « Comparer » après un re-rendu du panneau.
+  function majCaseComparaison() {
+    const c = document.getElementById('cmp-ref');
+    if (c) c.checked = !!state.cmpRef;
   }
 
   function renderPage(keepScroll = false) {
@@ -175,7 +287,7 @@ const App = (() => {
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
       case 'prod':     el.innerHTML = renderProduits(produits, state, donnees.rappeles);  break;
-      case 'actus':    el.innerHTML = renderActus(); chargerActus(); break;
+      case 'actus':    el.innerHTML = renderActus(state); chargerActus(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
@@ -183,7 +295,8 @@ const App = (() => {
     }
     el.scrollTop = saved;
     renderNav();
-    if (state.page === 'dash') { majCartesMarche(); }
+    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); }
+    rafraichirChartPanneau();
   }
 
   // Fiches détail Autocall : présentées en feuille modale (bottom sheet) plutôt qu'en page,
@@ -197,17 +310,6 @@ const App = (() => {
     backdrop.classList.add('sheet-open');
     const panel = backdrop.querySelector('.sheet-panel');
     if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, fermerSheet);
-    // Bureau : le tiroir latéral n'a pas de poignée de fermeture — on injecte un bouton ✕.
-    // Masqué en mobile via CSS (.sheet-close), où la poignée reste le moyen de fermeture.
-    if (panel && !panel.querySelector('.sheet-close')) {
-      const btn = document.createElement('button');
-      btn.className = 'sheet-close';
-      btn.type = 'button';
-      btn.setAttribute('aria-label', 'Fermer');
-      btn.innerHTML = '✕';
-      btn.addEventListener('click', () => App.fermerDetail());
-      panel.appendChild(btn);
-    }
   }
 
   function fermerSheet() {
@@ -527,6 +629,15 @@ const App = (() => {
       state = { ...state, familleFiltre: tab };
       renderPage(true);
     },
+    // Bascule le graphique de la fiche entre échelle de prix et comparaison base 100.
+    toggleComparaisonRef(actif) {
+      state = { ...state, cmpRef: !!actif };
+      rafraichirChartPanneau();
+    },
+    setNewsTheme(theme) {
+      state = { ...state, newsTheme: theme || null };
+      renderPage();
+    },
     setUcCat(cat) {
       state = { ...state, ucCat: state.ucCat === cat ? null : cat };
       sauvegarderEtat();
@@ -540,46 +651,35 @@ const App = (() => {
     voirDetail(isin) {
       const p = donnees.produits.find(x => x.isin === isin);
       if (!p) return;
+      if (estBureau()) {
+        // Split master-détail : la sélection reste affichée dans le panneau de droite.
+        state = { ...state, detailIsin: isin, detailIsins: null };
+        renderPage(true);
+        return;
+      }
       state = { ...state, detailIsin: isin, detailIsins: null };
       ouvrirSheet(renderDetail(p));
-      if (window.Chart) {
-        Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
-          lignes: lignesPour(p), sous: p.sjLabel || p.sj,
-        });
-      }
+      initChartDetail(p);
     },
     voirDetailGroupe(isinsStr) {
       const isins = isinsStr.split(',');
       const membres = isins.map(isin => donnees.produits.find(p => p.isin === isin)).filter(Boolean);
       if (membres.length === 0) return;
+      if (estBureau()) {
+        state = { ...state, detailIsins: isins, detailIsin: null };
+        renderPage(true);
+        return;
+      }
       state = { ...state, detailIsins: isins, detailIsin: null };
       ouvrirSheet(renderDetailGroupe(membres));
-      if (window.Chart) {
-        const ref = membres[0];
-        const lignes = [];
-        if (ref.type === 'equity' && ref.strikeNum) {
-          lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
-          if (ref.bAutoNum != null) {
-            const v = (ref.bAutoNum / 100) * ref.strikeNum;
-            if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
-          }
-          // Synthèse : une seule ligne, celle du palier le moins protecteur (risque de perte le
-          // plus proche). Le détail des 3 paliers est déjà donné dans la case « Protection » au-dessus.
-          const pires = membres.reduce((min, m) => {
-            const pm = String(m.protection || '').match(/-(\d+)/);
-            const val = pm ? parseInt(pm[1], 10) : null;
-            return val != null && (min == null || val < min) ? val : min;
-          }, null);
-          if (pires != null) {
-            lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
-          }
-        }
-        Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
-          lignes, sous: ref.sjLabel || ref.sj,
-        });
-      }
+      initChartDetailGroupe(membres);
     },
     fermerDetail() {
+      if (estBureau()) {
+        state = { ...state, detailIsin: null, detailIsins: null };
+        renderPage(true);
+        return;
+      }
       fermerSheet();
       state = { ...state, detailIsin: null, detailIsins: null };
     },
@@ -591,6 +691,13 @@ const App = (() => {
       if (!window.Chart) return;
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
       if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin, sheet: true });
+    },
+    // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : feuille modale (inchangé).
+    ouvrirUC(isin) {
+      if (!estBureau()) { App.ouvrirGraphiqueUC(isin); return; }
+      state = { ...state, ucSel: isin };
+      sauvegarderEtat();
+      renderPage(true);
     },
     fermerModal() {
       const root = document.getElementById('modal-root');
