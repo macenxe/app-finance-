@@ -173,28 +173,9 @@ const App = (() => {
   // Bureau : la fiche détail se déplie dans la liste. Mobile : feuille modale (inchangé).
   function estBureau() { return window.innerWidth >= 641; }
 
-  // Indice de référence pour les comparaisons (base 100).
-  function indiceReference() {
-    const idx = (donnees.indices || []).find(i => /Euro Stoxx 50/i.test(i.nom))
-             || (donnees.indices || []).find(i => /CAC 40/i.test(i.nom));
-    if (!idx) return null;
-    const t = (typeof graphIdPour === 'function' ? graphIdPour(idx.nom) : null) || idx.ticker;
-    return t ? { ticker: t, label: idx.nom, couleur: '#9a8f7a' } : null;
-  }
-
-  function initChartDetail(p) {
+  function initChartDetail(p, containerId = 'detail-chart-inline') {
     if (!window.Chart) return;
-    // Mode comparé : les échelles diffèrent (indice vs action) → tracé en base 100, sans
-    // les repères de barrières qui n'ont de sens que sur une échelle de prix.
-    const ref = state.cmpRef ? indiceReference() : null;
-    if (ref) {
-      Chart.comparer('detail-chart-inline', [
-        { ticker: chartTickerPour(p), label: p.sjLabel || p.sj || p.nom, couleur: '#16304f' },
-        ref,
-      ]);
-      return;
-    }
-    Chart.ouvrirInline('detail-chart-inline', chartTickerPour(p), p.nom, {
+    Chart.ouvrirInline(containerId, chartTickerPour(p), p.nom, {
       lignes: lignesPour(p), sous: p.sjLabel || p.sj,
     });
   }
@@ -300,17 +281,9 @@ const App = (() => {
     }));
   }
 
-  function initChartDetailGroupe(membres) {
+  function initChartDetailGroupe(membres, containerId = 'detail-chart-inline') {
     if (!window.Chart) return;
     const ref = membres[0];
-    const indice = state.cmpRef ? indiceReference() : null;
-    if (indice) {
-      Chart.comparer('detail-chart-inline', [
-        { ticker: chartTickerPour(ref), label: ref.sjLabel || ref.sj || ref.nom, couleur: '#16304f' },
-        indice,
-      ]);
-      return;
-    }
     const lignes = [];
     if (ref.type === 'equity' && ref.strikeNum) {
       lignes.push({ valeur: ref.strikeNum, label: 'Strike', couleur: '#16304f' });
@@ -329,7 +302,7 @@ const App = (() => {
         lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
       }
     }
-    Chart.ouvrirInline('detail-chart-inline', chartTickerPour(ref), ref.nom, {
+    Chart.ouvrirInline(containerId, chartTickerPour(ref), ref.nom, {
       lignes, sous: ref.sjLabel || ref.sj,
     });
   }
@@ -352,7 +325,6 @@ const App = (() => {
       return;
     }
     if (state.page !== 'prod') return;
-    majCaseComparaison();
     const isins = panneau.getAttribute('data-isins');
     if (isins) {
       const membres = isins.split(',').map(i => donnees.produits.find(p => p.isin === i)).filter(Boolean);
@@ -362,12 +334,6 @@ const App = (() => {
     const isin = panneau.getAttribute('data-isin');
     const p = isin ? donnees.produits.find(x => x.isin === isin) : null;
     if (p) initChartDetail(p);
-  }
-
-  // Reflète l'état de la case « Comparer » après un re-rendu du panneau.
-  function majCaseComparaison() {
-    const c = document.getElementById('cmp-ref');
-    if (c) c.checked = !!state.cmpRef;
   }
 
   function renderPage(keepScroll = false) {
@@ -728,11 +694,6 @@ const App = (() => {
       state = { ...state, familleFiltre: tab };
       renderPage(true);
     },
-    // Bascule le graphique de la fiche entre échelle de prix et comparaison base 100.
-    toggleComparaisonRef(actif) {
-      state = { ...state, cmpRef: !!actif };
-      rafraichirChartPanneau();
-    },
     // Sélection des séries du graphique « Performance comparée » (tableau de bord).
     toggleCmpPicker() {
       state = { ...state, cmpPickerOuvert: !state.cmpPickerOuvert };
@@ -775,7 +736,7 @@ const App = (() => {
       }
       state = { ...state, detailIsin: isin, detailIsins: null };
       ouvrirSheet(renderDetail(p));
-      initChartDetail(p);
+      initChartDetail(p, 'detail-chart-inline-sheet');
     },
     voirDetailGroupe(isinsStr) {
       const isins = isinsStr.split(',');
@@ -788,7 +749,7 @@ const App = (() => {
       }
       state = { ...state, detailIsins: isins, detailIsin: null };
       ouvrirSheet(renderDetailGroupe(membres));
-      initChartDetailGroupe(membres);
+      initChartDetailGroupe(membres, 'detail-chart-inline-sheet');
     },
     fermerDetail() {
       if (estBureau()) {

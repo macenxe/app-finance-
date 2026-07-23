@@ -814,7 +814,7 @@ function detailBarriereTxt(strikeNum, pct, num, isCms) {
 
 // Corps d'une fiche détail (synthèse + graphique + description), partagé par la feuille
 // mobile (renderDetail) et le dépliage en ligne du bureau (renderDetailInline).
-function detailCorpsHtml(produit) {
+function detailCorpsHtml(produit, chartId = 'detail-chart-inline') {
   const isCms = produit.type === 'cms';
 
   // Coupon en mémoire : périodes où la barrière coupon n'a pas été franchie, dont le gain
@@ -835,17 +835,10 @@ function detailCorpsHtml(produit) {
 
   return `
     <div class="detail-content">
-      ${detailInfoGrid(infoBoxes)}
-
-      ${produit.type === 'equity' ? `
-      <div class="detail-cmp bureau-seul">
-        <label class="detail-cmp-label">
-          <input type="checkbox" id="cmp-ref" onchange="App.toggleComparaisonRef(this.checked)">
-          Comparer à un indice de référence
-        </label>
-      </div>` : ''}
-
-      <div id="detail-chart-inline" class="detail-chart-inline"></div>
+      <div class="detail-chart-row">
+        ${detailInfoGrid(infoBoxes)}
+        <div id="${chartId}" class="detail-chart-inline"></div>
+      </div>
 
       <div class="card p-18">
         <div class="card-title mb-12">Description</div>
@@ -888,7 +881,7 @@ function renderDetail(produit) {
         <div class="page-title">${escHtml(produit.nom)}</div>
         <div class="page-sub">${escHtml(produit.isin)} · ${detailTypeLabel(produit)}</div>
       </div>
-      ${detailCorpsHtml(produit)}
+      ${detailCorpsHtml(produit, 'detail-chart-inline-sheet')}
     </div>
   </div>`;
 }
@@ -937,7 +930,7 @@ function renderDetailPanneauGroupe(membres) {
   </div>`;
 }
 
-function detailCorpsGroupeHtml(membres) {
+function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline') {
   const ref = membres[0];
   const niveauPct = (ref.strikeNum && ref.niveauNum)
     ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
@@ -974,37 +967,29 @@ function detailCorpsGroupeHtml(membres) {
 
   return `
     <div class="detail-content">
-      ${detailInfoGrid(infoBoxes)}
-
-      <div class="detail-cmp bureau-seul">
-        <label class="detail-cmp-label">
-          <input type="checkbox" id="cmp-ref" onchange="App.toggleComparaisonRef(this.checked)">
-          Comparer à un indice de référence
-        </label>
+      <div class="detail-chart-row">
+        ${detailInfoGrid(infoBoxes)}
+        <div id="${chartId}" class="detail-chart-inline"></div>
       </div>
 
-      <div id="detail-chart-inline" class="detail-chart-inline"></div>
-
-      <div style="margin-top:16px;">
-        <div class="card p-18">
-          <div class="card-title mb-12">Description</div>
-          <div class="detail-rows">
-            <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(ref.sj)}</span></div>
-            <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(String(ref.strike))}</span></div>
-            <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(String(ref.niveau))}</span></div>
-            <div class="detail-row">
-              <span class="detail-key">% du strike</span>
-              <span class="detail-val tnum" style="font-weight:600;color:${pctColor};">${niveauPct}</span>
-            </div>
-            <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(String(ref.bCoupon))}</span></div>
-            <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
-            <div class="detail-row">
-              <span class="detail-key">Coupon en mémoire</span>
-              <span class="detail-val tnum"${nbCouponsGroupe > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireTxt}</span>
-            </div>
-            <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(ref.constat)}</span></div>
-            <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(ref.ech)}</span></div>
+      <div class="card p-18">
+        <div class="card-title mb-12">Description</div>
+        <div class="detail-rows">
+          <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(ref.sj)}</span></div>
+          <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(String(ref.strike))}</span></div>
+          <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(String(ref.niveau))}</span></div>
+          <div class="detail-row">
+            <span class="detail-key">% du strike</span>
+            <span class="detail-val tnum" style="font-weight:600;color:${pctColor};">${niveauPct}</span>
           </div>
+          <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(String(ref.bCoupon))}</span></div>
+          <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
+          <div class="detail-row">
+            <span class="detail-key">Coupon en mémoire</span>
+            <span class="detail-val tnum"${nbCouponsGroupe > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireTxt}</span>
+          </div>
+          <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(ref.constat)}</span></div>
+          <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(ref.ech)}</span></div>
         </div>
       </div>
 
@@ -1030,7 +1015,7 @@ function renderDetailGroupe(membres) {
         <div class="page-title">${escHtml(detailGroupeNom(ref))}</div>
         <div class="page-sub">${detailGroupeSous(ref)}</div>
       </div>
-      ${detailCorpsGroupeHtml(membres)}
+      ${detailCorpsGroupeHtml(membres, 'detail-chart-inline-sheet')}
     </div>
   </div>`;
 }

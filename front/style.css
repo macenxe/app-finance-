@@ -911,14 +911,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .events-grid { display: flex; flex-direction: column; }
 
   /* ── Autocall : split master-détail (liste compacte à gauche, fiche à droite) ── */
-  .ac-split { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 24px; align-items: start; }
+  .ac-split { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: 24px; align-items: stretch; }
   .ac-col-liste, .ac-col-detail { min-width: 0; }
   .ac-toolbar { justify-content: flex-start; margin-bottom: 12px; }
   .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 6px 14px; margin-bottom: 12px; }
   /* La liste défile seule : la fiche de droite reste visible en permanence. */
   .ac-list {
     display: flex; flex-direction: column; gap: 10px;
-    max-height: calc(100vh - 275px); overflow-y: auto; padding-right: 4px;
+    max-height: calc(100vh - 315px); overflow-y: auto; padding-right: 4px;
   }
   /* Page Fonds : la liste UC défile aussi, et l'UC sélectionnée est mise en avant */
   .uc-liste { max-height: calc(100vh - 330px); overflow-y: auto; padding-right: 4px; }
@@ -978,9 +978,6 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .cmp-card .chart-cmp-head { margin-bottom: 5px; }
   .cmp-card .chart-cmp-item { font-size: 11.5px; }
   .cmp-card .chart-cmp-dates { margin-top: 2px; }
-  .detail-cmp { margin-bottom: 10px; }
-  .detail-cmp-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #5b5e63; cursor: pointer; }
-  .detail-cmp-label input { accent-color: #16304f; cursor: pointer; }
 
   /* ── Chips d'ajout/retrait des séries comparées (tableau de bord uniquement) ── */
   .cmp-chips { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; margin-bottom: 6px; position: relative; }
@@ -1032,23 +1029,49 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── Panneau de détail permanent (colonne de droite) ── */
   .ac-col-detail { display: block; }
   .ac-detail-panneau {
-    background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 24px 28px;
+    background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 16px 22px 14px;
+    height: 100%; box-sizing: border-box; display: flex; flex-direction: column;
   }
   .ac-detail-entete {
     display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px; flex: none;
   }
   .ac-detail-id { min-width: 0; }
-  .ac-detail-titre { font-family: 'Spectral', serif; font-size: 23px; font-weight: 600; color: #16304f; line-height: 1.2; }
-  .ac-detail-sous  { font-size: 13px; color: #9a8f7a; margin-top: 5px; }
+  .ac-detail-titre { font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #16304f; line-height: 1.2; }
+  .ac-detail-sous  { font-size: 12.5px; color: #9a8f7a; margin-top: 4px; }
   .ac-detail-niveau { text-align: right; flex: none; }
-  .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 28px; font-weight: 700; color: #16304f; line-height: 1.1; }
-  .ac-detail-niveau-delta { font-size: 13px; font-weight: 600; margin-top: 3px; }
+  .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 24px; font-weight: 700; color: #16304f; line-height: 1.1; }
+  .ac-detail-niveau-delta { font-size: 12.5px; font-weight: 600; margin-top: 3px; }
   .ac-detail-niveau-delta.green  { color: #1d6f4c; }
   .ac-detail-niveau-delta.orange { color: #b06a1a; }
   .ac-detail-niveau-delta.red    { color: #9a3535; }
-  .ac-detail-panneau .detail-content { padding: 0; }
-  .ac-detail-panneau .detail-info-grid { grid-template-columns: repeat(4, 1fr); }
+  /* Le panneau (flex colonne, cf. .ac-detail-panneau ci-dessus) est étiré à la hauteur de la
+     liste de gauche (.ac-split align-items:stretch) : la case Description grandit pour
+     absorber l'écart au lieu de laisser un vide sous une fiche plus courte que la liste. */
+  .ac-detail-panneau .detail-content { padding: 0; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  /* Graphique + cases de synthèse côte à côte : le graphique (ratio fixe) n'a pas besoin de
+     toute la largeur de la colonne détail, et les 4 cases empilées à sa droite comblent
+     l'espace qui restait vide. */
+  .ac-detail-panneau .detail-chart-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; flex: none; }
+  .ac-detail-panneau .detail-chart-inline { order: 1; flex: 3 1 0; max-width: 400px; min-width: 170px; margin: 0; padding: 9px 12px 6px; }
+  .ac-detail-panneau .detail-info-grid {
+    order: 2; flex: 1 1 0; min-width: 100px;
+    grid-template-columns: 1fr; gap: 8px; margin-bottom: 0; align-content: flex-start;
+  }
+  .ac-detail-panneau .detail-info-box { padding: 10px 12px; }
+  .ac-detail-panneau .detail-info-val { font-size: 14.5px; }
+  .ac-detail-panneau .chart-readout { min-height: 0; margin-bottom: 3px; gap: 0; }
+  .ac-detail-panneau .chart-prix { font-size: 19px; }
+  .ac-detail-panneau .chart-periodes { margin-top: 6px; gap: 5px; }
+  .ac-detail-panneau .chart-per { padding: 4px 7px; font-size: 10.5px; }
+  /* Case Description : grandit pour occuper l'espace restant, et ses lignes s'espacent
+     régulièrement sur la hauteur disponible plutôt que de rester tassées en haut. */
+  .ac-detail-panneau .card.p-18 { padding: 12px 16px; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .ac-detail-panneau .card-title { font-size: 13.5px; margin-bottom: 3px !important; flex: none; }
+  .ac-detail-panneau .detail-rows { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; flex: 1; align-content: space-evenly; }
+  .ac-detail-panneau .detail-row { padding: 5px 0; }
+  .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 12.5px; }
+  .ac-detail-panneau .detail-note { flex: none; margin-top: 8px; }
   .ac-detail-vide {
     background: #fff; border: 1px dashed #ddd5c2; border-radius: 10px;
     padding: 44px 20px; text-align: center; color: #9a8f7a; font-size: 13px;
