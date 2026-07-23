@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "front-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", ".", "--cors", "-p", "5174"],
+      "port": 5174,
+      "autoPort": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "front",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "front", "--no-clipboard", "-l", "3000"],
+      "port": 3000
+    }
+  ]
+}
