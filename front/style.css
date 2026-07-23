@@ -921,7 +921,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     max-height: calc(100vh - 315px); overflow-y: auto; padding-right: 4px;
   }
   /* Page Fonds : la liste UC défile aussi, et l'UC sélectionnée est mise en avant */
-  .uc-liste { max-height: calc(100vh - 330px); overflow-y: auto; padding-right: 4px; }
+  .uc-liste { max-height: calc(100vh - 370px); overflow-y: auto; padding-right: 4px; }
   .uc-item--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   .uc-chips { justify-content: flex-start; }
 
@@ -1030,7 +1030,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-col-detail { display: block; }
   .ac-detail-panneau {
     background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 16px 22px 14px;
-    height: 100%; box-sizing: border-box; display: flex; flex-direction: column;
+    height: 100%; max-height: calc(100vh - 176px); box-sizing: border-box; display: flex; flex-direction: column;
   }
   .ac-detail-entete {
     display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
@@ -1049,33 +1049,54 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      liste de gauche (.ac-split align-items:stretch) : la case Description grandit pour
      absorber l'écart au lieu de laisser un vide sous une fiche plus courte que la liste. */
   .ac-detail-panneau .detail-content { padding: 0; flex: 1; min-height: 0; display: flex; flex-direction: column; }
-  /* Graphique + cases de synthèse côte à côte : le graphique (ratio fixe) n'a pas besoin de
-     toute la largeur de la colonne détail, et les 4 cases empilées à sa droite comblent
-     l'espace qui restait vide. */
-  .ac-detail-panneau .detail-chart-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; flex: none; }
-  .ac-detail-panneau .detail-chart-inline { order: 1; flex: 3 1 0; max-width: 400px; min-width: 170px; margin: 0; padding: 9px 12px 6px; }
+  /* Cases de synthèse en ligne au-dessus, graphique centré et agrandi en dessous (l'ordre
+     visuel vient de `order` ; le graphique reste second dans le HTML pour que la feuille
+     mobile — non concernée par ces règles — garde son ordre naturel). */
+  .ac-detail-panneau .detail-chart-row { display: flex; flex-direction: column; margin-bottom: 8px; flex: none; }
   .ac-detail-panneau .detail-info-grid {
-    order: 2; flex: 1 1 0; min-width: 100px;
-    grid-template-columns: 1fr; gap: 8px; margin-bottom: 0; align-content: flex-start;
+    order: 1; flex: none;
+    grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;
   }
-  .ac-detail-panneau .detail-info-box { padding: 10px 12px; }
-  .ac-detail-panneau .detail-info-val { font-size: 14.5px; }
+  .ac-detail-panneau .detail-chart-inline {
+    order: 2; flex: none; width: 100%; max-width: 400px; margin: 0 auto; padding: 9px 12px 5px;
+  }
+  .ac-detail-panneau .detail-info-box { padding: 8px 12px; }
+  .ac-detail-panneau .detail-info-val { font-size: 13.5px; }
   .ac-detail-panneau .chart-readout { min-height: 0; margin-bottom: 3px; gap: 0; }
-  .ac-detail-panneau .chart-prix { font-size: 19px; }
+  .ac-detail-panneau .chart-prix { font-size: 20px; }
   .ac-detail-panneau .chart-periodes { margin-top: 6px; gap: 5px; }
-  .ac-detail-panneau .chart-per { padding: 4px 7px; font-size: 10.5px; }
+  .ac-detail-panneau .chart-per { padding: 4px 8px; font-size: 10.5px; }
   /* Case Description : grandit pour occuper l'espace restant, et ses lignes s'espacent
      régulièrement sur la hauteur disponible plutôt que de rester tassées en haut. */
-  .ac-detail-panneau .card.p-18 { padding: 12px 16px; flex: 1; min-height: 0; display: flex; flex-direction: column; }
-  .ac-detail-panneau .card-title { font-size: 13.5px; margin-bottom: 3px !important; flex: none; }
+  .ac-detail-panneau .card.p-18 { padding: 10px 14px; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .ac-detail-panneau .card-title { font-size: 12.5px; margin-bottom: 2px !important; flex: none; }
   .ac-detail-panneau .detail-rows { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; flex: 1; align-content: space-evenly; }
-  .ac-detail-panneau .detail-row { padding: 5px 0; }
-  .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 12.5px; }
-  .ac-detail-panneau .detail-note { flex: none; margin-top: 8px; }
+  .ac-detail-panneau .detail-row { padding: 3px 0; }
+  .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 12px; }
+  .ac-detail-panneau .detail-note { flex: none; margin-top: 6px; }
   .ac-detail-vide {
     background: #fff; border: 1px dashed #ddd5c2; border-radius: 10px;
     padding: 44px 20px; text-align: center; color: #9a8f7a; font-size: 13px;
   }
+
+  /* ── Page Fonds € & UC : même panneau que l'Autocall (.ac-detail-panneau), mais le
+     graphique+composition doit remplir toute la hauteur du panneau (pas de case Description
+     à faire grandir ici) — la composition (répartition/secteurs/lignes) devient la zone qui
+     absorbe l'écart et défile sur elle-même si elle est plus longue que la place restante. */
+  .ac-detail-panneau[data-uc] .detail-chart-inline {
+    flex: 1; min-height: 0; max-width: none; width: 100%; margin: 0;
+    display: flex; flex-direction: column; padding: 10px 14px 10px;
+  }
+  .ac-detail-panneau[data-uc] .chart-readout { flex: none; min-height: 0; margin-bottom: 3px; }
+  .ac-detail-panneau[data-uc] .chart-prix { font-size: 20px; }
+  .ac-detail-panneau[data-uc] .chart-zone { flex: none; width: 100%; max-width: 480px; margin: 0 auto; }
+  .ac-detail-panneau[data-uc] .chart-periodes { flex: none; margin-top: 6px; gap: 5px; }
+  .ac-detail-panneau[data-uc] .chart-per { padding: 4px 8px; font-size: 10.5px; }
+  .ac-detail-panneau[data-uc] .chart-compo {
+    flex: 1; min-height: 0; overflow-y: auto; margin-top: 10px; padding-top: 10px; padding-right: 4px;
+  }
+  .ac-detail-panneau[data-uc] .compo-titre { margin: 10px 0 6px; }
+  .ac-detail-panneau[data-uc] .compo-hold { padding: 4px 0; }
 }
 
 /* La liste UC reste sur une seule colonne : elle vit dans la colonne gauche du split. */
