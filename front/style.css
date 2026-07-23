@@ -955,18 +955,21 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-niveau--coupon .ac-bar-niveau-dot,
   .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
 
-  /* ── Graphique comparé (base 100) : légende à gauche, filtres de période à droite ── */
-  .chart-cmp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
-  .chart-cmp-legende { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  /* ── Graphique comparé (base 100) : légende et filtres de période centrés ── */
+  .chart-cmp-head { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
   .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
   .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
   .chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
   .chart-cmp-perf.up   { color: #1d6f4c; }
   .chart-cmp-perf.down { color: #9a3535; }
-  /* margin-left:auto : garantit l'alignement à droite même si la légende (5 séries) est
-     trop large et fait passer les boutons de période sur leur propre ligne (flex-wrap). */
-  .chart-periodes-cmp { margin-top: 0; margin-left: auto; flex: none; justify-content: flex-end; }
+  .chart-periodes-cmp { margin-top: 0; flex: none; justify-content: center; }
   .chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 4px; }
+  #chart-cmp-date-survol { font-weight: 700; color: #16304f; }
+  /* Grille discrète (haut / base 100 en pointillé / bas) + survol multi-séries. */
+  .chart-cmp-grid { stroke: #f0ebe0; stroke-width: 1; }
+  .chart-cmp-grid--base { stroke: #ddd5c2; stroke-dasharray: 3 3; }
+  #chart-cmp-zone svg { cursor: crosshair; }
   /* Carte « Performance comparée » du tableau de bord : gabarit resserré pour tenir sans
      défilement (padding réduit, boutons de période plus petits, moins de marge). */
   .cmp-card { padding: 10px 14px 8px; }
@@ -978,6 +981,42 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .detail-cmp { margin-bottom: 10px; }
   .detail-cmp-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #5b5e63; cursor: pointer; }
   .detail-cmp-label input { accent-color: #16304f; cursor: pointer; }
+
+  /* ── Chips d'ajout/retrait des séries comparées (tableau de bord uniquement) ── */
+  .cmp-chips { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; margin-bottom: 6px; position: relative; }
+  .cmp-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    height: 21px; padding: 0 7px 0 9px; border-radius: 11px;
+    background: #f2ede0; font-size: 10.5px; font-weight: 600; color: #5b5450;
+    white-space: nowrap;
+  }
+  .cmp-chip-retirer {
+    display: flex; align-items: center; justify-content: center;
+    width: 13px; height: 13px; border-radius: 50%; border: none; padding: 0;
+    background: rgba(90,80,70,.14); color: #7a6f60; font-size: 9px; line-height: 1; cursor: pointer;
+    font-family: inherit; transition: background .12s, color .12s;
+  }
+  .cmp-chip-retirer:hover { background: #9a3535; color: #fff; }
+  .cmp-chip-ajouter {
+    display: inline-flex; align-items: center; gap: 4px;
+    height: 21px; padding: 0 9px; border-radius: 11px;
+    border: 1px dashed #c9bfa8; background: none; font-size: 10.5px; font-weight: 600; color: #9a7b3c;
+    cursor: pointer; font-family: inherit; transition: background .12s, border-color .12s;
+  }
+  .cmp-chip-ajouter:hover { background: #f7f1e3; border-color: #9a7b3c; }
+  .cmp-picker {
+    position: absolute; top: 27px; left: 50%; transform: translateX(-50%); z-index: 8; width: 220px;
+    background: #fff; border: 1px solid #e6ddc8; border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(22,48,79,.14); padding: 6px; max-height: 260px; overflow-y: auto;
+  }
+  .cmp-picker-groupe { font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: #b5ab95; font-weight: 700; padding: 6px 8px 3px; }
+  .cmp-picker-item {
+    display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px;
+    font-size: 12px; color: #3a3d42; cursor: pointer; transition: background .1s;
+  }
+  .cmp-picker-item:hover { background: #f7f4ec; }
+  .cmp-picker-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .cmp-picker-vide { padding: 10px 8px; font-size: 11.5px; color: #9a8f7a; text-align: center; }
 
   /* ── Actualités : fil + colonne de filtres par thème ── */
   .news-split { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; align-items: start; }

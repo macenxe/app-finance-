@@ -365,12 +365,31 @@ const Chart = (() => {
   // Les séries n'ont pas la même échelle (un indice à 8 000 pts et une action à 8 €) : on
   // les ramène toutes en base 100 au début de la période. L'axe exprime donc une
   // performance relative, pas un prix — les repères de barrières n'y ont pas de sens.
-  const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a'];
+  const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a', '#6b4c9a', '#1a7a7a', '#7a5a3a'];
   // Gabarit plus bas que le graphique détail (300) : la comparaison n'a pas besoin d'autant
   // de hauteur (pas de repères de barrières), et le tableau de bord doit tenir sans défiler.
   const CMP_VBH = 115;
   const cmpPlotH = CMP_VBH - padT - padB;
   let etatCmp = null;
+
+  // Courbe lissée (Catmull-Rom → Bézier cubique) plutôt que des segments droits : utilisée
+  // par le graphique comparé ET les sparklines (exposée via Chart.smooth pour app.js).
+  // pts : [[x,y], ...]
+  function smoothPathD(pts) {
+    if (!pts.length) return '';
+    if (pts.length < 3) return pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+    let d = 'M' + pts[0][0].toFixed(1) + ' ' + pts[0][1].toFixed(1);
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i === 0 ? 0 : i - 1];
+      const p1 = pts[i];
+      const p2 = pts[i + 1];
+      const p3 = pts[i + 2 < pts.length ? i + 2 : i + 1];
+      const c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = p1[1] + (p2[1] - p0[1]) / 6;
+      const c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = p2[1] - (p3[1] - p1[1]) / 6;
+      d += ' C' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) + ' ' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) + ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+    }
+    return d;
+  }
 
   // series : [{ ticker, label, couleur? }]
   function comparer(containerId, series, opts) {
@@ -455,39 +474,89 @@ const Chart = (() => {
     if (min === max) { min -= 1; max += 1; }
     const marge = (max - min) * 0.08; min -= marge; max += marge;
     const Y = v => padT + (1 - (v - min) / (max - min)) * cmpPlotH;
+    const Xn = n => (i) => padL + (i / (n - 1)) * plotW;
 
-    const paths = normes.map(s => {
-      const n = s.vals.length;
-      const X = i => padL + (i / (n - 1)) * plotW;
-      let d = '';
-      for (let i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(s.vals[i]).toFixed(1) + ' ';
-      return `<path d="${d}" fill="none" stroke="${s.couleur}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>`;
+    // Grille horizontale discrète (haut / base 100 / bas) — repère visuel sans surcharger.
+    const niveaux = [...new Set([max - marge, 100, min + marge])].filter(v => v >= min && v <= max);
+    const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid${Math.round(v) === 100 ? ' chart-cmp-grid--base' : ''}"/>`).join('');
+
+    const paths = normes.map((s, idx) => {
+      const X = Xn(s.vals.length);
+      const pts = s.vals.map((v, i) => [X(i), Y(v)]);
+      return `<path class="chart-cmp-line" data-serie="${idx}" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
     }).join('');
-
-    // Repère du point de départ commun (base 100).
-    const base100 = (100 >= min && 100 <= max)
-      ? `<line x1="${padL}" y1="${Y(100).toFixed(1)}" x2="${VBW - padR}" y2="${Y(100).toFixed(1)}" class="chart-grid"/>` : '';
+    const points = normes.map((s, idx) => `<circle class="chart-cmp-pt" data-serie="${idx}" r="3" fill="${s.couleur}" stroke="#fff" stroke-width="1.3" style="display:none"/>`).join('');
 
     zone.innerHTML = `
-      <svg viewBox="0 0 ${VBW} ${CMP_VBH}" xmlns="http://www.w3.org/2000/svg">
-        ${base100}${paths}
+      <svg id="chart-cmp-svg" viewBox="0 0 ${VBW} ${CMP_VBH}" xmlns="http://www.w3.org/2000/svg">
+        ${grille}${paths}${points}
+        <line id="chart-cmp-cross" x1="0" y1="${padT}" x2="0" y2="${padT + cmpPlotH}" class="chart-cross" style="display:none"/>
+        <rect x="0" y="0" width="${VBW}" height="${CMP_VBH}" fill="transparent" pointer-events="all"/>
       </svg>`;
 
-    if (leg) leg.innerHTML = normes.map(s => {
-      const perf = s.vals[s.vals.length - 1] - 100;
-      const txt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-      return `<span class="chart-cmp-item">
-        <span class="chart-cmp-trait" style="background:${s.couleur}"></span>${esc(s.label)}
-        <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${txt}</span></span>`;
-    }).join('');
+    // Conservés pour le survol (attacherSurvolComparaison lit etatCmp.normes/geoCmp).
+    etatCmp.normes = normes;
+    etatCmp.geoCmp = { Y, Xn, min, max };
+
+    const rendreLegende = (idx) => {
+      if (!leg) return;
+      leg.innerHTML = normes.map((s, i) => {
+        const val = (idx == null) ? s.vals[s.vals.length - 1] : s.vals[Math.min(idx, s.vals.length - 1)];
+        const perf = val - 100;
+        const txt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+        return `<span class="chart-cmp-item" data-serie="${i}">
+          <span class="chart-cmp-trait" style="background:${s.couleur}"></span>${esc(s.label)}
+          <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${txt}</span></span>`;
+      }).join('');
+    };
+    etatCmp.rendreLegende = rendreLegende;
+    rendreLegende(null);
 
     if (dts) {
       const p0 = normes[0].points;
-      dts.innerHTML = `<span>${fmtDate(p0[0].t, etatCmp.periode)}</span><span>${fmtDate(p0[p0.length - 1].t, etatCmp.periode)}</span>`;
+      dts.innerHTML = `<span>${fmtDate(p0[0].t, etatCmp.periode)}</span><span id="chart-cmp-date-survol"></span><span>${fmtDate(p0[p0.length - 1].t, etatCmp.periode)}</span>`;
     }
+    attacherSurvolComparaison();
   }
 
-  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, changerComparaison };
+  // Survol du graphique comparé : ligne verticale + un point par série, légende mise à jour
+  // sur la performance AU JOUR SURVOLÉ (au lieu de la performance totale sur la période).
+  function attacherSurvolComparaison() {
+    const svg = document.getElementById('chart-cmp-svg');
+    if (!svg || !etatCmp || !etatCmp.geoCmp) return;
+    const { Y, Xn } = etatCmp.geoCmp;
+    const cross = document.getElementById('chart-cmp-cross');
+    const dateEl = document.getElementById('chart-cmp-date-survol');
+    const refN = etatCmp.normes[0].vals.length;
+
+    const indexDepuis = (e) => {
+      const r = svg.getBoundingClientRect();
+      const vbX = (e.clientX - r.left) / r.width * VBW;
+      return Math.max(0, Math.min(refN - 1, Math.round((vbX - padL) / plotW * (refN - 1))));
+    };
+    const montrer = (i) => {
+      const x = Xn(refN)(i);
+      cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.style.display = '';
+      etatCmp.normes.forEach((s, idx) => {
+        const j = Math.min(i, s.vals.length - 1);
+        const pt = svg.querySelector(`.chart-cmp-pt[data-serie="${idx}"]`);
+        if (pt) { pt.setAttribute('cx', Xn(s.vals.length)(j)); pt.setAttribute('cy', Y(s.vals[j])); pt.style.display = ''; }
+      });
+      if (dateEl) dateEl.textContent = fmtDate(etatCmp.normes[0].points[Math.min(i, etatCmp.normes[0].points.length - 1)].t, etatCmp.periode);
+      etatCmp.rendreLegende(i);
+    };
+    const cacher = () => {
+      cross.style.display = 'none';
+      svg.querySelectorAll('.chart-cmp-pt').forEach(p => p.style.display = 'none');
+      if (dateEl) dateEl.textContent = '';
+      etatCmp.rendreLegende(null);
+    };
+
+    svg.addEventListener('pointermove', e => montrer(indexDepuis(e)));
+    svg.addEventListener('pointerleave', cacher);
+  }
+
+  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, changerComparaison, smooth: smoothPathD };
 })();
 
 window.Chart = Chart;

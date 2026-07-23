@@ -104,8 +104,9 @@ function renderDashboard(indices, produits, taux) {
       </div>
 
       <div class="card p-18 mb-24 bureau-seul cmp-card">
-        <div class="card-title">Performance comparée des indices</div>
-        <div class="section-hint mb-12">Base 100 au début de la période</div>
+        <div class="card-title">Performance comparée</div>
+        <div class="section-hint mb-12">Base 100 au début de la période · indices &amp; sous-jacents</div>
+        <div class="cmp-chips" id="cmp-chips"></div>
         <div id="cmp-indices"></div>
       </div>
       </div><!-- /dash-col-principale -->

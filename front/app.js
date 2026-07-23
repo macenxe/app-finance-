@@ -199,22 +199,69 @@ const App = (() => {
     });
   }
 
-  // Carte « Performance comparée des indices » du tableau de bord.
-  // Cinq indices choisis (un par couleur de CMP_COULEURS dans chart.js), dans cet ordre plutôt
-  // que l'ordre d'affichage des cartes, pour rester stable si data.js est réordonné.
-  const CMP_INDICES_NOMS = ['CAC 40', 'Euro Stoxx 50', 'Euro Stoxx Banks', 'S&P 500', 'MSCI World'];
+  // Carte « Performance comparée » du tableau de bord — sélection ajustable par l'utilisateur
+  // (App.ajouterSerieCmp / retirerSerieCmp). Catalogue = indices de marché + sous-jacents des
+  // produits structurés proposés (actions uniquement : un CMS n'a pas de « cours » à comparer).
+  // Clé = ticker (identité stable), dédoublonné : un sous-jacent qui recoupe un indice déjà
+  // listé (ex. ES Banks / Euro Stoxx Banks, même ticker BNKE.PA) n'apparaît qu'une fois.
+  const CMP_TICKERS_DEFAUT = ['^FCHI'];
+  function catalogueComparaison() {
+    const out = new Map();
+    (donnees.indices || []).forEach(i => {
+      const t = (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker;
+      if (t && !out.has(t)) out.set(t, { ticker: t, label: i.nom, groupe: 'Indices' });
+    });
+    (donnees.produits || []).forEach(p => {
+      if (p.type !== 'equity') return;
+      // Même remappage que pour la fiche produit (ex. le ticker brut « SX7E.PA » d'ES Banks
+      // n'est pas servi par Yahoo ; chartTickerPour le fait déjà correspondre à BNKE.PA, ce
+      // qui permet aussi le déduplicage avec l'indice Euro Stoxx Banks).
+      const t = chartTickerPour(p);
+      if (!t || out.has(t)) return;
+      out.set(t, { ticker: t, label: p.sjLabel || p.sj, groupe: 'Sous-jacents' });
+    });
+    return out;
+  }
+
+  function renderChipsComparaison(catalogue) {
+    const host = document.getElementById('cmp-chips');
+    if (!host) return;
+    const selection = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
+    const dispo = [...catalogue.values()].filter(c => !state.cmpSeries.includes(c.ticker));
+    const chips = selection.map(s => `
+      <span class="cmp-chip">${escHtml(s.label)}<button class="cmp-chip-retirer" type="button" aria-label="Retirer ${escHtml(s.label)}" onclick="event.stopPropagation();App.retirerSerieCmp('${escHtml(s.ticker)}')">✕</button></span>`).join('');
+    const bouton = `<button class="cmp-chip-ajouter" type="button" onclick="event.stopPropagation();App.toggleCmpPicker()">+ Ajouter</button>`;
+    let picker = '';
+    if (state.cmpPickerOuvert) {
+      const corps = dispo.length
+        ? ['Indices', 'Sous-jacents'].map(g => {
+            const items = dispo.filter(d => d.groupe === g);
+            if (!items.length) return '';
+            return `<div class="cmp-picker-groupe">${g}</div>` + items.map(it => `
+              <div class="cmp-picker-item" onclick="event.stopPropagation();App.ajouterSerieCmp('${escHtml(it.ticker)}')">
+                <span class="cmp-picker-swatch"></span>${escHtml(it.label)}
+              </div>`).join('');
+          }).join('')
+        : `<div class="cmp-picker-vide">Toutes les séries disponibles sont déjà affichées.</div>`;
+      picker = `<div class="cmp-picker" onclick="event.stopPropagation()">${corps}</div>`;
+    }
+    host.innerHTML = chips + bouton + picker;
+  }
+
   function initComparaisonIndices() {
     if (!estBureau() || state.page !== 'dash' || !window.Chart) return;
     if (!document.getElementById('cmp-indices')) return;
-    const parNom = new Map((donnees.indices || []).map(i => [i.nom, i]));
-    const series = CMP_INDICES_NOMS.map(nom => parNom.get(nom)).filter(Boolean)
-      .map(i => ({ ticker: (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker, label: i.nom }))
-      .filter(s => s.ticker);
+    const catalogue = catalogueComparaison();
+    if (!state.cmpSeries) state = { ...state, cmpSeries: CMP_TICKERS_DEFAUT.filter(t => catalogue.has(t)) };
+    renderChipsComparaison(catalogue);
+    const series = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
     if (series.length) Chart.comparer('cmp-indices', series);
   }
 
   // Mini graphiques 5 ans dans les cartes Actifs (Brent/Or/Bitcoin) : comble l'espace libre
   // à droite du nom/valeur une fois ces cartes étirées sur la largeur de la grille marché.
+  // Courbe lissée (Chart.smooth) + aire dégradée + point final, pour un rendu plus soigné
+  // qu'une simple ligne brisée.
   async function initSparklinesActifs() {
     if (!estBureau() || state.page !== 'dash') return;
     if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
@@ -231,15 +278,24 @@ const App = (() => {
         const vals = pts.map(p => p.c);
         const n = vals.length;
         const min = Math.min(...vals), max = Math.max(...vals), span = (max - min) || 1;
-        const X = i => (i / (n - 1)) * 100;
-        const Y = v => 2 + (1 - (v - min) / span) * 28; // viewBox 100×32, marge 2px haut/bas
-        let d = '';
-        for (let i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(vals[i]).toFixed(1) + ' ';
+        const xy = vals.map((v, i) => [(i / (n - 1)) * 100, 2 + (1 - (v - min) / span) * 26]); // viewBox 100×30, marge 2px
+        const d = (window.Chart && Chart.smooth) ? Chart.smooth(xy) : xy.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
         const up = vals[n - 1] >= vals[0];
         const nomActif = carte.querySelector('.index-name')?.textContent || '';
         // Même règle de favorabilité que majCartesMarche : Brent inversé (hausse = rouge).
         const favorable = /Brent/i.test(nomActif) ? !up : up;
-        svg.innerHTML = `<path d="${d}" fill="none" stroke="${favorable ? '#1d6f4c' : '#9a3535'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+        const couleur = favorable ? '#1d6f4c' : '#9a3535';
+        const gradId = 'spark-grad-' + gid.replace(/[^a-zA-Z0-9]/g, '');
+        const [lastX, lastY] = xy[xy.length - 1];
+        const aire = d + ` L ${lastX.toFixed(1)} 30 L 0 30 Z`;
+        svg.innerHTML = `
+          <defs><linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="${couleur}" stop-opacity="0.20"/>
+            <stop offset="1" stop-color="${couleur}" stop-opacity="0"/>
+          </linearGradient></defs>
+          <path d="${aire}" fill="url(#${gradId})" stroke="none"/>
+          <path d="${d}" fill="none" stroke="${couleur}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="2.2" fill="${couleur}" stroke="#fff" stroke-width="1"/>`;
       } catch { /* case vide, pas grave */ }
     }));
   }
@@ -629,6 +685,15 @@ const App = (() => {
       if (root.querySelector('.sheet-backdrop')) fermerSheet();
       else root.innerHTML = '';
     });
+    // Ferme le sélecteur de séries comparées si on clique en dehors.
+    document.addEventListener('click', (e) => {
+      if (!state.cmpPickerOuvert) return;
+      const host = document.getElementById('cmp-chips');
+      if (host && !host.contains(e.target)) {
+        state = { ...state, cmpPickerOuvert: false };
+        initComparaisonIndices();
+      }
+    });
     donnees = await AppAPI.chargerDonnees();
     if (donnees.source !== 'api') {
       // Back indisponible : réappliquer le taux CMS saisi manuellement s'il existe.
@@ -667,6 +732,23 @@ const App = (() => {
     toggleComparaisonRef(actif) {
       state = { ...state, cmpRef: !!actif };
       rafraichirChartPanneau();
+    },
+    // Sélection des séries du graphique « Performance comparée » (tableau de bord).
+    toggleCmpPicker() {
+      state = { ...state, cmpPickerOuvert: !state.cmpPickerOuvert };
+      initComparaisonIndices();
+    },
+    ajouterSerieCmp(ticker) {
+      const set = new Set(state.cmpSeries || []);
+      set.add(ticker);
+      state = { ...state, cmpSeries: [...set], cmpPickerOuvert: false };
+      initComparaisonIndices();
+    },
+    retirerSerieCmp(ticker) {
+      const reste = (state.cmpSeries || []).filter(t => t !== ticker);
+      if (!reste.length) return; // toujours garder au moins une série affichée
+      state = { ...state, cmpSeries: reste };
+      initComparaisonIndices();
     },
     setNewsTheme(theme) {
       state = { ...state, newsTheme: theme || null };
