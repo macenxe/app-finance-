@@ -30,7 +30,7 @@ function renderDashboard(indices, produits, taux) {
     : 'heure de cotation indisponible';
 
   return `
-  <div>
+  <div class="page-dash">
     <header class="page-header">
       <div>
         <div class="page-title">Tableau de bord</div>
@@ -45,7 +45,7 @@ function renderDashboard(indices, produits, taux) {
       <div class="flex-sb mb-12">
         <span class="section-label">Indices clés</span>
       </div>
-      <div class="grid-3 mb-24">
+      <div class="grid-3 grid-mkt mb-24">
         ${indices.map(i => { const gid = graphIdPour(i.nom) || i.ticker; return `
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${i.nom}')"` : ''}>
           <div class="index-name">${i.nom}</div>
@@ -61,15 +61,18 @@ function renderDashboard(indices, produits, taux) {
       <div class="flex-sb mb-12">
         <span class="section-label">Actifs</span>
       </div>
-      <div class="grid-3 mb-24">
+      <div class="grid-3 grid-mkt mb-24">
         ${MACRO.map(m => { const gid = graphIdPour(m.nom);
           // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
           const favorable = m.hausse === null ? null : (/Brent/i.test(m.nom) ? !m.hausse : m.hausse);
           return `
         <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
-          <div class="index-name">${m.nom}</div>
-          <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
-          <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
+          <div class="index-card-info">
+            <div class="index-name">${m.nom}</div>
+            <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
+            <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
+          </div>
+          ${gid ? `<div class="index-spark bureau-seul"><svg viewBox="0 0 100 32" preserveAspectRatio="none"></svg><span class="index-spark-lbl">5 ans</span></div>` : ''}
         </div>`; }).join('')}
       </div>
 
@@ -77,7 +80,7 @@ function renderDashboard(indices, produits, taux) {
       <div class="flex-sb mb-12">
         <span class="section-label">Taux &amp; indicateurs macro</span>
       </div>
-      <div class="grid-3 mb-24">
+      <div class="grid-3 grid-mkt mb-24">
         ${[...taux, { nom: 'Inflation zone €' }].map(t => {
           const gid = graphIdPour(t.nom);
           const h = (gid && typeof HISTO_DERNIER !== 'undefined') ? HISTO_DERNIER[gid] : null;
@@ -100,7 +103,7 @@ function renderDashboard(indices, produits, taux) {
         </div>`; }).join('')}
       </div>
 
-      <div class="card p-18 mb-24 bureau-seul">
+      <div class="card p-18 mb-24 bureau-seul cmp-card">
         <div class="card-title">Performance comparée des indices</div>
         <div class="section-hint mb-12">Base 100 au début de la période</div>
         <div id="cmp-indices"></div>
@@ -180,7 +183,10 @@ function renderAlertesPortefeuille(produits) {
             <div class="alerte-nom">${escHtml(alerteNom(p))}</div>
             <div class="alerte-statut alerte-statut--${zone.cle}">${escHtml(proche || zone.label)}</div>
           </div>
-          <div class="alerte-niveau tnum">${escHtml(pctDuStrike(p))}</div>
+          <div class="alerte-droite">
+            <div class="alerte-niveau tnum">${escHtml(pctDuStrike(p))}</div>
+            <div class="alerte-constat tnum">Constat. ${escHtml(fmtDatePanneau(p.constat))}</div>
+          </div>
         </div>`; }).join('')
     : `<div class="alerte-vide">Aucun produit en alerte.</div>`;
 

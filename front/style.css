@@ -781,6 +781,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
   .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
   .dt-date { font-size: 13px; color: #9aa6bd; white-space: nowrap; }
+  /* Bandeau légal : redondant sur bureau (déjà visible au premier chargement), retiré pour
+     rendre au tableau de bord la hauteur qu'il occupait. Reste affiché sur mobile. */
+  #footer { display: none; }
 
   /* Conteneur centré + titre de page en gros serif, sans bandeau collant (comme la maquette) */
   .page-header, .page-body {
@@ -789,11 +792,11 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   }
   .page-header {
     position: static; background: none; backdrop-filter: none; border-bottom: none;
-    padding-top: 30px; padding-bottom: 0;
+    padding-top: 14px; padding-bottom: 0;
   }
-  .page-title { font-size: 30px; line-height: 1.15; }
-  .page-sub   { font-size: 13.5px; margin-top: 5px; }
-  .page-body  { padding-top: 22px; padding-bottom: 56px; }
+  .page-title { font-size: 23px; line-height: 1.15; }
+  .page-sub   { font-size: 13px; margin-top: 4px; }
+  .page-body  { padding-top: 10px; padding-bottom: 40px; }
   .detail-content { padding: 18px 26px 30px; }
   .card { border-radius: 10px; }
 
@@ -834,7 +837,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .dates-cles-row  { padding: 9px 0; font-size: 12.5px; }
   .detail-row      { padding: 10px 0; }
   .detail-key, .detail-val { font-size: 12.5px; }
-  .event-item      { padding: 9px 0; }
+  .event-item      { padding: 7px 0; }
   .alert-item      { padding: 11px 0; }
   .alert-text      { font-size: 12.5px; line-height: 1.5; }
   .news-cards      { gap: 12px; }
@@ -842,18 +845,54 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .news-card-titre { font-size: 15px; }
   .news-card-resume { font-size: 12.5px; }
 
-  /* ── Tableau de bord : colonne principale + colonne latérale (événements, alertes) ── */
-  .dash-split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 22px; align-items: start; }
-  .dash-col-principale, .dash-col-laterale { min-width: 0; }
-  /* Dans la colonne principale, les cartes marché tiennent sur 3 colonnes (comme la maquette) */
-  .dash-col-principale .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  /* ── Tableau de bord : colonne principale + colonne latérale (événements, alertes) ──
+     Objectif : tenir sur un écran d'ordinateur sans défilement. Les 3 groupes de cartes
+     marché (indices/actifs/taux) tiennent chacun sur une seule ligne (auto-fit se replie
+     proprement si la fenêtre est étroite), et les marges de section sont resserrées. */
+  .dash-split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  /* Les deux colonnes sont étirées à la même hauteur (align-items: stretch) ; en colonne
+     flex, le dernier bloc de chacune absorbe l'écart pour que les BAS soient alignés (au
+     lieu de laisser un vide sous la colonne la plus courte). */
+  .dash-col-principale, .dash-col-laterale { min-width: 0; display: flex; flex-direction: column; }
+  .dash-col-principale > *:last-child, .dash-col-laterale > .card:last-child { flex: 1 0 auto; }
+  /* La colonne de gauche commence par un libellé de section (« Indices clés ») avant ses
+     premières cartes ; la colonne de droite n'en a pas (le titre est dans la carte). Un
+     décalage compense pour que le haut des DEUX colonnes démarre à la même hauteur. */
+  .dash-col-laterale { padding-top: 20px; }
+  .dash-col-principale .grid-mkt { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+  .dash-col-principale .grid-mkt .index-card { padding: 7px 10px; }
+  .dash-col-principale .grid-mkt .index-name,
+  .dash-col-principale .grid-mkt .taux-item-name { font-size: 10.5px; }
+  .dash-col-principale .grid-mkt .index-val { font-size: 15px; margin: 3px 0 1px; }
+  .dash-col-principale .grid-mkt .index-var,
+  .dash-col-principale .grid-mkt .taux-var { font-size: 11px; }
+  .dash-col-principale .grid-mkt .taux-maj { font-size: 9px; margin-top: 0; }
+  /* Cartes Actifs (Brent/Or/Bitcoin) : moins nombreuses que les indices/taux, donc plus
+     larges une fois étirées sur la même ligne — un mini graphique 5 ans comble l'espace
+     libre à droite du nom/valeur plutôt que de le laisser vide. */
+  .index-card[data-macro] { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  /* Le sparkline est le bloc qui s'étire (flex:1) : le nom/valeur/variation gardent leur
+     largeur naturelle, tout le reste de la cellule sert de canevas au mini graphique. */
+  .index-card-info { min-width: 0; flex: 0 1 auto; }
+  .index-spark.bureau-seul { display: flex; flex-direction: column; align-items: stretch; gap: 2px; flex: 1 1 auto; min-width: 60px; }
+  .index-spark svg { width: 100%; height: 30px; display: block; }
+  .index-spark-lbl { align-self: center; font-size: 8.5px; color: #b5ab95; letter-spacing: .04em; text-transform: uppercase; }
+  .dash-split .mb-24 { margin-bottom: 10px; }
+  .dash-split .mb-12 { margin-bottom: 5px; }
+  .page-dash .page-body { padding-bottom: 12px; }
+  .dash-col-principale > *:last-child { margin-bottom: 0; }
+  /* Colonne latérale : cartes et lignes resserrées (les deux cartes doivent tenir sans
+     dépasser la colonne principale, qui fixe la hauteur totale du tableau de bord). */
+  .dash-col-laterale > .card { padding: 13px 16px; }
+  .dash-col-laterale > .card:last-child { margin-bottom: 0; }
+  .dash-col-laterale .card-title { font-size: 13.5px; }
   .bureau-seul { display: block; }
 
   /* Alertes portefeuille */
   .alertes-liste { display: flex; flex-direction: column; }
   .alerte-item {
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    padding: 10px 0; border-top: 1px solid #f1ece1; cursor: pointer; transition: background .12s;
+    padding: 7px 0; border-top: 1px solid #f1ece1; cursor: pointer; transition: background .12s;
   }
   .alerte-item:first-child { border-top: none; }
   .alerte-item:hover { background: #faf8f4; }
@@ -863,7 +902,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .alerte-statut--risque { color: #9a3535; }
   .alerte-statut--rappel, .alerte-statut--coupon { color: #1d6f4c; }
   .alerte-statut--neutre { color: #b06a1a; }
-  .alerte-niveau { font-family: 'Spectral', serif; font-size: 14px; font-weight: 700; color: #16304f; flex: none; }
+  .alerte-droite { display: flex; flex-direction: column; align-items: flex-end; flex: none; }
+  .alerte-niveau { font-family: 'Spectral', serif; font-size: 14px; font-weight: 700; color: #16304f; }
+  .alerte-constat { font-size: 10.5px; color: #9a8f7a; margin-top: 2px; white-space: nowrap; }
   .alerte-vide { font-size: 12.5px; color: #9a8f7a; }
 
   /* Événements macro : la colonne latérale est étroite → une seule colonne */
@@ -914,14 +955,26 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-niveau--coupon .ac-bar-niveau-dot,
   .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
 
-  /* ── Graphique comparé (base 100) ── */
-  .chart-cmp-legende { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  /* ── Graphique comparé (base 100) : légende à gauche, filtres de période à droite ── */
+  .chart-cmp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .chart-cmp-legende { display: flex; flex-wrap: wrap; gap: 8px 18px; }
   .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
   .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
   .chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
   .chart-cmp-perf.up   { color: #1d6f4c; }
   .chart-cmp-perf.down { color: #9a3535; }
+  /* margin-left:auto : garantit l'alignement à droite même si la légende (5 séries) est
+     trop large et fait passer les boutons de période sur leur propre ligne (flex-wrap). */
+  .chart-periodes-cmp { margin-top: 0; margin-left: auto; flex: none; justify-content: flex-end; }
   .chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 4px; }
+  /* Carte « Performance comparée » du tableau de bord : gabarit resserré pour tenir sans
+     défilement (padding réduit, boutons de période plus petits, moins de marge). */
+  .cmp-card { padding: 10px 14px 8px; }
+  .cmp-card .card-title { font-size: 13px; }
+  .cmp-card .chart-per { padding: 3px 8px; font-size: 10.5px; }
+  .cmp-card .chart-cmp-head { margin-bottom: 5px; }
+  .cmp-card .chart-cmp-item { font-size: 11.5px; }
+  .cmp-card .chart-cmp-dates { margin-top: 2px; }
   .detail-cmp { margin-bottom: 10px; }
   .detail-cmp-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #5b5e63; cursor: pointer; }
   .detail-cmp-label input { accent-color: #16304f; cursor: pointer; }

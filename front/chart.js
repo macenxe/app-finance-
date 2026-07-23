@@ -19,7 +19,7 @@ const Chart = (() => {
   // Version compacte (Jour / Semaine / 3 ans retirés) : tient sur une seule ligne. Utilisée
   // pour les fiches détail Autocall et Fonds, où la lisibilité prime sur le choix fin de période.
   const PERIODES_COMPACT = PERIODES.filter(p => !['1j', '1s', '3a'].includes(p.key));
-  const DEFAUT = '6m';
+  const DEFAUT = '1a';
 
   // Géométrie du tracé (unités viewBox).
   const VBW = 640, VBH = 300, padL = 14, padR = 14, padT = 16, padB = 26;
@@ -366,6 +366,10 @@ const Chart = (() => {
   // les ramène toutes en base 100 au début de la période. L'axe exprime donc une
   // performance relative, pas un prix — les repères de barrières n'y ont pas de sens.
   const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a'];
+  // Gabarit plus bas que le graphique détail (300) : la comparaison n'a pas besoin d'autant
+  // de hauteur (pas de repères de barrières), et le tableau de bord doit tenir sans défiler.
+  const CMP_VBH = 115;
+  const cmpPlotH = CMP_VBH - padT - padB;
   let etatCmp = null;
 
   // series : [{ ticker, label, couleur? }]
@@ -381,11 +385,13 @@ const Chart = (() => {
       sets: [],
     };
     el.innerHTML = `
-      <div class="chart-cmp-legende" id="chart-cmp-legende"></div>
-      <div class="chart-zone" id="chart-cmp-zone"><div class="chart-loading">Chargement…</div></div>
-      <div class="chart-periodes">
-        ${etatCmp.periodes.map(p => `<button class="chart-per chart-per-cmp${p.key === etatCmp.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changerComparaison('${p.key}')">${p.label}</button>`).join('')}
+      <div class="chart-cmp-head">
+        <div class="chart-cmp-legende" id="chart-cmp-legende"></div>
+        <div class="chart-periodes chart-periodes-cmp">
+          ${etatCmp.periodes.map(p => `<button class="chart-per chart-per-cmp${p.key === etatCmp.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changerComparaison('${p.key}')">${p.label}</button>`).join('')}
+        </div>
       </div>
+      <div class="chart-zone" id="chart-cmp-zone"><div class="chart-loading">Chargement…</div></div>
       <div class="chart-cmp-dates" id="chart-cmp-dates"></div>`;
     chargerComparaison();
   }
@@ -448,7 +454,7 @@ const Chart = (() => {
     let min = Math.min(...toutes), max = Math.max(...toutes);
     if (min === max) { min -= 1; max += 1; }
     const marge = (max - min) * 0.08; min -= marge; max += marge;
-    const Y = v => padT + (1 - (v - min) / (max - min)) * plotH;
+    const Y = v => padT + (1 - (v - min) / (max - min)) * cmpPlotH;
 
     const paths = normes.map(s => {
       const n = s.vals.length;
@@ -463,7 +469,7 @@ const Chart = (() => {
       ? `<line x1="${padL}" y1="${Y(100).toFixed(1)}" x2="${VBW - padR}" y2="${Y(100).toFixed(1)}" class="chart-grid"/>` : '';
 
     zone.innerHTML = `
-      <svg viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 ${VBW} ${CMP_VBH}" xmlns="http://www.w3.org/2000/svg">
         ${base100}${paths}
       </svg>`;
 

@@ -200,14 +200,48 @@ const App = (() => {
   }
 
   // Carte « Performance comparée des indices » du tableau de bord.
+  // Cinq indices choisis (un par couleur de CMP_COULEURS dans chart.js), dans cet ordre plutôt
+  // que l'ordre d'affichage des cartes, pour rester stable si data.js est réordonné.
+  const CMP_INDICES_NOMS = ['CAC 40', 'Euro Stoxx 50', 'Euro Stoxx Banks', 'S&P 500', 'MSCI World'];
   function initComparaisonIndices() {
     if (!estBureau() || state.page !== 'dash' || !window.Chart) return;
     if (!document.getElementById('cmp-indices')) return;
-    const series = (donnees.indices || [])
+    const parNom = new Map((donnees.indices || []).map(i => [i.nom, i]));
+    const series = CMP_INDICES_NOMS.map(nom => parNom.get(nom)).filter(Boolean)
       .map(i => ({ ticker: (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker, label: i.nom }))
-      .filter(s => s.ticker)
-      .slice(0, 3);
+      .filter(s => s.ticker);
     if (series.length) Chart.comparer('cmp-indices', series);
+  }
+
+  // Mini graphiques 5 ans dans les cartes Actifs (Brent/Or/Bitcoin) : comble l'espace libre
+  // à droite du nom/valeur une fois ces cartes étirées sur la largeur de la grille marché.
+  async function initSparklinesActifs() {
+    if (!estBureau() || state.page !== 'dash') return;
+    if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
+    const cartes = [...document.querySelectorAll('.index-card[data-macro]')];
+    await Promise.allSettled(cartes.map(async (carte) => {
+      const gid = carte.getAttribute('data-macro');
+      const svg = carte.querySelector('.index-spark svg');
+      if (!gid || !svg || svg.childElementCount) return; // déjà tracé
+      try {
+        const r = await fetch(AppAPI.historyUrl(gid, '5a'), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+        if (!r.ok) return;
+        const pts = (await r.json()).points || [];
+        if (pts.length < 2) return;
+        const vals = pts.map(p => p.c);
+        const n = vals.length;
+        const min = Math.min(...vals), max = Math.max(...vals), span = (max - min) || 1;
+        const X = i => (i / (n - 1)) * 100;
+        const Y = v => 2 + (1 - (v - min) / span) * 28; // viewBox 100×32, marge 2px haut/bas
+        let d = '';
+        for (let i = 0; i < n; i++) d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(vals[i]).toFixed(1) + ' ';
+        const up = vals[n - 1] >= vals[0];
+        const nomActif = carte.querySelector('.index-name')?.textContent || '';
+        // Même règle de favorabilité que majCartesMarche : Brent inversé (hausse = rouge).
+        const favorable = /Brent/i.test(nomActif) ? !up : up;
+        svg.innerHTML = `<path d="${d}" fill="none" stroke="${favorable ? '#1d6f4c' : '#9a3535'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+      } catch { /* case vide, pas grave */ }
+    }));
   }
 
   function initChartDetailGroupe(membres) {
@@ -295,7 +329,7 @@ const App = (() => {
     }
     el.scrollTop = saved;
     renderNav();
-    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); }
+    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); initSparklinesActifs(); }
     rafraichirChartPanneau();
   }
 
