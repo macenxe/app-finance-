@@ -1,13 +1,17 @@
 name: Snapshot après changement de produits
 
-# Se déclenche uniquement quand la définition des produits/sous-jacents change
-# (plus de tâche toutes les 30 min : les cours en direct viennent du Worker).
+# Se déclenche quand la définition des produits/sous-jacents change (plus de tâche toutes les
+# 30 min : les cours en direct viennent du Worker), et chaque semaine pour rafraîchir le repli
+# statique des graphiques (front/data/history/eq/, utilisé si le Worker est injoignable côté
+# client, ex. pare-feu d'entreprise bloquant *.workers.dev).
 on:
   push:
     branches: [main]
     paths:
       - 'back/src/produits.ts'
       - 'back/src/indices.ts'
+  schedule:
+    - cron: '17 5 * * 1'            # lundi 05:17 UTC
   workflow_dispatch:               # bouton de déclenchement manuel
 
 permissions:
@@ -39,11 +43,15 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: npm run snapshot
 
+      - name: Générer le repli statique des graphiques
+        working-directory: back
+        run: npm run history
+
       - name: Publier si le snapshot a changé
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add front/data/snapshot.json
+          git add front/data/snapshot.json front/data/history/eq/
           if git diff --staged --quiet; then
             echo "Aucun changement de données."
           else
