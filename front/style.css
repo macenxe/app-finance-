@@ -527,7 +527,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 @keyframes ptr-spin { to { transform: rotate(360deg); } }
 #ptr-indicator.refreshing span { animation: ptr-spin .65s linear infinite; }
 
-/* ── Nav du bas (cachée sur desktop) ── */
+/* ── Top bar mobile + nav du bas (cachées sur desktop) ── */
+#mobile-topbar { display: none; }
 #bottom-nav { display: none; }
 /* Barre d'onglets bureau : masquée par défaut, activée en desktop (≥641px) uniquement */
 #desktop-topbar { display: none; }
@@ -1130,7 +1131,12 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #sidebar { display: none; }
   #main { width: 100%; }
 
-  /* ── Pas de barre de marque en haut sur mobile : la nav du bas suffit ── */
+  /* ── Bandeau bleu fixe en haut : titre de la page courante (dynamique, voir renderNav) ── */
+  #mobile-topbar {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 52px; flex: none; background: #16304f;
+  }
+  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff; }
   #footer { display: none; }
 
   /* ── Barre de navigation du bas (remplace le menu latéral) : légèrement plus affirmée
@@ -1160,6 +1166,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── En-têtes / paddings ── */
   .page-body { padding: 16px 14px 32px; }
   .page-header { padding: 14px 14px; flex-wrap: wrap; gap: 8px; }
+  /* Le titre de page vit désormais dans le bandeau bleu fixe (#mobile-topbar) : masqué ici
+     pour ne pas le répéter (mais .page-sub reste, ex. l'heure de cotation du dashboard). */
+  .page-header .page-title { display: none; }
   .page-title, .page-sub { white-space: normal; }
   .header-actions { flex-wrap: wrap; gap: 6px; }
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
@@ -1229,6 +1238,11 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #desktop-topbar { display: none; }
   #main { width: 100%; }
 
+  #mobile-topbar {
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 40px; flex: none; background: #16304f;
+  }
+  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff; }
   #footer { display: none; }
 
   #bottom-nav {
@@ -1254,6 +1268,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #content::-webkit-scrollbar { display: none; }
 
   .page-header { padding: 10px 16px; flex-wrap: wrap; gap: 6px; }
+  .page-header .page-title { display: none; }
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
   .summary-chips { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(4, 1fr); }

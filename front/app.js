@@ -150,6 +150,13 @@ const App = (() => {
       <div class="nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
         <span class="nav-dot"></span>${item.label}
       </div>`).join('');
+    // Bandeau bleu fixe en haut (mobile) : titre de la page courante — remplace le
+    // .page-title masqué dans le contenu (voir style.css) pour éviter le doublon.
+    const mobileTitle = document.querySelector('.mobile-topbar-title');
+    if (mobileTitle) {
+      const actif = NAV.find(item => item.key === activeKey) || NAV[0];
+      mobileTitle.textContent = actif.label;
+    }
     const bottomNav = document.getElementById('bottom-nav');
     if (bottomNav) {
       bottomNav.innerHTML = NAV.map(item => `
