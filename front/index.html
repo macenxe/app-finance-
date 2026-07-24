@@ -7,7 +7,7 @@
   <title>SP Track</title>
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-  <link rel="stylesheet" href="./style.css?v=166">
+  <link rel="stylesheet" href="./style.css?v=167">
 </head>
 <body>
   <div id="app">
@@ -24,6 +24,7 @@
     <div id="main">
       <div id="mobile-topbar">
         <div class="mobile-topbar-title"></div>
+        <div class="mobile-topbar-desc"></div>
       </div>
       <!-- â”€â”€ Barre d'onglets bureau (remplace la sidebar sur desktop) â”€â”€ -->
       <div id="desktop-topbar">
@@ -41,11 +42,20 @@
   </div>
 
   <div id="modal-root"></div>
-  <script src="./data.js?v=161"></script>
-  <script src="./api.js?v=161"></script>
-  <script src="./autocall.js?v=161"></script>
-  <script src="./chart.js?v=161"></script>
-  <script src="./pages.js?v=161"></script>
-  <script src="./app.js?v=161"></script>
+  <div id="rotate-overlay">
+    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#c9a96a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="7" y="2" width="10" height="16" rx="2"/>
+      <path d="M20 8a8 8 0 0 1-8 8"/>
+      <polyline points="20,5 20,8 17,8"/>
+    </svg>
+    <div class="rotate-overlay-title">Repassez en mode portrait</div>
+    <div class="rotate-overlay-sub">SP Track n'est pas prévu pour le mode paysage.</div>
+  </div>
+  <script src="./data.js?v=162"></script>
+  <script src="./api.js?v=162"></script>
+  <script src="./autocall.js?v=162"></script>
+  <script src="./chart.js?v=162"></script>
+  <script src="./pages.js?v=162"></script>
+  <script src="./app.js?v=162"></script>
 </body>
 </html>

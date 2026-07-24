@@ -530,6 +530,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 /* ── Top bar mobile + nav du bas (cachées sur desktop) ── */
 #mobile-topbar { display: none; }
 #bottom-nav { display: none; }
+/* Écran de blocage du mode paysage mobile (voir la media query dédiée plus bas) */
+#rotate-overlay { display: none; }
 /* Barre d'onglets bureau : masquée par défaut, activée en desktop (≥641px) uniquement */
 #desktop-topbar { display: none; }
 
@@ -1131,12 +1133,15 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #sidebar { display: none; }
   #main { width: 100%; }
 
-  /* ── Bandeau bleu fixe en haut : titre de la page courante (dynamique, voir renderNav) ── */
+  /* ── Bandeau bleu fixe en haut : titre + descriptif de la page courante (dynamiques,
+     voir renderNav) — le descriptif reprend le contenu de .page-sub, masqué plus bas
+     dans le contenu pour ne pas le répéter. ── */
   #mobile-topbar {
-    display: flex; align-items: center; gap: 14px;
-    padding: 0 16px; height: 52px; flex: none; background: #16304f;
+    display: flex; flex-direction: column; justify-content: center; gap: 2px;
+    padding: 10px 16px; flex: none; background: #16304f;
   }
-  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff; }
+  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 16px; font-weight: 600; color: #fff; }
+  .mobile-topbar-desc { font-size: 11.5px; color: #9aa6bd; }
   #footer { display: none; }
 
   /* ── Barre de navigation du bas (remplace le menu latéral) : légèrement plus affirmée
@@ -1166,9 +1171,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── En-têtes / paddings ── */
   .page-body { padding: 16px 14px 32px; }
   .page-header { padding: 14px 14px; flex-wrap: wrap; gap: 8px; }
-  /* Le titre de page vit désormais dans le bandeau bleu fixe (#mobile-topbar) : masqué ici
-     pour ne pas le répéter (mais .page-sub reste, ex. l'heure de cotation du dashboard). */
-  .page-header .page-title { display: none; }
+  /* Titre + descriptif de page vivent désormais dans le bandeau bleu fixe (#mobile-topbar) :
+     masqués ici pour ne pas les répéter. */
+  .page-header .page-title, .page-header .page-sub { display: none; }
   .page-title, .page-sub { white-space: normal; }
   .header-actions { flex-wrap: wrap; gap: 6px; }
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
@@ -1232,46 +1237,17 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .taux-maj   { font-size: 10px; }
 }
 
+/* ── Mode paysage mobile désactivé : l'app est bloquée derrière un écran dédié plutôt
+   qu'adaptée (usage interne, pas de mise en page paysage à maintenir). ── */
 @media (max-height: 500px) and (orientation: landscape) {
-  #sidebar { display: none; }
-  /* Mobile paysage : conserver la nav du bas, masquer la barre d'onglets bureau */
-  #desktop-topbar { display: none; }
-  #main { width: 100%; }
-
-  #mobile-topbar {
-    display: flex; align-items: center; gap: 14px;
-    padding: 0 16px; height: 40px; flex: none; background: #16304f;
+  #app { display: none; }
+  #rotate-overlay {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    position: fixed; inset: 0; background: #16304f; color: #fff; text-align: center;
+    padding: 24px; z-index: 999;
   }
-  .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #fff; }
-  #footer { display: none; }
-
-  #bottom-nav {
-    display: flex; flex-direction: row; gap: 0; flex: none; padding: 0;
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
-    background: #fff; border-top: 1px solid #ece7dc;
-    box-shadow: 0 -2px 10px rgba(22,48,79,.07);
-  }
-  .bottom-nav-item {
-    position: relative;
-    flex: 1; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 7px;
-    padding: 7px 4px; color: #9a8f7a; background: none; border: none; font-family: inherit;
-    font-size: 10.5px; font-weight: 600; cursor: pointer;
-  }
-  .bottom-nav-item svg { width: 19px; height: 19px; }
-  .bottom-nav-item.active { color: #16304f; }
-  .bottom-nav-item.active svg { color: #16304f; }
-  .bottom-nav-item.active::before {
-    content: ''; position: absolute; top: 2px; left: 50%; transform: translateX(-50%);
-    width: 18px; height: 2px; border-radius: 2px; background: #16304f;
-  }
-  #content { padding-bottom: 46px; overflow-x: hidden; scrollbar-width: none; }
-  #content::-webkit-scrollbar { display: none; }
-
-  .page-header { padding: 10px 16px; flex-wrap: wrap; gap: 6px; }
-  .page-header .page-title { display: none; }
-  .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
-  .summary-chips { grid-template-columns: repeat(3, 1fr); }
-  .cat-grid { grid-template-columns: repeat(4, 1fr); }
+  .rotate-overlay-title { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; }
+  .rotate-overlay-sub { font-size: 12.5px; color: #9aa6bd; max-width: 280px; }
 }
 
 /* ── Rappel auto & coupons ── */

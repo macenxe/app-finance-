@@ -150,12 +150,18 @@ const App = (() => {
       <div class="nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
         <span class="nav-dot"></span>${item.label}
       </div>`).join('');
-    // Bandeau bleu fixe en haut (mobile) : titre de la page courante — remplace le
-    // .page-title masqué dans le contenu (voir style.css) pour éviter le doublon.
+    // Bandeau bleu fixe en haut (mobile) : titre + descriptif de la page courante — remplacent
+    // .page-title/.page-sub masqués dans le contenu (voir style.css) pour éviter le doublon.
+    // Le descriptif est lu directement dans le DOM (déjà rendu à ce stade par renderPage)
+    // plutôt que recopié depuis NAV.def, pour garder les parties dynamiques (ex. l'heure de
+    // cotation du tableau de bord).
     const mobileTitle = document.querySelector('.mobile-topbar-title');
+    const mobileDesc = document.querySelector('.mobile-topbar-desc');
     if (mobileTitle) {
       const actif = NAV.find(item => item.key === activeKey) || NAV[0];
       mobileTitle.textContent = actif.label;
+      const pageSub = document.querySelector('.page-header .page-sub');
+      mobileDesc.textContent = pageSub ? pageSub.textContent : (actif ? actif.def : '');
     }
     const bottomNav = document.getElementById('bottom-nav');
     if (bottomNav) {
