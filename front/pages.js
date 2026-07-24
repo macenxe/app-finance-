@@ -72,7 +72,7 @@ function renderDashboard(indices, produits, taux) {
             <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
             <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
           </div>
-          ${gid ? `<div class="index-spark bureau-seul"><svg viewBox="0 0 100 32" preserveAspectRatio="none"></svg><span class="index-spark-lbl">5 ans</span></div>` : ''}
+          ${gid ? `<div class="index-spark bureau-seul"><svg viewBox="0 0 100 32" preserveAspectRatio="none"></svg><span class="index-spark-lbl">1 an</span></div>` : ''}
         </div>`; }).join('')}
       </div>
 
@@ -1175,6 +1175,19 @@ function renderContrats(state, ucPerfs) {
 }
 
 // Panneau de droite de la page Fonds : identité de l'UC + graphique et composition.
+// Résumé d'allocation affiché en tête de fiche UC : uniquement des faits déjà présents dans
+// UC_CATALOGUE (catégorie, part actions, niveau de risque SRI) — pas de commentaire sur la
+// stratégie propre au fonds, qu'on ne peut pas garantir sans source officielle. Le champ
+// `gerant` n'est volontairement pas repris ici : ce sont des codes internes abrégés (« Pct »,
+// « LFDE », « C »…) impropres à l'affichage tels quels.
+function ucStrategieTxt(u) {
+  const bits = [];
+  if (u.categorie) bits.push(`Fonds ${u.categorie.toLowerCase()}`);
+  if (u.equity != null) bits.push(`${u.equity} % investis en actions`);
+  if (u.srri != null) bits.push(`profil de risque SRI ${u.srri}/7`);
+  return bits.join(' · ') + '.';
+}
+
 function renderUCPanneau(u, ucPerfs) {
   if (!u) return '<div class="ac-detail-vide">Sélectionnez une unité de compte pour afficher sa fiche.</div>';
   const p = ucPerfs ? ucPerfs[u.isin] : null;
@@ -1192,6 +1205,10 @@ function renderUCPanneau(u, ucPerfs) {
         <div class="ac-detail-niveau-val tnum">${perfTxt}</div>
         <div class="ac-detail-niveau-delta ${perfCls}">depuis le 01/01</div>
       </div>
+    </div>
+    <div class="uc-strategie">
+      <div class="uc-strategie-titre">Allocation</div>
+      ${escHtml(ucStrategieTxt(u))}
     </div>
     <div id="uc-chart-inline" class="detail-chart-inline"></div>
   </div>`;

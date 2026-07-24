@@ -252,7 +252,7 @@ const App = (() => {
       const svg = carte.querySelector('.index-spark svg');
       if (!gid || !svg || svg.childElementCount) return; // déjà tracé
       try {
-        const r = await fetch(AppAPI.historyUrl(gid, '5a'), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+        const r = await fetch(AppAPI.historyUrl(gid, '1a'), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
         if (!r.ok) return;
         const pts = (await r.json()).points || [];
         if (pts.length < 2) return;
@@ -689,7 +689,13 @@ const App = (() => {
   }
 
   return {
-    goto(page) { allerA(page); },
+    goto(page) {
+      if (page === state.page) return;
+      const idx = NAV.findIndex(n => n.key === state.page);
+      const idxCible = NAV.findIndex(n => n.key === page);
+      const direction = (idx !== -1 && idxCible !== -1 && idxCible < idx) ? -1 : 1;
+      allerAAnime(page, direction);
+    },
     setFamilleFiltre(tab) {
       state = { ...state, familleFiltre: tab };
       renderPage(true);

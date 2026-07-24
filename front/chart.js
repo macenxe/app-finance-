@@ -406,11 +406,11 @@ const Chart = (() => {
     el.innerHTML = `
       <div class="chart-cmp-head">
         <div class="chart-cmp-legende" id="chart-cmp-legende"></div>
-        <div class="chart-periodes chart-periodes-cmp">
-          ${etatCmp.periodes.map(p => `<button class="chart-per chart-per-cmp${p.key === etatCmp.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changerComparaison('${p.key}')">${p.label}</button>`).join('')}
-        </div>
       </div>
       <div class="chart-zone" id="chart-cmp-zone"><div class="chart-loading">Chargement…</div></div>
+      <div class="chart-periodes chart-periodes-cmp">
+        ${etatCmp.periodes.map(p => `<button class="chart-per chart-per-cmp${p.key === etatCmp.periode ? ' active' : ''}" data-per="${p.key}" onclick="Chart.changerComparaison('${p.key}')">${p.label}</button>`).join('')}
+      </div>
       <div class="chart-cmp-dates" id="chart-cmp-dates"></div>`;
     chargerComparaison();
   }
