@@ -131,17 +131,10 @@ const Chart = (() => {
     const zone = document.getElementById('chart-zone');
     if (zone) zone.innerHTML = '<div class="chart-loading">Chargement…</div>';
     try {
-      const url = (typeof AppAPI !== 'undefined' && AppAPI.historyUrl)
-        ? AppAPI.historyUrl(etat.ticker, periode)
-        : `${WORKER}?history=${encodeURIComponent(etat.ticker)}&period=${periode}`;
-      const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      const data = await r.json();
+      const data = (typeof AppAPI !== 'undefined' && AppAPI.chargerHistorique)
+        ? await AppAPI.chargerHistorique(etat.ticker, periode)
+        : await (await fetch(`${WORKER}?history=${encodeURIComponent(etat.ticker)}&period=${periode}`, { cache: 'no-store', signal: AbortSignal.timeout(12000) })).json();
       etat.points = data.points || [];
-      // Séries statiques (FRED) : le JSON contient tout l'historique → on filtre par période.
-      if (etat.ticker.indexOf('fred:') === 0 || etat.ticker.indexOf('hicp:') === 0) {
-        etat.points = filtrerPeriode(etat.points, periode);
-      }
       // Mention « proxy » éventuelle (ex. CMS 10 ans = rendement 10 ans zone euro).
       const sousEl = document.getElementById('chart-sous');
       if (sousEl) {
@@ -274,16 +267,6 @@ const Chart = (() => {
   }
 
   function retour() { if (etat.retour) etat.retour(); }
-
-  // ── Séries statiques : filtrage par période côté client ──
-  const JOURS_P = { '1j': 3, '1s': 10, '1m': 35, '6m': 190, ytd: null, '1a': 380, '3a': 1100, '5a': 1850, '10a': 3700 };
-  function filtrerPeriode(points, periode) {
-    let cutoff;
-    if (periode === 'ytd') cutoff = Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000);
-    else cutoff = Math.floor((Date.now() - (JOURS_P[periode] || 190) * 86400000) / 1000);
-    const f = points.filter(p => p.t >= cutoff);
-    return f.length >= 2 ? f : points.slice(-6);
-  }
 
   // ── Composition d'une UC (sous le graphique) ──
   async function chargerCompo(isin) {
@@ -431,14 +414,10 @@ const Chart = (() => {
     const periode = etatCmp.periode;
     const res = await Promise.all(etatCmp.series.map(async (s) => {
       try {
-        const url = (typeof AppAPI !== 'undefined' && AppAPI.historyUrl)
-          ? AppAPI.historyUrl(s.ticker, periode)
-          : `${WORKER}?history=${encodeURIComponent(s.ticker)}&period=${periode}`;
-        const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-        if (!r.ok) return null;
-        const d = await r.json();
-        let pts = d.points || [];
-        if (/^(fred:|hicp:)/.test(s.ticker)) pts = filtrerPeriode(pts, periode);
+        const d = (typeof AppAPI !== 'undefined' && AppAPI.chargerHistorique)
+          ? await AppAPI.chargerHistorique(s.ticker, periode)
+          : await (await fetch(`${WORKER}?history=${encodeURIComponent(s.ticker)}&period=${periode}`, { cache: 'no-store', signal: AbortSignal.timeout(12000) })).json();
+        const pts = d.points || [];
         return pts.length >= 2 ? { ...s, points: pts } : null;
       } catch { return null; }
     }));

@@ -1216,38 +1216,60 @@ function renderUCPanneau(u, ucPerfs) {
   </div>`;
 }
 
-// ── Feuilles modales (bottom sheet) : poignée déplaçable au doigt ──
+// ── Feuilles modales (bottom sheet) : refermable au doigt depuis n'importe où ──
 // Partagé entre les fiches détail Autocall (app.js) et le graphique UC (chart.js), qui utilisent
 // tous les deux le même gabarit .sheet-backdrop/.sheet-panel/.sheet-handle.
-// Tirer vers le bas referme la feuille (ou la ramène en position repliée si elle est dépliée) ;
-// tirer vers le haut la déplie en plein écran. Un simple tap sans déplacement ne fait rien.
+// Depuis la poignée : tirer vers le bas referme la feuille (ou la ramène en position repliée si
+// elle est dépliée) ; tirer vers le haut la déplie en plein écran.
+// Depuis le reste de la feuille (corps du contenu) : un balayage vers le bas la referme aussi,
+// mais seulement s'il démarre en haut du contenu défilable (scrollTop 0), pour ne pas gêner le
+// défilement normal. Un simple tap ou un balayage vers le haut ne déclenchent rien ici.
 function initSheetDrag(panel, onClose) {
   const handle = panel && panel.querySelector('.sheet-handle');
   if (!handle) return;
+  const content = panel.querySelector('.detail-content, .modal-body');
   const SEUIL_FERMETURE = 90;
   const SEUIL_DEPLI = 40;
-  let startY = 0, dragging = false, expanded = false;
+  const SEUIL_DECISION = 8;
+  let startY = 0, startX = 0, dragging = false, expanded = false, fromHandle = false, decided = false;
 
   function position(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
+  function positionX(e) { return e.touches ? e.touches[0].clientX : e.clientX; }
 
   function onMove(e) {
     if (!dragging) return;
     let delta = position(e) - startY;
+
+    if (!decided) {
+      // Corps de la feuille : on attend de savoir si le geste est un balayage vertical vers le
+      // bas avant d'interférer avec le défilement ou une interaction horizontale (graphique...).
+      const dx = positionX(e) - startX;
+      if (Math.abs(delta) < SEUIL_DECISION && Math.abs(dx) < SEUIL_DECISION) return;
+      if (delta <= 0 || Math.abs(dx) > Math.abs(delta)) { dragging = false; return; }
+      decided = true;
+      panel.classList.add('sheet-dragging');
+    }
+
     if (expanded) delta = Math.max(delta, 0); // depuis l'état déplié, on ne tire que vers le bas
     else delta = Math.max(delta, -80);
     if (e.cancelable) e.preventDefault();
     panel.style.transform = `translateY(${delta}px)`;
   }
 
-  function onEnd(e) {
-    if (!dragging) return;
-    dragging = false;
-    panel.classList.remove('sheet-dragging');
+  function cleanup() {
     document.removeEventListener('touchmove', onMove);
     document.removeEventListener('touchend', onEnd);
     document.removeEventListener('touchcancel', onEnd);
     document.removeEventListener('mousemove', onMove);
     document.removeEventListener('mouseup', onEnd);
+  }
+
+  function onEnd(e) {
+    const wasDragging = dragging && decided;
+    dragging = false;
+    panel.classList.remove('sheet-dragging');
+    cleanup();
+    if (!wasDragging) return;
     const delta = (e.changedTouches ? e.changedTouches[0].clientY : e.clientY) - startY;
     panel.style.transform = '';
     if (delta > SEUIL_FERMETURE) {
@@ -1259,10 +1281,14 @@ function initSheetDrag(panel, onClose) {
     }
   }
 
-  function onStart(e) {
+  function onStart(e, isHandle) {
+    if (!isHandle && content && content.scrollTop > 0) return; // laisse le défilement interne agir
+    fromHandle = isHandle;
+    decided = isHandle; // depuis la poignée : geste reconnu d'emblée, dans les deux sens
     dragging = true;
     startY = position(e);
-    panel.classList.add('sheet-dragging');
+    startX = positionX(e);
+    if (isHandle) panel.classList.add('sheet-dragging');
     if (!e.touches) e.preventDefault(); // souris : évite la sélection de texte pendant le tirage
     document.addEventListener('touchmove', onMove, { passive: false });
     document.addEventListener('touchend', onEnd);
@@ -1271,6 +1297,10 @@ function initSheetDrag(panel, onClose) {
     document.addEventListener('mouseup', onEnd);
   }
 
-  handle.addEventListener('touchstart', onStart, { passive: true });
-  handle.addEventListener('mousedown', onStart);
+  handle.addEventListener('touchstart', e => onStart(e, true), { passive: true });
+  handle.addEventListener('mousedown', e => onStart(e, true));
+  panel.addEventListener('touchstart', e => {
+    if (e.target.closest('.sheet-handle')) return;
+    onStart(e, false);
+  }, { passive: true });
 }

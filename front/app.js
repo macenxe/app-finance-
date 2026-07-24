@@ -138,10 +138,10 @@ const App = (() => {
     actus:    '<rect x="5" y="3" width="14" height="18" rx="1.5"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>',
   };
   const NAV = [
-    { key: 'dash',     label: 'Tableau de bord', court: 'Accueil'  },
-    { key: 'prod',     label: 'Autocall',        court: 'Autocall' },
-    { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds'    },
-    { key: 'actus',    label: 'Actualités',      court: 'Actus'    },
+    { key: 'dash',     label: 'Tableau de bord', court: 'Accueil',  def: 'Synthèse des marchés' },
+    { key: 'prod',     label: 'Autocall',        court: 'Autocall', def: 'Produits à mécanisme de rappel automatique' },
+    { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds',    def: 'Fonds en euros · Unités de compte · Le Conservateur' },
+    { key: 'actus',    label: 'Actualités',      court: 'Actus',    def: 'Sélection du cabinet · fil marché en direct' },
   ];
 
   function renderNav() {
@@ -158,11 +158,19 @@ const App = (() => {
           <span>${item.court}</span>
         </button>`).join('');
     }
-    // Onglets bureau (barre du haut, remplace la sidebar sur desktop)
+    // Onglets bureau (barre du haut, remplace la sidebar sur desktop) — le .page-title de
+    // chaque page est masqué sur bureau (voir style.css) : l'onglet actif porte donc aussi
+    // la description (ex-.page-sub) pour rester aussi parlant que l'ancien gros titre.
     const topNav = document.getElementById('top-nav');
     if (topNav) {
-      topNav.innerHTML = NAV.map(item => `
-        <div class="top-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">${item.label}</div>`).join('');
+      topNav.innerHTML = NAV.map(item => {
+        const active = activeKey === item.key;
+        return `
+        <div class="top-nav-item${active ? ' active' : ''}" onclick="App.goto('${item.key}')">
+          <span class="top-nav-label">${item.label}</span>
+          ${active ? `<span class="top-nav-desc">${item.def}</span>` : ''}
+        </div>`;
+      }).join('');
     }
     const dtDate = document.querySelector('.dt-date');
     if (dtDate && !dtDate.textContent) {
@@ -245,16 +253,14 @@ const App = (() => {
   // qu'une simple ligne brisée.
   async function initSparklinesActifs() {
     if (!estBureau() || state.page !== 'dash') return;
-    if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
+    if (typeof AppAPI === 'undefined' || !AppAPI.chargerHistorique) return;
     const cartes = [...document.querySelectorAll('.index-card[data-macro]')];
     await Promise.allSettled(cartes.map(async (carte) => {
       const gid = carte.getAttribute('data-macro');
       const svg = carte.querySelector('.index-spark svg');
       if (!gid || !svg || svg.childElementCount) return; // déjà tracé
       try {
-        const r = await fetch(AppAPI.historyUrl(gid, '1a'), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-        if (!r.ok) return;
-        const pts = (await r.json()).points || [];
+        const pts = (await AppAPI.chargerHistorique(gid, '1a')).points || [];
         if (pts.length < 2) return;
         const vals = pts.map(p => p.c);
         const n = vals.length;

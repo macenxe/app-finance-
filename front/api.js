@@ -213,6 +213,37 @@ const AppAPI = (() => {
     return `${WORKER}?${q}`;
   }
 
+  // Séries statiques (tout l'historique dans le fichier) : filtrage de la période côté client.
+  // Même logique que le Worker, dupliquée ici volontairement (pas de module JS, script vanilla).
+  const JOURS_P = { '1j': 3, '1s': 10, '1m': 35, '6m': 190, ytd: null, '1a': 380, '3a': 1100, '5a': 1850, '10a': 3700 };
+  function filtrerPeriode(points, periode) {
+    let cutoff;
+    if (periode === 'ytd') cutoff = Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000);
+    else cutoff = Math.floor((Date.now() - (JOURS_P[periode] || 190) * 86400000) / 1000);
+    const f = points.filter(p => p.t >= cutoff);
+    return f.length >= 2 ? f : points.slice(-6);
+  }
+
+  // Charge l'historique d'un ticker pour un graphique (chart.js), avec repli automatique :
+  // 1. fred:/hicp: → toujours statique (jamais servi par le Worker), filtré par période ici.
+  // 2. Cours (indices/actions) → Worker (cours du moment) ; si injoignable (ex. pare-feu
+  //    d'entreprise bloquant *.workers.dev), repli sur front/data/history/eq/<ticker>.json,
+  //    pré-généré par GitHub Actions (back/src/history-snapshot.ts), filtré par période.
+  async function chargerHistorique(id, periode) {
+    if (id.indexOf('fred:') === 0 || id.indexOf('hicp:') === 0) {
+      const d = await fetchJson(`./data/history/${id.slice(5)}.json`);
+      return { ...d, points: filtrerPeriode(d.points || [], periode) };
+    }
+    try {
+      const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(periode)}`;
+      const d = await fetchJson(`${WORKER}?${q}`, 8000);
+      if ((d.points || []).length >= 2) return d;
+    } catch { /* Worker injoignable : on tente le repli statique */ }
+    const fichier = id.replace(/[^A-Za-z0-9_.-]/g, '_');
+    const d = await fetchJson(`./data/history/eq/${fichier}.json`);
+    return { ...d, points: filtrerPeriode(d.points || [], periode) };
+  }
+
   // URL de la valeur courante du CMS 10 ans (swap EUR 10y via FT, proxifié).
   function cmsUrl() {
     return `${WORKER}?cms=1`;
@@ -225,5 +256,5 @@ const AppAPI = (() => {
     return fetchJson(`${WORKER}?news=1`, 18000);
   }
 
-  return { chargerDonnees, chargerNews, worker: WORKER, historyUrl, cmsUrl };
+  return { chargerDonnees, chargerNews, worker: WORKER, historyUrl, chargerHistorique, cmsUrl };
 })();

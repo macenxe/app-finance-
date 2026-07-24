@@ -788,40 +788,43 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #sidebar { display: none; }
   #desktop-topbar {
     display: flex; align-items: center; flex: none;
-    background: #16304f; padding: 0 40px; height: 64px; gap: 36px;
+    background: #16304f; padding: 0 40px; height: 76px; gap: 36px;
   }
   .dt-brand { flex: none; }
   .dt-logo { font-family: 'Spectral', serif; font-size: 21px; font-weight: 700; color: #f7f4ec; letter-spacing: .02em; }
   /* flex-direction/padding explicites : la règle de base `nav { flex-direction: column }`
      visait la sidebar et empilerait sinon les onglets hors du bandeau. */
-  #top-nav { display: flex; flex-direction: row; align-items: center; gap: 6px; flex: 1; padding: 0; }
+  #top-nav { display: flex; flex-direction: row; align-items: center; gap: 8px; flex: 1; padding: 0; }
+  /* Le menu remplace le .page-title de chaque page (retiré sur bureau, voir plus bas) :
+     onglets agrandis, et l'onglet actif se déplie en 2 lignes (libellé + description,
+     reprise du .page-sub d'origine) pour rester aussi parlant que l'ancien gros titre. */
   .top-nav-item {
-    display: flex; align-items: center; padding: 9px 18px; border-radius: 7px;
-    font-size: 14px; font-weight: 600; color: #b9c4d4; cursor: pointer;
-    white-space: nowrap; transition: background .15s, color .15s;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+    padding: 10px 20px; border-radius: 9px;
+    font-size: 15px; font-weight: 600; color: #b9c4d4; cursor: pointer; line-height: 1.3;
+    white-space: nowrap; transition: background .15s, color .15s, padding .15s;
   }
   .top-nav-item:hover { color: #fff; background: #22304e; }
   /* Onglet actif : pastille claire (comme la maquette) */
   .top-nav-item.active { background: #f7f4ec; color: #16304f; }
   .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
+  .top-nav-desc { font-size: 11.5px; font-weight: 400; color: #6b6253; margin-top: 2px; }
   .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
   .dt-date { font-size: 13px; color: #9aa6bd; white-space: nowrap; }
   /* Bandeau légal : redondant sur bureau (déjà visible au premier chargement), retiré pour
      rendre au tableau de bord la hauteur qu'il occupait. Reste affiché sur mobile. */
   #footer { display: none; }
+  /* Titre de page retiré sur bureau : la barre d'onglets ci-dessus indique déjà la page
+     courante (+ sa description dans l'onglet actif) — éviter de l'écrire deux fois.
+     Reste affiché tel quel sur mobile (pas de barre d'onglets équivalente là-bas). */
+  .page-header { display: none; }
 
-  /* Conteneur centré + titre de page en gros serif, sans bandeau collant (comme la maquette) */
-  .page-header, .page-body {
+  /* Conteneur centré (comme la maquette) */
+  .page-body {
     max-width: 1600px; width: 100%; margin-left: auto; margin-right: auto;
     padding-left: 40px; padding-right: 40px;
   }
-  .page-header {
-    position: static; background: none; backdrop-filter: none; border-bottom: none;
-    padding-top: 14px; padding-bottom: 0;
-  }
-  .page-title { font-size: 23px; line-height: 1.15; }
-  .page-sub   { font-size: 13px; margin-top: 4px; }
-  .page-body  { padding-top: 10px; padding-bottom: 40px; }
+  .page-body  { padding-top: 18px; padding-bottom: 40px; }
   .detail-content { padding: 18px 26px 30px; }
   .card { border-radius: 10px; }
 
