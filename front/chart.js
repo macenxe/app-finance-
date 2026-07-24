@@ -39,7 +39,7 @@ const Chart = (() => {
       : { day: '2-digit', month: 'short', year: 'numeric' });
   }
 
-  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN', sheet:bool }
+  // opts (optionnel) : { lignes:[{valeur,label,couleur}], retour:fn, sous:'libellé', compoIsin:'ISIN', sheet:bool, strategie:'texte' }
   function ouvrir(ticker, label, opts) {
     opts = opts || {};
     // Séries sans intraday (FRED, inflation, swap CMS, fonds Yahoo 0P…F) : pas d'heure ni
@@ -50,6 +50,7 @@ const Chart = (() => {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: opts.retour || null, sous: opts.sous || '',
       compoIsin: opts.compoIsin || null, sheet: !!opts.sheet, dateOnly, periodes,
+      strategie: opts.strategie || '',
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
@@ -99,6 +100,7 @@ const Chart = (() => {
             <span class="chart-date" id="chart-date"></span>
           </div>
         </div>
+        ${etat.strategie ? `<div class="uc-strategie"><div class="uc-strategie-titre">Stratégie du fonds</div>${esc(etat.strategie)}</div>` : ''}
         <div class="chart-zone" id="chart-zone">
           <div class="chart-loading">Chargement…</div>
         </div>

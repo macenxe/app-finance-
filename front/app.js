@@ -773,7 +773,8 @@ const App = (() => {
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
-      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin, sheet: true });
+      const strategie = (u && typeof ucStrategieTxt === 'function') ? ucStrategieTxt(u) : '';
+      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin, sheet: true, strategie });
     },
     // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : feuille modale (inchangé).
     ouvrirUC(isin) {

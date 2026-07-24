@@ -620,6 +620,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .chart-per:hover { border-color: #16304f; }
 .chart-per.active { background: #16304f; color: #fff; border-color: #16304f; }
 
+/* Résumé de la stratégie du fonds : juste sous l'identité de l'UC, avant le graphique — le
+   texte descriptif s'y lit en premier, puis viennent les données chiffrées (courbe, répartition).
+   Non scopé bureau/mobile : utilisé par le panneau bureau (.ac-detail-panneau) ET la feuille
+   modale mobile (Chart.ouvrir avec compoIsin, voir chart.js). */
+.uc-strategie {
+  background: #f7f4ec; border: 1px solid #ece7dc; border-radius: 8px;
+  padding: 12px 16px; margin-bottom: 12px; font-size: 12.5px; color: #5b5450; line-height: 1.5;
+}
+.uc-strategie-titre { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a7b3c; font-weight: 700; margin-bottom: 5px; }
+
 /* ── Composition d'une UC (sous le graphique) ── */
 .chart-compo { margin-top: 16px; border-top: 1px solid #f1ece1; padding-top: 12px; }
 .chart-compo:empty { display: none; }
@@ -1109,13 +1119,6 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-detail-panneau[data-uc] .chart-per { padding: 5px 10px; font-size: 11.5px; }
   .ac-detail-panneau[data-uc] .chart-compo { margin-top: 14px; padding-top: 12px; }
   .ac-detail-panneau[data-uc] .compo-hold { padding: 4px 0; }
-  /* Résumé de la stratégie du fonds : juste sous l'identité de l'UC, avant le graphique — le
-     texte descriptif s'y lit en premier, puis viennent les données chiffrées (courbe, répartition). */
-  .uc-strategie {
-    background: #f7f4ec; border: 1px solid #ece7dc; border-radius: 8px;
-    padding: 12px 16px; margin-bottom: 12px; font-size: 12.5px; color: #5b5450; line-height: 1.5;
-  }
-  .uc-strategie-titre { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a7b3c; font-weight: 700; margin-bottom: 5px; }
 }
 
 /* La liste UC reste sur une seule colonne : elle vit dans la colonne gauche du split. */
