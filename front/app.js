@@ -260,59 +260,6 @@ const App = (() => {
     if (series.length) Chart.comparer('cmp-indices', series);
   }
 
-  // Carte « Comparateur de fonds » de la page Fonds € & UC (bureau uniquement) — même principe
-  // que la comparaison d'indices du tableau de bord (base 100, chips retirables + picker), mais
-  // catalogue restreint aux UC ayant un historique (graphId). État de sélection distinct
-  // (cmpFondsSeries/cmpFondsPickerOuvert) pour ne pas interférer avec le comparateur du dashboard.
-  function catalogueComparaisonUC() {
-    const out = new Map();
-    const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
-    uc.forEach(u => {
-      if (!u.graphId || out.has(u.graphId)) return;
-      out.set(u.graphId, { ticker: u.graphId, label: u.nom, groupe: u.categorie || 'Autres' });
-    });
-    return out;
-  }
-
-  function renderChipsComparaisonUC(catalogue) {
-    const host = document.getElementById('cmp-fonds-chips');
-    if (!host) return;
-    const selection = (state.cmpFondsSeries || []).map(t => catalogue.get(t)).filter(Boolean);
-    const dispo = [...catalogue.values()].filter(c => !(state.cmpFondsSeries || []).includes(c.ticker));
-    const chips = selection.map(s => `
-      <span class="cmp-chip">${escHtml(s.label)}<button class="cmp-chip-retirer" type="button" aria-label="Retirer ${escHtml(s.label)}" onclick="event.stopPropagation();App.retirerSerieCmpFonds('${escHtml(s.ticker)}')">✕</button></span>`).join('');
-    const bouton = `<button class="cmp-chip-ajouter" type="button" onclick="event.stopPropagation();App.toggleCmpFondsPicker()">+ Ajouter</button>`;
-    let picker = '';
-    if (state.cmpFondsPickerOuvert) {
-      const groupes = [...new Set(dispo.map(d => d.groupe))];
-      const corps = dispo.length
-        ? groupes.map(g => {
-            const items = dispo.filter(d => d.groupe === g);
-            return `<div class="cmp-picker-groupe">${escHtml(g)}</div>` + items.map(it => `
-              <div class="cmp-picker-item" onclick="event.stopPropagation();App.ajouterSerieCmpFonds('${escHtml(it.ticker)}')">
-                <span class="cmp-picker-swatch"></span>${escHtml(it.label)}
-              </div>`).join('');
-          }).join('')
-        : `<div class="cmp-picker-vide">Toutes les UC disponibles sont déjà affichées.</div>`;
-      picker = `<div class="cmp-picker" onclick="event.stopPropagation()">${corps}</div>`;
-    }
-    host.innerHTML = chips + bouton + picker;
-  }
-
-  function initComparaisonFonds() {
-    if (!estBureau() || state.page !== 'contrats' || !window.Chart) return;
-    if (!document.getElementById('cmp-fonds')) return;
-    const catalogue = catalogueComparaisonUC();
-    if (!state.cmpFondsSeries) {
-      const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
-      const ucCourante = uc.find(u => u.isin === state.ucSel && u.graphId) || uc.find(u => u.graphId);
-      state = { ...state, cmpFondsSeries: ucCourante ? [ucCourante.graphId] : [] };
-    }
-    renderChipsComparaisonUC(catalogue);
-    const series = state.cmpFondsSeries.map(t => catalogue.get(t)).filter(Boolean);
-    if (series.length) Chart.comparer('cmp-fonds', series);
-  }
-
   // Mini graphiques 5 ans dans les cartes Actifs (Brent/Or/Bitcoin) : comble l'espace libre
   // à droite du nom/valeur une fois ces cartes étirées sur la largeur de la grille marché.
   // Courbe lissée (Chart.smooth) + aire dégradée + point final, pour un rendu plus soigné
@@ -386,12 +333,22 @@ const App = (() => {
     if (!estBureau()) return;
     const panneau = document.querySelector('.ac-detail-panneau');
     if (!panneau) return;
-    // Page Fonds : graphique + composition de l'UC sélectionnée.
+    // Page Fonds : graphique + composition de l'UC sélectionnée. Dès qu'une (ou plusieurs) UC
+    // sont ajoutées via les puces « Comparer », le graphique passe en mode comparaison base 100
+    // (comme le comparateur d'indices du tableau de bord) et perd la composition, qui n'a pas de
+    // sens pour plusieurs fonds à la fois.
     if (state.page === 'contrats') {
       const gid = panneau.getAttribute('data-graph');
       const isin = panneau.getAttribute('data-uc');
-      if (gid && window.Chart) {
-        const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
+      const compareIsins = (panneau.getAttribute('data-compare') || '').split(',').filter(Boolean);
+      if (!gid || !window.Chart) return;
+      const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+      const u = uc.find(x => x.isin === isin);
+      if (compareIsins.length) {
+        const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
+        const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
+        Chart.comparer('uc-chart-inline', series);
+      } else {
         Chart.ouvrirInline('uc-chart-inline', gid, u ? u.nom : '', { sous: u ? u.categorie : '', compoIsin: isin });
       }
       return;
@@ -424,7 +381,6 @@ const App = (() => {
     el.scrollTop = saved;
     renderNav();
     if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); initSparklinesActifs(); }
-    if (state.page === 'contrats') initComparaisonFonds();
     rafraichirChartPanneau();
   }
 
@@ -733,11 +689,11 @@ const App = (() => {
           initComparaisonIndices();
         }
       }
-      if (state.cmpFondsPickerOuvert) {
-        const host = document.getElementById('cmp-fonds-chips');
+      if (state.ucComparePickerOuvert) {
+        const host = document.getElementById('uc-compare-chips');
         if (host && !host.contains(e.target)) {
-          state = { ...state, cmpFondsPickerOuvert: false };
-          initComparaisonFonds();
+          state = { ...state, ucComparePickerOuvert: false };
+          renderPage(true);
         }
       }
     });
@@ -798,29 +754,31 @@ const App = (() => {
       state = { ...state, cmpSeries: reste };
       initComparaisonIndices();
     },
-    // Sélection des séries du comparateur de fonds (page Fonds € & UC, bureau uniquement).
-    toggleCmpFondsPicker() {
-      state = { ...state, cmpFondsPickerOuvert: !state.cmpFondsPickerOuvert };
-      initComparaisonFonds();
+    // Puces « Comparer » du panneau UC (page Fonds € & UC, bureau uniquement) : ajoutent d'autres
+    // UC sur le graphique de l'UC actuellement ouverte (state.ucSel), sans carte séparée.
+    toggleUcComparePicker() {
+      state = { ...state, ucComparePickerOuvert: !state.ucComparePickerOuvert };
+      renderPage(true);
     },
-    ajouterSerieCmpFonds(ticker) {
-      const set = new Set(state.cmpFondsSeries || []);
-      set.add(ticker);
-      state = { ...state, cmpFondsSeries: [...set], cmpFondsPickerOuvert: false };
-      initComparaisonFonds();
+    ajouterUcCompare(isin) {
+      const set = new Set(state.ucCompare || []);
+      set.add(isin);
+      state = { ...state, ucCompare: [...set], ucComparePickerOuvert: false };
+      renderPage(true);
     },
-    retirerSerieCmpFonds(ticker) {
-      const reste = (state.cmpFondsSeries || []).filter(t => t !== ticker);
-      if (!reste.length) return; // toujours garder au moins une série affichée
-      state = { ...state, cmpFondsSeries: reste };
-      initComparaisonFonds();
+    retirerUcCompare(isin) {
+      const reste = (state.ucCompare || []).filter(i => i !== isin);
+      state = { ...state, ucCompare: reste };
+      renderPage(true);
     },
     setNewsTheme(theme) {
       state = { ...state, newsTheme: theme || null };
       renderPage();
     },
     setUcCat(cat) {
-      state = { ...state, ucCat: state.ucCat === cat ? null : cat };
+      // Le filtre peut faire disparaître l'UC ouverte de la liste (le panneau retombe alors sur
+      // la 1re UC du nouveau filtre) : on referme la comparaison en cours pour ne pas la lui laisser attachée.
+      state = { ...state, ucCat: state.ucCat === cat ? null : cat, ucCompare: [], ucComparePickerOuvert: false };
       sauvegarderEtat();
       renderPage(true);
     },
@@ -877,7 +835,9 @@ const App = (() => {
     // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : feuille modale (inchangé).
     ouvrirUC(isin) {
       if (!estBureau()) { App.ouvrirGraphiqueUC(isin); return; }
-      state = { ...state, ucSel: isin };
+      // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
+      // affiché, pas sur une sélection indépendante.
+      state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false };
       sauvegarderEtat();
       renderPage(true);
     },

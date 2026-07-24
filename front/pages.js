@@ -1075,7 +1075,7 @@ function renderContrats(state, ucPerfs) {
   const ucSelExplicite = ucFiltrees.find(u => u.isin === (state && state.ucSel)) || null;
   const ucCourante = ucSelExplicite || ucFiltrees.find(u => u.graphId) || ucFiltrees[0] || null;
   const ucSel = ucCourante ? ucCourante.isin : null;
-  const ucPanneau = renderUCPanneau(ucCourante, ucPerfs);
+  const ucPanneau = renderUCPanneau(ucCourante, ucPerfs, state);
 
   return `
   <div>
@@ -1177,13 +1177,6 @@ function renderContrats(state, ucPerfs) {
 
       <div class="ac-col-detail">${ucPanneau}</div>
      </div><!-- /ac-split -->
-
-     <div class="card p-18 mb-24 bureau-seul cmp-card">
-       <div class="card-title">Comparateur de fonds</div>
-       <div class="section-hint mb-12">Base 100 au début de la période · unités de compte</div>
-       <div class="cmp-chips" id="cmp-fonds-chips"></div>
-       <div id="cmp-fonds"></div>
-     </div>
     </div>
   </div>`;
 }
@@ -1204,14 +1197,52 @@ function ucStrategieTxt(u) {
   return bits.join(' · ') + '.';
 }
 
-function renderUCPanneau(u, ucPerfs) {
+// Chips « Comparer » du panneau UC (bureau) : ajoute d'autres UC sur le graphique déjà affiché
+// (base 100 dès qu'il y en a plus d'une), sans carte séparée. La 1re puce (fonds ouvert depuis
+// la liste) n'est pas retirable ; les suivantes le sont via App.retirerUcCompare.
+function renderUcCompareChips(u, extras, state) {
+  if (!u.graphId) return '';
+  const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+  const compares = [u, ...extras];
+  const dispo = uc.filter(x => x.graphId && !compares.some(c => c.isin === x.isin));
+  const chips = compares.map((c, i) => i === 0
+    ? `<span class="cmp-chip cmp-chip--principal">${escHtml(c.nom)}</span>`
+    : `<span class="cmp-chip">${escHtml(c.nom)}<button class="cmp-chip-retirer" type="button" aria-label="Retirer ${escHtml(c.nom)}" onclick="event.stopPropagation();App.retirerUcCompare('${escHtml(c.isin)}')">✕</button></span>`
+  ).join('');
+  const bouton = `<button class="cmp-chip-ajouter" type="button" onclick="event.stopPropagation();App.toggleUcComparePicker()">+ Comparer</button>`;
+  let picker = '';
+  if (state && state.ucComparePickerOuvert) {
+    const corps = dispo.length
+      ? dispo.map(it => `
+          <div class="cmp-picker-item" onclick="event.stopPropagation();App.ajouterUcCompare('${escHtml(it.isin)}')">
+            <span class="cmp-picker-swatch"></span>${escHtml(it.nom)}
+          </div>`).join('')
+      : `<div class="cmp-picker-vide">Toutes les UC disponibles sont déjà comparées.</div>`;
+    picker = `<div class="cmp-picker" onclick="event.stopPropagation()">${corps}</div>`;
+  }
+  return `<div class="cmp-chips uc-compare-chips" id="uc-compare-chips">${chips}${bouton}${picker}</div>`;
+}
+
+function renderUCPanneau(u, ucPerfs, state) {
   if (!u) return '<div class="ac-detail-vide">Sélectionnez une unité de compte pour afficher sa fiche.</div>';
+  const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+  const extras = ((state && state.ucCompare) || [])
+    .filter(isin => isin !== u.isin)
+    .map(isin => uc.find(x => x.isin === isin))
+    .filter(Boolean);
+  const compares = [u, ...extras];
   const p = ucPerfs ? ucPerfs[u.isin] : null;
   const perfTxt = (p == null || isNaN(p)) ? '—'
     : (p >= 0 ? '+' : '') + p.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
   const perfCls = (p == null || isNaN(p)) ? '' : (p >= 0 ? 'green' : 'red');
+  const strategieBlocs = compares.map(c => `
+    <div class="uc-strategie">
+      ${compares.length > 1 ? `<div class="uc-strategie-nom">${escHtml(c.nom)}</div>` : ''}
+      <div class="uc-strategie-titre">Stratégie du fonds</div>
+      ${escHtml(ucStrategieTxt(c))}
+    </div>`).join('');
   return `
-  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}">
+  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}">
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>
@@ -1222,11 +1253,10 @@ function renderUCPanneau(u, ucPerfs) {
         <div class="ac-detail-niveau-delta ${perfCls}">depuis le 01/01</div>
       </div>
     </div>
-    <div class="uc-strategie">
-      <div class="uc-strategie-titre">Stratégie du fonds</div>
-      ${escHtml(ucStrategieTxt(u))}
-    </div>
-    <div id="uc-chart-inline" class="detail-chart-inline"></div>
+    ${renderUcCompareChips(u, extras, state)}
+    ${compares.length > 1
+      ? `<div id="uc-chart-inline" class="detail-chart-inline"></div>${strategieBlocs}`
+      : `${strategieBlocs}<div id="uc-chart-inline" class="detail-chart-inline"></div>`}
   </div>`;
 }
 

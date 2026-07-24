@@ -631,6 +631,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   padding: 12px 16px; margin-bottom: 12px; font-size: 12.5px; color: #5b5450; line-height: 1.5;
 }
 .uc-strategie-titre { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a7b3c; font-weight: 700; margin-bottom: 5px; }
+/* Comparaison de plusieurs UC : chaque bloc stratégie porte le nom de son fonds. */
+.uc-strategie-nom { font-size: 12.5px; font-weight: 700; color: #16304f; margin-bottom: 6px; }
 
 /* ── Composition d'une UC (sous le graphique) ── */
 .chart-compo { margin-top: 16px; border-top: 1px solid #f1ece1; padding-top: 12px; }
@@ -1045,6 +1047,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .cmp-picker-item:hover { background: #f7f4ec; }
   .cmp-picker-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
   .cmp-picker-vide { padding: 10px 8px; font-size: 11.5px; color: #9a8f7a; text-align: center; }
+
+  /* ── Puces « Comparer » du panneau UC (page Fonds € & UC) : alignées à gauche, sous l'entête ── */
+  .uc-compare-chips { justify-content: flex-start; margin-bottom: 14px; }
+  .cmp-chip--principal { background: #eef2f7; color: #16304f; padding: 0 9px; }
 
   /* ── Actualités : fil + colonne de filtres par thème ── */
   .news-split { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; align-items: start; }
