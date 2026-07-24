@@ -203,19 +203,35 @@ const FONDS_EUROS_PERF = {
 
 // ── Catalogue UC suivi (sélection ordonnée : actions → obligataire) ──
 // Cliquables : graphId = symbole Yahoo du fonds (historique de VL). equity = exposition actions indicative.
+// `strategie` : objectif de gestion résumé d'après la documentation officielle de chaque société de
+// gestion (page produit du gérant ou, pour les fonds « Conservateur », conservateur.fr) — recherché le
+// 24 juillet 2026. Si absent, ucStrategieTxt() (pages.js) retombe sur un résumé générique de faits déjà
+// connus (catégorie/exposition/SRRI), sans jamais inventer une stratégie non sourcée.
 const UC_CATALOGUE = [
-  { rang:1,  gerant:'R·co', nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F' },
-  { rang:2,  gerant:'LFDE', nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F' },
-  { rang:3,  gerant:'EdR',  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:'0P00016P7T.F' },
-  { rang:4,  gerant:'Pct',  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F' },
-  { rang:5,  gerant:'Pct',  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F' },
-  { rang:6,  gerant:'C',    nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F' },
-  { rang:7,  gerant:'Cg',   nom:'Comgest Renaissance Europe C',         isin:'FR0000295230', categorie:'Actions Europe',       srri:5, equity:100, graphId:'0P00000PM8.F' },
-  { rang:8,  gerant:'Fid',  nom:'Fidelity World Fund A-ACC-EUR',        isin:'LU1261432659', categorie:'Actions Monde',        srri:5, equity:100, graphId:'0P00016FY4.F' },
-  { rang:9,  gerant:'C',    nom:'Conservateur Actions Flexibles C',     isin:'FR0013256930', categorie:'Mixte / Flexible',     srri:3, equity:55,  graphId:'0P0001HI3U.F' },
-  { rang:10, gerant:'C',    nom:'Conservateur Diversifié Réactif C',    isin:'FR0010489542', categorie:'Mixte obligataire',    srri:3, equity:25,  graphId:'0P0000JZWP.F' },
-  { rang:11, gerant:'C',    nom:'Conservateur Rendement Flexible C',    isin:'FR0013087152', categorie:'Obligataire flexible', srri:2, equity:20,  graphId:'0P00019OMO.F' },
-  { rang:12, gerant:'C',    nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F' },
+  { rang:1,  gerant:'R·co', nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F',
+    strategie:'Gestion flexible et discrétionnaire, sans contrainte d’indice : sélection d’actions et de taux internationaux, de 0 à 100 % investis en actions selon les convictions du gérant.' },
+  { rang:2,  gerant:'LFDE', nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F',
+    strategie:'Fonds actions thématique concentré (moins de 50 valeurs) sur les entreprises qui développent ou exploitent l’intelligence artificielle, exposition internationale d’au moins 60 %.' },
+  { rang:3,  gerant:'EdR',  nom:'EdR Fund Big Data A EUR',              isin:'LU1244893696', categorie:'Actions thématique',   srri:4, equity:100, graphId:'0P00016P7T.F',
+    strategie:'Fonds actions internationales du secteur technologique (Big Data), géré activement avec pour objectif de surperformer l’indice MSCI World.' },
+  { rang:4,  gerant:'Pct',  nom:'Pictet Clean Energy Transition P EUR', isin:'LU0280435388', categorie:'Actions thématique',   srri:5, equity:100, graphId:'0P00008OBQ.F',
+    strategie:'Fonds actions thématique (Article 9 SFDR) investi dans les entreprises qui contribuent à la réduction des émissions de carbone : énergies propres, transport et efficacité énergétique.' },
+  { rang:5,  gerant:'Pct',  nom:'Pictet-Premium Brands P EUR',          isin:'LU0217139020', categorie:'Actions thématique',   srri:5, equity:95,  graphId:'0P000021C4.F',
+    strategie:'Fonds actions thématique investi dans les grandes marques mondiales à fort pouvoir de fixation des prix, sans contrainte géographique.' },
+  { rang:6,  gerant:'C',    nom:'Conservateur Actions Monde C',         isin:'FR0010564229', categorie:'Actions Monde',        srri:6, equity:95,  graphId:'0P0000INCI.F',
+    strategie:'Fonds actions internationales géré activement, exposé aux grandes places boursières mondiales (Europe, États-Unis, Asie-Pacifique), horizon recommandé de 5 ans.' },
+  { rang:7,  gerant:'Cg',   nom:'Comgest Renaissance Europe C',         isin:'FR0000295230', categorie:'Actions Europe',       srri:5, equity:100, graphId:'0P00000PM8.F',
+    strategie:'Fonds actions Europe « Quality Growth » : sélection de valeurs européennes de qualité à la croissance visible et durable, sans référence à un indice, horizon long terme.' },
+  { rang:8,  gerant:'Fid',  nom:'Fidelity World Fund A-ACC-EUR',        isin:'LU1261432659', categorie:'Actions Monde',        srri:5, equity:100, graphId:'0P00016FY4.F',
+    strategie:'Fonds actions internationales largement diversifié, avec une allocation proche de son indice de référence MSCI World, pour une croissance du capital à long terme.' },
+  { rang:9,  gerant:'C',    nom:'Conservateur Actions Flexibles C',     isin:'FR0013256930', categorie:'Mixte / Flexible',     srri:3, equity:55,  graphId:'0P0001HI3U.F',
+    strategie:'Fonds actions Europe à gestion flexible et discrétionnaire, combinant analyse macroéconomique (top-down) et sélection de valeurs (bottom-up), horizon recommandé de 5 ans.' },
+  { rang:10, gerant:'C',    nom:'Conservateur Diversifié Réactif C',    isin:'FR0010489542', categorie:'Mixte obligataire',    srri:3, equity:25,  graphId:'0P0000JZWP.F',
+    strategie:'Gestion diversifiée dynamique, réactive et discrétionnaire, sans biais de style ni de taille, visant une valorisation du capital sur un horizon de 4 ans.' },
+  { rang:11, gerant:'C',    nom:'Conservateur Rendement Flexible C',    isin:'FR0013087152', categorie:'Obligataire flexible', srri:2, equity:20,  graphId:'0P00019OMO.F',
+    strategie:'Fonds diversifié à gestion flexible visant une performance supérieure à l’€ster capitalisé + 1,5 %, avec intégration de critères ESG, horizon recommandé de 4 ans.' },
+  { rang:12, gerant:'C',    nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F',
+    strategie:'Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum.' },
 ];
 
 // ── Contrats assurance-vie & UC ──

@@ -864,7 +864,7 @@ function detailCorpsHtml(produit, chartId = 'detail-chart-inline') {
         ${produit.evaluationIncomplete ? `<div class="detail-note" style="margin-top:10px;color:#9a3535;">Historique de cours incomplet : réserve indicative.</div>` : ''}
       </div>
 
-      <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
+      <div class="detail-note detail-note--indic">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
     </div>`;
 }
 
@@ -993,7 +993,7 @@ function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline') {
         </div>
       </div>
 
-      <div class="detail-note">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
+      <div class="detail-note detail-note--indic">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
     </div>`;
 }
 
@@ -1175,12 +1175,14 @@ function renderContrats(state, ucPerfs) {
 }
 
 // Panneau de droite de la page Fonds : identité de l'UC + graphique et composition.
-// Résumé d'allocation affiché en tête de fiche UC : uniquement des faits déjà présents dans
-// UC_CATALOGUE (catégorie, part actions, niveau de risque SRI) — pas de commentaire sur la
-// stratégie propre au fonds, qu'on ne peut pas garantir sans source officielle. Le champ
-// `gerant` n'est volontairement pas repris ici : ce sont des codes internes abrégés (« Pct »,
-// « LFDE », « C »…) impropres à l'affichage tels quels.
+// Résumé affiché en tête de fiche UC : priorité au champ `strategie` de UC_CATALOGUE (data.js),
+// sourcé sur la documentation officielle de chaque société de gestion. À défaut (fonds sans
+// source vérifiée), repli sur un résumé générique de faits déjà connus (catégorie/exposition/SRI)
+// plutôt que d'inventer une stratégie non sourcée. Le champ `gerant` n'est volontairement pas
+// repris ici : ce sont des codes internes abrégés (« Pct », « LFDE », « C »…) impropres à
+// l'affichage tels quels.
 function ucStrategieTxt(u) {
+  if (u.strategie) return u.strategie;
   const bits = [];
   if (u.categorie) bits.push(`Fonds ${u.categorie.toLowerCase()}`);
   if (u.equity != null) bits.push(`${u.equity} % investis en actions`);
@@ -1207,7 +1209,7 @@ function renderUCPanneau(u, ucPerfs) {
       </div>
     </div>
     <div class="uc-strategie">
-      <div class="uc-strategie-titre">Allocation</div>
+      <div class="uc-strategie-titre">Stratégie du fonds</div>
       ${escHtml(ucStrategieTxt(u))}
     </div>
     <div id="uc-chart-inline" class="detail-chart-inline"></div>

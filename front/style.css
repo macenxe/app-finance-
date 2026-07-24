@@ -1075,7 +1075,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;
   }
   .ac-detail-panneau .detail-chart-inline {
-    order: 2; flex: none; width: 100%; max-width: 760px; margin: 4px auto 0; padding: 14px 20px 10px;
+    order: 2; flex: none; width: 100%; margin: 4px 0 0; padding: 14px 20px 10px;
   }
   .ac-detail-panneau .detail-info-box { padding: 8px 12px; }
   .ac-detail-panneau .detail-info-val { font-size: 13.5px; }
@@ -1089,6 +1089,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-detail-panneau .detail-row { padding: 4px 0; }
   .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 12px; }
   .ac-detail-panneau .detail-note { margin-top: 6px; }
+  .ac-detail-panneau .detail-note--indic { display: none; }
   .ac-detail-vide {
     background: #fff; border: 1px dashed #ddd5c2; border-radius: 10px;
     padding: 44px 20px; text-align: center; color: #9a8f7a; font-size: 13px;

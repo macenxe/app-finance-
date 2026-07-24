@@ -479,20 +479,25 @@ const Chart = (() => {
     // Grille horizontale discrète (haut / base 100 / bas) — repère visuel sans surcharger.
     const niveaux = [...new Set([max - marge, 100, min + marge])].filter(v => v >= min && v <= max);
     const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid${Math.round(v) === 100 ? ' chart-cmp-grid--base' : ''}"/>`).join('');
+    // Ordonnée : valeur base 100 au regard de chaque repère horizontal.
+    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / CMP_VBH * 100).toFixed(2)}%">${v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</span>`).join('');
+    // Abscisse : grille verticale discrète (quarts de la période) pour donner une échelle de temps.
+    const grilleV = [0.25, 0.5, 0.75].map(f => { const x = padL + f * plotW; return `<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${(padT + cmpPlotH).toFixed(1)}" class="chart-cmp-grid"/>`; }).join('');
 
     const paths = normes.map((s, idx) => {
       const X = Xn(s.vals.length);
       const pts = s.vals.map((v, i) => [X(i), Y(v)]);
-      return `<path class="chart-cmp-line" data-serie="${idx}" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+      return `<path class="chart-cmp-line" data-serie="${idx}" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
     }).join('');
     const points = normes.map((s, idx) => `<circle class="chart-cmp-pt" data-serie="${idx}" r="3" fill="${s.couleur}" stroke="#fff" stroke-width="1.3" style="display:none"/>`).join('');
 
     zone.innerHTML = `
       <svg id="chart-cmp-svg" viewBox="0 0 ${VBW} ${CMP_VBH}" xmlns="http://www.w3.org/2000/svg">
-        ${grille}${paths}${points}
+        ${grilleV}${grille}${paths}${points}
         <line id="chart-cmp-cross" x1="0" y1="${padT}" x2="0" y2="${padT + cmpPlotH}" class="chart-cross" style="display:none"/>
         <rect x="0" y="0" width="${VBW}" height="${CMP_VBH}" fill="transparent" pointer-events="all"/>
-      </svg>`;
+      </svg>
+      ${ordonnee}`;
 
     // Conservés pour le survol (attacherSurvolComparaison lit etatCmp.normes/geoCmp).
     etatCmp.normes = normes;
