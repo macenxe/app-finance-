@@ -149,13 +149,26 @@ function pctDuStrike(p) {
   return (p.niveauNum / p.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
 }
 
-// Encart « Alertes portefeuille » (bureau) : produits en zone de rappel, en risque de perte
-// en capital, ou dont le niveau est proche d'une barrière. Masqué en mobile.
+// Encart « Alertes portefeuille » (bureau) : état des 4 prochaines dates de constatation
+// du portefeuille (tous produits confondus), pas seulement ceux en zone à risque. Masqué en mobile.
 function renderAlertesPortefeuille(produits) {
   // Mêmes regroupements que la liste Autocall : les paliers d'un même CAP ne forment
-  // qu'une seule alerte (« CAP 08/2030 ») au lieu d'une ligne par palier.
-  const lignes = grouperCapMemeDate((produits || []).filter(p => !p.rappele))
-    .map(p => {
+  // qu'une seule ligne (« CAP 08/2030 ») au lieu d'une ligne par palier.
+  const aujourdhui = new Date(); aujourdhui.setHours(0, 0, 0, 0);
+  const avecDate = grouperCapMemeDate((produits || []).filter(p => !p.rappele))
+    .map(p => ({ p, d: parseDateFlexible(p.constat) }))
+    .filter(x => x.d && x.d >= aujourdhui);
+
+  // Les 4 prochaines dates de constatation distinctes (plusieurs produits peuvent
+  // partager la même date sans être un groupe CAP, ex. deux familles différentes).
+  const prochainesDates = new Set(
+    [...new Set(avecDate.map(x => x.d.getTime()))].sort((a, b) => a - b).slice(0, 4)
+  );
+
+  const lignes = avecDate
+    .filter(x => prochainesDates.has(x.d.getTime()))
+    .sort((a, b) => a.d - b.d)
+    .map(({ p }) => {
       const zone = zoneNiveau(p);
       // « Proche » : le niveau est à moins de 5 points de pourcentage d'une barrière.
       const niveauPct = (p.strikeNum && p.niveauNum) ? (p.niveauNum / p.strikeNum * 100) : null;
@@ -165,13 +178,7 @@ function renderAlertesPortefeuille(produits) {
         else if (p.bCouponNum != null && Math.abs(niveauPct - p.bCouponNum) < 5) proche = 'Proche barrière coupon';
       }
       return { p, zone, proche };
-    })
-    .filter(x => x.zone.cle === 'rappel' || x.zone.cle === 'risque' || x.proche)
-    .sort((a, b) => {
-      const rang = { risque: 0, rappel: 1, neutre: 2, coupon: 2 };
-      return (rang[a.zone.cle] ?? 3) - (rang[b.zone.cle] ?? 3);
-    })
-    .slice(0, 6);
+    });
 
   const corps = lignes.length
     ? lignes.map(({ p, zone, proche }) => {
@@ -189,12 +196,12 @@ function renderAlertesPortefeuille(produits) {
             <div class="alerte-constat tnum">Constat. ${escHtml(fmtDatePanneau(p.constat))}</div>
           </div>
         </div>`; }).join('')
-    : `<div class="alerte-vide">Aucun produit en alerte.</div>`;
+    : `<div class="alerte-vide">Aucune constatation à venir.</div>`;
 
   return `
       <div class="card p-18 mb-24 bureau-seul">
         <div class="card-title">Alertes portefeuille</div>
-        <div class="section-hint mb-12">Produits en zone de rappel ou proches d'une barrière</div>
+        <div class="section-hint mb-12">État des 4 prochaines dates de constatation</div>
         <div class="alertes-liste">${corps}</div>
       </div>`;
 }
@@ -1170,6 +1177,13 @@ function renderContrats(state, ucPerfs) {
 
       <div class="ac-col-detail">${ucPanneau}</div>
      </div><!-- /ac-split -->
+
+     <div class="card p-18 mb-24 bureau-seul cmp-card">
+       <div class="card-title">Comparateur de fonds</div>
+       <div class="section-hint mb-12">Base 100 au début de la période · unités de compte</div>
+       <div class="cmp-chips" id="cmp-fonds-chips"></div>
+       <div id="cmp-fonds"></div>
+     </div>
     </div>
   </div>`;
 }

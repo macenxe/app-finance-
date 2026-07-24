@@ -247,6 +247,59 @@ const App = (() => {
     if (series.length) Chart.comparer('cmp-indices', series);
   }
 
+  // Carte « Comparateur de fonds » de la page Fonds € & UC (bureau uniquement) — même principe
+  // que la comparaison d'indices du tableau de bord (base 100, chips retirables + picker), mais
+  // catalogue restreint aux UC ayant un historique (graphId). État de sélection distinct
+  // (cmpFondsSeries/cmpFondsPickerOuvert) pour ne pas interférer avec le comparateur du dashboard.
+  function catalogueComparaisonUC() {
+    const out = new Map();
+    const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+    uc.forEach(u => {
+      if (!u.graphId || out.has(u.graphId)) return;
+      out.set(u.graphId, { ticker: u.graphId, label: u.nom, groupe: u.categorie || 'Autres' });
+    });
+    return out;
+  }
+
+  function renderChipsComparaisonUC(catalogue) {
+    const host = document.getElementById('cmp-fonds-chips');
+    if (!host) return;
+    const selection = (state.cmpFondsSeries || []).map(t => catalogue.get(t)).filter(Boolean);
+    const dispo = [...catalogue.values()].filter(c => !(state.cmpFondsSeries || []).includes(c.ticker));
+    const chips = selection.map(s => `
+      <span class="cmp-chip">${escHtml(s.label)}<button class="cmp-chip-retirer" type="button" aria-label="Retirer ${escHtml(s.label)}" onclick="event.stopPropagation();App.retirerSerieCmpFonds('${escHtml(s.ticker)}')">✕</button></span>`).join('');
+    const bouton = `<button class="cmp-chip-ajouter" type="button" onclick="event.stopPropagation();App.toggleCmpFondsPicker()">+ Ajouter</button>`;
+    let picker = '';
+    if (state.cmpFondsPickerOuvert) {
+      const groupes = [...new Set(dispo.map(d => d.groupe))];
+      const corps = dispo.length
+        ? groupes.map(g => {
+            const items = dispo.filter(d => d.groupe === g);
+            return `<div class="cmp-picker-groupe">${escHtml(g)}</div>` + items.map(it => `
+              <div class="cmp-picker-item" onclick="event.stopPropagation();App.ajouterSerieCmpFonds('${escHtml(it.ticker)}')">
+                <span class="cmp-picker-swatch"></span>${escHtml(it.label)}
+              </div>`).join('');
+          }).join('')
+        : `<div class="cmp-picker-vide">Toutes les UC disponibles sont déjà affichées.</div>`;
+      picker = `<div class="cmp-picker" onclick="event.stopPropagation()">${corps}</div>`;
+    }
+    host.innerHTML = chips + bouton + picker;
+  }
+
+  function initComparaisonFonds() {
+    if (!estBureau() || state.page !== 'contrats' || !window.Chart) return;
+    if (!document.getElementById('cmp-fonds')) return;
+    const catalogue = catalogueComparaisonUC();
+    if (!state.cmpFondsSeries) {
+      const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+      const ucCourante = uc.find(u => u.isin === state.ucSel && u.graphId) || uc.find(u => u.graphId);
+      state = { ...state, cmpFondsSeries: ucCourante ? [ucCourante.graphId] : [] };
+    }
+    renderChipsComparaisonUC(catalogue);
+    const series = state.cmpFondsSeries.map(t => catalogue.get(t)).filter(Boolean);
+    if (series.length) Chart.comparer('cmp-fonds', series);
+  }
+
   // Mini graphiques 5 ans dans les cartes Actifs (Brent/Or/Bitcoin) : comble l'espace libre
   // à droite du nom/valeur une fois ces cartes étirées sur la largeur de la grille marché.
   // Courbe lissée (Chart.smooth) + aire dégradée + point final, pour un rendu plus soigné
@@ -358,6 +411,7 @@ const App = (() => {
     el.scrollTop = saved;
     renderNav();
     if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); initSparklinesActifs(); }
+    if (state.page === 'contrats') initComparaisonFonds();
     rafraichirChartPanneau();
   }
 
@@ -659,11 +713,19 @@ const App = (() => {
     });
     // Ferme le sélecteur de séries comparées si on clique en dehors.
     document.addEventListener('click', (e) => {
-      if (!state.cmpPickerOuvert) return;
-      const host = document.getElementById('cmp-chips');
-      if (host && !host.contains(e.target)) {
-        state = { ...state, cmpPickerOuvert: false };
-        initComparaisonIndices();
+      if (state.cmpPickerOuvert) {
+        const host = document.getElementById('cmp-chips');
+        if (host && !host.contains(e.target)) {
+          state = { ...state, cmpPickerOuvert: false };
+          initComparaisonIndices();
+        }
+      }
+      if (state.cmpFondsPickerOuvert) {
+        const host = document.getElementById('cmp-fonds-chips');
+        if (host && !host.contains(e.target)) {
+          state = { ...state, cmpFondsPickerOuvert: false };
+          initComparaisonFonds();
+        }
       }
     });
     donnees = await AppAPI.chargerDonnees();
@@ -722,6 +784,23 @@ const App = (() => {
       if (!reste.length) return; // toujours garder au moins une série affichée
       state = { ...state, cmpSeries: reste };
       initComparaisonIndices();
+    },
+    // Sélection des séries du comparateur de fonds (page Fonds € & UC, bureau uniquement).
+    toggleCmpFondsPicker() {
+      state = { ...state, cmpFondsPickerOuvert: !state.cmpFondsPickerOuvert };
+      initComparaisonFonds();
+    },
+    ajouterSerieCmpFonds(ticker) {
+      const set = new Set(state.cmpFondsSeries || []);
+      set.add(ticker);
+      state = { ...state, cmpFondsSeries: [...set], cmpFondsPickerOuvert: false };
+      initComparaisonFonds();
+    },
+    retirerSerieCmpFonds(ticker) {
+      const reste = (state.cmpFondsSeries || []).filter(t => t !== ticker);
+      if (!reste.length) return; // toujours garder au moins une série affichée
+      state = { ...state, cmpFondsSeries: reste };
+      initComparaisonFonds();
     },
     setNewsTheme(theme) {
       state = { ...state, newsTheme: theme || null };
