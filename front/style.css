@@ -1123,6 +1123,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-detail-panneau[data-uc] .detail-chart-inline {
     flex: none; max-width: none; width: 100%; margin: 0; padding: 14px 20px 10px;
   }
+  /* Les cases « Stratégie du fonds » suivent l'ordre du HTML (order par défaut 0), mais le
+     graphique porte order:2 (règle générique ci-dessus) : sans order explicite ici, elles
+     remonteraient toujours avant lui en flex. */
+  .ac-detail-panneau[data-uc] .uc-strategie { order: 3; }
   .ac-detail-panneau[data-uc] .chart-readout { min-height: 0; margin-bottom: 6px; }
   .ac-detail-panneau[data-uc] .chart-prix { font-size: 24px; }
   .ac-detail-panneau[data-uc] .chart-zone { width: 100%; max-width: 720px; margin: 0 auto; }

@@ -1254,9 +1254,7 @@ function renderUCPanneau(u, ucPerfs, state) {
       </div>
     </div>
     ${renderUcCompareChips(u, extras, state)}
-    ${compares.length > 1
-      ? `<div id="uc-chart-inline" class="detail-chart-inline"></div>${strategieBlocs}`
-      : `${strategieBlocs}<div id="uc-chart-inline" class="detail-chart-inline"></div>`}
+    <div id="uc-chart-inline" class="detail-chart-inline"></div>${strategieBlocs}
   </div>`;
 }
 
