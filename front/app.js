@@ -159,19 +159,18 @@ const App = (() => {
         </button>`).join('');
     }
     // Onglets bureau (barre du haut, remplace la sidebar sur desktop) — le .page-title de
-    // chaque page est masqué sur bureau (voir style.css) : le titre + la définition de la
-    // page active vivent dans #desktop-pagebar, juste sous cette barre d'onglets.
+    // chaque page est masqué sur bureau (voir style.css) : l'onglet actif porte donc aussi
+    // la description (ex-.page-sub) pour rester aussi parlant que l'ancien gros titre.
     const topNav = document.getElementById('top-nav');
     if (topNav) {
-      topNav.innerHTML = NAV.map(item => `
-        <div class="top-nav-item${activeKey === item.key ? ' active' : ''}" onclick="App.goto('${item.key}')">
+      topNav.innerHTML = NAV.map(item => {
+        const active = activeKey === item.key;
+        return `
+        <div class="top-nav-item${active ? ' active' : ''}" onclick="App.goto('${item.key}')">
           <span class="top-nav-label">${item.label}</span>
-        </div>`).join('');
-    }
-    const pagebar = document.getElementById('desktop-pagebar');
-    if (pagebar) {
-      const actif = NAV.find(item => item.key === activeKey) || NAV[0];
-      pagebar.innerHTML = `<span class="dpb-title">${actif.label}</span><span class="dpb-sep">·</span><span class="dpb-def">${actif.def}</span>`;
+          ${active ? `<span class="top-nav-desc">${item.def}</span>` : ''}
+        </div>`;
+      }).join('');
     }
     const dtDate = document.querySelector('.dt-date');
     if (dtDate && !dtDate.textContent) {
