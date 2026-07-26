@@ -29,8 +29,6 @@ const AppAPI = (() => {
       ? pctNum.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
       : '—';
 
-    const statuts = { green: 'Rappel probable', orange: 'Surveillance', red: 'Risque' };
-
     const niveauNum = p.cours?.dernierCours ?? null;
     const bAutoRaw  = p.barriereAutocall;
     const estBaisse = p.typeProduit === 'cms' ||
@@ -56,7 +54,9 @@ const AppAPI = (() => {
       }
     }
     const staticP = typeof PRODUITS !== 'undefined' ? PRODUITS.find(x => x.isin === p.isin) : null;
-    const protMatch = String((staticP?.protection) || '').match(/-(\d+)/);
+    // Préfère la protection de la source live (snapshot), repli sur la liste statique.
+    const prot = p.protection ?? staticP?.protection ?? null;
+    const protMatch = String(prot || '').match(/-(\d+)/);
     const belowProtection = !!(protMatch && p.typeProduit === 'equity' && p.strike && niveauNum != null
       && niveauNum < p.strike * (1 - parseInt(protMatch[1]) / 100));
     let k;
@@ -89,9 +89,8 @@ const AppAPI = (() => {
       estBaisse,
       couponAtteint,
       belowProtection,
-      statut:      statuts[k],
       pct,
-      protection:  staticP ? (staticP.protection ?? null) : null,
+      protection:  prot,
       dateValorisation: p.cours?.heureCours ?? null,
     };
   }

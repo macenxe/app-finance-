@@ -31,9 +31,3 @@ test('CMS : rappelé quand le taux descend à / sous la barrière autocall', () 
   assert.equal(calculerIndicateurs(p, cours(2.5)).zoneAutocall, true);
   assert.equal(calculerIndicateurs(p, cours(2.93)).zoneAutocall, false);
 });
-
-test('CMS : taux au-dessus de la barrière de coupon = zone défavorable (risque)', () => {
-  const p = prod({ typeProduit: 'cms', barriereAutocall: 2.5, barriereCoupon: 3.0 });
-  assert.equal(calculerIndicateurs(p, cours(3.2)).statutZone, 'risque');
-  assert.equal(calculerIndicateurs(p, cours(2.93)).statutZone, 'surveillance');
-});

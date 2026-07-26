@@ -11,6 +11,13 @@ const JSON_HEADERS = { ...CORS, 'Content-Type': 'application/json; charset=utf-8
 // ni le CMS saisi à la main.
 const estYahoo = (t) => !!t && t !== 'CMS10' && !t.startsWith('IRLTLT');
 
+// Origine autorisée : la PWA en prod, ou un hôte localhost exact (dev). Un Origin absent
+// (curl, appel serveur) n'est pas bloqué ici. Empêche http://localhost.evil.com de passer.
+function origineAutorisee(origin) {
+  if (origin === 'https://macenxe.github.io') return true;
+  try { return new URL(origin).hostname === 'localhost'; } catch { return false; }
+}
+
 async function coursYahoo(ticker) {
   // Tout est protégé : si Yahoo renvoie du HTML (page anti-bot / rate-limit), pend, ou
   // répond mal, on renvoie null pour qu'un seul ticker en échec n'entraîne pas tout le
@@ -49,7 +56,7 @@ const PERIODES = {
 async function historiqueYahoo(ticker, periode) {
   const p = PERIODES[periode] || PERIODES['6m'];
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=${p.range}&interval=${p.interval}&includePrePost=false`;
-  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 0 } });
+  const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 0 }, signal: AbortSignal.timeout(8000) });
   if (!r.ok) return null;
   const res = (await r.json())?.chart?.result?.[0];
   if (!res?.timestamp) return null;
@@ -84,7 +91,7 @@ const isoJour = (d) => d.toISOString().slice(0, 10);
 
 async function fredObservations(series, key, start) {
   const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${series}&api_key=${key}&file_type=json&sort_order=asc&observation_start=${start}`;
-  const r = await fetch(url, { cf: { cacheTtl: 3600 } });
+  const r = await fetch(url, { cf: { cacheTtl: 3600 }, signal: AbortSignal.timeout(8000) });
   if (!r.ok) return null;
   const obs = (await r.json())?.observations;
   return Array.isArray(obs) ? obs : null;
@@ -145,7 +152,7 @@ async function serieCmsFT(periode) {
     elements: [{ Type: 'price', Symbol: FT_CMS_XID, OverlayIndicators: [], Params: {} }],
   });
   const r = await fetch('https://markets.ft.com/data/chartapi/series', {
-    method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/json' }, body, cf: { cacheTtl: 900 },
+    method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/json' }, body, cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000),
   });
   if (!r.ok) return null;
   const d = await r.json();
@@ -216,21 +223,17 @@ function calculerIndicateurs(p, cours) {
   if (p.typeProduit === 'equity' && p.strike !== null) pctStrike = (niveau / p.strike) * 100;
 
   let zoneAutocall = false;
-  let statutZone = 'surveillance';
   if (p.typeProduit === 'equity') {
     if (p.barriereAutocall !== null && p.strike !== null) {
       // Autocall « à la baisse » si barrière < 100 % du strike, sinon autocall classique.
       const seuilAbs = (p.barriereAutocall / 100) * p.strike;
       zoneAutocall = p.barriereAutocall < 100 ? niveau <= seuilAbs : niveau >= seuilAbs;
     }
-    if (zoneAutocall) statutZone = 'rappel_probable';
-    else if (pctStrike !== null && pctStrike < 75) statutZone = 'risque';
   } else if (p.typeProduit === 'cms') {
     // CMS = produit de taux à la baisse : rappelé quand le taux descend à / sous la barrière.
-    if (p.barriereAutocall !== null && niveau <= p.barriereAutocall) { zoneAutocall = true; statutZone = 'rappel_probable'; }
-    else if (p.barriereCoupon !== null && niveau > p.barriereCoupon) statutZone = 'risque';
+    if (p.barriereAutocall !== null && niveau <= p.barriereAutocall) zoneAutocall = true;
   }
-  return { produitId: p.id, pctStrike, zoneAutocall, statutZone };
+  return { produitId: p.id, pctStrike, zoneAutocall };
 }
 
 // ── Actualités économiques via Google News RSS ────────────────────────────────
@@ -349,7 +352,7 @@ export default {
     // peut pas les bloquer sans authentification), mais l'abus depuis une page web tierce est
     // coupé. La PWA (https://macenxe.github.io) et le dev local passent.
     const origin = request.headers.get('Origin');
-    if (origin && origin !== 'https://macenxe.github.io' && !origin.startsWith('http://localhost')) {
+    if (origin && !origineAutorisee(origin)) {
       return new Response(JSON.stringify({ error: 'origin non autorisé' }), {
         status: 403, headers: { 'Content-Type': 'application/json; charset=utf-8' },
       });

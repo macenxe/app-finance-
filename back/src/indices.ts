@@ -68,14 +68,18 @@ export const TICKERS_PRODUITS = [
 export async function recupererCours(tickers: string[]): Promise<CoursMarche[]> {
   if (tickers.length === 0) return [];
   const resultats = await yahooFinance.quote(tickers);
-  return resultats.map((q) => ({
-    sousJacent:   q.symbol,
-    dernierCours: q.regularMarketPrice ?? 0,
-    heureCours:   q.regularMarketTime
-      ? new Date(q.regularMarketTime).toISOString()
-      : new Date().toISOString(),
-    variationPct: q.regularMarketChangePercent ?? undefined,
-  }));
+  // Un cours absent (marché fermé, ticker invalide) est ignoré plutôt que ramené à 0 :
+  // évite d'écraser le dernier bon cours en base et d'afficher un niveau à 0,00.
+  return resultats
+    .filter((q) => q.regularMarketPrice != null)
+    .map((q) => ({
+      sousJacent:   q.symbol,
+      dernierCours: q.regularMarketPrice!,
+      heureCours:   q.regularMarketTime
+        ? new Date(q.regularMarketTime).toISOString()
+        : new Date().toISOString(),
+      variationPct: q.regularMarketChangePercent ?? undefined,
+    }));
 }
 
 export async function recupererIndices(): Promise<CoursMarche[]> {

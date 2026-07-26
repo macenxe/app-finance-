@@ -35,9 +35,9 @@ const INDICES_MARCHE = [
 
 const TAUX = [
   { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'stable', hausse:null  },
-  { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:false },
-  { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:false },
-  { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:true  },
+  { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:true  },
+  { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:true  },
+  { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:false },
   { nom:'CMS 10 ans',        valeur:null,     var:null,     hausse:null  }, // live via majCMS
 ];
 
@@ -172,10 +172,9 @@ function enrichirProduits(produits) {
     if (zoneAutocall === 'OUI') k = 'green';
     else if (belowProtection) k = 'red';
     else k = 'orange';
-    const statuts = { green:'Zone Rappel', orange:'Zone Coupon', red:'Risque' };
     const pct = p.type === 'equity' ? fmt(p.niveauNum / p.strikeNum * 100) + ' %' : '-';
     return {
-      ...p, zoneAutocall, k, estBaisse, couponAtteint, belowProtection, statut: statuts[k], pct,
+      ...p, zoneAutocall, k, estBaisse, couponAtteint, belowProtection, pct,
       ticker: TICKERS_SJ[p.sj] || null, sjLabel: p.sj,
       bAutoNum:   isNaN(bAutoRaw)   ? null : bAutoRaw,
       bCouponNum: isNaN(bCouponNum) ? null : bCouponNum,
@@ -232,51 +231,6 @@ const UC_CATALOGUE = [
     strategie:'Fonds diversifié à gestion flexible visant une performance supérieure à l’€ster capitalisé + 1,5 %, avec intégration de critères ESG, horizon recommandé de 4 ans.' },
   { rang:12, gerant:'C',    nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F',
     strategie:'Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum.' },
-];
-
-// ── Contrats assurance-vie & UC ──
-// Structure : un objet par contrat, avec fonds euros + liste des UC.
-// Mettre à jour manuellement les taux et performances.
-const CONTRATS = [
-  {
-    id: 'c1',
-    nom: 'Contrat 1',
-    assureur: 'À compléter',
-    ref: 'REF-001',
-    ouverture: '20XX',
-    fondsEuros: {
-      nom: 'Fonds en euros',
-      taux2024: '—',
-      taux2023: '—',
-      part: '— %',
-    },
-    uc: [
-      {
-        nom: 'À compléter',
-        isin: '—',
-        categorie: 'À renseigner',
-        risque: 0,
-        perfYtd: '—',
-        perfAn:  '—',
-        part:    '— %',
-        hausse:  null,
-      },
-    ],
-  },
-  {
-    id: 'c2',
-    nom: 'Contrat 2',
-    assureur: 'À compléter',
-    ref: 'REF-002',
-    ouverture: '20XX',
-    fondsEuros: {
-      nom: 'Fonds en euros',
-      taux2024: '—',
-      taux2023: '—',
-      part: '— %',
-    },
-    uc: [],
-  },
 ];
 
 // ── À la une — veille éditoriale curée (page Actualités) ──

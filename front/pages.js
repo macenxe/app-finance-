@@ -9,13 +9,6 @@ function perfBadge(isin, ucPerfs) {
   return `<span class="uc-item-perf ${up ? 'up' : 'dn'}">${label}</span>`;
 }
 
-function barrierCouleur(niveauPct, barrierePct, estBaisse) {
-  const diff = estBaisse ? barrierePct - niveauPct : niveauPct - barrierePct;
-  if (diff >= 5)  return 'green';
-  if (diff > -5)  return 'orange';
-  return 'red';
-}
-
 function renderDashboard(indices, produits, taux) {
   taux = taux || TAUX;
 
@@ -260,8 +253,10 @@ function newsCardHtml({ label, color, titre, resume, date, meta, lien }) {
       ${resume ? `<div class="news-card-resume">${escHtml(resume)}</div>` : ''}
       ${meta ? `<div class="news-card-meta">${escHtml(meta)}</div>` : ''}
     </div>`;
-  return lien
-    ? `<a class="news-card" href="${escHtml(lien)}" target="_blank" rel="noopener">${inner}</a>`
+  // N'accepte que les URL http(s) : un lien javascript:/data: du flux RSS n'est pas rendu cliquable.
+  const href = /^https?:\/\//i.test(lien || '') ? lien : null;
+  return href
+    ? `<a class="news-card" href="${escHtml(href)}" target="_blank" rel="noopener">${inner}</a>`
     : `<div class="news-card">${inner}</div>`;
 }
 
@@ -389,18 +384,6 @@ function formatDateCourte(s) {
   const p = n => String(n).padStart(2, '0');
   return `${p(d.getDate())}/${p(d.getMonth() + 1)}/${String(d.getFullYear()).slice(2)}`;
 }
-// Délai avant une date : nombre de jours si ≤ 1 mois, sinon nombre de mois arrondi.
-function delaiRestant(s) {
-  const d = parseDateFlexible(s);
-  if (!d) return null;
-  const now = new Date();
-  const j = x => new Date(x.getFullYear(), x.getMonth(), x.getDate());
-  const diffJours = Math.round((j(d) - j(now)) / 86400000);
-  if (diffJours <= 0) return "Aujourd'hui";
-  if (diffJours <= 30) return `${diffJours} j`;
-  const mois = Math.round(diffJours / 30.44);
-  return `${mois} mois`;
-}
 // Format court MM/AAAA (le jour n'a pas de sens dans un titre de produit).
 function formatMoisAnnee(s) {
   const d = parseDateFlexible(s);
@@ -480,12 +463,6 @@ function geometrieBarreGroupe(r) {
     couponPos: pos(couponVal), autoPos: pos(autoVal), niveauPos: pos(niveauVal),
     paliers: paliers.map(p => ({ ...p, pos: pos(p.val) })),
   };
-}
-function fmtBarreNiveau(v, isCms) {
-  if (v == null || !isFinite(v)) return '—';
-  return isCms
-    ? v.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %'
-    : v.toLocaleString('fr-FR', { maximumFractionDigits: 0 });
 }
 function fmtBarreBarriere(v, isCms) {
   if (v == null || !isFinite(v)) return '—';
@@ -587,8 +564,10 @@ function cardAutocallHtml(r) {
         ${protectionLabel}
       </span>` : '';
 
+  // Total réellement perçu = coupons déjà versés les années précédentes + versement au rappel.
+  const totalPercu = (r.couponsVerses || 0) + (r.aVerserAuRappel || 0);
   const infoBlock = r.rappele ? `
-      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${r.aVerserAuRappel != null ? '+' + r.aVerserAuRappel.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${Number.isFinite(totalPercu) ? '+' + totalPercu.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
       <div class="ac-info-row ac-info-row--constat">
         <span class="ac-info-label">Rappelé le :</span>
         <span class="ac-info-val">${escHtml(formatDateCourte(r.dateRappel) || formatDateLongue(r.dateRappel))}</span>
@@ -1028,7 +1007,7 @@ function renderDetailGroupe(membres) {
 }
 
 function escHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 // ── Page F€ & UC ──
@@ -1057,7 +1036,6 @@ function renderContrats(state, ucPerfs) {
     'Obligataire flexible':'Obligataire',
   };
   const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
-  const nCsr = uc.filter(u => u.nom.includes('Conservateur')).length;
   const hasPerfs = Object.keys(ucPerfs).length > 0;
   const ucFiltrees = (() => {
     const base = ucCat === 'Conservateur'

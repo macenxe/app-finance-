@@ -34,13 +34,10 @@ export interface CoursMarche {
 
 // --- 3. Indicateurs calculés ---
 
-export type StatutZone = 'rappel_probable' | 'surveillance' | 'risque';
-
 export interface IndicateursProduit {
   produitId: number;
   pctStrike: number | null;      // (cours - strike) / strike * 100, null si CMS
-  zoneAutocall: boolean;         // cours >= barriereAutocall
-  statutZone: StatutZone;
+  zoneAutocall: boolean;         // cours <= / >= barriereAutocall selon le sens du produit
 }
 
 // --- 4. Réponse enrichie (produit + cours + indicateurs) ---

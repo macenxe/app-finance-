@@ -7,6 +7,7 @@ export function ouvrirBase(chemin = 'data.db'): Database.Database {
   db.exec(SCHEMA);
   // Migration légère : ajoute la colonne emission si la base est antérieure (ignoré si présente).
   try { db.exec(`ALTER TABLE produits ADD COLUMN emission TEXT NOT NULL DEFAULT ''`); } catch {}
+  try { db.exec(`ALTER TABLE produits ADD COLUMN protection TEXT`); } catch {}
   return db;
 }
 
@@ -21,6 +22,7 @@ const SCHEMA = `
     strike           REAL,
     barriereCoupon   REAL,
     barriereAutocall REAL,
+    protection       TEXT,
     emission         TEXT NOT NULL DEFAULT '',
     echeance         TEXT NOT NULL,
     constat          TEXT NOT NULL DEFAULT '',
@@ -45,9 +47,9 @@ const SCHEMA = `
 export function ajouterProduit(db: Database.Database, p: NouveauProduit): number {
   const info = db.prepare(`
     INSERT OR IGNORE INTO produits
-      (isin, nom, sousJacent, sousJacentLabel, typeProduit, strike, barriereCoupon, barriereAutocall, emission, echeance, constat, coupon)
+      (isin, nom, sousJacent, sousJacentLabel, typeProduit, strike, barriereCoupon, barriereAutocall, protection, emission, echeance, constat, coupon)
     VALUES
-      (@isin, @nom, @sousJacent, @sousJacentLabel, @typeProduit, @strike, @barriereCoupon, @barriereAutocall, @emission, @echeance, @constat, @coupon)
+      (@isin, @nom, @sousJacent, @sousJacentLabel, @typeProduit, @strike, @barriereCoupon, @barriereAutocall, @protection, @emission, @echeance, @constat, @coupon)
   `).run(p);
   return Number(info.lastInsertRowid);
 }

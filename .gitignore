@@ -14,6 +14,10 @@ dist/
 .claude/dev-secrets.json
 worker/.dev.vars
 
+# Helpers de serveur de preview locaux (hors runtime)
+.claude/front-server.js
+.claude/preview-server.js
+
 # Déploiement Vercel
 .vercel
 

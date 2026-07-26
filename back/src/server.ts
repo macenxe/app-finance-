@@ -6,12 +6,15 @@ import { calculerIndicateurs } from './calc';
 import { recupererIndices, recupererTaux, recupererCours, recupererTauxFRED, INDICES_DASHBOARD, TAUX_DASHBOARD, FRED_TAUX, TICKERS_PRODUITS } from './indices';
 import { recupererNewsGlobales, recupererNewsProduits } from './news';
 import { seederBase } from './seed';
+import { CMS_MANUEL } from './produits';
 import { ProduitEnrichi } from './types';
 
 const PORT = 3001;
 const app = new Hono();
 
-app.use('*', cors({ origin: '*' }));
+// Outil interne en dev local : CORS limité aux origines localhost plutôt que '*', pour qu'une
+// page tierce ne puisse pas appeler les routes mutantes (ex. PUT /api/taux/cms) sans auth.
+app.use('*', cors({ origin: (o) => (/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o) ? o : null) }));
 
 // ── GET /api/indices ────────────────────────────────────────────────────────
 // Renvoie les cours des indices du dashboard (avec refresh Yahoo Finance).
@@ -60,9 +63,11 @@ app.get('/api/produits', async (c) => {
     // Synchronise le taux CMS saisi manuellement dans la table cours
     // pour que calculerIndicateurs puisse l'utiliser via lireCours('CMS10').
     const cmsTaux = lireTauxManuel(db, 'CMS 10 ans');
-    if (cmsTaux) {
-      enregistrerCours(db, { sousJacent: 'CMS10', dernierCours: cmsTaux.valeur, heureCours: cmsTaux.date_maj });
-    }
+    enregistrerCours(db, {
+      sousJacent: 'CMS10',
+      dernierCours: cmsTaux ? cmsTaux.valeur : CMS_MANUEL,
+      heureCours: cmsTaux ? cmsTaux.date_maj : new Date().toISOString(),
+    });
 
     const enrichis: ProduitEnrichi[] = produits.map((p) => {
       const cours = lireCours(db, p.sousJacent) ?? null;

@@ -21,7 +21,6 @@ const App = (() => {
     const valeur = valeurNum.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
     const t = (donnees.taux || []).find(x => /CMS/.test(x.nom));
     if (t) { t.valeur = valeur; t.var = meta.var ?? ''; t.hausse = meta.hausse ?? null; t.manuel = false; t.dateMaj = meta.dateMaj ?? null; }
-    const statuts = { green: 'Zone Rappel', orange: 'Zone Coupon', red: 'Risque' };
     (donnees.produits || []).forEach(p => {
       if (p.type !== 'cms') return;
       p.niveauNum = valeurNum;
@@ -29,7 +28,6 @@ const App = (() => {
       p.zoneAutocall = p.bAutoNum != null ? (valeurNum <= p.bAutoNum ? 'OUI' : 'NON') : p.zoneAutocall;
       p.couponAtteint = p.bCouponNum != null ? valeurNum <= p.bCouponNum : false;
       p.k = p.zoneAutocall === 'OUI' ? 'green' : 'orange';
-      p.statut = statuts[p.k];
     });
   }
 
@@ -440,6 +438,20 @@ const App = (() => {
   // les mises à jour concurrentes (chiffres qui s'affolent) ; les valeurs live sont écrites
   // dans MACRO pour qu'un re-rendu ne repasse pas aux valeurs statiques.
   let majMarcheEnCours = false;
+  // Dernier cours d'un actif. Marché ouvert : intraday du jour (référence = ouverture).
+  // Marché fermé (week-end/férié : Or et Brent sont des futures sans cotation continue) :
+  // repli sur les clôtures journalières récentes (« 1m », interval 1 jour) pour ne pas
+  // afficher « — ». Référence de variation = clôture précédente.
+  async function coursMacro(gid) {
+    const lire = async (per) => {
+      const r = await fetch(AppAPI.historyUrl(gid, per), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      return r.ok ? ((await r.json()).points || []) : [];
+    };
+    try { const p = await lire('1j'); if (p.length >= 2) return { last: p[p.length - 1].c, ref: p[0].c }; } catch (_) {}
+    try { const p = await lire('1m'); if (p.length >= 2) return { last: p[p.length - 1].c, ref: p[p.length - 2].c }; } catch (_) {}
+    return null;
+  }
+
   async function majCartesMarche() {
     if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl || majMarcheEnCours) return;
     majMarcheEnCours = true;
@@ -447,31 +459,27 @@ const App = (() => {
       for (const card of document.querySelectorAll('[data-macro]')) {
         const gid = card.getAttribute('data-macro');
         if (!gid || gid.indexOf('fred:') === 0 || gid.indexOf('hicp:') === 0) continue;
-        try {
-          const r = await fetch(AppAPI.historyUrl(gid, '1j'), { cache: 'no-store', signal: AbortSignal.timeout(8000) });
-          if (!r.ok) continue;
-          const pts = (await r.json()).points || [];
-          if (pts.length < 2) continue;
-          const last = pts[pts.length - 1].c, first = pts[0].c;
-          const nomActif = card.querySelector('.index-name')?.textContent || '';
-          const valStr = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
-          const valEl = card.querySelector('[data-macro-val]');
-          const varEl = card.querySelector('[data-macro-var]');
-          if (valEl) valEl.textContent = valStr;
-          let varStr = null, up = null;
-          if (first) {
-            const pct = (last - first) / first * 100; up = pct >= 0;
-            varStr = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-            // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge).
-            const favorable = /Brent/i.test(nomActif) ? !up : up;
-            if (varEl) { varEl.textContent = varStr; varEl.className = 'index-var tnum ' + (favorable ? 'up' : 'down'); }
-          }
-          // Persiste dans MACRO (direction brute dans hausse ; la couleur est calculée au rendu).
-          if (typeof MACRO !== 'undefined') {
-            const m = MACRO.find(x => graphIdPour(x.nom) === gid);
-            if (m) { m.valeur = valStr; if (varStr != null) { m.var = varStr; m.hausse = up; } }
-          }
-        } catch (_) { /* on garde la valeur affichée */ }
+        const cm = await coursMacro(gid);
+        if (!cm) continue;
+        const last = cm.last, first = cm.ref;
+        const nomActif = card.querySelector('.index-name')?.textContent || '';
+        const valStr = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
+        const valEl = card.querySelector('[data-macro-val]');
+        const varEl = card.querySelector('[data-macro-var]');
+        if (valEl) valEl.textContent = valStr;
+        let varStr = null, up = null;
+        if (first) {
+          const pct = (last - first) / first * 100; up = pct >= 0;
+          varStr = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+          // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge).
+          const favorable = /Brent/i.test(nomActif) ? !up : up;
+          if (varEl) { varEl.textContent = varStr; varEl.className = 'index-var tnum ' + (favorable ? 'up' : 'down'); }
+        }
+        // Persiste dans MACRO (direction brute dans hausse ; la couleur est calculée au rendu).
+        if (typeof MACRO !== 'undefined') {
+          const m = MACRO.find(x => graphIdPour(x.nom) === gid);
+          if (m) { m.valeur = valStr; if (varStr != null) { m.var = varStr; m.hausse = up; } }
+        }
       }
       sauvegarderEtat();
     } finally {

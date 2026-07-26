@@ -60,7 +60,7 @@ const Autocall = (() => {
       }
       return { mode: 'annuel', passees, prochaine };
     }
-    // Mode mensuel (produit CAC) : 1er de chaque mois d'émission+1 mois à today (exclu).
+    // Mode mensuel (repli défensif, aucun produit actuel) : 1er de chaque mois d'émission+1 mois à today (exclu).
     const dEmission = parseISO(p.emission);
     const passees = [];
     if (dEmission) {
@@ -176,8 +176,10 @@ const Autocall = (() => {
 
   // --- Ticker et période d'historique ---
   function tickerHistorique(p) {
-    // CMS : proxy swap EUR 10y. Equity : ticker tel quel (SX7E.PA échoue → fallback 45 j).
-    return p.type === 'cms' ? 'scrape:cms' : p.ticker;
+    // CMS : proxy swap EUR 10y. Equity : ticker tel quel, sauf SX7E.PA (non servi par le
+    // Worker ni le repli) remappé vers BNKE.PA, comme le graphique et eq/BNKE.PA.json.
+    if (p.type === 'cms') return 'scrape:cms';
+    return p.ticker === 'SX7E.PA' ? 'BNKE.PA' : p.ticker;
   }
   function periodePour(passees, today) {
     if (!passees || !passees.length) return '1a';
