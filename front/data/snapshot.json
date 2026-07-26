@@ -1,50 +1,50 @@
 {
-  "genere": "2026-07-20T16:29:29.257Z",
+  "genere": "2026-07-26T09:24:30.830Z",
   "indices": [
     {
       "sousJacent": "^STOXX50E",
-      "dernierCours": 6227.4,
-      "heureCours": "2026-07-20T16:00:00.000Z",
-      "variationPct": -0.055693906,
+      "dernierCours": 6280.94,
+      "heureCours": "2026-07-24T16:00:00.000Z",
+      "variationPct": 1.1395826,
       "nom": "Euro Stoxx 50"
     },
     {
       "sousJacent": "^GSPC",
-      "dernierCours": 7490.69,
-      "heureCours": "2026-07-20T16:29:28.000Z",
-      "variationPct": 0.44249272,
+      "dernierCours": 7411.98,
+      "heureCours": "2026-07-24T21:26:35.000Z",
+      "variationPct": 0.04967639,
       "nom": "S&P 500"
     },
     {
       "sousJacent": "^IXIC",
-      "dernierCours": 25737.963,
-      "heureCours": "2026-07-20T16:29:27.000Z",
-      "variationPct": 0.85312253,
+      "dernierCours": 24975.824,
+      "heureCours": "2026-07-24T21:15:59.000Z",
+      "variationPct": -0.64392996,
       "nom": "Nasdaq"
     },
     {
       "sousJacent": "^FCHI",
-      "dernierCours": 8340.11,
-      "heureCours": "2026-07-20T16:05:02.000Z",
-      "variationPct": 0.015599124,
+      "dernierCours": 8372.28,
+      "heureCours": "2026-07-24T16:05:02.000Z",
+      "variationPct": 0.88190913,
       "nom": "CAC 40"
     }
   ],
   "taux": [
     {
       "sousJacent": "^TNX",
-      "dernierCours": 4.594,
-      "heureCours": "2026-07-20T16:14:23.000Z",
-      "variationPct": 1.1671432,
+      "dernierCours": 4.679,
+      "heureCours": "2026-07-24T18:59:53.000Z",
+      "variationPct": -0.51031613,
       "nom": "US 10 ans"
     },
     {
       "nom": "CMS 10 ans",
       "sousJacent": "CMS10",
       "dernierCours": 3.04,
-      "heureCours": "2026-07-20T16:29:29.257Z",
+      "heureCours": "2026-07-26T09:24:30.830Z",
       "manuel": true,
-      "dateMaj": "20/07/2026"
+      "dateMaj": "26/07/2026"
     }
   ],
   "produits": [
@@ -66,13 +66,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 1,
         "pctStrike": 129.2189679218968,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -93,13 +92,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 2,
         "pctStrike": 129.2189679218968,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -120,13 +118,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 3,
         "pctStrike": 129.2189679218968,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -147,13 +144,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 4,
         "pctStrike": 114.23698162837532,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -174,13 +170,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 5,
         "pctStrike": 114.23698162837532,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -201,13 +196,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 6,
         "pctStrike": 114.23698162837532,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -228,13 +222,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 7,
         "pctStrike": 101.76472741917767,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -255,13 +248,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 8,
         "pctStrike": 101.76472741917767,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -282,13 +274,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 9,
         "pctStrike": 101.76472741917767,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -309,13 +300,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 10,
         "pctStrike": 107.84960422163587,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -336,13 +326,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 11,
         "pctStrike": 107.84960422163587,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -363,13 +352,12 @@
       "cours": {
         "sousJacent": "SX7E.PA",
         "dernierCours": 277.95,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 12,
         "pctStrike": 107.84960422163587,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "zoneAutocall": true
       }
     },
     {
@@ -390,13 +378,12 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 13,
         "pctStrike": null,
-        "zoneAutocall": false,
-        "statutZone": "risque"
+        "zoneAutocall": false
       }
     },
     {
@@ -417,13 +404,12 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 14,
         "pctStrike": null,
-        "zoneAutocall": false,
-        "statutZone": "risque"
+        "zoneAutocall": false
       }
     },
     {
@@ -444,13 +430,12 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 15,
         "pctStrike": null,
-        "zoneAutocall": false,
-        "statutZone": "risque"
+        "zoneAutocall": false
       }
     },
     {
@@ -471,13 +456,12 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-20T16:29:29.257Z"
+        "heureCours": "2026-07-26T09:24:30.830Z"
       },
       "indicateurs": {
         "produitId": 16,
         "pctStrike": null,
-        "zoneAutocall": false,
-        "statutZone": "risque"
+        "zoneAutocall": false
       }
     },
     {
@@ -497,15 +481,14 @@
       "id": 17,
       "cours": {
         "sousJacent": "BNP.PA",
-        "dernierCours": 103.3,
-        "heureCours": "2026-07-20T15:35:01.000Z",
-        "variationPct": 1.3341186
+        "dernierCours": 105.92,
+        "heureCours": "2026-07-24T15:39:35.000Z",
+        "variationPct": 2.0817232
       },
       "indicateurs": {
         "produitId": 17,
-        "pctStrike": 132.70811921891058,
-        "zoneAutocall": true,
-        "statutZone": "rappel_probable"
+        "pctStrike": 136.07399794450154,
+        "zoneAutocall": true
       }
     },
     {
@@ -525,15 +508,14 @@
       "id": 18,
       "cours": {
         "sousJacent": "STLAM.MI",
-        "dernierCours": 5.052,
-        "heureCours": "2026-07-20T15:38:06.000Z",
-        "variationPct": -0.6685002
+        "dernierCours": 5.02,
+        "heureCours": "2026-07-24T15:38:47.000Z",
+        "variationPct": 0
       },
       "indicateurs": {
         "produitId": 18,
-        "pctStrike": 59.786982248520715,
-        "zoneAutocall": false,
-        "statutZone": "risque"
+        "pctStrike": 59.408284023668635,
+        "zoneAutocall": false
       }
     },
     {
@@ -553,15 +535,14 @@
       "id": 19,
       "cours": {
         "sousJacent": "CAP.PA",
-        "dernierCours": 91.58,
-        "heureCours": "2026-07-20T15:35:02.000Z",
-        "variationPct": 0.28471544
+        "dernierCours": 89.88,
+        "heureCours": "2026-07-24T15:35:14.000Z",
+        "variationPct": 4.4387636
       },
       "indicateurs": {
         "produitId": 19,
-        "pctStrike": 86.31479736098021,
-        "zoneAutocall": false,
-        "statutZone": "surveillance"
+        "pctStrike": 84.71253534401508,
+        "zoneAutocall": false
       }
     },
     {
@@ -581,15 +562,14 @@
       "id": 20,
       "cours": {
         "sousJacent": "RHM.DE",
-        "dernierCours": 990.3,
-        "heureCours": "2026-07-20T15:38:44.000Z",
-        "variationPct": 0.61979026
+        "dernierCours": 1037.6,
+        "heureCours": "2026-07-24T15:39:45.000Z",
+        "variationPct": 2.025563
       },
       "indicateurs": {
         "produitId": 20,
-        "pctStrike": 86.0980699008868,
-        "zoneAutocall": false,
-        "statutZone": "surveillance"
+        "pctStrike": 90.21039819161884,
+        "zoneAutocall": false
       }
     }
   ]
