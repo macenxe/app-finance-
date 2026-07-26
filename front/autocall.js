@@ -6,7 +6,7 @@
 // Les résultats des dates passées sont figés en cache localStorage pour éviter les refetch.
 
 const Autocall = (() => {
-  const CACHE_KEY = 'autocall-eval-v1';
+  const CACHE_KEY = 'autocall-eval-v2';
 
   // --- Parsing des dates et nombres ---
   function parseFR(s) {
@@ -134,13 +134,18 @@ const Autocall = (() => {
             nPlusX: 'N+' + (i + 1), couponsReserve: reserve, couponsVerses: verses,
           };
         }
-        if (p.bCouponNum != null) {
-          const atteint = p.type === 'equity'
-            ? (p.estBaisse ? (niveau / p.strikeNum * 100) <= p.bCouponNum : (niveau / p.strikeNum * 100) >= p.bCouponNum)
-            : niveau <= p.bCouponNum;
+        if (p.type === 'cms') {
+          // CMS : pas d'effet mémoire sur les coupons manqués. Un coupon acquis (CMS ≤ barrière)
+          // est mis en réserve et versé au rappel ; un coupon manqué est définitivement perdu.
+          if (p.bCouponNum != null && niveau <= p.bCouponNum) reserve += couponAnnuel;
+        } else if (p.bCouponNum != null) {
+          // Equity avec barrière de coupon : effet mémoire (coupon manqué récupéré à la
+          // première constatation favorable).
+          const atteint = p.estBaisse ? (niveau / p.strikeNum * 100) <= p.bCouponNum : (niveau / p.strikeNum * 100) >= p.bCouponNum;
           if (atteint) { verses += couponAnnuel + reserve; reserve = 0; }
           else reserve += couponAnnuel;
         } else {
+          // Athena (sans barrière de coupon) : capitalisation.
           reserve += couponAnnuel;
         }
       }

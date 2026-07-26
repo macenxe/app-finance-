@@ -10,6 +10,9 @@ const JSON_HEADERS = { ...CORS, 'Content-Type': 'application/json; charset=utf-8
 // Un ticker est récupérable chez Yahoo s'il n'est pas une série FRED (OAT/Bund, mensuel)
 // ni le CMS saisi à la main.
 const estYahoo = (t) => !!t && t !== 'CMS10' && !t.startsWith('IRLTLT');
+// Sous-jacents non cotés sous leur ticker officiel chez Yahoo : on price via un symbole servi
+// par l'endpoint chart. Euro Stoxx Banks : SX7E.PA -> SX7E.Z (bonne échelle, ~303).
+const TICKER_COURS = { 'SX7E.PA': 'SX7E.Z' };
 
 // Origine autorisée : la PWA en prod, ou un hôte localhost exact (dev). Un Origin absent
 // (curl, appel serveur) n'est pas bloqué ici. Empêche http://localhost.evil.com de passer.
@@ -419,7 +422,10 @@ export default {
       )];
 
       const quotes = {};
-      await Promise.all(tickers.map(async (t) => { const q = await coursYahoo(t); if (q) quotes[t] = q; }));
+      await Promise.all(tickers.map(async (t) => {
+        const q = await coursYahoo(TICKER_COURS[t] || t);
+        if (q) quotes[t] = { ...q, sousJacent: t };
+      }));
 
       // Applique les cours frais (garde l'ancienne valeur si Yahoo ne renvoie rien)
       const freshen = (o) => {

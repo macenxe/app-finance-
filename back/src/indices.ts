@@ -82,6 +82,27 @@ export async function recupererCours(tickers: string[]): Promise<CoursMarche[]> 
     }));
 }
 
+// Cours via l'endpoint chart (meta.regularMarketPrice) plutôt que l'API quote : requis pour les
+// symboles servis en chart mais pas en quote (ex. SX7E.Z, indice Euro Stoxx Banks). Renvoie null
+// en cas d'échec pour préserver le contrat « on garde l'ancienne valeur » côté appelant.
+export async function coursViaChart(symbol: string): Promise<CoursMarche | null> {
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=5d`;
+    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return null;
+    const data = (await r.json()) as { chart?: { result?: { meta?: Record<string, number | undefined> }[] } };
+    const m = data?.chart?.result?.[0]?.meta;
+    if (!m || m.regularMarketPrice == null) return null;
+    const prev = m.chartPreviousClose ?? m.previousClose ?? null;
+    return {
+      sousJacent:   symbol,
+      dernierCours: m.regularMarketPrice,
+      heureCours:   new Date((m.regularMarketTime ?? 0) * 1000).toISOString(),
+      variationPct: prev && prev !== 0 ? ((m.regularMarketPrice - prev) / prev) * 100 : undefined,
+    };
+  } catch { return null; }
+}
+
 export async function recupererIndices(): Promise<CoursMarche[]> {
   return recupererCours(INDICES_DASHBOARD.map((i) => i.ticker));
 }

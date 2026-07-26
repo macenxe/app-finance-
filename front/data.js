@@ -231,6 +231,8 @@ const UC_CATALOGUE = [
     strategie:'Fonds diversifié à gestion flexible visant une performance supérieure à l’€ster capitalisé + 1,5 %, avec intégration de critères ESG, horizon recommandé de 4 ans.' },
   { rang:12, gerant:'C',    nom:'Conservateur Diversifié C',            isin:'FR0010564336', categorie:'Mixte obligataire',    srri:2, equity:15,  graphId:'0P0000JLHZ.F',
     strategie:'Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum.' },
+  { rang:13, gerant:'DNCA', nom:'DNCA Invest Flex Inflation B',         isin:'LU1694790202', categorie:'Obligataire flexible', srri:2, equity:0,   graphId:'0P0001CH1A.F',
+    strategie:'Fonds obligataire flexible visant à protéger et valoriser le capital face à l’inflation : gestion active de l’exposition aux obligations d’État indexées sur l’inflation et de la sensibilité aux taux (duration), sans contrainte d’indice, approche ISR.' },
 ];
 
 // ── À la une — veille éditoriale curée (page Actualités) ──
