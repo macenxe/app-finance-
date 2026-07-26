@@ -192,10 +192,22 @@ const App = (() => {
   // Bureau : la fiche détail se déplie dans la liste. Mobile : feuille modale (inchangé).
   function estBureau() { return window.innerWidth >= 641; }
 
+  // Euro Stoxx Banks est tracé via l'ETF BNKE.PA (bon historique) mais à une autre échelle que
+  // l'indice (ETF ~381 vs indice ~303). Renvoie le niveau réel de l'indice pour rééchelonner le
+  // graphe, ou null si le ticker n'est pas ce proxy. Repli sur le niveau du produit si besoin.
+  function rebaseESBanks(ticker, niveauFallback) {
+    if (ticker !== 'BNKE.PA') return null;
+    const i = (donnees.indices || []).find(x => x.nom === 'Euro Stoxx Banks');
+    const n = i ? parseFloat(String(i.valeur).replace(/[^0-9,.-]/g, '').replace(',', '.')) : NaN;
+    return !isNaN(n) ? n : (niveauFallback != null ? niveauFallback : null);
+  }
+
   function initChartDetail(p, containerId = 'detail-chart-inline') {
     if (!window.Chart) return;
-    Chart.ouvrirInline(containerId, chartTickerPour(p), p.nom, {
+    const ticker = chartTickerPour(p);
+    Chart.ouvrirInline(containerId, ticker, p.nom, {
       lignes: lignesPour(p), sous: p.sjLabel || p.sj,
+      rebase: rebaseESBanks(ticker, p.niveauNum),
     });
   }
 
@@ -319,8 +331,10 @@ const App = (() => {
         lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
       }
     }
-    Chart.ouvrirInline(containerId, chartTickerPour(ref), ref.nom, {
+    const tickerRef = chartTickerPour(ref);
+    Chart.ouvrirInline(containerId, tickerRef, ref.nom, {
       lignes, sous: ref.sjLabel || ref.sj,
+      rebase: rebaseESBanks(tickerRef, ref.niveauNum),
     });
   }
 
@@ -832,7 +846,7 @@ const App = (() => {
     },
     fermerFormulaire,
     ouvrirGraphique(id, label, sous) {
-      if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '' });
+      if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '', rebase: rebaseESBanks(id, null) });
     },
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;

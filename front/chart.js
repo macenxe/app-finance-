@@ -51,6 +51,7 @@ const Chart = (() => {
       lignes: opts.lignes || [], retour: opts.retour || null, sous: opts.sous || '',
       compoIsin: opts.compoIsin || null, sheet: !!opts.sheet, dateOnly, periodes,
       strategie: opts.strategie || '',
+      rebase: opts.rebase || null,
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
@@ -135,6 +136,16 @@ const Chart = (() => {
         ? await AppAPI.chargerHistorique(etat.ticker, periode)
         : await (await fetch(`${WORKER}?history=${encodeURIComponent(etat.ticker)}&period=${periode}`, { cache: 'no-store', signal: AbortSignal.timeout(12000) })).json();
       etat.points = data.points || [];
+      // Sous-jacent tracé via un proxy d'une autre échelle (ex. Euro Stoxx Banks : ETF BNKE.PA
+      // ~381 alors que l'indice cote ~303) : on rééchelonne la série pour que son dernier point
+      // corresponde au niveau réel, cohérent avec le niveau affiché et les repères (strike…).
+      if (etat.rebase && etat.points.length) {
+        const dernier = etat.points[etat.points.length - 1].c;
+        if (dernier) {
+          const facteur = etat.rebase / dernier;
+          etat.points = etat.points.map(p => ({ ...p, c: p.c * facteur }));
+        }
+      }
       // Mention « proxy » éventuelle (ex. CMS 10 ans = rendement 10 ans zone euro).
       const sousEl = document.getElementById('chart-sous');
       if (sousEl) {
@@ -325,6 +336,7 @@ const Chart = (() => {
       ticker, label: label || ticker, periode: DEFAUT, points: [], geo: null,
       lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
       compoIsin: opts.compoIsin || null, inlineId: containerId, dateOnly, periodes,
+      rebase: opts.rebase || null,
     };
     const el = document.getElementById(containerId);
     if (!el) return;
