@@ -32,6 +32,15 @@ async function main() {
     }));
   } catch (e) { console.error('Indices indisponibles :', e); }
 
+  // Euro Stoxx Banks : SX7E.PA n'est pas coté via l'API quote de Yahoo. On récupère le niveau en
+  // direct via SX7E.Z (endpoint chart) et on l'ajoute aux indices du dashboard sous la clé SX7E.PA
+  // (nom « Euro Stoxx Banks »). Sert aussi de cours aux 12 produits CAP (via coursMap plus bas).
+  // En cas d'échec, le repli COURS_STATIQUES prend le relais.
+  try {
+    const esb = await coursViaChart('SX7E.Z');
+    if (esb) indices.push({ ...esb, sousJacent: 'SX7E.PA', nom: 'Euro Stoxx Banks' });
+  } catch (e) { console.error('ES Banks (SX7E.Z) indisponible :', e); }
+
   // 2. Taux : Yahoo (^TNX) + FRED (OAT/Bund) + CMS manuel
   const nomMap: Record<string, string> = {};
   TAUX_DASHBOARD.forEach((t) => { nomMap[t.ticker] = t.nom; });
@@ -58,14 +67,7 @@ async function main() {
   for (const c of coursEquity) coursMap[c.sousJacent] = c;
   for (const c of indices) coursMap[c.sousJacent] = c; // ^FCHI sert aussi de sous-jacent
   coursMap['CMS10'] = { sousJacent: 'CMS10', dernierCours: CMS_MANUEL, heureCours: maintenant };
-  // Euro Stoxx Banks : SX7E.PA n'est pas coté via l'API quote de Yahoo. On récupère le niveau
-  // en direct via SX7E.Z (endpoint chart), rattaché à la clé SX7E.PA utilisée par les produits.
-  // En cas d'échec, le repli COURS_STATIQUES ci-dessous prend le relais.
-  try {
-    const esb = await coursViaChart('SX7E.Z');
-    if (esb) coursMap['SX7E.PA'] = { ...esb, sousJacent: 'SX7E.PA' };
-  } catch (e) { console.error('ES Banks (SX7E.Z) indisponible :', e); }
-  // Cours de secours pour les sous-jacents non couverts par Yahoo (ex. SX7E.PA)
+  // Cours de secours pour les sous-jacents non couverts par Yahoo (ex. SX7E.PA si SX7E.Z KO)
   for (const [ticker, valeur] of Object.entries(COURS_STATIQUES)) {
     if (!coursMap[ticker]) coursMap[ticker] = { sousJacent: ticker, dernierCours: valeur, heureCours: maintenant };
   }

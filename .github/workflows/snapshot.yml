@@ -10,6 +10,7 @@ on:
     paths:
       - 'back/src/produits.ts'
       - 'back/src/indices.ts'
+      - 'back/src/snapshot.ts'
   schedule:
     - cron: '17 5 * * 1'            # lundi 05:17 UTC
   workflow_dispatch:               # bouton de déclenchement manuel
