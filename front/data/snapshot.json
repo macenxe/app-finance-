@@ -1,5 +1,5 @@
 {
-  "genere": "2026-07-26T12:56:38.022Z",
+  "genere": "2026-07-26T13:07:32.138Z",
   "indices": [
     {
       "sousJacent": "^STOXX50E",
@@ -28,6 +28,13 @@
       "heureCours": "2026-07-24T16:05:02.000Z",
       "variationPct": 0.88190913,
       "nom": "CAC 40"
+    },
+    {
+      "sousJacent": "SX7E.PA",
+      "dernierCours": 303.13,
+      "heureCours": "2026-07-24T16:00:00.000Z",
+      "variationPct": 2.1155465723429248,
+      "nom": "Euro Stoxx Banks"
     }
   ],
   "taux": [
@@ -42,7 +49,7 @@
       "nom": "CMS 10 ans",
       "sousJacent": "CMS10",
       "dernierCours": 3.04,
-      "heureCours": "2026-07-26T12:56:38.022Z",
+      "heureCours": "2026-07-26T13:07:32.138Z",
       "manuel": true,
       "dateMaj": "26/07/2026"
     }
@@ -67,7 +74,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 1,
@@ -94,7 +102,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 2,
@@ -121,7 +130,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 3,
@@ -148,7 +158,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 4,
@@ -175,7 +186,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 5,
@@ -202,7 +214,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 6,
@@ -229,7 +242,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 7,
@@ -256,7 +270,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 8,
@@ -283,7 +298,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 9,
@@ -310,7 +326,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 10,
@@ -337,7 +354,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 11,
@@ -364,7 +382,8 @@
         "sousJacent": "SX7E.PA",
         "dernierCours": 303.13,
         "heureCours": "2026-07-24T16:00:00.000Z",
-        "variationPct": 2.1155465723429248
+        "variationPct": 2.1155465723429248,
+        "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 12,
@@ -390,7 +409,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-26T12:56:38.022Z"
+        "heureCours": "2026-07-26T13:07:32.138Z"
       },
       "indicateurs": {
         "produitId": 13,
@@ -416,7 +435,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-26T12:56:38.022Z"
+        "heureCours": "2026-07-26T13:07:32.138Z"
       },
       "indicateurs": {
         "produitId": 14,
@@ -442,7 +461,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-26T12:56:38.022Z"
+        "heureCours": "2026-07-26T13:07:32.138Z"
       },
       "indicateurs": {
         "produitId": 15,
@@ -468,7 +487,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-07-26T12:56:38.022Z"
+        "heureCours": "2026-07-26T13:07:32.138Z"
       },
       "indicateurs": {
         "produitId": 16,
