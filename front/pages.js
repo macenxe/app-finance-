@@ -54,22 +54,23 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
 
       <!-- Actions (sous-jacents des produits Autocall, hors ceux déjà listés dans les indices
            clés au-dessus — ex. ES Banks / Euro Stoxx Banks, même ticker BNKE.PA) & Actifs :
-           même format de carte pour les deux, regroupés sur une même section/ligne. -->
-      <div class="flex-sb mb-12">
-        <span class="section-label">Actions &amp; Actifs</span>
-      </div>
-      <div class="grid-3 grid-mkt mb-24">
-        ${(() => {
-          const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
-          const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
-          return actions.map(a => `
+           même format de carte pour les deux, toujours sur UNE seule ligne (mobile ET
+           bureau, pas de ligne de cartes en plus -> pas de scroll ajouté). Mobile : titre
+           unique combiné, ordre actions puis actifs (inchangé). Bureau (.bureau-seul) :
+           ordre actifs puis actions, avec 2 libellés "Actifs"/"Actions" positionnés via
+           grid-column pour s'aligner avec le début de chaque groupe — la ligne de libellés
+           réutilise exactement la même grille (classe .grid-mkt, même largeur de conteneur)
+           que la ligne de cartes, donc auto-fit y calcule le même nombre de colonnes. -->
+      ${(() => {
+        const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
+        const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
+        const actionsHtml = actions.map(a => `
         <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-cmp-ticker="${escHtml(a.ticker)}">
           <div class="index-name">${escHtml(a.label)}</div>
           <div class="index-val tnum">${escHtml(a.niveau || '—')}</div>
           <div class="index-var tnum" style="color:#9a8f7a;">—</div>
         </div>`).join('');
-        })()}
-        ${MACRO.map(m => { const gid = graphIdPour(m.nom);
+        const macroHtml = MACRO.map(m => { const gid = graphIdPour(m.nom);
           // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
           const favorable = m.hausse === null ? null : (/Brent/i.test(m.nom) ? !m.hausse : m.hausse);
           return `
@@ -77,8 +78,27 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
           <div class="index-name">${m.nom}</div>
           <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
           <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
-        </div>`; }).join('')}
+        </div>`; }).join('');
+        return `
+      <div class="mkt-combo-mobile">
+        <div class="flex-sb mb-12">
+          <span class="section-label">Actions &amp; Actifs</span>
+        </div>
+        <div class="grid-3 grid-mkt mb-24">
+          ${actionsHtml}${macroHtml}
+        </div>
       </div>
+
+      <div class="bureau-seul">
+        <div class="grid-3 grid-mkt mkt-split-labels">
+          <span class="section-label" style="grid-column: span ${MACRO.length}">Actifs</span>
+          <span class="section-label" style="grid-column: span ${actions.length}">Actions</span>
+        </div>
+        <div class="grid-3 grid-mkt mb-24">
+          ${macroHtml}${actionsHtml}
+        </div>
+      </div>`;
+      })()}
 
       <!-- Taux et indicateurs macro -->
       <div class="flex-sb mb-12">

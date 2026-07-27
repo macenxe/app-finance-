@@ -949,6 +949,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .dash-col-laterale > .card:last-child { margin-bottom: 0; }
   .dash-col-laterale .card-title { font-size: 13.5px; }
   .bureau-seul { display: block; }
+  /* Bureau : "Actions & Actifs" combiné (mobile) laisse place à la ligne de libellés
+     .mkt-split-labels + la ligne de cartes juste en dessous. */
+  .mkt-combo-mobile { display: none; }
+  /* Libellés "Actifs"/"Actions" alignés au-dessus de leur groupe : même grille (.grid-mkt)
+     que la ligne de cartes juste en dessous, donc les mêmes grid-column s'alignent. */
+  .mkt-split-labels { margin-bottom: 4px; }
+  .mkt-split-labels .section-label { text-align: left; }
 
   /* Alertes portefeuille */
   .alertes-liste { display: flex; flex-direction: column; }
