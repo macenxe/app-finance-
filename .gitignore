@@ -24,5 +24,8 @@ worker/.dev.vars
 # Cloudflare Wrangler (Worker)
 .wrangler
 
+# Documents personnels (bilans patrimoniaux) : locaux à cette machine, jamais commités/poussés
+front/data/outils/
+
 # Système
 .DS_Store

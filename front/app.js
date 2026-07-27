@@ -41,13 +41,6 @@ const App = (() => {
     appliquerCMS(valeur, { dateMaj: new Date().toISOString().slice(0, 10) });
   }
 
-  function chartTickerPour(p) {
-    const t = p.ticker || p.sj || '';
-    if (t === 'SX7E.PA' || t === 'ES Banks') return 'BNKE.PA';
-    if (t === 'CMS10' || p.type === 'cms')   return 'scrape:cms'; // swap EUR 10y via FT
-    return t;
-  }
-
   function lignesPour(p) {
     const lignes = [];
     if (p.type === 'equity' && p.strikeNum) {
@@ -133,12 +126,14 @@ const App = (() => {
     dash:     '<rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/>',
     prod:     '<polyline points="3,17 9,11 13,15 21,6"/><polyline points="15,6 21,6 21,12"/>',
     contrats: '<polygon points="12,4 20,9 12,14 4,9"/><polyline points="4,14 12,19 20,14"/>',
+    outils:   '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/>',
     actus:    '<rect x="5" y="3" width="14" height="18" rx="1.5"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>',
   };
   const NAV = [
     { key: 'dash',     label: 'Tableau de bord', court: 'Accueil',  def: 'Synthèse des marchés' },
     { key: 'prod',     label: 'Autocall',        court: 'Autocall', def: 'Produits à mécanisme de rappel automatique' },
     { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds',    def: 'Fonds en euros · Unités de compte · Le Conservateur' },
+    { key: 'outils',   label: 'Outils',          court: 'Outils',   def: 'Documents personnels' },
     { key: 'actus',    label: 'Actualités',      court: 'Actus',    def: 'Sélection du cabinet · fil marché en direct' },
   ];
 
@@ -211,9 +206,10 @@ const App = (() => {
     });
   }
 
-  // Carte « Performance comparée » du tableau de bord — sélection ajustable par l'utilisateur
-  // (App.ajouterSerieCmp / retirerSerieCmp). Catalogue = indices de marché + sous-jacents des
-  // produits structurés proposés (actions uniquement : un CMS n'a pas de « cours » à comparer).
+  // Carte « Comparateur » du tableau de bord — alimentée en cliquant directement sur une carte
+  // Indices/Actions/Actifs/Taux (App.clicActif → App.toggleSerieCmp), plus de sélecteur séparé.
+  // Catalogue = tout ce qui a un graphique sur le tableau de bord (indices, sous-jacents actions,
+  // actifs, taux) : sert à retrouver le libellé d'un ticker présent dans state.cmpSeries.
   // Clé = ticker (identité stable), dédoublonné : un sous-jacent qui recoupe un indice déjà
   // listé (ex. ES Banks / Euro Stoxx Banks, même ticker BNKE.PA) n'apparaît qu'une fois.
   const CMP_TICKERS_DEFAUT = ['^FCHI'];
@@ -221,43 +217,20 @@ const App = (() => {
     const out = new Map();
     (donnees.indices || []).forEach(i => {
       const t = (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker;
-      if (t && !out.has(t)) out.set(t, { ticker: t, label: i.nom, groupe: 'Indices' });
+      if (t && !out.has(t)) out.set(t, { ticker: t, label: i.nom });
     });
-    (donnees.produits || []).forEach(p => {
-      if (p.type !== 'equity') return;
-      // Même remappage que pour la fiche produit (ex. le ticker brut « SX7E.PA » d'ES Banks
-      // n'est pas servi par Yahoo ; chartTickerPour le fait déjà correspondre à BNKE.PA, ce
-      // qui permet aussi le déduplicage avec l'indice Euro Stoxx Banks).
-      const t = chartTickerPour(p);
-      if (!t || out.has(t)) return;
-      out.set(t, { ticker: t, label: p.sjLabel || p.sj, groupe: 'Sous-jacents' });
+    sousJacentsUniques(donnees.produits).forEach(s => {
+      if (!out.has(s.ticker)) out.set(s.ticker, { ticker: s.ticker, label: s.label });
+    });
+    if (typeof MACRO !== 'undefined') MACRO.forEach(m => {
+      const t = graphIdPour(m.nom);
+      if (t && !out.has(t)) out.set(t, { ticker: t, label: m.nom });
+    });
+    [...(donnees.taux || []), { nom: 'Inflation zone €' }].forEach(x => {
+      const t = graphIdPour(x.nom);
+      if (t && !out.has(t)) out.set(t, { ticker: t, label: x.nom });
     });
     return out;
-  }
-
-  function renderChipsComparaison(catalogue) {
-    const host = document.getElementById('cmp-chips');
-    if (!host) return;
-    const selection = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
-    const dispo = [...catalogue.values()].filter(c => !state.cmpSeries.includes(c.ticker));
-    const chips = selection.map(s => `
-      <span class="cmp-chip">${escHtml(s.label)}<button class="cmp-chip-retirer" type="button" aria-label="Retirer ${escHtml(s.label)}" onclick="event.stopPropagation();App.retirerSerieCmp('${escHtml(s.ticker)}')">✕</button></span>`).join('');
-    const bouton = `<button class="cmp-chip-ajouter" type="button" onclick="event.stopPropagation();App.toggleCmpPicker()">+ Ajouter</button>`;
-    let picker = '';
-    if (state.cmpPickerOuvert) {
-      const corps = dispo.length
-        ? ['Indices', 'Sous-jacents'].map(g => {
-            const items = dispo.filter(d => d.groupe === g);
-            if (!items.length) return '';
-            return `<div class="cmp-picker-groupe">${g}</div>` + items.map(it => `
-              <div class="cmp-picker-item" onclick="event.stopPropagation();App.ajouterSerieCmp('${escHtml(it.ticker)}')">
-                <span class="cmp-picker-swatch"></span>${escHtml(it.label)}
-              </div>`).join('');
-          }).join('')
-        : `<div class="cmp-picker-vide">Toutes les séries disponibles sont déjà affichées.</div>`;
-      picker = `<div class="cmp-picker" onclick="event.stopPropagation()">${corps}</div>`;
-    }
-    host.innerHTML = chips + bouton + picker;
   }
 
   function initComparaisonIndices() {
@@ -265,49 +238,17 @@ const App = (() => {
     if (!document.getElementById('cmp-indices')) return;
     const catalogue = catalogueComparaison();
     if (!state.cmpSeries) state = { ...state, cmpSeries: CMP_TICKERS_DEFAUT.filter(t => catalogue.has(t)) };
-    renderChipsComparaison(catalogue);
+    // Reflète la sélection sur les cartes elles-mêmes (pas de re-rendu complet de la page ici) :
+    // même mécanisme que majCartesMarche ([data-macro]) pour les mises à jour ciblées du DOM.
+    document.querySelectorAll('[data-cmp-ticker]').forEach(el => {
+      el.classList.toggle('index-card--actif', state.cmpSeries.includes(el.getAttribute('data-cmp-ticker')));
+    });
     const series = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
     if (series.length) Chart.comparer('cmp-indices', series);
-  }
-
-  // Mini graphiques 5 ans dans les cartes Actifs (Brent/Or/Bitcoin) : comble l'espace libre
-  // à droite du nom/valeur une fois ces cartes étirées sur la largeur de la grille marché.
-  // Courbe lissée (Chart.smooth) + aire dégradée + point final, pour un rendu plus soigné
-  // qu'une simple ligne brisée.
-  async function initSparklinesActifs() {
-    if (!estBureau() || state.page !== 'dash') return;
-    if (typeof AppAPI === 'undefined' || !AppAPI.chargerHistorique) return;
-    const cartes = [...document.querySelectorAll('.index-card[data-macro]')];
-    await Promise.allSettled(cartes.map(async (carte) => {
-      const gid = carte.getAttribute('data-macro');
-      const svg = carte.querySelector('.index-spark svg');
-      if (!gid || !svg || svg.childElementCount) return; // déjà tracé
-      try {
-        const pts = (await AppAPI.chargerHistorique(gid, '1a')).points || [];
-        if (pts.length < 2) return;
-        const vals = pts.map(p => p.c);
-        const n = vals.length;
-        const min = Math.min(...vals), max = Math.max(...vals), span = (max - min) || 1;
-        const xy = vals.map((v, i) => [(i / (n - 1)) * 100, 2 + (1 - (v - min) / span) * 26]); // viewBox 100×30, marge 2px
-        const d = (window.Chart && Chart.smooth) ? Chart.smooth(xy) : xy.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
-        const up = vals[n - 1] >= vals[0];
-        const nomActif = carte.querySelector('.index-name')?.textContent || '';
-        // Même règle de favorabilité que majCartesMarche : Brent inversé (hausse = rouge).
-        const favorable = /Brent/i.test(nomActif) ? !up : up;
-        const couleur = favorable ? '#1d6f4c' : '#9a3535';
-        const gradId = 'spark-grad-' + gid.replace(/[^a-zA-Z0-9]/g, '');
-        const [lastX, lastY] = xy[xy.length - 1];
-        const aire = d + ` L ${lastX.toFixed(1)} 30 L 0 30 Z`;
-        svg.innerHTML = `
-          <defs><linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="${couleur}" stop-opacity="0.20"/>
-            <stop offset="1" stop-color="${couleur}" stop-opacity="0"/>
-          </linearGradient></defs>
-          <path d="${aire}" fill="url(#${gradId})" stroke="none"/>
-          <path d="${d}" fill="none" stroke="${couleur}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="2.2" fill="${couleur}" stroke="#fff" stroke-width="1"/>`;
-      } catch { /* case vide, pas grave */ }
-    }));
+    else {
+      const zone = document.getElementById('cmp-indices');
+      if (zone) zone.innerHTML = '<div class="chart-loading">Cliquez sur un actif ci-dessus pour afficher son graphique.</div>';
+    }
   }
 
   function initChartDetailGroupe(membres, containerId = 'detail-chart-inline') {
@@ -347,8 +288,8 @@ const App = (() => {
     if (!panneau) return;
     // Page Fonds : graphique + composition de l'UC sélectionnée. Dès qu'une (ou plusieurs) UC
     // sont ajoutées via les puces « Comparer », le graphique passe en mode comparaison base 100
-    // (comme le comparateur d'indices du tableau de bord) et perd la composition, qui n'a pas de
-    // sens pour plusieurs fonds à la fois.
+    // (comme le comparateur d'indices du tableau de bord) et la composition simple fait place à
+    // un comparatif carte par carte (Chart.comparerCompo) sous le graphique.
     if (state.page === 'contrats') {
       const gid = panneau.getAttribute('data-graph');
       const isin = panneau.getAttribute('data-uc');
@@ -360,6 +301,10 @@ const App = (() => {
         const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
         const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
         Chart.comparer('uc-chart-inline', series);
+        if (Chart.comparerCompo) {
+          const items = [{ isin, nom: u ? u.nom : '' }, ...extras.map(e => ({ isin: e.isin, nom: e.nom }))];
+          Chart.comparerCompo('uc-compo-cmp', items);
+        }
       } else {
         Chart.ouvrirInline('uc-chart-inline', gid, u ? u.nom : '', { sous: u ? u.categorie : '', compoIsin: isin });
       }
@@ -382,17 +327,18 @@ const App = (() => {
     const saved = keepScroll ? el.scrollTop : 0;
     const { indices, produits } = donnees;
     switch (state.page) {
-      case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux); break;
+      case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux, state.cmpSeries); break;
       case 'prod':     el.innerHTML = renderProduits(produits, state, donnees.rappeles);  break;
       case 'actus':    el.innerHTML = renderActus(state); chargerActus(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
         break;
+      case 'outils':   el.innerHTML = renderOutils(); break;
     }
     el.scrollTop = saved;
     renderNav();
-    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); initSparklinesActifs(); }
+    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); }
     rafraichirChartPanneau();
   }
 
@@ -704,13 +650,6 @@ const App = (() => {
     });
     // Ferme le sélecteur de séries comparées si on clique en dehors.
     document.addEventListener('click', (e) => {
-      if (state.cmpPickerOuvert) {
-        const host = document.getElementById('cmp-chips');
-        if (host && !host.contains(e.target)) {
-          state = { ...state, cmpPickerOuvert: false };
-          initComparaisonIndices();
-        }
-      }
       if (state.ucComparePickerOuvert) {
         const host = document.getElementById('uc-compare-chips');
         if (host && !host.contains(e.target)) {
@@ -759,21 +698,14 @@ const App = (() => {
       state = { ...state, familleFiltre: tab };
       renderPage(true);
     },
-    // Sélection des séries du graphique « Performance comparée » (tableau de bord).
-    toggleCmpPicker() {
-      state = { ...state, cmpPickerOuvert: !state.cmpPickerOuvert };
-      initComparaisonIndices();
-    },
-    ajouterSerieCmp(ticker) {
+    // Comparateur du tableau de bord : App.clicActif est le point d'entrée depuis une carte
+    // Indices/Actions/Actifs/Taux (bureau → ajoute/retire du comparateur ; mobile → ouvre la
+    // fiche modale, cf. définition ci-dessous). toggleSerieCmp fait à la fois ajout et retrait
+    // (reclique une carte déjà sélectionnée pour l'enlever) : plus de bouton « + Ajouter » séparé.
+    toggleSerieCmp(ticker) {
       const set = new Set(state.cmpSeries || []);
-      set.add(ticker);
-      state = { ...state, cmpSeries: [...set], cmpPickerOuvert: false };
-      initComparaisonIndices();
-    },
-    retirerSerieCmp(ticker) {
-      const reste = (state.cmpSeries || []).filter(t => t !== ticker);
-      if (!reste.length) return; // toujours garder au moins une série affichée
-      state = { ...state, cmpSeries: reste };
+      if (set.has(ticker)) set.delete(ticker); else set.add(ticker);
+      state = { ...state, cmpSeries: [...set] };
       initComparaisonIndices();
     },
     // Puces « Comparer » du panneau UC (page Fonds € & UC, bureau uniquement) : ajoutent d'autres
@@ -800,13 +732,19 @@ const App = (() => {
     setUcCat(cat) {
       // Le filtre peut faire disparaître l'UC ouverte de la liste (le panneau retombe alors sur
       // la 1re UC du nouveau filtre) : on referme la comparaison en cours pour ne pas la lui laisser attachée.
-      state = { ...state, ucCat: state.ucCat === cat ? null : cat, ucCompare: [], ucComparePickerOuvert: false };
+      state = { ...state, ucCat: state.ucCat === cat ? null : cat, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
       sauvegarderEtat();
       renderPage(true);
     },
     toggleFondsEuros() {
       state = { ...state, feOuvert: !state.feOuvert };
       sauvegarderEtat();
+      renderPage(true);
+    },
+    // Bandeau dépliable « Stratégie des fonds » du panneau UC (bureau) quand plusieurs UC sont
+    // comparées : replié par défaut pour ne pas repousser le graphique sous la ligne de flottaison.
+    toggleUcStrategie() {
+      state = { ...state, ucStrategieOuvert: !state.ucStrategieOuvert };
       renderPage(true);
     },
     voirDetail(isin) {
@@ -848,6 +786,13 @@ const App = (() => {
     ouvrirGraphique(id, label, sous) {
       if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '', rebase: rebaseESBanks(id, null) });
     },
+    // Clic sur une carte Indices/Actions/Actifs/Taux du tableau de bord. Bureau : ajoute/retire
+    // du comparateur en bas de page (démarche unique, plus de fiche modale séparée pour ces
+    // cartes). Mobile : le comparateur n'existe pas (bureau-seul) → on garde l'ouverture modale.
+    clicActif(id, label) {
+      if (estBureau()) { App.toggleSerieCmp(id); return; }
+      App.ouvrirGraphique(id, label);
+    },
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
@@ -859,13 +804,56 @@ const App = (() => {
       if (!estBureau()) { App.ouvrirGraphiqueUC(isin); return; }
       // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
       // affiché, pas sur une sélection indépendante.
-      state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false };
+      state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
       sauvegarderEtat();
       renderPage(true);
     },
     fermerModal() {
       const root = document.getElementById('modal-root');
       if (root) root.innerHTML = '';
+    },
+    // Page Outils : ouvre un PDF local dans une visionneuse intégrée (iframe) plutôt que dans un
+    // nouvel onglet — même gabarit modal/sheet que Chart (overlay bureau, feuille dépliée sur
+    // mobile, refermable au doigt via initSheetDrag).
+    ouvrirDocument(href, titre) {
+      const root = document.getElementById('modal-root');
+      if (!root) return;
+      const esc = (s) => (window.escHtml ? escHtml(s) : s);
+      const corps = `
+        <div class="modal-header">
+          <span class="modal-title">${esc(titre)}</span>
+          <button class="modal-close" onclick="App.fermerDocument()">✕</button>
+        </div>
+        <div class="modal-body doc-body">
+          <iframe src="${esc(href)}" class="doc-iframe" title="${esc(titre)}"></iframe>
+        </div>`;
+      if (estBureau()) {
+        root.innerHTML = `
+        <div class="modal-overlay" onclick="if(event.target===this)App.fermerDocument()">
+          <div class="modal-panel doc-panel">${corps}</div>
+        </div>`;
+        return;
+      }
+      root.innerHTML = `
+        <div class="sheet-backdrop" onclick="if(event.target===this)App.fermerDocument()">
+          <div class="sheet-panel doc-panel sheet-expanded">
+            <div class="sheet-handle"></div>
+            ${corps}
+          </div>
+        </div>`;
+      const backdrop = root.querySelector('.sheet-backdrop');
+      void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
+      backdrop.classList.add('sheet-open');
+      const panel = backdrop.querySelector('.sheet-panel');
+      if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, App.fermerDocument);
+    },
+    fermerDocument() {
+      const root = document.getElementById('modal-root');
+      if (!root) return;
+      const backdrop = root.querySelector('.sheet-backdrop');
+      if (!backdrop) { root.innerHTML = ''; return; }
+      backdrop.classList.remove('sheet-open');
+      setTimeout(() => { root.innerHTML = ''; }, 300);
     },
     init,
   };

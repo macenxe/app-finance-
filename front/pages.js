@@ -9,8 +9,10 @@ function perfBadge(isin, ucPerfs) {
   return `<span class="uc-item-perf ${up ? 'up' : 'dn'}">${label}</span>`;
 }
 
-function renderDashboard(indices, produits, taux) {
+function renderDashboard(indices, produits, taux, cmpSeries) {
   taux = taux || TAUX;
+  cmpSeries = cmpSeries || [];
+  const estCmp = (gid) => !!gid && cmpSeries.includes(gid);
 
   const fmtHeure = (iso) => {
     if (!iso) return '';
@@ -40,7 +42,7 @@ function renderDashboard(indices, produits, taux) {
       </div>
       <div class="grid-3 grid-mkt mb-24">
         ${indices.map(i => { const gid = graphIdPour(i.nom) || i.ticker; return `
-        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${i.nom}')"` : ''}>
+        <div class="card index-card${gid ? ' index-clic' : ''}${estCmp(gid) ? ' index-card--actif' : ''}"${gid ? ` onclick="App.clicActif('${escHtml(gid)}','${escHtml(i.nom)}')" data-cmp-ticker="${escHtml(gid)}"` : ''}>
           <div class="index-name">${i.nom}</div>
           <div class="index-val tnum">${i.valeur}</div>
           ${i.var != null
@@ -50,22 +52,31 @@ function renderDashboard(indices, produits, taux) {
         </div>`; }).join('')}
       </div>
 
-      <!-- Actifs -->
+      <!-- Actions (sous-jacents des produits Autocall, hors ceux déjà listés dans les indices
+           clés au-dessus — ex. ES Banks / Euro Stoxx Banks, même ticker BNKE.PA) & Actifs :
+           même format de carte pour les deux, regroupés sur une même section/ligne. -->
       <div class="flex-sb mb-12">
-        <span class="section-label">Actifs</span>
+        <span class="section-label">Actions &amp; Actifs</span>
       </div>
       <div class="grid-3 grid-mkt mb-24">
+        ${(() => {
+          const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
+          const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
+          return actions.map(a => `
+        <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-cmp-ticker="${escHtml(a.ticker)}">
+          <div class="index-name">${escHtml(a.label)}</div>
+          <div class="index-val tnum">${escHtml(a.niveau || '—')}</div>
+          <div class="index-var tnum" style="color:#9a8f7a;">—</div>
+        </div>`).join('');
+        })()}
         ${MACRO.map(m => { const gid = graphIdPour(m.nom);
           // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
           const favorable = m.hausse === null ? null : (/Brent/i.test(m.nom) ? !m.hausse : m.hausse);
           return `
-        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${m.nom}')"` : ''}${gid ? ` data-macro="${gid}"` : ''}>
-          <div class="index-card-info">
-            <div class="index-name">${m.nom}</div>
-            <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
-            <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
-          </div>
-          ${gid ? `<div class="index-spark bureau-seul"><svg viewBox="0 0 100 32" preserveAspectRatio="none"></svg><span class="index-spark-lbl">1 an</span></div>` : ''}
+        <div class="card index-card${gid ? ' index-clic' : ''}${estCmp(gid) ? ' index-card--actif' : ''}"${gid ? ` onclick="App.clicActif('${escHtml(gid)}','${escHtml(m.nom)}')" data-macro="${gid}" data-cmp-ticker="${escHtml(gid)}"` : ''}>
+          <div class="index-name">${m.nom}</div>
+          <div class="index-val tnum" data-macro-val>${m.valeur || '—'}</div>
+          <div class="index-var tnum ${favorable === null ? 'flat' : favorable ? 'up' : 'down'}" data-macro-var>${m.var || ''}</div>
         </div>`; }).join('')}
       </div>
 
@@ -86,7 +97,7 @@ function renderDashboard(indices, produits, taux) {
             : (t.dateMaj && /^\d{4}-\d{2}-\d{2}/.test(t.dateMaj)) ? 'au ' + t.dateMaj.slice(8, 10) + '/' + t.dateMaj.slice(5, 7)
             : '';
           return `
-        <div class="card index-card${gid ? ' index-clic' : ''}"${gid ? ` onclick="App.ouvrirGraphique('${gid}','${t.nom}')"` : ''}>
+        <div class="card index-card${gid ? ' index-clic' : ''}${estCmp(gid) ? ' index-card--actif' : ''}"${gid ? ` onclick="App.clicActif('${escHtml(gid)}','${escHtml(t.nom)}')" data-cmp-ticker="${escHtml(gid)}"` : ''}>
           <div class="index-name index-name-taux">
             ${t.nom}
           </div>
@@ -97,9 +108,8 @@ function renderDashboard(indices, produits, taux) {
       </div>
 
       <div class="card p-18 mb-24 bureau-seul cmp-card">
-        <div class="card-title">Performance comparée</div>
-        <div class="section-hint mb-12">Base 100 au début de la période · indices &amp; sous-jacents</div>
-        <div class="cmp-chips" id="cmp-chips"></div>
+        <div class="card-title">Comparateur</div>
+        <div class="section-hint mb-12">Cliquez un indice, une action, un actif ou un taux ci-dessus pour l'ajouter (recliquez pour le retirer) · valeurs réelles</div>
         <div id="cmp-indices"></div>
       </div>
       </div><!-- /dash-col-principale -->
@@ -121,6 +131,51 @@ function renderDashboard(indices, produits, taux) {
       ${renderAlertesPortefeuille(produits)}
       </div><!-- /dash-col-laterale -->
      </div><!-- /dash-split -->
+    </div>
+  </div>`;
+}
+
+// Page Outils : accès direct aux documents personnels (bilans patrimoniaux). Fichiers servis
+// depuis front/data/outils/ — dossier local à cette machine, exclu du dépôt git (.gitignore) :
+// n'existe donc que dans les copies de travail (Documents/Projects), pas sur le site déployé.
+// Icônes maison (privé) et mallette (professionnel) — même style Feather/trait que NAV_ICONS.
+const OUTILS_ICONES = {
+  maison:    '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+  mallette:  '<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+};
+
+function renderOutils() {
+  const docs = [
+    { titre: 'Patrimoine privé 2025', desc: 'Bilan patrimonial personnel', href: './data/outils/patrimoine-prive-2025.pdf', icone: 'maison', teinte: 'or' },
+    { titre: 'Patrimoine professionnel 2025', desc: 'Bilan patrimonial professionnel', href: './data/outils/patrimoine-professionnel-2025.pdf', icone: 'mallette', teinte: 'marine' },
+  ];
+  return `
+  <div>
+    <header class="page-header">
+      <div>
+        <div class="page-title">Outils</div>
+        <div class="page-sub">Documents personnels</div>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="flex-sb mb-12">
+        <span class="section-label">Bilans patrimoniaux</span>
+      </div>
+      <div class="outils-liste">
+        ${docs.map(d => `
+        <div class="card outils-doc" role="button" tabindex="0" onclick="App.ouvrirDocument('${escHtml(d.href)}','${escHtml(d.titre)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirDocument('${escHtml(d.href)}','${escHtml(d.titre)}');}">
+          <span class="outils-doc-icone outils-doc-icone--${d.teinte}">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
+          </span>
+          <span class="outils-doc-info">
+            <span class="outils-doc-titre">${escHtml(d.titre)}</span>
+            <span class="outils-doc-desc">${escHtml(d.desc)}</span>
+          </span>
+          <span class="outils-doc-fleche">›</span>
+        </div>`).join('')}
+      </div>
+      <div class="table-note mt-16">Consultés depuis cet ordinateur (dossier hors dépôt git) · non disponibles sur le site déployé ni pour les autres utilisateurs.</div>
     </div>
   </div>`;
 }
@@ -770,8 +825,6 @@ function renderProduits(produits, state, rappeles) {
           <div class="ac-list">
             ${rows.length ? rows.map(carteHtml).join('') : `<div class="ac-empty">Aucun produit ne correspond à cette recherche.</div>`}
           </div>
-
-          <div class="table-note">Données indicatives · validation humaine obligatoire.</div>
         </div>
 
         <div class="ac-col-detail">${panneau}</div>
@@ -1149,8 +1202,6 @@ function renderContrats(state, ucPerfs) {
         </div>`;
         }).join('')}
       </div>
-
-      <div class="table-note mt-16">Taux FE nets de frais de gestion · performances UC indicatives · sources internes.</div>
       </div><!-- /ac-col-liste -->
 
       <div class="ac-col-detail">${ucPanneau}</div>
@@ -1219,6 +1270,23 @@ function renderUCPanneau(u, ucPerfs, state) {
       <div class="uc-strategie-titre">Stratégie du fonds</div>
       ${escHtml(ucStrategieTxt(c))}
     </div>`).join('');
+  // En comparaison (plusieurs UC), la stratégie devient un bandeau dépliable replié par défaut :
+  // plusieurs blocs de texte avant le graphique repousseraient sinon la courbe hors écran.
+  // Une seule UC : bloc simple, toujours visible (comme avant, juste déplacé avant le graphique).
+  const strategieOuvert = !!(state && state.ucStrategieOuvert);
+  const strategieSection = compares.length > 1 ? `
+      <div class="fe-toggle mb-12" onclick="App.toggleUcStrategie()" role="button" tabindex="0" aria-expanded="${strategieOuvert}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.toggleUcStrategie();}">
+        <div class="fe-toggle-main">
+          <span class="fe-toggle-icon${strategieOuvert ? ' open' : ''}">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+          </span>
+          <span class="section-label">Stratégie des fonds comparés</span>
+        </div>
+        <span class="fe-toggle-hint">${strategieOuvert ? 'Masquer' : 'Afficher le détail'}</span>
+      </div>
+      <div class="fe-collapse${strategieOuvert ? ' open' : ''}">
+        <div class="fe-collapse-inner">${strategieBlocs}</div>
+      </div>` : strategieBlocs;
   return `
   <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}">
     <div class="ac-detail-entete">
@@ -1232,7 +1300,9 @@ function renderUCPanneau(u, ucPerfs, state) {
       </div>
     </div>
     ${renderUcCompareChips(u, extras, state)}
-    <div id="uc-chart-inline" class="detail-chart-inline"></div>${strategieBlocs}
+    ${strategieSection}
+    <div id="uc-chart-inline" class="detail-chart-inline"></div>
+    ${extras.length ? `<div id="uc-compo-cmp" class="uc-compo-cmp"></div>` : ''}
   </div>`;
 }
 

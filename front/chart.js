@@ -359,13 +359,12 @@ const Chart = (() => {
   }
 
   // ── Graphique comparé (plusieurs séries) ──────────────────────────────────────────────
-  // Les séries n'ont pas la même échelle (un indice à 8 000 pts et une action à 8 €) : on
-  // les ramène toutes en base 100 au début de la période. L'axe exprime donc une
-  // performance relative, pas un prix — les repères de barrières n'y ont pas de sens.
+  // Valeurs réelles (pas de base 100) : chaque série garde son échelle de prix. Les repères
+  // de barrières n'ont toujours pas de sens ici (graphique multi-séries), donc pas de `lignes`.
   const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a', '#6b4c9a', '#1a7a7a', '#7a5a3a'];
-  // Gabarit plus bas que le graphique détail (300) : la comparaison n'a pas besoin d'autant
-  // de hauteur (pas de repères de barrières), et le tableau de bord doit tenir sans défiler.
-  const CMP_VBH = 115;
+  // Même gabarit que le graphique détail : tous les graphiques de l'appli (détail, comparaison
+  // tableau de bord, comparaison UC) partagent désormais la même hauteur pour une lecture homogène.
+  const CMP_VBH = VBH;
   const cmpPlotH = CMP_VBH - padT - padB;
   let etatCmp = null;
 
@@ -453,33 +452,39 @@ const Chart = (() => {
       return;
     }
 
-    const normes = etatCmp.sets.map((s, idx) => {
-      const base = s.points[0].c;
-      return {
-        ...s,
-        vals: s.points.map(p => (base ? (p.c / base) * 100 : 100)),
-        couleur: s.couleur || CMP_COULEURS[idx % CMP_COULEURS.length],
-      };
-    });
+    // Valeur réelle de chaque série (plus de normalisation base 100). Pertinent surtout entre
+    // séries d'échelle proche (plusieurs indices, ou une action à côté d'une autre) ; comparer
+    // un indice à plusieurs milliers de points et une action à quelques euros reste possible
+    // mais écrase visuellement la plus petite série — l'utilisateur choisit lui-même ce qu'il
+    // ajoute depuis les cartes du tableau de bord, on ne l'en empêche pas.
+    const normes = etatCmp.sets.map((s, idx) => ({
+      ...s,
+      vals: s.points.map(p => p.c),
+      couleur: s.couleur || CMP_COULEURS[idx % CMP_COULEURS.length],
+    }));
 
     const toutes = normes.reduce((acc, s) => acc.concat(s.vals), []);
     let min = Math.min(...toutes), max = Math.max(...toutes);
     if (min === max) { min -= 1; max += 1; }
     const marge = (max - min) * 0.08; min -= marge; max += marge;
     const Y = v => padT + (1 - (v - min) / (max - min)) * cmpPlotH;
-    const Xn = n => (i) => padL + (i / (n - 1)) * plotW;
+    // Axe X en dates réelles, pas en position d'index dans chaque série : des séries au nombre
+    // de points différent (marchés/calendriers différents, historique plus court pour un fonds
+    // récent…) ne tombaient sinon pas aux mêmes dates au même x, ce qui décalait les courbes
+    // entre elles. tMin/tMax couvrent l'union des dates de toutes les séries.
+    const tousT = normes.reduce((acc, s) => acc.concat(s.points.map(p => p.t)), []);
+    const tMin = Math.min(...tousT), tMax = Math.max(...tousT);
+    const Xt = t => padL + (tMax > tMin ? (t - tMin) / (tMax - tMin) : 0) * plotW;
 
-    // Grille horizontale discrète (haut / base 100 / bas) — repère visuel sans surcharger.
-    const niveaux = [...new Set([max - marge, 100, min + marge])].filter(v => v >= min && v <= max);
-    const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid${Math.round(v) === 100 ? ' chart-cmp-grid--base' : ''}"/>`).join('');
-    // Ordonnée : valeur base 100 au regard de chaque repère horizontal.
-    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / CMP_VBH * 100).toFixed(2)}%">${v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</span>`).join('');
+    // Grille horizontale discrète (haut / milieu / bas), comme le graphique détail.
+    const niveaux = [...new Set([max - marge, (min + max) / 2, min + marge])];
+    const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid"/>`).join('');
+    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / CMP_VBH * 100).toFixed(2)}%">${fmtPrix(v)}</span>`).join('');
     // Abscisse : grille verticale discrète (quarts de la période) pour donner une échelle de temps.
     const grilleV = [0.25, 0.5, 0.75].map(f => { const x = padL + f * plotW; return `<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${(padT + cmpPlotH).toFixed(1)}" class="chart-cmp-grid"/>`; }).join('');
 
     const paths = normes.map((s, idx) => {
-      const X = Xn(s.vals.length);
-      const pts = s.vals.map((v, i) => [X(i), Y(v)]);
+      const pts = s.points.map((p, i) => [Xt(p.t), Y(s.vals[i])]);
       return `<path class="chart-cmp-line" data-serie="${idx}" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
     }).join('');
     const points = normes.map((s, idx) => `<circle class="chart-cmp-pt" data-serie="${idx}" r="3" fill="${s.couleur}" stroke="#fff" stroke-width="1.3" style="display:none"/>`).join('');
@@ -494,27 +499,46 @@ const Chart = (() => {
 
     // Conservés pour le survol (attacherSurvolComparaison lit etatCmp.normes/geoCmp).
     etatCmp.normes = normes;
-    etatCmp.geoCmp = { Y, Xn, min, max };
+    etatCmp.geoCmp = { Y, Xt, tMin, tMax };
 
-    const rendreLegende = (idx) => {
+    // t : timestamp survolé (ou null = dernier point de chaque série, indépendamment des autres
+    // séries — chacune peut avoir une date de dernier point légèrement différente).
+    const rendreLegende = (t) => {
       if (!leg) return;
       leg.innerHTML = normes.map((s, i) => {
-        const val = (idx == null) ? s.vals[s.vals.length - 1] : s.vals[Math.min(idx, s.vals.length - 1)];
-        const perf = val - 100;
-        const txt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+        const j = (t == null) ? s.vals.length - 1 : indexProcheT(s.points, t);
+        const val = s.vals[j];
+        const premier = s.vals[0];
+        const perf = premier ? (val - premier) / premier * 100 : 0;
+        const perfTxt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
         return `<span class="chart-cmp-item" data-serie="${i}">
           <span class="chart-cmp-trait" style="background:${s.couleur}"></span>${esc(s.label)}
-          <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${txt}</span></span>`;
+          <span class="chart-cmp-val tnum">${fmtPrix(val)}</span>
+          <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${perfTxt}</span></span>`;
       }).join('');
     };
     etatCmp.rendreLegende = rendreLegende;
     rendreLegende(null);
 
     if (dts) {
-      const p0 = normes[0].points;
-      dts.innerHTML = `<span>${fmtDate(p0[0].t, etatCmp.periode)}</span><span id="chart-cmp-date-survol"></span><span>${fmtDate(p0[p0.length - 1].t, etatCmp.periode)}</span>`;
+      dts.innerHTML = `<span>${fmtDate(tMin, etatCmp.periode)}</span><span id="chart-cmp-date-survol"></span><span>${fmtDate(tMax, etatCmp.periode)}</span>`;
     }
     attacherSurvolComparaison();
+  }
+
+  // Point d'une série au plus proche d'un timestamp donné (recherche dichotomique — points
+  // triés par date croissante). Sert à aligner plusieurs séries sur une même date de survol
+  // même quand elles n'ont pas le même nombre de points.
+  function indexProcheT(points, t) {
+    let lo = 0, hi = points.length - 1;
+    if (t <= points[0].t) return 0;
+    if (t >= points[hi].t) return hi;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (points[mid].t < t) lo = mid + 1; else hi = mid;
+    }
+    if (lo > 0 && Math.abs(points[lo - 1].t - t) <= Math.abs(points[lo].t - t)) return lo - 1;
+    return lo;
   }
 
   // Survol du graphique comparé : ligne verticale + un point par série, légende mise à jour
@@ -522,26 +546,26 @@ const Chart = (() => {
   function attacherSurvolComparaison() {
     const svg = document.getElementById('chart-cmp-svg');
     if (!svg || !etatCmp || !etatCmp.geoCmp) return;
-    const { Y, Xn } = etatCmp.geoCmp;
+    const { Y, Xt, tMin, tMax } = etatCmp.geoCmp;
     const cross = document.getElementById('chart-cmp-cross');
     const dateEl = document.getElementById('chart-cmp-date-survol');
-    const refN = etatCmp.normes[0].vals.length;
 
-    const indexDepuis = (e) => {
+    const tempsDepuis = (e) => {
       const r = svg.getBoundingClientRect();
       const vbX = (e.clientX - r.left) / r.width * VBW;
-      return Math.max(0, Math.min(refN - 1, Math.round((vbX - padL) / plotW * (refN - 1))));
+      const frac = Math.max(0, Math.min(1, (vbX - padL) / plotW));
+      return tMin + frac * (tMax - tMin);
     };
-    const montrer = (i) => {
-      const x = Xn(refN)(i);
+    const montrer = (t) => {
+      const x = Xt(t);
       cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.style.display = '';
       etatCmp.normes.forEach((s, idx) => {
-        const j = Math.min(i, s.vals.length - 1);
+        const j = indexProcheT(s.points, t);
         const pt = svg.querySelector(`.chart-cmp-pt[data-serie="${idx}"]`);
-        if (pt) { pt.setAttribute('cx', Xn(s.vals.length)(j)); pt.setAttribute('cy', Y(s.vals[j])); pt.style.display = ''; }
+        if (pt) { pt.setAttribute('cx', Xt(s.points[j].t)); pt.setAttribute('cy', Y(s.vals[j])); pt.style.display = ''; }
       });
-      if (dateEl) dateEl.textContent = fmtDate(etatCmp.normes[0].points[Math.min(i, etatCmp.normes[0].points.length - 1)].t, etatCmp.periode);
-      etatCmp.rendreLegende(i);
+      if (dateEl) dateEl.textContent = fmtDate(t, etatCmp.periode);
+      etatCmp.rendreLegende(t);
     };
     const cacher = () => {
       cross.style.display = 'none';
@@ -550,11 +574,59 @@ const Chart = (() => {
       etatCmp.rendreLegende(null);
     };
 
-    svg.addEventListener('pointermove', e => montrer(indexDepuis(e)));
+    svg.addEventListener('pointermove', e => montrer(tempsDepuis(e)));
     svg.addEventListener('pointerleave', cacher);
   }
 
-  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, changerComparaison, smooth: smoothPathD };
+  // ── Composition comparée de plusieurs UC (sous le graphique de comparaison, bureau) ──
+  // Une carte par fonds comparé (allocation d'actifs + secteurs), en grille (3 par ligne max,
+  // repli automatique en dessous). Contrairement à chargerCompo (une seule UC), pas de
+  // « Principales lignes » ici : trop de contenu par carte une fois plusieurs fonds côte à côte.
+  // items : [{ isin, nom }]
+  async function comparerCompo(containerId, items) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    el.innerHTML = '<div class="chart-loading" style="padding:8px 0">Composition…</div>';
+    const esc = (s) => (window.escHtml ? escHtml(String(s)) : String(s));
+    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', autre: '#b5ab95' };
+    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', autre: 'Autres' };
+    const cartes = await Promise.all((items || []).map(async (it) => {
+      try {
+        const r = await fetch(`./data/uc-compo/${it.isin}.json`, { cache: 'force-cache' });
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        const a = d.alloc || {};
+        const v = { action: Math.max(0, a.action || 0), obligation: Math.max(0, a.obligation || 0), liquidite: Math.max(0, a.liquidite || 0), autre: Math.max(0, a.autre || 0) };
+        const tot = v.action + v.obligation + v.liquidite + v.autre || 1;
+        const seg = Object.keys(v).filter(k => v[k] > 0.4)
+          .map(k => `<div class="compo-seg" style="width:${(v[k] / tot * 100).toFixed(1)}%;background:${COLS[k]}"></div>`).join('');
+        const leg = Object.keys(v).filter(k => v[k] > 0.4)
+          .map(k => `<span class="compo-leg"><span class="compo-pastille" style="background:${COLS[k]}"></span>${LAB[k]} ${Math.round(v[k])} %</span>`).join('');
+        const secteurs = (d.secteurs || []).slice(0, 4).map(s => `
+          <div class="compo-sect">
+            <span class="compo-sect-nom">${esc(s.nom)}</span>
+            <span class="compo-sect-bar"><span style="width:${Math.min(100, s.pct * 3).toFixed(0)}%"></span></span>
+            <span class="compo-sect-val tnum">${s.pct} %</span>
+          </div>`).join('');
+        return `
+          <div class="uc-compo-cmp-carte">
+            <div class="uc-compo-cmp-nom">${esc(it.nom)}</div>
+            <div class="compo-barre">${seg}</div>
+            <div class="compo-legende">${leg}</div>
+            ${secteurs ? `<div class="compo-titre">Secteurs</div><div class="compo-secteurs">${secteurs}</div>` : ''}
+          </div>`;
+      } catch (_) {
+        return `
+          <div class="uc-compo-cmp-carte">
+            <div class="uc-compo-cmp-nom">${esc(it.nom)}</div>
+            <div class="chart-compo-note">Composition indisponible pour cette UC.</div>
+          </div>`;
+      }
+    }));
+    el.innerHTML = `<div class="compo-titre">Composition comparée</div><div class="uc-compo-cmp-grid">${cartes.join('')}</div>`;
+  }
+
+  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, comparerCompo, changerComparaison, smooth: smoothPathD };
 })();
 
 window.Chart = Chart;

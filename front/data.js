@@ -131,6 +131,30 @@ function graphIdPour(nom) {
   return null;
 }
 
+// Ticker de graphique d'un produit (sous-jacent). Global (utilisé par app.js ET pages.js) :
+// le ticker brut « SX7E.PA » d'ES Banks n'est pas servi par Yahoo, on le remappe vers l'ETF
+// proxy BNKE.PA (mêmes règles que pour la fiche produit et le comparateur du tableau de bord).
+function chartTickerPour(p) {
+  const t = p.ticker || p.sj || '';
+  if (t === 'SX7E.PA' || t === 'ES Banks') return 'BNKE.PA';
+  if (t === 'CMS10' || p.type === 'cms')   return 'scrape:cms'; // swap EUR 10y via FT
+  return t;
+}
+
+// Sous-jacents (actions) uniques des produits Autocall à sous-jacent action, dédoublonnés par
+// ticker de graphique — plusieurs CAP Août 2030 partagent tous SX7E.PA/ES Banks : une seule
+// entrée. Sert à la fois la carte « Actions » du tableau de bord et le comparateur.
+function sousJacentsUniques(produits) {
+  const out = new Map();
+  (produits || []).forEach(p => {
+    if (p.type !== 'equity') return;
+    const t = chartTickerPour(p);
+    if (!t || out.has(t)) return;
+    out.set(t, { ticker: t, label: p.sjLabel || p.sj, niveau: p.niveau, niveauNum: p.niveauNum });
+  });
+  return [...out.values()];
+}
+
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });

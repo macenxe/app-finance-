@@ -146,6 +146,25 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .zone-flag .fi { width: 20px; height: 20px; border-radius: 50%; background-size: cover; }
 
+/* ── Outils : liste de documents personnels (PDF locaux) ── */
+.outils-liste { display: flex; flex-direction: column; gap: 10px; max-width: 480px; }
+.outils-doc {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  text-decoration: none; color: inherit; cursor: pointer;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.outils-doc:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
+.outils-doc-icone {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  width: 40px; height: 40px; border-radius: 8px;
+}
+.outils-doc-icone--or     { background: #f2ede0; color: #9a7b3c; }
+.outils-doc-icone--marine { background: #eef2f7; color: #16304f; }
+.outils-doc-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.outils-doc-titre { font-size: 13.5px; font-weight: 600; color: #16304f; }
+.outils-doc-desc { font-size: 11.5px; color: #9a8f7a; }
+.outils-doc-fleche { margin-left: auto; flex: none; color: #b5ab95; font-size: 15px; }
+
 /* ── Autocall preview table ── */
 .autocall-table { }
 .autocall-header {
@@ -491,6 +510,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   display: flex; justify-content: flex-end; gap: 10px; flex: none;
 }
 
+/* ── Visionneuse de document (page Outils) : panneau agrandi pour la lisibilité d'un PDF.
+   Hauteur explicite (pas juste max-height) : .doc-body/.doc-iframe sont en flex:1 et ont
+   besoin d'une hauteur de référence définie sur le panneau pour se déployer jusqu'en bas. ── */
+.modal-panel.doc-panel { width: 900px; height: calc(100vh - 40px); max-height: calc(100vh - 40px); }
+.sheet-panel.doc-panel { height: 92vh; }
+.doc-body { padding: 0; display: flex; flex: 1; min-height: 0; }
+.doc-iframe { flex: 1; width: 100%; border: none; background: #525659; }
+
 /* ── Form ── */
 .form-section-label {
   font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
@@ -655,6 +682,19 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .compo-hold:last-child { border-bottom: none; }
 .compo-hold-nom { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .chart-compo-note { font-size: 10.5px; color: #b5ab95; margin-top: 10px; line-height: 1.4; }
+
+/* ── Comparatif de composition de plusieurs UC (sous le graphique de comparaison, bureau) ──
+   Grille à 3 colonnes fixes (pas de flex-grow) : avec moins de 3 fonds comparés, les cartes
+   gardent leur largeur d'1/3 plutôt que de s'étirer pour combler la ligne — lecture en
+   colonnes alignées comme un vrai tableau comparatif. Au-delà de 3 fonds, la grille repasse
+   à la ligne d'elle-même (comportement natif de CSS grid). */
+.uc-compo-cmp { margin-top: 16px; border-top: 1px solid #f1ece1; padding-top: 12px; }
+.uc-compo-cmp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 8px; }
+.uc-compo-cmp-carte {
+  background: #f7f4ec; border: 1px solid #ece7dc; border-radius: 8px; padding: 12px 14px;
+}
+.uc-compo-cmp-nom { font-size: 12.5px; font-weight: 700; color: #16304f; margin-bottom: 8px; }
+.uc-compo-cmp-carte .compo-titre:first-of-type { margin-top: 0; }
 
 /* ── Page F€ & UC ── */
 .fe-contrats { font-size: 11.5px; color: #9a8f7a; margin-bottom: 14px; }
@@ -899,16 +939,6 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .dash-col-principale .grid-mkt .index-var,
   .dash-col-principale .grid-mkt .taux-var { font-size: 11px; }
   .dash-col-principale .grid-mkt .taux-maj { font-size: 9px; margin-top: 0; }
-  /* Cartes Actifs (Brent/Or/Bitcoin) : moins nombreuses que les indices/taux, donc plus
-     larges une fois étirées sur la même ligne — un mini graphique 5 ans comble l'espace
-     libre à droite du nom/valeur plutôt que de le laisser vide. */
-  .index-card[data-macro] { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-  /* Le sparkline est le bloc qui s'étire (flex:1) : le nom/valeur/variation gardent leur
-     largeur naturelle, tout le reste de la cellule sert de canevas au mini graphique. */
-  .index-card-info { min-width: 0; flex: 0 1 auto; }
-  .index-spark.bureau-seul { display: flex; flex-direction: column; align-items: stretch; gap: 2px; flex: 1 1 auto; min-width: 60px; }
-  .index-spark svg { width: 100%; height: 30px; display: block; }
-  .index-spark-lbl { align-self: center; font-size: 8.5px; color: #b5ab95; letter-spacing: .04em; text-transform: uppercase; }
   .dash-split .mb-24 { margin-bottom: 10px; }
   .dash-split .mb-12 { margin-bottom: 5px; }
   .page-dash .page-body { padding-bottom: 12px; }
@@ -945,15 +975,23 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── Autocall : split master-détail (liste compacte à gauche, fiche à droite) ── */
   .ac-split { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: 24px; align-items: stretch; }
   .ac-col-liste, .ac-col-detail { min-width: 0; }
+  /* Colonne de gauche en flex column : les en-têtes (toolbar/légende/bandeau/UC) gardent leur
+     taille naturelle (flex:none ci-dessous), et la liste (.ac-list/.uc-liste) absorbe tout
+     l'espace restant avec son propre défilement. La colonne est stretchée par le grid parent à
+     la même hauteur que .ac-col-detail (qui remplit .ac-detail-panneau à 100%) : les deux
+     colonnes se terminent donc exactement au même niveau, quel que soit le nombre de cartes ou
+     la hauteur de la fenêtre — pas besoin d'accorder deux hauteurs magiques (calc(100vh - Npx)). */
+  .ac-col-liste { display: flex; flex-direction: column; min-height: 0; }
+  .ac-col-liste > *:not(.ac-list):not(.uc-liste) { flex: none; }
   .ac-toolbar { justify-content: flex-start; margin-bottom: 12px; }
   .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 6px 14px; margin-bottom: 12px; }
   /* La liste défile seule : la fiche de droite reste visible en permanence. */
   .ac-list {
     display: flex; flex-direction: column; gap: 10px;
-    max-height: calc(100vh - 315px); overflow-y: auto; padding-right: 4px;
+    flex: 1 1 0; min-height: 0; overflow-y: auto; padding-right: 4px;
   }
   /* Page Fonds : la liste UC défile aussi, et l'UC sélectionnée est mise en avant */
-  .uc-liste { max-height: calc(100vh - 370px); overflow-y: auto; padding-right: 4px; }
+  .uc-liste { flex: 1 1 0; min-height: 0; overflow-y: auto; padding-right: 4px; }
   .uc-item--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   .uc-chips { justify-content: flex-start; }
 
@@ -987,21 +1025,23 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-niveau--coupon .ac-bar-niveau-dot,
   .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
 
-  /* ── Graphique comparé (base 100) : légende et filtres de période centrés ── */
+  /* ── Graphique comparé (valeurs réelles) : légende et filtres de période centrés ── */
   .chart-cmp-head { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
   .chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
   .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
   .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
+  .chart-cmp-val { font-weight: 600; color: #16304f; font-variant-numeric: tabular-nums; }
   .chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
   .chart-cmp-perf.up   { color: #1d6f4c; }
   .chart-cmp-perf.down { color: #9a3535; }
   .chart-periodes-cmp { margin-top: 10px; margin-bottom: 2px; flex: none; justify-content: center; }
   .chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 6px; }
   #chart-cmp-date-survol { font-weight: 700; color: #16304f; }
-  /* Grille discrète (haut / base 100 en pointillé / bas) + survol multi-séries. */
+  /* Grille discrète (haut / milieu / bas) + survol multi-séries. */
   .chart-cmp-grid { stroke: #f0ebe0; stroke-width: 1; }
-  .chart-cmp-grid--base { stroke: #ddd5c2; stroke-dasharray: 3 3; }
   #chart-cmp-zone svg { cursor: crosshair; }
+  /* Carte cliquée depuis Indices/Actions/Actifs/Taux, actuellement dans le comparateur. */
+  .index-card--actif { border-color: #16304f; background: #f5f7fb; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   /* Carte « Performance comparée » du tableau de bord : gabarit resserré pour tenir sans
      défilement (padding réduit, boutons de période plus petits, moins de marge). */
   .cmp-card { padding: 10px 14px 8px; }
@@ -1123,10 +1163,11 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-detail-panneau[data-uc] .detail-chart-inline {
     flex: none; max-width: none; width: 100%; margin: 0; padding: 14px 20px 10px;
   }
-  /* Les cases « Stratégie du fonds » suivent l'ordre du HTML (order par défaut 0), mais le
-     graphique porte order:2 (règle générique ci-dessus) : sans order explicite ici, elles
-     remonteraient toujours avant lui en flex. */
-  .ac-detail-panneau[data-uc] .uc-strategie { order: 3; }
+  /* Stratégie du fonds (ou bandeau dépliable en comparaison) : reste avant le graphique, à
+     l'ordre par défaut (0), sous l'ordre 2 du graphique (règle générique ci-dessus). Le
+     comparatif de composition, lui, doit apparaître après le graphique : order explicite
+     nécessaire car son ordre par défaut (0) le remonterait sinon avant le graphique. */
+  .ac-detail-panneau[data-uc] .uc-compo-cmp { order: 4; flex: none; width: 100%; }
   .ac-detail-panneau[data-uc] .chart-readout { min-height: 0; margin-bottom: 6px; }
   .ac-detail-panneau[data-uc] .chart-prix { font-size: 24px; }
   .ac-detail-panneau[data-uc] .chart-zone { width: 100%; max-width: 720px; margin: 0 auto; }
