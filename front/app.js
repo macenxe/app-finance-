@@ -234,7 +234,7 @@ const App = (() => {
   }
 
   function initComparaisonIndices() {
-    if (!estBureau() || state.page !== 'dash' || !window.Chart) return;
+    if (state.page !== 'dash' || !window.Chart) return;
     if (!document.getElementById('cmp-indices')) return;
     const catalogue = catalogueComparaison();
     if (!state.cmpSeries) state = { ...state, cmpSeries: CMP_TICKERS_DEFAUT.filter(t => catalogue.has(t)) };
@@ -244,14 +244,16 @@ const App = (() => {
       el.classList.toggle('index-card--actif', state.cmpSeries.includes(el.getAttribute('data-cmp-ticker')));
     });
     const series = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
-    // Graphique du tableau de bord plus bas que le gabarit commun (-32 %) : la page dashboard
-    // aligne beaucoup de cartes, ce comparateur n'a pas besoin d'autant de hauteur — et c'est
-    // lui qui fixait la hauteur totale du tableau de bord (donc le défilement résiduel sur les
-    // écrans 768px de haut). Mesuré : 205 ramène 1366×768 à 0px de dépassement.
-    if (series.length) Chart.comparer('cmp-indices', series, { vbh: 205 });
+    // Bureau : graphique plus bas que le gabarit commun (-32 %) — la page dashboard aligne
+    // beaucoup de cartes et c'est ce comparateur qui fixait la hauteur totale, donc le
+    // défilement résiduel sur les écrans 768px de haut (mesuré : 205 ramène 1366×768 à 0px).
+    // Mobile : la carte est bien plus étroite (~350px) et le viewBox 640 de large est mis à
+    // l'échelle par la largeur — avec 205 la courbe ne ferait que ~110px de haut. On garde donc
+    // le gabarit commun (300 → ~165px de tracé), la page défile de toute façon.
+    if (series.length) Chart.comparer('cmp-indices', series, { vbh: estBureau() ? 205 : 300 });
     else {
       const zone = document.getElementById('cmp-indices');
-      if (zone) zone.innerHTML = '<div class="chart-loading">Cliquez sur un actif ci-dessus pour afficher son graphique.</div>';
+      if (zone) zone.innerHTML = '<div class="chart-loading">Sélectionnez un actif ci-dessus pour afficher son graphique.</div>';
     }
   }
 
@@ -712,14 +714,23 @@ const App = (() => {
       renderPage(true);
     },
     // Comparateur du tableau de bord : App.clicActif est le point d'entrée depuis une carte
-    // Indices/Actions/Actifs/Taux (bureau → ajoute/retire du comparateur ; mobile → ouvre la
-    // fiche modale, cf. définition ci-dessous). toggleSerieCmp fait à la fois ajout et retrait
-    // (reclique une carte déjà sélectionnée pour l'enlever) : plus de bouton « + Ajouter » séparé.
+    // Indices/Actions/Actifs/Taux (même mécanique en bureau et en mobile). toggleSerieCmp fait
+    // à la fois ajout et retrait (reclique une carte déjà sélectionnée pour l'enlever) : plus
+    // de bouton « + Ajouter » séparé.
     toggleSerieCmp(ticker) {
       const set = new Set(state.cmpSeries || []);
-      if (set.has(ticker)) set.delete(ticker); else set.add(ticker);
+      const ajout = !set.has(ticker);
+      if (ajout) set.add(ticker); else set.delete(ticker);
       state = { ...state, cmpSeries: [...set] };
       initComparaisonIndices();
+      // Mobile : le comparateur est sous les trois grilles de cartes, donc hors écran au moment
+      // du tap — sans ce recentrage, ajouter une valeur ne donnerait aucun retour visible autre
+      // que la bordure de la carte. `block:'nearest'` ne défile que si la carte n'est pas déjà
+      // visible : taper plusieurs valeurs de suite ne relance donc pas le défilement.
+      if (ajout && !estBureau()) {
+        const carte = document.querySelector('.cmp-card');
+        if (carte) carte.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     },
     // Puces « Comparer » du panneau UC (page Fonds € & UC, bureau uniquement) : ajoutent d'autres
     // UC sur le graphique de l'UC actuellement ouverte (state.ucSel), sans carte séparée.
@@ -808,15 +819,12 @@ const App = (() => {
       state = { ...state, detailIsin: null, detailIsins: null };
     },
     fermerFormulaire,
-    ouvrirGraphique(id, label, sous) {
-      if (window.Chart) Chart.ouvrir(id, label, { sous: sous || '', rebase: rebaseESBanks(id, null) });
-    },
-    // Clic sur une carte Indices/Actions/Actifs/Taux du tableau de bord. Bureau : ajoute/retire
-    // du comparateur en bas de page (démarche unique, plus de fiche modale séparée pour ces
-    // cartes). Mobile : le comparateur n'existe pas (bureau-seul) → on garde l'ouverture modale.
-    clicActif(id, label) {
-      if (estBureau()) { App.toggleSerieCmp(id); return; }
-      App.ouvrirGraphique(id, label);
+    // Clic (ou tap) sur une carte Indices/Actions/Actifs/Taux du tableau de bord : ajoute ou
+    // retire la série du comparateur situé sous les cartes. Même comportement en bureau et en
+    // mobile depuis que le comparateur y est aussi affiché (avant, le mobile ouvrait une fiche
+    // graphique modale — remplacée par cette sélection multiple).
+    clicActif(id) {
+      App.toggleSerieCmp(id);
     },
     ouvrirGraphiqueUC(isin) {
       if (!window.Chart) return;

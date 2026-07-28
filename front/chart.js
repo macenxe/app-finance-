@@ -404,6 +404,8 @@ const Chart = (() => {
       periodes: PERIODES_COMPACT,
       sets: [],
       vbh: opts.vbh || CMP_VBH,
+      // Numéro du chargement en cours : voir chargerComparaison (réponses périmées ignorées).
+      gen: 0,
     };
     el.innerHTML = `
       <div class="chart-cmp-head">
@@ -427,10 +429,18 @@ const Chart = (() => {
 
   async function chargerComparaison() {
     if (!etatCmp) return;
+    // Une réponse peut arriver après qu'une autre sélection ait été demandée : on retient
+    // l'instance visée ET son numéro de chargement, et on abandonne si l'un des deux a bougé
+    // entre-temps. Sans ça, ajouter deux valeurs coup sur coup (deux taps rapides sur les
+    // cartes du tableau de bord) laissait la réponse de la 1re sélection écraser la 2de, et
+    // la dernière valeur ajoutée n'apparaissait pas sur le graphique.
+    const etat = etatCmp;
+    const gen = ++etat.gen;
+    const perime = () => etatCmp !== etat || etat.gen !== gen;
     const zone = document.getElementById('chart-cmp-zone');
     if (zone) zone.innerHTML = '<div class="chart-loading">Chargement…</div>';
-    const periode = etatCmp.periode;
-    const res = await Promise.all(etatCmp.series.map(async (s) => {
+    const periode = etat.periode;
+    const res = await Promise.all(etat.series.map(async (s) => {
       try {
         const d = (typeof AppAPI !== 'undefined' && AppAPI.chargerHistorique)
           ? await AppAPI.chargerHistorique(s.ticker, periode)
@@ -439,9 +449,9 @@ const Chart = (() => {
         return pts.length >= 2 ? { ...s, points: pts } : null;
       } catch { return null; }
     }));
-    // La période a pu changer pendant les requêtes : on ignore une réponse périmée.
-    if (!etatCmp || etatCmp.periode !== periode) return;
-    etatCmp.sets = res.filter(Boolean);
+    // La période OU la liste des séries a pu changer pendant les requêtes : réponse périmée.
+    if (perime()) return;
+    etat.sets = res.filter(Boolean);
     dessinerComparaison();
   }
 

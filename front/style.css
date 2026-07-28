@@ -676,6 +676,26 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .chart-per:hover { border-color: #16304f; }
 .chart-per.active { background: #16304f; color: #fff; border-color: #16304f; }
 
+/* ── Graphique comparé (comparateur du tableau de bord, comparaison d'UC) : légende à gauche,
+   pastille de mode (valeur / base 100) à droite. En base — et non plus scopé bureau — depuis
+   que le comparateur est aussi affiché sur le tableau de bord mobile. ── */
+.chart-cmp-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+.chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px 18px; }
+.chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
+.chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
+.chart-cmp-val { font-weight: 600; color: #16304f; font-variant-numeric: tabular-nums; }
+.chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
+.chart-cmp-perf.up   { color: #1d6f4c; }
+.chart-cmp-perf.down { color: #9a3535; }
+.chart-periodes-cmp { margin-top: 10px; margin-bottom: 2px; flex: none; justify-content: center; }
+.chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 6px; }
+#chart-cmp-date-survol { font-weight: 700; color: #16304f; }
+/* Grille discrète (haut / milieu / bas) + survol multi-séries. */
+.chart-cmp-grid { stroke: #f0ebe0; stroke-width: 1; }
+#chart-cmp-zone svg { cursor: crosshair; }
+/* Carte sélectionnée depuis Indices/Actions/Actifs/Taux, actuellement dans le comparateur. */
+.index-card--actif { border-color: #16304f; background: #f5f7fb; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
+
 /* Résumé de la stratégie du fonds : juste sous l'identité de l'UC, avant le graphique — le
    texte descriptif s'y lit en premier, puis viennent les données chiffrées (courbe, répartition).
    Non scopé bureau/mobile : utilisé par le panneau bureau (.ac-detail-panneau) ET la feuille
@@ -850,6 +870,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .ac-col-detail { display: none; }
 /* Blocs ajoutés pour le bureau uniquement (le mobile reste strictement inchangé). */
 .bureau-seul { display: none; }
+/* Symétrique : blocs réservés au mobile (masqués en bureau, voir @media min-width:641px).
+   Ex. l'agenda macro, affiché sur la page Actualités en mobile et dans la colonne latérale
+   du tableau de bord en bureau. */
+.mobile-seul { display: block; }
 .dash-split { display: block; }
 .news-split { display: block; }
 
@@ -978,6 +1002,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .dash-col-laterale > .card:last-child { margin-bottom: 0; }
   .dash-col-laterale .card-title { font-size: 13.5px; }
   .bureau-seul { display: block; }
+  .mobile-seul { display: none; }
   /* Bureau : "Actions & Actifs" combiné (mobile) laisse place à la ligne de libellés
      .mkt-split-labels + la ligne de cartes juste en dessous. */
   .mkt-combo-mobile { display: none; }
@@ -1070,25 +1095,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-niveau--coupon .ac-bar-niveau-dot,
   .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
 
-  /* ── Graphique comparé : légende des fonds à gauche, pastille de mode (valeur/base 100) à droite ── */
-  .chart-cmp-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
-  .chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px 18px; }
-  .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
-  .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
-  .chart-cmp-val { font-weight: 600; color: #16304f; font-variant-numeric: tabular-nums; }
-  .chart-cmp-perf { font-weight: 700; font-variant-numeric: tabular-nums; }
-  .chart-cmp-perf.up   { color: #1d6f4c; }
-  .chart-cmp-perf.down { color: #9a3535; }
-  .chart-periodes-cmp { margin-top: 10px; margin-bottom: 2px; flex: none; justify-content: center; }
-  .chart-cmp-dates { display: flex; justify-content: space-between; font-size: 11.5px; color: #b5ab95; margin-top: 6px; }
-  #chart-cmp-date-survol { font-weight: 700; color: #16304f; }
-  /* Grille discrète (haut / milieu / bas) + survol multi-séries. */
-  .chart-cmp-grid { stroke: #f0ebe0; stroke-width: 1; }
-  #chart-cmp-zone svg { cursor: crosshair; }
-  /* Carte cliquée depuis Indices/Actions/Actifs/Taux, actuellement dans le comparateur. */
-  .index-card--actif { border-color: #16304f; background: #f5f7fb; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   /* Carte « Performance comparée » du tableau de bord : gabarit resserré pour tenir sans
-     défilement (padding réduit, boutons de période plus petits, moins de marge). */
+     défilement (padding réduit, boutons de période plus petits, moins de marge).
+     Les styles génériques du graphique comparé (.chart-cmp-*) sont en base : le comparateur
+     est aussi affiché sur le tableau de bord mobile. */
   .cmp-card { padding: 10px 14px 8px; }
   .cmp-card .card-title { font-size: 13px; }
   .cmp-card .chart-per { padding: 3px 8px; font-size: 10.5px; }
@@ -1362,6 +1372,20 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 
   /* ── Chips enroulables ── */
   .veille-tags, .filter-chips { flex-wrap: wrap; }
+
+  /* ── Comparateur du tableau de bord (mêmes cartes cliquables qu'en bureau) ──
+     Écran étroit : légende resserrée (elle s'enroule sur plusieurs lignes dès 2-3 séries) et
+     boutons de période resserrés pour que les 6 tiennent sur UNE ligne même sur les écrans
+     de 360px (mesuré : 289px de boutons pour 300px disponibles ; avec le padding de base
+     ils débordaient sur une 2e ligne). La carte garde le padding .p-18. */
+  .cmp-card .card-title { font-size: 14px; }
+  .cmp-card .section-hint { font-size: 10.5px; line-height: 1.4; }
+  .chart-cmp-head { gap: 6px 10px; margin-bottom: 6px; }
+  .chart-cmp-legende { gap: 4px 12px; }
+  .chart-cmp-item { font-size: 11.5px; gap: 5px; }
+  .chart-periodes-cmp { gap: 5px; margin-top: 8px; }
+  .chart-periodes-cmp .chart-per { padding: 6px 8px; font-size: 11px; }
+  .chart-cmp-dates { font-size: 10.5px; }
 
   /* ── Index cards compactes (tableau de bord) ── */
   .index-card { padding: 9px 10px; }

@@ -9,6 +9,25 @@ function perfBadge(isin, ucPerfs) {
   return `<span class="uc-item-perf ${up ? 'up' : 'dn'}">${label}</span>`;
 }
 
+// Agenda macro (BCE/Fed, publications d'inflation). Deux points de montage selon la taille
+// d'écran, d'où le paramètre de classe : colonne latérale du tableau de bord en bureau
+// (`bureau-seul`), page Actualités en mobile (`mobile-seul`) — le tableau de bord mobile est
+// réservé aux marchés et au comparateur.
+function renderEvenementsMacro(n, classesExtra) {
+  return `
+      <div class="card p-18 mb-24${classesExtra ? ' ' + classesExtra : ''}">
+        <div class="card-title mb-12">Prochains événements macro</div>
+        <div class="events-grid">
+          ${prochainsEvenementsMacro(n).map(e => { const dl = e.d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }); return `
+          <div class="event-item">
+            <div class="event-date tnum${e.important ? ' important' : ''}">${dl}</div>
+            <div class="event-label">${e.label}</div>
+            ${e.zone ? `<span class="zone-flag"><span class="fi fi-${({FR:'fr',UE:'eu',US:'us',DE:'de',UK:'gb',JP:'jp',CN:'cn'}[e.zone]||'un')} fis"></span></span>` : ''}
+          </div>`; }).join('')}
+        </div>
+      </div>`;
+}
+
 function renderDashboard(indices, produits, taux, cmpSeries) {
   taux = taux || TAUX;
   cmpSeries = cmpSeries || [];
@@ -127,26 +146,18 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
         </div>`; }).join('')}
       </div>
 
-      <div class="card p-18 mb-24 bureau-seul cmp-card">
+      <!-- Comparateur : présent en bureau ET en mobile (même mécanique — on tape/clique une
+           carte marché ci-dessus pour ajouter ou retirer sa série, cf. App.clicActif). -->
+      <div class="card p-18 mb-24 cmp-card">
         <div class="card-title">Comparateur</div>
-        <div class="section-hint mb-12">Cliquez sur une valeur pour l'ajouter ou la retirer</div>
+        <div class="section-hint mb-12">Sélectionnez une valeur ci-dessus pour l'ajouter ou la retirer</div>
         <div id="cmp-indices"></div>
       </div>
       </div><!-- /dash-col-principale -->
 
       <div class="dash-col-laterale">
-      <!-- Événements macro -->
-      <div class="card p-18 mb-24">
-        <div class="card-title mb-12">Prochains événements macro</div>
-        <div class="events-grid">
-          ${prochainsEvenementsMacro(4).map(e => { const dl = e.d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }); return `
-          <div class="event-item">
-            <div class="event-date tnum${e.important ? ' important' : ''}">${dl}</div>
-            <div class="event-label">${e.label}</div>
-            ${e.zone ? `<span class="zone-flag"><span class="fi fi-${({FR:'fr',UE:'eu',US:'us',DE:'de',UK:'gb',JP:'jp',CN:'cn'}[e.zone]||'un')} fis"></span></span>` : ''}
-          </div>`; }).join('')}
-        </div>
-      </div>
+      <!-- Événements macro : bureau seulement — sur mobile l'agenda vit sur la page Actualités. -->
+      ${renderEvenementsMacro(4, 'bureau-seul')}
 
       ${renderAlertesPortefeuille(produits)}
       </div><!-- /dash-col-laterale -->
@@ -585,6 +596,9 @@ function renderActus(state) {
     <div class="page-body">
      <div class="news-split">
       <div class="news-col-fil">
+        <!-- Agenda macro : déplacé ici depuis le tableau de bord en mobile (en bureau il reste
+             dans la colonne latérale du tableau de bord). -->
+        ${renderEvenementsMacro(5, 'mobile-seul')}
         ${renderCuratedNews()}
         <div class="news-group">
           <div class="news-group-title">Fil en direct</div>
