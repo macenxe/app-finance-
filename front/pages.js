@@ -216,9 +216,15 @@ function pctDuStrike(p) {
   if (p.type === 'cms' || !p.strikeNum || p.niveauNum == null) return String(p.niveau ?? '—');
   return (p.niveauNum / p.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
 }
+// Précise la nature de la valeur affichée par pctDuStrike : un taux pour les CMS (pas de
+// strike), un % du strike pour les produits actions.
+function pctDuStrikeLabel(p) {
+  return p.type === 'cms' ? 'Taux' : '% strike';
+}
 
-// Encart « Alertes portefeuille » (bureau) : état des 4 prochaines dates de constatation
+// Encart « Alertes portefeuille » (bureau) : état des prochaines dates de constatation
 // du portefeuille (tous produits confondus), pas seulement ceux en zone à risque. Masqué en mobile.
+const ALERTES_NB_DATES = 8;
 function renderAlertesPortefeuille(produits) {
   // Mêmes regroupements que la liste Autocall : les paliers d'un même CAP ne forment
   // qu'une seule ligne (« CAP 08/2030 ») au lieu d'une ligne par palier.
@@ -227,11 +233,11 @@ function renderAlertesPortefeuille(produits) {
     .map(p => ({ p, d: parseDateFlexible(p.constat) }))
     .filter(x => x.d && x.d >= aujourdhui);
 
-  // Les 4 prochaines dates de constatation distinctes (plusieurs produits peuvent
-  // partager la même date sans être un groupe CAP, ex. deux familles différentes).
-  const prochainesDates = new Set(
-    [...new Set(avecDate.map(x => x.d.getTime()))].sort((a, b) => a - b).slice(0, 4)
-  );
+  // Les prochaines dates de constatation distinctes (plusieurs produits peuvent partager la
+  // même date sans être un groupe CAP, ex. deux familles différentes) : de quoi remplir la
+  // carte sans pour autant dupliquer toute la liste Autocall.
+  const datesDistinctes = [...new Set(avecDate.map(x => x.d.getTime()))].sort((a, b) => a - b);
+  const prochainesDates = new Set(datesDistinctes.slice(0, ALERTES_NB_DATES));
 
   const lignes = avecDate
     .filter(x => prochainesDates.has(x.d.getTime()))
@@ -261,15 +267,17 @@ function renderAlertesPortefeuille(produits) {
           </div>
           <div class="alerte-droite">
             <div class="alerte-niveau tnum">${escHtml(pctDuStrike(p))}</div>
+            <div class="alerte-niveau-label">${escHtml(pctDuStrikeLabel(p))}</div>
             <div class="alerte-constat tnum">Constat. ${escHtml(fmtDatePanneau(p.constat))}</div>
           </div>
         </div>`; }).join('')
     : `<div class="alerte-vide">Aucune constatation à venir.</div>`;
 
+  const nbDates = prochainesDates.size;
   return `
       <div class="card p-18 mb-24 bureau-seul">
         <div class="card-title">Alertes portefeuille</div>
-        <div class="section-hint mb-12">État des 4 prochaines dates de constatation</div>
+        <div class="section-hint mb-12">État des ${nbDates} prochaine${nbDates > 1 ? 's' : ''} date${nbDates > 1 ? 's' : ''} de constatation</div>
         <div class="alertes-liste">${corps}</div>
       </div>`;
 }

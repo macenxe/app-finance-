@@ -244,7 +244,9 @@ const App = (() => {
       el.classList.toggle('index-card--actif', state.cmpSeries.includes(el.getAttribute('data-cmp-ticker')));
     });
     const series = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
-    if (series.length) Chart.comparer('cmp-indices', series);
+    // Graphique du tableau de bord légèrement plus bas que le gabarit commun (-20 %) : la
+    // page dashboard aligne beaucoup de cartes, ce comparateur n'a pas besoin d'autant de hauteur.
+    if (series.length) Chart.comparer('cmp-indices', series, { vbh: 240 });
     else {
       const zone = document.getElementById('cmp-indices');
       if (zone) zone.innerHTML = '<div class="chart-loading">Cliquez sur un actif ci-dessus pour afficher son graphique.</div>';
@@ -751,8 +753,15 @@ const App = (() => {
       const p = donnees.produits.find(x => x.isin === isin);
       if (!p) return;
       if (estBureau()) {
-        // Split master-détail : la sélection reste affichée dans le panneau de droite.
-        state = { ...state, detailIsin: isin, detailIsins: null };
+        // Split master-détail : la sélection reste affichée dans le panneau de droite. Venant
+        // d'une autre page (ex. alertes du tableau de bord), on bascule sur l'onglet Autocall et
+        // on réinitialise le filtre de famille pour que le produit visé soit bien dans la liste.
+        const depuisAutrePage = state.page !== 'prod';
+        state = {
+          ...state, page: 'prod', detailIsin: isin, detailIsins: null,
+          familleFiltre: depuisAutrePage ? 'tous' : state.familleFiltre,
+        };
+        if (depuisAutrePage) sauvegarderEtat();
         renderPage(true);
         return;
       }
@@ -765,7 +774,12 @@ const App = (() => {
       const membres = isins.map(isin => donnees.produits.find(p => p.isin === isin)).filter(Boolean);
       if (membres.length === 0) return;
       if (estBureau()) {
-        state = { ...state, detailIsins: isins, detailIsin: null };
+        const depuisAutrePage = state.page !== 'prod';
+        state = {
+          ...state, page: 'prod', detailIsins: isins, detailIsin: null,
+          familleFiltre: depuisAutrePage ? 'tous' : state.familleFiltre,
+        };
+        if (depuisAutrePage) sauvegarderEtat();
         renderPage(true);
         return;
       }

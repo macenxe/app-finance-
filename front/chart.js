@@ -366,10 +366,9 @@ const Chart = (() => {
   // milliers de points à côté d'une action à quelques euros). Les repères de barrières n'ont
   // toujours pas de sens ici (graphique multi-séries), donc pas de `lignes`.
   const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a', '#6b4c9a', '#1a7a7a', '#7a5a3a'];
-  // Même gabarit que le graphique détail : tous les graphiques de l'appli (détail, comparaison
-  // tableau de bord, comparaison UC) partagent désormais la même hauteur pour une lecture homogène.
+  // Même gabarit que le graphique détail par défaut (hauteur commune) ; une instance peut
+  // réduire sa hauteur via opts.vbh (ex. graphique du tableau de bord, cf. comparer()).
   const CMP_VBH = VBH;
-  const cmpPlotH = CMP_VBH - padT - padB;
   let etatCmp = null;
 
   // Courbe lissée (Catmull-Rom → Bézier cubique) plutôt que des segments droits : utilisée
@@ -392,6 +391,8 @@ const Chart = (() => {
   }
 
   // series : [{ ticker, label, couleur? }]
+  // opts.vbh : hauteur du viewBox propre à cette instance (ex. graphique du tableau de bord
+  // légèrement réduit), sinon la hauteur commune CMP_VBH.
   function comparer(containerId, series, opts) {
     opts = opts || {};
     const el = document.getElementById(containerId);
@@ -402,6 +403,7 @@ const Chart = (() => {
       periode: opts.periode || DEFAUT,
       periodes: PERIODES_COMPACT,
       sets: [],
+      vbh: opts.vbh || CMP_VBH,
     };
     el.innerHTML = `
       <div class="chart-cmp-head">
@@ -479,11 +481,13 @@ const Chart = (() => {
       badge.textContent = multi ? 'Base 100' : 'Valeur';
     }
 
+    const vbh = etatCmp.vbh || CMP_VBH;
+    const plotH = vbh - padT - padB;
     const toutes = normes.reduce((acc, s) => acc.concat(s.vals), []);
     let min = Math.min(...toutes), max = Math.max(...toutes);
     if (min === max) { min -= 1; max += 1; }
     const marge = (max - min) * 0.08; min -= marge; max += marge;
-    const Y = v => padT + (1 - (v - min) / (max - min)) * cmpPlotH;
+    const Y = v => padT + (1 - (v - min) / (max - min)) * plotH;
     // Axe X en dates réelles, pas en position d'index dans chaque série : des séries au nombre
     // de points différent (marchés/calendriers différents, historique plus court pour un fonds
     // récent…) ne tombaient sinon pas aux mêmes dates au même x, ce qui décalait les courbes
@@ -495,9 +499,9 @@ const Chart = (() => {
     // Grille horizontale discrète (haut / milieu / bas), comme le graphique détail.
     const niveaux = [...new Set([max - marge, (min + max) / 2, min + marge])];
     const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid"/>`).join('');
-    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / CMP_VBH * 100).toFixed(2)}%">${fmtPrix(v)}</span>`).join('');
+    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / vbh * 100).toFixed(2)}%">${fmtPrix(v)}</span>`).join('');
     // Abscisse : grille verticale discrète (quarts de la période) pour donner une échelle de temps.
-    const grilleV = [0.25, 0.5, 0.75].map(f => { const x = padL + f * plotW; return `<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${(padT + cmpPlotH).toFixed(1)}" class="chart-cmp-grid"/>`; }).join('');
+    const grilleV = [0.25, 0.5, 0.75].map(f => { const x = padL + f * plotW; return `<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${(padT + plotH).toFixed(1)}" class="chart-cmp-grid"/>`; }).join('');
 
     const paths = normes.map((s, idx) => {
       const pts = s.points.map((p, i) => [Xt(p.t), Y(s.vals[i])]);
@@ -506,10 +510,10 @@ const Chart = (() => {
     const points = normes.map((s, idx) => `<circle class="chart-cmp-pt" data-serie="${idx}" r="3" fill="${s.couleur}" stroke="#fff" stroke-width="1.3" style="display:none"/>`).join('');
 
     zone.innerHTML = `
-      <svg id="chart-cmp-svg" viewBox="0 0 ${VBW} ${CMP_VBH}" xmlns="http://www.w3.org/2000/svg">
+      <svg id="chart-cmp-svg" viewBox="0 0 ${VBW} ${vbh}" xmlns="http://www.w3.org/2000/svg">
         ${grilleV}${grille}${paths}${points}
-        <line id="chart-cmp-cross" x1="0" y1="${padT}" x2="0" y2="${padT + cmpPlotH}" class="chart-cross" style="display:none"/>
-        <rect x="0" y="0" width="${VBW}" height="${CMP_VBH}" fill="transparent" pointer-events="all"/>
+        <line id="chart-cmp-cross" x1="0" y1="${padT}" x2="0" y2="${padT + plotH}" class="chart-cross" style="display:none"/>
+        <rect x="0" y="0" width="${VBW}" height="${vbh}" fill="transparent" pointer-events="all"/>
       </svg>
       ${ordonnee}`;
 
