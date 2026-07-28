@@ -859,10 +859,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #sidebar { display: none; }
   #desktop-topbar {
     display: flex; align-items: center; flex: none;
-    background: #16304f; padding: 0 40px; height: 76px; gap: 36px;
+    background: #16304f; padding: 0 26px; height: 58px; gap: 22px;
   }
   .dt-brand { flex: none; }
-  .dt-logo { font-family: 'Spectral', serif; font-size: 21px; font-weight: 700; color: #f7f4ec; letter-spacing: .02em; }
+  .dt-logo { font-family: 'Spectral', serif; font-size: 18px; font-weight: 700; color: #f7f4ec; letter-spacing: .02em; }
   /* flex-direction/padding explicites : la règle de base `nav { flex-direction: column }`
      visait la sidebar et empilerait sinon les onglets hors du bandeau. */
   #top-nav { display: flex; flex-direction: row; align-items: center; gap: 8px; flex: 1; padding: 0; }
@@ -871,17 +871,17 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      reprise du .page-sub d'origine) pour rester aussi parlant que l'ancien gros titre. */
   .top-nav-item {
     display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
-    padding: 10px 20px; border-radius: 9px;
-    font-size: 15px; font-weight: 600; color: #b9c4d4; cursor: pointer; line-height: 1.3;
+    padding: 6px 14px; border-radius: 7px;
+    font-size: 13px; font-weight: 600; color: #b9c4d4; cursor: pointer; line-height: 1.3;
     white-space: nowrap; transition: background .15s, color .15s, padding .15s;
   }
   .top-nav-item:hover { color: #fff; background: #22304e; }
   /* Onglet actif : pastille claire (comme la maquette) */
   .top-nav-item.active { background: #f7f4ec; color: #16304f; }
   .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
-  .top-nav-desc { font-size: 11.5px; font-weight: 400; color: #6b6253; margin-top: 2px; }
+  .top-nav-desc { font-size: 10.5px; font-weight: 400; color: #6b6253; margin-top: 1px; }
   .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
-  .dt-date { font-size: 13px; color: #9aa6bd; white-space: nowrap; }
+  .dt-date { font-size: 12px; color: #9aa6bd; white-space: nowrap; }
   /* Bandeau légal : redondant sur bureau (déjà visible au premier chargement), retiré pour
      rendre au tableau de bord la hauteur qu'il occupait. Reste affiché sur mobile. */
   #footer { display: none; }
@@ -893,56 +893,58 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* Conteneur centré (comme la maquette) */
   .page-body {
     max-width: 1600px; width: 100%; margin-left: auto; margin-right: auto;
-    padding-left: 40px; padding-right: 40px;
+    padding-left: 26px; padding-right: 26px;
   }
-  .page-body  { padding-top: 18px; padding-bottom: 40px; }
-  .detail-content { padding: 18px 26px 30px; }
+  .page-body  { padding-top: 12px; padding-bottom: 14px; }
+  .detail-content { padding: 14px 20px 22px; }
   .card { border-radius: 10px; }
+  .p-18 { padding: 14px 16px; }
 
-  .grid-5, .grid-4, .grid-3 { gap: 12px; }
-  .grid-2 { gap: 14px; }
-  .grid-2-narrow { gap: 16px; }
-  .grid-dash-bottom { gap: 16px; }
-  .taux-grid, .macro-grid { gap: 12px; }
-  .cat-grid { gap: 12px; }
-  .summary-chips { gap: 12px; }
+  .grid-5, .grid-4, .grid-3 { gap: 10px; }
+  .grid-2 { gap: 12px; }
+  .grid-2-narrow { gap: 14px; }
+  .grid-dash-bottom { gap: 14px; }
+  .taux-grid, .macro-grid { gap: 10px; }
+  .cat-grid { gap: 10px; }
+  .summary-chips { gap: 10px; }
 
   /* Cartes marché : gabarit de la maquette (aérées, valeur en serif) */
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .index-card { padding: 16px 18px; text-align: left; }
-  .chip-card  { padding: 14px 16px; }
-  .cat-card   { padding: 14px 16px; }
-  .uc-item    { padding: 13px 16px; }
-  .uc-liste   { gap: 10px; }
+  .index-card { padding: 11px 13px; text-align: left; }
+  .chip-card  { padding: 11px 13px; }
+  .cat-card   { padding: 11px 13px; }
+  .uc-item    { padding: 10px 13px; }
+  .uc-liste   { gap: 8px; }
 
-  .index-name, .taux-item-name { font-size: 13px; justify-content: flex-start; }
-  .index-val { font-size: 22px; margin: 6px 0 4px; }
-  .index-var { font-size: 13px; }
-  .taux-val  { font-size: 22px; margin-top: 6px; }
-  .taux-var  { font-size: 13px; margin-top: 2px; }
-  .taux-maj  { font-size: 12px; margin-top: 2px; }
-  .chip-card-val { font-size: 22px; margin-top: 3px; }
+  .index-name, .taux-item-name { font-size: 12px; justify-content: flex-start; }
+  .index-val { font-size: 19px; margin: 4px 0 3px; }
+  .index-var { font-size: 12px; }
+  .taux-val  { font-size: 19px; margin-top: 4px; }
+  .taux-var  { font-size: 12px; margin-top: 2px; }
+  .taux-maj  { font-size: 11px; margin-top: 2px; }
+  .chip-card-val { font-size: 19px; margin-top: 3px; }
   /* Les cellules marché sont alignées à gauche comme la maquette (le mobile reste centré) */
   .taux-grid > div, .macro-grid > div { text-align: left; }
   .section-label { font-size: 12px; letter-spacing: .06em; }
 
-  .mb-12 { margin-bottom: 12px; }
-  .mb-18 { margin-bottom: 18px; }
-  .mb-24 { margin-bottom: 22px; }
+  .mb-12 { margin-bottom: 9px; }
+  .mb-16 { margin-bottom: 12px; }
+  .mb-18 { margin-bottom: 13px; }
+  .mb-24 { margin-bottom: 16px; }
 
-  .ac-card         { padding: 16px 20px; }
-  .autocall-header { padding-bottom: 9px; }
-  .autocall-row    { padding: 10px 0; font-size: 12.5px; }
-  .dates-cles-row  { padding: 9px 0; font-size: 12.5px; }
-  .detail-row      { padding: 10px 0; }
-  .detail-key, .detail-val { font-size: 12.5px; }
-  .event-item      { padding: 7px 0; }
-  .alert-item      { padding: 11px 0; }
-  .alert-text      { font-size: 12.5px; line-height: 1.5; }
+  .ac-card         { padding: 12px 15px; }
+  .autocall-header { padding-bottom: 8px; }
+  .autocall-row    { padding: 8px 0; font-size: 12px; }
+  .dates-cles-row  { padding: 8px 0; font-size: 12px; }
+  .detail-row      { padding: 8px 0; }
+  .detail-key, .detail-val { font-size: 12px; }
+  .event-item      { padding: 6px 0; }
+  .alert-item      { padding: 9px 0; }
+  .alert-text      { font-size: 12px; line-height: 1.5; }
   .news-cards      { gap: 12px; }
-  .news-card       { padding: 14px 16px; }
-  .news-card-titre { font-size: 15px; }
-  .news-card-resume { font-size: 12.5px; }
+  .news-card       { padding: 12px 14px; }
+  .news-card-titre { font-size: 14px; }
+  .news-card-resume { font-size: 12px; }
 
   /* ── Tableau de bord : colonne principale + colonne latérale (événements, alertes) ──
      Objectif : tenir sur un écran d'ordinateur sans défilement. Les 3 groupes de cartes
@@ -1008,8 +1010,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .events-grid { display: flex; flex-direction: column; }
 
   /* ── Autocall : split master-détail (liste compacte à gauche, fiche à droite) ── */
-  .ac-split { display: grid; grid-template-columns: 460px minmax(0, 1fr); gap: 24px; align-items: stretch; }
-  .ac-col-liste, .ac-col-detail { min-width: 0; }
+  /* Le split occupe exactement la hauteur restante sous la barre d'onglets : la liste de gauche
+     et la fiche de droite descendent donc jusqu'au bas de la fenêtre (plus de vide en bas de
+     page), et aucune des deux ne fait défiler la page — chacune gère son propre défilement.
+     Le retrait couvre : barre d'onglets (58) + décalage de #content (4) + paddings haut/bas de
+     .page-body (12 + 14). */
+  .ac-split {
+    display: grid; grid-template-columns: 440px minmax(0, 1fr); gap: 18px; align-items: stretch;
+    height: calc(100vh - 88px); min-height: 420px;
+  }
+  .ac-col-liste, .ac-col-detail { min-width: 0; min-height: 0; }
   /* Colonne de gauche en flex column : les en-têtes (toolbar/légende/bandeau/UC) gardent leur
      taille naturelle (flex:none ci-dessous), et la liste (.ac-list/.uc-liste) absorbe tout
      l'espace restant avec son propre défilement. La colonne est stretchée par le grid parent à
@@ -1018,8 +1028,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      la hauteur de la fenêtre — pas besoin d'accorder deux hauteurs magiques (calc(100vh - Npx)). */
   .ac-col-liste { display: flex; flex-direction: column; min-height: 0; }
   .ac-col-liste > *:not(.ac-list):not(.uc-liste) { flex: none; }
-  .ac-toolbar { justify-content: flex-start; margin-bottom: 12px; }
-  .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 6px 14px; margin-bottom: 12px; }
+  .ac-toolbar { justify-content: flex-start; margin-bottom: 9px; }
+  .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 5px 12px; margin-bottom: 9px; }
   /* La liste défile seule : la fiche de droite reste visible en permanence. */
   .ac-list {
     display: flex; flex-direction: column; gap: 10px;
@@ -1030,7 +1040,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .uc-item--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   .uc-chips { justify-content: flex-start; }
 
-  .ac-card { grid-template-columns: 1fr; gap: 0; padding: 14px 16px; cursor: pointer; }
+  .ac-card { grid-template-columns: 1fr; gap: 0; padding: 11px 14px; cursor: pointer; }
   .ac-card-left { grid-column: auto; grid-row: auto; }
   .ac-card--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
   /* Sous la carte : constatation à gauche, coupon à droite (le statut est déjà en tête). */
@@ -1148,51 +1158,80 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── Panneau de détail permanent (colonne de droite) ── */
   .ac-col-detail { display: block; }
   .ac-detail-panneau {
-    background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 16px 22px 14px;
-    height: 100%; max-height: calc(100vh - 176px); box-sizing: border-box; display: flex; flex-direction: column;
-    overflow-y: auto;
+    background: #fff; border: 1px solid #ece7dc; border-radius: 10px; padding: 12px 16px 12px;
+    height: 100%; box-sizing: border-box; display: flex; flex-direction: column;
+    min-height: 0; overflow-y: auto;
   }
   .ac-detail-entete {
-    display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
     margin-bottom: 8px; flex: none;
   }
   .ac-detail-id { min-width: 0; }
-  .ac-detail-titre { font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #16304f; line-height: 1.2; }
-  .ac-detail-sous  { font-size: 12.5px; color: #9a8f7a; margin-top: 4px; }
+  .ac-detail-titre { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: #16304f; line-height: 1.2; }
+  .ac-detail-sous  { font-size: 11.5px; color: #9a8f7a; margin-top: 3px; }
   .ac-detail-niveau { text-align: right; flex: none; }
-  .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 24px; font-weight: 700; color: #16304f; line-height: 1.1; }
-  .ac-detail-niveau-delta { font-size: 12.5px; font-weight: 600; margin-top: 3px; }
+  .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 20px; font-weight: 700; color: #16304f; line-height: 1.1; }
+  .ac-detail-niveau-delta { font-size: 11.5px; font-weight: 600; margin-top: 2px; }
   .ac-detail-niveau-delta.green  { color: #1d6f4c; }
   .ac-detail-niveau-delta.orange { color: #b06a1a; }
   .ac-detail-niveau-delta.red    { color: #9a3535; }
-  /* Le panneau lui-même défile (overflow-y:auto ci-dessus, plafonné à la hauteur de fenêtre) :
-     son contenu s'empile en flux normal, sans forcer une case à rétrécir sous sa taille
-     naturelle (ce qui ferait déborder son contenu par-dessus les éléments suivants). */
-  .ac-detail-panneau .detail-content { padding: 0; flex: none; }
-  /* Cases de synthèse en ligne au-dessus ; en dessous, graphique et description du sous-jacent
-     côte à côte (le graphique reste second dans le HTML pour que la feuille mobile — non
-     concernée par ces règles — garde son ordre naturel). */
-  .ac-detail-panneau .detail-chart-row { display: flex; flex-direction: column; margin-bottom: 8px; flex: none; }
-  .ac-detail-panneau .detail-info-grid {
-    flex: none;
-    grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;
+
+  /* ── Fiche Autocall : définition du sous-jacent › graphique › récapitulatif ──
+     Le HTML est celui de la feuille mobile ([graphique, définition du sous-jacent] › tableau)
+     et n'est PAS réordonné — la feuille mobile partage le même markup et y perdrait son ordre
+     naturel. La mise en page bureau « aplatit » les deux conteneurs intermédiaires
+     (display:contents) pour que leurs enfants deviennent des enfants directs du flex de
+     .detail-content, remis dans l'ordre voulu par `order`. */
+  .ac-detail-panneau .detail-content {
+    padding: 0; flex: 1 1 auto; min-height: 0;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .ac-detail-panneau .detail-chart-desc-row { display: flex; align-items: flex-start; gap: 14px; }
-  .ac-detail-panneau .detail-chart-inline {
-    flex: 1 1 auto; min-width: 0; width: auto; margin: 4px 0 0; padding: 14px 20px 10px;
+  .ac-detail-panneau .detail-chart-row,
+  .ac-detail-panneau .detail-chart-desc-row { display: contents; }
+  .ac-detail-panneau .detail-sj-desc { order: 1; flex: none; margin: 0; padding: 9px 12px; }
+  .ac-detail-panneau .detail-sj-desc-text { font-size: 12px; line-height: 1.45; }
+  /* Le graphique occupe la hauteur restante et son tracé y est centré (le tracé garde son
+     ratio viewBox 640×300, donc sa hauteur est liée à sa largeur — voir .chart-zone plus bas).
+     `:not([data-uc])` : la fiche UC réutilise .detail-chart-inline avec sa propre mise en page
+     (composition sous la courbe) — sans ce garde, le centrage flex l'y comprimait et faisait
+     déborder le graphique hors de sa carte. */
+  .ac-detail-panneau:not([data-uc]) .detail-chart-inline {
+    order: 2; flex: 1 1 auto; min-width: 0; min-height: 0; width: auto; margin: 0;
+    padding: 12px 16px 8px; display: flex; flex-direction: column; justify-content: center;
   }
-  .ac-detail-panneau .detail-sj-desc { flex: 0 0 230px; margin: 4px 0 0; }
-  .ac-detail-panneau .detail-info-box { padding: 8px 12px; }
-  .ac-detail-panneau .detail-info-val { font-size: 13.5px; }
-  .ac-detail-panneau .chart-readout { min-height: 0; margin-bottom: 6px; gap: 0; }
-  .ac-detail-panneau .chart-prix { font-size: 26px; }
-  .ac-detail-panneau .chart-periodes { margin-top: 10px; gap: 6px; justify-content: center; }
-  .ac-detail-panneau .chart-per { padding: 5px 10px; font-size: 11.5px; }
-  .ac-detail-panneau .card.p-18 { padding: 10px 14px; }
-  .ac-detail-panneau .card-title { font-size: 12.5px; margin-bottom: 2px !important; }
-  .ac-detail-panneau .detail-rows { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
-  .ac-detail-panneau .detail-row { padding: 4px 0; }
-  .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 12px; }
+  /* Le tracé est plafonné en LARGEUR d'après la hauteur d'écran disponible (sa hauteur suit
+     ensuite toute seule, `svg { height:auto }` et le ratio 640×300 du viewBox), puis centré.
+     Sans ce plafond, un tracé pleine largeur pousse le récapitulatif hors de l'écran sur un
+     écran de 768px de haut.
+     Le 486px retiré = tout ce qui n'est pas le tracé dans la fenêtre (barre d'onglets, entête
+     de fiche, définition du sous-jacent, cours, boutons de période, récapitulatif, marges) —
+     mesuré, à recalculer si l'un de ces blocs change de gabarit.
+     ⚠ Ne PAS plafonner par la hauteur (`aspect-ratio` + `flex:1 1 0`) : dès que la largeur
+     devient le facteur limitant (1920×1080), la zone reste à la hauteur allouée par le flex
+     alors que le <svg> rétrécit, et les libellés d'axe — positionnés en % de .chart-zone —
+     se retrouvent 120px sous la courbe. C'est bien .chart-zone qu'il faut contraindre, et sa
+     hauteur doit rester celle du <svg>. */
+  .ac-detail-panneau:not([data-uc]) .chart-zone {
+    flex: 0 1 auto; width: min(100%, (100vh - 486px) * 640 / 300); margin: 0 auto;
+  }
+  /* Ni le cours ni les boutons de période ne doivent être comprimés quand la place manque :
+     sans flex:none, le prix se fait écraser à quelques pixels de haut. */
+  .ac-detail-panneau .chart-readout, .ac-detail-panneau .chart-periodes { flex: none; }
+  .ac-detail-panneau .chart-readout { min-height: 0; margin-bottom: 4px; gap: 0; }
+  .ac-detail-panneau .chart-prix { font-size: 22px; }
+  .ac-detail-panneau .chart-periodes { margin-top: 8px; gap: 5px; justify-content: center; }
+  .ac-detail-panneau .chart-per { padding: 4px 9px; font-size: 11px; }
+  /* Récapitulatif : sous le graphique, sur 3 colonnes équilibrées automatiquement (multi-colonnes
+     plutôt qu'une grille : le nombre de lignes varie selon le type de produit — un equity en a
+     11, un CMS 9 — et `columns` répartit tout seul, sans avoir à fixer un nombre de lignes). */
+  .ac-detail-panneau .card.p-18 { order: 3; flex: none; padding: 10px 14px; }
+  .ac-detail-panneau .card-title { font-size: 12px; margin-bottom: 2px !important; }
+  /* display:block obligatoire : la règle de base est `.detail-rows { display:flex }`, et
+     `columns` n'a aucun effet sur un conteneur flex (les colonnes sont silencieusement ignorées
+     et les lignes restent empilées). */
+  .ac-detail-panneau .detail-recap .detail-rows { display: block; columns: 3; column-gap: 26px; }
+  .ac-detail-panneau .detail-row { padding: 3.5px 0; break-inside: avoid; }
+  .ac-detail-panneau .detail-key, .ac-detail-panneau .detail-val { font-size: 11.5px; }
   .ac-detail-panneau .detail-note { margin-top: 6px; }
   .ac-detail-panneau .detail-note--indic { display: none; }
   .ac-detail-vide {
@@ -1200,25 +1239,28 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     padding: 44px 20px; text-align: center; color: #9a8f7a; font-size: 13px;
   }
 
-  /* ── Page Fonds € & UC : même panneau que l'Autocall (.ac-detail-panneau), mais le
-     graphique+composition doit remplir toute la hauteur du panneau (pas de case Description
-     à faire grandir ici) — la composition (répartition/secteurs/lignes) devient la zone qui
-     absorbe l'écart et défile sur elle-même si elle est plus longue que la place restante. */
+  /* ── Page Fonds € & UC : même panneau que l'Autocall (.ac-detail-panneau) ──
+     Le graphique puis, en dessous, la composition détaillée (répartition / secteurs /
+     principales lignes) : la fiche est plus longue que le panneau et défile, c'est assumé.
+     flex:none — sans ça le bloc serait comprimé par le panneau et son contenu déborderait
+     par-dessus ce qui suit (le comparatif de composition, en mode comparaison). */
   .ac-detail-panneau[data-uc] .detail-chart-inline {
-    flex: none; max-width: none; width: 100%; margin: 0; padding: 14px 20px 10px;
+    flex: none; max-width: none; width: 100%; margin: 0; padding: 12px 16px 8px;
   }
   /* Stratégie du fonds (ou bandeau dépliable en comparaison) : reste avant le graphique, à
      l'ordre par défaut (0), sous l'ordre 2 du graphique (règle générique ci-dessus). Le
      comparatif de composition, lui, doit apparaître après le graphique : order explicite
      nécessaire car son ordre par défaut (0) le remonterait sinon avant le graphique. */
   .ac-detail-panneau[data-uc] .uc-compo-cmp { order: 4; flex: none; width: 100%; }
-  .ac-detail-panneau[data-uc] .chart-readout { min-height: 0; margin-bottom: 6px; }
-  .ac-detail-panneau[data-uc] .chart-prix { font-size: 24px; }
+  .ac-detail-panneau[data-uc] .chart-readout { min-height: 0; margin-bottom: 4px; }
+  .ac-detail-panneau[data-uc] .chart-prix { font-size: 21px; }
   .ac-detail-panneau[data-uc] .chart-zone { width: 100%; max-width: 720px; margin: 0 auto; }
-  .ac-detail-panneau[data-uc] .chart-periodes { margin-top: 10px; gap: 6px; justify-content: center; }
-  .ac-detail-panneau[data-uc] .chart-per { padding: 5px 10px; font-size: 11.5px; }
-  .ac-detail-panneau[data-uc] .chart-compo { margin-top: 14px; padding-top: 12px; }
-  .ac-detail-panneau[data-uc] .compo-hold { padding: 4px 0; }
+  .ac-detail-panneau[data-uc] .chart-periodes { margin-top: 8px; gap: 5px; justify-content: center; }
+  .ac-detail-panneau[data-uc] .chart-per { padding: 4px 9px; font-size: 11px; }
+  .ac-detail-panneau[data-uc] .chart-compo { margin-top: 12px; padding-top: 10px; }
+  .ac-detail-panneau[data-uc] .compo-hold { padding: 3px 0; }
+  /* Stratégie du fonds : bloc de texte compact, il précède le graphique dans le panneau. */
+  .ac-detail-panneau[data-uc] .uc-strategie { flex: none; }
 }
 
 /* La liste UC reste sur une seule colonne : elle vit dans la colonne gauche du split. */

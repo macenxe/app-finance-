@@ -244,9 +244,11 @@ const App = (() => {
       el.classList.toggle('index-card--actif', state.cmpSeries.includes(el.getAttribute('data-cmp-ticker')));
     });
     const series = state.cmpSeries.map(t => catalogue.get(t)).filter(Boolean);
-    // Graphique du tableau de bord légèrement plus bas que le gabarit commun (-20 %) : la
-    // page dashboard aligne beaucoup de cartes, ce comparateur n'a pas besoin d'autant de hauteur.
-    if (series.length) Chart.comparer('cmp-indices', series, { vbh: 240 });
+    // Graphique du tableau de bord plus bas que le gabarit commun (-32 %) : la page dashboard
+    // aligne beaucoup de cartes, ce comparateur n'a pas besoin d'autant de hauteur — et c'est
+    // lui qui fixait la hauteur totale du tableau de bord (donc le défilement résiduel sur les
+    // écrans 768px de haut). Mesuré : 205 ramène 1366×768 à 0px de dépassement.
+    if (series.length) Chart.comparer('cmp-indices', series, { vbh: 205 });
     else {
       const zone = document.getElementById('cmp-indices');
       if (zone) zone.innerHTML = '<div class="chart-loading">Cliquez sur un actif ci-dessus pour afficher son graphique.</div>';
@@ -302,7 +304,9 @@ const App = (() => {
       if (compareIsins.length) {
         const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
         const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
-        Chart.comparer('uc-chart-inline', series);
+        // Graphique plus bas qu'au gabarit commun : en comparaison, le comparatif de
+        // composition (#uc-compo-cmp) vient s'ajouter sous la courbe dans le même panneau.
+        Chart.comparer('uc-chart-inline', series, { vbh: 215 });
         if (Chart.comparerCompo) {
           const items = [{ isin, nom: u ? u.nom : '' }, ...extras.map(e => ({ isin: e.isin, nom: e.nom }))];
           Chart.comparerCompo('uc-compo-cmp', items);

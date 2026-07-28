@@ -1088,10 +1088,21 @@ function detailBarriereTxt(strikeNum, pct, num, isCms) {
   return `${escHtml(String(pct))} · ${montant.toLocaleString('fr-FR', { maximumFractionDigits: 0 })} €`;
 }
 
+// Une ligne clé/valeur du tableau de description (ou du récapitulatif bureau).
+function detailLigneHtml(l) {
+  const cls = 'detail-val' + (l.tnum === false ? '' : ' tnum');
+  return `<div class="detail-row"><span class="detail-key">${l.k}</span><span class="${cls}"${l.style ? ` style="${l.style}"` : ''}>${l.v}</span></div>`;
+}
+
 // Corps d'une fiche détail (synthèse + graphique + description), partagé par la feuille
-// mobile (renderDetail) et le dépliage en ligne du bureau (renderDetailInline).
-function detailCorpsHtml(produit, chartId = 'detail-chart-inline') {
+// mobile (renderDetail) et le panneau permanent du bureau (renderDetailPanneau).
+// opts.recap : version bureau — les 4 cases de synthèse dorées sont supprimées et leur contenu
+// (coupon annuel, protection, barrières détaillées) est reversé dans le tableau du bas, qui
+// devient un « Récapitulatif » complet sur 3 colonnes. Le mobile garde les cases + la
+// « Description » d'origine (opts absent) : ne pas fusionner les deux présentations.
+function detailCorpsHtml(produit, chartId = 'detail-chart-inline', opts = {}) {
   const isCms = produit.type === 'cms';
+  const recap = !!opts.recap;
 
   // Coupon en mémoire : périodes où la barrière coupon n'a pas été franchie, dont le gain
   // reste en réserve jusqu'à la prochaine constatation qui la franchit (ou le rappel/échéance).
@@ -1109,37 +1120,41 @@ function detailCorpsHtml(produit, chartId = 'detail-chart-inline') {
     { label: 'Barrière rappel', value: detailBarriereTxt(produit.strikeNum, produit.bAuto, produit.bAutoNum, isCms) },
   ];
 
+  const pctColor = produit.k === 'red' ? '#9a3535' : produit.k === 'orange' ? '#b06a1a' : '#1d6f4c';
+  const lignes = [
+    { k: 'Sous-jacent', v: escHtml(produit.sj), tnum: false },
+    ...(produit.type === 'equity' ? [
+      { k: 'Strike initial', v: escHtml(produit.strike) },
+      { k: 'Niveau actuel',  v: escHtml(produit.niveau) },
+      { k: '% du strike',    v: escHtml(produit.pct), style: `font-weight:600;color:${pctColor};` },
+    ] : [
+      { k: 'Taux CMS 10 ans', v: escHtml(produit.niveau) },
+    ]),
+    // Repris des cases de synthèse, supprimées en bureau.
+    ...(recap ? [
+      { k: 'Coupon annuel', v: escHtml(produit.coupon) + ' / an', style: 'font-weight:600;color:#1d6f4c;' },
+      { k: 'Protection',    v: escHtml(String(produit.protection ?? '—')) },
+    ] : []),
+    { k: 'Barrière coupon', v: recap ? detailBarriereTxt(produit.strikeNum, produit.bCoupon, produit.bCouponNum, isCms) : escHtml(produit.bCoupon) },
+    { k: 'Barrière rappel', v: recap ? detailBarriereTxt(produit.strikeNum, produit.bAuto, produit.bAutoNum, isCms) : escHtml(produit.bAuto) },
+    { k: 'Coupon en mémoire', v: couponMemoireVal, style: nbCoupons > 0 ? 'font-weight:600;color:#b06a1a;' : '' },
+    { k: 'Prochaine constatation', v: escHtml(produit.constat) },
+    { k: 'Échéance finale', v: escHtml(produit.ech) },
+  ];
+
   return `
     <div class="detail-content">
       <div class="detail-chart-row">
-        ${detailInfoGrid(infoBoxes)}
+        ${recap ? '' : detailInfoGrid(infoBoxes)}
         <div class="detail-chart-desc-row">
           <div id="${chartId}" class="detail-chart-inline"></div>
           ${detailSousJacentHtml(produit.sjLabel || produit.sj)}
         </div>
       </div>
 
-      <div class="card p-18">
-        <div class="card-title mb-12">Description</div>
-        <div class="detail-rows">
-          <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(produit.sj)}</span></div>
-          ${produit.type === 'equity' ? `
-          <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(produit.strike)}</span></div>
-          <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>
-          <div class="detail-row">
-            <span class="detail-key">% du strike</span>
-            <span class="detail-val tnum" style="font-weight:600;color:${produit.k==='red'?'#9a3535':produit.k==='orange'?'#b06a1a':'#1d6f4c'};">${escHtml(produit.pct)}</span>
-          </div>` : `
-          <div class="detail-row"><span class="detail-key">Taux CMS 10 ans</span><span class="detail-val tnum">${escHtml(produit.niveau)}</span></div>`}
-          <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(produit.bCoupon)}</span></div>
-          <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(produit.bAuto)}</span></div>
-          <div class="detail-row">
-            <span class="detail-key">Coupon en mémoire</span>
-            <span class="detail-val tnum"${nbCoupons > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireVal}</span>
-          </div>
-          <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(produit.constat)}</span></div>
-          <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(produit.ech)}</span></div>
-        </div>
+      <div class="card p-18${recap ? ' detail-recap' : ''}">
+        <div class="card-title mb-12">${recap ? 'Récapitulatif' : 'Description'}</div>
+        <div class="detail-rows">${lignes.map(detailLigneHtml).join('')}</div>
         ${produit.evaluationIncomplete ? `<div class="detail-note" style="margin-top:10px;color:#9a3535;">Historique de cours incomplet : réserve indicative.</div>` : ''}
       </div>
 
@@ -1190,7 +1205,7 @@ function renderDetailPanneau(produit) {
       </div>
       ${detailNiveauHtml(produit)}
     </div>
-    ${detailCorpsHtml(produit)}
+    ${detailCorpsHtml(produit, 'detail-chart-inline', { recap: true })}
   </div>`;
 }
 
@@ -1205,12 +1220,13 @@ function renderDetailPanneauGroupe(membres) {
       </div>
       ${detailNiveauHtml(ref)}
     </div>
-    ${detailCorpsGroupeHtml(membres)}
+    ${detailCorpsGroupeHtml(membres, 'detail-chart-inline', { recap: true })}
   </div>`;
 }
 
-function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline') {
+function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline', opts = {}) {
   const ref = membres[0];
+  const recap = !!opts.recap;
   const niveauPct = (ref.strikeNum && ref.niveauNum)
     ? (ref.niveauNum / ref.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'
     : '—';
@@ -1244,35 +1260,35 @@ function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline') {
     { label: 'Barrière rappel', value: detailBarriereTxt(ref.strikeNum, ref.bAuto, ref.bAutoNum, false) },
   ];
 
+  const lignes = [
+    { k: 'Sous-jacent', v: escHtml(ref.sj), tnum: false },
+    { k: 'Strike initial', v: escHtml(String(ref.strike)) },
+    { k: 'Niveau actuel',  v: escHtml(String(ref.niveau)) },
+    { k: '% du strike',    v: niveauPct, style: `font-weight:600;color:${pctColor};` },
+    ...(recap ? [
+      { k: 'Coupon annuel', v: couponTxt, style: 'font-weight:600;color:#1d6f4c;' },
+      { k: 'Protection',    v: protectionTxt },
+    ] : []),
+    { k: 'Barrière coupon', v: recap ? detailBarriereTxt(ref.strikeNum, ref.bCoupon, ref.bCouponNum, false) : escHtml(String(ref.bCoupon)) },
+    { k: 'Barrière rappel', v: recap ? detailBarriereTxt(ref.strikeNum, ref.bAuto, ref.bAutoNum, false) : escHtml(String(ref.bAuto)) },
+    { k: 'Coupon en mémoire', v: couponMemoireTxt, style: nbCouponsGroupe > 0 ? 'font-weight:600;color:#b06a1a;' : '' },
+    { k: 'Prochaine constatation', v: escHtml(ref.constat) },
+    { k: 'Échéance finale', v: escHtml(ref.ech) },
+  ];
+
   return `
     <div class="detail-content">
       <div class="detail-chart-row">
-        ${detailInfoGrid(infoBoxes)}
+        ${recap ? '' : detailInfoGrid(infoBoxes)}
         <div class="detail-chart-desc-row">
           <div id="${chartId}" class="detail-chart-inline"></div>
           ${detailSousJacentHtml(ref.sjLabel || ref.sj)}
         </div>
       </div>
 
-      <div class="card p-18">
-        <div class="card-title mb-12">Description</div>
-        <div class="detail-rows">
-          <div class="detail-row"><span class="detail-key">Sous-jacent</span><span class="detail-val">${escHtml(ref.sj)}</span></div>
-          <div class="detail-row"><span class="detail-key">Strike initial</span><span class="detail-val tnum">${escHtml(String(ref.strike))}</span></div>
-          <div class="detail-row"><span class="detail-key">Niveau actuel</span><span class="detail-val tnum">${escHtml(String(ref.niveau))}</span></div>
-          <div class="detail-row">
-            <span class="detail-key">% du strike</span>
-            <span class="detail-val tnum" style="font-weight:600;color:${pctColor};">${niveauPct}</span>
-          </div>
-          <div class="detail-row"><span class="detail-key">Barrière coupon</span><span class="detail-val tnum">${escHtml(String(ref.bCoupon))}</span></div>
-          <div class="detail-row"><span class="detail-key">Barrière rappel</span><span class="detail-val tnum">${escHtml(String(ref.bAuto))}</span></div>
-          <div class="detail-row">
-            <span class="detail-key">Coupon en mémoire</span>
-            <span class="detail-val tnum"${nbCouponsGroupe > 0 ? ' style="font-weight:600;color:#b06a1a;"' : ''}>${couponMemoireTxt}</span>
-          </div>
-          <div class="detail-row"><span class="detail-key">Prochaine constatation</span><span class="detail-val tnum">${escHtml(ref.constat)}</span></div>
-          <div class="detail-row"><span class="detail-key">Échéance finale</span><span class="detail-val tnum">${escHtml(ref.ech)}</span></div>
-        </div>
+      <div class="card p-18${recap ? ' detail-recap' : ''}">
+        <div class="card-title mb-12">${recap ? 'Récapitulatif' : 'Description'}</div>
+        <div class="detail-rows">${lignes.map(detailLigneHtml).join('')}</div>
       </div>
 
       <div class="detail-note detail-note--indic">Données indicatives · Validation humaine obligatoire avant toute décision.</div>
