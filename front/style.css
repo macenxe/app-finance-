@@ -516,13 +516,27 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   display: flex; justify-content: flex-end; gap: 10px; flex: none;
 }
 
-/* ── Visionneuse de document (page Outils) : panneau agrandi pour la lisibilité d'un PDF.
-   Hauteur explicite (pas juste max-height) : .doc-body/.doc-iframe sont en flex:1 et ont
-   besoin d'une hauteur de référence définie sur le panneau pour se déployer jusqu'en bas. ── */
-.modal-panel.doc-panel { width: 900px; height: calc(100vh - 40px); max-height: calc(100vh - 40px); }
-.sheet-panel.doc-panel { height: 92vh; }
-.doc-body { padding: 0; display: flex; flex: 1; min-height: 0; }
-.doc-iframe { flex: 1; width: 100%; border: none; background: #525659; }
+/* ── Fiches fiscales (page Outils) : panneau élargi pour les tableaux de barèmes. ── */
+.modal-panel.fisc-panel { width: 760px; }
+.sheet-panel.fisc-panel { height: 92vh; }
+.fisc-titre {
+  font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  color: #9a7b3c; font-weight: 700; margin: 22px 0 10px;
+}
+.fisc-titre:first-child { margin-top: 0; }
+.fisc-para { font-size: 12.5px; color: #3a3d42; line-height: 1.6; margin-bottom: 10px; }
+.fisc-para ul { margin: 6px 0 6px 18px; padding: 0; }
+.fisc-para li { margin-bottom: 3px; }
+.fisc-table { display: grid; margin-bottom: 4px; }
+.fisc-row { display: contents; }
+.fisc-cell { padding: 7px 8px; font-size: 12px; color: #3a3d42; border-bottom: 1px solid #f1ece1; }
+.fisc-row.alt .fisc-cell { background: #faf8f3; }
+.fisc-head .fisc-cell {
+  font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: #9a8f7a; font-weight: 600; border-bottom: 1px solid #ece7dc; background: none;
+}
+.fisc-cell.right { text-align: right; font-family: 'Spectral', serif; }
+.fisc-note { font-size: 11px; color: #9a8f7a; line-height: 1.5; margin: 4px 0 16px; }
 
 /* ── Form ── */
 .form-section-label {

@@ -155,36 +155,235 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
   </div>`;
 }
 
-// Page Outils : accès direct aux documents personnels (bilans patrimoniaux). Fichiers servis
-// depuis front/data/outils/ — dossier local à cette machine, exclu du dépôt git (.gitignore) :
-// n'existe donc que dans les copies de travail (Documents/Projects), pas sur le site déployé.
-// Icônes maison (privé) et mallette (professionnel) — même style Feather/trait que NAV_ICONS.
+// Page Outils : fiches de référence fiscale (barèmes et abattements publics, issus des textes
+// légaux en vigueur — impôt sur le revenu, plus-values, transmission). Contenu statique intégré
+// (pas de PDF externe), donc disponible partout, y compris sur le site déployé.
+// Icônes Feather/trait, même style que NAV_ICONS.
 const OUTILS_ICONES = {
-  maison:    '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
-  mallette:  '<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
-  document:  '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
+  pourcentage: '<line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>',
+  don:         '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C9 2 12 7 12 7z"/>',
 };
 
+const OUTILS_FICHES = {
+  revenus:      { titre: 'Revenus et fiscalité des particuliers', desc: 'Barème IR, plus-values, assurance-vie, PEA', icone: 'pourcentage', teinte: 'or' },
+  transmission: { titre: 'Transmission et fiscalité des particuliers', desc: 'Donations, successions, abattements, usufruit', icone: 'don', teinte: 'marine' },
+};
+
+// Table générique en grille CSS : cols = [{label, align:'right'?, width:'1fr'}], rows = [[cellules...]].
+function fiscTable(cols, rows) {
+  const tmpl = cols.map(c => c.width || '1fr').join(' ');
+  const cell = (v, c) => `<div class="fisc-cell${c.align === 'right' ? ' right tnum' : ''}">${v}</div>`;
+  return `
+  <div class="fisc-table" style="grid-template-columns:${tmpl}">
+    <div class="fisc-row fisc-head">${cols.map(c => cell(escHtml(c.label), c)).join('')}</div>
+    ${rows.map((r, i) => `<div class="fisc-row${i % 2 === 1 ? ' alt' : ''}">${r.map((v, j) => cell(v, cols[j])).join('')}</div>`).join('')}
+  </div>`;
+}
+
+function fiscTitre(txt) { return `<div class="fisc-titre">${escHtml(txt)}</div>`; }
+function fiscNote(txt) { return `<div class="fisc-note">${txt}</div>`; }
+
+function renderFicheRevenus() {
+  return `
+  ${fiscTitre('Barème de l’impôt sur le revenu (revenus 2025)')}
+  ${fiscTable(
+    [{ label: 'Tranche de revenu (par part)', width: '1.6fr' }, { label: 'Taux', align: 'right', width: '.7fr' }],
+    [
+      ['Jusqu’à 11 600 €', '0 %'],
+      ['De 11 601 € à 29 579 €', '11 %'],
+      ['De 29 580 € à 84 577 €', '30 %'],
+      ['De 84 578 € à 181 917 €', '41 %'],
+      ['Au-dessus de 181 917 €', '45 %'],
+    ]
+  )}
+  ${fiscNote('Hors contribution exceptionnelle et différentielle sur les hauts revenus.')}
+
+  ${fiscTitre('Plus-values immobilières — détention directe ou via SCI à l’IR')}
+  ${fiscTable(
+    [{ label: 'Durée de détention', width: '1.2fr' }, { label: 'Abatt. IR', align: 'right' }, { label: 'Abatt. PS', align: 'right' }, { label: 'Taux effectif', align: 'right' }],
+    [
+      ['≤ 5 ans', '0 %', '0,00 %', '36,20 %'],
+      ['6 ans', '6 %', '1,65 %', '34,78 %'],
+      ['8 ans', '18 %', '4,95 %', '31,93 %'],
+      ['10 ans', '30 %', '8,25 %', '29,08 %'],
+      ['12 ans', '42 %', '11,55 %', '26,23 %'],
+      ['15 ans', '60 %', '16,50 %', '21,96 %'],
+      ['18 ans', '78 %', '21,45 %', '17,69 %'],
+      ['20 ans', '90 %', '24,75 %', '14,84 %'],
+      ['22 ans', '100 %', '28,00 %', '12,38 %'],
+      ['25 ans', '100 %', '55,00 %', '7,74 %'],
+      ['30 ans', '100 %', '100,00 %', '0,00 %'],
+    ]
+  )}
+  ${fiscNote('Hors taxe complémentaire sur les plus-values supérieures à 50 000 €.')}
+
+  ${fiscTitre('Rachats des contrats d’assurance-vie et de capitalisation')}
+  ${fiscTable(
+    [{ label: 'Durée du contrat', width: '1.1fr' }, { label: 'Primes avant le 27/09/17', align: 'right', width: '1.2fr' }, { label: 'Primes depuis le 27/09/17', align: 'right', width: '1.3fr' }, { label: 'Prélèv. sociaux', align: 'right' }],
+    [
+      ['Moins de 4 ans', '35 %', '12,8 %', '17,2 %'],
+      ['4 à 8 ans', '15 %', '12,8 %', '17,2 %'],
+      ['8 ans et plus', '7,5 %', '7,5 % (<150 k€) / 12,8 % (>150 k€)', '17,2 %'],
+    ]
+  )}
+  ${fiscNote('Après abattement annuel de 4 600 € (célibataire) ou 9 200 € (couple) au-delà de 8 ans. Seuil de 150 k€ apprécié tous contrats confondus, toutes compagnies.')}
+
+  ${fiscTitre('Gains réalisés à la clôture ou au retrait d’un PEA')}
+  ${fiscTable(
+    [{ label: 'Ancienneté du plan', width: '1.4fr' }, { label: 'Taux + prélèv. sociaux', align: 'right' }],
+    [
+      ['Moins de 5 ans', '12,8 % + 18,6 %'],
+      ['5 ans et plus', '0 % + 18,6 %'],
+    ]
+  )}
+
+  ${fiscTitre('Revenus de capitaux mobiliers')}
+  ${fiscTable(
+    [{ label: 'Origine du revenu', width: '1.4fr' }, { label: 'Taux + prélèv. sociaux', align: 'right' }],
+    [
+      ['Dividendes / intérêts à revenu fixe', '12,8 % + 18,6 %'],
+    ]
+  )}
+  ${fiscNote('Option possible pour le barème progressif de l’IR (abattement de 40 % sur les dividendes) — option globale, applicable à tous les revenus du foyer.')}
+  `;
+}
+
+function renderFicheTransmission() {
+  return `
+  ${fiscTitre('Droits de donation / succession en ligne directe')}
+  ${fiscTable(
+    [{ label: 'Part nette taxable', width: '1.4fr' }, { label: 'Taux', align: 'right' }],
+    [
+      ['Jusqu’à 8 072 €', '5 %'],
+      ['De 8 073 € à 12 109 €', '10 %'],
+      ['De 12 110 € à 15 932 €', '15 %'],
+      ['De 15 933 € à 552 324 €', '20 %'],
+      ['De 552 325 € à 902 838 €', '30 %'],
+      ['De 902 839 € à 1 805 677 €', '40 %'],
+      ['Au-delà de 1 805 677 €', '45 %'],
+    ]
+  )}
+
+  ${fiscTitre('Abattements pour les donations (rappel fiscal de 15 ans)')}
+  ${fiscTable(
+    [{ label: 'Lien de parenté', width: '1.6fr' }, { label: 'Montant', align: 'right' }],
+    [
+      ['Enfant ou parent', '100 000 €'],
+      ['Petits-enfants et grands-parents', '31 865 €'],
+      ['Arrière-petits-enfants', '5 310 €'],
+      ['Entre époux ou partenaires de Pacs', '80 724 €'],
+      ['Entre frères et sœurs', '15 932 €'],
+      ['Neveux et nièces', '7 967 €'],
+      ['Dons familiaux de sommes d’argent', '31 865 €'],
+      ['Abatt. suppl. en faveur des handicapés', '159 325 €'],
+    ]
+  )}
+
+  ${fiscTitre('Abattements pour les successions (rappel fiscal de 15 ans)')}
+  ${fiscTable(
+    [{ label: 'Lien de parenté', width: '1.6fr' }, { label: 'Montant', align: 'right' }],
+    [
+      ['Enfant ou parent', '100 000 €'],
+      ['Petits-enfants et arrière-petits-enfants', '1 594 €'],
+      ['Entre frères et sœurs', '15 932 €'],
+      ['Neveux et nièces', '7 967 €'],
+      ['Abatt. suppl. en faveur des handicapés', '159 325 €'],
+      ['À défaut d’autre abattement', '1 594 €'],
+    ]
+  )}
+
+  ${fiscTitre('Dons de sommes d’argent avec réinvestissement')}
+  <div class="fisc-para">
+    Exonérés de droits de mutation à titre gratuit, en pleine propriété à un enfant, petit-enfant,
+    arrière-petit-enfant ou (à défaut) un neveu/nièce, dans la limite de <strong>100 000 €</strong>
+    par donateur à un même donataire et <strong>300 000 €</strong> par donataire, si les sommes sont
+    affectées avant la fin du 6<sup>e</sup> mois suivant le versement à :
+    <ul>
+      <li>l’acquisition d’un immeuble neuf ou en VEFA ;</li>
+      <li>des travaux de rénovation énergétique de la résidence principale du donataire.</li>
+    </ul>
+    Applicable aux donations du 16 février 2025 au 31 décembre 2026.
+  </div>
+
+  ${fiscTitre('Donation entre époux ou partenaires de Pacs')}
+  ${fiscTable(
+    [{ label: 'Part nette taxable', width: '1.4fr' }, { label: 'Taux', align: 'right' }],
+    [
+      ['Jusqu’à 8 072 €', '5 %'],
+      ['De 8 073 € à 15 932 €', '10 %'],
+      ['De 15 933 € à 31 865 €', '15 %'],
+      ['De 31 866 € à 552 324 €', '20 %'],
+      ['De 552 325 € à 902 838 €', '30 %'],
+      ['De 902 839 € à 1 805 677 €', '40 %'],
+      ['Au-delà de 1 805 677 €', '45 %'],
+    ]
+  )}
+  ${fiscNote('Successions entre époux/Pacs : exonérées de droits de transmission.')}
+
+  ${fiscTitre('Donation / succession entre frères et sœurs')}
+  ${fiscTable(
+    [{ label: 'Part nette taxable', width: '1.4fr' }, { label: 'Taux', align: 'right' }],
+    [
+      ['Jusqu’à 24 430 €', '35 %'],
+      ['Au-delà de 24 430 €', '45 %'],
+    ]
+  )}
+
+  ${fiscTitre('Autres liens de parenté')}
+  ${fiscTable(
+    [{ label: 'Lien de parenté', width: '1.6fr' }, { label: 'Taux', align: 'right' }],
+    [
+      ['Jusqu’au 4ᵉ degré inclus', '55 %'],
+      ['Au-delà du 4ᵉ degré et non-parents (ex. concubin)', '60 %'],
+    ]
+  )}
+
+  ${fiscTitre('Évaluation de l’usufruit viager et de la nue-propriété')}
+  ${fiscTable(
+    [{ label: 'Âge de l’usufruitier', width: '1.4fr' }, { label: 'Usufruit', align: 'right' }, { label: 'Nue-propriété', align: 'right' }],
+    [
+      ['Moins de 21 ans révolus', '90 %', '10 %'],
+      ['De 21 à 30 ans révolus', '80 %', '20 %'],
+      ['De 31 à 40 ans révolus', '70 %', '30 %'],
+      ['De 41 à 50 ans révolus', '60 %', '40 %'],
+      ['De 51 à 60 ans révolus', '50 %', '50 %'],
+      ['De 61 à 70 ans révolus', '40 %', '60 %'],
+      ['De 71 à 80 ans révolus', '30 %', '70 %'],
+      ['De 81 à 90 ans révolus', '20 %', '80 %'],
+      ['91 ans et plus', '10 %', '90 %'],
+    ]
+  )}
+
+  ${fiscTitre('Fiscalité en cas de décès — contrats d’assurance-vie')}
+  ${fiscTable(
+    [{ label: 'Primes versées', width: '1.3fr' }, { label: 'Souscription avant 20/11/91', align: 'right', width: '1.3fr' }, { label: 'Souscription depuis 20/11/91', align: 'right', width: '1.3fr' }],
+    [
+      ['Avant le 13/10/98', 'Exonération', 'Exonération avant 70 ans · art. 757 B après 70 ans'],
+      ['Depuis le 13/10/98', 'Art. 990 I', 'Art. 990 I avant 70 ans · art. 757 B après 70 ans'],
+    ]
+  )}
+  ${fiscNote('Époux et partenaires de Pacs exonérés de droits de transmission. Art. 990 I : abattement de 152 500 € par bénéficiaire puis 20 % jusqu’à 700 000 €, 31,25 % au-delà. Art. 757 B : abattement global de 30 500 € puis droits de succession de droit commun.')}
+  `;
+}
+
 function renderOutils() {
-  const docs = [
-    { titre: 'Revenus et fiscalité des particuliers 2026', desc: 'Guide fiscalité personnelle', href: './data/outils/revenus-et-fiscalite-des-particuliers-2026.pdf', icone: 'document', teinte: 'or' },
-  ];
+  const docs = Object.entries(OUTILS_FICHES).map(([cle, d]) => ({ cle, ...d }));
   return `
   <div>
     <header class="page-header">
       <div>
         <div class="page-title">Outils</div>
-        <div class="page-sub">Documents personnels</div>
+        <div class="page-sub">Fiches fiscales</div>
       </div>
     </header>
 
     <div class="page-body">
       <div class="flex-sb mb-12">
-        <span class="section-label">Bilans patrimoniaux</span>
+        <span class="section-label">Barèmes 2025-2026</span>
       </div>
       <div class="outils-liste">
         ${docs.map(d => `
-        <div class="card outils-doc" role="button" tabindex="0" onclick="App.ouvrirDocument('${escHtml(d.href)}','${escHtml(d.titre)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirDocument('${escHtml(d.href)}','${escHtml(d.titre)}');}">
+        <div class="card outils-doc" role="button" tabindex="0" onclick="App.ouvrirFiche('${d.cle}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirFiche('${d.cle}');}">
           <span class="outils-doc-icone outils-doc-icone--${d.teinte}">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
           </span>
@@ -195,7 +394,7 @@ function renderOutils() {
           <span class="outils-doc-fleche">›</span>
         </div>`).join('')}
       </div>
-      <div class="table-note mt-16">Consultés depuis cet ordinateur (dossier hors dépôt git) · non disponibles sur le site déployé ni pour les autres utilisateurs.</div>
+      <div class="table-note mt-16">Barèmes et abattements légaux publics (impôt sur le revenu, plus-values, donations et successions) — à titre indicatif, à vérifier auprès des textes officiels en vigueur (impots.gouv.fr, service-public.fr).</div>
     </div>
   </div>`;
 }

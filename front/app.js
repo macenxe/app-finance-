@@ -833,31 +833,30 @@ const App = (() => {
       const root = document.getElementById('modal-root');
       if (root) root.innerHTML = '';
     },
-    // Page Outils : ouvre un PDF local dans une visionneuse intégrée (iframe) plutôt que dans un
-    // nouvel onglet — même gabarit modal/sheet que Chart (overlay bureau, feuille dépliée sur
-    // mobile, refermable au doigt via initSheetDrag).
-    ouvrirDocument(href, titre) {
+    // Page Outils : ouvre une fiche de référence fiscale (contenu HTML statique, voir
+    // OUTILS_FICHES/renderFiche* dans pages.js) — même gabarit modal/sheet que Chart (overlay
+    // bureau, feuille dépliée sur mobile, refermable au doigt via initSheetDrag).
+    ouvrirFiche(cle) {
       const root = document.getElementById('modal-root');
-      if (!root) return;
-      const esc = (s) => (window.escHtml ? escHtml(s) : s);
+      const fiche = OUTILS_FICHES[cle];
+      if (!root || !fiche) return;
+      const contenu = cle === 'transmission' ? renderFicheTransmission() : renderFicheRevenus();
       const corps = `
         <div class="modal-header">
-          <span class="modal-title">${esc(titre)}</span>
-          <button class="modal-close" onclick="App.fermerDocument()">✕</button>
+          <span class="modal-title">${escHtml(fiche.titre)}</span>
+          <button class="modal-close" onclick="App.fermerFiche()">✕</button>
         </div>
-        <div class="modal-body doc-body">
-          <iframe src="${esc(href)}" class="doc-iframe" title="${esc(titre)}"></iframe>
-        </div>`;
+        <div class="modal-body">${contenu}</div>`;
       if (estBureau()) {
         root.innerHTML = `
-        <div class="modal-overlay" onclick="if(event.target===this)App.fermerDocument()">
-          <div class="modal-panel doc-panel">${corps}</div>
+        <div class="modal-overlay" onclick="if(event.target===this)App.fermerFiche()">
+          <div class="modal-panel fisc-panel">${corps}</div>
         </div>`;
         return;
       }
       root.innerHTML = `
-        <div class="sheet-backdrop" onclick="if(event.target===this)App.fermerDocument()">
-          <div class="sheet-panel doc-panel sheet-expanded">
+        <div class="sheet-backdrop" onclick="if(event.target===this)App.fermerFiche()">
+          <div class="sheet-panel fisc-panel sheet-expanded">
             <div class="sheet-handle"></div>
             ${corps}
           </div>
@@ -866,9 +865,9 @@ const App = (() => {
       void backdrop.offsetWidth; // force le reflow pour déclencher la transition d'ouverture
       backdrop.classList.add('sheet-open');
       const panel = backdrop.querySelector('.sheet-panel');
-      if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, App.fermerDocument);
+      if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, App.fermerFiche);
     },
-    fermerDocument() {
+    fermerFiche() {
       const root = document.getElementById('modal-root');
       if (!root) return;
       const backdrop = root.querySelector('.sheet-backdrop');
