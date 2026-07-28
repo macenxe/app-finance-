@@ -396,8 +396,9 @@ const App = (() => {
     }
   }
 
-  // Met à jour les cartes Actifs (Brent, Or, Bitcoin) avec le dernier cours. La garde évite
-  // les mises à jour concurrentes (chiffres qui s'affolent) ; les valeurs live sont écrites
+  // Met à jour les cartes Actifs (Brent, Or, Bitcoin) et Actions (sous-jacents Autocall, ex.
+  // Stellantis) avec le dernier cours. La garde évite les mises à jour concurrentes (chiffres
+  // qui s'affolent) ; les valeurs live des Actifs sont écrites
   // dans MACRO pour qu'un re-rendu ne repasse pas aux valeurs statiques.
   let majMarcheEnCours = false;
   // Dernier cours d'un actif. Marché ouvert : intraday du jour (référence = ouverture).
@@ -425,7 +426,13 @@ const App = (() => {
         if (!cm) continue;
         const last = cm.last, first = cm.ref;
         const nomActif = card.querySelector('.index-name')?.textContent || '';
-        const valStr = last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' $';
+        // Actions (unité €) : toujours 2 décimales, comme l'affichage statique des produits.
+        // Actifs (unité $ par défaut, Brent/Or/Bitcoin) : décimales au nombre de chiffres,
+        // comportement d'origine inchangé.
+        const unite = card.getAttribute('data-macro-unit') || '$';
+        const valStr = unite === '€'
+          ? last.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + unite
+          : last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' ' + unite;
         const valEl = card.querySelector('[data-macro-val]');
         const varEl = card.querySelector('[data-macro-var]');
         if (valEl) valEl.textContent = valStr;

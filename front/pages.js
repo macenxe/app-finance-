@@ -65,10 +65,10 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
         const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
         const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
         const actionsHtml = actions.map(a => `
-        <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-cmp-ticker="${escHtml(a.ticker)}">
+        <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-macro="${escHtml(a.ticker)}" data-macro-unit="€" data-cmp-ticker="${escHtml(a.ticker)}">
           <div class="index-name">${escHtml(a.label)}</div>
-          <div class="index-val tnum">${escHtml(a.niveau || '—')}</div>
-          <div class="index-var tnum" style="color:#9a8f7a;">—</div>
+          <div class="index-val tnum" data-macro-val>${escHtml(a.niveau || '—')}</div>
+          <div class="index-var tnum flat" data-macro-var>—</div>
         </div>`).join('');
         const macroHtml = MACRO.map(m => { const gid = graphIdPour(m.nom);
           // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
@@ -139,7 +139,7 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
       <div class="card p-18 mb-24">
         <div class="card-title mb-12">Prochains événements macro</div>
         <div class="events-grid">
-          ${prochainsEvenementsMacro(6).map(e => { const dl = e.d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }); return `
+          ${prochainsEvenementsMacro(4).map(e => { const dl = e.d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }); return `
           <div class="event-item">
             <div class="event-date tnum${e.important ? ' important' : ''}">${dl}</div>
             <div class="event-label">${e.label}</div>
@@ -219,12 +219,12 @@ function pctDuStrike(p) {
 // Précise la nature de la valeur affichée par pctDuStrike : un taux pour les CMS (pas de
 // strike), un % du strike pour les produits actions.
 function pctDuStrikeLabel(p) {
-  return p.type === 'cms' ? 'Taux' : '% strike';
+  return p.type === 'cms' ? '(taux)' : 'du strike';
 }
 
 // Encart « Alertes portefeuille » (bureau) : état des prochaines dates de constatation
 // du portefeuille (tous produits confondus), pas seulement ceux en zone à risque. Masqué en mobile.
-const ALERTES_NB_DATES = 8;
+const ALERTES_NB_DATES = 7;
 function renderAlertesPortefeuille(produits) {
   // Mêmes regroupements que la liste Autocall : les paliers d'un même CAP ne forment
   // qu'une seule ligne (« CAP 08/2030 ») au lieu d'une ligne par palier.
@@ -266,8 +266,7 @@ function renderAlertesPortefeuille(produits) {
             <div class="alerte-statut alerte-statut--${zone.cle}">${escHtml(proche || zone.label)}</div>
           </div>
           <div class="alerte-droite">
-            <div class="alerte-niveau tnum">${escHtml(pctDuStrike(p))}</div>
-            <div class="alerte-niveau-label">${escHtml(pctDuStrikeLabel(p))}</div>
+            <div class="alerte-niveau tnum"><span class="alerte-niveau-label">${escHtml(pctDuStrikeLabel(p))}</span> ${escHtml(pctDuStrike(p))}</div>
             <div class="alerte-constat tnum">Constat. ${escHtml(fmtDatePanneau(p.constat))}</div>
           </div>
         </div>`; }).join('')
