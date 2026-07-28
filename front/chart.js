@@ -99,6 +99,7 @@ const Chart = (() => {
           <div class="chart-meta">
             <span class="chart-var tnum" id="chart-var"></span>
             <span class="chart-date" id="chart-date"></span>
+            <span class="chart-mode-badge" title="Valeur réelle du sous-jacent">Valeur</span>
           </div>
         </div>
         ${etat.strategie ? `<div class="uc-strategie"><div class="uc-strategie-titre">Stratégie du fonds</div>${esc(etat.strategie)}</div>` : ''}
@@ -347,6 +348,7 @@ const Chart = (() => {
         <div class="chart-meta">
           <span class="chart-var tnum" id="chart-var"></span>
           <span class="chart-date" id="chart-date"></span>
+          <span class="chart-mode-badge" title="Valeur réelle du sous-jacent">Valeur</span>
         </div>
       </div>
       <div class="chart-zone" id="chart-zone"><div class="chart-loading">Chargement…</div></div>
@@ -359,8 +361,10 @@ const Chart = (() => {
   }
 
   // ── Graphique comparé (plusieurs séries) ──────────────────────────────────────────────
-  // Valeurs réelles (pas de base 100) : chaque série garde son échelle de prix. Les repères
-  // de barrières n'ont toujours pas de sens ici (graphique multi-séries), donc pas de `lignes`.
+  // Base 100 : chaque série est indexée à 100 sur son premier point de la période, pour rester
+  // comparable même quand les échelles de prix sont très différentes (un indice à plusieurs
+  // milliers de points à côté d'une action à quelques euros). Les repères de barrières n'ont
+  // toujours pas de sens ici (graphique multi-séries), donc pas de `lignes`.
   const CMP_COULEURS = ['#16304f', '#1d6f4c', '#b06a1a', '#9a3535', '#2c5f8a', '#6b4c9a', '#1a7a7a', '#7a5a3a'];
   // Même gabarit que le graphique détail : tous les graphiques de l'appli (détail, comparaison
   // tableau de bord, comparaison UC) partagent désormais la même hauteur pour une lecture homogène.
@@ -402,6 +406,7 @@ const Chart = (() => {
     el.innerHTML = `
       <div class="chart-cmp-head">
         <div class="chart-cmp-legende" id="chart-cmp-legende"></div>
+        <span id="chart-cmp-mode-badge"></span>
       </div>
       <div class="chart-zone" id="chart-cmp-zone"><div class="chart-loading">Chargement…</div></div>
       <div class="chart-periodes chart-periodes-cmp">
@@ -449,19 +454,30 @@ const Chart = (() => {
       zone.innerHTML = '<div class="chart-loading">Données indisponibles pour cette période.</div>';
       if (leg) leg.innerHTML = '';
       if (dts) dts.innerHTML = '';
+      const badgeVide = document.getElementById('chart-cmp-mode-badge');
+      if (badgeVide) badgeVide.textContent = '';
       return;
     }
 
-    // Valeur réelle de chaque série (plus de normalisation base 100). Pertinent surtout entre
-    // séries d'échelle proche (plusieurs indices, ou une action à côté d'une autre) ; comparer
-    // un indice à plusieurs milliers de points et une action à quelques euros reste possible
-    // mais écrase visuellement la plus petite série — l'utilisateur choisit lui-même ce qu'il
-    // ajoute depuis les cartes du tableau de bord, on ne l'en empêche pas.
-    const normes = etatCmp.sets.map((s, idx) => ({
-      ...s,
-      vals: s.points.map(p => p.c),
-      couleur: s.couleur || CMP_COULEURS[idx % CMP_COULEURS.length],
-    }));
+    // Indexation base 100 sur le premier point de chaque série : rend comparables des séries
+    // d'échelle très différente (un indice à plusieurs milliers de points à côté d'une action
+    // à quelques euros ou d'une UC à quelques dizaines d'euros de valeur liquidative). Un seul
+    // actif sélectionné : rien à comparer, on garde sa valeur réelle plutôt qu'un index à 100.
+    const multi = etatCmp.sets.length > 1;
+    const normes = etatCmp.sets.map((s, idx) => {
+      const base = s.points[0] && s.points[0].c;
+      const vals = (multi && base != null && base !== 0)
+        ? s.points.map(p => p.c / base * 100)
+        : s.points.map(p => p.c);
+      return { ...s, vals, couleur: s.couleur || CMP_COULEURS[idx % CMP_COULEURS.length] };
+    });
+
+    const badge = document.getElementById('chart-cmp-mode-badge');
+    if (badge) {
+      badge.className = multi ? 'chart-mode-badge chart-mode-badge--base100' : 'chart-mode-badge';
+      badge.title = multi ? 'Chaque série est indexée à 100 sur son premier point' : 'Valeur réelle du sous-jacent';
+      badge.textContent = multi ? 'Base 100' : 'Valeur';
+    }
 
     const toutes = normes.reduce((acc, s) => acc.concat(s.vals), []);
     let min = Math.min(...toutes), max = Math.max(...toutes);

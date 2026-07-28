@@ -129,7 +129,7 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
 
       <div class="card p-18 mb-24 bureau-seul cmp-card">
         <div class="card-title">Comparateur</div>
-        <div class="section-hint mb-12">Cliquez un indice, une action, un actif ou un taux ci-dessus pour l'ajouter (recliquez pour le retirer) · valeurs réelles</div>
+        <div class="section-hint mb-12">Cliquez sur une valeur pour l'ajouter ou la retirer</div>
         <div id="cmp-indices"></div>
       </div>
       </div><!-- /dash-col-principale -->
@@ -863,6 +863,17 @@ function detailInfoGrid(boxes) {
     </div>`).join('')}</div>`;
 }
 
+// Description rapide du sous-jacent (entreprise ou indice), affichée à côté du graphique.
+function detailSousJacentHtml(sj) {
+  const desc = (typeof sousJacentDescription === 'function') ? sousJacentDescription(sj) : null;
+  if (!desc) return '';
+  return `
+    <div class="detail-sj-desc">
+      <div class="detail-sj-desc-title">${escHtml(sj)}</div>
+      <div class="detail-sj-desc-text">${escHtml(desc)}</div>
+    </div>`;
+}
+
 // Barrière au format « % · Montant » (equity) ou juste « % » (CMS, déjà exprimé en taux).
 function detailBarriereTxt(strikeNum, pct, num, isCms) {
   if (pct == null || pct === 'NA') return '—';
@@ -896,7 +907,10 @@ function detailCorpsHtml(produit, chartId = 'detail-chart-inline') {
     <div class="detail-content">
       <div class="detail-chart-row">
         ${detailInfoGrid(infoBoxes)}
-        <div id="${chartId}" class="detail-chart-inline"></div>
+        <div class="detail-chart-desc-row">
+          <div id="${chartId}" class="detail-chart-inline"></div>
+          ${detailSousJacentHtml(produit.sjLabel || produit.sj)}
+        </div>
       </div>
 
       <div class="card p-18">
@@ -1028,7 +1042,10 @@ function detailCorpsGroupeHtml(membres, chartId = 'detail-chart-inline') {
     <div class="detail-content">
       <div class="detail-chart-row">
         ${detailInfoGrid(infoBoxes)}
-        <div id="${chartId}" class="detail-chart-inline"></div>
+        <div class="detail-chart-desc-row">
+          <div id="${chartId}" class="detail-chart-inline"></div>
+          ${detailSousJacentHtml(ref.sjLabel || ref.sj)}
+        </div>
       </div>
 
       <div class="card p-18">

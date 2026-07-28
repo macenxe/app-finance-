@@ -108,6 +108,18 @@ const TICKERS_SJ = {
   'BNP Paribas':'BNP.PA', 'Stellantis':'STLAM.MI', 'Capgemini':'CAP.PA', 'Rheinmetall':'RHM.DE',
 };
 
+// Description rapide du sous-jacent (entreprise ou indice) affichée sur la fiche détail
+// Autocall, à titre pédagogique pour situer le sous-jacent — pas une analyse financière.
+const SJ_DESCRIPTIONS = {
+  'ES Banks': "Euro Stoxx Banks : indice sectoriel qui regroupe les principales banques cotées de la zone euro (BNP Paribas, Santander, Société Générale, Intesa Sanpaolo, Deutsche Bank...). Reflète la santé du secteur bancaire européen, sensible aux taux d'intérêt et à la conjoncture économique.",
+  'CMS 10 ans': "CMS 10 ans : taux de swap « constant maturity » à 10 ans en euros, référence du marché des taux à long terme en zone euro. Il évolue avec les anticipations de politique monétaire de la BCE et l'inflation attendue.",
+  'BNP Paribas': "BNP Paribas : premier groupe bancaire de la zone euro, actif dans la banque de détail, la banque d'investissement et la gestion d'actifs, avec une forte présence en France, en Belgique et en Italie.",
+  'Stellantis': "Stellantis : groupe automobile né en 2021 de la fusion entre PSA (Peugeot, Citroën, Opel) et Fiat Chrysler. 4e constructeur mondial, avec des marques comme Jeep, Fiat, Alfa Romeo et Maserati.",
+  'Capgemini': "Capgemini : groupe français de conseil, technologie et services numériques, l'un des leaders mondiaux du conseil en transformation digitale et en systèmes d'information.",
+  'Rheinmetall': "Rheinmetall : groupe industriel allemand spécialisé dans la défense (munitions, blindés, systèmes d'armement) et l'automobile, l'un des principaux bénéficiaires du réarmement européen.",
+};
+function sousJacentDescription(sj) { return SJ_DESCRIPTIONS[sj] || null; }
+
 // Identifiant de graphique par nom d'élément (indices « statiques », taux, macro).
 // Préfixes : fred: (série FRED), hicp: (inflation glissement annuel), scrape:cms (proxy),
 // sinon symbole Yahoo. Le routage est fait côté Worker / serveur de dev.

@@ -447,6 +447,11 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .detail-info-val { font-size: 15px; font-weight: 700; color: #16304f; line-height: 1.3; white-space: nowrap; }
 .detail-info-val.green { color: #1d6f4c; }
 
+/* ── Description rapide du sous-jacent (à côté du graphique sur bureau, en dessous sur mobile) ── */
+.detail-sj-desc { background: #f3ede0; border-radius: 8px; padding: 12px 14px; margin-top: 14px; min-width: 0; }
+.detail-sj-desc-title { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a8368; font-weight: 700; margin-bottom: 6px; }
+.detail-sj-desc-text { font-size: 12.5px; line-height: 1.55; color: #3a3d42; }
+
 
 /* ── Bottom sheet (fiches détail Autocall) ── */
 .sheet-backdrop {
@@ -629,6 +634,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .chart-var.up { color: #1d6f4c; }
 .chart-var.down { color: #9a3535; }
 .chart-date { font-size: 12px; color: #9a8f7a; }
+/* ── Petite pastille indiquant le mode d'affichage du graphique (valeur réelle vs base 100) ── */
+.chart-mode-badge {
+  align-self: center; flex: none; display: inline-flex; align-items: center; white-space: nowrap;
+  font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: #9a8368; background: #f3ede0; border-radius: 999px; padding: 2px 8px;
+}
+.chart-mode-badge--base100 { color: #16304f; background: #eef2f7; }
 .chart-zone { position: relative; width: 100%; }
 .chart-zone svg { width: 100%; height: auto; display: block; touch-action: none; }
 .chart-loading { padding: 64px 0; text-align: center; color: #9a8f7a; font-size: 13px; }
@@ -1032,9 +1044,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-niveau--coupon .ac-bar-niveau-dot,
   .ac-bar-niveau--rappel .ac-bar-niveau-dot { background: radial-gradient(circle, transparent 0 2.5px, #1d6f4c 2.6px 100%); }
 
-  /* ── Graphique comparé (valeurs réelles) : légende et filtres de période centrés ── */
-  .chart-cmp-head { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
-  .chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
+  /* ── Graphique comparé : légende des fonds à gauche, pastille de mode (valeur/base 100) à droite ── */
+  .chart-cmp-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .chart-cmp-legende { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px 18px; }
   .chart-cmp-item { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #5b5e63; }
   .chart-cmp-trait { width: 14px; height: 3px; border-radius: 2px; display: inline-block; flex: none; }
   .chart-cmp-val { font-weight: 600; color: #16304f; font-variant-numeric: tabular-nums; }
@@ -1134,22 +1146,24 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      son contenu s'empile en flux normal, sans forcer une case à rétrécir sous sa taille
      naturelle (ce qui ferait déborder son contenu par-dessus les éléments suivants). */
   .ac-detail-panneau .detail-content { padding: 0; flex: none; }
-  /* Cases de synthèse en ligne au-dessus, graphique centré et agrandi en dessous (l'ordre
-     visuel vient de `order` ; le graphique reste second dans le HTML pour que la feuille
-     mobile — non concernée par ces règles — garde son ordre naturel). */
+  /* Cases de synthèse en ligne au-dessus ; en dessous, graphique et description du sous-jacent
+     côte à côte (le graphique reste second dans le HTML pour que la feuille mobile — non
+     concernée par ces règles — garde son ordre naturel). */
   .ac-detail-panneau .detail-chart-row { display: flex; flex-direction: column; margin-bottom: 8px; flex: none; }
   .ac-detail-panneau .detail-info-grid {
-    order: 1; flex: none;
+    flex: none;
     grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;
   }
+  .ac-detail-panneau .detail-chart-desc-row { display: flex; align-items: flex-start; gap: 14px; }
   .ac-detail-panneau .detail-chart-inline {
-    order: 2; flex: none; width: 100%; margin: 4px 0 0; padding: 14px 20px 10px;
+    flex: 1 1 auto; min-width: 0; width: auto; margin: 4px 0 0; padding: 14px 20px 10px;
   }
+  .ac-detail-panneau .detail-sj-desc { flex: 0 0 230px; margin: 4px 0 0; }
   .ac-detail-panneau .detail-info-box { padding: 8px 12px; }
   .ac-detail-panneau .detail-info-val { font-size: 13.5px; }
   .ac-detail-panneau .chart-readout { min-height: 0; margin-bottom: 6px; gap: 0; }
   .ac-detail-panneau .chart-prix { font-size: 26px; }
-  .ac-detail-panneau .chart-periodes { margin-top: 10px; gap: 6px; }
+  .ac-detail-panneau .chart-periodes { margin-top: 10px; gap: 6px; justify-content: center; }
   .ac-detail-panneau .chart-per { padding: 5px 10px; font-size: 11.5px; }
   .ac-detail-panneau .card.p-18 { padding: 10px 14px; }
   .ac-detail-panneau .card-title { font-size: 12.5px; margin-bottom: 2px !important; }
