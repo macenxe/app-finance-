@@ -373,7 +373,7 @@ function renderOutils() {
     <header class="page-header">
       <div>
         <div class="page-title">Outils</div>
-        <div class="page-sub">Fiches fiscales</div>
+        <div class="page-sub">Aide-mémoire fiscal</div>
       </div>
     </header>
 
