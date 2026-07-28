@@ -954,7 +954,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .dash-col-principale .grid-mkt .taux-maj { font-size: 9px; margin-top: 0; }
   .dash-split .mb-24 { margin-bottom: 6px; }
   .dash-split .mb-12 { margin-bottom: 4px; }
-  .page-dash .page-body { padding-top: 12px; padding-bottom: 8px; }
+  .page-dash .page-body { padding-top: 12px; padding-bottom: 2px; }
   .dash-col-principale > *:last-child { margin-bottom: 0; }
   /* Colonne latérale : cartes et lignes resserrées (les deux cartes doivent tenir sans
      dépasser la colonne principale, qui fixe la hauteur totale du tableau de bord). */
