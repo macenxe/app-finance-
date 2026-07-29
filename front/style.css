@@ -1410,10 +1410,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     align-items: stretch; flex: 1 1 auto; min-height: 0;
   }
   .outils-panneau { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 0; overflow: hidden; }
+  /* En-tête centré : le titre est celui de la colonne entière, pas d'une ligne de tableau —
+     il se lit comme un chapeau. Les titres de section (.fisc-titre) restent alignés à gauche,
+     sur le bord de leur tableau. */
   .outils-panneau-tete {
-    flex: none; display: flex; align-items: center; gap: 11px;
+    flex: none; display: flex; align-items: center; justify-content: center; gap: 11px;
     padding: 10px 16px; border-bottom: 1px solid #f1ece1; background: #fdfcf8;
   }
+  .outils-panneau .outils-doc-info { align-items: center; text-align: center; }
   .outils-panneau .outils-doc-icone { width: 34px; height: 34px; border-radius: 8px; }
   .outils-panneau .outils-doc-icone svg { width: 19px; height: 19px; }
   .outils-panneau .outils-doc-titre { font-size: 14.5px; }
