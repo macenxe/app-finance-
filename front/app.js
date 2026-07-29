@@ -355,7 +355,9 @@ const App = (() => {
     }
     el.scrollTop = saved;
     renderNav();
-    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); }
+    // La carte « Actualités des sous-jacents » est en .bureau-seul : inutile d'aller chercher
+    // le fil RSS sur mobile, où elle reste masquée.
+    if (state.page === 'dash') { majCartesMarche(); initComparaisonIndices(); if (estBureau()) chargerActusSousJacents(); }
     rafraichirChartPanneau();
   }
 
@@ -430,35 +432,41 @@ const App = (() => {
     setTimeout(() => { root.innerHTML = ''; }, 300);
   }
 
-  async function chargerActus() {
-    const el = document.getElementById('news-section');
-    if (!el) return;
-    const CACHE_KEY = 'news_cache_v1';
-    // Affiche immédiatement le cache si disponible
+  // Le fil RSS alimente deux cibles : la page Actualités (#news-section, tout le fil) et la
+  // carte « Actualités des sous-jacents » du tableau de bord (#news-sj, filtrée). Même cache,
+  // même séquence (cache d'abord pour un affichage immédiat, puis réseau en arrière-plan) —
+  // d'où ce chargeur générique paramétré par la cible et sa fonction de rendu.
+  const NEWS_CACHE_KEY = 'news_cache_v1';
+  async function chargerNewsVers(idCible, rendre, messageErreur) {
+    // La cible est relue à chaque étape : l'utilisateur peut avoir changé de page entre-temps.
+    const poser = (html) => {
+      const el = document.getElementById(idCible);
+      if (!el) return;
+      el.innerHTML = html;
+      el.className = '';
+    };
+    if (!document.getElementById(idCible)) return;
     try {
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        const news = JSON.parse(cached);
-        if (document.getElementById('news-section')) {
-          document.getElementById('news-section').innerHTML = renderNewsSection(news);
-          document.getElementById('news-section').className = '';
-        }
-      }
+      const cached = localStorage.getItem(NEWS_CACHE_KEY);
+      if (cached) poser(rendre(JSON.parse(cached)));
     } catch {}
-    // Puis actualise en arrière-plan
     try {
       const news = await AppAPI.chargerNews();
-      try { localStorage.setItem(CACHE_KEY, JSON.stringify(news)); } catch {}
-      if (document.getElementById('news-section')) {
-        document.getElementById('news-section').innerHTML = renderNewsSection(news);
-        document.getElementById('news-section').className = '';
-      }
+      try { localStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(news)); } catch {}
+      poser(rendre(news));
     } catch {
-      if (!localStorage.getItem(CACHE_KEY) && document.getElementById('news-section')) {
-        document.getElementById('news-section').innerHTML = '<p class="news-empty">Actualités indisponibles (back local requis).</p>';
-        document.getElementById('news-section').className = '';
-      }
+      if (!localStorage.getItem(NEWS_CACHE_KEY)) poser(messageErreur);
     }
+  }
+
+  function chargerActus() {
+    return chargerNewsVers('news-section', renderNewsSection,
+      '<p class="news-empty">Actualités indisponibles (back local requis).</p>');
+  }
+
+  function chargerActusSousJacents() {
+    return chargerNewsVers('news-sj', (news) => renderNewsSousJacents(news, donnees.produits),
+      '<p class="news-empty">Actualités indisponibles (back local requis).</p>');
   }
 
   // Met à jour les cartes Actifs (Brent, Or, Bitcoin) et Actions (sous-jacents Autocall, ex.

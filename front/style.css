@@ -1113,10 +1113,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .mkt-split-labels { margin-bottom: 4px; }
   .mkt-split-labels .section-label { text-align: left; }
 
-  /* Alertes portefeuille */
+  /* Alertes portefeuille — trois colonnes : produit (nom + statut), date de constatation,
+     niveau par rapport à la cible. Largeurs FIXES pour les colonnes 2 et 3 : chaque ligne est
+     sa propre grille, donc `auto` se recalculerait par ligne et les colonnes ne seraient pas
+     alignées entre elles (mesuré : 3 positions différentes sur 7 lignes). 54px = « 29/07/26 »,
+     104px = la plus longue légende (« au-dessus de la cible »). */
   .alertes-liste { display: flex; flex-direction: column; }
   .alerte-item {
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    display: grid; grid-template-columns: minmax(0, 1fr) 54px 104px; align-items: center; gap: 12px;
     padding: 7px 0; border-top: 1px solid #f1ece1; cursor: pointer; transition: background .12s;
   }
   .alerte-item:first-child { border-top: none; }
@@ -1127,11 +1131,40 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .alerte-statut--risque { color: #9a3535; }
   .alerte-statut--rappel, .alerte-statut--coupon { color: #1d6f4c; }
   .alerte-statut--neutre { color: #b06a1a; }
-  .alerte-droite { display: flex; flex-direction: column; align-items: flex-end; flex: none; }
+  .alerte-date { font-size: 11.5px; color: #9a8f7a; white-space: nowrap; }
+  .alerte-droite { display: flex; flex-direction: column; align-items: flex-end; }
   .alerte-niveau { font-family: 'Spectral', serif; font-size: 14px; font-weight: 700; color: #16304f; white-space: nowrap; }
-  .alerte-niveau-label { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; color: #b5ab95; font-weight: 600; }
-  .alerte-constat { font-size: 10.5px; color: #9a8f7a; margin-top: 2px; white-space: nowrap; }
+  /* Même code couleur que le statut : le niveau et la zone racontent la même chose. */
+  .alerte-niveau--risque { color: #9a3535; }
+  .alerte-niveau--rappel, .alerte-niveau--coupon { color: #1d6f4c; }
+  .alerte-niveau--neutre { color: #b06a1a; }
+  .alerte-cible { font-size: 10.5px; color: #9a8f7a; margin-top: 2px; white-space: nowrap; }
   .alerte-vide { font-size: 12.5px; color: #9a8f7a; }
+
+  /* Actualités des sous-jacents (colonne latérale du tableau de bord) : liste compacte, un
+     item = sous-jacent + date puis le titre sur 2 lignes maximum. */
+  .news-sj-liste { display: flex; flex-direction: column; }
+  .news-sj-item {
+    display: block; padding: 5px 0; border-top: 1px solid #f1ece1; text-decoration: none;
+    color: inherit; transition: background .12s;
+  }
+  .news-sj-item:first-child { border-top: none; }
+  a.news-sj-item:hover { background: #faf8f4; }
+  .news-sj-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .news-sj-tag {
+    display: inline-flex; align-items: center; gap: 5px; min-width: 0;
+    font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .news-sj-dot { width: 5px; height: 5px; border-radius: 50%; flex: none; }
+  .news-sj-date { font-size: 10px; color: #b5ab95; flex: none; }
+  /* Titre sur UNE ligne, coupé par ellipse (le titre complet est en info-bulle, et l'article
+     est à un clic). C'est ce qui rend la hauteur de la carte déterministe : avec un titre sur
+     2 lignes, 4 gros titres longs suffisaient à faire défiler le tableau de bord en 1280×800. */
+  .news-sj-titre {
+    font-family: 'Spectral', serif; font-size: 12px; line-height: 1.35; color: #16304f;
+    margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
 
   /* Événements macro : la colonne latérale est étroite → une seule colonne */
   .events-grid { display: flex; flex-direction: column; }

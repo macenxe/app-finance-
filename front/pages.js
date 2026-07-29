@@ -156,8 +156,10 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
       </div><!-- /dash-col-principale -->
 
       <div class="dash-col-laterale">
-      <!-- Événements macro : bureau seulement — sur mobile l'agenda vit sur la page Actualités. -->
-      ${renderEvenementsMacro(4, 'bureau-seul')}
+      <!-- L'agenda macro a quitté le tableau de bord : il vit désormais sur la page Actualités
+           (mobile ET bureau). Sa place est prise par les actualités des sous-jacents, qui
+           concernent directement les produits en portefeuille. -->
+      ${renderActusSousJacents()}
 
       ${renderAlertesPortefeuille(produits)}
       </div><!-- /dash-col-laterale -->
@@ -463,16 +465,34 @@ function alerteNom(p) {
   return condenserTitreProduit(p.nom, p.ech);
 }
 
-// Niveau exprimé en % du strike (colonne droite des alertes). Les CMS n'ont pas de strike :
-// on y affiche le taux courant.
-function pctDuStrike(p) {
-  if (p.type === 'cms' || !p.strikeNum || p.niveauNum == null) return String(p.niveau ?? '—');
-  return (p.niveauNum / p.strikeNum * 100).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+// ── Alertes : niveau actuel par rapport à sa cible ──
+// « Cible » = le point de référence du produit : le strike (100 %) pour un sous-jacent action,
+// la barrière de rappel pour un CMS (qui n'a pas de strike, seulement un taux à franchir).
+// Renvoie l'écart signé en points (positif = au-dessus de la cible), ou null si incalculable.
+function ecartCible(p) {
+  if (p.type === 'cms') {
+    const niv = parseFloat(String(p.niveau ?? '').replace(/[^0-9,.-]/g, '').replace(',', '.'));
+    return (isNaN(niv) || p.bAutoNum == null) ? null : niv - p.bAutoNum;
+  }
+  if (!p.strikeNum || p.niveauNum == null) return null;
+  return p.niveauNum / p.strikeNum * 100 - 100;
 }
-// Précise la nature de la valeur affichée par pctDuStrike : un taux pour les CMS (pas de
-// strike), un % du strike pour les produits actions.
-function pctDuStrikeLabel(p) {
-  return p.type === 'cms' ? '(taux)' : 'du strike';
+const ALERTE_ECART_PROCHE = 5; // en dessous de cet écart, le % du strike se lit mal → phrase explicite
+// Valeur affichée dans la colonne de droite des alertes. Loin de la cible, le % du strike se
+// suffit à lui-même (« 129,2 % ») ; à moins de 5 points, l'écart signé est bien plus parlant
+// (« +0,3 % » · « au-dessus de la cible »). Les CMS, sans strike, sont toujours en écart.
+function alerteNiveauAffiche(p) {
+  const e = ecartCible(p);
+  const unite = p.type === 'cms' ? ' pt' : ' %';
+  const fmt1 = (n) => n.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  if (e == null) return { valeur: String(p.niveau ?? '—'), legende: '' };
+  if (p.type !== 'cms' && Math.abs(e) >= ALERTE_ECART_PROCHE) {
+    return { valeur: fmt1(p.niveauNum / p.strikeNum * 100) + ' %', legende: 'du strike' };
+  }
+  return {
+    valeur: (e >= 0 ? '+' : '−') + fmt1(Math.abs(e)) + unite,
+    legende: (e >= 0 ? 'au-dessus' : 'en dessous') + ' de la cible',
+  };
 }
 
 // Encart « Alertes portefeuille » (bureau) : état des prochaines dates de constatation
@@ -495,32 +515,26 @@ function renderAlertesPortefeuille(produits) {
   const lignes = avecDate
     .filter(x => prochainesDates.has(x.d.getTime()))
     .sort((a, b) => a.d - b.d)
-    .map(({ p }) => {
-      const zone = zoneNiveau(p);
-      // « Proche » : le niveau est à moins de 5 points de pourcentage d'une barrière.
-      const niveauPct = (p.strikeNum && p.niveauNum) ? (p.niveauNum / p.strikeNum * 100) : null;
-      let proche = null;
-      if (p.type !== 'cms' && niveauPct != null) {
-        if (p.bAutoNum != null && Math.abs(niveauPct - p.bAutoNum) < 5) proche = 'Proche barrière rappel';
-        else if (p.bCouponNum != null && Math.abs(niveauPct - p.bCouponNum) < 5) proche = 'Proche barrière coupon';
-      }
-      return { p, zone, proche };
-    });
+    .map(({ p }) => ({ p, zone: zoneNiveau(p) }));
 
+  // Trois colonnes, une lecture chacune : le produit (nom + statut), sa date de constatation,
+  // son niveau par rapport à la cible.
   const corps = lignes.length
-    ? lignes.map(({ p, zone, proche }) => {
+    ? lignes.map(({ p, zone }) => {
         const clic = p.isGroupeCap
           ? `App.voirDetailGroupe('${escHtml((p.paliers || []).map(x => x.isin).filter(Boolean).join(','))}')`
           : `App.voirDetail('${escHtml(p.isin)}')`;
+        const niv = alerteNiveauAffiche(p);
         return `
         <div class="alerte-item" onclick="${clic}">
           <div class="alerte-id">
             <div class="alerte-nom">${escHtml(alerteNom(p))}</div>
-            <div class="alerte-statut alerte-statut--${zone.cle}">${escHtml(proche || zone.label)}</div>
+            <div class="alerte-statut alerte-statut--${zone.cle}">${escHtml(zone.label)}</div>
           </div>
+          <div class="alerte-date tnum">${escHtml(fmtDatePanneau(p.constat))}</div>
           <div class="alerte-droite">
-            <div class="alerte-niveau tnum"><span class="alerte-niveau-label">${escHtml(pctDuStrikeLabel(p))}</span> ${escHtml(pctDuStrike(p))}</div>
-            <div class="alerte-constat tnum">Constat. ${escHtml(fmtDatePanneau(p.constat))}</div>
+            <div class="alerte-niveau tnum alerte-niveau--${zone.cle}">${escHtml(niv.valeur)}</div>
+            ${niv.legende ? `<div class="alerte-cible">${escHtml(niv.legende)}</div>` : ''}
           </div>
         </div>`; }).join('')
     : `<div class="alerte-vide">Aucune constatation à venir.</div>`;
@@ -639,8 +653,8 @@ function renderActus(state) {
     <div class="page-body">
      <div class="news-split">
       <div class="news-col-fil">
-        <!-- Agenda macro : déplacé ici depuis le tableau de bord en mobile (en bureau il reste
-             dans la colonne latérale du tableau de bord). -->
+        <!-- Agenda macro (mobile) : en bureau il est monté dans la colonne de droite, sous les
+             filtres — il ne vit plus sur le tableau de bord dans aucune des deux tailles. -->
         ${renderEvenementsMacro(5, 'mobile-seul')}
         ${renderCuratedNews()}
         <div class="news-group">
@@ -651,11 +665,15 @@ function renderActus(state) {
         </div>
       </div>
       <div class="news-col-filtres bureau-seul">
-        <div class="card p-18">
+        <div class="card p-18 mb-24">
           <div class="card-title mb-12">Filtrer par thème</div>
           ${bouton(null, 'Tous')}
           ${NEWS_THEMES.map(t => bouton(t, t.charAt(0) + t.slice(1).toLowerCase())).join('')}
         </div>
+        <!-- Agenda macro en bureau : la colonne est étroite, .events-grid y est déjà en une
+             seule colonne (même contexte que l'ancienne colonne latérale du tableau de bord).
+             Pas de classe .bureau-seul ici, le conteneur la porte déjà. -->
+        ${renderEvenementsMacro(5)}
       </div>
      </div>
     </div>
@@ -698,6 +716,56 @@ function renderNewsSection(news) {
     });
   }).join('');
   return `<div class="news-cards">${cards}</div>`;
+}
+
+// ── Actualités des sous-jacents (colonne latérale du tableau de bord, bureau seulement) ──
+// Carte montée par renderDashboard ; son contenu arrive du fil RSS, injecté dans #news-sj par
+// chargerActusSousJacents (app.js) — d'où l'état « chargement » initial, comme #news-section.
+function renderActusSousJacents() {
+  return `
+      <div class="card p-18 mb-24 bureau-seul">
+        <div class="card-title">Actualités des sous-jacents</div>
+        <div class="section-hint mb-12">Dernières informations sur nos sous-jacents</div>
+        <div id="news-sj" class="news-loading">
+          <div class="news-spinner">Chargement des actualités…</div>
+        </div>
+      </div>`;
+}
+
+// 4 items : au-delà, la colonne latérale devient plus haute que la colonne principale et le
+// tableau de bord se met à défiler sur un écran 1280×800 (mesuré).
+const NEWS_SJ_MAX = 4;
+// Ne retient QUE le fil par sous-jacent (news.produits — un flux RSS par sous-jacent, cf.
+// FLUX_PRODUITS côté back/Worker), jamais le fil macro global, et seulement les tags qui
+// correspondent à un sous-jacent d'un produit ENCORE EN VIE (`donnees.produits`, rappelés
+// exclus) : le flux « CAC 40 » subsiste côté serveur alors qu'aucun produit ne l'a plus en
+// sous-jacent, et un produit rappelé ne fait plus partie du portefeuille à suivre.
+function renderNewsSousJacents(news, produits) {
+  const sjs = new Set((produits || []).map(p => String(p.sj || '').toLowerCase()).filter(Boolean));
+  const items = ((news && news.produits) || [])
+    .filter(a => sjs.has(String(a.tag || '').toLowerCase()))
+    .sort((a, b) => {
+      const ts = (d) => { const t = d ? new Date(d).getTime() : 0; return isNaN(t) ? 0 : t; };
+      return ts(b.date) - ts(a.date);
+    })
+    .slice(0, NEWS_SJ_MAX);
+  if (!items.length) return `<div class="alerte-vide">Aucune actualité récente sur nos sous-jacents.</div>`;
+  return `<div class="news-sj-liste">${items.map(a => {
+    const couleur = newsCatColor(RSS_TAG_CAT[a.tag] || 'MARCHÉS');
+    const d = a.date ? new Date(a.date) : null;
+    const dl = (d && !isNaN(d.getTime())) ? d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }) : '';
+    const inner = `
+        <div class="news-sj-head">
+          <span class="news-sj-tag" style="color:${couleur}"><span class="news-sj-dot" style="background:${couleur}"></span>${escHtml(a.tag || '')}</span>
+          <span class="news-sj-date tnum">${escHtml(dl)}</span>
+        </div>
+        <div class="news-sj-titre" title="${escHtml(a.titre || '')}">${escHtml(a.titre || '')}</div>`;
+    // Même garde que newsCardHtml : seules les URL http(s) du flux deviennent cliquables.
+    const href = /^https?:\/\//i.test(a.lien || '') ? a.lien : null;
+    return href
+      ? `<a class="news-sj-item" href="${escHtml(href)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="news-sj-item">${inner}</div>`;
+  }).join('')}</div>`;
 }
 
 // ── Page Autocall : formatage dates ──
