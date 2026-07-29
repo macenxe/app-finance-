@@ -441,14 +441,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .detail-val { font-size: 12.5px; color: #3a3d42; text-align: right; }
 .detail-note { font-size: 11px; color: #b5ab95; }
 
-/* ── Grille de synthèse (fiches détail) ── */
-.detail-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
-.detail-info-box { background: #f3ede0; border-radius: 8px; padding: 12px 14px; min-width: 0; }
-.detail-info-label { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a8368; font-weight: 700; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.detail-info-val { font-size: 15px; font-weight: 700; color: #16304f; line-height: 1.3; white-space: nowrap; }
-.detail-info-val.green { color: #1d6f4c; }
-
-/* ── Description rapide du sous-jacent (à côté du graphique sur bureau, en dessous sur mobile) ── */
+/* ── Résumé du sous-jacent, en tête de fiche (bureau comme mobile) ── */
 .detail-sj-desc { background: #f3ede0; border-radius: 8px; padding: 12px 14px; margin-top: 14px; min-width: 0; }
 .detail-sj-desc-title { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #9a8368; font-weight: 700; margin-bottom: 6px; }
 .detail-sj-desc-text { font-size: 12.5px; line-height: 1.55; color: #3a3d42; }
@@ -484,7 +477,22 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .sheet-panel.sheet-dragging .sheet-handle { cursor: grabbing; }
 .sheet-header { padding: 6px 30px 16px; border-bottom: 1px solid #ece7dc; flex: none; }
 .sheet-header .page-title, .sheet-header .page-sub { white-space: normal; }
-.sheet-panel .detail-content { overflow-y: auto; flex: 1; }
+/* ── Fiche Autocall en feuille modale (mobile uniquement : au-delà de 640px c'est le panneau
+   .ac-detail-panneau du split qui s'affiche) ──
+   Même ordre de lecture qu'en bureau : définition du sous-jacent › graphique › récapitulatif.
+   Le HTML ([graphique, définition] › tableau) n'est PAS réordonné — les deux conteneurs
+   intermédiaires passent en display:contents pour que leurs enfants deviennent enfants directs
+   du flex de .detail-content, remis dans l'ordre voulu par `order`. Tous les enfants portent un
+   `order` explicite : sans ça la note de bas de fiche (order 0 par défaut) remonterait en tête.
+   Le récapitulatif reste sur UNE colonne — le `columns: 3` du bureau est scopé
+   `.ac-detail-panneau`, il ne s'applique pas ici. */
+.sheet-panel .detail-content { overflow-y: auto; flex: 1; display: flex; flex-direction: column; }
+.sheet-panel .detail-chart-row,
+.sheet-panel .detail-chart-desc-row { display: contents; }
+.sheet-panel .detail-sj-desc { order: 1; margin: 0 0 14px; }
+.sheet-panel .detail-chart-inline { order: 2; }
+.sheet-panel .card.p-18 { order: 3; }
+.sheet-panel .detail-note--indic { order: 4; }
 .sheet-panel.chart-panel { width: 100%; max-width: 700px; }
 
 /* ── Modal overlay ── */
@@ -1365,10 +1373,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .detail-chart-inline .chart-per { padding: 5px 8px; font-size: 11px; }
   .sheet-panel { max-height: 92vh; }
   .sheet-header { padding: 4px 16px 14px; }
-  .detail-info-grid { gap: 8px; }
-  .detail-info-box { padding: 9px 10px; }
-  .detail-info-val { font-size: 12.5px; }
-  .detail-info-label { font-size: 9px; }
+  /* Récapitulatif : 11 lignes sur une colonne — resserré pour rester lisible sans faire défiler
+     la feuille sur toute sa longueur (le bureau, lui, les répartit sur 3 colonnes). */
+  .sheet-panel .detail-sj-desc { padding: 10px 12px; margin-bottom: 12px; }
+  .sheet-panel .detail-sj-desc-text { font-size: 12px; line-height: 1.5; }
+  .sheet-panel .detail-recap .detail-row { padding: 7px 0; }
+  .sheet-panel .detail-recap .detail-key,
+  .sheet-panel .detail-recap .detail-val { font-size: 12px; }
 
   /* ── Chips enroulables ── */
   .veille-tags, .filter-chips { flex-wrap: wrap; }
