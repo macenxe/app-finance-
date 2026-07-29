@@ -214,6 +214,10 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .outils-doc-cta { font-size: 13px; font-weight: 500; }
 .outils-doc-fleche { flex: none; font-size: 14px; line-height: 1; transition: transform .15s; }
 .outils-doc:hover .outils-doc-fleche { transform: translateX(3px); }
+.outils-note-court { display: none; }
+/* Titre de fiche : version courte sur mobile — la longue passe sur 2 lignes sous 400px et
+   c'est cette 2e ligne qui faisait déborder la page. Même procédé que la note ci-dessus. */
+.outils-doc-titre-court { display: none; }
 
 /* ── Autocall preview table ── */
 .autocall-table { }
@@ -1406,12 +1410,32 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-info-label { font-size: 10.5px; color: #9a8f7a; font-weight: 500; }
   .ac-info-row--constat .ac-info-val { font-family: inherit; font-size: 11px; font-weight: 600; color: #6b6e73; }
 
-  /* ── Page Outils : une fiche par ligne (le minmax(320px) du bureau déborderait à 360px) ── */
-  .outils-liste { grid-template-columns: 1fr; gap: 14px; }
-  .outils-doc { padding: 16px; }
-  .outils-doc-titre { font-size: 15px; }
-  .outils-doc-desc { font-size: 12px; }
-  .outils-doc-points li { font-size: 11.5px; }
+  /* ── Page Outils : une fiche par ligne, et TOUT tient sans défiler ──
+     Le minmax(320px) du bureau déborderait à 360px, d'où la colonne unique. Le reste est une
+     densification mesurée pour que les 2 fiches + la note tiennent dans #content à 360×740
+     (l'écran le plus petit visé). Deux blocs sont sacrifiés, redondants sur mobile :
+     - l'en-tête de page, vide ici (titre et descriptif vivent déjà dans le bandeau bleu fixe) ;
+     - le libellé « Barèmes 2025-2026 », que chaque carte répète dans son propre badge ;
+     - la description de la fiche : les puces disent déjà ce qu'on y trouve, et c'est le
+       contenu le plus informatif au pixel. Puces et bouton nommé restent intacts. */
+  .page-outils .page-header { display: none; }
+  .page-outils .page-body { padding: 10px 14px 8px; }
+  .page-outils .outils-entete { display: none; }
+  .page-outils .table-note { margin-top: 6px; font-size: 10.5px; }
+  .outils-note-long { display: none; }
+  .outils-note-court { display: inline; }
+  .outils-doc-titre-long { display: none; }
+  .outils-doc-titre-court { display: inline; }
+
+  .outils-liste { grid-template-columns: 1fr; gap: 9px; }
+  .outils-doc { padding: 12px 15px; }
+  .outils-doc-icone { width: 38px; height: 38px; }
+  .outils-doc-titre { font-size: 14.5px; line-height: 1.2; }
+  .outils-doc-desc { display: none; }
+  .outils-doc-points { margin-top: 10px; padding-top: 9px; gap: 3px; }
+  .outils-doc-points li { font-size: 11.5px; line-height: 1.35; }
+  .outils-doc-action { margin-top: 9px; padding: 9px 12px; }
+  .outils-doc-cta { font-size: 12.5px; }
 
   /* ── Anti-débordement horizontal ── */
   #content { overflow-x: hidden; scrollbar-width: none; }

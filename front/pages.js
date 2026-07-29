@@ -180,6 +180,7 @@ const OUTILS_ICONES = {
 const OUTILS_FICHES = {
   revenus: {
     titre: 'Revenus et fiscalité des particuliers',
+    titreCourt: 'Revenus et fiscalité',
     desc: 'Ce qui est dû chaque année sur les revenus et les gains : impôt sur le revenu, plus-values, enveloppes d’épargne.',
     icone: 'pourcentage', teinte: 'or', cta: 'Ouvrir les barèmes de revenus',
     points: [
@@ -192,6 +193,7 @@ const OUTILS_FICHES = {
   },
   transmission: {
     titre: 'Transmission et fiscalité des particuliers',
+    titreCourt: 'Transmission et fiscalité',
     desc: 'Ce qui est dû lors d’une donation ou d’une succession : droits, abattements, démembrement, assurance-vie au décès.',
     icone: 'don', teinte: 'marine', cta: 'Ouvrir les barèmes de transmission',
     points: [
@@ -405,7 +407,7 @@ function renderFicheTransmission() {
 function renderOutils() {
   const docs = Object.entries(OUTILS_FICHES).map(([cle, d]) => ({ cle, ...d }));
   return `
-  <div>
+  <div class="page-outils">
     <header class="page-header">
       <div>
         <div class="page-title">Outils</div>
@@ -414,7 +416,7 @@ function renderOutils() {
     </header>
 
     <div class="page-body">
-      <div class="flex-sb mb-12">
+      <div class="flex-sb mb-12 outils-entete">
         <span class="section-label">Barèmes 2025-2026</span>
       </div>
       <div class="outils-liste">
@@ -425,7 +427,9 @@ function renderOutils() {
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
             </span>
             <span class="outils-doc-info">
-              <span class="outils-doc-titre">${escHtml(d.titre)}</span>
+              <span class="outils-doc-titre">
+                <span class="outils-doc-titre-long">${escHtml(d.titre)}</span><span class="outils-doc-titre-court">${escHtml(d.titreCourt)}</span>
+              </span>
               <span class="outils-doc-compte">${d.points.length} tableaux · barèmes 2025-2026</span>
             </span>
           </div>
@@ -439,7 +443,12 @@ function renderOutils() {
           </div>
         </div>`).join('')}
       </div>
-      <div class="table-note mt-16">Barèmes et abattements légaux publics (impôt sur le revenu, plus-values, donations et successions) — à titre indicatif, à vérifier auprès des textes officiels en vigueur (impots.gouv.fr, service-public.fr).</div>
+      <!-- Mention indicative : version courte sur mobile, où la page doit tenir sans défiler
+           (même procédé que .ac-legend-full / .ac-legend-court sur la page Autocall). -->
+      <div class="table-note mt-16">
+        <span class="outils-note-long">Barèmes et abattements légaux publics (impôt sur le revenu, plus-values, donations et successions) — à titre indicatif, à vérifier auprès des textes officiels en vigueur (impots.gouv.fr, service-public.fr).</span>
+        <span class="outils-note-court">À titre indicatif — à vérifier sur impots.gouv.fr.</span>
+      </div>
     </div>
   </div>`;
 }
