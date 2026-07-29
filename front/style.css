@@ -165,10 +165,13 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .zone-flag .fi { width: 20px; height: 20px; border-radius: 50%; background-size: cover; }
 
-/* ── Outils : fiches de référence fiscale (contenu natif, ouvertes en modale/feuille) ──
-   La page ne porte que 2 fiches et disposait de beaucoup de place : les cartes annoncent leur
-   sommaire (un item par tableau de barème) et se terminent par un bouton d'action explicite,
-   plutôt qu'une simple ligne titre + chevron. Toute la carte reste cliquable. */
+/* ── Outils : fiches de référence fiscale (contenu natif) ──
+   Deux présentations du MÊME contenu (renderFicheRevenus/renderFicheTransmission) :
+   - bureau : les 2 fiches sont dépliées côte à côte dans la page (.outils-split, voir le bloc
+     min-width:641px) — rien à ouvrir ;
+   - mobile : les cartes ci-dessous, cliquables, qui ouvrent la fiche en feuille modale. Elles
+     annoncent leur sommaire (un item par tableau de barème) et se terminent par un bouton
+     d'action explicite ; toute la carte est cliquable. */
 .outils-liste {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 18px; max-width: 1180px;
@@ -1389,6 +1392,42 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-detail-panneau[data-uc] .compo-hold { padding: 3px 0; }
   /* Stratégie du fonds : bloc de texte compact, il précède le graphique dans le panneau. */
   .ac-detail-panneau[data-uc] .uc-strategie { flex: none; }
+
+  /* ── Page Outils : les 2 fiches consultables directement, côte à côte ──
+     La page ne défile pas : .page-body occupe exactement la hauteur restante sous la barre
+     d'onglets (58 + 4 de décalage de #content, ses propres paddings étant inclus par
+     box-sizing), le libellé et la mention gardent leur taille et le split absorbe le reste.
+     Chaque panneau défile SEUL, comme les colonnes du split Autocall — les deux fiches n'ont
+     pas la même longueur (5 tableaux contre 6), donc un défilement de page commun laisserait
+     un grand vide sous la plus courte. Ces règles doivent rester APRÈS `.bureau-seul{display:block}`
+     (même spécificité : c'est l'ordre qui décide du display:grid du split). */
+  .page-outils .page-body {
+    display: flex; flex-direction: column; box-sizing: border-box;
+    height: calc(100vh - 62px); min-height: 460px;
+  }
+  .outils-split {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+    align-items: stretch; flex: 1 1 auto; min-height: 0;
+  }
+  .outils-panneau { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 0; overflow: hidden; }
+  .outils-panneau-tete {
+    flex: none; display: flex; align-items: center; gap: 11px;
+    padding: 10px 16px; border-bottom: 1px solid #f1ece1; background: #fdfcf8;
+  }
+  .outils-panneau .outils-doc-icone { width: 34px; height: 34px; border-radius: 8px; }
+  .outils-panneau .outils-doc-icone svg { width: 19px; height: 19px; }
+  .outils-panneau .outils-doc-titre { font-size: 14.5px; }
+  .outils-panneau-corps {
+    flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+    padding: 12px 16px 14px;
+  }
+  /* Densité propre à la lecture en colonne : le contenu est le même que dans la fenêtre
+     mobile, mais il doit en tenir le plus possible d'un coup d'œil. */
+  .outils-panneau .fisc-titre { margin: 15px 0 7px; }
+  .outils-panneau .fisc-cell { padding: 5px 8px; }
+  .outils-panneau .fisc-note { margin: 3px 0 10px; }
+  .outils-panneau .fisc-para { margin-bottom: 8px; }
+  .page-outils .table-note { flex: none; }
 }
 
 /* La liste UC reste sur une seule colonne : elle vit dans la colonne gauche du split. */
@@ -1496,7 +1535,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .outils-doc-titre-long { display: none; }
   .outils-doc-titre-court { display: inline; }
 
-  .outils-liste { grid-template-columns: 1fr; gap: 9px; }
+  /* `display:grid` redéclaré : la liste porte `.mobile-seul`, dont la règle de base
+     (`display:block`, écrite plus haut dans le fichier) l'emporterait sinon sur le grid
+     d'origine et ferait sauter le `gap`. */
+  .outils-liste { display: grid; grid-template-columns: 1fr; gap: 9px; }
   .outils-doc { padding: 12px 15px; }
   .outils-doc-icone { width: 38px; height: 38px; }
   .outils-doc-titre { font-size: 14.5px; line-height: 1.2; }

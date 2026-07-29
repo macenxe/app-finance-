@@ -406,6 +406,18 @@ function renderFicheTransmission() {
   `;
 }
 
+// Pastille d'icône d'une fiche (même gabarit dans la carte mobile et dans l'en-tête du panneau
+// bureau) : la taille est pilotée en CSS, pas ici.
+function outilsIconeHtml(d) {
+  return `<span class="outils-doc-icone outils-doc-icone--${d.teinte}">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
+  </span>`;
+}
+
+// Corps de chaque fiche, indexé par clé — sert au panneau bureau (rendu directement dans la page)
+// comme à la fenêtre mobile (App.ouvrirFiche).
+const OUTILS_CORPS = { revenus: renderFicheRevenus, transmission: renderFicheTransmission };
+
 function renderOutils() {
   const docs = Object.entries(OUTILS_FICHES).map(([cle, d]) => ({ cle, ...d }));
   return `
@@ -421,13 +433,27 @@ function renderOutils() {
       <div class="flex-sb mb-12 outils-entete">
         <span class="section-label">Barèmes 2025-2026</span>
       </div>
-      <div class="outils-liste">
+      <!-- Bureau : les deux fiches sont consultables directement, côte à côte, chacune avec son
+           propre défilement (même principe que le split de la page Autocall) — plus besoin
+           d'ouvrir une fenêtre. Le mobile garde les cartes cliquables juste en dessous. -->
+      <div class="outils-split bureau-seul">
+        ${docs.map(d => `
+        <section class="card outils-panneau" aria-label="${escHtml(d.titre)}">
+          <div class="outils-panneau-tete">
+            ${outilsIconeHtml(d)}
+            <span class="outils-doc-info">
+              <span class="outils-doc-titre">${escHtml(d.titre)}</span>
+              <span class="outils-doc-compte">${d.points.length} tableaux · barèmes 2025-2026</span>
+            </span>
+          </div>
+          <div class="outils-panneau-corps">${OUTILS_CORPS[d.cle]()}</div>
+        </section>`).join('')}
+      </div>
+      <div class="outils-liste mobile-seul">
         ${docs.map(d => `
         <div class="card outils-doc" role="button" tabindex="0" aria-label="${escHtml(d.cta)}" onclick="App.ouvrirFiche('${d.cle}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirFiche('${d.cle}');}">
           <div class="outils-doc-tete">
-            <span class="outils-doc-icone outils-doc-icone--${d.teinte}">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
-            </span>
+            ${outilsIconeHtml(d)}
             <span class="outils-doc-info">
               <span class="outils-doc-titre">
                 <span class="outils-doc-titre-long">${escHtml(d.titre)}</span><span class="outils-doc-titre-court">${escHtml(d.titreCourt)}</span>

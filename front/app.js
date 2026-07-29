@@ -931,7 +931,7 @@ const App = (() => {
       const root = document.getElementById('modal-root');
       const fiche = OUTILS_FICHES[cle];
       if (!root || !fiche) return;
-      const contenu = cle === 'transmission' ? renderFicheTransmission() : renderFicheRevenus();
+      const contenu = (OUTILS_CORPS[cle] || renderFicheRevenus)();
       const corps = `
         <div class="modal-header">
           <span class="modal-title">${escHtml(fiche.titre)}</span>
