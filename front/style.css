@@ -1398,15 +1398,29 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   #sidebar { display: none; }
   #main { width: 100%; }
 
-  /* ── Bandeau bleu fixe en haut : titre + descriptif de la page courante (dynamiques,
-     voir renderNav) — le descriptif reprend le contenu de .page-sub, masqué plus bas
-     dans le contenu pour ne pas le répéter. ── */
+  /* ── Bandeau bleu fixe en haut : la marque à gauche, puis titre + descriptif de la page
+     courante (dynamiques, voir renderNav) — le descriptif reprend le contenu de .page-sub,
+     masqué plus bas dans le contenu pour ne pas le répéter.
+     La marque garde sa taille globale (34px, .logo-mark) : identique à la sidebar et au
+     bandeau bureau. Le marine du bandeau est exactement le --logo-fond par défaut du symbole,
+     le halo qui entaille les lettres se fond donc dans le support.
+     Le bandeau descend directement sur le contenu (l'en-tête de page est masqué, voir plus
+     bas) : il reprend à son compte la respiration qu'apportait cette bande, d'où un padding
+     vertical plus généreux qu'un simple 10px. ── */
   #mobile-topbar {
-    display: flex; flex-direction: column; justify-content: center; gap: 2px;
-    padding: 10px 16px; flex: none; background: #16304f;
+    display: flex; flex-direction: row; align-items: center; gap: 12px;
+    padding: 14px 16px 16px; flex: none; background: #16304f;
   }
+  /* min-width:0 : sans ça le bloc de texte refuse de se comprimer sous sa largeur intrinsèque
+     et le descriptif le plus long (Fonds € & UC) déborderait à droite au lieu de s'élider. */
+  .mobile-topbar-texte { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
   .mobile-topbar-title { font-family: 'Spectral', serif; font-size: 16px; font-weight: 600; color: #fff; }
-  .mobile-topbar-desc { font-size: 11.5px; color: #9aa6bd; }
+  /* Élision plutôt que retour à la ligne : le bandeau garde ainsi la même hauteur d'un onglet
+     à l'autre (un descriptif sur deux lignes le ferait « sauter » à chaque navigation). */
+  .mobile-topbar-desc {
+    font-size: 11.5px; color: #9aa6bd;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
   #footer { display: none; }
 
   /* ── Barre de navigation du bas (remplace le menu latéral) : légèrement plus affirmée
@@ -1435,10 +1449,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 
   /* ── En-têtes / paddings ── */
   .page-body { padding: 16px 14px 32px; }
-  .page-header { padding: 14px 14px; flex-wrap: wrap; gap: 8px; }
-  /* Titre + descriptif de page vivent désormais dans le bandeau bleu fixe (#mobile-topbar) :
-     masqués ici pour ne pas les répéter. */
-  .page-header .page-title, .page-header .page-sub { display: none; }
+  /* Titre + descriptif de page vivent désormais dans le bandeau bleu fixe (#mobile-topbar).
+     L'en-tête de page n'a donc plus rien à afficher sur mobile : le garder ne laissait qu'une
+     bande crème vide de ~29px, un « creux » entre le bandeau bleu et le contenu. */
+  .page-header { display: none; }
   .page-title, .page-sub { white-space: normal; }
   .header-actions { flex-wrap: wrap; gap: 6px; }
   .header-actions .btn-primary, .header-actions .btn-secondary { display: none; }
@@ -1469,12 +1483,11 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── Page Outils : une fiche par ligne, et TOUT tient sans défiler ──
      Le minmax(320px) du bureau déborderait à 360px, d'où la colonne unique. Le reste est une
      densification mesurée pour que les 2 fiches + la note tiennent dans #content à 360×740
-     (l'écran le plus petit visé). Deux blocs sont sacrifiés, redondants sur mobile :
-     - l'en-tête de page, vide ici (titre et descriptif vivent déjà dans le bandeau bleu fixe) ;
+     (l'écran le plus petit visé). Deux blocs sont sacrifiés, redondants sur mobile
+     (l'en-tête de page, lui, est déjà masqué pour toutes les pages plus haut) :
      - le libellé « Barèmes 2025-2026 », que chaque carte répète dans son propre badge ;
      - la description de la fiche : les puces disent déjà ce qu'on y trouve, et c'est le
        contenu le plus informatif au pixel. Puces et bouton nommé restent intacts. */
-  .page-outils .page-header { display: none; }
   .page-outils .page-body { padding: 10px 14px 8px; }
   .page-outils .outils-entete { display: none; }
   .page-outils .table-note { margin-top: 6px; font-size: 10.5px; }

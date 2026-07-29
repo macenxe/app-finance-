@@ -6,14 +6,15 @@
   <meta name="theme-color" content="#16304f">
   <title>SP Track</title>
   <link rel="manifest" href="./manifest.json">
-  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=205">
-  <link rel="apple-touch-icon" href="./icon-192.png?v=205">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=208">
+  <link rel="apple-touch-icon" href="./icon-192.png?v=208">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-  <link rel="stylesheet" href="./style.css?v=205">
+  <link rel="stylesheet" href="./style.css?v=208">
 </head>
 <body>
   <!-- Logo SP Track : monogramme SP traversé d'une courbe de marché ascendante.
-       Défini une seule fois ici, réutilisé via <use href="#sp-mark"> (bandeau bureau + sidebar).
+       Défini une seule fois ici, réutilisé via <use href="#sp-mark"> (bandeau bureau, sidebar
+       et bandeau bleu mobile).
        Sans pastille : les lettres sont posées directement sur le fond marine du bandeau.
        Couleurs pilotables par variables CSS (héritées dans le shadow DOM du <use>) :
        --logo-fond   = la couleur du support (sert au halo qui entaille les lettres) ;
@@ -51,9 +52,14 @@
 
     <!-- â”€â”€ Main â”€â”€ -->
     <div id="main">
+      <!-- Bandeau bleu mobile : la marque à gauche (même symbole que la sidebar et le bandeau
+           bureau), puis le titre + le descriptif de la page courante, remplis par renderNav. -->
       <div id="mobile-topbar">
-        <div class="mobile-topbar-title"></div>
-        <div class="mobile-topbar-desc"></div>
+        <svg class="logo-mark" aria-hidden="true"><use href="#sp-mark"/></svg>
+        <div class="mobile-topbar-texte">
+          <div class="mobile-topbar-title"></div>
+          <div class="mobile-topbar-desc"></div>
+        </div>
       </div>
       <!-- â”€â”€ Barre d'onglets bureau (remplace la sidebar sur desktop) â”€â”€ -->
       <div id="desktop-topbar">
@@ -83,11 +89,11 @@
     <div class="rotate-overlay-title">Repassez en mode portrait</div>
     <div class="rotate-overlay-sub">SP Track n'est pas prévu pour le mode paysage.</div>
   </div>
-  <script src="./data.js?v=205"></script>
-  <script src="./api.js?v=205"></script>
-  <script src="./autocall.js?v=205"></script>
-  <script src="./chart.js?v=205"></script>
-  <script src="./pages.js?v=205"></script>
-  <script src="./app.js?v=205"></script>
+  <script src="./data.js?v=208"></script>
+  <script src="./api.js?v=208"></script>
+  <script src="./autocall.js?v=208"></script>
+  <script src="./chart.js?v=208"></script>
+  <script src="./pages.js?v=208"></script>
+  <script src="./app.js?v=208"></script>
 </body>
 </html>
