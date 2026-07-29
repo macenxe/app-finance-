@@ -133,7 +133,7 @@ const App = (() => {
     { key: 'dash',     label: 'Tableau de bord', court: 'Accueil',  def: 'Synthèse des marchés' },
     { key: 'prod',     label: 'Autocall',        court: 'Autocall', def: 'Produits à mécanisme de rappel automatique' },
     { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds',    def: 'Fonds en euros · Unités de compte · Le Conservateur' },
-    { key: 'outils',   label: 'Outils',          court: 'Outils',   def: 'Barèmes fiscaux' },
+    { key: 'outils',   label: 'Outils',          court: 'Outils',   def: 'Aide-mémoire fiscal' },
     { key: 'actus',    label: 'Actualités',      court: 'Actus',    def: 'Sélection du cabinet · fil marché en direct' },
   ];
 
