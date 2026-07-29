@@ -21,16 +21,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Cache-busting des assets par le SHA du commit
         # Remplace les ?v=NN manuels par le SHA court : plus besoin de penser à bumper la
         # version à chaque modif (source des « CSS v85 vs JS v93 » et des caches figés mobile).
         run: |
           SHA="${GITHUB_SHA::7}"
           sed -E -i "s/\?v=[0-9]+/?v=${SHA}/g" front/index.html
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: front/
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
         id: deployment
