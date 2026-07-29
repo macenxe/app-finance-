@@ -169,60 +169,58 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
    Deux présentations du MÊME contenu (renderFicheRevenus/renderFicheTransmission) :
    - bureau : les 2 fiches sont dépliées côte à côte dans la page (.outils-split, voir le bloc
      min-width:641px) — rien à ouvrir ;
-   - mobile : les cartes ci-dessous, cliquables, qui ouvrent la fiche en feuille modale. Elles
-     annoncent leur sommaire (un item par tableau de barème) et se terminent par un bouton
-     d'action explicite ; toute la carte est cliquable. */
+   - mobile : les cartes ci-dessous, qui ouvrent la fiche en feuille modale. Elles annoncent
+     leur sommaire (un item par tableau de barème) ; toute la carte est cliquable et le chevron
+     de l'en-tête le dit — pas de bouton plein, qui ne faisait que répéter en gras une action
+     déjà évidente et alourdissait la page.
+   La liste porte `.mobile-seul` : ces règles ne servent QUE sur téléphone, elles sont donc
+   calibrées pour lui directement (le bloc max-width:640px n'en reprend presque rien). */
 .outils-liste {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 18px; max-width: 1180px;
+  display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 1180px;
 }
 .outils-doc {
-  display: flex; flex-direction: column; padding: 22px 24px;
-  text-decoration: none; color: inherit; cursor: pointer;
-  transition: border-color .15s, box-shadow .15s, transform .15s;
+  display: flex; flex-direction: column; padding: 15px 16px 14px;
+  color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: border-color .15s, background .15s, box-shadow .15s;
 }
-.outils-doc:hover, .outils-doc:focus-visible {
-  border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08);
-  transform: translateY(-1px); outline: none;
+/* Retour tactile à l'appui : c'est lui qui remplace le bouton comme signal « c'est cliquable ». */
+.outils-doc:active { background: #fdfbf6; border-color: #e2d8c4; }
+.outils-doc:focus-visible {
+  outline: none; border-color: #c9a96a; box-shadow: 0 0 0 3px rgba(201,169,106,.18);
 }
-.outils-doc-tete { display: flex; align-items: center; gap: 13px; }
+.outils-doc-tete { display: flex; align-items: center; gap: 12px; }
 .outils-doc-icone {
   display: flex; align-items: center; justify-content: center; flex: none;
-  width: 42px; height: 42px; border-radius: 9px;
+  width: 38px; height: 38px; border-radius: 9px;
 }
+.outils-doc-icone svg { width: 19px; height: 19px; }
 .outils-doc-icone--or     { background: #f2ede0; color: #9a7b3c; }
 .outils-doc-icone--marine { background: #eef2f7; color: #16304f; }
-.outils-doc-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.outils-doc-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1 1 auto; }
 .outils-doc-titre {
-  font-family: 'Spectral', serif; font-size: 15.5px; font-weight: 600;
+  font-family: 'Spectral', serif; font-size: 15px; font-weight: 600;
   color: #16304f; line-height: 1.25;
 }
 .outils-doc-compte {
   font-size: 9.5px; letter-spacing: .09em; text-transform: uppercase;
   color: #9a8f7a; font-weight: 600;
 }
-.outils-doc-desc { font-size: 13px; color: #6b6e73; line-height: 1.6; margin-top: 14px; }
+/* Description : masquée par défaut, réaffichée seulement sur les écrans assez hauts
+   (voir le bloc `min-height:760px` plus bas) — sur un petit écran c'est elle qui ferait défiler. */
+.outils-doc-desc { display: none; font-size: 12.5px; color: #6b6e73; line-height: 1.55; margin-top: 12px; }
+/* Chevron discret : toute l'affordance de clic tient là-dedans. */
+.outils-doc-chevron { flex: none; display: flex; color: #c3b394; transition: transform .15s; }
+.outils-doc:active .outils-doc-chevron { transform: translateX(2px); }
 .outils-doc-points {
-  list-style: none; margin: 14px 0 0; padding: 14px 0 0;
+  list-style: none; margin: 12px 0 0; padding: 11px 0 0;
   border-top: 1px solid #f1ece1;
-  display: flex; flex-direction: column; gap: 9px;
-  flex: 1 1 auto; /* absorbe l'écart de hauteur : les 2 boutons restent alignés en bas */
+  display: flex; flex-direction: column; gap: 6px;
 }
-.outils-doc-points li { position: relative; padding-left: 16px; font-size: 12.5px; color: #3a3d42; line-height: 1.45; }
+.outils-doc-points li { position: relative; padding-left: 15px; font-size: 11.5px; color: #55585d; line-height: 1.4; }
 .outils-doc-points li::before {
-  content: ''; position: absolute; left: 0; top: 6px;
-  width: 5px; height: 5px; border-radius: 50%; background: #c9a96a;
+  content: ''; position: absolute; left: 3px; top: 6px;
+  width: 4px; height: 4px; border-radius: 50%; background: #c9a96a;
 }
-/* Bouton d'action : décoratif (le clic est porté par la carte entière) mais il nomme l'action. */
-.outils-doc-action {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  margin-top: 18px; padding: 12px 14px; border-radius: 6px;
-  background: #16304f; color: #fff; transition: background .15s;
-}
-.outils-doc:hover .outils-doc-action { background: #1f3f66; }
-.outils-doc-cta { font-size: 13px; font-weight: 500; }
-.outils-doc-fleche { flex: none; font-size: 14px; line-height: 1; transition: transform .15s; }
-.outils-doc:hover .outils-doc-fleche { transform: translateX(3px); }
 .outils-note-court { display: none; }
 /* Titre de fiche : version courte sur mobile — la longue passe sur 2 lignes sous 400px et
    c'est cette 2e ligne qui faisait déborder la page. Même procédé que la note ci-dessus. */
@@ -1524,16 +1522,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-info-row--constat .ac-info-val { font-family: inherit; font-size: 11px; font-weight: 600; color: #6b6e73; }
 
   /* ── Page Outils : une fiche par ligne, et TOUT tient sans défiler ──
-     Le minmax(320px) du bureau déborderait à 360px, d'où la colonne unique. Le reste est une
-     densification mesurée pour que les 2 fiches + la note tiennent dans #content à 360×740
-     (l'écran le plus petit visé). Deux blocs sont sacrifiés, redondants sur mobile
-     (l'en-tête de page, lui, est déjà masqué pour toutes les pages plus haut) :
-     - le libellé « Barèmes 2025-2026 », que chaque carte répète dans son propre badge ;
-     - la description de la fiche : les puces disent déjà ce qu'on y trouve, et c'est le
-       contenu le plus informatif au pixel. Puces et bouton nommé restent intacts. */
+     Le gabarit des cartes est déjà écrit pour le téléphone dans la base (elles ne servent qu'ici,
+     cf. le commentaire là-bas) ; il ne reste ici que ce qui dépend vraiment du petit écran.
+     Le libellé « Barèmes 2025-2026 » est masqué — chaque carte le répète dans son badge ;
+     l'en-tête de page, lui, est déjà masqué pour toutes les pages plus haut. */
   .page-outils .page-body { padding: 10px 14px 8px; }
   .page-outils .outils-entete { display: none; }
-  .page-outils .table-note { margin-top: 6px; font-size: 10.5px; }
+  .page-outils .table-note { margin-top: 10px; font-size: 10.5px; }
   .outils-note-long { display: none; }
   .outils-note-court { display: inline; }
   .outils-doc-titre-long { display: none; }
@@ -1542,15 +1537,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* `display:grid` redéclaré : la liste porte `.mobile-seul`, dont la règle de base
      (`display:block`, écrite plus haut dans le fichier) l'emporterait sinon sur le grid
      d'origine et ferait sauter le `gap`. */
-  .outils-liste { display: grid; grid-template-columns: 1fr; gap: 9px; }
-  .outils-doc { padding: 12px 15px; }
-  .outils-doc-icone { width: 38px; height: 38px; }
-  .outils-doc-titre { font-size: 14.5px; line-height: 1.2; }
-  .outils-doc-desc { display: none; }
-  .outils-doc-points { margin-top: 10px; padding-top: 9px; gap: 3px; }
-  .outils-doc-points li { font-size: 11.5px; line-height: 1.35; }
-  .outils-doc-action { margin-top: 9px; padding: 9px 12px; }
-  .outils-doc-cta { font-size: 12.5px; }
+  .outils-liste { display: grid; }
 
   /* ── Anti-débordement horizontal ── */
   #content { overflow-x: hidden; scrollbar-width: none; }
@@ -1628,6 +1615,19 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .taux-item-name { font-size: 10.5px; }
   .taux-var   { font-size: 10.5px; }
   .taux-maj   { font-size: 10px; }
+}
+
+/* ── Page Outils sur téléphone haut : on rend l'espace gagné aux cartes ──
+   Sans le bouton d'action, les 2 fiches n'occupent plus que les deux tiers de l'écran sur un
+   téléphone courant. Au lieu de laisser un grand vide en bas, la description de la fiche
+   revient et les cartes respirent. Seuil mesuré sur le cas le plus défavorable (360px de large,
+   où la description passe sur 3 lignes) : à 760px de haut la page redéfilait de 19px, à 800px
+   elle tient. Sous ce seuil la description reste donc masquée. ── */
+@media (max-width: 640px) and (min-height: 800px) {
+  .outils-doc { padding: 18px 18px 17px; }
+  .outils-doc-desc { display: block; }
+  .outils-doc-points { margin-top: 13px; padding-top: 13px; gap: 7px; }
+  .outils-liste { gap: 12px; }
 }
 
 /* ── Mode paysage mobile désactivé : l'app est bloquée derrière un écran dédié plutôt

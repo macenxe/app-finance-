@@ -178,7 +178,8 @@ const OUTILS_ICONES = {
 };
 
 // `points` = sommaire de la fiche (un item par tableau de barème, dans l'ordre du contenu) : c'est
-// ce qui rend le bouton parlant — on sait ce qu'on trouvera avant d'ouvrir. `cta` = libellé d'action.
+// lui qui dit ce qu'on trouvera avant d'ouvrir, sans bouton pour l'annoncer. `cta` ne sert plus
+// qu'à l'`aria-label` de la carte (le lecteur d'écran annonce l'action, l'œil voit le chevron).
 const OUTILS_FICHES = {
   revenus: {
     titre: 'Revenus et fiscalité des particuliers',
@@ -435,7 +436,8 @@ function renderOutils() {
       </div>
       <!-- Bureau : les deux fiches sont consultables directement, côte à côte, chacune avec son
            propre défilement (même principe que le split de la page Autocall) — plus besoin
-           d'ouvrir une fenêtre. Le mobile garde les cartes cliquables juste en dessous. -->
+           d'ouvrir une fenêtre. Le mobile garde les cartes cliquables juste en dessous : pas de
+           bouton d'action, la carte entière ouvre la fiche et le chevron suffit à le dire. -->
       <div class="outils-split bureau-seul">
         ${docs.map(d => `
         <section class="card outils-panneau" aria-label="${escHtml(d.titre)}">
@@ -460,15 +462,14 @@ function renderOutils() {
               </span>
               <span class="outils-doc-compte">${d.points.length} tableaux · barèmes 2025-2026</span>
             </span>
+            <span class="outils-doc-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg>
+            </span>
           </div>
           <div class="outils-doc-desc">${escHtml(d.desc)}</div>
           <ul class="outils-doc-points">
             ${d.points.map(p => `<li>${escHtml(p)}</li>`).join('')}
           </ul>
-          <div class="outils-doc-action">
-            <span class="outils-doc-cta">${escHtml(d.cta)}</span>
-            <span class="outils-doc-fleche">→</span>
-          </div>
         </div>`).join('')}
       </div>
       <!-- Mention indicative : version courte sur mobile, où la page doit tenir sans défiler
