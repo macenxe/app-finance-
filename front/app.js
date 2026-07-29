@@ -133,7 +133,7 @@ const App = (() => {
     { key: 'dash',     label: 'Tableau de bord', court: 'Accueil',  def: 'Synthèse des marchés' },
     { key: 'prod',     label: 'Autocall',        court: 'Autocall', def: 'Produits à mécanisme de rappel automatique' },
     { key: 'contrats', label: 'Fonds € & UC',    court: 'Fonds',    def: 'Fonds en euros · Unités de compte · Le Conservateur' },
-    { key: 'outils',   label: 'Outils',          court: 'Outils',   def: 'Documents personnels' },
+    { key: 'outils',   label: 'Outils',          court: 'Outils',   def: 'Barèmes fiscaux' },
     { key: 'actus',    label: 'Actualités',      court: 'Actus',    def: 'Sélection du cabinet · fil marché en direct' },
   ];
 
@@ -359,6 +359,28 @@ const App = (() => {
     rafraichirChartPanneau();
   }
 
+  // ── Verrou « une fenêtre est ouverte » ──
+  // Toute fenêtre (feuille mobile, modale bureau, fiche fiscale, formulaire) vit dans #modal-root.
+  // Un MutationObserver suffit donc à couvrir TOUS les chemins d'ouverture/fermeture, présents et
+  // à venir, sans avoir à toucher chaque fonction ouvrir*/fermer*.
+  // Deux effets quand une fenêtre est ouverte :
+  //  1. la classe `modal-ouvert` sur <html> active `overscroll-behavior-y: contain` → le navigateur
+  //     n'enchaîne plus l'élan du balayage vers le bas sur son propre « tirer pour actualiser »,
+  //     qui rechargeait la page (et donc refermait la fenêtre) en conflit avec le tirage de la feuille ;
+  //  2. `modalOuvert()` désarme le pull-to-refresh maison et le swipe entre onglets.
+  function modalOuvert() {
+    const root = document.getElementById('modal-root');
+    return !!(root && root.firstElementChild);
+  }
+
+  function initVerrouModal() {
+    const root = document.getElementById('modal-root');
+    if (!root) return;
+    const maj = () => document.documentElement.classList.toggle('modal-ouvert', modalOuvert());
+    new MutationObserver(maj).observe(root, { childList: true });
+    maj();
+  }
+
   // Fiches détail Autocall : présentées en feuille modale (bottom sheet) plutôt qu'en page,
   // pour rester dans le contexte de la liste (fermeture par clic en dehors de la feuille).
   function ouvrirSheet(html) {
@@ -545,13 +567,15 @@ const App = (() => {
     main.prepend(ind);
 
     content.addEventListener('touchstart', e => {
-      if (content.scrollTop === 0 && !refreshing) {
+      if (content.scrollTop === 0 && !refreshing && !modalOuvert()) {
         startY  = e.touches[0].clientY;
         pulling = true;
       }
     }, { passive: true });
 
     content.addEventListener('touchmove', e => {
+      // Une fenêtre ouverte en cours de geste (tap sur une carte puis glissement) annule le tirage.
+      if (pulling && modalOuvert()) { pulling = false; ind.style.height = ''; return; }
       if (!pulling) return;
       const dy = e.touches[0].clientY - startY;
       if (dy > 0) {
@@ -593,6 +617,7 @@ const App = (() => {
       if (!pulling) return;
       pulling = false;
       ind.querySelector('span').style.transform = '';
+      if (modalOuvert()) { ind.style.height = ''; return; }
       const dy = e.changedTouches[0].clientY - startY;
       if (dy >= THRESHOLD) {
         doRefresh();
@@ -666,7 +691,7 @@ const App = (() => {
     }
 
     content.addEventListener('touchstart', e => {
-      if (e.touches.length !== 1 || scrolleHorizontalement(e.target)) { tracking = false; return; }
+      if (e.touches.length !== 1 || modalOuvert() || scrolleHorizontalement(e.target)) { tracking = false; return; }
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
       tracking = true;
@@ -675,6 +700,7 @@ const App = (() => {
     content.addEventListener('touchend', e => {
       if (!tracking) return;
       tracking = false;
+      if (modalOuvert()) return;
       const dx = e.changedTouches[0].clientX - startX;
       const dy = e.changedTouches[0].clientY - startY;
       if (Math.abs(dx) < SEUIL_X || Math.abs(dx) < Math.abs(dy) * RATIO_MIN) return;
@@ -690,6 +716,7 @@ const App = (() => {
   async function init() {
     restaurerEtat();
     renderPage();
+    initVerrouModal();
     initPullToRefresh();
     initSwipeTabs();
     // Échap ferme le tiroir latéral / la modale ouverte (confort bureau).

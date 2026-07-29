@@ -12,6 +12,18 @@ body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; backgroun
 /* ── Layout ── */
 #app { display: flex; height: 100vh; overflow: hidden; }
 
+/* ── Fenêtre modale ouverte : neutralise le « tirer pour actualiser » du navigateur ──
+   Quand une feuille/modale est ouverte (classe posée sur <html> par initVerrouModal, app.js),
+   un balayage vers le bas partant du haut du contenu de la fenêtre ne doit PAS enchaîner sur le
+   rechargement natif de la page (Chrome/Safari mobile) : ça entrait en conflit avec le tirage de
+   la feuille et rechargeait l'app. `contain` bloque l'enchaînement sans désactiver le geste dans
+   la fenêtre elle-même. Posé sur <html> ET body : la propagation body → viewport ne s'applique
+   que si <html> est en `auto`. */
+html.modal-ouvert, html.modal-ouvert body { overscroll-behavior-y: contain; }
+/* Même principe au niveau des conteneurs défilables des fenêtres : l'élan ne sort pas de la
+   fenêtre pour aller défiler (ou actualiser) la page en dessous. */
+.modal-body, .sheet-panel .detail-content, .uc-sheet-corps, .ac-detail-panneau { overscroll-behavior: contain; }
+
 /* ── Sidebar ── */
 #sidebar {
   width: 248px; flex: none;
@@ -147,24 +159,61 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 }
 .zone-flag .fi { width: 20px; height: 20px; border-radius: 50%; background-size: cover; }
 
-/* ── Outils : liste de documents personnels (PDF locaux) ── */
-.outils-liste { display: flex; flex-direction: column; gap: 10px; max-width: 480px; }
+/* ── Outils : fiches de référence fiscale (contenu natif, ouvertes en modale/feuille) ──
+   La page ne porte que 2 fiches et disposait de beaucoup de place : les cartes annoncent leur
+   sommaire (un item par tableau de barème) et se terminent par un bouton d'action explicite,
+   plutôt qu'une simple ligne titre + chevron. Toute la carte reste cliquable. */
+.outils-liste {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px; max-width: 1180px;
+}
 .outils-doc {
-  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  display: flex; flex-direction: column; padding: 22px 24px;
   text-decoration: none; color: inherit; cursor: pointer;
   transition: border-color .15s, box-shadow .15s, transform .15s;
 }
-.outils-doc:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08); transform: translateY(-1px); }
+.outils-doc:hover, .outils-doc:focus-visible {
+  border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,.08);
+  transform: translateY(-1px); outline: none;
+}
+.outils-doc-tete { display: flex; align-items: center; gap: 13px; }
 .outils-doc-icone {
   display: flex; align-items: center; justify-content: center; flex: none;
-  width: 40px; height: 40px; border-radius: 8px;
+  width: 42px; height: 42px; border-radius: 9px;
 }
 .outils-doc-icone--or     { background: #f2ede0; color: #9a7b3c; }
 .outils-doc-icone--marine { background: #eef2f7; color: #16304f; }
-.outils-doc-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.outils-doc-titre { font-size: 13.5px; font-weight: 600; color: #16304f; }
-.outils-doc-desc { font-size: 11.5px; color: #9a8f7a; }
-.outils-doc-fleche { margin-left: auto; flex: none; color: #b5ab95; font-size: 15px; }
+.outils-doc-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.outils-doc-titre {
+  font-family: 'Spectral', serif; font-size: 15.5px; font-weight: 600;
+  color: #16304f; line-height: 1.25;
+}
+.outils-doc-compte {
+  font-size: 9.5px; letter-spacing: .09em; text-transform: uppercase;
+  color: #9a8f7a; font-weight: 600;
+}
+.outils-doc-desc { font-size: 13px; color: #6b6e73; line-height: 1.6; margin-top: 14px; }
+.outils-doc-points {
+  list-style: none; margin: 14px 0 0; padding: 14px 0 0;
+  border-top: 1px solid #f1ece1;
+  display: flex; flex-direction: column; gap: 9px;
+  flex: 1 1 auto; /* absorbe l'écart de hauteur : les 2 boutons restent alignés en bas */
+}
+.outils-doc-points li { position: relative; padding-left: 16px; font-size: 12.5px; color: #3a3d42; line-height: 1.45; }
+.outils-doc-points li::before {
+  content: ''; position: absolute; left: 0; top: 6px;
+  width: 5px; height: 5px; border-radius: 50%; background: #c9a96a;
+}
+/* Bouton d'action : décoratif (le clic est porté par la carte entière) mais il nomme l'action. */
+.outils-doc-action {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 18px; padding: 12px 14px; border-radius: 6px;
+  background: #16304f; color: #fff; transition: background .15s;
+}
+.outils-doc:hover .outils-doc-action { background: #1f3f66; }
+.outils-doc-cta { font-size: 13px; font-weight: 500; }
+.outils-doc-fleche { flex: none; font-size: 14px; line-height: 1; transition: transform .15s; }
+.outils-doc:hover .outils-doc-fleche { transform: translateX(3px); }
 
 /* ── Autocall preview table ── */
 .autocall-table { }
@@ -1356,6 +1405,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-info-row--constat { flex-wrap: nowrap; justify-content: flex-end; gap: 5px; font-size: 11px; }
   .ac-info-label { font-size: 10.5px; color: #9a8f7a; font-weight: 500; }
   .ac-info-row--constat .ac-info-val { font-family: inherit; font-size: 11px; font-weight: 600; color: #6b6e73; }
+
+  /* ── Page Outils : une fiche par ligne (le minmax(320px) du bureau déborderait à 360px) ── */
+  .outils-liste { grid-template-columns: 1fr; gap: 14px; }
+  .outils-doc { padding: 16px; }
+  .outils-doc-titre { font-size: 15px; }
+  .outils-doc-desc { font-size: 12px; }
+  .outils-doc-points li { font-size: 11.5px; }
 
   /* ── Anti-débordement horizontal ── */
   #content { overflow-x: hidden; scrollbar-width: none; }

@@ -175,9 +175,34 @@ const OUTILS_ICONES = {
   don:         '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C9 2 12 7 12 7z"/>',
 };
 
+// `points` = sommaire de la fiche (un item par tableau de barème, dans l'ordre du contenu) : c'est
+// ce qui rend le bouton parlant — on sait ce qu'on trouvera avant d'ouvrir. `cta` = libellé d'action.
 const OUTILS_FICHES = {
-  revenus:      { titre: 'Revenus et fiscalité des particuliers', desc: 'Barème IR, plus-values, assurance-vie, PEA', icone: 'pourcentage', teinte: 'or' },
-  transmission: { titre: 'Transmission et fiscalité des particuliers', desc: 'Donations, successions, abattements, usufruit', icone: 'don', teinte: 'marine' },
+  revenus: {
+    titre: 'Revenus et fiscalité des particuliers',
+    desc: 'Ce qui est dû chaque année sur les revenus et les gains : impôt sur le revenu, plus-values, enveloppes d’épargne.',
+    icone: 'pourcentage', teinte: 'or', cta: 'Ouvrir les barèmes de revenus',
+    points: [
+      'Barème de l’impôt sur le revenu (revenus 2025)',
+      'Plus-values immobilières et abattements par durée',
+      'Rachats d’assurance-vie et de capitalisation',
+      'Gains de PEA selon l’ancienneté du plan',
+      'Revenus de capitaux mobiliers (dividendes, intérêts)',
+    ],
+  },
+  transmission: {
+    titre: 'Transmission et fiscalité des particuliers',
+    desc: 'Ce qui est dû lors d’une donation ou d’une succession : droits, abattements, démembrement, assurance-vie au décès.',
+    icone: 'don', teinte: 'marine', cta: 'Ouvrir les barèmes de transmission',
+    points: [
+      'Droits de donation et de succession en ligne directe',
+      'Abattements donations / successions (rappel 15 ans)',
+      'Dons de sommes d’argent et donation entre époux',
+      'Frères et sœurs, autres liens de parenté',
+      'Barème de l’usufruit viager et de la nue-propriété',
+      'Assurance-vie au décès (art. 990 I et 757 B)',
+    ],
+  },
 };
 
 // Table générique en grille CSS : cols = [{label, align:'right'?, width:'1fr'}], rows = [[cellules...]].
@@ -394,15 +419,24 @@ function renderOutils() {
       </div>
       <div class="outils-liste">
         ${docs.map(d => `
-        <div class="card outils-doc" role="button" tabindex="0" onclick="App.ouvrirFiche('${d.cle}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirFiche('${d.cle}');}">
-          <span class="outils-doc-icone outils-doc-icone--${d.teinte}">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
-          </span>
-          <span class="outils-doc-info">
-            <span class="outils-doc-titre">${escHtml(d.titre)}</span>
-            <span class="outils-doc-desc">${escHtml(d.desc)}</span>
-          </span>
-          <span class="outils-doc-fleche">›</span>
+        <div class="card outils-doc" role="button" tabindex="0" aria-label="${escHtml(d.cta)}" onclick="App.ouvrirFiche('${d.cle}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.ouvrirFiche('${d.cle}');}">
+          <div class="outils-doc-tete">
+            <span class="outils-doc-icone outils-doc-icone--${d.teinte}">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${OUTILS_ICONES[d.icone]}</svg>
+            </span>
+            <span class="outils-doc-info">
+              <span class="outils-doc-titre">${escHtml(d.titre)}</span>
+              <span class="outils-doc-compte">${d.points.length} tableaux · barèmes 2025-2026</span>
+            </span>
+          </div>
+          <div class="outils-doc-desc">${escHtml(d.desc)}</div>
+          <ul class="outils-doc-points">
+            ${d.points.map(p => `<li>${escHtml(p)}</li>`).join('')}
+          </ul>
+          <div class="outils-doc-action">
+            <span class="outils-doc-cta">${escHtml(d.cta)}</span>
+            <span class="outils-doc-fleche">→</span>
+          </div>
         </div>`).join('')}
       </div>
       <div class="table-note mt-16">Barèmes et abattements légaux publics (impôt sur le revenu, plus-values, donations et successions) — à titre indicatif, à vérifier auprès des textes officiels en vigueur (impots.gouv.fr, service-public.fr).</div>
