@@ -31,7 +31,13 @@ html.modal-ouvert, html.modal-ouvert body { overscroll-behavior-y: contain; }
   display: flex; flex-direction: column;
 }
 .sidebar-header { padding: 24px 22px 20px; border-bottom: 1px solid rgba(255,255,255,.08); }
-.sidebar-logo { font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: .01em; }
+.sidebar-logo { display: flex; align-items: center; gap: 10px; font-family: 'Spectral', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: .01em; }
+
+/* ── Logo (symbole #sp-mark défini dans index.html) ──
+   Monogramme SP crème posé sur le marine du bandeau, traversé par une courbe de marché
+   dorée. Sans pastille : le halo de la courbe reprend la couleur du support (--logo-fond).
+   La taille se règle uniquement ici (le viewBox 48×48 se met à l'échelle). */
+.logo-mark { width: 34px; height: 34px; flex: none; display: block; }
 .sidebar-sub  { font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: #c9a96a; margin-top: 3px; }
 
 nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex: 1; }
@@ -979,6 +985,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .dash-split { display: block; }
 .news-split { display: block; }
 
+/* Bureau étroit : le bandeau (marque + « Track » + 5 onglets + date) réclame 741px.
+   En dessous, on ne garde que la marque — elle porte le monogramme SP, donc l'identité
+   reste lisible, et le besoin retombe à 688px (l'ancien logo texte « SP Track » en
+   demandait 733 : le bandeau tient donc sur plus d'écrans qu'avant, même si sous ~688px
+   il déborde toujours, comme avant ce changement). Mesures relevées en direct, à refaire
+   si le nombre d'onglets, le mot ou la taille de la marque bouge. */
+@media (min-width: 641px) and (max-width: 750px) {
+  .dt-logo { display: none; }
+}
+
 /* ── Bureau (≥641px) : onglets en haut, densité accrue, détail déplié en ligne ── */
 @media (min-width: 641px) {
   /* Sidebar remplacée par une barre d'onglets sombre en haut */
@@ -987,7 +1003,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     display: flex; align-items: center; flex: none;
     background: #16304f; padding: 0 26px; height: 58px; gap: 22px;
   }
-  .dt-brand { flex: none; }
+  /* gap serré : la marque et le mot forment UN bloc « SP Track », pas un logo suivi d'un
+     libellé. Le glyphe laisse déjà ~4px de vide à droite dans sa boîte de 34px, donc 2px
+     de gap donnent ~6px optiques — l'équivalent d'une espace-mot à 18px (4,5px). */
+  .dt-brand { flex: none; display: flex; align-items: center; gap: 2px; }
+  /* Marque dimensionnée sur la hauteur du bandeau (58px) : sans pastille, le glyphe
+     n'occupe pas tout son viewBox, d'où 34px (contre 30 pour une version encadrée)
+     pour peser autant que le mot à 18px sans écraser les onglets. */
+  .dt-brand .logo-mark { width: 34px; height: 34px; }
   .dt-logo { font-family: 'Spectral', serif; font-size: 18px; font-weight: 700; color: #f7f4ec; letter-spacing: .02em; }
   /* flex-direction/padding explicites : la règle de base `nav { flex-direction: column }`
      visait la sidebar et empilerait sinon les onglets hors du bandeau. */

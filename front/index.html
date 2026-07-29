@@ -6,15 +6,44 @@
   <meta name="theme-color" content="#16304f">
   <title>SP Track</title>
   <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=205">
+  <link rel="apple-touch-icon" href="./icon-192.png?v=205">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-  <link rel="stylesheet" href="./style.css?v=203">
+  <link rel="stylesheet" href="./style.css?v=205">
 </head>
 <body>
+  <!-- Logo SP Track : monogramme SP traversé d'une courbe de marché ascendante.
+       Défini une seule fois ici, réutilisé via <use href="#sp-mark"> (bandeau bureau + sidebar).
+       Sans pastille : les lettres sont posées directement sur le fond marine du bandeau.
+       Couleurs pilotables par variables CSS (héritées dans le shadow DOM du <use>) :
+       --logo-fond   = la couleur du support (sert au halo qui entaille les lettres) ;
+                       à redéfinir si la marque est un jour posée sur un fond clair ;
+       --logo-lettres, --logo-courbe. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="sp-mark" viewBox="0 0 48 48">
+      <text x="24" y="34" text-anchor="middle" font-family="Spectral, Georgia, serif"
+            font-size="30" font-weight="600" fill="var(--logo-lettres, #f7f4ec)">SP</text>
+      <!-- Courbe tracée deux fois : un halo de la couleur du fond d'abord, pour qu'elle
+           TRAVERSE les lettres (les entaille) au lieu de simplement se poser dessus.
+           Halo volontairement fin (3.6) : à 5+ il ampute les lettres et « SP » devient
+           illisible dès qu'on agrandit la marque (vérifié sur l'icône 512).
+           Le premier point est bas (y=36) pour que la courbe passe SOUS l'empattement
+           gauche du S : plus haut, elle en détachait un fragment isolé, très visible en
+           512. Toute retouche du tracé se revérifie donc à la taille de l'icône. -->
+      <path d="M2.5 36 L12 30.5 L18.5 33 L26.5 19.5 L33 22.5 L45 9.5" fill="none"
+            stroke="var(--logo-fond, #16304f)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2.5 36 L12 30.5 L18.5 33 L26.5 19.5 L33 22.5 L45 9.5" fill="none"
+            stroke="var(--logo-courbe, #c9a96a)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="45" cy="9.5" r="3" fill="var(--logo-fond, #16304f)"/>
+      <circle cx="45" cy="9.5" r="1.9" fill="var(--logo-courbe, #c9a96a)"/>
+    </symbol>
+  </svg>
+
   <div id="app">
     <!-- â”€â”€ Sidebar â”€â”€ -->
     <aside id="sidebar">
       <div class="sidebar-header">
-        <div class="sidebar-logo">SP Track</div>
+        <div class="sidebar-logo"><svg class="logo-mark" aria-hidden="true"><use href="#sp-mark"/></svg><span>Track</span></div>
         <div class="sidebar-sub">App Â· Analyse</div>
       </div>
       <nav id="nav"></nav>
@@ -28,7 +57,10 @@
       </div>
       <!-- â”€â”€ Barre d'onglets bureau (remplace la sidebar sur desktop) â”€â”€ -->
       <div id="desktop-topbar">
-        <div class="dt-brand"><span class="dt-logo">SP Track</span></div>
+        <!-- La marque porte déjà le « SP » : le mot qui la suit n'est donc que « Track »,
+             l'ensemble se lisant « SP Track ». aria-label restitue le nom complet, que le
+             mot soit affiché ou masqué (bandeau étroit, voir style.css). -->
+        <div class="dt-brand" role="img" aria-label="SP Track"><svg class="logo-mark" aria-hidden="true"><use href="#sp-mark"/></svg><span class="dt-logo">Track</span></div>
         <nav id="top-nav"></nav>
         <div class="dt-right"><span class="dt-date"></span></div>
       </div>
@@ -51,11 +83,11 @@
     <div class="rotate-overlay-title">Repassez en mode portrait</div>
     <div class="rotate-overlay-sub">SP Track n'est pas prévu pour le mode paysage.</div>
   </div>
-  <script src="./data.js?v=203"></script>
-  <script src="./api.js?v=203"></script>
-  <script src="./autocall.js?v=203"></script>
-  <script src="./chart.js?v=203"></script>
-  <script src="./pages.js?v=203"></script>
-  <script src="./app.js?v=203"></script>
+  <script src="./data.js?v=205"></script>
+  <script src="./api.js?v=205"></script>
+  <script src="./autocall.js?v=205"></script>
+  <script src="./chart.js?v=205"></script>
+  <script src="./pages.js?v=205"></script>
+  <script src="./app.js?v=205"></script>
 </body>
 </html>
