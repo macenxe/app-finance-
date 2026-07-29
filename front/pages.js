@@ -1492,8 +1492,14 @@ function renderUcCompareChips(u, extras, state) {
   return `<div class="cmp-chips uc-compare-chips" id="uc-compare-chips">${chips}${bouton}${picker}</div>`;
 }
 
-function renderUCPanneau(u, ucPerfs, state) {
+// opts.chartId / opts.compoId : identifiants des conteneurs de graphique et de composition
+// comparée. La feuille mobile en utilise d'autres que le panneau de page — celui-ci reste dans
+// le DOM même masqué (.ac-col-detail{display:none}), et getElementById aurait servi le sien,
+// laissant la feuille vide. Même parade que la fiche Autocall (detail-chart-inline-sheet).
+function renderUCPanneau(u, ucPerfs, state, opts = {}) {
   if (!u) return '<div class="ac-detail-vide">Sélectionnez une unité de compte pour afficher sa fiche.</div>';
+  const chartId = opts.chartId || 'uc-chart-inline';
+  const compoId = opts.compoId || 'uc-compo-cmp';
   const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
   const extras = ((state && state.ucCompare) || [])
     .filter(isin => isin !== u.isin)
@@ -1528,7 +1534,7 @@ function renderUCPanneau(u, ucPerfs, state) {
         <div class="fe-collapse-inner">${strategieBlocs}</div>
       </div>` : strategieBlocs;
   return `
-  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}">
+  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}" data-chart-id="${chartId}" data-compo-id="${compoId}">
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>
@@ -1541,8 +1547,24 @@ function renderUCPanneau(u, ucPerfs, state) {
     </div>
     ${renderUcCompareChips(u, extras, state)}
     ${strategieSection}
-    <div id="uc-chart-inline" class="detail-chart-inline"></div>
-    ${extras.length ? `<div id="uc-compo-cmp" class="uc-compo-cmp"></div>` : ''}
+    <div id="${chartId}" class="detail-chart-inline"></div>
+    ${extras.length ? `<div id="${compoId}" class="uc-compo-cmp"></div>` : ''}
+  </div>`;
+}
+
+// Mobile : la fiche UC s'ouvre en feuille modale, avec exactement le contenu du panneau bureau
+// (puces « Comparer », stratégie, graphique, composition comparée) — même fonction de rendu, donc
+// aucune divergence possible entre les deux. majUCSheet (app.js) re-rend #uc-sheet-corps en place
+// à chaque ajout/retrait d'UC comparée, avec ces mêmes identifiants de conteneurs.
+// (identifiant nu côté app.js : un const de haut niveau n'est pas exposé sur `window`)
+const UC_SHEET_IDS = { chartId: 'uc-chart-inline-sheet', compoId: 'uc-compo-cmp-sheet' };
+function renderUCSheet(u, ucPerfs, state) {
+  return `
+  <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerUC()">
+    <div class="sheet-panel">
+      <div class="sheet-handle"></div>
+      <div class="uc-sheet-corps" id="uc-sheet-corps">${renderUCPanneau(u, ucPerfs, state, UC_SHEET_IDS)}</div>
+    </div>
   </div>`;
 }
 
@@ -1557,7 +1579,7 @@ function renderUCPanneau(u, ucPerfs, state) {
 function initSheetDrag(panel, onClose) {
   const handle = panel && panel.querySelector('.sheet-handle');
   if (!handle) return;
-  const content = panel.querySelector('.detail-content, .modal-body');
+  const content = panel.querySelector('.detail-content, .uc-sheet-corps, .modal-body');
   const SEUIL_FERMETURE = 90;
   const SEUIL_DEPLI = 40;
   const SEUIL_DECISION = 8;

@@ -285,6 +285,40 @@ const App = (() => {
     });
   }
 
+  // Graphique + composition d'une fiche UC, d'après les attributs data-* portés par le panneau.
+  // Partagé par le panneau permanent du bureau et la feuille modale du mobile : les deux rendent
+  // le même markup (renderUCPanneau), seuls les ids de conteneurs diffèrent (voir plus bas).
+  // Dès qu'une (ou plusieurs) UC sont ajoutées via les puces « Comparer », le graphique passe en
+  // mode comparaison base 100 (comme le comparateur d'indices du tableau de bord) et la
+  // composition simple fait place à un comparatif carte par carte (Chart.comparerCompo).
+  function initChartUC(panneau) {
+    if (!panneau || !window.Chart) return;
+    const gid = panneau.getAttribute('data-graph');
+    const isin = panneau.getAttribute('data-uc');
+    const compareIsins = (panneau.getAttribute('data-compare') || '').split(',').filter(Boolean);
+    if (!gid) return;
+    // Conteneurs propres à ce panneau : la feuille mobile et le panneau de page coexistent dans
+    // le DOM (celui-ci reste rendu, juste masqué), donc ils ne peuvent pas partager leurs ids.
+    const chartId = panneau.getAttribute('data-chart-id') || 'uc-chart-inline';
+    const compoId = panneau.getAttribute('data-compo-id') || 'uc-compo-cmp';
+    const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+    const u = uc.find(x => x.isin === isin);
+    if (compareIsins.length) {
+      const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
+      const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
+      // Bureau : graphique plus bas que le gabarit commun, car le comparatif de composition
+      // vient s'ajouter sous la courbe dans le même panneau. Mobile : conteneur étroit, le viewBox
+      // 640 de large y est réduit d'autant — même valeur qu'au comparateur du tableau de bord.
+      Chart.comparer(chartId, series, { vbh: estBureau() ? 215 : 300 });
+      if (Chart.comparerCompo) {
+        const items = [{ isin, nom: u ? u.nom : '' }, ...extras.map(e => ({ isin: e.isin, nom: e.nom }))];
+        Chart.comparerCompo(compoId, items);
+      }
+    } else {
+      Chart.ouvrirInline(chartId, gid, u ? u.nom : '', { sous: u ? u.categorie : '', compoIsin: isin });
+    }
+  }
+
   // Réinstalle le graphique du panneau de détail après un re-rendu (le conteneur fait partie
   // de la page en bureau : un renderPage le vide, contrairement à la feuille modale).
   // On lit l'ISIN affiché sur le panneau : sans sélection explicite, il montre le 1er produit.
@@ -292,32 +326,7 @@ const App = (() => {
     if (!estBureau()) return;
     const panneau = document.querySelector('.ac-detail-panneau');
     if (!panneau) return;
-    // Page Fonds : graphique + composition de l'UC sélectionnée. Dès qu'une (ou plusieurs) UC
-    // sont ajoutées via les puces « Comparer », le graphique passe en mode comparaison base 100
-    // (comme le comparateur d'indices du tableau de bord) et la composition simple fait place à
-    // un comparatif carte par carte (Chart.comparerCompo) sous le graphique.
-    if (state.page === 'contrats') {
-      const gid = panneau.getAttribute('data-graph');
-      const isin = panneau.getAttribute('data-uc');
-      const compareIsins = (panneau.getAttribute('data-compare') || '').split(',').filter(Boolean);
-      if (!gid || !window.Chart) return;
-      const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
-      const u = uc.find(x => x.isin === isin);
-      if (compareIsins.length) {
-        const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
-        const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
-        // Graphique plus bas qu'au gabarit commun : en comparaison, le comparatif de
-        // composition (#uc-compo-cmp) vient s'ajouter sous la courbe dans le même panneau.
-        Chart.comparer('uc-chart-inline', series, { vbh: 215 });
-        if (Chart.comparerCompo) {
-          const items = [{ isin, nom: u ? u.nom : '' }, ...extras.map(e => ({ isin: e.isin, nom: e.nom }))];
-          Chart.comparerCompo('uc-compo-cmp', items);
-        }
-      } else {
-        Chart.ouvrirInline('uc-chart-inline', gid, u ? u.nom : '', { sous: u ? u.categorie : '', compoIsin: isin });
-      }
-      return;
-    }
+    if (state.page === 'contrats') { initChartUC(panneau); return; }
     if (state.page !== 'prod') return;
     const isins = panneau.getAttribute('data-isins');
     if (isins) {
@@ -361,6 +370,34 @@ const App = (() => {
     backdrop.classList.add('sheet-open');
     const panel = backdrop.querySelector('.sheet-panel');
     if (panel && typeof initSheetDrag === 'function') initSheetDrag(panel, fermerSheet);
+  }
+
+  // Feuille UC (mobile) : re-rend son contenu en place. Les puces « Comparer » ne peuvent pas
+  // passer par renderPage — le panneau vit dans #modal-root, pas dans la page.
+  // Quand le graphique ne change pas (ouverture du sélecteur, dépliage de la stratégie), on
+  // replante le conteneur existant dans le nouveau markup plutôt que de rappeler initChartUC :
+  // le tracé reste affiché et l'historique n'est pas re-téléchargé.
+  function majUCSheet() {
+    const host = document.getElementById('uc-sheet-corps');
+    if (!host) return false;
+    const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
+    const u = uc.find(x => x.isin === state.ucSel);
+    if (!u) return false;
+    const signature = (el) => el ? el.getAttribute('data-graph') + '|' + (el.getAttribute('data-compare') || '') : null;
+    const ancien = host.querySelector('.ac-detail-panneau');
+    const sig = signature(ancien);
+    const chart = ancien && ancien.querySelector('#' + UC_SHEET_IDS.chartId);
+    const compo = ancien && ancien.querySelector('#' + UC_SHEET_IDS.compoId);
+    host.innerHTML = renderUCPanneau(u, ucPerfsCache, state, UC_SHEET_IDS);
+    const panneau = host.querySelector('.ac-detail-panneau');
+    if (sig && sig === signature(panneau) && chart) {
+      panneau.querySelector('#' + UC_SHEET_IDS.chartId).replaceWith(chart);
+      const cible = panneau.querySelector('#' + UC_SHEET_IDS.compoId);
+      if (cible && compo) cible.replaceWith(compo);
+      return true;
+    }
+    initChartUC(panneau);
+    return true;
   }
 
   function fermerSheet() {
@@ -669,7 +706,7 @@ const App = (() => {
         const host = document.getElementById('uc-compare-chips');
         if (host && !host.contains(e.target)) {
           state = { ...state, ucComparePickerOuvert: false };
-          renderPage(true);
+          if (!majUCSheet()) renderPage(true);
         }
       }
     });
@@ -732,21 +769,25 @@ const App = (() => {
         if (carte) carte.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     },
-    // Puces « Comparer » du panneau UC (page Fonds € & UC, bureau uniquement) : ajoutent d'autres
-    // UC sur le graphique de l'UC actuellement ouverte (state.ucSel), sans carte séparée.
+    // Puces « Comparer » de la fiche UC (page Fonds € & UC) : ajoutent d'autres UC sur le
+    // graphique de l'UC actuellement ouverte (state.ucSel), sans carte séparée. Bureau : panneau
+    // de droite re-rendu avec la page. Mobile : feuille modale re-rendue en place (majUCSheet).
     toggleUcComparePicker() {
       state = { ...state, ucComparePickerOuvert: !state.ucComparePickerOuvert };
+      if (majUCSheet()) return;
       renderPage(true);
     },
     ajouterUcCompare(isin) {
       const set = new Set(state.ucCompare || []);
       set.add(isin);
       state = { ...state, ucCompare: [...set], ucComparePickerOuvert: false };
+      if (majUCSheet()) return;
       renderPage(true);
     },
     retirerUcCompare(isin) {
       const reste = (state.ucCompare || []).filter(i => i !== isin);
       state = { ...state, ucCompare: reste };
+      if (majUCSheet()) return;
       renderPage(true);
     },
     setNewsTheme(theme) {
@@ -765,10 +806,11 @@ const App = (() => {
       sauvegarderEtat();
       renderPage(true);
     },
-    // Bandeau dépliable « Stratégie des fonds » du panneau UC (bureau) quand plusieurs UC sont
-    // comparées : replié par défaut pour ne pas repousser le graphique sous la ligne de flottaison.
+    // Bandeau dépliable « Stratégie des fonds » de la fiche UC quand plusieurs UC sont comparées :
+    // replié par défaut pour ne pas repousser le graphique sous la ligne de flottaison.
     toggleUcStrategie() {
       state = { ...state, ucStrategieOuvert: !state.ucStrategieOuvert };
+      if (majUCSheet()) return;
       renderPage(true);
     },
     voirDetail(isin) {
@@ -826,21 +868,23 @@ const App = (() => {
     clicActif(id) {
       App.toggleSerieCmp(id);
     },
-    ouvrirGraphiqueUC(isin) {
-      if (!window.Chart) return;
-      const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
-      const strategie = (u && typeof ucStrategieTxt === 'function') ? ucStrategieTxt(u) : '';
-      if (u && u.graphId) Chart.ouvrir(u.graphId, u.nom, { sous: u.categorie, compoIsin: u.isin, sheet: true, strategie });
-    },
-    // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : feuille modale (inchangé).
+    // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : même fiche, en feuille modale
+    // (elle porte donc aussi les puces « Comparer », la stratégie et la composition comparée).
     ouvrirUC(isin) {
-      if (!estBureau()) { App.ouvrirGraphiqueUC(isin); return; }
       // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
       // affiché, pas sur une sélection indépendante.
       state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
+      if (!estBureau()) {
+        const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
+        if (!u) return;
+        ouvrirSheet(renderUCSheet(u, ucPerfsCache, state));
+        initChartUC(document.querySelector('#uc-sheet-corps .ac-detail-panneau'));
+        return;
+      }
       sauvegarderEtat();
       renderPage(true);
     },
+    fermerUC() { fermerSheet(); },
     fermerModal() {
       const root = document.getElementById('modal-root');
       if (root) root.innerHTML = '';

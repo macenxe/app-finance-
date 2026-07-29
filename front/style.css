@@ -706,8 +706,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 
 /* Résumé de la stratégie du fonds : juste sous l'identité de l'UC, avant le graphique — le
    texte descriptif s'y lit en premier, puis viennent les données chiffrées (courbe, répartition).
-   Non scopé bureau/mobile : utilisé par le panneau bureau (.ac-detail-panneau) ET la feuille
-   modale mobile (Chart.ouvrir avec compoIsin, voir chart.js). */
+   Non scopé bureau/mobile : le panneau bureau et la feuille modale mobile rendent tous les deux
+   renderUCPanneau (pages.js). */
 .uc-strategie {
   background: #f7f4ec; border: 1px solid #ece7dc; border-radius: 8px;
   padding: 12px 16px; margin-bottom: 12px; font-size: 12.5px; color: #5b5450; line-height: 1.5;
@@ -750,6 +750,47 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 }
 .uc-compo-cmp-nom { font-size: 12.5px; font-weight: 700; color: #16304f; margin-bottom: 8px; }
 .uc-compo-cmp-carte .compo-titre:first-of-type { margin-top: 0; }
+
+/* ── Puces d'ajout/retrait des UC comparées + son sélecteur ──
+   Non scopées bureau : la fiche UC mobile (feuille modale) affiche les mêmes puces. */
+.cmp-chips { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; margin-bottom: 6px; position: relative; }
+.cmp-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  height: 21px; padding: 0 7px 0 9px; border-radius: 11px;
+  background: #f2ede0; font-size: 10.5px; font-weight: 600; color: #5b5450;
+  white-space: nowrap;
+}
+.cmp-chip-retirer {
+  display: flex; align-items: center; justify-content: center;
+  width: 13px; height: 13px; border-radius: 50%; border: none; padding: 0;
+  background: rgba(90,80,70,.14); color: #7a6f60; font-size: 9px; line-height: 1; cursor: pointer;
+  font-family: inherit; transition: background .12s, color .12s;
+}
+.cmp-chip-retirer:hover { background: #9a3535; color: #fff; }
+.cmp-chip-ajouter {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 21px; padding: 0 9px; border-radius: 11px;
+  border: 1px dashed #c9bfa8; background: none; font-size: 10.5px; font-weight: 600; color: #9a7b3c;
+  cursor: pointer; font-family: inherit; transition: background .12s, border-color .12s;
+}
+.cmp-chip-ajouter:hover { background: #f7f1e3; border-color: #9a7b3c; }
+.cmp-picker {
+  position: absolute; top: 27px; left: 50%; transform: translateX(-50%); z-index: 8; width: 220px;
+  background: #fff; border: 1px solid #e6ddc8; border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(22,48,79,.14); padding: 6px; max-height: 260px; overflow-y: auto;
+}
+.cmp-picker-groupe { font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: #b5ab95; font-weight: 700; padding: 6px 8px 3px; }
+.cmp-picker-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px;
+  font-size: 12px; color: #3a3d42; cursor: pointer; transition: background .1s;
+}
+.cmp-picker-item:hover { background: #f7f4ec; }
+.cmp-picker-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.cmp-picker-vide { padding: 10px 8px; font-size: 11.5px; color: #9a8f7a; text-align: center; }
+
+/* Puces « Comparer » de la fiche UC : alignées à gauche, sous l'entête. */
+.uc-compare-chips { justify-content: flex-start; margin-bottom: 14px; }
+.cmp-chip--principal { background: #eef2f7; color: #16304f; padding: 0 9px; }
 
 /* ── Page F€ & UC ── */
 .fe-contrats { font-size: 11.5px; color: #9a8f7a; margin-bottom: 14px; }
@@ -1122,46 +1163,6 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .cmp-card #cmp-indices { flex: 1; display: flex; flex-direction: column; min-height: 0; }
   .cmp-card .chart-periodes-cmp { margin-top: auto; padding-top: 6px; }
 
-  /* ── Chips d'ajout/retrait des séries comparées (tableau de bord uniquement) ── */
-  .cmp-chips { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; margin-bottom: 6px; position: relative; }
-  .cmp-chip {
-    display: inline-flex; align-items: center; gap: 5px;
-    height: 21px; padding: 0 7px 0 9px; border-radius: 11px;
-    background: #f2ede0; font-size: 10.5px; font-weight: 600; color: #5b5450;
-    white-space: nowrap;
-  }
-  .cmp-chip-retirer {
-    display: flex; align-items: center; justify-content: center;
-    width: 13px; height: 13px; border-radius: 50%; border: none; padding: 0;
-    background: rgba(90,80,70,.14); color: #7a6f60; font-size: 9px; line-height: 1; cursor: pointer;
-    font-family: inherit; transition: background .12s, color .12s;
-  }
-  .cmp-chip-retirer:hover { background: #9a3535; color: #fff; }
-  .cmp-chip-ajouter {
-    display: inline-flex; align-items: center; gap: 4px;
-    height: 21px; padding: 0 9px; border-radius: 11px;
-    border: 1px dashed #c9bfa8; background: none; font-size: 10.5px; font-weight: 600; color: #9a7b3c;
-    cursor: pointer; font-family: inherit; transition: background .12s, border-color .12s;
-  }
-  .cmp-chip-ajouter:hover { background: #f7f1e3; border-color: #9a7b3c; }
-  .cmp-picker {
-    position: absolute; top: 27px; left: 50%; transform: translateX(-50%); z-index: 8; width: 220px;
-    background: #fff; border: 1px solid #e6ddc8; border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(22,48,79,.14); padding: 6px; max-height: 260px; overflow-y: auto;
-  }
-  .cmp-picker-groupe { font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: #b5ab95; font-weight: 700; padding: 6px 8px 3px; }
-  .cmp-picker-item {
-    display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px;
-    font-size: 12px; color: #3a3d42; cursor: pointer; transition: background .1s;
-  }
-  .cmp-picker-item:hover { background: #f7f4ec; }
-  .cmp-picker-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
-  .cmp-picker-vide { padding: 10px 8px; font-size: 11.5px; color: #9a8f7a; text-align: center; }
-
-  /* ── Puces « Comparer » du panneau UC (page Fonds € & UC) : alignées à gauche, sous l'entête ── */
-  .uc-compare-chips { justify-content: flex-start; margin-bottom: 14px; }
-  .cmp-chip--principal { background: #eef2f7; color: #16304f; padding: 0 9px; }
-
   /* ── Actualités : fil + colonne de filtres par thème ── */
   .news-split { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; align-items: start; }
   .news-col-fil { min-width: 0; }
@@ -1365,6 +1366,31 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .chart-body { padding: 14px 16px 16px; }
   .chart-prix { font-size: 23px; }
   .chart-per { padding: 6px 9px; font-size: 11.5px; }
+  /* Boutons de période centrés sous le tracé (comme en bureau) : alignés à gauche, ils laissaient
+     un vide à droite d'autant plus visible que la carte est étroite. */
+  .chart-periodes { justify-content: center; }
+
+  /* ── Fiche UC en feuille modale ──
+     Même contenu que le panneau bureau (renderUCPanneau) : puces « Comparer », stratégie,
+     graphique, composition comparée. Les styles de .ac-detail-panneau étant scopés bureau, on
+     redonne ici le strict nécessaire — l'entête d'identité et le conteneur défilable. */
+  .uc-sheet-corps { overflow-y: auto; flex: 1; padding: 10px 16px 30px; }
+  .uc-sheet-corps .ac-detail-entete {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid #ece7dc;
+  }
+  .uc-sheet-corps .ac-detail-id { min-width: 0; }
+  .uc-sheet-corps .ac-detail-titre { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; color: #16304f; line-height: 1.25; }
+  .uc-sheet-corps .ac-detail-sous { font-size: 11.5px; color: #9a8f7a; margin-top: 4px; }
+  .uc-sheet-corps .ac-detail-niveau { text-align: right; flex: none; }
+  .uc-sheet-corps .ac-detail-niveau-val { font-family: 'Spectral', serif; font-size: 20px; font-weight: 700; color: #16304f; line-height: 1.1; }
+  .uc-sheet-corps .ac-detail-niveau-delta { font-size: 11px; font-weight: 600; margin-top: 2px; }
+  .uc-sheet-corps .ac-detail-niveau-delta.green { color: #1d6f4c; }
+  .uc-sheet-corps .ac-detail-niveau-delta.red   { color: #9a3535; }
+  /* Comparatif de composition : une carte de fonds par ligne (3 colonnes en bureau). */
+  .uc-compo-cmp-grid { grid-template-columns: 1fr; }
+  /* Sélecteur d'UC à comparer : jamais plus large que l'écran, et ancré sous les puces. */
+  .cmp-picker { width: min(240px, calc(100vw - 64px)); left: 0; transform: none; }
 
   /* ── Page détail mobile ── */
   .detail-content { padding: 12px 14px 30px; }
