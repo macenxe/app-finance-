@@ -1266,18 +1266,24 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      .ac-tabs reste un enfant flex sans flex-grow : il garde sa largeur de contenu et le
      `justify-content:center` de .ac-toolbar le centre dans la colonne. */
   .ac-toolbar { justify-content: center; margin-bottom: 10px; }
+  /* Socle blanc à filet fin plutôt qu'un aplat crème : sur un fond de page déjà chaud (#fbfaf7),
+     un socle beige (#efe9dc) formait une masse lourde. Le blanc bordé reprend le traitement des
+     cartes de la liste — le contrôle se rattache visuellement à ce qu'il filtre, et c'est le
+     contraste de l'onglet marine qui porte l'accent, plus le socle.
+     Rayons concentriques : 10px extérieur − 3px de padding = 7px intérieur. */
   .ac-tabs {
-    background: #efe9dc; border-radius: 9px; padding: 4px; gap: 4px; flex-wrap: nowrap;
+    background: #fff; border: 1px solid #e9e3d5; border-radius: 10px; padding: 3px; gap: 2px;
+    flex-wrap: nowrap; box-shadow: 0 1px 2px rgba(22, 48, 79, .045);
   }
   .ac-tabs .filter-chip {
     background: transparent; border-color: transparent; color: #6b6e73;
-    font-size: 12.5px; font-weight: 600; padding: 7px 17px; border-radius: 6px;
+    font-size: 12.5px; font-weight: 600; padding: 7px 17px; border-radius: 7px;
     transition: background .14s, color .14s;
   }
-  .ac-tabs .filter-chip:hover { background: rgba(255, 255, 255, .72); color: #16304f; }
+  .ac-tabs .filter-chip:hover { background: #f7f4ec; color: #16304f; }
   .ac-tabs .filter-chip.active {
     background: #16304f; color: #fff; border-color: #16304f;
-    box-shadow: 0 1px 3px rgba(22, 48, 79, .28);
+    box-shadow: 0 1px 2px rgba(22, 48, 79, .22);
   }
   /* Légende et indicateur de tri centrés eux aussi : les trois forment la tête de la colonne,
      en laisser un aligné à gauche sous des filtres centrés la déséquilibrait.
