@@ -1259,8 +1259,35 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      la hauteur de la fenêtre — pas besoin d'accorder deux hauteurs magiques (calc(100vh - Npx)). */
   .ac-col-liste { display: flex; flex-direction: column; min-height: 0; }
   .ac-col-liste > *:not(.ac-list):not(.uc-liste) { flex: none; }
-  .ac-toolbar { justify-content: flex-start; margin-bottom: 9px; }
-  .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: flex-start; gap: 5px 12px; margin-bottom: 9px; }
+  /* Filtres de famille : centrés en tête de colonne et traités en sélecteur segmenté (un socle
+     crème qui regroupe les 4 onglets) plutôt qu'en 4 boutons blancs bordés isolés — sur un fond
+     de page déjà crème, ces derniers se confondaient avec les cartes de la liste. Le socle donne
+     un bloc unique qui se lit d'un coup, et l'onglet actif ressort en marine plein.
+     .ac-tabs reste un enfant flex sans flex-grow : il garde sa largeur de contenu et le
+     `justify-content:center` de .ac-toolbar le centre dans la colonne. */
+  .ac-toolbar { justify-content: center; margin-bottom: 10px; }
+  .ac-tabs {
+    background: #efe9dc; border-radius: 9px; padding: 4px; gap: 4px; flex-wrap: nowrap;
+  }
+  .ac-tabs .filter-chip {
+    background: transparent; border-color: transparent; color: #6b6e73;
+    font-size: 12.5px; font-weight: 600; padding: 7px 17px; border-radius: 6px;
+    transition: background .14s, color .14s;
+  }
+  .ac-tabs .filter-chip:hover { background: rgba(255, 255, 255, .72); color: #16304f; }
+  .ac-tabs .filter-chip.active {
+    background: #16304f; color: #fff; border-color: #16304f;
+    box-shadow: 0 1px 3px rgba(22, 48, 79, .28);
+  }
+  /* Légende et indicateur de tri centrés eux aussi : les trois forment la tête de la colonne,
+     en laisser un aligné à gauche sous des filtres centrés la déséquilibrait.
+     Le sélecteur `.ac-legend + .uc-sort-banner` limite le centrage à l'Autocall : la page Fonds
+     partage .uc-sort-banner mais n'a pas de légende, son bandeau reste donc aligné à gauche. */
+  .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: center; gap: 5px 12px; margin-bottom: 9px; }
+  /* `justify-content` et non `text-align` : .uc-sort-banner est un conteneur flex, son texte nu
+     y devient un élément flex anonyme que text-align ne déplace pas (vérifié : calculé à
+     `center` sans effet visible). */
+  .ac-legend + .uc-sort-banner { justify-content: center; }
   /* La liste défile seule : la fiche de droite reste visible en permanence. */
   .ac-list {
     display: flex; flex-direction: column; gap: 10px;
