@@ -21,9 +21,12 @@ const Chart = (() => {
   const PERIODES_COMPACT = PERIODES.filter(p => !['1j', '1s', '3a'].includes(p.key));
   const DEFAUT = '1a';
 
-  // Géométrie du tracé (unités viewBox).
+  // Géométrie du tracé (unités viewBox). VBH n'est que la hauteur PAR DÉFAUT : une instance peut
+  // la changer via opts.vbh (ouvrirInline / comparer), auquel cas dessiner() recalcule sa propre
+  // hauteur de tracé. Seule la largeur est vraiment commune — c'est elle qui fixe l'échelle
+  // horizontale utilisée par le survol.
   const VBW = 640, VBH = 300, padL = 14, padR = 14, padT = 16, padB = 26;
-  const plotW = VBW - padL - padR, plotH = VBH - padT - padB;
+  const plotW = VBW - padL - padR;
 
   let etat = { ticker: null, label: '', periode: DEFAUT, points: [], geo: null };
 
@@ -52,6 +55,7 @@ const Chart = (() => {
       compoIsin: opts.compoIsin || null, sheet: !!opts.sheet, dateOnly, periodes,
       strategie: opts.strategie || '',
       rebase: opts.rebase || null,
+      vbh: VBH,
     };
     const root = document.getElementById('modal-root');
     if (!root) return;
@@ -183,6 +187,13 @@ const Chart = (() => {
     if (min === max) { min -= 1; max += 1; }
     const marge = (max - min) * 0.08; min -= marge; max += marge;
 
+    // Hauteur du viewBox propre à cette instance (cf. VBH plus haut) : la fiche Autocall du
+    // bureau demande un tracé plus haut que le gabarit commun, pour remplir son panneau au lieu
+    // d'y laisser une bande écrasée. Tous les calculs de Y en dépendent, y compris les libellés
+    // positionnés en pourcentage de la hauteur (.chart-hl, .chart-ligne-lab).
+    const vbh = etat.vbh || VBH;
+    const plotH = vbh - padT - padB;
+
     const X = i => padL + (i / (n - 1)) * plotW;
     const Y = c => padT + (1 - (c - min) / (max - min)) * plotH;
 
@@ -201,7 +212,7 @@ const Chart = (() => {
 
     // Repères fins aux strikes / barrières.
     const strikesSvg = lignes.map(l => `<line x1="${padL}" y1="${Y(l.valeur).toFixed(1)}" x2="${VBW - padR}" y2="${Y(l.valeur).toFixed(1)}" stroke="${l.couleur}" stroke-width="1" stroke-dasharray="4 3" opacity="0.85"/>`).join('');
-    const strikesLab = lignes.map(l => `<span class="chart-ligne-lab chart-anim-lab" style="top:${(Y(l.valeur) / VBH * 100).toFixed(2)}%;color:${l.couleur}">${l.label} ${fmtPrix(l.valeur)}</span>`).join('');
+    const strikesLab = lignes.map(l => `<span class="chart-ligne-lab chart-anim-lab" style="top:${(Y(l.valeur) / vbh * 100).toFixed(2)}%;color:${l.couleur}">${l.label} ${fmtPrix(l.valeur)}</span>`).join('');
 
     // Dernier point : reçoit la pastille d'arrivée (apparaît quand le tracé finit de se dérouler).
     const xFin = X(n - 1).toFixed(1), yFin = Y(pts[n - 1].c).toFixed(1);
@@ -211,14 +222,14 @@ const Chart = (() => {
     // rectangle que la CSS étire de gauche à droite (voir style.css « Tracé animé »). Le reste
     // (grille, repères, libellés, pastille finale) arrive en cascade derrière.
     zone.innerHTML = `
-      <svg id="chart-svg" viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg">
+      <svg id="chart-svg" viewBox="0 0 ${VBW} ${vbh}" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="chart-grad" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0" stop-color="${couleur}" stop-opacity="0.16"/>
             <stop offset="1" stop-color="${couleur}" stop-opacity="0"/>
           </linearGradient>
           <clipPath id="chart-clip">
-            <rect class="chart-wipe" x="0" y="0" width="${VBW}" height="${VBH}"/>
+            <rect class="chart-wipe" x="0" y="0" width="${VBW}" height="${vbh}"/>
           </clipPath>
         </defs>
         <g class="chart-anim-grille">${grille}</g>
@@ -231,10 +242,10 @@ const Chart = (() => {
         <circle class="chart-fin-pt" cx="${xFin}" cy="${yFin}" r="3.4" fill="${couleur}" stroke="#fff" stroke-width="1.3"/>
         <line id="chart-cross" x1="0" y1="${padT}" x2="0" y2="${padT + plotH}" class="chart-cross" style="display:none"/>
         <circle id="chart-dot" r="3.6" fill="${couleur}" stroke="#fff" stroke-width="1.4" style="display:none"/>
-        <rect x="0" y="0" width="${VBW}" height="${VBH}" fill="transparent" pointer-events="all"/>
+        <rect x="0" y="0" width="${VBW}" height="${vbh}" fill="transparent" pointer-events="all"/>
       </svg>
-      <span class="chart-hl chart-anim-lab" style="top:${(Y(maxA) / VBH * 100).toFixed(2)}%">${fmtPrix(maxA)}</span>
-      <span class="chart-hl chart-anim-lab" style="top:${(Y(minA) / VBH * 100).toFixed(2)}%">${fmtPrix(minA)}</span>
+      <span class="chart-hl chart-anim-lab" style="top:${(Y(maxA) / vbh * 100).toFixed(2)}%">${fmtPrix(maxA)}</span>
+      <span class="chart-hl chart-anim-lab" style="top:${(Y(minA) / vbh * 100).toFixed(2)}%">${fmtPrix(minA)}</span>
       ${strikesLab}
       <span class="chart-xlab chart-anim-lab chart-anim-lab--tard" style="left:${(padL / VBW * 100).toFixed(2)}%">${fmtDate(pts[0].t, etat.periode)}</span>
       <span class="chart-xlab chart-anim-lab chart-anim-lab--tard" style="right:${(padR / VBW * 100).toFixed(2)}%">${fmtDate(pts[n - 1].t, etat.periode)}</span>`;
@@ -353,6 +364,8 @@ const Chart = (() => {
       lignes: opts.lignes || [], retour: null, sous: opts.sous || '',
       compoIsin: opts.compoIsin || null, inlineId: containerId, dateOnly, periodes,
       rebase: opts.rebase || null,
+      // Hauteur du viewBox propre à cette instance (défaut VBH) — cf. dessiner().
+      vbh: opts.vbh || VBH,
     };
     const el = document.getElementById(containerId);
     if (!el) return;

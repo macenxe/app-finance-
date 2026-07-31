@@ -197,12 +197,20 @@ const App = (() => {
     return !isNaN(n) ? n : (niveauFallback != null ? niveauFallback : null);
   }
 
+  // Hauteur du viewBox du tracé de la fiche Autocall. Le panneau du bureau est bien plus large
+  // que haut : au gabarit commun (640×300) le tracé n'occupait qu'une bande de ~360px pour ~450px
+  // disponibles. 374 comble cette hauteur et adoucit le rapport (2,13:1 → 1,71:1).
+  // Le CSS plafonne la largeur d'après ce même rapport (.chart-zone, cf. le 456 de style.css) :
+  // toute modification ici oblige à recalculer ce plafond. Mobile inchangé (feuille étroite).
+  const VBH_FICHE = 374;
+
   function initChartDetail(p, containerId = 'detail-chart-inline') {
     if (!window.Chart) return;
     const ticker = chartTickerPour(p);
     Chart.ouvrirInline(containerId, ticker, p.nom, {
       lignes: lignesPour(p), sous: p.sjLabel || p.sj,
       rebase: rebaseESBanks(ticker, p.niveauNum),
+      vbh: estBureau() ? VBH_FICHE : undefined,
     });
   }
 
@@ -282,6 +290,7 @@ const App = (() => {
     Chart.ouvrirInline(containerId, tickerRef, ref.nom, {
       lignes, sous: ref.sjLabel || ref.sj,
       rebase: rebaseESBanks(tickerRef, ref.niveauNum),
+      vbh: estBureau() ? VBH_FICHE : undefined,
     });
   }
 

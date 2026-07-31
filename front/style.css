@@ -1234,8 +1234,20 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      page), et aucune des deux ne fait défiler la page — chacune gère son propre défilement.
      Le retrait couvre : barre d'onglets (58) + décalage de #content (4) + paddings haut/bas de
      .page-body (12 + 14). */
+  /* Largeur de la colonne de gauche : proportionnelle à la fenêtre plutôt que fixe à 440px —
+     à 1440px la fiche de droite faisait 930px pour 440px de liste (rapport 32/68), tout y était
+     étiré (paragraphe sur 870px, graphique 863×405, récapitulatif avec 180px entre la clé et sa
+     valeur). Le clamp borne les deux extrêmes : jamais moins de 500px (les cartes deviendraient
+     illisibles sous 1366px) et jamais plus de 640px (au-delà la liste ne gagne plus rien, autant
+     rendre la largeur au graphique).
+     Le `min(…, 46%)` extérieur n'entre en jeu qu'en fenêtre étroite (navigateur en demi-écran,
+     ~1000px et moins) : là, le plancher de 500px laisserait moins de 350px à la fiche. Il fait
+     alors repasser la liste sous la barre des 46 %, pour que les deux colonnes se réduisent
+     ensemble au lieu que la fiche encaisse seule. */
   .ac-split {
-    display: grid; grid-template-columns: 440px minmax(0, 1fr); gap: 18px; align-items: stretch;
+    display: grid;
+    grid-template-columns: min(clamp(500px, 38%, 640px), 46%) minmax(0, 1fr);
+    gap: 18px; align-items: stretch;
     height: calc(100vh - 88px); min-height: 420px;
   }
   .ac-col-liste, .ac-col-detail { min-width: 0; min-height: 0; }
@@ -1358,25 +1370,45 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      ratio viewBox 640×300, donc sa hauteur est liée à sa largeur — voir .chart-zone plus bas).
      `:not([data-uc])` : la fiche UC réutilise .detail-chart-inline avec sa propre mise en page
      (composition sous la courbe) — sans ce garde, le centrage flex l'y comprimait et faisait
-     déborder le graphique hors de sa carte. */
+     déborder le graphique hors de sa carte.
+     La carte du graphique est une GRILLE et non plus une colonne flex : le cours et les boutons
+     de période partagent la première ligne (cours à gauche, périodes à droite), le tracé occupe
+     la seconde sur toute la largeur. Ça rend ~32px de hauteur au tracé et ça occupe la largeur
+     par de la structure plutôt qu'en étirant une ligne de boutons centrée sur 800px.
+     `flex: 1 1 auto` est conservé : il agit sur ce bloc en tant qu'ENFANT du flex .detail-content
+     (absorber la hauteur restante du panneau), indépendamment du `display:grid` qui, lui, ne
+     concerne que ses propres enfants. */
   .ac-detail-panneau:not([data-uc]) .detail-chart-inline {
     order: 2; flex: 1 1 auto; min-width: 0; min-height: 0; width: auto; margin: 0;
-    padding: 12px 16px 8px; display: flex; flex-direction: column; justify-content: center;
+    padding: 12px 16px 12px;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr); column-gap: 18px;
   }
+  .ac-detail-panneau:not([data-uc]) .chart-readout  { grid-column: 1; grid-row: 1; align-self: center; }
+  .ac-detail-panneau:not([data-uc]) .chart-periodes { grid-column: 2; grid-row: 1; align-self: center; margin: 0; flex-wrap: nowrap; }
+  .ac-detail-panneau:not([data-uc]) .chart-compo    { grid-column: 1 / -1; grid-row: 3; }
   /* Le tracé est plafonné en LARGEUR d'après la hauteur d'écran disponible (sa hauteur suit
-     ensuite toute seule, `svg { height:auto }` et le ratio 640×300 du viewBox), puis centré.
+     ensuite toute seule, `svg { height:auto }` et le rapport du viewBox), puis centré.
      Sans ce plafond, un tracé pleine largeur pousse le récapitulatif hors de l'écran sur un
      écran de 768px de haut.
-     Le 486px retiré = tout ce qui n'est pas le tracé dans la fenêtre (barre d'onglets, entête
-     de fiche, définition du sous-jacent, cours, boutons de période, récapitulatif, marges) —
-     mesuré, à recalculer si l'un de ces blocs change de gabarit.
+     Le 444px retiré = tout ce qui n'est pas le tracé dans la fenêtre (barre d'onglets, entête
+     de fiche, définition du sous-jacent, cours, récapitulatif, marges) — mesuré, à recalculer si
+     l'un de ces blocs change de gabarit. Il valait 486 tant que les boutons de période avaient
+     leur propre ligne sous le tracé ; ils sont désormais sur la ligne du cours (voir ci-dessus).
+     ⚠ Le 374 est la hauteur du viewBox de CETTE fiche (VBH_FICHE dans app.js), pas les 300 du
+     gabarit commun : les deux valeurs vont ensemble, changer l'une impose de refaire l'autre.
      ⚠ Ne PAS plafonner par la hauteur (`aspect-ratio` + `flex:1 1 0`) : dès que la largeur
      devient le facteur limitant (1920×1080), la zone reste à la hauteur allouée par le flex
      alors que le <svg> rétrécit, et les libellés d'axe — positionnés en % de .chart-zone —
      se retrouvent 120px sous la courbe. C'est bien .chart-zone qu'il faut contraindre, et sa
-     hauteur doit rester celle du <svg>. */
+     hauteur doit rester celle du <svg>.
+     align-self:center est l'équivalent grille de l'ancien `justify-content:center` du flex
+     column : sans lui la zone est étirée à la hauteur de sa ligne (1fr) alors que le <svg>
+     garde sa hauteur propre, et les libellés d'axe — ancrés au bas de .chart-zone — décrochent
+     sous la courbe. Invariant à retester : .chart-zone.height === svg.height. */
   .ac-detail-panneau:not([data-uc]) .chart-zone {
-    flex: 0 1 auto; width: min(100%, (100vh - 486px) * 640 / 300); margin: 0 auto;
+    grid-column: 1 / -1; grid-row: 2; align-self: center;
+    flex: 0 1 auto; width: min(100%, (100vh - 444px) * 640 / 374); margin: 0 auto;
   }
   /* Ni le cours ni les boutons de période ne doivent être comprimés quand la place manque :
      sans flex:none, le prix se fait écraser à quelques pixels de haut. */
