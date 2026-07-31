@@ -201,28 +201,43 @@ const Chart = (() => {
 
     // Repères fins aux strikes / barrières.
     const strikesSvg = lignes.map(l => `<line x1="${padL}" y1="${Y(l.valeur).toFixed(1)}" x2="${VBW - padR}" y2="${Y(l.valeur).toFixed(1)}" stroke="${l.couleur}" stroke-width="1" stroke-dasharray="4 3" opacity="0.85"/>`).join('');
-    const strikesLab = lignes.map(l => `<span class="chart-ligne-lab" style="top:${(Y(l.valeur) / VBH * 100).toFixed(2)}%;color:${l.couleur}">${l.label} ${fmtPrix(l.valeur)}</span>`).join('');
+    const strikesLab = lignes.map(l => `<span class="chart-ligne-lab chart-anim-lab" style="top:${(Y(l.valeur) / VBH * 100).toFixed(2)}%;color:${l.couleur}">${l.label} ${fmtPrix(l.valeur)}</span>`).join('');
+
+    // Dernier point : reçoit la pastille d'arrivée (apparaît quand le tracé finit de se dérouler).
+    const xFin = X(n - 1).toFixed(1), yFin = Y(pts[n - 1].c).toFixed(1);
 
     const zone = document.getElementById('chart-zone');
+    // Animation d'apparition : l'aire + la courbe sont dans un groupe clippé par .chart-wipe, un
+    // rectangle que la CSS étire de gauche à droite (voir style.css « Tracé animé »). Le reste
+    // (grille, repères, libellés, pastille finale) arrive en cascade derrière.
     zone.innerHTML = `
       <svg id="chart-svg" viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="chart-grad" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stop-color="${couleur}" stop-opacity="0.16"/>
-          <stop offset="1" stop-color="${couleur}" stop-opacity="0"/>
-        </linearGradient></defs>
-        ${grille}
-        <path d="${aire}" fill="url(#chart-grad)" stroke="none"/>
-        <path d="${d}" fill="none" stroke="${couleur}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
-        ${strikesSvg}
+        <defs>
+          <linearGradient id="chart-grad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="${couleur}" stop-opacity="0.16"/>
+            <stop offset="1" stop-color="${couleur}" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="chart-clip">
+            <rect class="chart-wipe" x="0" y="0" width="${VBW}" height="${VBH}"/>
+          </clipPath>
+        </defs>
+        <g class="chart-anim-grille">${grille}</g>
+        <g clip-path="url(#chart-clip)">
+          <path d="${aire}" fill="url(#chart-grad)" stroke="none"/>
+          <path d="${d}" fill="none" stroke="${couleur}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+        </g>
+        <g class="chart-anim-reperes">${strikesSvg}</g>
+        <circle class="chart-fin-ping" cx="${xFin}" cy="${yFin}" r="3.6" fill="none" stroke="${couleur}" stroke-width="1.3"/>
+        <circle class="chart-fin-pt" cx="${xFin}" cy="${yFin}" r="3.4" fill="${couleur}" stroke="#fff" stroke-width="1.3"/>
         <line id="chart-cross" x1="0" y1="${padT}" x2="0" y2="${padT + plotH}" class="chart-cross" style="display:none"/>
         <circle id="chart-dot" r="3.6" fill="${couleur}" stroke="#fff" stroke-width="1.4" style="display:none"/>
         <rect x="0" y="0" width="${VBW}" height="${VBH}" fill="transparent" pointer-events="all"/>
       </svg>
-      <span class="chart-hl" style="top:${(Y(maxA) / VBH * 100).toFixed(2)}%">${fmtPrix(maxA)}</span>
-      <span class="chart-hl" style="top:${(Y(minA) / VBH * 100).toFixed(2)}%">${fmtPrix(minA)}</span>
+      <span class="chart-hl chart-anim-lab" style="top:${(Y(maxA) / VBH * 100).toFixed(2)}%">${fmtPrix(maxA)}</span>
+      <span class="chart-hl chart-anim-lab" style="top:${(Y(minA) / VBH * 100).toFixed(2)}%">${fmtPrix(minA)}</span>
       ${strikesLab}
-      <span class="chart-xlab" style="left:${(padL / VBW * 100).toFixed(2)}%">${fmtDate(pts[0].t, etat.periode)}</span>
-      <span class="chart-xlab" style="right:${(padR / VBW * 100).toFixed(2)}%">${fmtDate(pts[n - 1].t, etat.periode)}</span>`;
+      <span class="chart-xlab chart-anim-lab chart-anim-lab--tard" style="left:${(padL / VBW * 100).toFixed(2)}%">${fmtDate(pts[0].t, etat.periode)}</span>
+      <span class="chart-xlab chart-anim-lab chart-anim-lab--tard" style="right:${(padR / VBW * 100).toFixed(2)}%">${fmtDate(pts[n - 1].t, etat.periode)}</span>`;
 
     etat.geo = { X, Y, n };
     majReadout(n - 1);
@@ -509,19 +524,22 @@ const Chart = (() => {
     // Grille horizontale discrète (haut / milieu / bas), comme le graphique détail.
     const niveaux = [...new Set([max - marge, (min + max) / 2, min + marge])];
     const grille = niveaux.map(v => `<line x1="${padL}" y1="${Y(v).toFixed(1)}" x2="${VBW - padR}" y2="${Y(v).toFixed(1)}" class="chart-cmp-grid"/>`).join('');
-    const ordonnee = niveaux.map(v => `<span class="chart-hl" style="top:${(Y(v) / vbh * 100).toFixed(2)}%">${fmtPrix(v)}</span>`).join('');
+    const ordonnee = niveaux.map(v => `<span class="chart-hl chart-anim-lab" style="top:${(Y(v) / vbh * 100).toFixed(2)}%">${fmtPrix(v)}</span>`).join('');
     // Abscisse : grille verticale discrète (quarts de la période) pour donner une échelle de temps.
     const grilleV = [0.25, 0.5, 0.75].map(f => { const x = padL + f * plotW; return `<line x1="${x.toFixed(1)}" y1="${padT}" x2="${x.toFixed(1)}" y2="${(padT + plotH).toFixed(1)}" class="chart-cmp-grid"/>`; }).join('');
 
+    // Tracé animé : chaque courbe se dessine de son début à sa fin (stroke-dashoffset sur une
+    // longueur normalisée par pathLength="1" — pas besoin de mesurer le chemin en JS), décalée
+    // de 130 ms par série pour que les courbes partent l'une après l'autre. Voir style.css.
     const paths = normes.map((s, idx) => {
       const pts = s.points.map((p, i) => [Xt(p.t), Y(s.vals[i])]);
-      return `<path class="chart-cmp-line" data-serie="${idx}" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+      return `<path class="chart-cmp-line" data-serie="${idx}" style="animation-delay:${(idx * 0.13).toFixed(2)}s" pathLength="1" d="${smoothPathD(pts)}" fill="none" stroke="${s.couleur}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
     }).join('');
     const points = normes.map((s, idx) => `<circle class="chart-cmp-pt" data-serie="${idx}" r="3" fill="${s.couleur}" stroke="#fff" stroke-width="1.3" style="display:none"/>`).join('');
 
     zone.innerHTML = `
       <svg id="chart-cmp-svg" viewBox="0 0 ${VBW} ${vbh}" xmlns="http://www.w3.org/2000/svg">
-        ${grilleV}${grille}${paths}${points}
+        <g class="chart-anim-grille">${grilleV}${grille}</g>${paths}${points}
         <line id="chart-cmp-cross" x1="0" y1="${padT}" x2="0" y2="${padT + plotH}" class="chart-cross" style="display:none"/>
         <rect x="0" y="0" width="${VBW}" height="${vbh}" fill="transparent" pointer-events="all"/>
       </svg>
@@ -533,7 +551,9 @@ const Chart = (() => {
 
     // t : timestamp survolé (ou null = dernier point de chaque série, indépendamment des autres
     // séries — chacune peut avoir une date de dernier point légèrement différente).
-    const rendreLegende = (t) => {
+    // anime : fondu d'entrée en cascade, réservé au PREMIER rendu — la légende est re-rendue à
+    // chaque mouvement de souris, l'animer là ferait clignoter les libellés en continu.
+    const rendreLegende = (t, anime) => {
       if (!leg) return;
       leg.innerHTML = normes.map((s, i) => {
         const j = (t == null) ? s.vals.length - 1 : indexProcheT(s.points, t);
@@ -541,14 +561,16 @@ const Chart = (() => {
         const premier = s.vals[0];
         const perf = premier ? (val - premier) / premier * 100 : 0;
         const perfTxt = (perf >= 0 ? '+' : '') + perf.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-        return `<span class="chart-cmp-item" data-serie="${i}">
+        const cls = 'chart-cmp-item' + (anime ? ' chart-anim-lab' : '');
+        const styleAnim = anime ? ` style="animation-delay:${(i * 0.13).toFixed(2)}s"` : '';
+        return `<span class="${cls}"${styleAnim} data-serie="${i}">
           <span class="chart-cmp-trait" style="background:${s.couleur}"></span>${esc(s.label)}
           <span class="chart-cmp-val tnum">${fmtPrix(val)}</span>
           <span class="chart-cmp-perf ${perf >= 0 ? 'up' : 'down'}">${perfTxt}</span></span>`;
       }).join('');
     };
     etatCmp.rendreLegende = rendreLegende;
-    rendreLegende(null);
+    rendreLegende(null, true);
 
     if (dts) {
       dts.innerHTML = `<span>${fmtDate(tMin, etatCmp.periode)}</span><span id="chart-cmp-date-survol"></span><span>${fmtDate(tMax, etatCmp.periode)}</span>`;

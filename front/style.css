@@ -74,6 +74,41 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 @keyframes chart-fade-in { from { opacity: 0; } to { opacity: 1; } }
 .chart-zone svg { animation: chart-fade-in .35s ease; }
 
+/* ── Tracé animé des graphiques ──
+   Rejoué à chaque (re)tracé : ouverture d'une fiche, changement de période, ajout d'une série
+   au comparateur — c'est-à-dire à chaque fois que dessiner()/dessinerComparaison() réécrit le
+   SVG (chart.js). Deux techniques, selon ce qu'il y a à révéler :
+   · graphique simple (courbe + AIRE dégradée) → rectangle de clip étiré en scaleX. Un
+     stroke-dasharray ne révélerait que le trait, l'aire apparaîtrait d'un bloc ;
+   · graphique comparé (plusieurs traits, sans aire) → stroke-dashoffset sur une longueur
+     normalisée par pathLength="1" (aucune mesure JS de getTotalLength), décalé par série.
+   Puis grille, repères, libellés et pastille d'arrivée entrent en cascade. */
+@keyframes chart-wipe    { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes chart-draw    { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes chart-soft-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes chart-pop-in  { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: scale(1); } }
+@keyframes chart-ping    { from { opacity: .5; transform: scale(.7); } to { opacity: 0; transform: scale(3.6); } }
+
+/* transform-box:fill-box → l'origine du scale est le bord GAUCHE du rectangle, pas celle du
+   viewBox : sans lui le clip se déploierait depuis le centre du SVG. */
+.chart-wipe { transform-box: fill-box; transform-origin: left center; animation: chart-wipe .85s cubic-bezier(.22,.61,.36,1); }
+.chart-cmp-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: chart-draw 1s cubic-bezier(.22,.61,.36,1) forwards; }
+.chart-anim-grille  { animation: chart-soft-in .45s ease backwards; }
+.chart-anim-reperes { animation: chart-soft-in .5s ease .38s backwards; }
+/* Libellés (min/max, barrières, dates, légende comparée) : posés une fois la courbe déroulée. */
+.chart-anim-lab { animation: chart-soft-in .5s ease .6s backwards; }
+.chart-anim-lab--tard { animation-delay: .78s; }
+/* Pastille au dernier point + onde qui s'en échappe une fois — le « point d'arrivée » du tracé. */
+.chart-fin-pt   { transform-box: fill-box; transform-origin: center; animation: chart-pop-in .4s cubic-bezier(.34,1.56,.64,1) .72s backwards; }
+.chart-fin-ping { transform-box: fill-box; transform-origin: center; opacity: 0; animation: chart-ping 1.1s ease-out .8s forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chart-zone svg, .chart-anim-grille, .chart-anim-reperes, .chart-anim-lab, .chart-fin-pt { animation: none; }
+  .chart-wipe { animation: none; }
+  .chart-cmp-line { animation: none; stroke-dasharray: none; stroke-dashoffset: 0; }
+  .chart-fin-ping { display: none; }
+}
+
 /* ── Page header ── */
 .page-header {
   position: sticky; top: 0; z-index: 5;
