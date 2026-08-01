@@ -1499,7 +1499,32 @@ const TRI_LIBELLES = {
   nom: 'nom de fonds', societe: 'société de gestion', categorie: 'catégorie', secteur: 'secteur',
   sri: 'niveau de risque (SRI)', note: 'note Morningstar', ytd: 'performance depuis le 01/01',
   n1: 'performance de l\'année précédente', an: 'performance 1 an', a3: 'performance 3 ans', a5: 'performance 5 ans',
+  maj: 'date d\'actualisation',
 };
+
+// Barre « Comparer », à droite de la ligne de filtres (bureau seul — sur mobile la comparaison
+// reste pilotée depuis la fiche d'un fonds). Deux temps, sur le MÊME bouton :
+//   1er clic  → mode sélection : cliquer une ligne la coche au lieu d'ouvrir sa fiche ;
+//   2e clic   → ouvre la fiche comparée des fonds cochés (le 1er coché porte le graphique).
+// Rendue à part pour qu'App.majBarreCompare() puisse la remplacer seule à chaque coche : un
+// renderPage complet reconstruirait la liste et remonterait son défilement.
+function ucCmpBarreHtml(state) {
+  const sel = (state && state.ucSelection) || [];
+  if (!(state && state.ucModeCompare)) {
+    return `<div class="uc-cmp-barre" id="uc-cmp-barre">
+      <button class="uc-cmp-btn" type="button" onclick="App.toggleModeCompare()"
+        title="Sélectionner plusieurs fonds pour les afficher sur un même graphique, en base 100">Comparer</button>
+    </div>`;
+  }
+  const aide = sel.length === 0 ? 'Cliquez les fonds à comparer'
+    : sel.length === 1 ? '1 fonds sélectionné — il en faut au moins 2'
+    : `${sel.length} fonds sélectionnés`;
+  return `<div class="uc-cmp-barre uc-cmp-barre--choix" id="uc-cmp-barre">
+    <span class="uc-cmp-aide">${aide}</span>
+    <button class="uc-cmp-btn uc-cmp-btn--go" type="button"${sel.length >= 2 ? '' : ' disabled'} onclick="App.lancerComparaison()">Lancer la comparaison</button>
+    <button class="uc-cmp-annuler" type="button" onclick="App.toggleModeCompare()">Annuler</button>
+  </div>`;
+}
 function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   ucPerfs = ucPerfs || {};
   ucSecteurs = ucSecteurs || {};
@@ -1534,11 +1559,12 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   // Tri par colonne (App.trierUC). Chaque clé sait extraire sa valeur ; les valeurs manquantes
   // (note absente, historique indisponible) sont toujours renvoyées EN FIN de liste, quel que
   // soit le sens — sinon inverser le tri ferait remonter en tête des lignes vides.
-  const CATS_COURTES = { 'Actions thématique': 'Thématique', 'Actions': 'Actions', 'Mixte / Flexible': 'Mixte', 'Obligataire': 'Oblig.' };
   const VALEUR_TRI = {
     nom:       u => u.nom,
     societe:   u => societeCourte((ucMeta[u.isin] || {}).societe) || '',
-    categorie: u => CATS_COURTES[CAT_MAP[u.categorie]] || u.categorie || '',
+    // Trié sur le libellé AFFICHÉ dans la colonne (nom complet), sinon l'ordre alphabétique
+    // ne correspond pas à ce qu'on lit.
+    categorie: u => CAT_MAP[u.categorie] || u.categorie || '',
     secteur:   u => (ucSecteurs[u.isin] || {}).nom || '',
     sri:       u => u.srri,
     note:      u => (ucMeta[u.isin] || {}).note,
@@ -1547,25 +1573,16 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
     an:        u => ucPerfVal(ucPerfs, u.isin, 'an'),
     a3:        u => ucPerfVal(ucPerfs, u.isin, 'a3'),
     a5:        u => ucPerfVal(ucPerfs, u.isin, 'a5'),
+    maj:       u => (ucPerfs[u.isin] || {}).t,
   };
   const tri = (state && state.ucTri && VALEUR_TRI[state.ucTri.cle]) ? state.ucTri : { cle: 'ytd', sens: -1 };
 
-  // Ligne d'état, à droite du titre de section : ce qui est affiché et de quand datent les
-  // chiffres. Elle remplace l'ancien bandeau de tri — le tri se lit désormais sur la colonne
-  // active, fléchée. La date des cours est celle du dernier point des séries téléchargées.
+  // Date d'actualisation : celle du dernier cours de clôture téléchargé, PAR FONDS (colonne
+  // « Maj » du tableau). Elle a remplacé la ligne d'état qui l'annonçait globalement — une
+  // valeur par ligne dit aussi quel fonds n'a pas été rafraîchi avec les autres.
   const jjmm = ts => { const d = new Date(ts * 1000); return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`; };
-  const derniereCloture = Object.values(ucPerfs).reduce((max, p) => Math.max(max, (p && p.t) || 0), 0);
+  const dateMajUC = isin => { const t = (ucPerfs[isin] || {}).t; return t ? jjmm(t) : '—'; };
   const dateNotes = ucMetaGenere ? jjmm(Date.parse(ucMetaGenere) / 1000) : null;
-  const morceaux = [];
-  if (derniereCloture) morceaux.push(`cours du ${jjmm(derniereCloture)}`);
-  if (dateNotes) morceaux.push(`notes du ${dateNotes}`);
-  const etatLong = hasPerfs
-    ? `${uc.length} fonds${morceaux.length ? ' · ' + morceaux.join(' · ') : ''} · cliquez un titre de colonne pour trier`
-    : '⟳ Chargement des performances…';
-  const etatInfobulle = hasPerfs
-    ? `Performances calculées sur les cours de clôture ; ${anneeN1} est la performance calendaire officielle, 1, 3 et 5 ans sont glissants.`
-      + (dateNotes ? ` Notes Morningstar et sociétés de gestion relevées le ${dateNotes}.` : '')
-    : 'Téléchargement des historiques de cours en cours.';
   const ucFiltrees = (() => {
     const base = ucCat === 'Conservateur'
       ? uc.filter(u => u.nom.includes('Conservateur'))
@@ -1589,6 +1606,9 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   // de panneau permanent à droite, ni de « sélection par défaut » à calculer. La surbrillance
   // marque simplement le dernier fonds ouvert.
   const ucSel = (state && state.ucSel) || null;
+  // Mode « Comparer » (bureau) : les lignes se cochent au clic au lieu d'ouvrir leur fiche.
+  const modeCompare = !!(state && state.ucModeCompare);
+  const choisis = (state && state.ucSelection) || [];
 
   return `
   <div class="page-fonds">
@@ -1641,14 +1661,12 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
       </div>` : ''}
 
       <!-- ── Unités de compte ──
-           La ligne de droite remplace l'ancien bandeau bleu de tri : elle dit ce qui est affiché
-           et de QUAND datent les chiffres (le tri, lui, se lit sur la colonne active, fléchée).
-           Version courte en mobile, où la place manque et où le tableau n'existe pas. -->
+           Le décompte « N UC » ne sert plus qu'au mobile (masqué en bureau) : en bureau, la date
+           des cours est portée par la colonne « Maj » du tableau et le tri se lit sur la colonne
+           active, fléchée. -->
       <div class="flex-sb mb-12">
         <span class="section-label">Unités de compte</span>
-        <span class="section-hint uc-etat" title="${escHtml(etatInfobulle)}">
-          <span class="uc-etat-long">${etatLong}</span><span class="uc-etat-court">${hasPerfs ? uc.length + ' UC' : '…'}</span>
-        </span>
+        <span class="section-hint uc-etat">${hasPerfs ? uc.length + ' UC' : '…'}</span>
       </div>
 
       <!-- Filtres de famille en sélecteur segmenté (même traitement que les filtres de l'Autocall) :
@@ -1657,6 +1675,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
            pour le mobile (6 segments en toutes lettres y passeraient sur 3 lignes) — même procédé
            que .ac-legend-court. Le segment « Tous » n'existe qu'en bureau : sur mobile, re-toucher
            le filtre actif le désactive, et un 6e segment ferait déborder la ligne. -->
+      <div class="uc-filtres-ligne">
       <div class="uc-chips" role="group" aria-label="Filtrer par famille de fonds">
         ${[
           { cle: null,               long: 'Tous',         court: 'Tous', classe: ' uc-chip-tous' },
@@ -1676,6 +1695,8 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             + `<span class="uc-chip-nb">${n}</span></button>`;
         }).join('')}
       </div>
+      ${ucCmpBarreHtml(state)}
+      </div><!-- /uc-filtres-ligne -->
 
       <!-- Bandeau de tri conservé POUR LE MOBILE seulement : sans en-tête de colonnes, c'est le
            seul endroit qui dise selon quoi la liste est triée, et il porte l'indicateur de
@@ -1700,6 +1721,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           { cle: 'an',        lib: '1 an', info: 'Performance sur 12 mois glissants.' },
           { cle: 'a3',        lib: '3 ans', info: 'Performance cumulée sur 3 ans glissants.' },
           { cle: 'a5',        lib: '5 ans', info: 'Performance cumulée sur 5 ans glissants.' },
+          { cle: 'maj',       lib: 'Maj', info: `Date d'actualisation : dernier cours de clôture utilisé pour les performances.${dateNotes ? ` Notes Morningstar et sociétés de gestion relevées le ${dateNotes}.` : ''}` },
         ].map(c => {
           const actif = tri.cle === c.cle;
           const fleche = actif ? `<span class="uc-tri-fleche">${tri.sens < 0 ? '▼' : '▲'}</span>` : '';
@@ -1710,7 +1732,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
         }).join('')}
       </div>
 
-      <div class="uc-liste">
+      <div class="uc-liste${modeCompare ? ' uc-liste--choix' : ''}">
         ${ucFiltrees.map(u => {
           const sect = ucSecteurs[u.isin];
           const meta = ucMeta[u.isin] || {};
@@ -1718,8 +1740,9 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           // reprend le libellé du FILTRE actif au-dessus, où les fonds maison passent avant
           // leur catégorie (« C ») — utile pour retrouver le filtre, hors sujet dans une
           // colonne qui annonce une catégorie.
-          const CAT_COURT = { 'Actions thématique': 'Thématique', 'Actions': 'Actions', 'Mixte / Flexible': 'Mixte', 'Obligataire': 'Oblig.' };
-          const catLabel = CAT_COURT[CAT_MAP[u.categorie]] || u.categorie;
+          // Nom de catégorie en toutes lettres (« Obligataire », pas « Oblig. ») : c'est une
+          // colonne de lecture, pas une pastille de filtre, et la largeur le permet.
+          const catLabel = CAT_MAP[u.categorie] || u.categorie;
           const filterLabel = u.nom.includes('Conservateur') ? 'C'
             : CAT_MAP[u.categorie] === 'Actions thématique' ? 'Thématique'
             : CAT_MAP[u.categorie] === 'Actions'            ? 'Actions'
@@ -1727,7 +1750,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             : CAT_MAP[u.categorie] === 'Obligataire'        ? 'Oblig.'
             : u.categorie;
           return `
-        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel ? ' uc-item--actif' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}"${u.graphId ? ` onclick="App.ouvrirUC('${u.isin}')"` : ''}>
+        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel && !modeCompare ? ' uc-item--actif' : ''}${choisis.includes(u.isin) ? ' uc-item--choisi' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}"${u.graphId ? ` onclick="App.clicUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
@@ -1748,6 +1771,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             ${perfBadge(u.isin, ucPerfs, 'an', 'uc-perf-an')}
             <span class="uc-perf-3a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a3'), 'uc-perf-txt')}</span>
             <span class="uc-perf-5a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a5'), 'uc-perf-txt')}</span>
+            <span class="uc-maj tnum" title="Cours du ${dateMajUC(u.isin)}">${dateMajUC(u.isin)}</span>
           </div>
         </div>`;
         }).join('')}
@@ -1774,9 +1798,12 @@ function ucStrategieTxt(u) {
   return bits.join(' · ') + '.';
 }
 
-// Chips « Comparer » du panneau UC (bureau) : ajoute d'autres UC sur le graphique déjà affiché
-// (base 100 dès qu'il y en a plus d'une), sans carte séparée. La 1re puce (fonds ouvert depuis
-// la liste) n'est pas retirable ; les suivantes le sont via App.retirerUcCompare.
+// Chips « Comparer » du panneau UC — MOBILE UNIQUEMENT depuis le 1er août 2026 : en bureau, la
+// comparaison se compose dans le tableau (bouton « Comparer » de la ligne de filtres, puis clic
+// sur les fonds), et la fiche ne fait plus que l'afficher — d'où opts.sansChips, posé par
+// renderUCModal. Ajoute d'autres UC sur le graphique déjà affiché (base 100 dès qu'il y en a
+// plus d'une), sans carte séparée. La 1re puce (fonds ouvert depuis la liste) n'est pas
+// retirable ; les suivantes le sont via App.retirerUcCompare.
 function renderUcCompareChips(u, extras, state) {
   if (!u.graphId) return '';
   const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
@@ -1852,7 +1879,7 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
         <div class="ac-detail-niveau-delta ${perfCls}">depuis le 01/01</div>
       </div>
     </div>
-    ${renderUcCompareChips(u, extras, state)}
+    ${opts.sansChips ? '' : renderUcCompareChips(u, extras, state)}
     ${strategieSection}
     <div id="${chartId}" class="detail-chart-inline"></div>
     ${extras.length ? `<div id="${compoId}" class="uc-compo-cmp"></div>` : ''}
@@ -1870,12 +1897,14 @@ const UC_SHEET_IDS = { chartId: 'uc-chart-inline-sheet', compoId: 'uc-compo-cmp-
 // n'y a plus de panneau permanent à droite). Même corps que la feuille mobile, donc mêmes
 // identifiants de conteneurs — sans panneau de page, il n'existe qu'UNE fiche à la fois dans le
 // DOM et le piège des ids dupliqués ne se pose plus. `uc-panneau-entree` porte l'entrée animée.
+// `sansChips` : la composition de la comparaison se fait dans le TABLEAU (bouton « Comparer »),
+// la fiche ne fait que l'afficher — les fonds comparés se lisent dans la légende du graphique.
 function renderUCModal(u, ucPerfs, state) {
   return `
-  <div class="modal-overlay" onclick="if(event.target===this)App.fermerUC()">
+  <div class="modal-overlay uc-overlay" onclick="if(event.target===this)App.fermerUC()">
     <div class="modal-panel uc-modal uc-panneau-entree">
       <button class="modal-close uc-modal-close" onclick="App.fermerUC()" aria-label="Fermer la fiche">✕</button>
-      <div class="modal-body uc-sheet-corps" id="uc-sheet-corps">${renderUCPanneau(u, ucPerfs, state, UC_SHEET_IDS)}</div>
+      <div class="modal-body uc-sheet-corps" id="uc-sheet-corps">${renderUCPanneau(u, ucPerfs, state, { ...UC_SHEET_IDS, sansChips: true })}</div>
     </div>
   </div>`;
 }

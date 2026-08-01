@@ -102,21 +102,29 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .chart-fin-pt   { transform-box: fill-box; transform-origin: center; animation: chart-pop-in .4s cubic-bezier(.34,1.56,.64,1) .72s backwards; }
 .chart-fin-ping { transform-box: fill-box; transform-origin: center; opacity: 0; animation: chart-ping 1.1s ease-out .8s forwards; }
 
-/* Entrée latérale de la fiche d'un fonds : la classe est posée au clic par App.ouvrirUC (et
-   jamais au rendu, sinon elle rejouerait à chaque rafraîchissement de données). Le décalage
-   vient de la droite, dans le sens du regard qui quitte la liste pour la fiche. */
+/* Entrée latérale de la fiche d'un fonds : elle arrive du bord DROIT de l'écran et vient se
+   poser au centre, dans le sens du regard qui quitte le tableau pour la fiche. La classe est
+   posée au clic par App.ouvrirFicheUC (et jamais au rendu de la page, sinon elle rejouerait à chaque
+   rafraîchissement de données). « 50vw + 50% » = un demi-écran + un demi-panneau : le % d'un
+   translateX porte sur la largeur de l'élément, donc la fiche part exactement hors champ à
+   droite quel que soit son gabarit, sans constante à recalculer. Le graphique se trace pendant
+   le trajet (son propre wipe dure .85s) : la courbe finit de se dérouler une fois posée. */
 @keyframes uc-fiche-entree {
-  from { opacity: 0; transform: translateX(22px); }
+  from { opacity: .3; transform: translateX(calc(50vw + 50%)); }
   to   { opacity: 1; transform: none; }
 }
-.uc-panneau-entree { animation: uc-fiche-entree .28s cubic-bezier(.22,.61,.36,1) both; }
+@keyframes uc-fond-entree { from { opacity: 0; } to { opacity: 1; } }
+.uc-panneau-entree { animation: uc-fiche-entree .44s cubic-bezier(.22,.68,.24,1) both; }
+/* Le voile s'allume pendant le trajet plutôt que d'un bloc avant lui. `overflow:hidden` : la
+   fiche démarre hors du voile, aucune barre de défilement ne doit apparaître pour autant. */
+.uc-overlay { animation: uc-fond-entree .35s ease both; overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .chart-zone svg, .chart-anim-grille, .chart-anim-reperes, .chart-anim-lab, .chart-fin-pt { animation: none; }
   .chart-wipe { animation: none; }
   .chart-cmp-line { animation: none; stroke-dasharray: none; stroke-dashoffset: 0; }
   .chart-fin-ping { display: none; }
-  .uc-panneau-entree { animation: none; }
+  .uc-panneau-entree, .uc-overlay { animation: none; }
 }
 
 /* ── Page header ── */
@@ -1017,8 +1025,12 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .uc-expo { font-size: 11px; color: #6b6e73; }
 /* Cellules ajoutées pour le tableau de bureau (cf. @media min-width:641px) : le markup de la
    liste est commun aux deux écrans, ces trois-là ne s'affichent que sur grand écran. */
-.uc-secteur, .uc-expo-bar, .uc-perf-an, .uc-etat-long, .uc-sri-txt, .uc-chip-long, .uc-chip-nb,
-.uc-chip-tous, .uc-societe, .uc-cat, .uc-note-cell, .uc-perf-n1, .uc-perf-3a, .uc-perf-5a { display: none; }
+.uc-secteur, .uc-expo-bar, .uc-perf-an, .uc-sri-txt, .uc-chip-long, .uc-chip-nb,
+.uc-chip-tous, .uc-societe, .uc-cat, .uc-note-cell, .uc-perf-n1, .uc-perf-3a, .uc-perf-5a,
+.uc-maj, .uc-cmp-barre { display: none; }
+/* Enveloppe filtres + bouton « Comparer » : neutre en mobile (les puces restent l'enfant direct
+   de la colonne, mise en page inchangée), ligne flex en bureau. */
+.uc-filtres-ligne { display: contents; }
 .uc-list-head { display: none; }
 
 /* ── Éléments réservés au bureau (mobile : frise à point seul, pas de panneau détail) ── */
@@ -1371,15 +1383,24 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     display: grid;
     /* La colonne SRI ne descend pas sous 62px : les 7 pastilles en font 60 (7 × 6px + 6 × 3px de
        gap) et, alignées à droite, elles déborderaient vers la GAUCHE sur la colonne voisine. */
-    grid-template-columns: minmax(0, 1fr) 150px 84px 100px 44px 76px 82px 52px 52px 52px 56px;
-    gap: 12px; align-items: center;
+    /* 110px pour la catégorie : le libellé est écrit en toutes lettres (« Actions thématique »
+       fait 107px de pastille) — c'est une colonne de lecture, pas une pastille de filtre. Ce que
+       ça coûte au nom est repris au repli en fenêtre étroite, remonté de 1250 à 1275px.
+       Dernière colonne (44px) : date d'actualisation des cours, masquée sous 1330px où elle ne
+       tient plus sans couper les noms de fonds (bloc @media dédié en fin de fichier). */
+    grid-template-columns: minmax(0, 1fr) 150px 110px 100px 44px 76px 82px 52px 52px 52px 56px 44px;
+    /* La gouttière est le SEUL séparateur de colonnes (pas de filet, pas de fond alterné) :
+       c'est elle qu'on desserre pour aérer la lecture. 15px ici, 20px au-delà de 1400px (bloc
+       en fin de fichier) — tout ce qu'on lui donne est pris à la colonne des noms, qui n'a plus
+       que ~290px de large à 1280px pour un nom de fonds qui peut en réclamer 240. */
+    gap: 15px; align-items: center;
   }
-  /* Alignement de l'en-tête sur les lignes : à gauche 15px = les 14px de padding d'une ligne +
+  /* Alignement de l'en-tête sur les lignes : à gauche 19px = les 18px de padding d'une ligne +
      sa bordure de 1px ; à droite s'y ajoutent le padding-right de .uc-liste (4px) et la largeur
      de sa barre de défilement, mesurée à l'exécution par majGouttiereUC() (app.js) — elle varie
      selon le navigateur et l'OS, une valeur en dur désalignerait les 4 colonnes de droite. */
   .uc-list-head {
-    padding: 0 calc(21px + var(--uc-gouttiere, 0px)) 7px 17px; align-items: end;
+    padding: 0 calc(23px + var(--uc-gouttiere, 0px)) 6px 19px; align-items: end;
     font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
   }
   .uc-list-head span:not(:first-child) { text-align: right; }
@@ -1400,7 +1421,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      quand la fenêtre est haute — sinon 13 lignes de 40px laissaient ~230px de vide en bas de
      colonne en 1080p, soit le défaut qu'on cherchait à corriger. Elles ne se compriment jamais
      (flex-shrink 0) : quand la place manque, la liste défile. */
-  .uc-item { padding: 0 16px; min-height: 46px; max-height: 60px; flex: 1 0 auto; }
+  .uc-item { padding: 0 18px; min-height: 46px; max-height: 60px; flex: 1 0 auto; }
   /* 5px et non 6 : à 1440×900 les 13 lignes réclament 670px pour 667 disponibles — 12 gouttières
      d'un pixel de moins suffisent à faire tenir le 13e fonds sans défilement. */
   .uc-liste { gap: 5px; }
@@ -1408,8 +1429,39 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      l'aplat coupait la page en deux juste au-dessus du tableau et faussait la lecture des
      colonnes. Ici : pas de fond, un simple gris, et une information qui manquait — la date des
      cours et celle des notes. */
-  .uc-etat-long { display: inline; }
-  .uc-etat-court { display: none; }
+  /* Le décompte « N UC » ne sert qu'au mobile : en bureau, la date des cours est dans la colonne
+     « Maj » et le tri se lit sur la colonne active. */
+  .uc-etat { display: none; }
+
+  /* ── Ligne de filtres : puces à gauche, bouton « Comparer » à droite ────────────────────
+     Le bouton hérite de la marge basse des puces (elles la perdent) pour que la ligne garde
+     exactement la hauteur qu'elle avait avant, sans rien prendre à la liste. */
+  .uc-filtres-ligne {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px;
+  }
+  .uc-filtres-ligne .uc-chips { align-self: center; margin-bottom: 0; }
+  .uc-cmp-barre { display: flex; align-items: center; gap: 10px; flex: none; }
+  .uc-cmp-btn {
+    padding: 8px 15px; border-radius: 8px; border: 1px solid #e9e3d5; background: #fff;
+    font-family: inherit; font-size: 12.5px; font-weight: 600; color: #16304f; cursor: pointer;
+    white-space: nowrap; box-shadow: 0 1px 2px rgba(22,48,79,.045);
+    transition: border-color .14s, background .14s, color .14s;
+  }
+  .uc-cmp-btn:hover { border-color: #c9a96a; background: #fdfbf6; }
+  /* Deuxième temps : le bouton devient l'action principale (marine plein), et reste inactif
+     tant qu'il n'y a pas deux fonds cochés — comparer un fonds à lui-même n'a pas de sens. */
+  .uc-cmp-btn--go { background: #16304f; border-color: #16304f; color: #fff; }
+  .uc-cmp-btn--go:hover { background: #1d3f68; border-color: #1d3f68; }
+  .uc-cmp-btn--go:disabled { background: #cfd7e1; border-color: #cfd7e1; color: #fff; cursor: default; box-shadow: none; }
+  .uc-cmp-aide { font-size: 11.5px; color: #9a8f7a; white-space: nowrap; }
+  .uc-cmp-annuler {
+    background: none; border: none; padding: 4px 2px; font-family: inherit; font-size: 11.5px;
+    color: #9a8f7a; text-decoration: underline; cursor: pointer;
+  }
+  .uc-cmp-annuler:hover { color: #16304f; }
+  /* Fonds cochés : filet doré + liseré à gauche, distincts du marine de la ligne ouverte. */
+  .uc-item--choisi { border-color: #c9a96a; background: #fdf9f0; box-shadow: inset 3px 0 0 #c9a96a; }
+  .uc-liste--choix .uc-item.clic:hover { border-color: #c9a96a; }
   /* Classe dédiée plutôt que .mobile-seul : celle-ci imposerait `display:block` à un conteneur
      flex, et sa règle est écrite après .uc-sort-banner dans le fichier — elle gagnerait. */
   .uc-sort-banner--mobile { display: none; }
@@ -1425,6 +1477,9 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .uc-perf-an      { order: 9; }
   .uc-perf-3a      { order: 10; }
   .uc-perf-5a      { order: 11; }
+  /* Date du dernier cours, en fin de ligne : une donnée de fraîcheur, pas une performance —
+     d'où le gris et l'absence de couleur de sens. */
+  .uc-maj          { order: 12; display: block; text-align: right; font-size: 11px; color: #a99e88; }
   /* Colonnes de texte : même gabarit, l'ellipse en bout de cellule plutôt qu'un débordement. */
   .uc-societe, .uc-cat, .uc-secteur {
     display: block; min-width: 0; font-size: 11.5px; color: #6b6e73;
@@ -1925,15 +1980,43 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .coupon-reserve { display: block; font-size: 10px; color: #b06a1a; white-space: nowrap; }
 .badge-nplus { display: block; font-size: 9.5px; color: #9a8f7a; letter-spacing: .02em; }
 
-/* Fenêtre bureau étroite (navigateur en demi-écran, écran 1024) : les 11 colonnes ne tiennent
-   plus sans couper les noms de fonds. Cèdent alors la société de gestion et la catégorie —
+/* Sous ~1330px, la 12e colonne (date d'actualisation) ne tient plus : les noms de fonds les plus
+   longs passeraient à l'ellipse. C'est elle qui cède la première — les notes et les performances
+   sont la raison d'être du tableau, et la date se retrouve dans la fiche de chaque fonds.
+   Doit rester AVANT le bloc ci-dessous : les deux fixent grid-template-columns et se recouvrent
+   sous 1275px, où c'est la version à 9 colonnes qui doit gagner. */
+@media (min-width: 641px) and (max-width: 1330px) {
+  .uc-list-head,
+  .uc-item { grid-template-columns: minmax(0, 1fr) 150px 110px 100px 44px 76px 82px 52px 52px 52px 56px; }
+  .uc-maj,
+  .uc-list-head span:nth-child(12) { display: none; }
+}
+
+/* Fenêtre bureau étroite (navigateur en demi-écran, écran 1024) : sous ~1276px, les 11 colonnes
+   ne tiennent plus sans couper les noms de fonds (le nom le plus long garde 26px de marge à
+   1280, d'où le seuil ; il était à 1250 avant que la colonne « Catégorie » ne passe en toutes
+   lettres). Le seuil est volontairement pris avec 20px de marge : à densité d'affichage
+   fractionnaire (dpr 1.5), la largeur de viewport comparée par le @media ne tombe pas sur
+   l'entier renvoyé par innerWidth, une valeur au pixel près se décalerait d'un cran.
+   Cèdent alors la société de gestion et la catégorie —
    cette dernière est déjà portée par les filtres juste au-dessus. Le SECTEUR PRINCIPAL reste,
    lui : c'est la seule colonne qui dise ce que le fonds détient réellement, et rien d'autre
    dans la page ne la remplace. Notes et performances ne cèdent jamais. */
-@media (min-width: 641px) and (max-width: 1250px) {
+@media (min-width: 641px) and (max-width: 1275px) {
   .uc-list-head,
   .uc-item { grid-template-columns: minmax(0, 1fr) 100px 44px 76px 82px 52px 52px 52px 56px; }
   .uc-societe, .uc-cat,
   .uc-list-head span:nth-child(2),
   .uc-list-head span:nth-child(3) { display: none; }
+}
+
+/* Écran large : la colonne des noms a de la marge à revendre (≈390px pour un nom qui en réclame
+   240 au pire), on desserre donc franchement les colonnes du comparateur. Sous 1400px on s'en
+   tient à 15px de gouttière — au-delà, le nom le plus long passerait à l'ellipse. Bloc séparé
+   parce qu'un @media ne s'imbrique pas dans le bloc bureau en CSS classique. */
+@media (min-width: 1400px) {
+  .uc-list-head,
+  .uc-item { gap: 20px; }
+  .uc-item { padding: 0 22px; }
+  .uc-list-head { padding: 0 calc(27px + var(--uc-gouttiere, 0px)) 6px 23px; }
 }

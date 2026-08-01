@@ -506,7 +506,10 @@ const App = (() => {
     const sig = signature(ancien);
     const chart = ancien && ancien.querySelector('#' + UC_SHEET_IDS.chartId);
     const compo = ancien && ancien.querySelector('#' + UC_SHEET_IDS.compoId);
-    host.innerHTML = renderUCPanneau(u, ucPerfsCache, state, UC_SHEET_IDS);
+    // sansChips en bureau : la fiche y est une simple visionneuse, la comparaison se compose
+    // dans le tableau. Doit rester aligné sur renderUCModal, sinon les puces réapparaîtraient
+    // au premier re-rendu en place (dépliage de la stratégie, par exemple).
+    host.innerHTML = renderUCPanneau(u, ucPerfsCache, state, { ...UC_SHEET_IDS, sansChips: estBureau() });
     const panneau = host.querySelector('.ac-detail-panneau');
     if (sig && sig === signature(panneau) && chart) {
       panneau.querySelector('#' + UC_SHEET_IDS.chartId).replaceWith(chart);
@@ -833,7 +836,11 @@ const App = (() => {
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
       const root = document.getElementById('modal-root');
-      if (!root || !root.firstChild) return;
+      // Rien d'ouvert et une sélection à comparer en cours : Échap sort du mode sélection.
+      if (!root || !root.firstChild) {
+        if (state.ucModeCompare) App.toggleModeCompare();
+        return;
+      }
       if (root.querySelector('.sheet-backdrop')) fermerSheet();
       else root.innerHTML = '';
     });
@@ -1017,15 +1024,54 @@ const App = (() => {
     clicActif(id) {
       App.toggleSerieCmp(id);
     },
+    // Clic sur une ligne du tableau des fonds : ouvre sa fiche, SAUF en mode « Comparer » (bureau),
+    // où le clic coche/décoche la ligne pour la sélection à comparer.
+    clicUC(isin) {
+      if (state.ucModeCompare) return App.choisirUC(isin);
+      App.ouvrirUC(isin);
+    },
+    // ── Mode « Comparer » du tableau (bureau) ──────────────────────────────────────────────
+    // Le même bouton fait les deux temps : entrer en sélection, puis lancer. La sélection n'est
+    // pas persistée (état d'écran, comme le thème d'actualités) et l'ordre des clics est celui
+    // du graphique — le premier fonds coché porte la fiche, les autres viennent en comparaison.
+    toggleModeCompare() {
+      const on = !state.ucModeCompare;
+      state = { ...state, ucModeCompare: on, ucSelection: [] };
+      renderPage(true);
+    },
+    choisirUC(isin) {
+      const sel = state.ucSelection || [];
+      const dedans = sel.includes(isin);
+      state = { ...state, ucSelection: dedans ? sel.filter(i => i !== isin) : [...sel, isin] };
+      // Coche la ligne dans le DOM plutôt que de re-rendre la page : un renderPage complet
+      // reconstruirait la liste et remonterait son défilement en pleine sélection.
+      const ligne = document.querySelector(`.uc-item[data-isin="${isin}"]`);
+      if (ligne) ligne.classList.toggle('uc-item--choisi', !dedans);
+      const barre = document.getElementById('uc-cmp-barre');
+      if (barre) barre.outerHTML = ucCmpBarreHtml(state);
+    },
+    lancerComparaison() {
+      const sel = state.ucSelection || [];
+      if (sel.length < 2) return;
+      state = { ...state, ucModeCompare: false, ucSelection: [], ucStrategieOuvert: false,
+                ucSel: sel[0], ucCompare: sel.slice(1), ucComparePickerOuvert: false };
+      renderPage(true);
+      App.ouvrirFicheUC(sel[0]);
+    },
     // Bureau : sélectionne l'UC dans le panneau de droite. Mobile : même fiche, en feuille modale
     // (elle porte donc aussi les puces « Comparer », la stratégie et la composition comparée).
     ouvrirUC(isin) {
       // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
       // affiché, pas sur une sélection indépendante.
       state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
+      sauvegarderEtat();
+      App.ouvrirFicheUC(isin);
+    },
+    // Montage de la fiche seule (surbrillance + fenêtre/feuille + graphique), sans toucher à
+    // state.ucCompare : lancerComparaison() vient justement de le remplir.
+    ouvrirFicheUC(isin) {
       const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
       if (!u) return;
-      sauvegarderEtat();
       // La ligne ouverte est marquée directement dans le DOM : un renderPage complet pour une
       // simple surbrillance détruirait la liste et remonterait son défilement.
       document.querySelectorAll('.uc-item--actif').forEach(e => e.classList.remove('uc-item--actif'));
