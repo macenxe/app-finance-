@@ -158,10 +158,10 @@ const Chart = (() => {
         sousEl.textContent = txt;
         sousEl.style.display = txt ? '' : 'none';
       }
-      // Périodes plus longues que l'historique de la série : masquées dès la 1re réponse.
+      // Périodes qui ne montreraient rien de plus que la précédente : masquées dès la 1re réponse.
       // `data.debut` (première cotation, servi par le Worker) donne la réponse tout de suite ;
       // à défaut, on la déduit quand la série reçue est plus COURTE que la période demandée —
-      // c'est qu'on a touché son début. Repli utile tant que le Worker n'expose pas le champ.
+      // c'est qu'on a touché son début. Repli utile si le Worker n'expose pas le champ.
       const deduit = (!data.debut && etat.points.length
         && (Date.now() / 1000 - etat.points[0].t) / 86400 < dureeJours(periode) * 0.9)
         ? etat.points[0].t : null;
@@ -193,18 +193,26 @@ const Chart = (() => {
     if (key === 'ytd') return (Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) / 86400000;
     return DUREE_J[key] || 0;
   }
-  // Retire les boutons qu'un historique trop court ne peut pas honorer : un fonds lancé en 2022
-  // n'a rien de plus à montrer sur « 10 ans » que sur « 3 ans », et l'étiquette ment sur la durée
-  // réellement tracée. `debutTs` = première cotation (champ `debut` servi par le Worker) ; sans
-  // lui (séries statiques FRED/inflation) on ne masque rien. Le bouton ACTIF n'est jamais masqué :
-  // on ne retire pas de l'écran celui sur lequel l'utilisateur est déjà.
+  // Retire une période UNIQUEMENT quand elle n'apporte rien de plus que la période plus courte
+  // qui la précède — c'est-à-dire quand on ne peut pas remonter au-delà de cette dernière.
+  // Exemple, avec 8,6 ans d'historique (cas de la plupart des fonds chez Yahoo) : « 10 ans »
+  // montre bien 8,6 ans, soit nettement plus que « 5 ans » → on le garde ; avec 4,4 ans, il
+  // tracerait exactement la même courbe que « 5 ans » → on le retire.
+  // Masquer dès que l'historique est plus court que l'étiquette faisait disparaître « 10 ans »
+  // sur les 13 fonds et « 5 ans » sur 5 d'entre eux : trop, pour des courbes bien réelles.
+  // `debutTs` = première cotation (champ `debut` du Worker) ; sans lui (séries statiques
+  // FRED/inflation) on ne masque rien. Le bouton ACTIF n'est jamais masqué : on ne retire pas
+  // de l'écran celui sur lequel l'utilisateur se trouve déjà.
   function majPeriodesDispo(selecteur, debutTs, actif) {
-    const boutons = document.querySelectorAll(selecteur);
+    const boutons = [...document.querySelectorAll(selecteur)];
     if (!boutons.length) return;
     const histoire = debutTs ? (Date.now() / 1000 - debutTs) / 86400 : null;
-    boutons.forEach(b => {
-      const trop = histoire != null && dureeJours(b.dataset.per) > histoire * 1.02 + 3;
-      b.style.display = (trop && b.dataset.per !== actif) ? 'none' : '';
+    boutons.forEach((b, i) => {
+      // Plus longue des périodes qui précèdent (et non la voisine immédiate : YTD change de rang
+      // dans l'année, il vaut 30 jours en janvier et près d'un an en décembre).
+      const plusLongueAvant = boutons.slice(0, i).reduce((m, x) => Math.max(m, dureeJours(x.dataset.per)), 0);
+      const inutile = histoire != null && histoire <= plusLongueAvant + 3;
+      b.style.display = (inutile && b.dataset.per !== actif) ? 'none' : '';
     });
   }
 
