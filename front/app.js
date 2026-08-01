@@ -3,6 +3,11 @@ const App = (() => {
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
+  let ucSecteursCache = {};
+  let ucSecteursCharge = false;
+  let ucMetaCache = {};
+  let ucMetaGenere = null;
+  let ucMetaCharge = false;
 
   const CACHE_KEY       = 'app-cache-v3';
   const CMS_OVERRIDE_KEY = 'cms-taux-override';
@@ -69,6 +74,7 @@ const App = (() => {
         page: state.page,
         ucCat: state.ucCat || null,
         ucSel: state.ucSel || null,
+        ucTri: state.ucTri || null,
         feOuvert: !!state.feOuvert,
         indices: donnees.indices,
         taux: donnees.taux,
@@ -90,6 +96,9 @@ const App = (() => {
       if (raw) {
         const c = JSON.parse(raw);
         if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
+        // Le tri choisi survit au rafraîchissement, comme le filtre de catégorie (même écran,
+        // même attente) — y compris à une ouverture fraîche, où il n'y a rien à « remettre à zéro ».
+        if (c.ucTri && c.ucTri.cle) state = { ...state, ucTri: c.ucTri };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
         donnees.rappeles = c.rappeles || [];
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
@@ -101,24 +110,85 @@ const App = (() => {
     appliquerCMSLive();
   }
 
+  // Perfs des UC : deux séries par fonds, dont on tire les colonnes du tableau.
+  //  · '1a' est QUOTIDIENNE → performance de l'année en cours et 1 an glissant, à la clôture
+  //    de la veille et cohérentes avec le graphique de la fiche.
+  //  · '5a' est HEBDOMADAIRE (Yahoo ne sert pas de quotidien au-delà d'un an, cf. PERIODES dans
+  //    worker/src/index.js) → 3 ans et 5 ans glissants, arrêtés au dernier jeudi.
+  // La performance de l'année précédente ne vient PAS d'ici : c'est la performance calendaire
+  // officielle du fichier fonds-meta.json (chargerMetaUC), exacte au 31 décembre.
   async function chargerPerfsUC() {
     if (ucPerfsFetching || typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
     if (typeof UC_CATALOGUE === 'undefined') return;
     ucPerfsFetching = true;
+    const debutAnnee = Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000);
+    const debut3a = Math.floor(Date.now() / 1000) - 3 * 365 * 86400;
+    const variation = (a, b) => (a > 0 ? (b - a) / a * 100 : null);
+    const bornes = pts => (pts.length > 1 ? variation(pts[0].c, pts[pts.length - 1].c) : null);
+    const serie = async (gid, periode) => {
+      const r = await fetch(AppAPI.historyUrl(gid, periode), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+      if (!r.ok) return [];
+      return (await r.json()).points || [];
+    };
     await Promise.allSettled(
       UC_CATALOGUE.filter(u => u.graphId).map(async u => {
         try {
-          const url = AppAPI.historyUrl(u.graphId, 'ytd');
-          const r = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-          if (!r.ok) return;
-          const pts = (await r.json()).points || [];
-          if (pts.length < 2) return;
-          const first = pts[0].c, last = pts[pts.length - 1].c;
-          if (first > 0) ucPerfsCache[u.isin] = (last - first) / first * 100;
+          const [jour, semaine] = await Promise.all([serie(u.graphId, '1a'), serie(u.graphId, '5a')]);
+          if (jour.length < 2 && semaine.length < 2) return;
+          const dernier = jour[jour.length - 1] || semaine[semaine.length - 1];
+          ucPerfsCache[u.isin] = {
+            ytd: bornes(jour.filter(p => p.t >= debutAnnee)),
+            an:  bornes(jour),
+            a3:  bornes(semaine.filter(p => p.t >= debut3a)),
+            a5:  bornes(semaine),
+            // Date de la dernière clôture connue : affichée dans la ligne d'état du tableau.
+            t:   dernier ? dernier.t : null,
+          };
         } catch { /* on ignore */ }
       })
     );
     ucPerfsFetching = false;
+    if (state.page === 'contrats') renderPage(true);
+  }
+
+  // Fiche signalétique des fonds : note Morningstar, note de risque, société de gestion et
+  // performances calendaires. Instantané statique régénéré par la CI (back/src/fonds-meta.ts) —
+  // même origine, donc pas de CORS ni de cookie/crumb Yahoo à gérer dans le navigateur, et la
+  // page reste utilisable si le fichier manque (colonnes à « — »).
+  async function chargerMetaUC() {
+    if (ucMetaCharge) return;
+    ucMetaCharge = true;
+    try {
+      const r = await fetch('./data/fonds-meta.json', { cache: 'no-cache' });
+      if (!r.ok) return;
+      const d = await r.json();
+      ucMetaCache = d.fonds || {};
+      ucMetaGenere = d.genere || null;
+    } catch { /* on ignore : la liste s'affiche sans les notes */ }
+    if (state.page === 'contrats') renderPage(true);
+  }
+
+  // Premier secteur de chaque UC, lu dans les compositions statiques déjà présentes
+  // (front/data/uc-compo/<ISIN>.json, servies aussi à la fiche et au comparatif).
+  // Seuil d'exposition : sous 10 % d'actions, la répartition sectorielle décrit une poche
+  // résiduelle et afficherait des « Finance 100 % » trompeurs sur un fonds obligataire.
+  // Une seule campagne par session (ucSecteursCharge) : ces fichiers ne bougent pas.
+  const SECTEUR_EXPO_MIN = 10;
+  async function chargerSecteursUC() {
+    if (ucSecteursCharge || typeof UC_CATALOGUE === 'undefined') return;
+    ucSecteursCharge = true;
+    await Promise.allSettled(
+      UC_CATALOGUE.map(async u => {
+        try {
+          const r = await fetch(`./data/uc-compo/${u.isin}.json`, { cache: 'force-cache' });
+          if (!r.ok) return;
+          const d = await r.json();
+          const s = (d.secteurs || [])[0];
+          const actions = (d.alloc && d.alloc.action) || 0;
+          if (s && actions >= SECTEUR_EXPO_MIN) ucSecteursCache[u.isin] = { nom: s.nom, pct: s.pct };
+        } catch { /* on ignore */ }
+      })
+    );
     if (state.page === 'contrats') renderPage(true);
   }
 
@@ -333,7 +403,9 @@ const App = (() => {
   // On lit l'ISIN affiché sur le panneau : sans sélection explicite, il montre le 1er produit.
   function rafraichirChartPanneau() {
     if (!estBureau()) return;
-    const panneau = document.querySelector('.ac-detail-panneau');
+    // Seul l'Autocall a encore un panneau dans la page ; la fiche d'un fonds vit dans
+    // #modal-root, qu'un renderPage ne touche pas — d'où l'exclusion explicite.
+    const panneau = document.querySelector('#content .ac-detail-panneau');
     if (!panneau) return;
     if (state.page === 'contrats') { initChartUC(panneau); return; }
     if (state.page !== 'prod') return;
@@ -348,6 +420,16 @@ const App = (() => {
     if (p) initChartDetail(p);
   }
 
+  // L'en-tête de colonnes de la liste des fonds est en dehors du conteneur qui défile : sans
+  // compensation, ses 4 colonnes de droite sont décalées de la largeur de la barre de défilement
+  // (19px sous Windows, 0 sur un trackpad macOS). On la mesure ici et on l'expose en variable CSS.
+  function majGouttiereUC() {
+    const liste = document.querySelector('.uc-liste');
+    if (!liste) return;
+    const g = Math.max(0, liste.offsetWidth - liste.clientWidth);
+    document.documentElement.style.setProperty('--uc-gouttiere', g + 'px');
+  }
+
   function renderPage(keepScroll = false) {
     const el = document.getElementById('content');
     const saved = keepScroll ? el.scrollTop : 0;
@@ -357,8 +439,11 @@ const App = (() => {
       case 'prod':     el.innerHTML = renderProduits(produits, state, donnees.rappeles);  break;
       case 'actus':    el.innerHTML = renderActus(state); chargerActus(); break;
       case 'contrats':
-        el.innerHTML = renderContrats(state, ucPerfsCache);
+        el.innerHTML = renderContrats(state, ucPerfsCache, ucSecteursCache, ucMetaCache, ucMetaGenere);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
+        chargerSecteursUC();
+        chargerMetaUC();
+        majGouttiereUC();
         break;
       case 'outils':   el.innerHTML = renderOutils(); break;
     }
@@ -736,6 +821,14 @@ const App = (() => {
     initVerrouModal();
     initPullToRefresh();
     initSwipeTabs();
+    // Seul écouteur de redimensionnement de l'app : la barre de défilement de la liste des fonds
+    // apparaît ou disparaît selon la hauteur de fenêtre, et l'en-tête de colonnes doit suivre.
+    // Rien n'est re-rendu ici, juste une variable CSS mise à jour (une frame au plus).
+    let rafGouttiere = 0;
+    window.addEventListener('resize', () => {
+      if (rafGouttiere) return;
+      rafGouttiere = requestAnimationFrame(() => { rafGouttiere = 0; majGouttiereUC(); });
+    });
     // Échap ferme le tiroir latéral / la modale ouverte (confort bureau).
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
@@ -838,6 +931,18 @@ const App = (() => {
       state = { ...state, newsTheme: theme || null };
       renderPage();
     },
+    // Tri du tableau des fonds par clic sur un en-tête de colonne. Re-cliquer la colonne active
+    // inverse le sens. Les colonnes de texte partent en A→Z, les colonnes chiffrées en
+    // décroissant (la meilleure performance, la meilleure note en tête) — c'est le sens attendu
+    // dans les deux cas, et ça évite un premier clic « pour rien ».
+    trierUC(cle) {
+      const TEXTE = ['nom', 'societe', 'categorie', 'secteur'];
+      const actuel = state.ucTri || { cle: 'ytd', sens: -1 };
+      const sens = actuel.cle === cle ? -actuel.sens : (TEXTE.includes(cle) ? 1 : -1);
+      state = { ...state, ucTri: { cle, sens } };
+      sauvegarderEtat();
+      renderPage(true);
+    },
     setUcCat(cat) {
       // Le filtre peut faire disparaître l'UC ouverte de la liste (le panneau retombe alors sur
       // la 1re UC du nouveau filtre) : on referme la comparaison en cours pour ne pas la lui laisser attachée.
@@ -918,15 +1023,23 @@ const App = (() => {
       // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
       // affiché, pas sur une sélection indépendante.
       state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
+      const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
+      if (!u) return;
+      sauvegarderEtat();
+      // La ligne ouverte est marquée directement dans le DOM : un renderPage complet pour une
+      // simple surbrillance détruirait la liste et remonterait son défilement.
+      document.querySelectorAll('.uc-item--actif').forEach(e => e.classList.remove('uc-item--actif'));
+      const ligne = document.querySelector(`.uc-item[data-isin="${isin}"]`);
+      if (ligne) ligne.classList.add('uc-item--actif');
       if (!estBureau()) {
-        const u = (typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : []).find(x => x.isin === isin);
-        if (!u) return;
         ouvrirSheet(renderUCSheet(u, ucPerfsCache, state));
         initChartUC(document.querySelector('#uc-sheet-corps .ac-detail-panneau'));
         return;
       }
-      sauvegarderEtat();
-      renderPage(true);
+      const root = document.getElementById('modal-root');
+      if (!root) return;
+      root.innerHTML = renderUCModal(u, ucPerfsCache, state);
+      initChartUC(root.querySelector('.ac-detail-panneau'));
     },
     fermerUC() { fermerSheet(); },
     fermerModal() {

@@ -1,12 +1,64 @@
 // ── Fonctions de rendu des 4 pages ──
 // Chaque fonction accepte les données en paramètre (API ou statiques).
 
-function perfBadge(isin, ucPerfs) {
-  const v = ucPerfs ? ucPerfs[isin] : null;
-  if (v == null) return `<span class="uc-item-perf">—</span>`;
-  const up = v >= 0;
-  const label = (up ? '+' : '') + v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-  return `<span class="uc-item-perf ${up ? 'up' : 'dn'}">${label}</span>`;
+// Performances d'une UC : chargerPerfsUC (app.js) range { ytd, an } par ISIN — un seul
+// historique téléchargé sert les deux colonnes de la liste (2026 · 1 an) et l'en-tête de fiche.
+function ucPerfVal(ucPerfs, isin, cle) {
+  const p = ucPerfs ? ucPerfs[isin] : null;
+  const v = p ? p[cle] : null;
+  return (v == null || isNaN(v)) ? null : v;
+}
+function ucPerfTxt(v) {
+  // Espace insécable avant le %, comme partout ailleurs dans l'app.
+  return v == null ? '—'
+    : (v >= 0 ? '+' : '') + v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+}
+// Note Morningstar : 1 à 5 étoiles, les non attribuées en teinte éteinte pour que la note se
+// lise d'un coup d'œil sur toute la colonne (une ligne à 2 étoiles doit paraître plus courte).
+function ucEtoiles(n) {
+  if (n == null) return '<span class="uc-note">—</span>';
+  const pleines = Math.max(0, Math.min(5, Math.round(n)));
+  return `<span class="uc-note" title="Note Morningstar : ${pleines} étoile${pleines > 1 ? 's' : ''} sur 5">`
+    + '★'.repeat(pleines) + `<span class="uc-note-vide">${'★'.repeat(5 - pleines)}</span></span>`;
+}
+
+// Volatilité : sans signe (c'est une amplitude, pas une variation) et sans couleur — une
+// volatilité forte n'est ni bonne ni mauvaise en soi, elle se lit à côté du SRI.
+function ucVolTxt(v) {
+  return v == null ? '—' : v.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+}
+function perfCell(v, classe) {
+  const ton = v == null ? '' : v >= 0 ? ' up' : ' dn';
+  return `<span class="${classe || 'uc-item-perf'}${ton} tnum">${ucPerfTxt(v)}</span>`;
+}
+function perfBadge(isin, ucPerfs, cle, classe) {
+  return perfCell(ucPerfVal(ucPerfs, isin, cle || 'ytd'), classe);
+}
+
+// Performance d'une année civile, lue dans la fiche signalétique (front/data/fonds-meta.json) :
+// c'est la performance officielle publiée, dividendes réinvestis, exacte au 31 décembre — nos
+// séries de cours ne donneraient qu'une approximation (Yahoo ne sert que de l'hebdomadaire
+// au-delà d'un an, donc une année « civile » qui commencerait le 5 janvier).
+function metaPerfAnnee(meta, annee) {
+  const v = meta && meta.annuels ? meta.annuels[String(annee)] : null;
+  return (v == null || isNaN(v)) ? null : v;
+}
+
+// Société de gestion : le nom vient de la source (Yahoo/Morningstar) et y est en forme longue
+// et juridique — « Pictet Asset Management (Europe) SA », « Fidelity (FIL Inv Mgmt (Lux) S.A.) ».
+// On le raccourcit pour une colonne de tableau, sans réécrire la marque : suppression des
+// mentions entre parenthèses et des formes sociales, « Asset Management » abrégé en « AM ».
+// Le nom complet reste en info-bulle.
+function societeCourte(nom) {
+  if (!nom) return '—';
+  return String(nom)
+    // Tout ce qui suit la 1re parenthèse : elles peuvent être imbriquées
+    // (« Fidelity (FIL Inv Mgmt (Lux) S.A.) »), un simple \([^)]*\) laisserait « S.A.) ».
+    .replace(/\s*\(.*$/, '')
+    .replace(/\bAsset Management\b/gi, 'AM')
+    .replace(/\s+(S\.?A\.?S?|SARL|Ltd|LLC|Inc)\.?$/i, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
 }
 
 // Agenda macro (BCE/Fed, publications d'inflation). Deux points de montage selon la taille
@@ -1442,8 +1494,16 @@ function escHtml(s) {
 }
 
 // ── Page F€ & UC ──
-function renderContrats(state, ucPerfs) {
+// Libellés du tri, repris dans le bandeau au-dessus du tableau (« ↓ Trié par … »).
+const TRI_LIBELLES = {
+  nom: 'nom de fonds', societe: 'société de gestion', categorie: 'catégorie', secteur: 'secteur',
+  sri: 'niveau de risque (SRI)', note: 'note Morningstar', ytd: 'performance depuis le 01/01',
+  n1: 'performance de l\'année précédente', an: 'performance 1 an', a3: 'performance 3 ans', a5: 'performance 5 ans',
+};
+function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   ucPerfs = ucPerfs || {};
+  ucSecteurs = ucSecteurs || {};
+  ucMeta = ucMeta || {};
   function srriDots(n) {
     const filled = Math.max(0, Math.min(7, n));
     let s = '';
@@ -1467,27 +1527,71 @@ function renderContrats(state, ucPerfs) {
     'Obligataire flexible':'Obligataire',
   };
   const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
+  const anneeN = new Date().getFullYear();
+  const anneeN1 = anneeN - 1;
   const hasPerfs = Object.keys(ucPerfs).length > 0;
+
+  // Tri par colonne (App.trierUC). Chaque clé sait extraire sa valeur ; les valeurs manquantes
+  // (note absente, historique indisponible) sont toujours renvoyées EN FIN de liste, quel que
+  // soit le sens — sinon inverser le tri ferait remonter en tête des lignes vides.
+  const CATS_COURTES = { 'Actions thématique': 'Thématique', 'Actions': 'Actions', 'Mixte / Flexible': 'Mixte', 'Obligataire': 'Oblig.' };
+  const VALEUR_TRI = {
+    nom:       u => u.nom,
+    societe:   u => societeCourte((ucMeta[u.isin] || {}).societe) || '',
+    categorie: u => CATS_COURTES[CAT_MAP[u.categorie]] || u.categorie || '',
+    secteur:   u => (ucSecteurs[u.isin] || {}).nom || '',
+    sri:       u => u.srri,
+    note:      u => (ucMeta[u.isin] || {}).note,
+    ytd:       u => ucPerfVal(ucPerfs, u.isin, 'ytd'),
+    n1:        u => metaPerfAnnee(ucMeta[u.isin], anneeN1),
+    an:        u => ucPerfVal(ucPerfs, u.isin, 'an'),
+    a3:        u => ucPerfVal(ucPerfs, u.isin, 'a3'),
+    a5:        u => ucPerfVal(ucPerfs, u.isin, 'a5'),
+  };
+  const tri = (state && state.ucTri && VALEUR_TRI[state.ucTri.cle]) ? state.ucTri : { cle: 'ytd', sens: -1 };
+
+  // Ligne d'état, à droite du titre de section : ce qui est affiché et de quand datent les
+  // chiffres. Elle remplace l'ancien bandeau de tri — le tri se lit désormais sur la colonne
+  // active, fléchée. La date des cours est celle du dernier point des séries téléchargées.
+  const jjmm = ts => { const d = new Date(ts * 1000); return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`; };
+  const derniereCloture = Object.values(ucPerfs).reduce((max, p) => Math.max(max, (p && p.t) || 0), 0);
+  const dateNotes = ucMetaGenere ? jjmm(Date.parse(ucMetaGenere) / 1000) : null;
+  const morceaux = [];
+  if (derniereCloture) morceaux.push(`cours du ${jjmm(derniereCloture)}`);
+  if (dateNotes) morceaux.push(`notes du ${dateNotes}`);
+  const etatLong = hasPerfs
+    ? `${uc.length} fonds${morceaux.length ? ' · ' + morceaux.join(' · ') : ''} · cliquez un titre de colonne pour trier`
+    : '⟳ Chargement des performances…';
+  const etatInfobulle = hasPerfs
+    ? `Performances calculées sur les cours de clôture ; ${anneeN1} est la performance calendaire officielle, 1, 3 et 5 ans sont glissants.`
+      + (dateNotes ? ` Notes Morningstar et sociétés de gestion relevées le ${dateNotes}.` : '')
+    : 'Téléchargement des historiques de cours en cours.';
   const ucFiltrees = (() => {
     const base = ucCat === 'Conservateur'
       ? uc.filter(u => u.nom.includes('Conservateur'))
       : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
-    if (!hasPerfs) return base;
+    if (!hasPerfs && tri.cle === 'ytd') return base;
+    const lire = VALEUR_TRI[tri.cle];
     return [...base].sort((a, b) => {
-      const pa = ucPerfs[a.isin] ?? -Infinity;
-      const pb = ucPerfs[b.isin] ?? -Infinity;
-      return pb - pa;
+      const va = lire(a), vb = lire(b);
+      const va_ = (va == null || va === '') ? null : va;
+      const vb_ = (vb == null || vb === '') ? null : vb;
+      if (va_ == null && vb_ == null) return 0;
+      if (va_ == null) return 1;
+      if (vb_ == null) return -1;
+      const cmp = typeof va_ === 'string' ? va_.localeCompare(vb_, 'fr') : va_ - vb_;
+      return cmp * tri.sens;
     });
   })();
 
-  // Bureau : l'UC sélectionnée s'affiche dans le panneau de droite (jamais vide → 1re UC).
-  const ucSelExplicite = ucFiltrees.find(u => u.isin === (state && state.ucSel)) || null;
-  const ucCourante = ucSelExplicite || ucFiltrees.find(u => u.graphId) || ucFiltrees[0] || null;
-  const ucSel = ucCourante ? ucCourante.isin : null;
-  const ucPanneau = renderUCPanneau(ucCourante, ucPerfs, state);
+  // Le tableau occupe toute la page : la fiche d'un fonds (stratégie, graphique, composition)
+  // s'ouvre au clic, en fenêtre centrée en bureau et en feuille sur mobile — il n'y a donc plus
+  // de panneau permanent à droite, ni de « sélection par défaut » à calculer. La surbrillance
+  // marque simplement le dernier fonds ouvert.
+  const ucSel = (state && state.ucSel) || null;
 
   return `
-  <div>
+  <div class="page-fonds">
     <header class="page-header">
       <div>
         <div class="page-title">Fonds € &amp; UC</div>
@@ -1536,26 +1640,86 @@ function renderContrats(state, ucPerfs) {
         </div>
       </div>` : ''}
 
-      <!-- ── Unités de compte ── -->
+      <!-- ── Unités de compte ──
+           La ligne de droite remplace l'ancien bandeau bleu de tri : elle dit ce qui est affiché
+           et de QUAND datent les chiffres (le tri, lui, se lit sur la colonne active, fléchée).
+           Version courte en mobile, où la place manque et où le tableau n'existe pas. -->
       <div class="flex-sb mb-12">
         <span class="section-label">Unités de compte</span>
-        <span class="section-hint">${uc.length} UC</span>
+        <span class="section-hint uc-etat" title="${escHtml(etatInfobulle)}">
+          <span class="uc-etat-long">${etatLong}</span><span class="uc-etat-court">${hasPerfs ? uc.length + ' UC' : '…'}</span>
+        </span>
       </div>
 
-      <div class="uc-chips">
-        <button class="uc-chip uc-chip-csr${ucCat === 'Conservateur' ? ' active' : ''}" onclick="App.setUcCat('Conservateur')">C</button>
-        <button class="uc-chip${ucCat === 'Actions thématique' ? ' active' : ''}" onclick="App.setUcCat('Actions thématique')">Thématique</button>
-        <button class="uc-chip${ucCat === 'Actions' ? ' active' : ''}" onclick="App.setUcCat('Actions')">Actions</button>
-        <button class="uc-chip${ucCat === 'Mixte / Flexible' ? ' active' : ''}" onclick="App.setUcCat('Mixte / Flexible')">Mixte</button>
-        <button class="uc-chip${ucCat === 'Obligataire' ? ' active' : ''}" onclick="App.setUcCat('Obligataire')">Oblig.</button>
+      <!-- Filtres de famille en sélecteur segmenté (même traitement que les filtres de l'Autocall) :
+           un socle blanc unique plutôt que des puces isolées, qui se confondaient avec les lignes
+           du tableau. Chaque segment porte son libellé complet pour le bureau et une forme courte
+           pour le mobile (6 segments en toutes lettres y passeraient sur 3 lignes) — même procédé
+           que .ac-legend-court. Le segment « Tous » n'existe qu'en bureau : sur mobile, re-toucher
+           le filtre actif le désactive, et un 6e segment ferait déborder la ligne. -->
+      <div class="uc-chips" role="group" aria-label="Filtrer par famille de fonds">
+        ${[
+          { cle: null,               long: 'Tous',         court: 'Tous', classe: ' uc-chip-tous' },
+          { cle: 'Conservateur',     long: 'Conservateur', court: 'C', classe: ' uc-chip-csr' },
+          { cle: 'Actions thématique', long: 'Thématique', court: 'Thém.' },
+          { cle: 'Actions',          long: 'Actions',      court: 'Actions' },
+          { cle: 'Mixte / Flexible', long: 'Mixte / Flexible', court: 'Mixte' },
+          { cle: 'Obligataire',      long: 'Obligataire',  court: 'Oblig.' },
+        ].map(f => {
+          const n = f.cle === null ? uc.length
+            : f.cle === 'Conservateur' ? uc.filter(u => u.nom.includes('Conservateur')).length
+            : uc.filter(u => CAT_MAP[u.categorie] === f.cle).length;
+          const actif = ucCat === f.cle;
+          const arg = f.cle === null ? 'null' : `'${f.cle}'`;
+          return `<button class="uc-chip${f.classe || ''}${actif ? ' active' : ''}" onclick="App.setUcCat(${arg})" aria-pressed="${actif}">`
+            + `<span class="uc-chip-long">${f.long}</span><span class="uc-chip-court">${f.court}</span>`
+            + `<span class="uc-chip-nb">${n}</span></button>`;
+        }).join('')}
       </div>
 
-      <div class="uc-sort-banner${hasPerfs ? '' : ' loading'}">
-        ${hasPerfs ? '↓ Trié par performance depuis le 01/01' : '⟳ Chargement des performances…'}
+      <!-- Bandeau de tri conservé POUR LE MOBILE seulement : sans en-tête de colonnes, c'est le
+           seul endroit qui dise selon quoi la liste est triée, et il porte l'indicateur de
+           chargement des performances. En bureau, son aplat coupait la page juste au-dessus du
+           tableau — remplacé par la ligne d'état à droite du titre de section. -->
+      <div class="uc-sort-banner uc-sort-banner--mobile${hasPerfs ? '' : ' loading'}">
+        ${hasPerfs ? `${tri.sens < 0 ? '↓' : '↑'} Trié par ${TRI_LIBELLES[tri.cle] || 'performance'}` : '⟳ Chargement des performances…'}
+      </div>
+
+      <!-- En-tête de colonnes, bureau seul (le mobile garde la carte empilée). Chaque titre trie
+           la colonne (App.trierUC) ; l'alignement sur les lignes est réglé en CSS, cf. .uc-list-head. -->
+      <div class="uc-list-head bureau-seul">
+        ${[
+          { cle: 'nom',       lib: 'Fonds' },
+          { cle: 'societe',   lib: 'Société de gestion' },
+          { cle: 'categorie', lib: 'Catégorie' },
+          { cle: 'secteur',   lib: 'Secteur principal', info: 'Secteur le plus représenté dans la poche actions du fonds.' },
+          { cle: 'sri',       lib: 'SRI', info: 'Indicateur de risque du prospectus (SRI), de 1 (le plus prudent) à 7.' },
+          { cle: 'note',      lib: 'Morningstar', info: 'Note Morningstar globale, de 1 à 5 étoiles : performance passée corrigée du risque, face aux fonds de la même catégorie.' },
+          { cle: 'ytd',       lib: 'Depuis 01/01', info: `Performance ${anneeN} depuis le 1er janvier, à la dernière clôture.` },
+          { cle: 'n1',        lib: String(anneeN1), info: `Performance de l'année civile ${anneeN1}, du 1er janvier au 31 décembre (source Morningstar, dividendes réinvestis).` },
+          { cle: 'an',        lib: '1 an', info: 'Performance sur 12 mois glissants.' },
+          { cle: 'a3',        lib: '3 ans', info: 'Performance cumulée sur 3 ans glissants.' },
+          { cle: 'a5',        lib: '5 ans', info: 'Performance cumulée sur 5 ans glissants.' },
+        ].map(c => {
+          const actif = tri.cle === c.cle;
+          const fleche = actif ? `<span class="uc-tri-fleche">${tri.sens < 0 ? '▼' : '▲'}</span>` : '';
+          const infobulle = `${c.info ? c.info + ' ' : ''}Cliquez pour trier.`;
+          return `<span class="uc-th${actif ? ' uc-th--actif' : ''}" role="button" tabindex="0" aria-sort="${actif ? (tri.sens < 0 ? 'descending' : 'ascending') : 'none'}"`
+            + ` title="${escHtml(infobulle)}" onclick="App.trierUC('${c.cle}')"`
+            + ` onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.trierUC('${c.cle}');}">${c.lib}${fleche}</span>`;
+        }).join('')}
       </div>
 
       <div class="uc-liste">
         ${ucFiltrees.map(u => {
+          const sect = ucSecteurs[u.isin];
+          const meta = ucMeta[u.isin] || {};
+          // Colonne « Catégorie » : la vraie famille du fonds. La pastille du mobile, elle,
+          // reprend le libellé du FILTRE actif au-dessus, où les fonds maison passent avant
+          // leur catégorie (« C ») — utile pour retrouver le filtre, hors sujet dans une
+          // colonne qui annonce une catégorie.
+          const CAT_COURT = { 'Actions thématique': 'Thématique', 'Actions': 'Actions', 'Mixte / Flexible': 'Mixte', 'Obligataire': 'Oblig.' };
+          const catLabel = CAT_COURT[CAT_MAP[u.categorie]] || u.categorie;
           const filterLabel = u.nom.includes('Conservateur') ? 'C'
             : CAT_MAP[u.categorie] === 'Actions thématique' ? 'Thématique'
             : CAT_MAP[u.categorie] === 'Actions'            ? 'Actions'
@@ -1563,26 +1727,32 @@ function renderContrats(state, ucPerfs) {
             : CAT_MAP[u.categorie] === 'Obligataire'        ? 'Oblig.'
             : u.categorie;
           return `
-        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel ? ' uc-item--actif' : ''}"${u.graphId ? ` onclick="App.ouvrirUC('${u.isin}')"` : ''}>
+        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel ? ' uc-item--actif' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}"${u.graphId ? ` onclick="App.ouvrirUC('${u.isin}')"` : ''}>
           <div class="uc-item-haut">
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
               <div class="uc-item-isin tnum">${u.isin}<span class="uc-filtre-badge">${filterLabel}</span></div>
             </div>
+            <span class="uc-societe" title="${escHtml(meta.societe || '')}">${escHtml(societeCourte(meta.societe))}</span>
+            <span class="uc-cat"><span class="uc-cat-badge">${catLabel}</span></span>
+            <span class="uc-secteur"${sect ? ` title="Secteur le plus représenté : ${Math.round(sect.pct)} % de la poche actions du fonds"` : ''}>${sect ? escHtml(sect.nom) : ''}</span>
             <div class="uc-item-right">
-              ${perfBadge(u.isin, ucPerfs)}
+              ${perfBadge(u.isin, ucPerfs, 'ytd')}
             </div>
           </div>
           <div class="uc-item-bas">
-            <span class="uc-expo">Actions ${u.equity} %</span>
-            <span class="uc-srri-inline"><span class="uc-srri-label">SRI</span>${srriDots(u.srri)}</span>
+            <span class="uc-expo"><span class="uc-expo-long">Actions </span>${u.equity} %<span class="uc-expo-bar"><i style="width:${Math.max(0, Math.min(100, u.equity || 0))}%"></i></span></span>
+            <span class="uc-srri-inline"><span class="uc-srri-label">SRI</span>${srriDots(u.srri)}<span class="uc-sri-txt tnum">${u.srri == null ? '—' : u.srri + '/7'}</span></span>
+            <span class="uc-note-cell">${ucEtoiles(meta.note)}</span>
+            <span class="uc-perf-n1">${perfCell(metaPerfAnnee(meta, anneeN1), 'uc-perf-txt')}</span>
+            ${perfBadge(u.isin, ucPerfs, 'an', 'uc-perf-an')}
+            <span class="uc-perf-3a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a3'), 'uc-perf-txt')}</span>
+            <span class="uc-perf-5a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a5'), 'uc-perf-txt')}</span>
           </div>
         </div>`;
         }).join('')}
       </div>
       </div><!-- /ac-col-liste -->
-
-      <div class="ac-col-detail">${ucPanneau}</div>
      </div><!-- /ac-split -->
     </div>
   </div>`;
@@ -1644,10 +1814,9 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
     .map(isin => uc.find(x => x.isin === isin))
     .filter(Boolean);
   const compares = [u, ...extras];
-  const p = ucPerfs ? ucPerfs[u.isin] : null;
-  const perfTxt = (p == null || isNaN(p)) ? '—'
-    : (p >= 0 ? '+' : '') + p.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-  const perfCls = (p == null || isNaN(p)) ? '' : (p >= 0 ? 'green' : 'red');
+  const p = ucPerfVal(ucPerfs, u.isin, 'ytd');
+  const perfTxt = ucPerfTxt(p);
+  const perfCls = p == null ? '' : (p >= 0 ? 'green' : 'red');
   const strategieBlocs = compares.map(c => `
     <div class="uc-strategie">
       ${compares.length > 1 ? `<div class="uc-strategie-nom">${escHtml(c.nom)}</div>` : ''}
@@ -1696,6 +1865,20 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
 // à chaque ajout/retrait d'UC comparée, avec ces mêmes identifiants de conteneurs.
 // (identifiant nu côté app.js : un const de haut niveau n'est pas exposé sur `window`)
 const UC_SHEET_IDS = { chartId: 'uc-chart-inline-sheet', compoId: 'uc-compo-cmp-sheet' };
+
+// Bureau : la fiche d'un fonds s'ouvre en fenêtre centrée (le tableau occupe toute la page, il
+// n'y a plus de panneau permanent à droite). Même corps que la feuille mobile, donc mêmes
+// identifiants de conteneurs — sans panneau de page, il n'existe qu'UNE fiche à la fois dans le
+// DOM et le piège des ids dupliqués ne se pose plus. `uc-panneau-entree` porte l'entrée animée.
+function renderUCModal(u, ucPerfs, state) {
+  return `
+  <div class="modal-overlay" onclick="if(event.target===this)App.fermerUC()">
+    <div class="modal-panel uc-modal uc-panneau-entree">
+      <button class="modal-close uc-modal-close" onclick="App.fermerUC()" aria-label="Fermer la fiche">✕</button>
+      <div class="modal-body uc-sheet-corps" id="uc-sheet-corps">${renderUCPanneau(u, ucPerfs, state, UC_SHEET_IDS)}</div>
+    </div>
+  </div>`;
+}
 function renderUCSheet(u, ucPerfs, state) {
   return `
   <div class="sheet-backdrop" onclick="if(event.target===this) App.fermerUC()">
