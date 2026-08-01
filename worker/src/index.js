@@ -76,6 +76,9 @@ async function historiqueYahoo(ticker, periode) {
     points,
     previousClose: res.meta?.chartPreviousClose ?? res.meta?.previousClose ?? null,
     devise: res.meta?.currency ?? null,
+    // Date de première cotation de l'instrument : sert au front à ne PAS proposer de période
+    // plus longue que son historique (un fonds lancé en 2022 n'a rien à montrer sur « 10 ans »).
+    debut: res.meta?.firstTradeDate ?? null,
   };
 }
 

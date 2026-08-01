@@ -778,7 +778,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 }
 .chart-mode-badge--base100 { color: #16304f; background: #eef2f7; }
 .chart-zone { position: relative; width: 100%; }
-.chart-zone svg { width: 100%; height: auto; display: block; touch-action: none; }
+/* `touch-action: pan-y` et non `none` : le glissement HORIZONTAL reste capté par le graphique
+   (lecture du cours au doigt), mais le geste vertical repart au conteneur — sinon le graphique,
+   qui occupe l'essentiel d'une fiche, devient une zone morte où la fenêtre ne défile pas. */
+.chart-zone svg { width: 100%; height: auto; display: block; touch-action: pan-y; }
 .chart-loading { padding: 64px 0; text-align: center; color: #9a8f7a; font-size: 13px; }
 .chart-grid { stroke: #f0ebe0; stroke-width: 1; }
 .chart-cross { stroke: #c9a96a; stroke-width: 1; stroke-dasharray: 3 3; pointer-events: none; }
@@ -1436,9 +1439,15 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   /* ── Ligne de filtres : puces à gauche, bouton « Comparer » à droite ────────────────────
      Le bouton hérite de la marge basse des puces (elles la perdent) pour que la ligne garde
      exactement la hauteur qu'elle avait avant, sans rien prendre à la liste. */
+  /* `flex-wrap` : en mode sélection la barre s'allonge (aide + 3 boutons) et, en fenêtre étroite,
+     dépassait la largeur de la colonne — une barre de défilement HORIZONTALE apparaissait dans
+     #content, qui à son tour faisait défiler la page de 6px (mesuré à 1024×768). Quand ça ne
+     tient plus, la barre passe simplement à la ligne, toujours calée à droite. */
   .uc-filtres-ligne {
-    display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px 16px; margin-bottom: 14px;
   }
+  .uc-filtres-ligne > .uc-cmp-barre { margin-left: auto; }
   .uc-filtres-ligne .uc-chips { align-self: center; margin-bottom: 0; }
   .uc-cmp-barre { display: flex; align-items: center; gap: 10px; flex: none; }
   .uc-cmp-btn {
@@ -1459,6 +1468,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     color: #9a8f7a; text-decoration: underline; cursor: pointer;
   }
   .uc-cmp-annuler:hover { color: #16304f; }
+  /* Sélecteur d'indices : ajoute des courbes de référence (les « Indices clés » du tableau de
+     bord) aux fonds comparés. Le menu reprend .cmp-picker, mais ancré à DROITE de son bouton —
+     la barre est en bout de ligne, un menu centré déborderait de la page. */
+  .uc-idx-wrap { position: relative; flex: none; }
+  .uc-cmp-btn--idx { display: inline-flex; align-items: center; gap: 6px; color: #4a4f57; }
+  .uc-cmp-btn--idx-actif { border-color: #c9a96a; color: #16304f; background: #fdf9f0; }
+  .uc-cmp-chevron { font-size: 8px; color: #b5ab95; }
+  .uc-idx-picker { top: calc(100% + 6px); left: auto; right: 0; transform: none; width: 232px; }
+  .cmp-picker-coche { width: 12px; flex: none; color: #c9a96a; font-weight: 700; }
+  .cmp-picker-item--actif { color: #16304f; font-weight: 600; }
   /* Fonds cochés : filet doré + liseré à gauche, distincts du marine de la ligne ouverte. */
   .uc-item--choisi { border-color: #c9a96a; background: #fdf9f0; box-shadow: inset 3px 0 0 #c9a96a; }
   .uc-liste--choix .uc-item.clic:hover { border-color: #c9a96a; }
@@ -1531,11 +1550,19 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      déjà cet office, un second titre le répéterait. */
   .modal-panel.uc-modal { width: 900px; position: relative; }
   .uc-modal .uc-sheet-corps { padding: 0; }
-  .uc-modal .ac-detail-panneau { border: none; box-shadow: none; height: auto; }
+  /* `overflow: visible` OBLIGATOIRE ici : sur la page Autocall, .ac-detail-panneau défile seul
+     (overflow-y:auto) et porte `overscroll-behavior: contain`. Dans la fenêtre d'un fonds, il n'a
+     rien à faire défiler (height:auto) mais reste un conteneur de défilement : `contain` empêche
+     alors le chaînage vers .modal-body, et la molette au-dessus de la fiche ne faisait
+     RIEN DU TOUT. En le rendant non défilable, la molette remonte jusqu'au corps de la fenêtre. */
+  .uc-modal .ac-detail-panneau { border: none; box-shadow: none; height: auto; overflow: visible; }
   .uc-modal-close {
     position: absolute; top: 10px; right: 12px; z-index: 2;
     background: rgba(255,255,255,.9); border-radius: 6px;
   }
+  /* Le bouton de fermeture est en absolu au-dessus de l'en-tête : sans cette réserve à droite,
+     il recouvrait la performance du fonds (mesuré : 10px de chevauchement sur « +2,9 % »). */
+  .uc-modal .ac-detail-entete { padding-right: 44px; }
 
   .ac-card { grid-template-columns: 1fr; gap: 0; padding: 11px 14px; cursor: pointer; }
   .ac-card-left { grid-column: auto; grid-row: auto; }

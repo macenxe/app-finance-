@@ -1508,20 +1508,53 @@ const TRI_LIBELLES = {
 //   2e clic   → ouvre la fiche comparée des fonds cochés (le 1er coché porte le graphique).
 // Rendue à part pour qu'App.majBarreCompare() puisse la remplacer seule à chaque coche : un
 // renderPage complet reconstruirait la liste et remonterait son défilement.
+// Indices proposés à la comparaison : exactement les « Indices clés » du tableau de bord.
+// graphIdPour() les remappe sur le symbole réellement servi par Yahoo (BNKE.PA pour l'Euro
+// Stoxx Banks, par exemple) — même précaution que catalogueComparaison() dans app.js.
+function ucIndicesComparables() {
+  const src = typeof INDICES_MARCHE !== 'undefined' ? INDICES_MARCHE : [];
+  return src.map(i => ({
+    ticker: (typeof graphIdPour === 'function' ? graphIdPour(i.nom) : null) || i.ticker,
+    label: i.nom,
+  })).filter(i => i.ticker);
+}
 function ucCmpBarreHtml(state) {
   const sel = (state && state.ucSelection) || [];
+  const idx = (state && state.ucCmpIndices) || [];
+  const indices = ucIndicesComparables();
+  // Le sélecteur d'indices n'apparaît qu'une fois « Comparer » cliqué : au repos, la barre ne
+  // montre qu'une seule action, et les indices sont une option DE la comparaison en cours.
+  const picker = !(state && state.ucIdxPickerOuvert) ? '' : `
+    <div class="cmp-picker uc-idx-picker" onclick="event.stopPropagation()">
+      ${indices.map(i => `
+        <div class="cmp-picker-item${idx.includes(i.ticker) ? ' cmp-picker-item--actif' : ''}"
+             onclick="event.stopPropagation();App.toggleIndiceCmp('${escHtml(i.ticker)}')">
+          <span class="cmp-picker-coche">${idx.includes(i.ticker) ? '✓' : ''}</span>${escHtml(i.label)}
+        </div>`).join('')}
+      ${idx.length ? `<div class="cmp-picker-vide"><button class="uc-cmp-annuler" type="button" onclick="event.stopPropagation();App.viderIndicesCmp()">Tout retirer</button></div>` : ''}
+    </div>`;
+  const boutonIdx = `<div class="uc-idx-wrap" id="uc-idx-wrap">
+      <button class="uc-cmp-btn uc-cmp-btn--idx${idx.length ? ' uc-cmp-btn--idx-actif' : ''}" type="button"
+        onclick="event.stopPropagation();App.toggleIndicePicker()" aria-expanded="${!!(state && state.ucIdxPickerOuvert)}"
+        title="Ajouter un indice du tableau de bord aux courbes comparées">Indices${idx.length ? ` · ${idx.length}` : ''} <span class="uc-cmp-chevron">▾</span></button>
+      ${picker}
+    </div>`;
   if (!(state && state.ucModeCompare)) {
     return `<div class="uc-cmp-barre" id="uc-cmp-barre">
       <button class="uc-cmp-btn" type="button" onclick="App.toggleModeCompare()"
         title="Sélectionner plusieurs fonds pour les afficher sur un même graphique, en base 100">Comparer</button>
     </div>`;
   }
+  // Un indice compte comme une courbe : 1 fonds + 1 indice suffisent, mais il faut toujours au
+  // moins un fonds — c'est sa fiche qui porte la comparaison.
+  const total = sel.length + idx.length;
   const aide = sel.length === 0 ? 'Cliquez les fonds à comparer'
-    : sel.length === 1 ? '1 fonds sélectionné — il en faut au moins 2'
-    : `${sel.length} fonds sélectionnés`;
+    : total < 2 ? '1 fonds sélectionné — ajoutez-en un autre ou un indice'
+    : `${sel.length} fonds${idx.length ? ` + ${idx.length} indice${idx.length > 1 ? 's' : ''}` : ' sélectionnés'}`;
   return `<div class="uc-cmp-barre uc-cmp-barre--choix" id="uc-cmp-barre">
     <span class="uc-cmp-aide">${aide}</span>
-    <button class="uc-cmp-btn uc-cmp-btn--go" type="button"${sel.length >= 2 ? '' : ' disabled'} onclick="App.lancerComparaison()">Lancer la comparaison</button>
+    ${boutonIdx}
+    <button class="uc-cmp-btn uc-cmp-btn--go" type="button"${sel.length >= 1 && total >= 2 ? '' : ' disabled'} onclick="App.lancerComparaison()">Lancer la comparaison</button>
     <button class="uc-cmp-annuler" type="button" onclick="App.toggleModeCompare()">Annuler</button>
   </div>`;
 }
@@ -1577,11 +1610,21 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   };
   const tri = (state && state.ucTri && VALEUR_TRI[state.ucTri.cle]) ? state.ucTri : { cle: 'ytd', sens: -1 };
 
-  // Date d'actualisation : celle du dernier cours de clôture téléchargé, PAR FONDS (colonne
-  // « Maj » du tableau). Elle a remplacé la ligne d'état qui l'annonçait globalement — une
-  // valeur par ligne dit aussi quel fonds n'a pas été rafraîchi avec les autres.
+  // Colonne « VL du » : date de la dernière VALEUR LIQUIDATIVE du fonds — la valorisation
+  // publiée par la société de gestion, pas la date de rafraîchissement du site. Le montant part
+  // en info-bulle : c'est lui qui montre que la donnée est bien propre à chaque fonds.
+  // ⚠ Les VL sont diffusées avec un jour ouvré de décalage et la plupart des fonds valorisent le
+  // même jour : voir tous les fonds à la même date est normal, pas un signe de donnée figée.
   const jjmm = ts => { const d = new Date(ts * 1000); return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`; };
   const dateMajUC = isin => { const t = (ucPerfs[isin] || {}).t; return t ? jjmm(t) : '—'; };
+  const DEVISES = { EUR: '€', USD: '$', GBP: '£', CHF: 'CHF' };
+  const vlInfobulle = isin => {
+    const p = ucPerfs[isin] || {};
+    if (!p.t) return 'Valeur liquidative en cours de chargement.';
+    const montant = p.vl == null ? '' : ` : ${p.vl.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${DEVISES[p.devise] || p.devise || ''}`.trimEnd();
+    return `Valeur liquidative du ${jjmm(p.t)}${montant} — dernière valorisation publiée par la société de gestion.`
+      + ' Les VL sont diffusées avec un jour ouvré de décalage, et la plupart des fonds valorisent le même jour.';
+  };
   const dateNotes = ucMetaGenere ? jjmm(Date.parse(ucMetaGenere) / 1000) : null;
   const ucFiltrees = (() => {
     const base = ucCat === 'Conservateur'
@@ -1721,7 +1764,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           { cle: 'an',        lib: '1 an', info: 'Performance sur 12 mois glissants.' },
           { cle: 'a3',        lib: '3 ans', info: 'Performance cumulée sur 3 ans glissants.' },
           { cle: 'a5',        lib: '5 ans', info: 'Performance cumulée sur 5 ans glissants.' },
-          { cle: 'maj',       lib: 'Maj', info: `Date d'actualisation : dernier cours de clôture utilisé pour les performances.${dateNotes ? ` Notes Morningstar et sociétés de gestion relevées le ${dateNotes}.` : ''}` },
+          { cle: 'maj',       lib: 'VL du', info: `Date de la dernière valeur liquidative publiée par la société de gestion (montant en info-bulle de chaque ligne). Elle sert de base à toutes les performances affichées ; les VL sont diffusées avec un jour ouvré de décalage.${dateNotes ? ` Notes Morningstar relevées le ${dateNotes}.` : ''}` },
         ].map(c => {
           const actif = tri.cle === c.cle;
           const fleche = actif ? `<span class="uc-tri-fleche">${tri.sens < 0 ? '▼' : '▲'}</span>` : '';
@@ -1771,7 +1814,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             ${perfBadge(u.isin, ucPerfs, 'an', 'uc-perf-an')}
             <span class="uc-perf-3a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a3'), 'uc-perf-txt')}</span>
             <span class="uc-perf-5a">${perfCell(ucPerfVal(ucPerfs, u.isin, 'a5'), 'uc-perf-txt')}</span>
-            <span class="uc-maj tnum" title="Cours du ${dateMajUC(u.isin)}">${dateMajUC(u.isin)}</span>
+            <span class="uc-maj tnum" title="${escHtml(vlInfobulle(u.isin))}">${dateMajUC(u.isin)}</span>
           </div>
         </div>`;
         }).join('')}
@@ -1841,6 +1884,9 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
     .map(isin => uc.find(x => x.isin === isin))
     .filter(Boolean);
   const compares = [u, ...extras];
+  // Indices ajoutés à la comparaison depuis la barre du tableau (bureau) : ils ne sont que des
+  // courbes de plus, ils n'entrent ni dans les blocs « stratégie » ni dans la composition.
+  const idxCmp = (state && state.ucCompareIdx) || [];
   const p = ucPerfVal(ucPerfs, u.isin, 'ytd');
   const perfTxt = ucPerfTxt(p);
   const perfCls = p == null ? '' : (p >= 0 ? 'green' : 'red');
@@ -1868,7 +1914,7 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
         <div class="fe-collapse-inner">${strategieBlocs}</div>
       </div>` : strategieBlocs;
   return `
-  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}" data-chart-id="${chartId}" data-compo-id="${compoId}">
+  <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}" data-cmp-idx="${idxCmp.map(escHtml).join(',')}" data-chart-id="${chartId}" data-compo-id="${compoId}">
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>

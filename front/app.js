@@ -127,13 +127,15 @@ const App = (() => {
     const bornes = pts => (pts.length > 1 ? variation(pts[0].c, pts[pts.length - 1].c) : null);
     const serie = async (gid, periode) => {
       const r = await fetch(AppAPI.historyUrl(gid, periode), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-      if (!r.ok) return [];
-      return (await r.json()).points || [];
+      if (!r.ok) return { points: [], devise: null };
+      const d = await r.json();
+      return { points: d.points || [], devise: d.devise || null };
     };
     await Promise.allSettled(
       UC_CATALOGUE.filter(u => u.graphId).map(async u => {
         try {
-          const [jour, semaine] = await Promise.all([serie(u.graphId, '1a'), serie(u.graphId, '5a')]);
+          const [rJour, rSemaine] = await Promise.all([serie(u.graphId, '1a'), serie(u.graphId, '5a')]);
+          const jour = rJour.points, semaine = rSemaine.points;
           if (jour.length < 2 && semaine.length < 2) return;
           const dernier = jour[jour.length - 1] || semaine[semaine.length - 1];
           ucPerfsCache[u.isin] = {
@@ -141,8 +143,13 @@ const App = (() => {
             an:  bornes(jour),
             a3:  bornes(semaine.filter(p => p.t >= debut3a)),
             a5:  bornes(semaine),
-            // Date de la dernière clôture connue : affichée dans la ligne d'état du tableau.
+            // Dernière VALEUR LIQUIDATIVE connue du fonds (montant + date de valorisation par la
+            // société de gestion, pas date de rafraîchissement du site) : colonne « VL du ».
+            // Les VL sont publiées avec un jour ouvré de décalage, d'où une date antérieure à
+            // celle des indices boursiers — et souvent identique pour tous les fonds.
             t:   dernier ? dernier.t : null,
+            vl:  dernier ? dernier.c : null,
+            devise: rJour.devise || rSemaine.devise,
           };
         } catch { /* on ignore */ }
       })
@@ -382,14 +389,20 @@ const App = (() => {
     const compoId = panneau.getAttribute('data-compo-id') || 'uc-compo-cmp';
     const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
     const u = uc.find(x => x.isin === isin);
-    if (compareIsins.length) {
+    // Indices du tableau de bord ajoutés à la comparaison : de simples séries de plus, mais qui
+    // suffisent à faire passer la fiche en mode comparé même sans second fonds.
+    const idxTickers = (panneau.getAttribute('data-cmp-idx') || '').split(',').filter(Boolean);
+    const catIdx = typeof ucIndicesComparables === 'function' ? ucIndicesComparables() : [];
+    const seriesIdx = idxTickers.map(t => ({ ticker: t, label: (catIdx.find(i => i.ticker === t) || {}).label || t }));
+    if (compareIsins.length || seriesIdx.length) {
       const extras = compareIsins.map(i => uc.find(x => x.isin === i)).filter(x => x && x.graphId);
-      const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom }))];
+      const series = [{ ticker: gid, label: u ? u.nom : '' }, ...extras.map(e => ({ ticker: e.graphId, label: e.nom })), ...seriesIdx];
       // Bureau : graphique plus bas que le gabarit commun, car le comparatif de composition
       // vient s'ajouter sous la courbe dans le même panneau. Mobile : conteneur étroit, le viewBox
       // 640 de large y est réduit d'autant — même valeur qu'au comparateur du tableau de bord.
       Chart.comparer(chartId, series, { vbh: estBureau() ? 215 : 300 });
-      if (Chart.comparerCompo) {
+      // La composition ne compare que des FONDS : un indice n'a pas de poches d'actifs à opposer.
+      if (Chart.comparerCompo && extras.length) {
         const items = [{ isin, nom: u ? u.nom : '' }, ...extras.map(e => ({ isin: e.isin, nom: e.nom }))];
         Chart.comparerCompo(compoId, items);
       }
@@ -501,7 +514,7 @@ const App = (() => {
     const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
     const u = uc.find(x => x.isin === state.ucSel);
     if (!u) return false;
-    const signature = (el) => el ? el.getAttribute('data-graph') + '|' + (el.getAttribute('data-compare') || '') : null;
+    const signature = (el) => el ? el.getAttribute('data-graph') + '|' + (el.getAttribute('data-compare') || '') + '|' + (el.getAttribute('data-cmp-idx') || '') : null;
     const ancien = host.querySelector('.ac-detail-panneau');
     const sig = signature(ancien);
     const chart = ancien && ancien.querySelector('#' + UC_SHEET_IDS.chartId);
@@ -844,6 +857,15 @@ const App = (() => {
       if (root.querySelector('.sheet-backdrop')) fermerSheet();
       else root.innerHTML = '';
     });
+    // Ferme le sélecteur d'indices de la barre « Comparer » si on clique en dehors.
+    document.addEventListener('click', (e) => {
+      if (!state.ucIdxPickerOuvert) return;
+      const wrap = document.getElementById('uc-idx-wrap');
+      if (wrap && !wrap.contains(e.target)) {
+        state = { ...state, ucIdxPickerOuvert: false };
+        App.majBarreCompare();
+      }
+    });
     // Ferme le sélecteur de séries comparées si on clique en dehors.
     document.addEventListener('click', (e) => {
       if (state.ucComparePickerOuvert) {
@@ -1039,6 +1061,27 @@ const App = (() => {
       state = { ...state, ucModeCompare: on, ucSelection: [] };
       renderPage(true);
     },
+    // Sélecteur d'indices de la barre : ajoute des courbes de référence (les « Indices clés » du
+    // tableau de bord) à la prochaine comparaison. La liste choisie SURVIT au lancement — on
+    // compare souvent plusieurs fonds de suite au même indice — et se lit sur le bouton.
+    toggleIndicePicker() {
+      state = { ...state, ucIdxPickerOuvert: !state.ucIdxPickerOuvert };
+      App.majBarreCompare();
+    },
+    toggleIndiceCmp(ticker) {
+      const idx = state.ucCmpIndices || [];
+      state = { ...state, ucCmpIndices: idx.includes(ticker) ? idx.filter(t => t !== ticker) : [...idx, ticker] };
+      App.majBarreCompare();
+    },
+    viderIndicesCmp() {
+      state = { ...state, ucCmpIndices: [] };
+      App.majBarreCompare();
+    },
+    // Remplace la seule barre, sans renderPage : la liste garde son défilement et ses coches.
+    majBarreCompare() {
+      const barre = document.getElementById('uc-cmp-barre');
+      if (barre) barre.outerHTML = ucCmpBarreHtml(state);
+    },
     choisirUC(isin) {
       const sel = state.ucSelection || [];
       const dedans = sel.includes(isin);
@@ -1047,14 +1090,14 @@ const App = (() => {
       // reconstruirait la liste et remonterait son défilement en pleine sélection.
       const ligne = document.querySelector(`.uc-item[data-isin="${isin}"]`);
       if (ligne) ligne.classList.toggle('uc-item--choisi', !dedans);
-      const barre = document.getElementById('uc-cmp-barre');
-      if (barre) barre.outerHTML = ucCmpBarreHtml(state);
+      App.majBarreCompare();
     },
     lancerComparaison() {
       const sel = state.ucSelection || [];
-      if (sel.length < 2) return;
-      state = { ...state, ucModeCompare: false, ucSelection: [], ucStrategieOuvert: false,
-                ucSel: sel[0], ucCompare: sel.slice(1), ucComparePickerOuvert: false };
+      const idx = state.ucCmpIndices || [];
+      if (!sel.length || sel.length + idx.length < 2) return;
+      state = { ...state, ucModeCompare: false, ucSelection: [], ucStrategieOuvert: false, ucIdxPickerOuvert: false,
+                ucSel: sel[0], ucCompare: sel.slice(1), ucCompareIdx: idx, ucComparePickerOuvert: false };
       renderPage(true);
       App.ouvrirFicheUC(sel[0]);
     },
@@ -1063,7 +1106,7 @@ const App = (() => {
     ouvrirUC(isin) {
       // Changer l'UC ouverte referme la comparaison en cours : elle porte sur le graphique
       // affiché, pas sur une sélection indépendante.
-      state = { ...state, ucSel: isin, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
+      state = { ...state, ucSel: isin, ucCompare: [], ucCompareIdx: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
       sauvegarderEtat();
       App.ouvrirFicheUC(isin);
     },

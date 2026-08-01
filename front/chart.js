@@ -158,6 +158,17 @@ const Chart = (() => {
         sousEl.textContent = txt;
         sousEl.style.display = txt ? '' : 'none';
       }
+      // Périodes plus longues que l'historique de la série : masquées dès la 1re réponse.
+      // `data.debut` (première cotation, servi par le Worker) donne la réponse tout de suite ;
+      // à défaut, on la déduit quand la série reçue est plus COURTE que la période demandée —
+      // c'est qu'on a touché son début. Repli utile tant que le Worker n'expose pas le champ.
+      const deduit = (!data.debut && etat.points.length
+        && (Date.now() / 1000 - etat.points[0].t) / 86400 < dureeJours(periode) * 0.9)
+        ? etat.points[0].t : null;
+      majPeriodesDispo(
+        (etat.inlineId ? '#' + etat.inlineId + ' ' : '') + '.chart-periodes .chart-per',
+        data.debut || deduit, etat.periode
+      );
       if (etat.points.length < 2) {
         if (zone) zone.innerHTML = '<div class="chart-loading">Données indisponibles pour cette période.</div>';
         majReadout(null);
@@ -173,6 +184,28 @@ const Chart = (() => {
   function majBoutons() {
     document.querySelectorAll('.chart-per').forEach(b =>
       b.classList.toggle('active', b.dataset.per === etat.periode));
+  }
+
+  // ── Périodes réellement disponibles ───────────────────────────────────────────────────
+  // Durée couverte par chaque période, en jours (YTD dépend du jour où l'on est).
+  const DUREE_J = { '1j': 1, '1s': 7, '1m': 31, '6m': 184, '1a': 366, '3a': 1097, '5a': 1827, '10a': 3653 };
+  function dureeJours(key) {
+    if (key === 'ytd') return (Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) / 86400000;
+    return DUREE_J[key] || 0;
+  }
+  // Retire les boutons qu'un historique trop court ne peut pas honorer : un fonds lancé en 2022
+  // n'a rien de plus à montrer sur « 10 ans » que sur « 3 ans », et l'étiquette ment sur la durée
+  // réellement tracée. `debutTs` = première cotation (champ `debut` servi par le Worker) ; sans
+  // lui (séries statiques FRED/inflation) on ne masque rien. Le bouton ACTIF n'est jamais masqué :
+  // on ne retire pas de l'écran celui sur lequel l'utilisateur est déjà.
+  function majPeriodesDispo(selecteur, debutTs, actif) {
+    const boutons = document.querySelectorAll(selecteur);
+    if (!boutons.length) return;
+    const histoire = debutTs ? (Date.now() / 1000 - debutTs) / 86400 : null;
+    boutons.forEach(b => {
+      const trop = histoire != null && dureeJours(b.dataset.per) > histoire * 1.02 + 3;
+      b.style.display = (trop && b.dataset.per !== actif) ? 'none' : '';
+    });
   }
 
   function dessiner() {
@@ -297,7 +330,15 @@ const Chart = (() => {
       majReadout(i);
     };
 
-    svg.addEventListener('pointerdown', e => { try { svg.setPointerCapture(e.pointerId); } catch (_) {} montrer(indexDepuis(e)); });
+    // Capture réservée à la SOURIS/au stylet : capturer un pointeur tactile empêche le navigateur
+    // de reprendre le geste pour faire défiler, et le graphique — qui occupe l'essentiel d'une
+    // fiche — devenait une zone où la fenêtre ne défilait plus du tout. Au doigt, on laisse le
+    // geste vertical au défilement (cf. `touch-action: pan-y` sur le svg) ; le déplacement
+    // horizontal continue de lire le cours via pointermove.
+    svg.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' || e.pointerType === 'pen') { try { svg.setPointerCapture(e.pointerId); } catch (_) {} }
+      montrer(indexDepuis(e));
+    });
     svg.addEventListener('pointermove', e => montrer(indexDepuis(e)));
     svg.addEventListener('pointerleave', () => {
       cross.style.display = 'none'; dot.style.display = 'none'; majReadout(n - 1);
@@ -474,12 +515,16 @@ const Chart = (() => {
           ? await AppAPI.chargerHistorique(s.ticker, periode)
           : await (await fetch(`${WORKER}?history=${encodeURIComponent(s.ticker)}&period=${periode}`, { cache: 'no-store', signal: AbortSignal.timeout(12000) })).json();
         const pts = d.points || [];
-        return pts.length >= 2 ? { ...s, points: pts } : null;
+        return pts.length >= 2 ? { ...s, points: pts, debut: d.debut || null } : null;
       } catch { return null; }
     }));
     // La période OU la liste des séries a pu changer pendant les requêtes : réponse périmée.
     if (perime()) return;
     etat.sets = res.filter(Boolean);
+    // Comparaison : c'est la série la PLUS JEUNE qui commande — au-delà de sa création, les
+    // autres courbes seraient seules à l'écran et la base 100 n'aurait plus de point commun.
+    const debuts = etat.sets.map(s => s.debut).filter(Boolean);
+    majPeriodesDispo('.chart-per-cmp', debuts.length === etat.sets.length ? Math.max(...debuts) : null, etat.periode);
     dessinerComparaison();
   }
 
