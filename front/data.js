@@ -52,11 +52,11 @@ const MACRO = [
 // Dernière valeur connue des séries FRED (générée depuis front/data/history/),
 // affichée sur le tableau de bord pour coller au dernier point du graphique.
 const HISTO_DERNIER = {
-  'fred:DGS10':                 { valeur:'4,44 %', var:'+6 pb',   hausse:true,  date:'au 30/06' },
-  'fred:IRLTLT01FRM156N':       { valeur:'3,74 %', var:'+7 pb',   hausse:true,  date:'mai 2026' },
-  'fred:IRLTLT01DEM156N':       { valeur:'3,05 %', var:'+5 pb',   hausse:true,  date:'mai 2026' },
-  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,18 %', var:'stable',  hausse:null,  date:'au 30/06' },
-  'hicp:CP0000EZ19M086NEST':    { valeur:'3,1 %',  var:'+0,1 pt', hausse:true,  date:'mai 2026' },
+  'fred:DGS10':                 { valeur:'4,68 %', var:'+1 pb',   hausse:true,  date:'au 30/07' },
+  'fred:IRLTLT01FRM156N':       { valeur:'3,68 %', var:'-6 pb',   hausse:false, date:'juin 2026' },
+  'fred:IRLTLT01DEM156N':       { valeur:'2,97 %', var:'-8 pb',   hausse:false, date:'juin 2026' },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,19 %', var:'stable',  hausse:null,  date:'au 30/07' },
+  'hicp:CP0000EZ19M086NEST':    { valeur:'2,7 %',  var:'-0,4 pt', hausse:false, date:'juin 2026' },
 };
 
 // Calendrier officiel des décisions de taux BCE et Fed (jour de l'annonce), 2026-2027.
