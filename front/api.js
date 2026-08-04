@@ -223,9 +223,44 @@ const AppAPI = (() => {
     return f.length >= 2 ? f : points.slice(-6);
   }
 
+  // Historique des UC (graphId Morningstar 0P…F) : fusion profondeur + fraîcheur.
+  // Le fichier statique front/data/history/uc/<graphId>.json (FT, jusqu'à 35 ans) porte la
+  // profondeur ; le Worker (Yahoo, qui ne remonte qu'à fin 2017) porte les jours récents.
+  // Sur le chevauchement, le live prime : tout jour servi par le live évince le point statique
+  // du même jour (les points live sont gardés tels quels, y compris intrajournaliers).
+  // `debut` = premier point fusionné, pour que chart.js dévoile 5 ans et 10 ans.
+  const RE_UC = /^0P\w+\.F$/i;
+  const jourDe = t => Math.floor(t / 86400);
+
+  async function historiqueUC(id, periode) {
+    const fichier = id.replace(/[^A-Za-z0-9_.-]/g, '_');
+    const [statique, live] = await Promise.all([
+      fetchJson(`./data/history/uc/${fichier}.json`).catch(() => null),
+      fetchJson(`${WORKER}?history=${encodeURIComponent(id)}&period=${encodeURIComponent(periode)}`, 8000)
+        .then(d => ((d.points || []).length >= 2 ? d : null)).catch(() => null),
+    ]);
+    if (!statique) {
+      if (!live) throw new Error('historique indisponible');
+      return live; // statique absent : comportement live seul
+    }
+    const ptsLive = live ? (live.points || []) : [];
+    const joursLive = new Set(ptsLive.map(p => jourDe(p.t)));
+    const fusion = (statique.points || [])
+      .filter(p => !joursLive.has(jourDe(p.t)))
+      .concat(ptsLive)
+      .sort((a, b) => a.t - b.t);
+    return {
+      ...(live || {}),
+      ticker: id,
+      points: filtrerPeriode(fusion, periode),
+      debut: fusion.length ? fusion[0].t : (live && live.debut) || null,
+    };
+  }
+
   // Charge l'historique d'un ticker pour un graphique (chart.js), avec repli automatique :
   // 1. fred:/hicp: → toujours statique (jamais servi par le Worker), filtré par période ici.
-  // 2. Cours (indices/actions) → Worker (cours du moment) ; si injoignable (ex. pare-feu
+  // 2. UC (0P…F) → fusion statique uc/ + live Worker (cf. historiqueUC).
+  // 3. Cours (indices/actions) → Worker (cours du moment) ; si injoignable (ex. pare-feu
   //    d'entreprise bloquant *.workers.dev), repli sur front/data/history/eq/<ticker>.json,
   //    pré-généré par GitHub Actions (back/src/history-snapshot.ts), filtré par période.
   async function chargerHistorique(id, periode) {
@@ -233,6 +268,7 @@ const AppAPI = (() => {
       const d = await fetchJson(`./data/history/${id.slice(5)}.json`);
       return { ...d, points: filtrerPeriode(d.points || [], periode) };
     }
+    if (RE_UC.test(id)) return historiqueUC(id, periode);
     try {
       const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(periode)}`;
       const d = await fetchJson(`${WORKER}?${q}`, 8000);
