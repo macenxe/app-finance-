@@ -515,8 +515,21 @@ function parseItemsAtom(xml, cfg) {
 async function fetchRSSWorker(flux) {
   try {
     // Timeout par flux : un flux lent ne doit pas bloquer l'ensemble. cacheTtl 300 (5 min) :
-    // borne le coût des ~40 flux RSS désormais interrogés à chaque appel non mis en cache.
-    const r = await fetch(flux.url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 300 }, signal: AbortSignal.timeout(8000) });
+    // borne le coût des flux RSS interrogés à chaque appel non mis en cache.
+    // redirect 'manual' + UN hop suivi à la main : chaque redirection suivie compte comme
+    // une sous-requête (limite 50/invocation, D28) — le coût par flux est ainsi borné à 2.
+    // Le cookie CONSENT évite l'interstitiel cookies de Google News pour les IP européennes.
+    const opts = {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)',
+                 'Cookie': 'CONSENT=YES+; SOCS=CAI' },
+      cf: { cacheTtl: 300 }, redirect: 'manual', signal: AbortSignal.timeout(8000),
+    };
+    let r = await fetch(flux.url, opts);
+    if ([301, 302, 303, 307, 308].includes(r.status)) {
+      const loc = r.headers.get('Location');
+      if (!loc) return [];
+      r = await fetch(new URL(loc, flux.url).toString(), opts);
+    }
     if (!r.ok) return [];
     const xml = await r.text();
     return (flux.format === 'atom' ? parseItemsAtom : parseItemsRSS)(xml, flux);
@@ -583,15 +596,20 @@ export default {
     // Actualités économiques : ?news=1 (~40 flux RSS = lent → cache de sortie 5 min).
     if (u.searchParams.get('news')) {
       const cache = caches.default;
-      const cleCache = new Request(new URL('/?news=cache', u.origin).toString());
+      // Clé versionnée : un déploiement qui change le format ne doit pas resservir
+      // l'entrée de l'ancien code pendant son TTL (mesuré au chantier 2, D28).
+      const cleCache = new Request(new URL('/?news=cache-v2', u.origin).toString());
       const enCache = await cache.match(cleCache);
       if (enCache) return enCache;
       try {
         const news = await recupererNews();
+        const total = Object.values(news).reduce((n, l) => n + l.length, 0);
         const resp = new Response(JSON.stringify(news), {
           headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=300' },
         });
-        await cache.put(cleCache, resp.clone());
+        // Une agrégation quasi vide (panne amont, budget épuisé) ne se met pas en
+        // cache : l'appel suivant retente au lieu de figer le vide pendant 5 min.
+        if (total >= 5) await cache.put(cleCache, resp.clone());
         return resp;
       } catch (e) {
         return new Response(JSON.stringify({ error: String(e?.message || e) }), { status: 502, headers: JSON_HEADERS });

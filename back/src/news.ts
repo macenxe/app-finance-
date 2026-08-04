@@ -342,7 +342,7 @@ function parseItemsAtom(xml: string, cfg: Flux): Article[] {
 async function fetchRSS(flux: Flux): Promise<Article[]> {
   try {
     const resp = await fetch(flux.url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' },
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)', 'Cookie': 'CONSENT=YES+; SOCS=CAI' },
       signal: AbortSignal.timeout(8000),
     });
     if (!resp.ok) return [];
