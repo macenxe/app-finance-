@@ -1019,6 +1019,32 @@ function statutPillClasse(cle) {
   return 'grey';
 }
 
+// ── Cellules ajoutées pour le tableau du bureau (masquées en base, cf. .ac-fam/.ac-ecart) ──
+const AC_FAMILLE_LABELS = { athena: 'Athena', cap: 'CAP', cms: 'CMS', autre: '—' };
+function familleBadgeHtml(r) {
+  const f = typeof familleProduit === 'function' ? familleProduit(r) : 'autre';
+  return `<span class="ac-fam ac-fam--${f}">${AC_FAMILLE_LABELS[f] || '—'}</span>`;
+}
+// Écart au déclenchement du rappel, en % du seuil, orienté « du bon côté » : positif = le rappel
+// serait acquis au niveau du jour, négatif = il reste ce chemin à parcourir. Sur un autocall à la
+// BAISSE (les CMS, et les equity à barrière < 100 %) le sens est inversé — d'où geo.estBaisse
+// plutôt qu'une soustraction brute, qui donnerait le signe contraire à la moitié du portefeuille.
+function ecartRappelPct(geo) {
+  if (!geo || geo.autoVal == null || geo.niveauVal == null || !geo.autoVal) return null;
+  const e = geo.estBaisse ? (geo.autoVal - geo.niveauVal) / geo.autoVal : (geo.niveauVal - geo.autoVal) / geo.autoVal;
+  return e * 100;
+}
+function ecartRappelHtml(geo) {
+  const v = ecartRappelPct(geo);
+  if (v == null) return '<span class="ac-ecart ac-ecart--vide">—</span>';
+  // Même seuil de 5 points que barrierCouleur, pour que les couleurs se lisent pareil partout.
+  const cls = v >= 5 ? 'vert' : v > -5 ? 'orange' : 'rouge';
+  const txt = (v > 0 ? '+' : v < 0 ? '−' : '')
+    + Math.abs(v).toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+  const info = v >= 0 ? 'Le rappel serait acquis au niveau du jour' : 'Chemin restant jusqu\'à la barrière de rappel';
+  return `<span class="ac-ecart ac-ecart--${cls} tnum" title="${info}">${txt}</span>`;
+}
+
 function cardAutocallHtml(r) {
   if (r.isGroupeCap) return cardAutocallGroupeHtml(r);
 
@@ -1040,7 +1066,11 @@ function cardAutocallHtml(r) {
           ${geo.niveauPos != null ? `<div class="ac-bar-niveau ac-bar-niveau--${zone.cle}" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-val">${fmtBarreBarriereCourt(geo.niveauVal, isCms)}</span><span class="ac-bar-niveau-dot"></span></div>` : ''}
         </div>
       </div>`
-    : '';
+    // Un produit rappelé n'a plus de frise. En bureau, la ligne du tableau doit malgré tout
+    // occuper sa cellule « Position » : sans elle, toutes les colonnes suivantes glisseraient
+    // d'un cran (le statut se retrouvait sous « Position »). Masquée en mobile, où la carte
+    // rappelée n'affiche effectivement rien à cet endroit.
+    : '<div class="ac-bar-row ac-bar-row--vide"><span class="ac-bar-vide">Plus de constatation</span></div>';
 
   const protectionLabel = geo && geo.protPct != null ? `${geo.protPct} %` : (geo && isCms ? 'Capital garanti' : null);
   const protectionInfo = protectionLabel ? `
@@ -1076,7 +1106,7 @@ function cardAutocallHtml(r) {
   const titreCourt = condenserTitreProduit(r.nom, r.ech);
 
   return `
-  <div class="ac-card${r.rappele ? ' ac-card--rappele' : ''}"${r.rappele ? '' : ` onclick="App.voirDetail('${r.isin}')"`}>
+  <div class="ac-card${r.rappele ? ' ac-card--rappele' : ''}" data-isin="${escHtml(r.isin)}"${r.rappele ? '' : ` onclick="App.voirDetail('${r.isin}')"`}>
     <div class="ac-card-left">
       <div class="ac-card-top">
         <div class="ac-card-titre">
@@ -1088,6 +1118,8 @@ function cardAutocallHtml(r) {
       ${barSection}
     </div>
     <div class="ac-info">${infoBlock}</div>
+    ${familleBadgeHtml(r)}
+    ${ecartRappelHtml(geo)}
   </div>`;
 }
 
@@ -1157,7 +1189,7 @@ function cardAutocallGroupeHtml(r) {
       </span>` : '';
 
   return `
-  <div class="ac-card"${isinsGroupe ? ` onclick="App.voirDetailGroupe('${isinsGroupe}')"` : ''}>
+  <div class="ac-card" data-isins="${escHtml(isinsGroupe)}"${isinsGroupe ? ` onclick="App.voirDetailGroupe('${isinsGroupe}')"` : ''}>
     <div class="ac-card-left">
       <div class="ac-card-top">
         <div class="ac-card-titre">
@@ -1169,8 +1201,41 @@ function cardAutocallGroupeHtml(r) {
       ${barSection}
     </div>
     <div class="ac-info">${infoBlock}</div>
+    ${familleBadgeHtml(r)}
+    ${ecartRappelHtml(geo)}
   </div>`;
 }
+
+// ── Tri du tableau Autocall (bureau) ──
+// Un extracteur par colonne. Les colonnes de texte se trient A→Z au premier clic, les colonnes
+// chiffrées du meilleur au moins bon — comme sur le tableau des fonds, pour éviter un premier
+// clic « pour rien ». La colonne « Position » n'est pas une valeur : elle se trie sur l'écart au
+// rappel, c'est-à-dire exactement ce que la frise donne à lire.
+const AC_TRI_LIBELLES = {
+  nom: 'nom de produit', famille: 'famille', sj: 'sous-jacent', position: 'position sur la frise',
+  statut: 'statut', ecart: 'écart au rappel', coupon: 'coupon', constat: 'date de constatation',
+};
+const AC_STATUT_RANG = { risque: 0, neutre: 1, coupon: 2, rappel: 3 };
+const AC_VALEUR_TRI = {
+  nom:      r => condenserTitreProduit(r.isGroupeCap ? `CAP ${formatMoisAnnee(r.ech) || ''}`.trim() : r.nom, r.ech),
+  famille:  r => AC_FAMILLE_LABELS[familleProduit(r)] || '',
+  sj:       r => r.sjLabel || r.sj || '',
+  position: r => ecartRappelPct(r.isGroupeCap ? geometrieBarreGroupe(r) : geometrieBarre(r)),
+  ecart:    r => ecartRappelPct(r.isGroupeCap ? geometrieBarreGroupe(r) : geometrieBarre(r)),
+  statut:   r => AC_STATUT_RANG[zoneNiveau(r).cle] ?? null,
+  coupon:   r => { const n = parseFloat(String(r.coupon).replace(',', '.')); return isNaN(n) ? null : n; },
+  constat:  r => { const d = parseDateFlexible(r.constat); return d ? d.getTime() : null; },
+};
+const AC_COLONNES = [
+  { cle: 'nom',      label: 'Produit',      texte: true },
+  { cle: 'famille',  label: 'Type',         texte: true },
+  { cle: 'sj',       label: 'Sous-jacent',  texte: true },
+  { cle: 'position', label: 'Position',     texte: true },
+  { cle: 'statut',   label: 'Statut' },
+  { cle: 'ecart',    label: 'Écart rappel' },
+  { cle: 'coupon',   label: 'Coupon' },
+  { cle: 'constat',  label: 'Constat' },
+];
 
 function renderProduits(produits, state, rappeles) {
   rappeles = rappeles || [];
@@ -1180,19 +1245,26 @@ function renderProduits(produits, state, rappeles) {
   if (famille !== 'tous') rows = rows.filter(r => familleProduit(r) === famille);
   rows = grouperCapMemeDate(rows);
 
-  // Rappelés en fin de liste (plus de prochaine constatation) ; les autres du plus proche au plus lointain.
-  const dateTri = r => {
-    if (r.rappele) return Infinity;
-    const d = parseDateFlexible(r.constat);
-    return d ? d.getTime() : Infinity;
-  };
-  rows = [...rows].sort((a, b) => dateTri(a) - dateTri(b));
+  // Tri par défaut : par date de constatation, la plus proche d'abord — l'ordre historique de
+  // la page. Les produits RAPPELÉS restent toujours en fin de liste, quel que soit le tri : ils
+  // n'ont plus de constatation à venir et se lisent comme un historique, pas comme du courant.
+  const tri = (state.acTri && AC_VALEUR_TRI[state.acTri.cle]) ? state.acTri : { cle: 'constat', sens: 1 };
+  const valeur = AC_VALEUR_TRI[tri.cle];
+  const colonne = AC_COLONNES.find(c => c.cle === tri.cle) || AC_COLONNES[7];
+  rows = [...rows].sort((a, b) => {
+    if (!!a.rappele !== !!b.rappele) return a.rappele ? 1 : -1;
+    const va = valeur(a), vb = valeur(b);
+    // Valeurs manquantes toujours en fin de liste, dans les deux sens : sinon inverser le tri
+    // fait remonter les lignes vides en tête.
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    const cmp = colonne.texte ? String(va).localeCompare(String(vb), 'fr') : va - vb;
+    return cmp * tri.sens;
+  });
 
-  // Bureau : liste compacte à gauche, fiche du produit sélectionné à droite (split
-  // master-détail). Mobile : le panneau est masqué en CSS et la fiche s'ouvre en feuille.
   const detailIsin  = state.detailIsin || null;
   const detailIsins = state.detailIsins || null;
-
   const estSelectionne = (r) => {
     if (r.isGroupeCap) {
       if (!detailIsins) return false;
@@ -1201,29 +1273,18 @@ function renderProduits(produits, state, rappeles) {
     }
     return !!detailIsin && r.isin === detailIsin;
   };
-
-  // Le panneau de droite ne reste jamais vide : sans sélection explicite, il présente le
-  // premier produit actif de la liste.
-  const selectionExplicite = rows.find(estSelectionne) || null;
-  const selection = selectionExplicite || rows.find(r => !r.rappele) || null;
-
   const carteHtml = (r) => {
-    const actif = selectionExplicite ? estSelectionne(r) : r === selection;
     const c = cardAutocallHtml(r);
-    return actif ? c.replace('class="ac-card', 'class="ac-card ac-card--actif') : c;
+    return estSelectionne(r) ? c.replace('class="ac-card', 'class="ac-card ac-card--actif') : c;
   };
 
-  const membresDe = (g) => (g.paliers || []).map(p => p.isin).map(i => produits.find(x => x.isin === i)).filter(Boolean);
-  let panneau = '<div class="ac-detail-vide">Sélectionnez un produit pour afficher sa fiche.</div>';
-  if (selection && selection.isGroupeCap) {
-    const membres = membresDe(selection);
-    if (membres.length) panneau = renderDetailPanneauGroupe(membres);
-  } else if (selection) {
-    panneau = renderDetailPanneau(selection);
-  }
+  // En-tête de colonnes : bureau seul (le mobile garde la carte empilée, cf. .ac-list-head).
+  const enTete = AC_COLONNES.map(c => `<span${c.texte ? ' class="gauche"' : ''}><span class="ac-th uc-th${tri.cle === c.cle ? ' uc-th--actif' : ''}" role="button" tabindex="0"
+        onclick="App.trierAC('${c.cle}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.trierAC('${c.cle}')}"
+        title="Trier par ${escHtml(AC_TRI_LIBELLES[c.cle])}">${escHtml(c.label)}${tri.cle === c.cle ? `<span class="uc-tri-fleche">${tri.sens < 0 ? '▲' : '▼'}</span>` : ''}</span></span>`).join('');
 
   return `
-  <div>
+  <div class="page-autocall">
     <header class="page-header">
       <div>
         <div class="page-title">Autocall</div>
@@ -1234,30 +1295,37 @@ function renderProduits(produits, state, rappeles) {
     <div class="page-body">
       <div class="ac-split">
         <div class="ac-col-liste">
-          <div class="ac-toolbar">
-            <div class="filter-chips ac-tabs">
-              <button class="filter-chip${famille === 'tous' ? ' active' : ''}" onclick="App.setFamilleFiltre('tous')">Tous</button>
-              <button class="filter-chip${famille === 'athena' ? ' active' : ''}" onclick="App.setFamilleFiltre('athena')">Athena</button>
-              <button class="filter-chip${famille === 'cap' ? ' active' : ''}" onclick="App.setFamilleFiltre('cap')">CAP</button>
-              <button class="filter-chip${famille === 'cms' ? ' active' : ''}" onclick="App.setFamilleFiltre('cms')">CMS</button>
+          <!-- Enveloppe neutre en mobile (display:contents) : les filtres et la légende y restent
+               les enfants directs de la colonne, mise en page inchangée. En bureau elle en fait
+               une seule ligne — filtres à gauche, légende de la frise à droite. -->
+          <div class="ac-filtres-ligne">
+            <div class="ac-toolbar">
+              <div class="filter-chips ac-tabs">
+                <button class="filter-chip${famille === 'tous' ? ' active' : ''}" onclick="App.setFamilleFiltre('tous')">Tous</button>
+                <button class="filter-chip${famille === 'athena' ? ' active' : ''}" onclick="App.setFamilleFiltre('athena')">Athena</button>
+                <button class="filter-chip${famille === 'cap' ? ' active' : ''}" onclick="App.setFamilleFiltre('cap')">CAP</button>
+                <button class="filter-chip${famille === 'cms' ? ' active' : ''}" onclick="App.setFamilleFiltre('cms')">CMS</button>
+              </div>
+            </div>
+
+            <div class="ac-legend">
+              <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--loss"></span><span class="ac-legend-full">Zone de perte en capital</span><span class="ac-legend-court">Perte en capital</span></span>
+              <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--coupon"></span><span class="ac-legend-full">Barrière coupon</span><span class="ac-legend-court">Coupon</span></span>
+              <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--auto"></span><span class="ac-legend-full">Barrière rappel</span><span class="ac-legend-court">Rappel</span></span>
+              <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--niveau"></span>Niveau actuel</span>
             </div>
           </div>
 
-          <div class="ac-legend">
-            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--loss"></span><span class="ac-legend-full">Zone de perte en capital</span><span class="ac-legend-court">Perte en capital</span></span>
-            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--coupon"></span><span class="ac-legend-full">Barrière coupon</span><span class="ac-legend-court">Coupon</span></span>
-            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--auto"></span><span class="ac-legend-full">Barrière rappel</span><span class="ac-legend-court">Rappel</span></span>
-            <span class="ac-legend-item"><span class="ac-legend-swatch ac-legend-swatch--niveau"></span>Niveau actuel</span>
-          </div>
+          <!-- Bandeau de tri conservé POUR LE MOBILE seulement : sans en-tête de colonnes, c'est
+               le seul endroit qui dise selon quoi la liste est triée. -->
+          <div class="uc-sort-banner uc-sort-banner--mobile">${tri.sens < 0 ? '↑' : '↓'} Trié par ${AC_TRI_LIBELLES[tri.cle] || 'date de constatation'}</div>
 
-          <div class="uc-sort-banner">↓ Trié par date de constatation</div>
+          <div class="ac-list-head">${enTete}</div>
 
           <div class="ac-list">
             ${rows.length ? rows.map(carteHtml).join('') : `<div class="ac-empty">Aucun produit ne correspond à cette recherche.</div>`}
           </div>
         </div>
-
-        <div class="ac-col-detail">${panneau}</div>
       </div>
     </div>
   </div>`;
@@ -1403,6 +1471,29 @@ function renderDetailPanneauGroupe(membres) {
       ${detailNiveauHtml(ref)}
     </div>
     ${detailCorpsGroupeHtml(membres, 'detail-chart-inline')}
+  </div>`;
+}
+
+// Bureau : la fiche s'ouvre en fenêtre par-dessus le tableau (la liste occupe désormais toute la
+// largeur de la page, il n'y a plus de colonne de droite). Même gabarit que la fiche d'un fonds —
+// .uc-modal porte la largeur de 900px, le bouton de fermeture en absolu, l'entrée depuis la droite
+// et le `overflow: visible` sans lequel la molette ne défilerait pas au-dessus du graphique.
+function renderDetailModal(produit) {
+  return `
+  <div class="modal-overlay uc-overlay" onclick="if(event.target===this)App.fermerDetail()">
+    <div class="modal-panel uc-modal ac-modal uc-panneau-entree">
+      <button class="modal-close uc-modal-close" onclick="App.fermerDetail()" aria-label="Fermer la fiche">✕</button>
+      <div class="modal-body uc-sheet-corps">${renderDetailPanneau(produit)}</div>
+    </div>
+  </div>`;
+}
+function renderDetailModalGroupe(membres) {
+  return `
+  <div class="modal-overlay uc-overlay" onclick="if(event.target===this)App.fermerDetail()">
+    <div class="modal-panel uc-modal ac-modal uc-panneau-entree">
+      <button class="modal-close uc-modal-close" onclick="App.fermerDetail()" aria-label="Fermer la fiche">✕</button>
+      <div class="modal-body uc-sheet-corps">${renderDetailPanneauGroupe(membres)}</div>
+    </div>
   </div>`;
 }
 

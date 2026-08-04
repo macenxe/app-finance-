@@ -1035,6 +1035,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
    de la colonne, mise en page inchangée), ligne flex en bureau. */
 .uc-filtres-ligne { display: contents; }
 .uc-list-head { display: none; }
+/* Page Autocall : cellules et en-tête ajoutés pour le tableau du bureau. La carte mobile ne les
+   affiche pas — la famille se lit dans le nom du produit, et l'écart au rappel sur la frise. */
+.ac-fam, .ac-ecart, .ac-list-head, .ac-bar-row--vide { display: none; }
+.ac-filtres-ligne { display: contents; }
 
 /* ── Éléments réservés au bureau (mobile : frise à point seul, pas de panneau détail) ── */
 .ac-bar-niveau-val { display: none; }
@@ -1564,22 +1568,99 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      il recouvrait la performance du fonds (mesuré : 10px de chevauchement sur « +2,9 % »). */
   .uc-modal .ac-detail-entete { padding-right: 44px; }
 
-  .ac-card { grid-template-columns: 1fr; gap: 0; padding: 11px 14px; cursor: pointer; }
-  .ac-card-left { grid-column: auto; grid-row: auto; }
-  .ac-card--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
-  /* Sous la carte : constatation à gauche, coupon à droite (le statut est déjà en tête). */
-  .ac-info {
-    display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;
-    gap: 10px; text-align: left; margin-top: 9px;
+  /* ── Page Autocall : liste en TABLEAU, une ligne par produit ─────────────────────────────
+     Même parti que le tableau des fonds : le markup reste celui de la carte mobile, et ce sont
+     les conteneurs intermédiaires passés en `display: contents` qui font de leurs enfants les
+     cellules de la grille, remises dans l'ordre des colonnes par `order`. La liste prend toute
+     la largeur de la page (plus de colonne de fiche à droite) et la fiche s'ouvre en fenêtre.
+     Colonnes : produit · type · sous-jacent · frise · statut · écart au rappel · coupon · constat.
+     La frise garde une colonne souple (1.1fr) : c'est elle qui porte les valeurs des barrières,
+     elle ne doit jamais devenir illisible avant le nom du produit. */
+  .page-autocall .ac-split { grid-template-columns: minmax(0, 1fr); }
+  /* Filtres à gauche, légende de la frise à droite, sur une seule ligne : la légende explique la
+     colonne « Position », elle se lit donc mieux au-dessus du tableau qu'au centre de la page. */
+  .ac-filtres-ligne {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px 16px; margin-bottom: 12px;
   }
-  .ac-info-row--constat { order: 1; flex-wrap: nowrap; }
-  .ac-info-row--coupon  { order: 2; }
-  .ac-info-sub, .ac-info-statut { display: none; }
-  .ac-info-label { display: inline; }
-  .ac-info-row--coupon .ac-info-val { font-size: 13px; }
-  .ac-info-row--constat .ac-info-val { font-size: 12px; }
+  .page-autocall .ac-toolbar { justify-content: flex-start; margin-bottom: 0; }
+  .page-autocall .ac-legend  { justify-content: flex-end; margin-bottom: 0; flex-wrap: wrap; }
 
-  /* Niveau actuel : badge chiffré sur la frise + bloc statut conservé en tête de carte */
+  .ac-list-head,
+  .ac-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 62px 116px minmax(230px, 1.1fr) 100px 76px 86px 64px;
+    gap: 15px; align-items: center;
+  }
+  /* Alignement de l'en-tête sur les lignes : 19px à gauche = padding de ligne (18) + bordure (1) ;
+     à droite s'y ajoutent le padding-right de .ac-list (4px) et la barre de défilement, mesurée à
+     l'exécution par majGouttiereUC(). Même gabarit que .uc-list-head. */
+  .ac-list-head {
+    display: grid;
+    padding: 0 calc(23px + var(--ac-gouttiere, 0px)) 6px 19px; align-items: end;
+    font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
+  }
+  .ac-list-head span:not(:first-child) { text-align: right; }
+  /* Type, sous-jacent et frise sont du texte ou un graphique, pas des nombres : titres à gauche. */
+  .ac-list-head span.gauche { text-align: left; }
+  .ac-list-head .uc-th { white-space: nowrap; }
+
+  /* Hauteur souple, comme le tableau des fonds : les lignes s'étirent pour remplir la colonne
+     quand la fenêtre est haute, et ne se compriment jamais (au-delà, la liste défile). */
+  /* 48px et non 52 : la frise compactée en fait 40, et 4px de respiration de part et d'autre
+     suffisent à faire tenir les 14 lignes sans défilement à 1440×900 (elles s'étirent jusqu'à
+     64px quand la fenêtre est plus haute). */
+  .ac-card { padding: 0 18px; min-height: 48px; max-height: 64px; flex: 1 0 auto; gap: 15px; cursor: pointer; }
+  .ac-list { gap: 5px; }
+  .ac-card--rappele { cursor: default; }
+  .ac-card-left, .ac-card-top, .ac-card-titre, .ac-info { display: contents; }
+  .ac-card-nom          { order: 1; font-size: 13px; }
+  .ac-fam               { order: 2; display: inline-block; justify-self: start; font-size: 10px; font-weight: 700;
+                          padding: 2px 7px; border-radius: 3px; background: #e8edf4; color: #4a6080; letter-spacing: .02em; }
+  .ac-fam--cap          { background: #eaf0e8; color: #4a6a4a; }
+  .ac-fam--cms          { background: #f3ede1; color: #8a6f3c; }
+  .ac-card-sj           { order: 3; margin-top: 0; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; }
+  .ac-card-protection   { margin-left: 0; font-size: 10px; }
+  .ac-bar-row           { order: 4; }
+  .ac-bar-row--vide     { display: flex; }
+  .ac-bar-vide          { font-size: 10.5px; color: #b9b2a4; font-style: italic; }
+  .ac-info-statut       { order: 5; margin-top: 0; justify-self: end; }
+  .ac-ecart             { order: 6; display: block; text-align: right; font-size: 11.5px; font-weight: 600;
+                          font-variant-numeric: tabular-nums; }
+  .ac-ecart--vert       { color: #1d6f4c; }
+  .ac-ecart--orange     { color: #b4701e; }
+  .ac-ecart--rouge      { color: #9a3535; }
+  .ac-ecart--vide       { color: #b9b2a4; font-weight: 400; }
+  .ac-info-row--coupon  { order: 7; justify-content: flex-end; }
+  .ac-info-row--constat { order: 8; justify-content: flex-end; flex-wrap: nowrap; }
+  /* Le niveau chiffré est sur la frise (badge), le nombre de coupons en réserve dans la fiche :
+     ni l'un ni l'autre n'a de colonne. */
+  .ac-card-niveau, .ac-info-sub { display: none; }
+  /* Libellés masqués — les titres de colonnes les portent —, SAUF sur une ligne rappelée, où
+     « Total perçu » et « Rappelé le » ne se déduisent pas de l'en-tête (Coupon / Constat). */
+  .ac-info-label { display: none; }
+  .ac-card--rappele .ac-info-label { display: inline; font-size: 9px; }
+  .ac-statut-pill { font-size: 10.5px; padding: 4px 11px; }
+  .ac-info-row--coupon .ac-info-val { font-size: 12px; }
+  .ac-info-row--constat .ac-info-val { font-size: 11.5px; }
+
+  /* Frise compactée pour tenir dans une ligne de tableau : mêmes repères et mêmes valeurs que
+     la grande frise, en plus petit. Les `top` sont recalculés ensemble — l'axe passe de 24 à
+     22px, tout ce qui s'y accroche suit. */
+  .ac-list .ac-bar        { height: 40px; margin: 0; }
+  .ac-list .ac-bar-track  { top: 21px; }
+  .ac-list .ac-bar-arrow  { top: 22px; }
+  .ac-list .ac-bar-loss   { top: 19px; height: 5px; }
+  .ac-list .ac-bar-mark   { top: 16px; }
+  .ac-list .ac-bar-mark-tick  { height: 12px; }
+  .ac-list .ac-bar-mark-label { font-size: 8.5px; margin-top: 2px; }
+  .ac-list .ac-bar-mark--haut .ac-bar-mark-label { bottom: calc(100% + 2px); }
+  .ac-list .ac-bar-niveau { top: 22px; }
+  .ac-list .ac-bar-niveau-val { font-size: 9.5px; padding: 0 5px; bottom: calc(100% + 4px); }
+
+  .ac-card--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
+
+  /* Niveau actuel : badge chiffré sur la frise */
   .ac-bar { margin-top: 22px; }
   .ac-bar-niveau-val {
     display: block; position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%);
@@ -2046,4 +2127,20 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .uc-item { gap: 20px; }
   .uc-item { padding: 0 22px; }
   .uc-list-head { padding: 0 calc(27px + var(--uc-gouttiere, 0px)) 6px 23px; }
+}
+
+/* Fenêtre bureau étroite : le tableau Autocall passe de 8 à 7 colonnes. C'est « Type » qui cède —
+   la famille se lit dans le nom du produit (« CAP … », « LC Athena … », « Conservateur Autocall
+   CMS … ») et les filtres juste au-dessus la portent déjà. Sans ce repli, le nom le plus long
+   (« Conservateur Autocall CMS 10/2030 », 213px) n'avait plus que 76px à 1024 : 11 lignes sur 14
+   passaient à l'ellipse. Seuil pris à 1180 et non au pixel de rupture (~1150) : à densité
+   d'affichage fractionnaire, la largeur comparée par le @media ne tombe pas sur l'entier
+   d'innerWidth. Mesuré après repli : 24px de marge sur le nom le plus long à 1024. */
+@media (min-width: 641px) and (max-width: 1180px) {
+  .ac-list-head,
+  .ac-card { grid-template-columns: minmax(0, 1fr) 100px minmax(190px, .95fr) 92px 72px 80px 60px; gap: 12px; }
+  .ac-card { padding: 0 14px; }
+  .ac-list-head { padding: 0 calc(19px + var(--ac-gouttiere, 0px)) 6px 15px; }
+  .ac-fam,
+  .ac-list-head span:nth-child(2) { display: none; }
 }

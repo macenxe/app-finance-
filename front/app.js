@@ -75,6 +75,7 @@ const App = (() => {
         ucCat: state.ucCat || null,
         ucSel: state.ucSel || null,
         ucTri: state.ucTri || null,
+        acTri: state.acTri || null,
         feOuvert: !!state.feOuvert,
         indices: donnees.indices,
         taux: donnees.taux,
@@ -99,6 +100,7 @@ const App = (() => {
         // Le tri choisi survit au rafraîchissement, comme le filtre de catégorie (même écran,
         // même attente) — y compris à une ouverture fraîche, où il n'y a rien à « remettre à zéro ».
         if (c.ucTri && c.ucTri.cle) state = { ...state, ucTri: c.ucTri };
+        if (c.acTri && c.acTri.cle) state = { ...state, acTri: c.acTri };
         if (c.indices) donnees = { ...donnees, indices: c.indices, taux: c.taux || donnees.taux, produits: c.produits || donnees.produits };
         donnees.rappeles = c.rappeles || [];
         // Réapplique les dernières valeurs live des Actifs pour éviter le retour aux valeurs statiques au 1er rendu.
@@ -291,6 +293,23 @@ const App = (() => {
     });
   }
 
+  // Montage de la fiche Autocall en fenêtre (bureau) : surbrillance de la ligne + fenêtre + tracé.
+  // La surbrillance est posée DANS LE DOM plutôt que par un renderPage : un re-rendu complet de la
+  // liste pour une simple mise en avant remonterait son défilement (même choix que ouvrirFicheUC).
+  // La fiche vit dans #modal-root, que renderPage ne touche pas — son graphique survit donc à un
+  // changement de filtre ou de tri.
+  function ouvrirFicheAutocall(produit, membres) {
+    const root = document.getElementById('modal-root');
+    if (!root) return;
+    document.querySelectorAll('.ac-card--actif').forEach(e => e.classList.remove('ac-card--actif'));
+    const sel = membres
+      ? document.querySelector(`.ac-card[data-isins="${membres.map(m => m.isin).join(',')}"]`)
+      : document.querySelector(`.ac-card[data-isin="${produit.isin}"]`);
+    if (sel) sel.classList.add('ac-card--actif');
+    root.innerHTML = membres ? renderDetailModalGroupe(membres) : renderDetailModal(produit);
+    if (membres) initChartDetailGroupe(membres); else initChartDetail(produit);
+  }
+
   // Carte « Comparateur » du tableau de bord — alimentée en cliquant directement sur une carte
   // Indices/Actions/Actifs/Taux (App.clicActif → App.toggleSerieCmp), plus de sélecteur séparé.
   // Catalogue = tout ce qui a un graphique sur le tableau de bord (indices, sous-jacents actions,
@@ -433,14 +452,17 @@ const App = (() => {
     if (p) initChartDetail(p);
   }
 
-  // L'en-tête de colonnes de la liste des fonds est en dehors du conteneur qui défile : sans
-  // compensation, ses 4 colonnes de droite sont décalées de la largeur de la barre de défilement
-  // (19px sous Windows, 0 sur un trackpad macOS). On la mesure ici et on l'expose en variable CSS.
+  // L'en-tête de colonnes des tableaux (fonds ET autocall) est en dehors du conteneur qui défile :
+  // sans compensation, ses colonnes de droite sont décalées de la largeur de la barre de
+  // défilement (19px sous Windows, 0 sur un trackpad macOS). On la mesure ici et on l'expose en
+  // variable CSS. Les deux listes ont leur propre variable : elles ne défilent pas en même temps.
   function majGouttiereUC() {
-    const liste = document.querySelector('.uc-liste');
-    if (!liste) return;
-    const g = Math.max(0, liste.offsetWidth - liste.clientWidth);
-    document.documentElement.style.setProperty('--uc-gouttiere', g + 'px');
+    [['.uc-liste', '--uc-gouttiere'], ['.ac-list', '--ac-gouttiere']].forEach(([sel, varCss]) => {
+      const liste = document.querySelector(sel);
+      if (!liste) return;
+      const g = Math.max(0, liste.offsetWidth - liste.clientWidth);
+      document.documentElement.style.setProperty(varCss, g + 'px');
+    });
   }
 
   function renderPage(keepScroll = false) {
@@ -449,7 +471,10 @@ const App = (() => {
     const { indices, produits } = donnees;
     switch (state.page) {
       case 'dash':     el.innerHTML = renderDashboard(indices, produits, donnees.taux, state.cmpSeries); break;
-      case 'prod':     el.innerHTML = renderProduits(produits, state, donnees.rappeles);  break;
+      case 'prod':
+        el.innerHTML = renderProduits(produits, state, donnees.rappeles);
+        majGouttiereUC();
+        break;
       case 'actus':    el.innerHTML = renderActus(state); chargerActus(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache, ucSecteursCache, ucMetaCache, ucMetaGenere);
@@ -855,6 +880,9 @@ const App = (() => {
         return;
       }
       if (root.querySelector('.sheet-backdrop')) fermerSheet();
+      // Fiche Autocall : passer par fermerDetail() plutôt que vider la racine, sinon la ligne
+      // reste surlignée dans le tableau alors que plus rien n'est ouvert.
+      else if (root.querySelector('.ac-modal')) App.fermerDetail();
       else root.innerHTML = '';
     });
     // Ferme le sélecteur d'indices de la barre « Comparer » si on clique en dehors.
@@ -995,7 +1023,7 @@ const App = (() => {
       const p = donnees.produits.find(x => x.isin === isin);
       if (!p) return;
       if (estBureau()) {
-        // Split master-détail : la sélection reste affichée dans le panneau de droite. Venant
+        // La liste occupe toute la largeur : la fiche s'ouvre en fenêtre par-dessus. Venant
         // d'une autre page (ex. alertes du tableau de bord), on bascule sur l'onglet Autocall et
         // on réinitialise le filtre de famille pour que le produit visé soit bien dans la liste.
         const depuisAutrePage = state.page !== 'prod';
@@ -1003,8 +1031,8 @@ const App = (() => {
           ...state, page: 'prod', detailIsin: isin, detailIsins: null,
           familleFiltre: depuisAutrePage ? 'tous' : state.familleFiltre,
         };
-        if (depuisAutrePage) sauvegarderEtat();
-        renderPage(true);
+        if (depuisAutrePage) { sauvegarderEtat(); renderPage(true); }
+        ouvrirFicheAutocall(p, null);
         return;
       }
       state = { ...state, detailIsin: isin, detailIsins: null };
@@ -1021,18 +1049,29 @@ const App = (() => {
           ...state, page: 'prod', detailIsins: isins, detailIsin: null,
           familleFiltre: depuisAutrePage ? 'tous' : state.familleFiltre,
         };
-        if (depuisAutrePage) sauvegarderEtat();
-        renderPage(true);
+        if (depuisAutrePage) { sauvegarderEtat(); renderPage(true); }
+        ouvrirFicheAutocall(null, membres);
         return;
       }
       state = { ...state, detailIsins: isins, detailIsin: null };
       ouvrirSheet(renderDetailGroupe(membres));
       initChartDetailGroupe(membres, 'detail-chart-inline-sheet');
     },
+    // Clic sur un titre de colonne du tableau Autocall (bureau). Texte en A→Z au premier clic,
+    // chiffres du meilleur au moins bon — même convention que le tableau des fonds.
+    trierAC(cle) {
+      const courant = state.acTri || { cle: 'constat', sens: 1 };
+      const texte = ['nom', 'famille', 'sj'].includes(cle);
+      const sens = courant.cle === cle ? -courant.sens : (texte || cle === 'constat' ? 1 : -1);
+      state = { ...state, acTri: { cle, sens } };
+      sauvegarderEtat();
+      renderPage(true);
+    },
     fermerDetail() {
       if (estBureau()) {
+        document.querySelectorAll('.ac-card--actif').forEach(e => e.classList.remove('ac-card--actif'));
         state = { ...state, detailIsin: null, detailIsins: null };
-        renderPage(true);
+        App.fermerModal();
         return;
       }
       fermerSheet();
@@ -1058,12 +1097,13 @@ const App = (() => {
     // du graphique — le premier fonds coché porte la fiche, les autres viennent en comparaison.
     toggleModeCompare() {
       const on = !state.ucModeCompare;
-      state = { ...state, ucModeCompare: on, ucSelection: [] };
+      state = { ...state, ucModeCompare: on, ucSelection: [], ucCmpIndices: [] };
       renderPage(true);
     },
     // Sélecteur d'indices de la barre : ajoute des courbes de référence (les « Indices clés » du
-    // tableau de bord) à la prochaine comparaison. La liste choisie SURVIT au lancement — on
-    // compare souvent plusieurs fonds de suite au même indice — et se lit sur le bouton.
+    // tableau de bord) à la prochaine comparaison. La liste est vidée dès que la comparaison est
+    // lancée (comme les fonds cochés) et à chaque entrée/sortie du mode : rien n'est gardé en
+    // mémoire d'une comparaison à l'autre, chacune repart d'une feuille blanche.
     toggleIndicePicker() {
       state = { ...state, ucIdxPickerOuvert: !state.ucIdxPickerOuvert };
       App.majBarreCompare();
@@ -1096,7 +1136,9 @@ const App = (() => {
       const sel = state.ucSelection || [];
       const idx = state.ucCmpIndices || [];
       if (!sel.length || sel.length + idx.length < 2) return;
-      state = { ...state, ucModeCompare: false, ucSelection: [], ucStrategieOuvert: false, ucIdxPickerOuvert: false,
+      // ucCompareIdx fige les indices POUR la fiche qui s'ouvre ; ucCmpIndices (le choix de la
+      // barre) est vidé dans le même mouvement, pour que le prochain « Comparer » reparte vierge.
+      state = { ...state, ucModeCompare: false, ucSelection: [], ucCmpIndices: [], ucStrategieOuvert: false, ucIdxPickerOuvert: false,
                 ucSel: sel[0], ucCompare: sel.slice(1), ucCompareIdx: idx, ucComparePickerOuvert: false };
       renderPage(true);
       App.ouvrirFicheUC(sel[0]);
