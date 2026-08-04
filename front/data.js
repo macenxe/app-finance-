@@ -167,6 +167,11 @@ function sousJacentsUniques(produits) {
   return [...out.values()];
 }
 
+// Dernières valeurs live des cartes « Actions » du tableau de bord (rempli par majCartesMarche,
+// persisté dans app-cache comme MACRO) : { ticker: { valeur, var, hausse } }. Sans cette
+// persistance, ces cartes rendaient « — » à chaque lancement jusqu'au retour du réseau.
+const ACTIONS_LIVE = {};
+
 // Calcule le statut (green/orange/red) et le % strike de chaque produit
 function enrichirProduits(produits) {
   const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits:1, maximumFractionDigits:1 });

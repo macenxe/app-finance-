@@ -135,12 +135,13 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
       ${(() => {
         const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
         const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
-        const actionsHtml = actions.map(a => `
+        const actionsHtml = actions.map(a => { const live = (typeof ACTIONS_LIVE !== 'undefined' && ACTIONS_LIVE[a.ticker]) || null;
+          return `
         <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-macro="${escHtml(a.ticker)}" data-macro-unit="€" data-cmp-ticker="${escHtml(a.ticker)}">
           <div class="index-name">${escHtml(a.label)}</div>
-          <div class="index-val tnum" data-macro-val>${escHtml(a.niveau || '—')}</div>
-          <div class="index-var tnum flat" data-macro-var>—</div>
-        </div>`).join('');
+          <div class="index-val tnum" data-macro-val>${escHtml((live && live.valeur) || a.niveau || '—')}</div>
+          <div class="index-var tnum ${live && live.hausse != null ? (live.hausse ? 'up' : 'down') : 'flat'}" data-macro-var>${live && live.var ? live.var : '—'}</div>
+        </div>`; }).join('');
         const macroHtml = MACRO.map(m => { const gid = graphIdPour(m.nom);
           // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge). Couleur = favorabilité.
           const favorable = m.hausse === null ? null : (/Brent/i.test(m.nom) ? !m.hausse : m.hausse);

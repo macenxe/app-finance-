@@ -82,6 +82,7 @@ const App = (() => {
         produits: donnees.produits,
         rappeles: donnees.rappeles || [],
         macro: (typeof MACRO !== 'undefined') ? MACRO.map(m => ({ nom: m.nom, valeur: m.valeur, var: m.var, hausse: m.hausse })) : null,
+        actionsLive: (typeof ACTIONS_LIVE !== 'undefined') ? ACTIONS_LIVE : null,
       }));
     } catch {}
   }
@@ -107,6 +108,8 @@ const App = (() => {
         if (c.macro && typeof MACRO !== 'undefined') {
           c.macro.forEach(s => { const m = MACRO.find(x => x.nom === s.nom); if (m) { m.valeur = s.valeur; m.var = s.var; m.hausse = s.hausse; } });
         }
+        // Même logique pour les cartes Actions (Stellantis, Capgemini, Rheinmetall…).
+        if (c.actionsLive && typeof ACTIONS_LIVE !== 'undefined') Object.assign(ACTIONS_LIVE, c.actionsLive);
       }
     } catch {}
     appliquerCMSLive();
@@ -627,37 +630,53 @@ const App = (() => {
     if (typeof AppAPI === 'undefined' || !AppAPI.historyUrl || majMarcheEnCours) return;
     majMarcheEnCours = true;
     try {
+      // Cartes groupées par ticker (une même valeur existe en version mobile ET bureau) :
+      // une seule requête par ticker, toutes en PARALLÈLE. En séquentiel, les dernières
+      // cartes attendaient la somme des délais des précédentes (jusqu'à 8 s chacune) —
+      // les variations des actions restaient sur « — » de longues secondes au lancement.
+      const parGid = new Map();
       for (const card of document.querySelectorAll('[data-macro]')) {
         const gid = card.getAttribute('data-macro');
         if (!gid || gid.indexOf('fred:') === 0 || gid.indexOf('hicp:') === 0) continue;
+        if (!parGid.has(gid)) parGid.set(gid, []);
+        parGid.get(gid).push(card);
+      }
+      await Promise.all([...parGid.entries()].map(async ([gid, cards]) => {
         const cm = await coursMacro(gid);
-        if (!cm) continue;
+        if (!cm) return;
         const last = cm.last, first = cm.ref;
-        const nomActif = card.querySelector('.index-name')?.textContent || '';
+        const nomActif = cards[0].querySelector('.index-name')?.textContent || '';
         // Actions (unité €) : toujours 2 décimales, comme l'affichage statique des produits.
         // Actifs (unité $ par défaut, Brent/Or/Bitcoin) : décimales au nombre de chiffres,
         // comportement d'origine inchangé.
-        const unite = card.getAttribute('data-macro-unit') || '$';
+        const unite = cards[0].getAttribute('data-macro-unit') || '$';
         const valStr = unite === '€'
           ? last.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + unite
           : last.toLocaleString('fr-FR', { maximumFractionDigits: last >= 100 ? 0 : 2 }) + ' ' + unite;
-        const valEl = card.querySelector('[data-macro-val]');
-        const varEl = card.querySelector('[data-macro-var]');
-        if (valEl) valEl.textContent = valStr;
         let varStr = null, up = null;
         if (first) {
           const pct = (last - first) / first * 100; up = pct >= 0;
           varStr = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-          // Or & Bitcoin : hausse = vert. Brent : inversé (hausse = rouge).
-          const favorable = /Brent/i.test(nomActif) ? !up : up;
-          if (varEl) { varEl.textContent = varStr; varEl.className = 'index-var tnum ' + (favorable ? 'up' : 'down'); }
         }
-        // Persiste dans MACRO (direction brute dans hausse ; la couleur est calculée au rendu).
-        if (typeof MACRO !== 'undefined') {
-          const m = MACRO.find(x => graphIdPour(x.nom) === gid);
-          if (m) { m.valeur = valStr; if (varStr != null) { m.var = varStr; m.hausse = up; } }
+        for (const card of cards) {
+          const valEl = card.querySelector('[data-macro-val]');
+          const varEl = card.querySelector('[data-macro-var]');
+          if (valEl) valEl.textContent = valStr;
+          if (varStr != null && varEl) {
+            // Or & Bitcoin & actions : hausse = vert. Brent : inversé (hausse = rouge).
+            const favorable = /Brent/i.test(nomActif) ? !up : up;
+            varEl.textContent = varStr;
+            varEl.className = 'index-var tnum ' + (favorable ? 'up' : 'down');
+          }
         }
-      }
+        // Persiste (Actifs dans MACRO, Actions dans ACTIONS_LIVE) pour que le prochain
+        // lancement rende directement la dernière valeur et variation connues.
+        const m = (typeof MACRO !== 'undefined') ? MACRO.find(x => graphIdPour(x.nom) === gid) : null;
+        if (m) { m.valeur = valStr; if (varStr != null) { m.var = varStr; m.hausse = up; } }
+        else if (unite === '€' && typeof ACTIONS_LIVE !== 'undefined') {
+          ACTIONS_LIVE[gid] = { valeur: valStr, var: varStr, hausse: up };
+        }
+      }));
       sauvegarderEtat();
     } finally {
       majMarcheEnCours = false;
