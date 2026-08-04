@@ -594,6 +594,32 @@ export default {
     const u = new URL(request.url);
 
     // Actualités économiques : ?news=1 (~40 flux RSS = lent → cache de sortie 5 min).
+    // Diagnostic éphémère (chantier 2) : statut brut de 3 flux témoins, avec et sans
+    // cookie CONSENT — à retirer une fois la panne prod comprise.
+    if (u.searchParams.get('newsdebug')) {
+      const cibles = [
+        'https://news.google.com/rss/search?q=bourse+when:1h&hl=fr&gl=FR&ceid=FR:fr',
+        'https://www.bfmtv.com/rss/economie/',
+        'https://www.abcbourse.com/rss/displaynewsrss',
+      ];
+      const out = [];
+      for (const url of cibles) {
+        for (const avecCookie of [true, false]) {
+          try {
+            const t0 = Date.now();
+            const headers = { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' };
+            if (avecCookie) headers['Cookie'] = 'CONSENT=YES+; SOCS=CAI';
+            const r = await fetch(url, { headers, redirect: 'manual', signal: AbortSignal.timeout(8000) });
+            const txt = await r.text();
+            out.push({ url, avecCookie, status: r.status, ms: Date.now() - t0,
+                       location: r.headers.get('Location'), taille: txt.length,
+                       extrait: txt.slice(0, 180) });
+          } catch (e) { out.push({ url, avecCookie, erreur: String(e?.message || e) }); }
+        }
+      }
+      return new Response(JSON.stringify(out, null, 1), { headers: JSON_HEADERS });
+    }
+
     if (u.searchParams.get('news')) {
       const cache = caches.default;
       // Clé versionnée : un déploiement qui change le format ne doit pas resservir
