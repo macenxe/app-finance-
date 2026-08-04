@@ -260,7 +260,9 @@ const AppAPI = (() => {
   // Charge l'historique d'un ticker pour un graphique (chart.js), avec repli automatique :
   // 1. fred:/hicp: → toujours statique (jamais servi par le Worker), filtré par période ici.
   // 2. UC (0P…F) → fusion statique uc/ + live Worker (cf. historiqueUC).
-  // 3. Cours (indices/actions) → Worker (cours du moment) ; si injoignable (ex. pare-feu
+  // 3. scrape: (CMS) → Worker (filtre le fichier publié) ; si injoignable, repli sur le
+  //    fichier local front/data/history/cms.json, filtré par période ici.
+  // 4. Cours (indices/actions) → Worker (cours du moment) ; si injoignable (ex. pare-feu
   //    d'entreprise bloquant *.workers.dev), repli sur front/data/history/eq/<ticker>.json,
   //    pré-généré par GitHub Actions (back/src/history-snapshot.ts), filtré par période.
   async function chargerHistorique(id, periode) {
@@ -269,6 +271,15 @@ const AppAPI = (() => {
       return { ...d, points: filtrerPeriode(d.points || [], periode) };
     }
     if (RE_UC.test(id)) return historiqueUC(id, periode);
+    if (id.indexOf('scrape:') === 0) {
+      try {
+        const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(periode)}`;
+        const d = await fetchJson(`${WORKER}?${q}`, 8000);
+        if ((d.points || []).length >= 2) return d;
+      } catch { /* Worker injoignable : on tente le repli statique */ }
+      const d = await fetchJson('./data/history/cms.json');
+      return { ...d, points: filtrerPeriode(d.points || [], periode) };
+    }
     try {
       const q = `history=${encodeURIComponent(id)}&period=${encodeURIComponent(periode)}`;
       const d = await fetchJson(`${WORKER}?${q}`, 8000);

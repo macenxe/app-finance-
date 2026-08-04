@@ -85,7 +85,6 @@ async function historiqueYahoo(ticker, periode) {
 // ── Historique des taux & inflation via FRED ──
 // L'identifiant d'historique porte un préfixe : fred:SERIE, hicp:SERIE, scrape:cms,
 // sinon c'est un symbole Yahoo (cours). La clé FRED vient du secret env.FRED_API_KEY.
-const FRED_PROXY_CMS = 'IRLTLT01EZM156N'; // rendement 10 ans zone euro (proxy du swap CMS, mensuel)
 const JOURS_PERIODE = { '1j': 3, '1s': 10, '1m': 35, '6m': 190, ytd: null, '1a': 380, '3a': 1100, '5a': 1850, '10a': 3700 };
 
 function debutPeriode(periode) {
@@ -134,91 +133,75 @@ async function historiqueHicp(series, periode, key) {
   return { ticker: 'hicp:' + series, periode, points, devise: '%' };
 }
 
-// ── CMS 10 ans EUR : vrai swap via FT Markets (« Euro 10 yr Swap ») ──
-// FT n'est pas protégé par Cloudflare → récupérable côté serveur ; on ajoute le CORS.
-const FT_CMS_XID = '5767342';
-// FT ne publie qu'une valeur par jour pour ce swap (aucun intraday, même en demandant
-// « Minute »/« Hour »). La valeur « du moment » = la dernière clôture quotidienne connue.
-// On élargit les périodes courtes pour garantir au moins deux points même après un
-// week-end / jour férié.
-const FT_PERIODES = {
-  '1j': { days: 8, p: 'Day' }, '1s': { days: 14, p: 'Day' }, '1m': { days: 40, p: 'Day' },
-  '6m': { days: 190, p: 'Day' }, '1a': { days: 370, p: 'Day' },
-  '3a': { days: 1100, p: 'Week' }, '5a': { days: 1850, p: 'Week' }, '10a': { days: 3700, p: 'Month' },
-};
+// ── CMS 10 ans EUR : swap via l'API publique Chatham (« Euro 6m swap curve ») ──
+// Une seule clôture par jour (J-1 ouvré, mise à jour ~18h45) ; pas d'intraday. La série
+// longue (backfill + append quotidien) vit dans le fichier statique CMS_HISTORY_URL.
+const CHATHAM_URL = 'https://cf.com/public-api/public-rates/euribor6monthswap.json/';
+const CMS_HISTORY_URL = 'https://macenxe.github.io/app-finance-/data/history/cms.json';
 
-// Série de clôtures FT (chartapi) pour une période donnée.
-async function serieCmsFT(periode) {
-  const cfg = FT_PERIODES[periode] || (periode === 'ytd'
-    ? { days: Math.max(2, Math.ceil((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000)), p: 'Day' }
-    : FT_PERIODES['6m']);
-  const body = JSON.stringify({
-    days: cfg.days, dataNormalized: false, dataPeriod: cfg.p, dataInterval: 1, realtime: false,
-    yFormat: '0.###', timeServiceFormat: 'JSON', returnDateType: 'ISO8601',
-    elements: [{ Type: 'price', Symbol: FT_CMS_XID, OverlayIndicators: [], Params: {} }],
-  });
-  const r = await fetch('https://markets.ft.com/data/chartapi/series', {
-    method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0', 'Content-Type': 'application/json' }, body, cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000),
-  });
+// Dernière clôture publiée par Chatham pour le ténor 10 ans (LengthInMonths=120).
+async function chathamDernierePoint() {
+  const r = await fetch(CHATHAM_URL, { headers: { 'User-Agent': 'Mozilla/5.0' }, cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
   if (!r.ok) return null;
   const d = await r.json();
-  const dates = d.Dates || [];
-  const cs = d.Elements?.[0]?.ComponentSeries || [];
-  const vals = (cs.find((s) => s.Type === 'Close') || cs[0])?.Values || [];
-  const points = [];
-  for (let i = 0; i < dates.length; i++) {
-    const c = vals[i];
-    if (c != null) points.push({ t: Math.floor(Date.parse(dates[i]) / 1000), c });
-  }
-  return points;
+  const rate = (d.Rates || []).find((x) => x.LengthInMonths === 120);
+  const valeur = rate ? parseFloat(rate.PreviousDay) : NaN;
+  const date = d.PreviousDayDate;
+  if (!isFinite(valeur) || !date) return null;
+  return { valeur, date };
 }
 
-// Repli si FT est indisponible : rendement 10 ans zone euro via FRED (fredgraph.csv, sans
-// clé, mensuel). Approximation explicite du swap, mieux qu'une valeur figée sans date.
-async function coursCmsFredFallback() {
-  try {
-    const r = await fetch(`https://fred.stlouisfed.org/graph/fredgraph.csv?id=${FRED_PROXY_CMS}`, { cf: { cacheTtl: 3600 }, signal: AbortSignal.timeout(8000) });
-    if (!r.ok) return null;
-    const lignes = (await r.text()).trim().split('\n').slice(1);
-    let last = null, prev = null;
-    for (const l of lignes) {
-      const [date, val] = l.split(',');
-      const num = parseFloat(val);
-      if (isFinite(num)) { prev = last; last = { date, v: num }; }
+// Dernier point du fichier statique publié, strictement antérieur à `avantDate` (pour le
+// calcul de la variation en pb) ; sans filtre, le dernier point tout court (repli de valeur).
+async function cmsHistoriqueStatiqueBrut() {
+  const r = await fetch(CMS_HISTORY_URL, { cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
+  if (!r.ok) return null;
+  const d = await r.json();
+  return Array.isArray(d.points) ? d.points : null;
+}
+
+// Valeur « du moment » du CMS 10 ans = dernière clôture Chatham (J-1 ouvré), avec la variation
+// en pb vs le point précédent du fichier statique publié. Repli si Chatham est indisponible :
+// dernier point du fichier statique (plus aucun repli FRED, décision D4).
+async function coursCmsChatham() {
+  const points = await cmsHistoriqueStatiqueBrut();
+  const c = await chathamDernierePoint().catch(() => null);
+  if (c) {
+    let deltaPb = null;
+    if (points && points.length) {
+      const seuil = Math.floor(Date.parse(c.date + 'T00:00:00Z') / 1000);
+      const avant = points.filter((p) => p.t < seuil);
+      if (avant.length) deltaPb = Math.round((c.valeur - avant[avant.length - 1].c) * 100);
     }
-    if (!last) return null;
-    const deltaPb = prev ? Math.round((last.v - prev.v) * 100) : null;
-    return { nom: 'CMS 10 ans', valeur: last.v, deltaPb, source: 'FRED · rendement 10 ans zone euro (approximation)', heure: last.date + 'T00:00:00Z', date: last.date };
-  } catch { return null; }
-}
-
-// Valeur « du moment » du CMS 10 ans = dernière clôture quotidienne connue, avec la variation
-// en points de base (pb) vs la clôture précédente et la DATE de cette clôture (pour rendre la
-// fraîcheur visible côté front). Repli FRED si FT tombe.
-async function coursCmsFT() {
-  const points = await serieCmsFT('1m');
+    return { nom: 'CMS 10 ans', valeur: c.valeur, deltaPb, source: 'Chatham · EUR swap 10 ans (clôture J-1)', heure: c.date + 'T00:00:00Z', date: c.date };
+  }
   if (points && points.length) {
     const dernier = points[points.length - 1];
     const prev = points.length >= 2 ? points[points.length - 2].c : null;
     const deltaPb = prev != null ? Math.round((dernier.c - prev) * 100) : null;
-    const dateISO = new Date(dernier.t * 1000).toISOString();
-    return { nom: 'CMS 10 ans', valeur: dernier.c, deltaPb, source: 'FT Markets · Euro 10y swap (clôture)', heure: dateISO, date: dateISO.slice(0, 10) };
+    const date = new Date(dernier.t * 1000).toISOString().slice(0, 10);
+    return { nom: 'CMS 10 ans', valeur: dernier.c, deltaPb, source: 'fichier statique (dernière clôture connue)', heure: date + 'T00:00:00Z', date };
   }
-  return await coursCmsFredFallback();
+  return null;
 }
 
-// Historique du CMS 10 ans. Pas de « Jour » : le swap n'a pas d'intraday (une valeur par
-// jour), donc « 1j » perdrait son sens ; la période est retirée côté front (chart.js).
-async function historiqueCmsFT(periode) {
-  const points = await serieCmsFT(periode);
-  if (!points || points.length < 2) return null;
-  return { ticker: 'scrape:cms', periode, points, devise: '%' };
+// Historique du CMS 10 ans : filtre le fichier statique publié par période. Pas de « Jour » :
+// le swap n'a pas d'intraday (une valeur par jour), donc « 1j » perdrait son sens ; la période
+// est retirée côté front (chart.js).
+async function historiqueCmsStatique(periode) {
+  const points = await cmsHistoriqueStatiqueBrut();
+  if (!points || !points.length) return null;
+  const debut = Math.floor(debutPeriode(periode).getTime() / 1000);
+  const filtres = points.filter((p) => p.t >= debut);
+  const retenus = filtres.length >= 2 ? filtres : points;
+  if (retenus.length < 2) return null;
+  return { ticker: 'scrape:cms', periode, points: retenus, devise: '%' };
 }
 
 function historique(id, periode, env) {
   if (id.startsWith('fred:')) return historiqueFred(id.slice(5), periode, env?.FRED_API_KEY);
   if (id.startsWith('hicp:')) return historiqueHicp(id.slice(5), periode, env?.FRED_API_KEY);
-  if (id === 'scrape:cms')    return historiqueCmsFT(periode);
+  if (id === 'scrape:cms')    return historiqueCmsStatique(periode);
   return historiqueYahoo(id, periode);
 }
 
@@ -392,7 +375,7 @@ export default {
     // Valeur courante du CMS 10 ans : ?cms=1
     if (u.searchParams.get('cms')) {
       try {
-        const c = await coursCmsFT();
+        const c = await coursCmsChatham();
         return new Response(JSON.stringify(c || { error: 'no data' }), { status: c ? 200 : 404, headers: JSON_HEADERS });
       } catch (e) {
         return new Response(JSON.stringify({ error: String(e?.message || e) }), { status: 502, headers: JSON_HEADERS });

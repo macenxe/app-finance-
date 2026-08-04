@@ -1,0 +1,53 @@
+name: Append quotidien CMS 10 ans
+
+# Ajoute la clôture du jour (Chatham, mise à jour la veille ~18h45) à
+# front/data/history/cms.json. Cron après la mise à jour de la veille au soir.
+on:
+  schedule:
+    - cron: '15 6 * * 2-6'          # mar-sam 06:15 UTC
+  workflow_dispatch:               # bouton de déclenchement manuel
+
+permissions:
+  contents: write
+  actions: write                 # pour déclencher le déploiement Pages après commit
+
+concurrency:
+  group: cms-daily
+  cancel-in-progress: false
+
+jobs:
+  cms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: back/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: back
+        run: npm ci
+
+      - name: Ajouter la clôture du jour
+        working-directory: back
+        run: npm run cms
+
+      - name: Publier si l'historique CMS a changé
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add front/data/history/cms.json
+          if git diff --staged --quiet; then
+            echo "Aucun changement de données."
+          else
+            git commit -m "chore: append quotidien CMS 10 ans"
+            git pull --rebase --autostash origin main
+            git push
+            # Le commit ci-dessus (GITHUB_TOKEN) ne déclenche pas deploy.yml : on l'appelle explicitement.
+            gh workflow run "Deploy to GitHub Pages" --ref main
+          fi

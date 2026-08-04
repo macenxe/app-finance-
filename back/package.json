@@ -10,6 +10,7 @@
     "history":   "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/history-snapshot.ts",
     "fonds":     "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/fonds-meta.ts",
     "uc":        "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-history.ts",
+    "cms":       "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/cms-history.ts",
     "build":     "tsc",
     "typecheck": "tsc --noEmit",
     "test":      "node --import tsx --test src/calc.test.ts"
