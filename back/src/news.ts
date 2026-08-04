@@ -203,6 +203,18 @@ const FLUX_UC: Flux[] = [
   ...FLUX_UC_EVENEMENTS.map(q => fluxGoogleNews(q, '30d', 'uc', MOTS_UC, [])),
 ].map(f => ({ ...f, dispenseSource: true }));
 
+// Les flux échappent les entités XML (&amp;, &#39;…) ; le front rééchappe tout à l'affichage
+// (escHtml), le serveur doit donc livrer du texte décodé. &amp; en dernier pour ne pas
+// double-décoder (&amp;lt; doit donner &lt;, pas <).
+function decoderEntites(s: string): string {
+  return s
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
 function parseItems(xml: string, cfg: Flux): Article[] {
   const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '',
           corrigerDate = (d: string) => d, max = 6 } = cfg;
@@ -211,11 +223,11 @@ function parseItems(xml: string, cfg: Flux): Article[] {
   let m: RegExpExecArray | null;
   while ((m = itemRe.exec(xml)) !== null) {
     const bloc = m[1];
-    const titre  = (/<title><!\[CDATA\[(.*?)\]\]><\/title>/.exec(bloc) ?? /<title>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '';
-    const lien   = (/<link>(.*?)<\/link>/.exec(bloc))?.[1]?.trim() ?? '';
+    const titre  = decoderEntites((/<title><!\[CDATA\[(.*?)\]\]><\/title>/.exec(bloc) ?? /<title>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '');
+    const lien   = decoderEntites((/<link>(.*?)<\/link>/.exec(bloc))?.[1]?.trim() ?? '');
     let date     = (/<pubDate>(.*?)<\/pubDate>/.exec(bloc))?.[1]?.trim() ?? '';
     if (date) date = corrigerDate(date);
-    const source = (/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() || sourceDefaut;
+    const source = decoderEntites((/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() || sourceDefaut);
     const tLow   = titre.toLowerCase();
     const impactant = mots.some(w => tLow.includes(w));
     const autorisee = dispenseSource || sourceAutorisee(source, sources);
@@ -236,8 +248,8 @@ function parseItemsAtom(xml: string, cfg: Flux): Article[] {
   let m: RegExpExecArray | null;
   while ((m = entryRe.exec(xml)) !== null) {
     const bloc = m[1];
-    const titre  = (/<title[^>]*>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '';
-    const lien   = (/<link[^>]*href="([^"]*)"/.exec(bloc))?.[1]?.trim() ?? '';
+    const titre  = decoderEntites((/<title[^>]*>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '');
+    const lien   = decoderEntites((/<link[^>]*href="([^"]*)"/.exec(bloc))?.[1]?.trim() ?? '');
     const date   = (/<modified>(.*?)<\/modified>/.exec(bloc))?.[1]?.trim() ?? '';
     const source = sourceDefaut;
     const tLow   = titre.toLowerCase();
