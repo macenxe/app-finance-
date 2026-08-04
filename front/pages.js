@@ -757,7 +757,7 @@ const NEWS_VIDE = {
   globale: 'Aucune actualité disponible.',
   eco:     'Aucune actualité économique récente.',
   fiscal:  'Aucune actualité fiscale récente.',
-  uc:      'Aucun article récent sur vos sociétés de gestion.',
+  uc:      'Aucun article récent mentionnant vos fonds.',
 };
 
 function newsTs(d) { const t = d ? new Date(d).getTime() : 0; return isNaN(t) ? 0 : t; }
@@ -809,7 +809,7 @@ function renderActus(state) {
      </div>`
     : tab === 'uc' ? `
      ${renderUcEvenementsBloc()}
-     ${fil('La presse des sociétés de gestion')}`
+     ${fil('Vos fonds dans la presse')}`
     : `
      ${sousThemes}
      ${fil(tab === 'eco' ? 'Fil économique' : 'Fil fiscal')}`;
