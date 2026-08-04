@@ -225,12 +225,24 @@ function calculerIndicateurs(p, cours) {
   return { produitId: p.id, pctStrike, zoneAutocall };
 }
 
-// ── Actualités économiques via Google News RSS ────────────────────────────────
+// ── Actualités économiques via Google News RSS + flux directs ────────────────
+// Canal eco    : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
+//                directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche).
+// Canal fiscal : Google News when:1d + when:7d (requêtes patrimoniales) + flux Sénat (Atom).
+// Canal uc     : Google News when:7d (sociétés de gestion) + when:30d (événements de vie).
 const SOURCES_AUTORISEES = [
   'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
   'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
   // Régulateurs & institutions (indispensables pour le flux Régulation / produits structurés)
   'amf', 'autorité des marchés', 'esma', 'acpr', 'banque de france', 'fmi', 'ocde',
+  // Flux directs du canal eco : ce SONT les sources (dispensées de liste blanche au parsing,
+  // cf. dispenseSource plus bas), listées ici pour rester cohérent si Google News les cite.
+  'abc bourse', 'bfm économie', 'bce',
+];
+// Canal fiscal : liste blanche élargie à la presse patrimoniale.
+const SOURCES_AUTORISEES_FISCAL = [
+  ...SOURCES_AUTORISEES,
+  'gestion de fortune', 'profession cgp', 'mieux vivre', 'notaires',
 ];
 const MOTS_IMPACT = [
   'bourse','cours','cac','stoxx','nasdaq','s&p','action','titre','marché','marchés',
@@ -247,6 +259,17 @@ const MOTS_IMPACT = [
   // International / macro mondiale
   'fmi','ocde','mondiale','mondial','international','émergents','chine','états-unis','géopolitique',
 ];
+// Canal fiscal : mots signalant un sujet patrimonial/fiscal réel.
+const MOTS_FISCAL = [
+  'impôt', 'fiscalité', 'fiscal', 'succession', 'donation', 'ifi', 'pfu',
+  'flat tax', 'assurance-vie', 'assurance vie', 'plus-value', 'abattement',
+  'barème', 'niche fiscale', 'lmnp', 'per', 'droits de mutation',
+  'loi de finances', 'bofip', 'redressement',
+];
+// Canal uc : sociétés de gestion suivies + mots de vie des fonds.
+const MOTS_UC_SOCIETES = ['dnca', 'rothschild', 'comgest', 'pictet', 'r-co valor', 'fidelity', 'echiquier'];
+const MOTS_UC_VIE = ['gérant', 'opcvm', 'sicav', 'fusion', 'souscription'];
+const MOTS_UC = [...MOTS_UC_SOCIETES, ...MOTS_UC_VIE];
 const MOTS_POSITIFS = [
   'hausse','en hausse','rebond','rebondit','progression','progresse','croissance','record',
   'gains','gain','surperformance','relève','relèvement','optimisme','accord','allège',
@@ -281,6 +304,70 @@ const FLUX_PRODUITS = [
   { query: 'secteur bancaire européen Stoxx Banks résultats taux',tag: 'ES Banks'    },
 ];
 
+// Requête Google News RSS générique, avec fenêtre temporelle (when:1h / 1d / 7d / 30d).
+function fluxGoogleNews(query, when, categorie, mots, sources, opts = {}) {
+  return {
+    url: `https://news.google.com/rss/search?q=${encodeURIComponent(query)}+when:${when}&hl=fr&gl=FR&ceid=FR:fr`,
+    tag: opts.tag ?? query, categorie, mots, sources, max: opts.max ?? 6,
+  };
+}
+
+// ABC Bourse : pubDate étiqueté GMT mais en réalité en heure de Paris (bug source connu, mesuré
+// au chantier) — sans correction les items apparaissent jusqu'à 2 h dans le futur en été.
+function offsetParisHeures(date) {
+  const tz = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Paris', timeZoneName: 'shortOffset' })
+    .formatToParts(date).find((p) => p.type === 'timeZoneName')?.value ?? 'GMT+1';
+  return parseInt(/GMT([+-]\d+)/.exec(tz)?.[1] ?? '1', 10);
+}
+function corrigerDateAbcBourse(pubDate) {
+  const d = new Date(pubDate);
+  if (isNaN(d.getTime())) return pubDate;
+  return new Date(d.getTime() - offsetParisHeures(d) * 3600000).toUTCString();
+}
+
+const FLUX_ECO_1H = ['bourse', 'marchés financiers', 'CAC 40', 'banque centrale'];
+const FLUX_ECO_1D = ['BCE taux', 'Fed taux', 'inflation zone euro'];
+const FLUX_ECO = [
+  ...FLUX_ECO_1H.map((q) => fluxGoogleNews(q, '1h', 'eco', MOTS_IMPACT, SOURCES_AUTORISEES)),
+  ...FLUX_ECO_1D.map((q) => fluxGoogleNews(q, '1d', 'eco', MOTS_IMPACT, SOURCES_AUTORISEES)),
+  { url: 'https://www.abcbourse.com/rss/displaynewsrss', tag: 'ABC Bourse', categorie: 'eco',
+    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
+    corrigerDate: corrigerDateAbcBourse, max: 10 },
+  { url: 'https://www.bfmtv.com/rss/economie/', tag: 'BFM Économie', categorie: 'eco',
+    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'BFM Économie', max: 10 },
+  { url: 'https://www.ecb.europa.eu/rss/press.html', tag: 'BCE presse', categorie: 'eco',
+    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10 },
+];
+
+const FLUX_FISCAL_QUERIES = [
+  'loi de finances 2027', 'droits de succession', 'assurance vie fiscalité',
+  'fiscalité patrimoniale', 'IFI impôt fortune immobilière', 'plus-value immobilière fiscalité',
+];
+const FLUX_FISCAL = [
+  ...FLUX_FISCAL_QUERIES.flatMap((q) => [
+    fluxGoogleNews(q, '1d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL),
+    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL),
+  ]),
+  // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
+  { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
+    mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
+    format: 'atom', max: 10 },
+];
+
+const FLUX_UC_SOCIETES = [
+  'DNCA fonds', 'Rothschild & Co Asset Management', 'Comgest fonds',
+  'Pictet Asset Management', 'R-co Valor', 'Fidelity International fonds',
+];
+const FLUX_UC_EVENEMENTS = [
+  '"changement de gérant" fonds', 'OPCVM fusion absorption', 'fonds "fermé aux souscriptions"',
+];
+// Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
+// pas de liste blanche de sources ici, seul le titre doit être pertinent (MOTS_UC).
+const FLUX_UC = [
+  ...FLUX_UC_SOCIETES.map((q) => fluxGoogleNews(q, '7d', 'uc', MOTS_UC, [])),
+  ...FLUX_UC_EVENEMENTS.map((q) => fluxGoogleNews(q, '30d', 'uc', MOTS_UC, [])),
+].map((f) => ({ ...f, dispenseSource: true }));
+
 function analyserSentiment(titre) {
   const t = titre.toLowerCase();
   let score = 0;
@@ -289,7 +376,9 @@ function analyserSentiment(titre) {
   return score > 0 ? 'positive' : score < 0 ? 'negative' : 'neutre';
 }
 
-function parseItemsRSS(xml, tag, max = 6) {
+function parseItemsRSS(xml, cfg) {
+  const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '',
+          corrigerDate = (d) => d, max = 6 } = cfg;
   const items = [];
   const itemRe = /<item>([\s\S]*?)<\/item>/g;
   let m;
@@ -297,41 +386,91 @@ function parseItemsRSS(xml, tag, max = 6) {
     const bloc = m[1];
     const titre  = (/<title><!\[CDATA\[(.*?)\]\]><\/title>/.exec(bloc) ?? /<title>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '';
     const lien   = (/<link>(.*?)<\/link>/.exec(bloc))?.[1]?.trim() ?? '';
-    const date   = (/<pubDate>(.*?)<\/pubDate>/.exec(bloc))?.[1]?.trim() ?? '';
-    const source = (/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() ?? '';
+    let date     = (/<pubDate>(.*?)<\/pubDate>/.exec(bloc))?.[1]?.trim() ?? '';
+    if (date) date = corrigerDate(date);
+    const source = (/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() || sourceDefaut;
     const tLow   = titre.toLowerCase();
-    const sLow   = source.toLowerCase();
-    const impactant = MOTS_IMPACT.some(w => tLow.includes(w));
-    const autorisee = SOURCES_AUTORISEES.some(a => sLow.includes(a));
-    if (titre && impactant && autorisee) {
-      items.push({ titre, source, date, lien, tag, sentiment: analyserSentiment(titre) });
+    const impactant = mots.some(w => tLow.includes(w));
+    const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
+    if (titre && lien && date && impactant && autorisee) {
+      items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
       if (items.length >= max) break;
     }
   }
   return items;
 }
 
-async function fetchRSSWorker(url, tag, max = 4) {
+// Sénat (therss17.xml) : Atom 0.3, balises <entry>/<title>/<link href>/<modified> — le parseur
+// <item> ci-dessus ne les lit pas, d'où ce parseur dédié.
+function parseItemsAtom(xml, cfg) {
+  const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '', max = 6 } = cfg;
+  const items = [];
+  const entryRe = /<entry>([\s\S]*?)<\/entry>/g;
+  let m;
+  while ((m = entryRe.exec(xml)) !== null) {
+    const bloc = m[1];
+    const titre  = (/<title[^>]*>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '';
+    const lien   = (/<link[^>]*href="([^"]*)"/.exec(bloc))?.[1]?.trim() ?? '';
+    const date   = (/<modified>(.*?)<\/modified>/.exec(bloc))?.[1]?.trim() ?? '';
+    const source = sourceDefaut;
+    const tLow   = titre.toLowerCase();
+    const impactant = mots.some(w => tLow.includes(w));
+    const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
+    if (titre && lien && date && impactant && autorisee) {
+      items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
+      if (items.length >= max) break;
+    }
+  }
+  return items;
+}
+
+async function fetchRSSWorker(flux) {
   try {
-    // Timeout par flux : un flux Google News lent ne doit pas bloquer l'ensemble.
-    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
+    // Timeout par flux : un flux lent ne doit pas bloquer l'ensemble. cacheTtl 300 (5 min) :
+    // borne le coût des ~40 flux RSS désormais interrogés à chaque appel non mis en cache.
+    const r = await fetch(flux.url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' }, cf: { cacheTtl: 300 }, signal: AbortSignal.timeout(8000) });
     if (!r.ok) return [];
     const xml = await r.text();
-    return parseItemsRSS(xml, tag, max);
+    return (flux.format === 'atom' ? parseItemsAtom : parseItemsRSS)(xml, flux);
   } catch { return []; }
 }
 
+// Déduplique par lien (garde la première occurrence) puis trie par date décroissante.
+function dedupTrie(items) {
+  const vus = new Map();
+  for (const it of items) if (!vus.has(it.lien)) vus.set(it.lien, it);
+  return [...vus.values()].sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0));
+}
+
 async function recupererNews() {
-  const globalesP = Promise.allSettled(FLUX_GLOBAUX.map(f => fetchRSSWorker(f.url, f.tag, 3)));
-  const produitsP = Promise.allSettled(FLUX_PRODUITS.map(f => {
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`;
-    return fetchRSSWorker(url, f.tag, 3);
-  }));
-  const [gr, pr] = await Promise.all([globalesP, produitsP]);
-  return {
-    globales: gr.flatMap(r => r.status === 'fulfilled' ? r.value : []),
-    produits: pr.flatMap(r => r.status === 'fulfilled' ? r.value : []),
+  const flux = [
+    ...FLUX_GLOBAUX.map(f => ({ url: f.url, tag: f.tag, categorie: 'globale', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3 })),
+    ...FLUX_PRODUITS.map(f => ({
+      url: `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`,
+      tag: f.tag, categorie: 'produits', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3,
+    })),
+    ...FLUX_ECO, ...FLUX_FISCAL, ...FLUX_UC,
+  ];
+  const resultats = await Promise.allSettled(flux.map(fetchRSSWorker));
+  const brut = resultats.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+  const parCanal = { globale: [], produits: [], eco: [], fiscal: [], uc: [] };
+  for (const it of brut) parCanal[it.categorie].push(it);
+
+  // Dédoublonnage sur l'union des 5 tableaux : priorité aux canaux spécifiques (eco > fiscal
+  // > uc), un lien déjà retenu n'est plus repris dans un canal suivant.
+  const utilises = new Set();
+  const retenir = (items, plafond) => {
+    const gardes = dedupTrie(items).filter(i => !utilises.has(i.lien)).slice(0, plafond ?? Infinity);
+    gardes.forEach(i => utilises.add(i.lien));
+    return gardes;
   };
+  const eco = retenir(parCanal.eco, 30);
+  const fiscal = retenir(parCanal.fiscal, 20);
+  const uc = retenir(parCanal.uc, 15);
+  const globales = retenir(parCanal.globale);
+  const produits = retenir(parCanal.produits);
+
+  return { globales, produits, eco, fiscal, uc };
 }
 
 export default {
@@ -354,7 +493,7 @@ export default {
 
     const u = new URL(request.url);
 
-    // Actualités économiques : ?news=1 (10 flux RSS = lent → cache de sortie 15 min).
+    // Actualités économiques : ?news=1 (~40 flux RSS = lent → cache de sortie 5 min).
     if (u.searchParams.get('news')) {
       const cache = caches.default;
       const cleCache = new Request(new URL('/?news=cache', u.origin).toString());
@@ -363,7 +502,7 @@ export default {
       try {
         const news = await recupererNews();
         const resp = new Response(JSON.stringify(news), {
-          headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=900' },
+          headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=300' },
         });
         await cache.put(cleCache, resp.clone());
         return resp;

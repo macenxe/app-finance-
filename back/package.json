@@ -4,16 +4,17 @@
   "private": true,
   "description": "Back de l'application de suivi de produits structurés",
   "scripts": {
-    "dev":       "node --env-file=.env node_modules/tsx/dist/cli.mjs watch src/server.ts",
-    "start":     "node --env-file=.env node_modules/tsx/dist/cli.mjs src/server.ts",
-    "snapshot":  "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/snapshot.ts",
-    "history":   "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/history-snapshot.ts",
-    "fonds":     "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/fonds-meta.ts",
-    "uc":        "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-history.ts",
-    "cms":       "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/cms-history.ts",
-    "build":     "tsc",
-    "typecheck": "tsc --noEmit",
-    "test":      "node --import tsx --test src/calc.test.ts"
+    "dev":         "node --env-file=.env node_modules/tsx/dist/cli.mjs watch src/server.ts",
+    "start":       "node --env-file=.env node_modules/tsx/dist/cli.mjs src/server.ts",
+    "snapshot":    "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/snapshot.ts",
+    "history":     "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/history-snapshot.ts",
+    "fonds":       "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/fonds-meta.ts",
+    "ucmanagers":  "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-managers.ts",
+    "uc":          "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-history.ts",
+    "cms":         "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/cms-history.ts",
+    "build":       "tsc",
+    "typecheck":   "tsc --noEmit",
+    "test":        "node --import tsx --test src/calc.test.ts"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",

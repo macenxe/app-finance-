@@ -1,0 +1,236 @@
+{
+ "genere": "2026-08-04",
+ "fonds": {
+  "FR0011253624": {
+   "gerants": [
+    {
+     "nom": "Yoann Ignatiew",
+     "depuis": "2008-09-08"
+    },
+    {
+     "nom": "Charles-Edouard Bilbault",
+     "depuis": "2017-07-01"
+    },
+    {
+     "nom": "Henri Captier",
+     "depuis": "2025-12-01"
+    }
+   ],
+   "fraisCourants": 1.58,
+   "societe": "Rothschild & Co Asset Management",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "LU1819480192": {
+   "gerants": [
+    {
+     "nom": "Stéphane Nières Tavernier",
+     "depuis": "2024-06-30"
+    },
+    {
+     "nom": "Christophe Pouchoy",
+     "depuis": "2024-04-01"
+    }
+   ],
+   "fraisCourants": 1.7,
+   "societe": "La Financière de l'Echiquier",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "LU1244893696": {
+   "gerants": [
+    {
+     "nom": "Jacques-Aurélien Marcireau",
+     "depuis": "2015-08-31"
+    },
+    {
+     "nom": "Xiadong Bao",
+     "depuis": "2019-01-31"
+    }
+   ],
+   "fraisCourants": 2.16,
+   "societe": "Edmond de Rothschild Asset Management (France)",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 1
+  },
+  "LU0280435388": {
+   "gerants": [
+    {
+     "nom": "Xavier Chollet",
+     "depuis": "2011-04-01"
+    },
+    {
+     "nom": "Manuel Losa",
+     "depuis": "2021-04-01"
+    },
+    {
+     "nom": "Guillaume Martin-Achard",
+     "depuis": "2023-01-18"
+    },
+    {
+     "nom": "Pam Liu",
+     "depuis": "2023-05-01"
+    }
+   ],
+   "fraisCourants": 1.98,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 2
+  },
+  "LU0217139020": {
+   "gerants": [
+    {
+     "nom": "Caroline Reyl",
+     "depuis": "2005-06-01"
+    },
+    {
+     "nom": "Stéphane Destraz",
+     "depuis": "2026-04-01"
+    },
+    {
+     "nom": "Aline Reichenbach",
+     "depuis": "2021-08-01"
+    },
+    {
+     "nom": "David Barros",
+     "depuis": "2024-03-01"
+    }
+   ],
+   "fraisCourants": 1.99,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 3
+  },
+  "FR0010564229": {
+   "gerants": [
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2005-01-01"
+    }
+   ],
+   "fraisCourants": 2.06,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0000295230": {
+   "gerants": [
+    {
+     "nom": "Franz Weis",
+     "depuis": "2009-11-01"
+    },
+    {
+     "nom": "Eva Fornadi",
+     "depuis": "2024-08-30"
+    },
+    {
+     "nom": "Bassel Choughari",
+     "depuis": "2025-10-01"
+    }
+   ],
+   "fraisCourants": 1.86,
+   "societe": "Comgest SA",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 3
+  },
+  "LU1261432659": {
+   "gerants": [
+    {
+     "nom": "Christine Baalham",
+     "depuis": "2024-03-31"
+    },
+    {
+     "nom": "Tom Record",
+     "depuis": "2024-03-31"
+    }
+   ],
+   "fraisCourants": 1.88,
+   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0013256930": {
+   "gerants": [],
+   "fraisCourants": 2.1,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0010489542": {
+   "gerants": [
+    {
+     "nom": "Christophe Quesnel",
+     "depuis": "2007-09-21"
+    },
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2007-09-21"
+    }
+   ],
+   "fraisCourants": 1.61,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 2
+  },
+  "FR0013087152": {
+   "gerants": [],
+   "fraisCourants": 1.72,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 1
+  },
+  "FR0010564336": {
+   "gerants": [
+    {
+     "nom": "Christophe Quesnel",
+     "depuis": "2004-04-02"
+    },
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2004-04-02"
+    }
+   ],
+   "fraisCourants": 1.58,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 3
+  },
+  "LU1694790202": {
+   "gerants": [
+    {
+     "nom": "Fabien Georges",
+     "depuis": "2017-12-13"
+    },
+    {
+     "nom": "Paul LENTZ",
+     "depuis": "2023-10-30"
+    },
+    {
+     "nom": "Pascal Gilbert",
+     "depuis": "2017-12-13"
+    },
+    {
+     "nom": "François Collet",
+     "depuis": "2017-12-13"
+    }
+   ],
+   "fraisCourants": 1.54,
+   "societe": "DNCA Finance",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 3
+  }
+ }
+}
