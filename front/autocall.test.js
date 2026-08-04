@@ -24,11 +24,17 @@ test('datesConstatation annuel : 1 passée + prochaine (constat futur ou déjà 
   assert.equal(d2.prochaine.getTime(), jour(2027, 7, 13));
 });
 
-test('evaluer CMS non rappelé, coupon manqué → réserve', () => {
+test('evaluer CMS non rappelé, coupon manqué → perdu (pas de mémoire)', () => {
   const r = Autocall.evaluer(cms({}), [pt(2026, 7, 13, 3.04)], today);
   assert.equal(r.rappele, false);
-  assert.equal(r.couponsReserve, 4.25);
+  assert.equal(r.couponsReserve, 0);
   assert.equal(r.nPlusX, 'N+2');
+});
+
+test('evaluer CMS non rappelé, coupon acquis → réserve (versée au rappel)', () => {
+  const r = Autocall.evaluer(cms({}), [pt(2026, 7, 13, 2.7)], today);
+  assert.equal(r.rappele, false);
+  assert.equal(r.couponsReserve, 4.25);
 });
 
 test('evaluer CMS rappelé', () => {
