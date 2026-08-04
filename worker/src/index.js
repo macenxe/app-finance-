@@ -380,14 +380,20 @@ const FLUX_ECO = [
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
-const FLUX_FISCAL_QUERIES = [
-  'loi de finances 2027', 'droits de succession', 'assurance vie fiscalité',
-  'fiscalité patrimoniale', 'IFI impôt fortune immobilière', 'plus-value immobilière fiscalité',
+// Budget sous-requêtes (D27) : la prod Workers plafonne à 50 subrequests par invocation
+// (fetchs + opérations Cache API), limite que wrangler dev ne simule PAS. Les requêtes
+// Google News sont donc fusionnées par OR ; toute nouvelle source rejoint un OR existant
+// plutôt que d'ouvrir un flux séparé. Décompte courant : 7 globaux + 6 produits + 10 eco
+// + 7 fiscal + 3 uc = 33 fetchs, + 2 cache = 35.
+const FLUX_FISCAL_GROUPES = [
+  { q: '"loi de finances" OR "fiscalité patrimoniale" OR "niche fiscale"', tag: 'Fiscalité patrimoniale' },
+  { q: '"droits de succession" OR "donation" OR "droits de mutation"',     tag: 'Succession / donation' },
+  { q: '"assurance vie" OR "IFI" OR "plus-value immobilière"',             tag: 'Assurance-vie / IFI' },
 ];
 const FLUX_FISCAL = [
-  ...FLUX_FISCAL_QUERIES.flatMap((q) => [
-    fluxGoogleNews(q, '1d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL),
-    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL),
+  ...FLUX_FISCAL_GROUPES.flatMap(({ q, tag }) => [
+    fluxGoogleNews(q, '1d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
+    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
   ]),
   // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
   { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
@@ -407,11 +413,17 @@ const FLUX_UC_FONDS = [
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
 // pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.
-const FLUX_UC = FLUX_UC_FONDS.map((nom) => {
-  const mots = [nom.toLowerCase()];
-  if (nom === 'R-co Valor') mots.push('r co valor');
-  if (nom === 'Pictet-Premium Brands') mots.push('pictet premium brands');
-  return { ...fluxGoogleNews(`"${nom}"`, '30d', 'uc', mots, []), tag: nom, max: 3, dispenseSource: true };
+// Les 13 fonds sont regroupés en 3 requêtes OR (budget sous-requêtes, D27) ; le label de
+// carte reste le fonds matché grâce à tagParMot (mot minuscule → nom exact).
+const FLUX_UC = [
+  FLUX_UC_FONDS.slice(0, 5), FLUX_UC_FONDS.slice(5, 9), FLUX_UC_FONDS.slice(9),
+].map((groupe) => {
+  const mots = groupe.map((n) => n.toLowerCase());
+  const tagParMot = Object.fromEntries(groupe.map((n) => [n.toLowerCase(), n]));
+  if (groupe.includes('R-co Valor')) { mots.push('r co valor'); tagParMot['r co valor'] = 'R-co Valor'; }
+  if (groupe.includes('Pictet-Premium Brands')) { mots.push('pictet premium brands'); tagParMot['pictet premium brands'] = 'Pictet-Premium Brands'; }
+  const q = groupe.map((n) => `"${n}"`).join(' OR ');
+  return { ...fluxGoogleNews(q, '30d', 'uc', mots, []), tag: groupe[0], tagParMot, max: 6, dispenseSource: true };
 });
 
 function analyserSentiment(titre) {
@@ -436,7 +448,7 @@ function decoderEntites(s) {
 
 function parseItemsRSS(xml, cfg) {
   const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '',
-          corrigerDate = (d) => d, max = 6, capsRegex = null } = cfg;
+          corrigerDate = (d) => d, max = 6, capsRegex = null, tagParMot = null } = cfg;
   const items = [];
   const itemRe = /<item>([\s\S]*?)<\/item>/g;
   let m;
@@ -452,10 +464,13 @@ function parseItemsRSS(xml, cfg) {
     // caractères) : citée en fin de titre elle n'est qu'un second rôle (« Nike recule
     // après une dégradation de JPMorgan » ne parle pas de JPMorgan), D26.
     const mCaps = capsRegex ? capsRegex.exec(sansSuffixeSource(tLow)) : null;
-    const impactant = mots.some(w => tLow.includes(w)) || (mCaps != null && mCaps.index < 40);
+    const motMatche = mots.find(w => tLow.includes(w));
+    const impactant = motMatche != null || (mCaps != null && mCaps.index < 40);
     const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
     if (titre && lien && date && impactant && autorisee) {
-      items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
+      // Flux fusionnés par OR (uc) : le label de carte est le fonds réellement matché.
+      const tagItem = (tagParMot && motMatche && tagParMot[motMatche]) || tag;
+      items.push({ titre, source, date, lien, tag: tagItem, categorie, sentiment: analyserSentiment(titre) });
       if (items.length >= max) break;
     }
   }
