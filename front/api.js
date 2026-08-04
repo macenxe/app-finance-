@@ -290,8 +290,12 @@ const AppAPI = (() => {
     return { ...d, points: filtrerPeriode(d.points || [], periode) };
   }
 
-  // URL de la valeur courante du CMS 10 ans (swap EUR 10y via FT, proxifié).
+  // URL de la valeur courante du CMS 10 ans (Chatham via Worker). En dev local, le serveur
+  // front (.claude/front-server.js) sert la même logique sur /__cms : sans cette bascule, la
+  // carte refléterait le Worker déployé, pas le code courant.
   function cmsUrl() {
+    const h = location.hostname;
+    if (h === 'localhost' || h === '127.0.0.1') return './__cms';
     return `${WORKER}?cms=1`;
   }
 
