@@ -232,35 +232,6 @@ function calculerIndicateurs(p, cours) {
 // Canal fiscal : Google News when:1d + when:7d (requêtes patrimoniales) + flux Sénat (Atom).
 // Canal uc     : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
 //                eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
-const SOURCES_AUTORISEES = [
-  'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
-  'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
-  // Régulateurs & institutions (indispensables pour le flux Régulation / produits structurés)
-  'amf', 'autorité des marchés', 'esma', 'acpr', 'banque de france', 'fmi', 'ocde',
-  // Flux directs du canal eco : ce SONT les sources (dispensées de liste blanche au parsing,
-  // cf. dispenseSource plus bas), listées ici pour rester cohérent si Google News les cite.
-  'abc bourse', 'bfm économie', 'bce',
-];
-// Canal fiscal : liste blanche élargie à la presse patrimoniale.
-const SOURCES_AUTORISEES_FISCAL = [
-  ...SOURCES_AUTORISEES,
-  'gestion de fortune', 'profession cgp', 'mieux vivre', 'notaires',
-];
-const MOTS_IMPACT = [
-  'bourse','cours','cac','stoxx','nasdaq','s&p','action','titre','marché','marchés',
-  'taux','inflation','récession','croissance','pib','fed','bce','banque centrale',
-  'résultats','bénéfices','chiffre d\'affaires','dividende','rachat','fusion','acquisition',
-  'avertissement','profit warning','révision','objectif','recommandation','analyste',
-  'hausse','baisse','chute','rebond','record','correction','volatilité','spread',
-  'obligation','dette','souverain','swap','irs','liquidité','crédit',
-  'secteur bancaire','banques','énergie','défense','technologie',
-  'capgemini','bnp','stellantis','rheinmetall',
-  // Régulation & produits structurés
-  'régulation','réglementation','amf','esma','mifid','directive','prospectus',
-  'produit structuré','produits structurés','structuré','structurés','autocall','commercialisation',
-  // International / macro mondiale
-  'fmi','ocde','mondiale','mondial','international','émergents','chine','états-unis','géopolitique',
-];
 // Canal fiscal : mots signalant un sujet patrimonial/fiscal réel.
 const MOTS_FISCAL = [
   'impôt', 'fiscalité', 'fiscal', 'succession', 'donation', 'ifi', 'pfu',
@@ -284,33 +255,7 @@ const MOTS_NEGATIFS = [
   'sous-pondérer','objectif abaissé','profit warning','révision à la baisse',
   'récession','dégradation','fragilité','dévisse','fléchit','cède','décroche',
 ];
-// Requêtes fusionnées par OR (budget sous-requêtes D27 : chaque fetch Google News peut
-// coûter 2 sous-requêtes s'il est redirigé). Le label par item est raffiné via tagParMot.
-const FLUX_GLOBAUX_DEFS = [
-  { q: 'BCE OR Fed taux décision impact marchés', tag: 'BCE / Taux',
-    tagParMot: { fed: 'Fed / Taux' } },
-  { q: 'inflation zone euro CPI bourse', tag: 'Inflation' },
-  { q: '"CAC 40" OR Stoxx OR OAT OR Bund marchés', tag: 'Marchés',
-    tagParMot: { oat: 'Obligataire', bund: 'Obligataire', obligataire: 'Obligataire' } },
-  { q: 'produits structurés AMF ESMA régulation commercialisation', tag: 'Régulation' },
-  { q: 'économie mondiale croissance FMI international marchés', tag: 'International' },
-];
-const FLUX_PRODUITS_DEFS = [
-  { q: '"BNP Paribas" OR Stellantis OR Capgemini OR Rheinmetall bourse', tag: 'Sous-jacents',
-    tagParMot: { 'bnp paribas': 'BNP Paribas', stellantis: 'Stellantis',
-                 capgemini: 'Capgemini', rheinmetall: 'Rheinmetall' } },
-  { q: '"CAC 40" OR "Stoxx Banks" analyse', tag: 'CAC 40',
-    tagParMot: { 'stoxx banks': 'ES Banks', 'secteur bancaire': 'ES Banks' } },
-];
 
-// Requête Google News RSS générique, avec fenêtre temporelle (when:1h / 1d / 7d / 30d).
-function fluxGoogleNews(query, when, categorie, mots, sources, opts = {}) {
-  return {
-    url: `https://news.google.com/rss/search?q=${encodeURIComponent(query)}+when:${when}&hl=fr&gl=FR&ceid=FR:fr`,
-    tag: opts.tag ?? query, categorie, mots, sources, max: opts.max ?? 6,
-    capsRegex: opts.capsRegex ?? null,
-  };
-}
 
 // ABC Bourse : pubDate étiqueté GMT mais en réalité en heure de Paris (bug source connu, mesuré
 // au chantier) — sans correction les items apparaissent jusqu'à 2 h dans le futur en été.
@@ -367,20 +312,9 @@ function sansSuffixeSource(titre) {
   return i === -1 ? titre : titre.slice(0, i);
 }
 
-// Fusion OR (D27) ; les tags par item restent ceux que le front mappe déjà en thèmes
-// (RSS_TAG_CAT : bourse/marchés financiers → MARCHÉS, BCE taux/Fed taux/banque centrale
-// → TAUX, inflation zone euro → INFLATION), raffinés via tagParMot.
-const FLUX_ECO_GOOGLE = [
-  { q: 'bourse OR "marchés financiers"', when: '1h', tag: 'bourse',
-    tagParMot: { 'marchés financiers': 'marchés financiers' } },
-  { q: '"CAC 40" OR "banque centrale"', when: '1h', tag: 'CAC 40',
-    tagParMot: { 'banque centrale': 'banque centrale' } },
-  { q: 'BCE OR Fed OR inflation', when: '1d', tag: 'BCE taux',
-    tagParMot: { bce: 'BCE taux', fed: 'Fed taux', inflation: 'inflation zone euro' } },
-];
-const FLUX_ECO = [
-  ...FLUX_ECO_GOOGLE.map(({ q, when, tag, tagParMot }) =>
-    ({ ...fluxGoogleNews(q, when, 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { tag, capsRegex: GRANDES_CAPS_RE }), tagParMot })),
+// Flux DIRECTS du canal eco — les seuls que les IP Workers atteignent (D30) ; le
+// complément Google News arrive par le fond statique (NEWS_FOND_URL).
+const FLUX_ECO_DIRECTS = [
   { url: 'https://www.abcbourse.com/rss/displaynewsrss', tag: 'ABC Bourse', categorie: 'eco',
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
     corrigerDate: corrigerDateAbcBourse, max: 10, capsRegex: GRANDES_CAPS_RE },
@@ -390,51 +324,16 @@ const FLUX_ECO = [
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
-// Budget sous-requêtes (D27) : la prod Workers plafonne à 50 subrequests par invocation
-// (fetchs + opérations Cache API), limite que wrangler dev ne simule PAS. Les requêtes
-// Google News sont donc fusionnées par OR ; toute nouvelle source rejoint un OR existant
-// plutôt que d'ouvrir un flux séparé. Un fetch Google News peut coûter 2 sous-requêtes
-// (redirection suivie) : décompte pire cas = 16 flux Google × 2 + 4 flux directs
-// (ABC, BFM, BCE, Sénat) + 2 cache = 38/50.
-const FLUX_FISCAL_GROUPES = [
-  { q: '"loi de finances" OR "fiscalité patrimoniale" OR "niche fiscale"', tag: 'Fiscalité patrimoniale' },
-  { q: '"droits de succession" OR "donation" OR "droits de mutation"',     tag: 'Succession / donation' },
-  { q: '"assurance vie" OR "IFI" OR "plus-value immobilière"',             tag: 'Assurance-vie / IFI' },
-];
-const FLUX_FISCAL = [
-  // Une seule fenêtre 7d par groupe (budget D27) : le tri par date sert la fraîcheur.
-  ...FLUX_FISCAL_GROUPES.map(({ q, tag }) =>
-    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag })),
+// Budget sous-requêtes (D27/D30) : la prod Workers plafonne à 50 subrequests par
+// invocation (fetchs + Cache API), limite que wrangler dev ne simule PAS. Décompte
+// ?news=1 : 4 flux directs (×2 si redirigés) + 1 fond statique + 2 cache = 11 pire cas.
+const FLUX_FISCAL_DIRECTS = [
   // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
   { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
     mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
     format: 'atom', max: 10 },
 ];
 
-// Les 13 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
-// pas des sociétés de gestion qui les gèrent (les requêtes par société ramenaient des profils
-// de personnes et du hors-sujet, D23/D24).
-const FLUX_UC_FONDS = [
-  'R-co Valor', 'Echiquier Artificial Intelligence', 'EdR Fund Big Data',
-  'Pictet Clean Energy Transition', 'Pictet-Premium Brands', 'Conservateur Actions Monde',
-  'Comgest Renaissance Europe', 'Fidelity World Fund', 'Conservateur Actions Flexibles',
-  'Conservateur Diversifié Réactif', 'Conservateur Rendement Flexible',
-  'Conservateur Diversifié', 'DNCA Invest Flex Inflation',
-];
-// Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
-// pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.
-// Les 13 fonds sont regroupés en 3 requêtes OR (budget sous-requêtes, D27) ; le label de
-// carte reste le fonds matché grâce à tagParMot (mot minuscule → nom exact).
-const FLUX_UC = [
-  FLUX_UC_FONDS.slice(0, 5), FLUX_UC_FONDS.slice(5, 9), FLUX_UC_FONDS.slice(9),
-].map((groupe) => {
-  const mots = groupe.map((n) => n.toLowerCase());
-  const tagParMot = Object.fromEntries(groupe.map((n) => [n.toLowerCase(), n]));
-  if (groupe.includes('R-co Valor')) { mots.push('r co valor'); tagParMot['r co valor'] = 'R-co Valor'; }
-  if (groupe.includes('Pictet-Premium Brands')) { mots.push('pictet premium brands'); tagParMot['pictet premium brands'] = 'Pictet-Premium Brands'; }
-  const q = groupe.map((n) => `"${n}"`).join(' OR ');
-  return { ...fluxGoogleNews(q, '30d', 'uc', mots, []), tag: groupe[0], tagParMot, max: 6, dispenseSource: true };
-});
 
 function analyserSentiment(titre) {
   const t = titre.toLowerCase();
@@ -543,17 +442,29 @@ function dedupTrie(items) {
   return [...vus.values()].sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0));
 }
 
+// Google News renvoie 503 « Sorry… » aux IP Cloudflare Workers (mesuré, D30 — même
+// famille de blocage que Chatham). Les canaux qui en dépendent (globales, produits,
+// fiscal Google, uc) sont générés côté GitHub Actions (back news-statique.ts, qui
+// atteint Google) et publiés en fichier statique ; le Worker les fusionne avec les
+// flux DIRECTS qui lui répondent (ABC Bourse, BFM, BCE, Sénat) pour l'intraday.
+const NEWS_FOND_URL = 'https://macenxe.github.io/app-finance-/data/news-fond.json';
+
 async function recupererNews() {
-  const flux = [
-    ...FLUX_GLOBAUX_DEFS.map(({ q, tag, tagParMot }) =>
-      ({ ...fluxGoogleNews(q, '7d', 'globale', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max: 3 }), tagParMot })),
-    ...FLUX_PRODUITS_DEFS.map(({ q, tag, tagParMot }) =>
-      ({ ...fluxGoogleNews(q, '7d', 'produits', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max: 4 }), tagParMot })),
-    ...FLUX_ECO, ...FLUX_FISCAL, ...FLUX_UC,
-  ];
-  const resultats = await Promise.allSettled(flux.map(fetchRSSWorker));
+  const flux = [...FLUX_ECO_DIRECTS, ...FLUX_FISCAL_DIRECTS];
+  const [fondRes, ...resultats] = await Promise.allSettled([
+    fetch(NEWS_FOND_URL, { cf: { cacheTtl: 300 }, signal: AbortSignal.timeout(8000) })
+      .then((r) => (r.ok ? r.json() : null)),
+    ...flux.map(fetchRSSWorker),
+  ]);
+  const fond = (fondRes.status === 'fulfilled' && fondRes.value) || {};
   const brut = resultats.flatMap(r => r.status === 'fulfilled' ? r.value : []);
-  const parCanal = { globale: [], produits: [], eco: [], fiscal: [], uc: [] };
+  const parCanal = {
+    globale: [...(fond.globales || [])],
+    produits: [...(fond.produits || [])],
+    eco: [...(fond.eco || [])],
+    fiscal: [...(fond.fiscal || [])],
+    uc: [...(fond.uc || [])],
+  };
   for (const it of brut) parCanal[it.categorie].push(it);
 
   // Dédoublonnage sur l'union des 5 tableaux : priorité aux canaux spécifiques (eco > fiscal
@@ -594,32 +505,6 @@ export default {
     const u = new URL(request.url);
 
     // Actualités économiques : ?news=1 (~40 flux RSS = lent → cache de sortie 5 min).
-    // Diagnostic éphémère (chantier 2) : statut brut de 3 flux témoins, avec et sans
-    // cookie CONSENT — à retirer une fois la panne prod comprise.
-    if (u.searchParams.get('newsdebug')) {
-      const cibles = [
-        'https://news.google.com/rss/search?q=bourse+when:1h&hl=fr&gl=FR&ceid=FR:fr',
-        'https://www.bfmtv.com/rss/economie/',
-        'https://www.abcbourse.com/rss/displaynewsrss',
-      ];
-      const out = [];
-      for (const url of cibles) {
-        for (const avecCookie of [true, false]) {
-          try {
-            const t0 = Date.now();
-            const headers = { 'User-Agent': 'Mozilla/5.0 (compatible; ConservateurApp/1.0)' };
-            if (avecCookie) headers['Cookie'] = 'CONSENT=YES+; SOCS=CAI';
-            const r = await fetch(url, { headers, redirect: 'manual', signal: AbortSignal.timeout(8000) });
-            const txt = await r.text();
-            out.push({ url, avecCookie, status: r.status, ms: Date.now() - t0,
-                       location: r.headers.get('Location'), taille: txt.length,
-                       extrait: txt.slice(0, 180) });
-          } catch (e) { out.push({ url, avecCookie, erreur: String(e?.message || e) }); }
-        }
-      }
-      return new Response(JSON.stringify(out, null, 1), { headers: JSON_HEADERS });
-    }
-
     if (u.searchParams.get('news')) {
       const cache = caches.default;
       // Clé versionnée : un déploiement qui change le format ne doit pas resservir
