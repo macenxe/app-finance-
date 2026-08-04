@@ -478,7 +478,7 @@ const App = (() => {
         el.innerHTML = renderProduits(produits, state, donnees.rappeles);
         majGouttiereUC();
         break;
-      case 'actus':    el.innerHTML = renderActus(state); chargerActus(); chargerActusUC(); break;
+      case 'actus':    el.innerHTML = renderActus(); chargerActus(); chargerActusUC(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache, ucSecteursCache, ucMetaCache, ucMetaGenere);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
@@ -1027,12 +1027,6 @@ const App = (() => {
       const reste = (state.ucCompare || []).filter(i => i !== isin);
       state = { ...state, ucCompare: reste };
       if (majUCSheet()) return;
-      renderPage(true);
-    },
-    // Sous-filtre thématique de la page Actualités : un retour en haut de page à chaque clic
-    // ferait sauter les puces hors de vue.
-    setNewsTheme(theme) {
-      state = { ...state, newsTheme: theme || null };
       renderPage(true);
     },
     // Tri du tableau des fonds par clic sur un en-tête de colonne. Re-cliquer la colonne active

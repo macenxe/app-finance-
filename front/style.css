@@ -462,15 +462,6 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 /* Sous-filtres thématiques de la page Actualités : rangée de pastilles en tête de page (mêmes
    pastilles que les filtres UC en mobile) — la colonne latérale de bureau n'existe pas au
    téléphone, où la page se lit d'abord. */
-.news-filtres-ligne { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-.news-filtres-ligne .news-filtre {
-  display: inline-flex; align-items: center; height: 26px; padding: 0 11px; margin: 0;
-  border: 1.5px solid #ece7dc; border-radius: 13px; background: #fff;
-  font-size: 12px; font-weight: 600; color: #6b6e73; white-space: nowrap; cursor: pointer;
-  transition: border-color .15s, background .15s, color .15s;
-}
-.news-filtres-ligne .news-filtre:hover { border-color: #c9a96a; background: #fff; color: #16304f; }
-.news-filtres-ligne .news-filtre.active { border-color: #16304f; background: #16304f; color: #fff; }
 
 /* Sections (« À la une » curée, puis « Fil en direct » RSS) */
 .news-group { margin-bottom: 24px; }

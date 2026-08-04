@@ -699,11 +699,6 @@ function newsCardHtml({ label, color, titre, resume, date, meta, lien }) {
     : `<div class="news-card">${inner}</div>`;
 }
 
-// Thème actif de la page Actualités. Mémorisé au niveau du module car renderNewsSection est
-// appelé plus tard par chargerActus (chargement asynchrone du fil), hors du rendu de la page.
-let NEWS_THEME_COURANT = null;
-const NEWS_THEMES = ['TAUX', 'INFLATION', 'MARCHÉS', 'INTERNATIONAL', 'RÉGULATION'];
-
 const NEWS_VIDE_ECO = 'Aucune actualité économique récente.';
 
 function newsTs(d) { const t = d ? new Date(d).getTime() : 0; return isNaN(t) ? 0 : t; }
@@ -712,17 +707,12 @@ function newsDateCourte(d) {
   return (t && !isNaN(t.getTime())) ? t.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }) : '';
 }
 
-// Page Actus (D31/D32) : fil unique du canal économique, sous-filtré par les 5 thèmes, précédé
-// de l'épinglage UC (renderNewsEpingle, alimenté par app.js une fois ses deux sources chargées).
-// Plus d'onglets, plus d'agenda macro ni de « À la une » sur cette page — le tableau de bord
-// garde l'agenda (montage bureau) et sa propre carte « Actualités des sous-jacents ».
-function renderActus(state) {
-  NEWS_THEME_COURANT = (state && state.newsTheme) || null;
-  const sousThemes = `
-      <div class="news-filtres-ligne">
-        ${[[null, 'Tous'], ...NEWS_THEMES.map(t => [t, t.charAt(0) + t.slice(1).toLowerCase()])].map(([val, label]) => `
-        <div class="news-filtre${NEWS_THEME_COURANT === val ? ' active' : ''}" onclick="App.setNewsTheme(${val ? `'${val}'` : 'null'})">${escHtml(label)}</div>`).join('')}
-      </div>`;
+// Page Actus (D31/D33) : fil unique du canal économique, nu (les sous-filtres thématiques
+// sont supprimés, D33), précédé de l'épinglage UC (renderNewsEpingle, alimenté par app.js
+// une fois ses deux sources chargées). Plus d'onglets, plus d'agenda macro ni de « À la
+// une » sur cette page — le tableau de bord garde l'agenda (montage bureau) et sa propre
+// carte « Actualités des sous-jacents ».
+function renderActus() {
   return `
   <div>
     <header class="page-header">
@@ -732,7 +722,6 @@ function renderActus(state) {
       </div>
     </header>
     <div class="page-body">
-      ${sousThemes}
       <div id="news-epingle"></div>
       <div class="news-group">
         <div class="news-group-title">Fil économique</div>
@@ -744,15 +733,10 @@ function renderActus(state) {
   </div>`;
 }
 
-// Rendu du fil RSS live (injecté dans #news-section par chargerActus) : canal eco seul,
-// sous-filtré par NEWS_THEME_COURANT.
+// Rendu du fil RSS live (injecté dans #news-section par chargerActus) : canal eco seul.
 function renderNewsSection(news) {
-  let items = ((news && news.eco) || []).slice().sort((a, b) => newsTs(b.date) - newsTs(a.date));
-  if (NEWS_THEME_COURANT) items = items.filter(a => RSS_TAG_CAT[a.tag] === NEWS_THEME_COURANT);
-  if (!items.length) {
-    const msg = NEWS_THEME_COURANT ? 'Aucune actualité sur ce thème.' : NEWS_VIDE_ECO;
-    return `<p class="news-empty">${msg}</p>`;
-  }
+  const items = ((news && news.eco) || []).slice().sort((a, b) => newsTs(b.date) - newsTs(a.date));
+  if (!items.length) return `<p class="news-empty">${NEWS_VIDE_ECO}</p>`;
   const cards = items.map(a => newsCardHtml({
     label: newsLabel(a.tag),
     color: newsItemColor(a),
