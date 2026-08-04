@@ -284,22 +284,23 @@ const MOTS_NEGATIFS = [
   'sous-pondérer','objectif abaissé','profit warning','révision à la baisse',
   'récession','dégradation','fragilité','dévisse','fléchit','cède','décroche',
 ];
-const FLUX_GLOBAUX = [
-  { url: 'https://news.google.com/rss/search?q=BCE+d%C3%A9cision+taux+march%C3%A9s+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'BCE / Taux' },
-  { url: 'https://news.google.com/rss/search?q=Fed+taux+d%C3%A9cision+bourse+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
-  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse+when:7d&hl=fr&gl=FR&ceid=FR:fr',              tag: 'Inflation'  },
-  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+march%C3%A9s+actions+analyse+when:7d&hl=fr&gl=FR&ceid=FR:fr',  tag: 'Marchés'    },
-  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund+when:7d&hl=fr&gl=FR&ceid=FR:fr',           tag: 'Obligataire'},
-  { url: 'https://news.google.com/rss/search?q=produits+structur%C3%A9s+AMF+ESMA+r%C3%A9gulation+commercialisation+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'Régulation'   },
-  { url: 'https://news.google.com/rss/search?q=%C3%A9conomie+mondiale+croissance+FMI+international+march%C3%A9s+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'International' },
+// Requêtes fusionnées par OR (budget sous-requêtes D27 : chaque fetch Google News peut
+// coûter 2 sous-requêtes s'il est redirigé). Le label par item est raffiné via tagParMot.
+const FLUX_GLOBAUX_DEFS = [
+  { q: 'BCE OR Fed taux décision impact marchés', tag: 'BCE / Taux',
+    tagParMot: { fed: 'Fed / Taux' } },
+  { q: 'inflation zone euro CPI bourse', tag: 'Inflation' },
+  { q: '"CAC 40" OR Stoxx OR OAT OR Bund marchés', tag: 'Marchés',
+    tagParMot: { oat: 'Obligataire', bund: 'Obligataire', obligataire: 'Obligataire' } },
+  { q: 'produits structurés AMF ESMA régulation commercialisation', tag: 'Régulation' },
+  { q: 'économie mondiale croissance FMI international marchés', tag: 'International' },
 ];
-const FLUX_PRODUITS = [
-  { query: 'BNP Paribas cours bourse résultats analyste',         tag: 'BNP Paribas' },
-  { query: 'Stellantis cours bourse résultats objectif',          tag: 'Stellantis'  },
-  { query: 'Capgemini cours bourse résultats analyste',           tag: 'Capgemini'   },
-  { query: 'Rheinmetall cours bourse résultats défense',          tag: 'Rheinmetall' },
-  { query: 'CAC 40 analyse technique niveaux résistance support', tag: 'CAC 40'      },
-  { query: 'secteur bancaire européen Stoxx Banks résultats taux',tag: 'ES Banks'    },
+const FLUX_PRODUITS_DEFS = [
+  { q: '"BNP Paribas" OR Stellantis OR Capgemini OR Rheinmetall bourse', tag: 'Sous-jacents',
+    tagParMot: { 'bnp paribas': 'BNP Paribas', stellantis: 'Stellantis',
+                 capgemini: 'Capgemini', rheinmetall: 'Rheinmetall' } },
+  { q: '"CAC 40" OR "Stoxx Banks" analyse', tag: 'CAC 40',
+    tagParMot: { 'stoxx banks': 'ES Banks', 'secteur bancaire': 'ES Banks' } },
 ];
 
 // Requête Google News RSS générique, avec fenêtre temporelle (when:1h / 1d / 7d / 30d).
@@ -366,11 +367,20 @@ function sansSuffixeSource(titre) {
   return i === -1 ? titre : titre.slice(0, i);
 }
 
-const FLUX_ECO_1H = ['bourse', 'marchés financiers', 'CAC 40', 'banque centrale'];
-const FLUX_ECO_1D = ['BCE taux', 'Fed taux', 'inflation zone euro'];
+// Fusion OR (D27) ; les tags par item restent ceux que le front mappe déjà en thèmes
+// (RSS_TAG_CAT : bourse/marchés financiers → MARCHÉS, BCE taux/Fed taux/banque centrale
+// → TAUX, inflation zone euro → INFLATION), raffinés via tagParMot.
+const FLUX_ECO_GOOGLE = [
+  { q: 'bourse OR "marchés financiers"', when: '1h', tag: 'bourse',
+    tagParMot: { 'marchés financiers': 'marchés financiers' } },
+  { q: '"CAC 40" OR "banque centrale"', when: '1h', tag: 'CAC 40',
+    tagParMot: { 'banque centrale': 'banque centrale' } },
+  { q: 'BCE OR Fed OR inflation', when: '1d', tag: 'BCE taux',
+    tagParMot: { bce: 'BCE taux', fed: 'Fed taux', inflation: 'inflation zone euro' } },
+];
 const FLUX_ECO = [
-  ...FLUX_ECO_1H.map((q) => fluxGoogleNews(q, '1h', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
-  ...FLUX_ECO_1D.map((q) => fluxGoogleNews(q, '1d', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
+  ...FLUX_ECO_GOOGLE.map(({ q, when, tag, tagParMot }) =>
+    ({ ...fluxGoogleNews(q, when, 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { tag, capsRegex: GRANDES_CAPS_RE }), tagParMot })),
   { url: 'https://www.abcbourse.com/rss/displaynewsrss', tag: 'ABC Bourse', categorie: 'eco',
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
     corrigerDate: corrigerDateAbcBourse, max: 10, capsRegex: GRANDES_CAPS_RE },
@@ -383,18 +393,18 @@ const FLUX_ECO = [
 // Budget sous-requêtes (D27) : la prod Workers plafonne à 50 subrequests par invocation
 // (fetchs + opérations Cache API), limite que wrangler dev ne simule PAS. Les requêtes
 // Google News sont donc fusionnées par OR ; toute nouvelle source rejoint un OR existant
-// plutôt que d'ouvrir un flux séparé. Décompte courant : 7 globaux + 6 produits + 10 eco
-// + 7 fiscal + 3 uc = 33 fetchs, + 2 cache = 35.
+// plutôt que d'ouvrir un flux séparé. Un fetch Google News peut coûter 2 sous-requêtes
+// (redirection suivie) : décompte pire cas = 16 flux Google × 2 + 4 flux directs
+// (ABC, BFM, BCE, Sénat) + 2 cache = 38/50.
 const FLUX_FISCAL_GROUPES = [
   { q: '"loi de finances" OR "fiscalité patrimoniale" OR "niche fiscale"', tag: 'Fiscalité patrimoniale' },
   { q: '"droits de succession" OR "donation" OR "droits de mutation"',     tag: 'Succession / donation' },
   { q: '"assurance vie" OR "IFI" OR "plus-value immobilière"',             tag: 'Assurance-vie / IFI' },
 ];
 const FLUX_FISCAL = [
-  ...FLUX_FISCAL_GROUPES.flatMap(({ q, tag }) => [
-    fluxGoogleNews(q, '1d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
-    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
-  ]),
+  // Une seule fenêtre 7d par groupe (budget D27) : le tri par date sert la fraîcheur.
+  ...FLUX_FISCAL_GROUPES.map(({ q, tag }) =>
+    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag })),
   // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
   { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
     mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
@@ -464,12 +474,13 @@ function parseItemsRSS(xml, cfg) {
     // caractères) : citée en fin de titre elle n'est qu'un second rôle (« Nike recule
     // après une dégradation de JPMorgan » ne parle pas de JPMorgan), D26.
     const mCaps = capsRegex ? capsRegex.exec(sansSuffixeSource(tLow)) : null;
-    const motMatche = mots.find(w => tLow.includes(w));
-    const impactant = motMatche != null || (mCaps != null && mCaps.index < 40);
+    const impactant = mots.some(w => tLow.includes(w)) || (mCaps != null && mCaps.index < 40);
     const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
     if (titre && lien && date && impactant && autorisee) {
-      // Flux fusionnés par OR (uc) : le label de carte est le fonds réellement matché.
-      const tagItem = (tagParMot && motMatche && tagParMot[motMatche]) || tag;
+      // Flux fusionnés par OR : le label de carte est raffiné par le premier mot de
+      // tagParMot présent dans le titre (uc : le fonds matché ; globaux : le sous-thème).
+      const cle = tagParMot && Object.keys(tagParMot).find((w) => tLow.includes(w));
+      const tagItem = (cle && tagParMot[cle]) || tag;
       items.push({ titre, source, date, lien, tag: tagItem, categorie, sentiment: analyserSentiment(titre) });
       if (items.length >= max) break;
     }
@@ -521,11 +532,10 @@ function dedupTrie(items) {
 
 async function recupererNews() {
   const flux = [
-    ...FLUX_GLOBAUX.map(f => ({ url: f.url, tag: f.tag, categorie: 'globale', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3 })),
-    ...FLUX_PRODUITS.map(f => ({
-      url: `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`,
-      tag: f.tag, categorie: 'produits', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3,
-    })),
+    ...FLUX_GLOBAUX_DEFS.map(({ q, tag, tagParMot }) =>
+      ({ ...fluxGoogleNews(q, '7d', 'globale', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max: 3 }), tagParMot })),
+    ...FLUX_PRODUITS_DEFS.map(({ q, tag, tagParMot }) =>
+      ({ ...fluxGoogleNews(q, '7d', 'produits', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max: 4 }), tagParMot })),
     ...FLUX_ECO, ...FLUX_FISCAL, ...FLUX_UC,
   ];
   const resultats = await Promise.allSettled(flux.map(fetchRSSWorker));

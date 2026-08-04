@@ -139,26 +139,30 @@ function corrigerDateAbcBourse(pubDate: string): string {
   return new Date(d.getTime() - offsetParisHeures(d) * 3600000).toUTCString();
 }
 
-// Flux globaux — requêtes ciblées sur les décisions et impacts marché
-const FLUX_GLOBAUX = [
-  { url: 'https://news.google.com/rss/search?q=BCE+décision+taux+marchés+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',       tag: 'BCE / Taux' },
-  { url: 'https://news.google.com/rss/search?q=Fed+taux+décision+bourse+impact+when:7d&hl=fr&gl=FR&ceid=FR:fr',        tag: 'Fed / Taux' },
-  { url: 'https://news.google.com/rss/search?q=inflation+zone+euro+CPI+bourse+when:7d&hl=fr&gl=FR&ceid=FR:fr',         tag: 'Inflation'  },
-  { url: 'https://news.google.com/rss/search?q=CAC+40+Stoxx+marchés+actions+analyse+when:7d&hl=fr&gl=FR&ceid=FR:fr',   tag: 'Marchés'    },
-  { url: 'https://news.google.com/rss/search?q=taux+obligataires+spread+OAT+Bund+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'Obligataire'},
-  { url: 'https://news.google.com/rss/search?q=produits+structurés+AMF+ESMA+régulation+commercialisation+when:7d&hl=fr&gl=FR&ceid=FR:fr', tag: 'Régulation'   },
-  { url: 'https://news.google.com/rss/search?q=économie+mondiale+croissance+FMI+international+marchés+when:7d&hl=fr&gl=FR&ceid=FR:fr',      tag: 'International' },
+// Flux globaux — requêtes fusionnées par OR (budget sous-requêtes du Worker, D27 : le
+// miroir Node reste aligné) ; le label par item est raffiné via tagParMot.
+const FLUX_GLOBAUX_DEFS: { q: string; tag: string; tagParMot?: Record<string, string> }[] = [
+  { q: 'BCE OR Fed taux décision impact marchés', tag: 'BCE / Taux',
+    tagParMot: { fed: 'Fed / Taux' } },
+  { q: 'inflation zone euro CPI bourse', tag: 'Inflation' },
+  { q: '"CAC 40" OR Stoxx OR OAT OR Bund marchés', tag: 'Marchés',
+    tagParMot: { oat: 'Obligataire', bund: 'Obligataire', obligataire: 'Obligataire' } },
+  { q: 'produits structurés AMF ESMA régulation commercialisation', tag: 'Régulation' },
+  { q: 'économie mondiale croissance FMI international marchés', tag: 'International' },
 ];
+const fluxGlobaux = (max: number): Flux[] => FLUX_GLOBAUX_DEFS.map(({ q, tag, tagParMot }) =>
+  ({ ...fluxGoogleNews(q, '7d', 'globale', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max }), tagParMot }));
 
 // Flux par sous-jacent — requêtes orientées bourse et résultats
-export const FLUX_PRODUITS: { query: string; tag: string }[] = [
-  { query: 'BNP Paribas cours bourse résultats analyste',          tag: 'BNP Paribas'  },
-  { query: 'Stellantis cours bourse résultats objectif',           tag: 'Stellantis'   },
-  { query: 'Capgemini cours bourse résultats analyste',            tag: 'Capgemini'    },
-  { query: 'Rheinmetall cours bourse résultats défense',           tag: 'Rheinmetall'  },
-  { query: 'CAC 40 analyse technique niveaux résistance support',  tag: 'CAC 40'       },
-  { query: 'secteur bancaire européen Stoxx Banks résultats taux', tag: 'ES Banks'     },
+const FLUX_PRODUITS_DEFS: { q: string; tag: string; tagParMot?: Record<string, string> }[] = [
+  { q: '"BNP Paribas" OR Stellantis OR Capgemini OR Rheinmetall bourse', tag: 'Sous-jacents',
+    tagParMot: { 'bnp paribas': 'BNP Paribas', stellantis: 'Stellantis',
+                 capgemini: 'Capgemini', rheinmetall: 'Rheinmetall' } },
+  { q: '"CAC 40" OR "Stoxx Banks" analyse', tag: 'CAC 40',
+    tagParMot: { 'stoxx banks': 'ES Banks', 'secteur bancaire': 'ES Banks' } },
 ];
+const fluxProduits = (max: number): Flux[] => FLUX_PRODUITS_DEFS.map(({ q, tag, tagParMot }) =>
+  ({ ...fluxGoogleNews(q, '7d', 'produits', MOTS_IMPACT, SOURCES_AUTORISEES, { tag, max }), tagParMot }));
 
 // Canal eco : mots macro (le micro-titre — résultats, dividende, objectif d'analyste — n'est
 // plus retenu seul, D23) et grandes capitalisations (retenues même sur du micro, ex. résultats
@@ -202,11 +206,18 @@ function sansSuffixeSource(titre: string): string {
   return i === -1 ? titre : titre.slice(0, i);
 }
 
-const FLUX_ECO_1H = ['bourse', 'marchés financiers', 'CAC 40', 'banque centrale'];
-const FLUX_ECO_1D = ['BCE taux', 'Fed taux', 'inflation zone euro'];
+// Fusion OR (D27) ; les tags par item restent ceux que le front mappe déjà en thèmes.
+const FLUX_ECO_GOOGLE: { q: string; when: string; tag: string; tagParMot?: Record<string, string> }[] = [
+  { q: 'bourse OR "marchés financiers"', when: '1h', tag: 'bourse',
+    tagParMot: { 'marchés financiers': 'marchés financiers' } },
+  { q: '"CAC 40" OR "banque centrale"', when: '1h', tag: 'CAC 40',
+    tagParMot: { 'banque centrale': 'banque centrale' } },
+  { q: 'BCE OR Fed OR inflation', when: '1d', tag: 'BCE taux',
+    tagParMot: { bce: 'BCE taux', fed: 'Fed taux', inflation: 'inflation zone euro' } },
+];
 const FLUX_ECO: Flux[] = [
-  ...FLUX_ECO_1H.map(q => fluxGoogleNews(q, '1h', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
-  ...FLUX_ECO_1D.map(q => fluxGoogleNews(q, '1d', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
+  ...FLUX_ECO_GOOGLE.map(({ q, when, tag, tagParMot }) =>
+    ({ ...fluxGoogleNews(q, when, 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { tag, capsRegex: GRANDES_CAPS_RE }), tagParMot })),
   { url: 'https://www.abcbourse.com/rss/displaynewsrss', tag: 'ABC Bourse', categorie: 'eco',
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
     corrigerDate: corrigerDateAbcBourse, max: 10, capsRegex: GRANDES_CAPS_RE },
@@ -226,10 +237,9 @@ const FLUX_FISCAL_GROUPES = [
   { q: '"assurance vie" OR "IFI" OR "plus-value immobilière"',             tag: 'Assurance-vie / IFI' },
 ];
 const FLUX_FISCAL: Flux[] = [
-  ...FLUX_FISCAL_GROUPES.flatMap(({ q, tag }) => [
-    fluxGoogleNews(q, '1d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
-    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag }),
-  ]),
+  // Une seule fenêtre 7d par groupe (budget D27) : le tri par date sert la fraîcheur.
+  ...FLUX_FISCAL_GROUPES.map(({ q, tag }) =>
+    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag })),
   // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
   { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
     mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
@@ -291,12 +301,13 @@ function parseItems(xml: string, cfg: Flux): Article[] {
     // caractères) : citée en fin de titre elle n'est qu'un second rôle (« Nike recule
     // après une dégradation de JPMorgan » ne parle pas de JPMorgan), D26.
     const mCaps = capsRegex ? capsRegex.exec(sansSuffixeSource(tLow)) : null;
-    const motMatche = mots.find(w => tLow.includes(w));
-    const impactant = motMatche != null || (mCaps != null && mCaps.index < 40);
+    const impactant = mots.some(w => tLow.includes(w)) || (mCaps != null && mCaps.index < 40);
     const autorisee = dispenseSource || sourceAutorisee(source, sources);
     if (titre && lien && date && impactant && autorisee) {
-      // Flux fusionnés par OR (uc) : le label de carte est le fonds réellement matché.
-      const tagItem = (tagParMot && motMatche && tagParMot[motMatche]) || tag;
+      // Flux fusionnés par OR : le label de carte est raffiné par le premier mot de
+      // tagParMot présent dans le titre (uc : le fonds matché ; globaux : le sous-thème).
+      const cle = tagParMot && Object.keys(tagParMot).find(w => tLow.includes(w));
+      const tagItem = (cle && tagParMot[cle]) || tag;
       items.push({ titre, source, date, lien, tag: tagItem, categorie, sentiment: analyserSentiment(titre) });
       if (items.length >= max) break;
     }
@@ -348,16 +359,13 @@ function dedupTrie(items: Article[]): Article[] {
 }
 
 export async function recupererNewsGlobales(maxParFlux = 4): Promise<Article[]> {
-  const flux: Flux[] = FLUX_GLOBAUX.map(f => ({ url: f.url, tag: f.tag, categorie: 'globale', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: maxParFlux }));
+  const flux = fluxGlobaux(maxParFlux);
   const results = await Promise.allSettled(flux.map(fetchRSS));
   return results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
 }
 
 export async function recupererNewsProduits(maxParFlux = 4): Promise<Article[]> {
-  const flux: Flux[] = FLUX_PRODUITS.map(f => ({
-    url: `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`,
-    tag: f.tag, categorie: 'produits', mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: maxParFlux,
-  }));
+  const flux = fluxProduits(maxParFlux);
   const results = await Promise.allSettled(flux.map(fetchRSS));
   return results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
 }
@@ -374,11 +382,7 @@ export interface NewsParCanal {
 // l'union (priorité aux canaux spécifiques eco > fiscal > uc sur globales/produits).
 export async function recupererNews(): Promise<NewsParCanal> {
   const flux: Flux[] = [
-    ...FLUX_GLOBAUX.map(f => ({ url: f.url, tag: f.tag, categorie: 'globale' as const, mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3 })),
-    ...FLUX_PRODUITS.map(f => ({
-      url: `https://news.google.com/rss/search?q=${encodeURIComponent(f.query)}+when:7d&hl=fr&gl=FR&ceid=FR:fr`,
-      tag: f.tag, categorie: 'produits' as const, mots: MOTS_IMPACT, sources: SOURCES_AUTORISEES, max: 3,
-    })),
+    ...fluxGlobaux(3), ...fluxProduits(4),
     ...FLUX_ECO, ...FLUX_FISCAL, ...FLUX_UC,
   ];
   const resultats = await Promise.allSettled(flux.map(fetchRSS));
