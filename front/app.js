@@ -1,5 +1,5 @@
 const App = (() => {
-  let state   = { page: 'dash', familleFiltre: 'tous', detailIsin: null };
+  let state   = { page: 'dash', familleFiltre: 'tous', detailIsin: null, actuTab: 'globale' };
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
@@ -72,6 +72,7 @@ const App = (() => {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
         // Restaure la page courante au rafraîchissement (les fiches détail reviennent à la liste).
         page: state.page,
+        actuTab: state.actuTab || 'globale',
         ucCat: state.ucCat || null,
         ucSel: state.ucSel || null,
         ucTri: state.ucTri || null,
@@ -97,7 +98,7 @@ const App = (() => {
       const raw = localStorage.getItem(CACHE_KEY);
       if (raw) {
         const c = JSON.parse(raw);
-        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
+        if (c.page && estRafraichissement) state = { ...state, page: c.page, actuTab: c.actuTab || 'globale', ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
         // Le tri choisi survit au rafraîchissement, comme le filtre de catégorie (même écran,
         // même attente) — y compris à une ouverture fraîche, où il n'y a rien à « remettre à zéro ».
         if (c.ucTri && c.ucTri.cle) state = { ...state, ucTri: c.ucTri };
@@ -478,7 +479,7 @@ const App = (() => {
         el.innerHTML = renderProduits(produits, state, donnees.rappeles);
         majGouttiereUC();
         break;
-      case 'actus':    el.innerHTML = renderActus(state); chargerActus(); break;
+      case 'actus':    el.innerHTML = renderActus(state); chargerActus(); chargerActusUC(); break;
       case 'contrats':
         el.innerHTML = renderContrats(state, ucPerfsCache, ucSecteursCache, ucMetaCache, ucMetaGenere);
         if (!ucPerfsFetching && Object.keys(ucPerfsCache).length === 0) chargerPerfsUC();
@@ -605,6 +606,25 @@ const App = (() => {
   function chargerActusSousJacents() {
     return chargerNewsVers('news-sj', (news) => renderNewsSousJacents(news, donnees.produits),
       '<p class="news-empty">Actualités indisponibles (back local requis).</p>');
+  }
+
+  // Événements de vie des fonds (onglet UC) : deux fichiers statiques de même origine, régénérés
+  // chaque jour par la CI. uc-managers.json ne sert ici qu'à dater le dernier passage de la
+  // surveillance, affiché quand aucun événement n'est détecté. Un fichier absent ou illisible
+  // n'est pas une erreur à montrer : la liste est simplement vide.
+  async function chargerActusUC() {
+    if (!document.getElementById('uc-evt-section')) return;
+    const lire = async (f) => {
+      try {
+        const r = await fetch(f, { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+        return r.ok ? await r.json() : null;
+      } catch { return null; }
+    };
+    const [actu, managers] = await Promise.all([lire('./data/uc-actu.json'), lire('./data/uc-managers.json')]);
+    const el = document.getElementById('uc-evt-section');
+    if (!el) return;
+    el.innerHTML = renderUcEvenements((actu && actu.evenements) || [], managers && managers.genere);
+    el.className = '';
   }
 
   // Met à jour les cartes Actifs (Brent, Or, Bitcoin) et Actions (sous-jacents Autocall, ex.
@@ -1003,9 +1023,18 @@ const App = (() => {
       if (majUCSheet()) return;
       renderPage(true);
     },
+    // Onglets de la page Actualités (un canal serveur par onglet). Persisté comme le filtre de
+    // famille des UC : au rafraîchissement, on revient sur le domaine qu'on lisait.
+    setActuTab(tab) {
+      state = { ...state, actuTab: tab || 'globale' };
+      sauvegarderEtat();
+      renderPage(true);
+    },
+    // Sous-filtre thématique de l'onglet Économique : les puces sont sous les onglets, un retour
+    // en haut de page à chaque clic les ferait sauter hors de vue.
     setNewsTheme(theme) {
       state = { ...state, newsTheme: theme || null };
-      renderPage();
+      renderPage(true);
     },
     // Tri du tableau des fonds par clic sur un en-tête de colonne. Re-cliquer la colonne active
     // inverse le sens. Les colonnes de texte partent en A→Z, les colonnes chiffrées en

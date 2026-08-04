@@ -456,6 +456,39 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .news-loading { padding: 18px 0; }
 .news-spinner { font-size: 12.5px; color: #9a8f7a; }
 .news-empty { font-size: 12.5px; color: #9a8f7a; margin: 0; }
+/* Seconde ligne d'un état vide (ex. date du dernier contrôle des fonds) : plus discrète encore. */
+.news-empty + .news-empty { margin-top: 5px; color: #b5ab95; }
+
+/* Onglets de domaine (Globale · Économique · Fiscale · UC) — sélecteur segmenté, même dessin que
+   les filtres de famille des UC en bureau : socle blanc à filet fin, segment actif en marine
+   plein. Segments à parts égales : au téléphone, quatre libellés dont « Économique » ne tiennent
+   pas en pastilles isolées sans passer à la ligne. Les règles portent sur `.actu-tabs .uc-chip`
+   pour l'emporter sur .uc-chip aux deux tailles d'écran sans dépendre de l'ordre du fichier. */
+.actu-tabs {
+  display: flex; flex-wrap: nowrap; gap: 2px; padding: 3px; margin-bottom: 16px; max-width: 520px;
+  background: #fff; border: 1px solid #e9e3d5; border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(22,48,79,.045);
+}
+.actu-tabs .uc-chip {
+  flex: 1; min-width: 0; height: auto; padding: 7px 4px; border: none; border-radius: 7px;
+  background: transparent; color: #6b6e73; font-size: 12.5px; font-family: inherit;
+  transition: background .14s, color .14s;
+}
+.actu-tabs .uc-chip:hover { background: #f7f4ec; color: #16304f; }
+.actu-tabs .uc-chip.active { background: #16304f; color: #fff; box-shadow: 0 1px 2px rgba(22,48,79,.22); }
+
+/* Sous-filtres thématiques de l'onglet Économique : rangée de pastilles sous les onglets (mêmes
+   pastilles que les filtres UC en mobile) — la colonne latérale de bureau n'existe pas au
+   téléphone, où la page se lit d'abord. */
+.news-filtres-ligne { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.news-filtres-ligne .news-filtre {
+  display: inline-flex; align-items: center; height: 26px; padding: 0 11px; margin: 0;
+  border: 1.5px solid #ece7dc; border-radius: 13px; background: #fff;
+  font-size: 12px; font-weight: 600; color: #6b6e73; white-space: nowrap; cursor: pointer;
+  transition: border-color .15s, background .15s, color .15s;
+}
+.news-filtres-ligne .news-filtre:hover { border-color: #c9a96a; background: #fff; color: #16304f; }
+.news-filtres-ligne .news-filtre.active { border-color: #16304f; background: #16304f; color: #fff; }
 
 /* Sections (« À la une » curée, puis « Fil en direct » RSS) */
 .news-group { margin-bottom: 24px; }

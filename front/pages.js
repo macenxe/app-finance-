@@ -641,15 +641,39 @@ const NEWS_CAT_DEFAUT = '#7a6840';
 
 // Mappe un tag de flux RSS (renvoyé par le back/Worker) vers une catégorie connue,
 // pour partager la palette avec la veille curée.
+// Depuis les 4 canaux serveur, ce mapping ne sert plus qu'aux sous-thèmes de l'onglet Économique
+// (le canal d'un item vient de son champ `categorie`) et à la couleur de sa carte. Un tag absent
+// d'ici n'a pas de thème : l'item reste visible en « Tous » mais sous aucune puce thématique —
+// c'est le cas voulu des flux généralistes (BFM Économie), dont le titre seul ne dit pas le thème.
 const RSS_TAG_CAT = {
   'BCE / Taux':'TAUX', 'Fed / Taux':'TAUX', 'Obligataire':'TAUX', 'Inflation':'INFLATION',
   'Marchés':'MARCHÉS', 'CAC 40':'MARCHÉS', 'Régulation':'RÉGULATION', 'International':'INTERNATIONAL',
   'BNP Paribas':'MARCHÉS', 'Stellantis':'MARCHÉS', 'Capgemini':'MARCHÉS',
   'Rheinmetall':'MARCHÉS', 'ES Banks':'MARCHÉS',
+  // Tags du canal éco (requêtes Google News et flux de place, cf. FLUX_ECO côté Worker).
+  'bourse':'MARCHÉS', 'marchés financiers':'MARCHÉS', 'ABC Bourse':'MARCHÉS',
+  'banque centrale':'TAUX', 'BCE taux':'TAUX', 'Fed taux':'TAUX', 'BCE presse':'TAUX',
+  'inflation zone euro':'INFLATION',
 };
+
+// Couleur d'avatar des canaux sans thème (fiscal, UC, éco généraliste) : un canal = une teinte.
+const NEWS_CANAL_COULEUR = { fiscal: '#3f6cc4', uc: '#4d7a4f', eco: '#7a6840' };
 
 function newsCatColor(cat) {
   return NEWS_CATS[String(cat || '').toUpperCase()] || NEWS_CAT_DEFAUT;
+}
+
+// Couleur d'un item du fil : son thème s'il en a un, sinon la teinte de son canal serveur.
+function newsItemColor(a) {
+  const theme = RSS_TAG_CAT[a.tag];
+  return theme ? newsCatColor(theme) : (NEWS_CANAL_COULEUR[a.categorie] || newsCatColor('MARCHÉS'));
+}
+
+// Les tags des nouveaux canaux sont des requêtes (« loi de finances 2027 », « "changement de
+// gérant" fonds ») : on retire les guillemets de recherche et on capitalise pour en faire un libellé.
+function newsLabel(tag) {
+  const t = String(tag || '').replace(/"/g, '').trim();
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : 'Marchés';
 }
 
 // Parse une date FR ("11 juin 2026", "1er juillet 2026") → timestamp, pour le tri. 0 si illisible.
@@ -717,11 +741,78 @@ function renderCuratedNews() {
 let NEWS_THEME_COURANT = null;
 const NEWS_THEMES = ['TAUX', 'INFLATION', 'MARCHÉS', 'INTERNATIONAL', 'RÉGULATION'];
 
+// Un onglet = un canal du serveur, sauf « Globale » qui fusionne les cinq tableaux.
+// Même raison que NEWS_THEME_COURANT pour la mémorisation au niveau du module.
+const ACTU_TABS = [
+  { cle: 'globale', label: 'Globale' },
+  { cle: 'eco',     label: 'Économique' },
+  { cle: 'fiscal',  label: 'Fiscale' },
+  { cle: 'uc',      label: 'UC' },
+];
+let ACTU_TAB_COURANT = 'globale';
+// Clé du tableau renvoyé par le serveur → valeur du champ `categorie` de ses items. Le repli sur
+// la clé couvre un cache localStorage d'avant les canaux, où les items n'ont pas de `categorie`.
+const NEWS_CANAUX = [['globales', 'globale'], ['produits', 'produits'], ['eco', 'eco'], ['fiscal', 'fiscal'], ['uc', 'uc']];
+const NEWS_VIDE = {
+  globale: 'Aucune actualité disponible.',
+  eco:     'Aucune actualité économique récente.',
+  fiscal:  'Aucune actualité fiscale récente.',
+  uc:      'Aucun article récent sur vos sociétés de gestion.',
+};
+
+function newsTs(d) { const t = d ? new Date(d).getTime() : 0; return isNaN(t) ? 0 : t; }
+function newsDateCourte(d) {
+  const t = d ? new Date(d) : null;
+  return (t && !isNaN(t.getTime())) ? t.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' }) : '';
+}
+
 function renderActus(state) {
-  NEWS_THEME_COURANT = (state && state.newsTheme) || null;
-  const actif = NEWS_THEME_COURANT;
-  const bouton = (val, label) => `
-        <div class="news-filtre${(actif === val || (!actif && !val)) ? ' active' : ''}" onclick="App.setNewsTheme(${val ? `'${val}'` : 'null'})">${escHtml(label)}</div>`;
+  const tab = ACTU_TABS.some(t => t.cle === (state && state.actuTab)) ? state.actuTab : 'globale';
+  ACTU_TAB_COURANT = tab;
+  // Le thème ne sous-filtre que l'onglet Économique : ailleurs le fil du canal reste entier.
+  NEWS_THEME_COURANT = (tab === 'eco' && state && state.newsTheme) || null;
+  const onglets = `
+      <div class="actu-tabs" role="group" aria-label="Domaine d'actualité">
+        ${ACTU_TABS.map(t => `<button class="uc-chip${t.cle === tab ? ' active' : ''}" onclick="App.setActuTab('${t.cle}')" aria-pressed="${t.cle === tab}">${escHtml(t.label)}</button>`).join('')}
+      </div>`;
+  // Puces thématiques : rendues seulement quand state.actuTab vaut 'eco' (sous-filtres du canal
+  // économique), en rangée — la colonne latérale de bureau n'existe pas au téléphone.
+  const sousThemes = tab !== 'eco' ? '' : `
+      <div class="news-filtres-ligne">
+        ${[[null, 'Tous'], ...NEWS_THEMES.map(t => [t, t.charAt(0) + t.slice(1).toLowerCase()])].map(([val, label]) => `
+        <div class="news-filtre${NEWS_THEME_COURANT === val ? ' active' : ''}" onclick="App.setNewsTheme(${val ? `'${val}'` : 'null'})">${escHtml(label)}</div>`).join('')}
+      </div>`;
+  const fil = (titre) => `
+        <div class="news-group">
+          <div class="news-group-title">${escHtml(titre)}</div>
+          <div id="news-section" class="news-loading">
+            <div class="news-spinner">Chargement des actualités…</div>
+          </div>
+        </div>`;
+  // Onglet Globale : agenda macro + veille curée + fil fusionné, en deux colonnes en bureau.
+  // Les autres onglets tiennent en une colonne (fil seul, éventuellement précédé de ses filtres).
+  const corps = tab === 'globale' ? `
+     <div class="news-split">
+      <div class="news-col-fil">
+        <!-- Agenda macro (mobile) : en bureau il est monté dans la colonne de droite —
+             il ne vit plus sur le tableau de bord dans aucune des deux tailles. -->
+        ${renderEvenementsMacro(5, 'mobile-seul')}
+        ${renderCuratedNews()}
+        ${fil('Fil en direct')}
+      </div>
+      <div class="news-col-filtres bureau-seul">
+        <!-- Agenda macro en bureau : la colonne est étroite, .events-grid y est déjà en une
+             seule colonne (même contexte que l'ancienne colonne latérale du tableau de bord).
+             Pas de classe .bureau-seul ici, le conteneur la porte déjà. -->
+        ${renderEvenementsMacro(5)}
+      </div>
+     </div>`
+    : tab === 'uc' ? `
+     ${renderUcEvenementsBloc()}
+     ${fil('La presse des sociétés de gestion')}`
+    : `
+     ${sousThemes}
+     ${fil(tab === 'eco' ? 'Fil économique' : 'Fil fiscal')}`;
   return `
   <div>
     <header class="page-header">
@@ -731,68 +822,75 @@ function renderActus(state) {
       </div>
     </header>
     <div class="page-body">
-     <div class="news-split">
-      <div class="news-col-fil">
-        <!-- Agenda macro (mobile) : en bureau il est monté dans la colonne de droite, sous les
-             filtres — il ne vit plus sur le tableau de bord dans aucune des deux tailles. -->
-        ${renderEvenementsMacro(5, 'mobile-seul')}
-        ${renderCuratedNews()}
-        <div class="news-group">
-          <div class="news-group-title">Fil en direct</div>
-          <div id="news-section" class="news-loading">
-            <div class="news-spinner">Chargement des actualités…</div>
-          </div>
-        </div>
-      </div>
-      <div class="news-col-filtres bureau-seul">
-        <div class="card p-18 mb-24">
-          <div class="card-title mb-12">Filtrer par thème</div>
-          ${bouton(null, 'Tous')}
-          ${NEWS_THEMES.map(t => bouton(t, t.charAt(0) + t.slice(1).toLowerCase())).join('')}
-        </div>
-        <!-- Agenda macro en bureau : la colonne est étroite, .events-grid y est déjà en une
-             seule colonne (même contexte que l'ancienne colonne latérale du tableau de bord).
-             Pas de classe .bureau-seul ici, le conteneur la porte déjà. -->
-        ${renderEvenementsMacro(5)}
-      </div>
-     </div>
+      ${onglets}
+      ${corps}
     </div>
   </div>`;
 }
 
-// Rendu du fil RSS live (injecté dans #news-section par chargerActus).
+// Rendu du fil RSS live (injecté dans #news-section par chargerActus). L'onglet courant choisit
+// le canal ; « Globale » fusionne les cinq tableaux et les retrie par date décroissante.
 function renderNewsSection(news) {
-  const fmtDate = (rssDate) => {
-    if (!rssDate) return '';
-    try {
-      return new Date(rssDate).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
-    } catch { return ''; }
-  };
-
-  let tous = [...(news.globales || []), ...(news.produits || [])]
-    .sort((a, b) => {
-      const da = a.date ? new Date(a.date).getTime() : 0;
-      const db = b.date ? new Date(b.date).getTime() : 0;
-      return db - da;
-    });
-
-  if (NEWS_THEME_COURANT) tous = tous.filter(a => (RSS_TAG_CAT[a.tag] || 'MARCHÉS') === NEWS_THEME_COURANT);
-
-  if (!tous.length) {
-    return NEWS_THEME_COURANT
-      ? '<p class="news-empty">Aucune actualité sur ce thème.</p>'
-      : '<p class="news-empty">Aucune actualité disponible.</p>';
+  const tous = NEWS_CANAUX.flatMap(([cle, cat]) =>
+    ((news && news[cle]) || []).map(a => ({ ...a, categorie: a.categorie || cat })));
+  const tab = ACTU_TAB_COURANT;
+  let items = tab === 'globale' ? tous : tous.filter(a => a.categorie === tab);
+  items = items.slice().sort((a, b) => newsTs(b.date) - newsTs(a.date));
+  if (NEWS_THEME_COURANT) items = items.filter(a => RSS_TAG_CAT[a.tag] === NEWS_THEME_COURANT);
+  if (!items.length) {
+    const msg = NEWS_THEME_COURANT ? 'Aucune actualité sur ce thème.' : (NEWS_VIDE[tab] || NEWS_VIDE.globale);
+    return `<p class="news-empty">${msg}</p>`;
   }
+  const cards = items.map(a => newsCardHtml({
+    label: newsLabel(a.tag),
+    color: newsItemColor(a),
+    titre: a.titre,
+    date: newsDateCourte(a.date),
+    meta: a.source,
+    lien: a.lien,
+  })).join('');
+  return `<div class="news-cards">${cards}</div>`;
+}
 
-  const cards = tous.map(a => {
-    const cat = RSS_TAG_CAT[a.tag] || 'MARCHÉS';
+// ── Onglet UC : événements de vie des fonds ──
+// Alimentés par front/data/uc-actu.json (régénéré chaque jour par la CI), chargés après le rendu
+// de la page par chargerActusUC (app.js), comme le fil RSS.
+const UC_EVT_TYPES = {
+  gerant:    { label: 'Gérant',    color: '#16304f' },
+  frais:     { label: 'Frais',     color: '#b0862f' },
+  note:      { label: 'Note',      color: '#4d7a4f' },
+  risque:    { label: 'Risque',    color: '#a15a3a' },
+  societe:   { label: 'Société',   color: '#3f6cc4' },
+  structure: { label: 'Structure', color: '#7a6840' },
+};
+
+function renderUcEvenementsBloc() {
+  return `
+        <div class="news-group">
+          <div class="news-group-title">Vie de vos fonds</div>
+          <div id="uc-evt-section" class="news-loading">
+            <div class="news-spinner">Chargement des événements…</div>
+          </div>
+        </div>`;
+}
+
+// evenements : [{ date, isin, fonds, type, titre, detail }] ; genere : date du dernier passage
+// de la surveillance (uc-managers.json), affichée à vide pour dire que le silence est un constat.
+function renderUcEvenements(evenements, genere) {
+  const liste = (evenements || []).slice().sort((a, b) => newsTs(b.date) - newsTs(a.date));
+  if (!liste.length) {
+    const n = (typeof UC_CATALOGUE !== 'undefined' && UC_CATALOGUE.length) || 13;
+    const passage = newsDateCourte(genere);
+    return `<p class="news-empty">Aucun événement détecté sur vos ${n} fonds — surveillance quotidienne active</p>`
+      + (passage ? `<p class="news-empty">Dernier contrôle le ${escHtml(passage)}</p>` : '');
+  }
+  const cards = liste.map(e => {
+    const t = UC_EVT_TYPES[e.type] || { label: 'Fonds', color: NEWS_CAT_DEFAUT };
+    const fonds = e.fonds || (typeof UC_CATALOGUE !== 'undefined'
+      ? (UC_CATALOGUE.find(u => u.isin === e.isin) || {}).nom : '') || e.isin || '';
     return newsCardHtml({
-      label: a.tag || cat,
-      color: newsCatColor(cat),
-      titre: a.titre,
-      date: fmtDate(a.date),
-      meta: a.source,
-      lien: a.lien,
+      label: t.label, color: t.color, titre: e.titre,
+      resume: e.detail, date: newsDateCourte(e.date), meta: fonds,
     });
   }).join('');
   return `<div class="news-cards">${cards}</div>`;
