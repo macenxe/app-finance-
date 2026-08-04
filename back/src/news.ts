@@ -2,12 +2,13 @@
 // worker/src/index.js (section actus) : sans les caches Cloudflare (cf: cacheTtl), le reste
 // de la logique — canaux, filtres, tri, déduplication — est identique.
 //
-// Canal eco    : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
-//                directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche) ;
-//                filtre « macro (MOTS_ECO_MACRO) OU grande capitalisation (GRANDES_CAPS) ».
-// Canal fiscal : Google News when:1d + when:7d (requêtes patrimoniales) + flux Sénat (Atom).
-// Canal uc     : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
-//                eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
+// Canal eco : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
+//             directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche) ;
+//             filtre « macro (MOTS_ECO_MACRO) OU grande capitalisation (GRANDES_CAPS) ».
+// Canal uc  : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
+//             eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
+// Canal fiscal : retiré (D31 — plus d'intérêt utilisateur) ; la clé reste dans NewsParCanal,
+// posée à [] fixe, pour la rétrocompatibilité des fronts en cache (D32).
 
 export interface Article {
   titre: string;
@@ -28,11 +29,6 @@ const SOURCES_AUTORISEES = [
   // Flux directs du canal eco : ce SONT les sources (dispensées de liste blanche au parsing,
   // cf. dispenseSource plus bas), listées ici pour rester cohérent si Google News les cite.
   'abc bourse', 'bfm économie', 'bce',
-];
-// Canal fiscal : liste blanche élargie à la presse patrimoniale.
-const SOURCES_AUTORISEES_FISCAL = [
-  ...SOURCES_AUTORISEES,
-  'gestion de fortune', 'profession cgp', 'mieux vivre', 'notaires',
 ];
 
 function sourceAutorisee(source: string, liste: string[]): boolean {
@@ -55,14 +51,6 @@ const MOTS_IMPACT = [
   'produit structuré','produits structurés','structuré','structurés','autocall','commercialisation',
   // International / macro mondiale
   'fmi','ocde','mondiale','mondial','international','émergents','chine','états-unis','géopolitique',
-];
-
-// Canal fiscal : mots signalant un sujet patrimonial/fiscal réel.
-const MOTS_FISCAL = [
-  'impôt', 'fiscalité', 'fiscal', 'succession', 'donation', 'ifi', 'pfu',
-  'flat tax', 'assurance-vie', 'assurance vie', 'plus-value', 'abattement',
-  'barème', 'niche fiscale', 'lmnp', 'per', 'droits de mutation',
-  'loi de finances', 'bofip', 'redressement',
 ];
 
 // Sentiment positif
@@ -108,7 +96,6 @@ interface Flux {
   dispenseSource?: boolean;
   sourceDefaut?: string;
   corrigerDate?: (d: string) => string;
-  format?: 'rss' | 'atom';
   max?: number;
   capsRegex?: RegExp | null;
   tagParMot?: Record<string, string>;
@@ -227,25 +214,6 @@ const FLUX_ECO: Flux[] = [
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
-// Budget sous-requêtes (D27) : la prod Workers plafonne à 50 subrequests par invocation
-// (fetchs + opérations Cache API), limite que wrangler dev ne simule PAS. Les requêtes
-// Google News sont donc fusionnées par OR ; toute nouvelle source rejoint un OR existant
-// plutôt que d'ouvrir un flux séparé. Le miroir Node n'a pas cette limite mais reste aligné.
-const FLUX_FISCAL_GROUPES = [
-  { q: '"loi de finances" OR "fiscalité patrimoniale" OR "niche fiscale"', tag: 'Fiscalité patrimoniale' },
-  { q: '"droits de succession" OR "donation" OR "droits de mutation"',     tag: 'Succession / donation' },
-  { q: '"assurance vie" OR "IFI" OR "plus-value immobilière"',             tag: 'Assurance-vie / IFI' },
-];
-const FLUX_FISCAL: Flux[] = [
-  // Une seule fenêtre 7d par groupe (budget D27) : le tri par date sert la fraîcheur.
-  ...FLUX_FISCAL_GROUPES.map(({ q, tag }) =>
-    fluxGoogleNews(q, '7d', 'fiscal', MOTS_FISCAL, SOURCES_AUTORISEES_FISCAL, { tag })),
-  // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
-  { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
-    mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
-    format: 'atom', max: 10 },
-];
-
 // Les 13 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
 // pas des sociétés de gestion qui les gèrent (les requêtes par société ramenaient des profils
 // de personnes et du hors-sujet, D23/D24).
@@ -315,30 +283,6 @@ function parseItems(xml: string, cfg: Flux): Article[] {
   return items;
 }
 
-// Sénat (therss17.xml) : Atom 0.3, balises <entry>/<title>/<link href>/<modified> — le parseur
-// <item> ci-dessus ne les lit pas, d'où ce parseur dédié.
-function parseItemsAtom(xml: string, cfg: Flux): Article[] {
-  const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '', max = 6 } = cfg;
-  const items: Article[] = [];
-  const entryRe = /<entry>([\s\S]*?)<\/entry>/g;
-  let m: RegExpExecArray | null;
-  while ((m = entryRe.exec(xml)) !== null) {
-    const bloc = m[1];
-    const titre  = decoderEntites((/<title[^>]*>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '');
-    const lien   = decoderEntites((/<link[^>]*href="([^"]*)"/.exec(bloc))?.[1]?.trim() ?? '');
-    const date   = (/<modified>(.*?)<\/modified>/.exec(bloc))?.[1]?.trim() ?? '';
-    const source = sourceDefaut;
-    const tLow   = titre.toLowerCase();
-    const impactant = mots.some(w => tLow.includes(w));
-    const autorisee = dispenseSource || sourceAutorisee(source, sources);
-    if (titre && lien && date && impactant && autorisee) {
-      items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
-      if (items.length >= max) break;
-    }
-  }
-  return items;
-}
-
 async function fetchRSS(flux: Flux): Promise<Article[]> {
   try {
     const resp = await fetch(flux.url, {
@@ -347,7 +291,7 @@ async function fetchRSS(flux: Flux): Promise<Article[]> {
     });
     if (!resp.ok) return [];
     const xml = await resp.text();
-    return flux.format === 'atom' ? parseItemsAtom(xml, flux) : parseItems(xml, flux);
+    return parseItems(xml, flux);
   } catch { return []; }
 }
 
@@ -378,12 +322,13 @@ export interface NewsParCanal {
   uc: Article[];
 }
 
-// Agrège les 5 canaux : tri par date décroissante, plafond par canal, déduplication sur
-// l'union (priorité aux canaux spécifiques eco > fiscal > uc sur globales/produits).
+// Agrège les canaux : tri par date décroissante, plafond par canal, déduplication sur
+// l'union (priorité aux canaux spécifiques eco > uc sur globales/produits). Fiscal retiré
+// (D31) : posé à [] fixe, la clé reste pour la rétrocompatibilité (D32).
 export async function recupererNews(): Promise<NewsParCanal> {
   const flux: Flux[] = [
     ...fluxGlobaux(3), ...fluxProduits(4),
-    ...FLUX_ECO, ...FLUX_FISCAL, ...FLUX_UC,
+    ...FLUX_ECO, ...FLUX_UC,
   ];
   const resultats = await Promise.allSettled(flux.map(fetchRSS));
   const brut = resultats.flatMap(r => r.status === 'fulfilled' ? r.value : []);
@@ -397,10 +342,9 @@ export async function recupererNews(): Promise<NewsParCanal> {
     return gardes;
   };
   const eco = retenir(parCanal.eco, 30);
-  const fiscal = retenir(parCanal.fiscal, 20);
   const uc = retenir(parCanal.uc, 15);
   const globales = retenir(parCanal.globale);
   const produits = retenir(parCanal.produits);
 
-  return { globales, produits, eco, fiscal, uc };
+  return { globales, produits, eco, fiscal: [], uc };
 }

@@ -1,5 +1,5 @@
 const App = (() => {
-  let state   = { page: 'dash', familleFiltre: 'tous', detailIsin: null, actuTab: 'globale' };
+  let state   = { page: 'dash', familleFiltre: 'tous', detailIsin: null };
   let donnees = { source: 'statique', indices: INDICES_MARCHE, produits: enrichirProduits(PRODUITS), taux: TAUX };
   let ucPerfsCache = {};
   let ucPerfsFetching = false;
@@ -72,7 +72,6 @@ const App = (() => {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
         // Restaure la page courante au rafraîchissement (les fiches détail reviennent à la liste).
         page: state.page,
-        actuTab: state.actuTab || 'globale',
         ucCat: state.ucCat || null,
         ucSel: state.ucSel || null,
         ucTri: state.ucTri || null,
@@ -98,7 +97,7 @@ const App = (() => {
       const raw = localStorage.getItem(CACHE_KEY);
       if (raw) {
         const c = JSON.parse(raw);
-        if (c.page && estRafraichissement) state = { ...state, page: c.page, actuTab: c.actuTab || 'globale', ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
+        if (c.page && estRafraichissement) state = { ...state, page: c.page, ucCat: c.ucCat || null, ucSel: c.ucSel || null, feOuvert: !!c.feOuvert };
         // Le tri choisi survit au rafraîchissement, comme le filtre de catégorie (même écran,
         // même attente) — y compris à une ouverture fraîche, où il n'y a rien à « remettre à zéro ».
         if (c.ucTri && c.ucTri.cle) state = { ...state, ucTri: c.ucTri };
@@ -576,13 +575,14 @@ const App = (() => {
   // même séquence (cache d'abord pour un affichage immédiat, puis réseau en arrière-plan) —
   // d'où ce chargeur générique paramétré par la cible et sa fonction de rendu.
   const NEWS_CACHE_KEY = 'news_cache_v1';
-  async function chargerNewsVers(idCible, rendre, messageErreur) {
+  async function chargerNewsVers(idCible, rendre, messageErreur, apresPose) {
     // La cible est relue à chaque étape : l'utilisateur peut avoir changé de page entre-temps.
     const poser = (html) => {
       const el = document.getElementById(idCible);
       if (!el) return;
       el.innerHTML = html;
       el.className = '';
+      if (apresPose) apresPose();
     };
     if (!document.getElementById(idCible)) return;
     try {
@@ -598,9 +598,21 @@ const App = (() => {
     }
   }
 
+  // Épinglage UC (page Actualités, cf. renderNewsEpingle) : fusion des articles du canal uc
+  // (cache ci-dessus) et des événements de vie des fonds (ci-dessous), rendue dès que l'une des
+  // deux sources est connue — avec la dernière valeur connue de l'autre.
+  let ucEvenementsCache = [];
+  function majEpingle() {
+    const el = document.getElementById('news-epingle');
+    if (!el) return;
+    let news = null;
+    try { const c = localStorage.getItem(NEWS_CACHE_KEY); if (c) news = JSON.parse(c); } catch {}
+    el.innerHTML = renderNewsEpingle(news, ucEvenementsCache);
+  }
+
   function chargerActus() {
     return chargerNewsVers('news-section', renderNewsSection,
-      '<p class="news-empty">Actualités indisponibles (back local requis).</p>');
+      '<p class="news-empty">Actualités indisponibles (back local requis).</p>', majEpingle);
   }
 
   function chargerActusSousJacents() {
@@ -608,23 +620,17 @@ const App = (() => {
       '<p class="news-empty">Actualités indisponibles (back local requis).</p>');
   }
 
-  // Événements de vie des fonds (onglet UC) : deux fichiers statiques de même origine, régénérés
-  // chaque jour par la CI. uc-managers.json ne sert ici qu'à dater le dernier passage de la
-  // surveillance, affiché quand aucun événement n'est détecté. Un fichier absent ou illisible
-  // n'est pas une erreur à montrer : la liste est simplement vide.
+  // Événements de vie des fonds, épinglés en tête de la page Actualités (avec les articles du
+  // canal uc) tant qu'ils ont moins de sept jours — cf. renderNewsEpingle (pages.js). Fichier
+  // statique régénéré chaque jour par la CI ; absent ou illisible n'est pas une erreur, la
+  // liste est simplement vide.
   async function chargerActusUC() {
-    if (!document.getElementById('uc-evt-section')) return;
-    const lire = async (f) => {
-      try {
-        const r = await fetch(f, { cache: 'no-store', signal: AbortSignal.timeout(8000) });
-        return r.ok ? await r.json() : null;
-      } catch { return null; }
-    };
-    const [actu, managers] = await Promise.all([lire('./data/uc-actu.json'), lire('./data/uc-managers.json')]);
-    const el = document.getElementById('uc-evt-section');
-    if (!el) return;
-    el.innerHTML = renderUcEvenements((actu && actu.evenements) || [], managers && managers.genere);
-    el.className = '';
+    try {
+      const r = await fetch('./data/uc-actu.json', { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      const actu = r.ok ? await r.json() : null;
+      ucEvenementsCache = (actu && actu.evenements) || [];
+    } catch { ucEvenementsCache = []; }
+    majEpingle();
   }
 
   // Met à jour les cartes Actifs (Brent, Or, Bitcoin) et Actions (sous-jacents Autocall, ex.
@@ -1023,15 +1029,8 @@ const App = (() => {
       if (majUCSheet()) return;
       renderPage(true);
     },
-    // Onglets de la page Actualités (un canal serveur par onglet). Persisté comme le filtre de
-    // famille des UC : au rafraîchissement, on revient sur le domaine qu'on lisait.
-    setActuTab(tab) {
-      state = { ...state, actuTab: tab || 'globale' };
-      sauvegarderEtat();
-      renderPage(true);
-    },
-    // Sous-filtre thématique de l'onglet Économique : les puces sont sous les onglets, un retour
-    // en haut de page à chaque clic les ferait sauter hors de vue.
+    // Sous-filtre thématique de la page Actualités : un retour en haut de page à chaque clic
+    // ferait sauter les puces hors de vue.
     setNewsTheme(theme) {
       state = { ...state, newsTheme: theme || null };
       renderPage(true);

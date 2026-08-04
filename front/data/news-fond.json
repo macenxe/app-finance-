@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-04T20:11:03.210Z",
+ "genere": "2026-08-04T20:32:24.217Z",
  "globales": [
+  {
+   "titre": "Le CAC 40 et le DAX battent de nouveaux records - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 04 Aug 2026 10:13:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUXY5cEpId3JNZk5VSnh3LU5HRWY3SmlfX2VrdDhlZUlBNUpUdVk5Y2x3Q2JYUWdfb2x5SG1idlZkNmhSQWlkckRtUFViQXhQNWZWeVhBaDlVWk13MGhZaXV6Y3NQWEM4MHBPUzVxeDJaY0JBa1RON2tBU2ZVZmZib0Vmd3VYaWlvRUFpYXVZZXgyMElmVWV5dzVkSy1iNE85STRsS3ppN0NpQnM3cElpa2NxcDBoYlZwQ0RMa3Z6Z0dXM0gxcUdZcdIByAFBVV95cUxOUXY5cEpId3JNZk5VSnh3LU5HRWY3SmlfX2VrdDhlZUlBNUpUdVk5Y2x3Q2JYUWdfb2x5SG1idlZkNmhSQWlkckRtUFViQXhQNWZWeVhBaDlVWk13MGhZaXV6Y3NQWEM4MHBPUzVxeDJaY0JBa1RON2tBU2ZVZmZib0Vmd3VYaWlvRUFpYXVZZXgyMElmVWV5dzVkSy1iNE85STRsS3ppN0NpQnM3cElpa2NxcDBoYlZwQ0RMa3Z6Z0dXM0gxcUdZcQ?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
   {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.33% - BFM Bourse",
    "source": "BFM Bourse",
@@ -9,15 +18,6 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Nouveau sommet historique en séance pour le CAC 40 - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 15:56:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOaS1FNjB6U2ZhM0xoaFhpSkRQY3JHM2ZYbzBhOG5PR084MkN6eVh4cjFTUWRHV29Xbms5WE9udld4Tk5BRTBYNnpsakVnMjNBWFRnU2V1ZnMtZUlmcXN2Rk1TWVU1dHlTd1k4YnZjM1V0N29feGRoUTNIU3RWcTI4U0ZRallPUmJJaXQ0VkJPNUlFZG5SNTIxdHlPSkZLVmhkYkxkNGExVGZFbVpTSF9EQWNiNllPaHVUenk4TkZJX1dDdU03RkR0aE5ub0fSAcwBQVVfeXFMTmktRTYwelNmYTNMaGhYaUpEUGNyRzNmWG8wYThuT0dPODJDenlYeHIxU1FkR1dvV25rOVhPbnZXeE5OQUUwWDZ6bGpFZzIzQVhUZ1NldWZzLWVJZnFzdkZNU1lVNXR5U3dZOGJ2YzNVdDdvX3hkaFEzSFN0VnEyOFNGUWpZT1JiSWl0NFZCTzVJRWRuUjUyMXR5T0pGS1ZoZGJMZDRhMVRmRW1aU0hfREFjYjZZT2h1VHp5OE5GSV9XQ3VNN0ZEdGhObm9H?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
   },
   {
    "titre": "Nouveau record pour le Cac 40 grâce à l'apaisement des tensions au Moyen-Orient et à la baisse du pétrole - Les Echos",
@@ -132,6 +132,15 @@
  ],
  "eco": [
   {
+   "titre": "Wall Street profite du plongeon du pétrole et de résultats d'entreprises - ch.zonebourse.com",
+   "source": "ch.zonebourse.com",
+   "date": "Tue, 04 Aug 2026 20:10:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOci1udlVOeklyM0E2NElsQXQ3UEh3MWp2a0l1dEw0bUcxSTZkOUdEZ0xWWXlCalF0bU52TDFVVFBKbUVaUmNuendzNGpMZlNjZ01jb2xhOHNselF3azdJQ0xSM3pYemlIcjYxM2ZxRGZiengtczRKRFZvWldqTUZWQ205OEVlSWE2VXhfa0NnZGRlajVqMllHS0dWdTloVGZBRk41MWxObFBoMmtsR195STVaNlNaVXZ0RC10XzhnQjh6cjZldzdwWWFlc1Q?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Le chiffre d'affaires trimestriel de SpaceX bondit pour ses premiers résultats, porté par la forte croissance de Starlink - Zonebourse",
    "source": "Zonebourse",
    "date": "Tue, 04 Aug 2026 20:05:28 GMT",
@@ -141,10 +150,28 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le Dow Jones et le S&P 500 atteignent des records portés par l'IA et l'espoir d'un accord au Moyen-Orient - ch.zonebourse.com",
-   "source": "ch.zonebourse.com",
+   "titre": "S&P 500 - Les actions en vue mardi: Caterpillar, McDonald's, Pfizer, Palantir, P - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Tue, 04 Aug 2026 20:04:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWURlYVBTdmJYT1JaZjNfak5SZG1SYjFlMHdVWVFkWmh1ZGRobG1GRi00VFZfQWY4OHJkMU1EX2d6d0dVUG9JTHZVcUNWazVHUUxlbjlqQzJlaFhNWGhKSUdZY0d3SlhoQTNpaXFGTkJCRUJzQVpYaThPbll1ZldJam5ldUJvdWZKTWQ2R1NnaUI4cDBFbldXODA3MjFQdUc3NXowTU5UdHNGMGJydy1IclJoeWg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions en vue mardi: Caterpillar, McDonald's, Pfizer, Palantir, Prologis, SpaceX, AMD, valeurs pétrolières, P&G",
+   "source": "ABC Bourse",
+   "date": "Tue, 04 Aug 2026 20:04:55 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-mardi-caterpillar-mcdonald-s-pfizer-palantir-p_700984",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Dow Jones et le S&P 500 atteignent des records portés par l'IA et l'espoir d'un accord au Moyen-Orient - Zonebourse",
+   "source": "Zonebourse",
    "date": "Tue, 04 Aug 2026 20:01:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOaFBuN2FPN0dZRmI2eGk1OEMzcFFnNUZfbG1KaHYwZXJaWGhVOGt5cHltT1lDbHZxV0tIc3hyVGxOTzlXN21SeDk1cW8yMHluVW1HUFM2RFFtRXRQMjB5Tm1CdGEtV2JmbTZSSmQ3amFjSDdDWVhmZ1dUUm14akNCMEF1dmQ1MTR2X19Nd0dpSzR2QnEtMzhpRHZ6WFpsZzN0YWozVEtpTTRjZzlkYU1zS2tWLXc1THYtNWFGSkRaVjVfb3RpX1VfSWo3dWNxc0F0ZGlnVFloM1JweWlyWnNiU2Q3cUhYLTQzTHlVY3prdUladw?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZm9sMzFtTVZaSkFfTTFibHVqSnpuVlVwZ2diUHVmTDV1LUZ3bkF5a1pYME9PTjBCN0xZWTRoS0N3b2dCc0Z1c1ZFUnhWRVFnZEJvSFUyNGZxUVJkeUdxU0piS2Y0VGt0YjJvZDBTSjdWdlBXb2lxLXJZaEZQZ3Rrdk9HeGgtd2ZPc2pENXJRNmF3a3VpcmR2cHplcjZWREpkd3E2QnZKdFBQY2x4dnlIQWc4bGQ5d0VTVl9lMkVEdTRWMHEwZnpSdXRlckV0enFtWFJjUzlNOWlpZjJuRV9BT0tacmJ4Q3dINlY4TTZ5dTZCQ3c?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
@@ -321,15 +348,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40: La Bourse de Paris ouvre à un nouveau plus haut historique",
-   "source": "ABC Bourse",
-   "date": "Tue, 04 Aug 2026 07:20:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-ouvre-a-un-nouveau-plus-haut-historique_700956",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "En portefeuille : Taux, le marché obligataire digère les annonces de la FED - 04/08",
    "source": "BFM Économie",
    "date": "Tue, 04 Aug 2026 07:20:01 GMT",
@@ -375,187 +393,6 @@
    "sentiment": "negative"
   }
  ],
- "fiscal": [
-  {
-   "titre": "Succession : les petits-enfants protégés des donations de leur parent - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Mon, 03 Aug 2026 14:01:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMW9LeVpOLVhuaEtabDk3S0h1MUFoUlgxOGVSMmVvM1BZQ3VaMFhsUlhOX1V2X1Utb1J1V2hFLVNWZlFzX3dzazliU2NIOHdIU1FRZE1BMG1KM1hxRFd0UnA1OFRXN2lwLWxRUXhycmRPbFVtOV9tU3dRcXdfM09YaW9SZzVoNDc2Q1BnbUEwVFlXQkhGSmVET21McTUxTkJ2VjVhMUtNYTQ0VEpGVUxudnR5blh4Y0pnVW9GTQ?oc=5",
-   "tag": "Succession / donation",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CEHR, CDHR, PFU… Pourquoi certains hauts revenus devront payer beaucoup plus d'impôts que prévu - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Mon, 03 Aug 2026 07:29:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcWJnazNEN29KbDRud28wSW5aV3VoU2NvSWNIOGlxMjB5SUFLUEhlc0RzUUdON3Rud3k3STRlZEU3aS15N2NwcU5mLU0zaDAyWno1RVQxUEM3LWNvWlBSaGx2THh3Q3dMWnVoOVNLMlE2QU1kd2YwVEJvUl9vU3ZjR1J3WU1HcXJpZlhhNWtoMUh2NWxEbzFTRzVMWjVyWUR1aHhHWFVwYk5OMzZjazcw?oc=5",
-   "tag": "Fiscalité patrimoniale",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Succession : les petits-enfants ne paient pas pour les donations reçues par leur parent - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 06:51:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOSk5xVVBxV0Q5SE1mTG12VDlMQTg5QnRNdTRLQnNnOUgwWjR5d25zT1JWX0k5a3JoX1Z0b1pFNmdXWFQtbEEzcDhQcks5VzBDdmgwanNNS3otOUxLUUprdHY2U0tXeG9MWWNUbWU2dUpYUE5QcWNNelZxZXExREFxYmNzVmJLMDg3ZmRJSHVZeFEwZzYwVGdZa1JMX2VaVGdmcHZueENfLUp4eENHeDJ4VEo1S3B3WmFGZjVOU01FUzBPZk9ybUE4V2FYZjZkQXZ5Nnp1QXBpRDhtMFpZYjFTclFjMWxoVGpKQUlkeVJXeS1JMFAzYjgwR1BkM2djb0tESDZZWVUxOGpLQdIBigJBVV95cUxOSk5xVVBxV0Q5SE1mTG12VDlMQTg5QnRNdTRLQnNnOUgwWjR5d25zT1JWX0k5a3JoX1Z0b1pFNmdXWFQtbEEzcDhQcks5VzBDdmgwanNNS3otOUxLUUprdHY2U0tXeG9MWWNUbWU2dUpYUE5QcWNNelZxZXExREFxYmNzVmJLMDg3ZmRJSHVZeFEwZzYwVGdZa1JMX2VaVGdmcHZueENfLUp4eENHeDJ4VEo1S3B3WmFGZjVOU01FUzBPZk9ybUE4V2FYZjZkQXZ5Nnp1QXBpRDhtMFpZYjFTclFjMWxoVGpKQUlkeVJXeS1JMFAzYjgwR1BkM2djb0tESDZZWVUxOGpLQQ?oc=5",
-   "tag": "Succession / donation",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Succession : ce qui change pour les frais bancaires en 2026 - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Fri, 31 Jul 2026 12:23:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWGlIUWIzT1JubFV2a21JQjZFWUxFYV9wWThhQWdHTk10N1NxZ0pWWE1NQ3lHTXV2ZlA4WVQ1RTR5aV90TkRCQXlONzBYSkxUQWpNT0REZkt6dE9iRW5jM3BId0EtakZMVTJpaVBNT01NTGVIWVp3OGZXLWxteDV3dFVqVl9ZZGg5cWRQZ2NaVmtvQlRUQndWRmJCYW5TRGp1QVhvclFocGpfQy1KUmJReDRubnFFdjJH?oc=5",
-   "tag": "Succession / donation",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "IFI : 7 solutions légales pour réduire votre impôt, voire ne plus le payer - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Fri, 31 Jul 2026 11:15:45 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDVQak5xaFF0VGZJbm1YNkNEcjhSNmdYSlJpVFpacFlPX1ZHQUVOcjFYMlpURm9nZlBHaVkxbGZMcWo2QWw3N3NQVkIxRU4wQjZITExQVWxpeVljU1VXUlRZM09USkVIX3c5RHVnb0JtU2hCcGZ1Yk1Hb3VCX3U5Q1J0TGwyWmhQbkFqUXFBWFNsNjRwLWVidllwNnMxbFBzTDNISWtMSGFPdDRHeUtvNDZtT0pEQQ?oc=5",
-   "tag": "Succession / donation",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "France : l'assurance vie au premier semestre a été plébiscitée comme jamais en 20 ans - TradingView",
-   "source": "TradingView",
-   "date": "Thu, 30 Jul 2026 15:07:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE02ZmtkYkw3MnNicWREQ19SN01PaThWaDB6bUprVVJkdUpaMWxYTlAyR3JYV1JPYnR5UE9LN0V3NVhUd19NNk1BYW5pZ1l5U0tJTGZkMXp5Q1VrWVlXNkROMWhn?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Epargne : au premier semestre, l'assurance vie a été plebiscitée à un niveau record, du jamais vu depuis 20 an - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 30 Jul 2026 13:23:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwJBVV95cUxNUHVmYUx4YkJjQnZfekl0eFpobDR3X2Q1M0Z1V3ZKNlI3VWhCcnU0Ri05cF9tSDhOdTdacVl2cWpqRHRrMDJERmdEUWRQYWNacTJmT2p2MDNGSXlRdTFxU3VkRDU5RnRHRGlPaGFpLWJranpPY3lzUFBDTHpYR2hCYTNIc1NPNFdfQmx2WFE1V0NmRmZLb29lT1lvbU5Ra1FJV2VyYzhjaVFody1CWnR3dTg0ZWdEZUs4QXBSRThueXVRN1U3ZFBPZFN3YWtKZFFOR3BDMldIWHdSUFp0OWRoSHBXVkF3VFZwVTZRNDdtSUlkS3k5V0ZveVFuUTFaZGk5QkkyR2l0dFNUc1JlWjUwcDZ6clVLWWVtUUpMb0hQRWVvb1kzbUVV0gGsAkFVX3lxTFBYOF9icTJMaHJCVVJ5cUg1VDB3ZHRiUWlHVlU4am1TTGx0czlmSnpnRC0zY1FHbVBYTEQ0dVBkeU9qblZHNnFfaTZtZEpmSWZUamZwN1JleVItaFZyTVBraGUwVXdLWm01ZW16UFhOejBoRy1SYXphUkdYcmdqbldNeGxkTG01ME5QYm9UREZCSF9YYUtNU0dTNnRFZ3BNQWl5NEJnWTVEdExuZXN4SGgzY0FuTXR5SjFJTzNtZ1ZPa3VJaWNSR3lRY0pYSERhSUNUbDBFMFNHZTdJQVVzYzBsYnJma3I3QzRPNmllNTAtMDhvbmJFd0R5V3JERnhvUlRWeHBJYTNpTm11YzZQOTdGNDlhOV9qZ3YycTZhV0E2RXVDc19nN0wzQVpELQ?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Assurance vie : le niveau semestriel des cotisations au plus haut depuis vingt ans - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 30 Jul 2026 11:54:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdEwxLWliQThHV1dNT25qWTNxU2dQTGNHd0dHT3VEUGoyY3RvNU1qRmFRRnhIeEcyOXctSFdFRjdMcmZOdllod2NiOVFzd2FnalhtVmtVN3Y0MjFUdEN2SWxwNEs0LWw2WlF1Q29DVWt3aE9mWUgwVWoxMmJuLWVHUlZRNjRxQmUwLXd6bE9LRzNSNmtzdkJQMC1jSlJlaHFQLWIyNmVUbE5xaHdkclJmd1NkNnJVLTBqRUNYZEkzcXhYNG1XYW1qR1dUWXlscXNlUlJUZGE4eVBzZw?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Assurance-vie : le premier semestre atteint un plus haut niveau depuis 20 ans - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 30 Jul 2026 11:24:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUlNtQk1YaU5vQnpOcFQ1R2ZFUHZ4eDR5MHZWTkQ0RVd5NGw5V1Jra2pjb1pSUDBVMExTNUNudkRJeFQwNUtTR0ladm93RzV0YkVpRTFpQlk5OU1ubkF3QTVLU1lRU2VDYlduNUwxcXRwd20xMER5blhmLTc4RDBTeGNoOEVjWk1LM0twX1RuQWtvSS0xeC1ocmpra0szVXN1VjRGZG9pdXNqaUhHWngxdENpcFljbjlsTVlWajZ5Q0x4Y3JxcWY1N0ZNcDFQeXc?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "France: l'assurance vie au premier semestre a été plébiscitée comme jamais en 20 ans - TradingView",
-   "source": "TradingView",
-   "date": "Thu, 30 Jul 2026 10:31:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBjZ2hMc1J0TkN3WGNPSDQ1N09DYUVqc3N6RGo2czhER3lxM3dHWmxnYmNCNW5PUnE3aGZ4blBtMFdGYW9oT1FXY2VBYWM3cmFNY2xTdE53QUdMT1hGQlI5Vm93?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Succession : une donation frauduleuse peut constituer un recel - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 29 Jul 2026 15:59:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNV0xWVXE2TkVtZER2c3pOUnJIWXp3Q2hlcjdOaVBoQ2hmNktzYmhyX2dmWnVMWXU5dTVBVzVxbjJXd18zcjI2OWkxdXlZSzd0NVE4QkNCOVRJV1NTbE9VOHh4Wlh1ZE5qRzBYaGlKc2RsTWpJV0k4bjl0Z09McDdIOU9JYzFNTFhHS0gwQ3FPNmVUeDlBMGxPNmFVQnFEd0VDYTcxcmJvakNjM0s5cVotMW1ha0Y0bHM?oc=5",
-   "tag": "Succession / donation",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La stup�fiante improvisation du financement de la politique du � Z�ro artificialisation nette � - Rapport d'information n� 813",
-   "source": "Sénat",
-   "date": "2026-07-16T22:00:00Z",
-   "lien": "http://www.senat.fr/notice-rapport/2025/r25-813-notice.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Ratification de l'accord de passation conjointe de march� - Texte de la commission n� 873",
-   "source": "Sénat",
-   "date": "2026-07-07T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/pjl25-873.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Lutte contre les fraudes sociales et fiscales - Texte n� 107",
-   "source": "Sénat",
-   "date": "2026-06-25T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/tas25-107.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Mission d'information relative � l'�tat des lieux de la compensation financi�re r�sultant des exon�rations, d�gr�vements et suppressions de fiscalit� locale - Rapport d'information n� 799",
-   "source": "Sénat",
-   "date": "2026-06-24T22:00:00Z",
-   "lien": "http://www.senat.fr/notice-rapport/2025/r25-799-notice.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Ratification de l'accord de passation conjointe de march� - Texte n� 786",
-   "source": "Sénat",
-   "date": "2026-06-23T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/pjl25-786.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Avis sur le projet de d�cret d'avance notifi� le 28 mai 2026 - Rapport d'information n� 702",
-   "source": "Sénat",
-   "date": "2026-06-04T22:00:00Z",
-   "lien": "http://www.senat.fr/notice-rapport/2025/r25-702-notice.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Simplification de la vie �conomique - Texte n� 95",
-   "source": "Sénat",
-   "date": "2026-05-26T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/tas25-095.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fiscalit� communale - Texte n� 130",
-   "source": "Sénat",
-   "date": "2026-05-06T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/ppl25-130.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Lutte contre les fraudes sociales et fiscales - Texte n� 24",
-   "source": "Sénat",
-   "date": "2026-05-03T22:00:00Z",
-   "lien": "http://www.senat.fr/leg/pjl25-024.html",
-   "tag": "Sénat",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  }
- ],
+ "fiscal": [],
  "uc": []
 }

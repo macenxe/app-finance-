@@ -226,19 +226,13 @@ function calculerIndicateurs(p, cours) {
 }
 
 // ── Actualités économiques via Google News RSS + flux directs ────────────────
-// Canal eco    : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
-//                directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche) ;
-//                filtre « macro (MOTS_ECO_MACRO) OU grande capitalisation (GRANDES_CAPS) ».
-// Canal fiscal : Google News when:1d + when:7d (requêtes patrimoniales) + flux Sénat (Atom).
-// Canal uc     : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
-//                eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
-// Canal fiscal : mots signalant un sujet patrimonial/fiscal réel.
-const MOTS_FISCAL = [
-  'impôt', 'fiscalité', 'fiscal', 'succession', 'donation', 'ifi', 'pfu',
-  'flat tax', 'assurance-vie', 'assurance vie', 'plus-value', 'abattement',
-  'barème', 'niche fiscale', 'lmnp', 'per', 'droits de mutation',
-  'loi de finances', 'bofip', 'redressement',
-];
+// Canal eco : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
+//             directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche) ;
+//             filtre « macro (MOTS_ECO_MACRO) OU grande capitalisation (GRANDES_CAPS) ».
+// Canal uc  : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
+//             eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
+// Canal fiscal : retiré (D31 — plus d'intérêt utilisateur) ; la clé reste dans la réponse
+// ?news=1, posée à [] fixe, pour la rétrocompatibilité des fronts en cache (D32).
 const MOTS_POSITIFS = [
   'hausse','en hausse','rebond','rebondit','progression','progresse','croissance','record',
   'gains','gain','surperformance','relève','relèvement','optimisme','accord','allège',
@@ -326,14 +320,7 @@ const FLUX_ECO_DIRECTS = [
 
 // Budget sous-requêtes (D27/D30) : la prod Workers plafonne à 50 subrequests par
 // invocation (fetchs + Cache API), limite que wrangler dev ne simule PAS. Décompte
-// ?news=1 : 4 flux directs (×2 si redirigés) + 1 fond statique + 2 cache = 11 pire cas.
-const FLUX_FISCAL_DIRECTS = [
-  // Sénat (therss17.xml) : Atom 0.3 — flux institutionnel, dispensé de liste blanche.
-  { url: 'https://www.senat.fr/themes/rss/therss17.xml', tag: 'Sénat', categorie: 'fiscal',
-    mots: MOTS_FISCAL, sources: [], dispenseSource: true, sourceDefaut: 'Sénat',
-    format: 'atom', max: 10 },
-];
-
+// ?news=1 : 3 flux directs (×2 si redirigés) + 1 fond statique + 2 cache = 9 pire cas.
 
 function analyserSentiment(titre) {
   const t = titre.toLowerCase();
@@ -387,30 +374,6 @@ function parseItemsRSS(xml, cfg) {
   return items;
 }
 
-// Sénat (therss17.xml) : Atom 0.3, balises <entry>/<title>/<link href>/<modified> — le parseur
-// <item> ci-dessus ne les lit pas, d'où ce parseur dédié.
-function parseItemsAtom(xml, cfg) {
-  const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '', max = 6 } = cfg;
-  const items = [];
-  const entryRe = /<entry>([\s\S]*?)<\/entry>/g;
-  let m;
-  while ((m = entryRe.exec(xml)) !== null) {
-    const bloc = m[1];
-    const titre  = decoderEntites((/<title[^>]*>(.*?)<\/title>/.exec(bloc))?.[1]?.trim() ?? '');
-    const lien   = decoderEntites((/<link[^>]*href="([^"]*)"/.exec(bloc))?.[1]?.trim() ?? '');
-    const date   = (/<modified>(.*?)<\/modified>/.exec(bloc))?.[1]?.trim() ?? '';
-    const source = sourceDefaut;
-    const tLow   = titre.toLowerCase();
-    const impactant = mots.some(w => tLow.includes(w));
-    const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
-    if (titre && lien && date && impactant && autorisee) {
-      items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
-      if (items.length >= max) break;
-    }
-  }
-  return items;
-}
-
 async function fetchRSSWorker(flux) {
   try {
     // Timeout par flux : un flux lent ne doit pas bloquer l'ensemble. cacheTtl 300 (5 min) :
@@ -431,7 +394,7 @@ async function fetchRSSWorker(flux) {
     }
     if (!r.ok) return [];
     const xml = await r.text();
-    return (flux.format === 'atom' ? parseItemsAtom : parseItemsRSS)(xml, flux);
+    return parseItemsRSS(xml, flux);
   } catch { return []; }
 }
 
@@ -450,11 +413,10 @@ function dedupTrie(items) {
 const NEWS_FOND_URL = 'https://macenxe.github.io/app-finance-/data/news-fond.json';
 
 async function recupererNews() {
-  const flux = [...FLUX_ECO_DIRECTS, ...FLUX_FISCAL_DIRECTS];
   const [fondRes, ...resultats] = await Promise.allSettled([
     fetch(NEWS_FOND_URL, { cf: { cacheTtl: 300 }, signal: AbortSignal.timeout(8000) })
       .then((r) => (r.ok ? r.json() : null)),
-    ...flux.map(fetchRSSWorker),
+    ...FLUX_ECO_DIRECTS.map(fetchRSSWorker),
   ]);
   const fond = (fondRes.status === 'fulfilled' && fondRes.value) || {};
   const brut = resultats.flatMap(r => r.status === 'fulfilled' ? r.value : []);
@@ -462,13 +424,12 @@ async function recupererNews() {
     globale: [...(fond.globales || [])],
     produits: [...(fond.produits || [])],
     eco: [...(fond.eco || [])],
-    fiscal: [...(fond.fiscal || [])],
     uc: [...(fond.uc || [])],
   };
   for (const it of brut) parCanal[it.categorie].push(it);
 
-  // Dédoublonnage sur l'union des 5 tableaux : priorité aux canaux spécifiques (eco > fiscal
-  // > uc), un lien déjà retenu n'est plus repris dans un canal suivant.
+  // Dédoublonnage sur l'union des 4 tableaux : priorité aux canaux spécifiques (eco > uc),
+  // un lien déjà retenu n'est plus repris dans un canal suivant.
   const utilises = new Set();
   const retenir = (items, plafond) => {
     const gardes = dedupTrie(items).filter(i => !utilises.has(i.lien)).slice(0, plafond ?? Infinity);
@@ -476,12 +437,13 @@ async function recupererNews() {
     return gardes;
   };
   const eco = retenir(parCanal.eco, 30);
-  const fiscal = retenir(parCanal.fiscal, 20);
   const uc = retenir(parCanal.uc, 15);
   const globales = retenir(parCanal.globale);
   const produits = retenir(parCanal.produits);
 
-  return { globales, produits, eco, fiscal, uc };
+  // Canal fiscal retiré (D31) : la clé reste posée à [] fixe pour la rétrocompatibilité des
+  // fronts en cache (D32), sans reprendre le fiscal du fond statique.
+  return { globales, produits, eco, fiscal: [], uc };
 }
 
 export default {
