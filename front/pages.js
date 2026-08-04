@@ -1013,10 +1013,13 @@ function reserveLabelAutocall(r) {
   const nLabel = n ? `${n} coupon${n > 1 ? 's' : ''} en réserve` : 'Coupons en réserve';
   return `${nLabel} (+${fmtRes(r.couponsReserve)} %)`;
 }
+// Pas de décimales forcées : un coupon de 7 % s'écrit « +7 %/an », un de 4,25 % garde les
+// siennes. Les taux du portefeuille sont majoritairement entiers, « +7,00 %/an » ajoutait deux
+// chiffres inutiles sur chaque ligne du tableau.
 function fmtCouponAnnuel(coupon) {
   const n = parseFloat(String(coupon).replace(',', '.'));
   if (isNaN(n)) return coupon;
-  return '+' + n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %/an';
+  return '+' + n.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) + ' %/an';
 }
 // Couleur de la pastille de statut à partir de la zone du niveau (bureau : colonne « Statut »).
 function statutPillClasse(cle) {
@@ -1088,7 +1091,7 @@ function cardAutocallHtml(r) {
   // Total réellement perçu = coupons déjà versés les années précédentes + versement au rappel.
   const totalPercu = (r.couponsVerses || 0) + (r.aVerserAuRappel || 0);
   const infoBlock = r.rappele ? `
-      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${Number.isFinite(totalPercu) ? '+' + totalPercu.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${Number.isFinite(totalPercu) ? '+' + totalPercu.toLocaleString('fr-FR', { maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
       <div class="ac-info-row ac-info-row--constat">
         <span class="ac-info-label">Rappelé le</span>
         <span class="ac-info-val">${escHtml(formatDateCourte(r.dateRappel) || formatDateLongue(r.dateRappel))}</span>
@@ -1164,7 +1167,7 @@ function cardAutocallGroupeHtml(r) {
   // Fourchette des taux du groupe : un seul nombre si tous les paliers partagent la même valeur,
   // sinon « du plus petit au plus grand ». Sert au coupon annuel (actif) comme au total perçu
   // (rappelé), qui varie lui aussi d'un palier à l'autre.
-  const fmtTaux = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const fmtTaux = n => n.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
   const fourchette = (valeurs, suffixe) => {
     const v = [...new Set(valeurs.filter(n => n != null && !isNaN(n)))].sort((a, b) => a - b);
     if (!v.length) return '—';
