@@ -371,16 +371,16 @@ const App = (() => {
         const v = (ref.bAutoNum / 100) * ref.strikeNum;
         if (Math.abs(v - ref.strikeNum) > ref.strikeNum * 0.005) lignes.push({ valeur: v, label: 'B. autocall', couleur: '#1d6f4c' });
       }
-      // Synthèse : une seule ligne, celle du palier le moins protecteur (risque de perte le
-      // plus proche). Le détail des 3 paliers est déjà donné dans la case « Protection » au-dessus.
-      const pires = membres.reduce((min, m) => {
+      // Les TROIS paliers de protection du groupe (−40, −50, −60 %), et non plus le seul palier
+      // le moins protecteur : c'est ce qui distingue les produits regroupés sur la ligne, et la
+      // fiche est le seul endroit où on peut les situer sur le cours.
+      const paliers = [...new Set(membres.map(m => {
         const pm = String(m.protection || '').match(/-(\d+)/);
-        const val = pm ? parseInt(pm[1], 10) : null;
-        return val != null && (min == null || val < min) ? val : min;
-      }, null);
-      if (pires != null) {
-        lignes.push({ valeur: ref.strikeNum * (1 - pires / 100), label: 'Protection −' + pires + ' %', couleur: '#b06a1a' });
-      }
+        return pm ? parseInt(pm[1], 10) : null;
+      }).filter(v => v != null))].sort((a, b) => a - b);
+      paliers.forEach(pct => {
+        lignes.push({ valeur: ref.strikeNum * (1 - pct / 100), label: 'Protection −' + pct + ' %', couleur: '#b06a1a' });
+      });
     }
     const tickerRef = chartTickerPour(ref);
     Chart.ouvrirInline(containerId, tickerRef, ref.nom, {

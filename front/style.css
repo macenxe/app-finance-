@@ -1637,9 +1637,18 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      ni l'un ni l'autre n'a de colonne. */
   .ac-card-niveau, .ac-info-sub { display: none; }
   /* Libellés masqués — les titres de colonnes les portent —, SAUF sur une ligne rappelée, où
-     « Total perçu » et « Rappelé le » ne se déduisent pas de l'en-tête (Coupon / Constat). */
+     « Total perçu » et « Rappelé le » ne se déduisent pas de l'en-tête (Coupon / Constat).
+     Ces deux cellules passent alors en COLONNE (libellé au-dessus de la valeur) : côte à côte,
+     l'ensemble réclamait 108px pour une colonne de 86 et 100px pour une de 64, et comme
+     .ac-info-row est aligné à droite, le débordement partait vers la GAUCHE — le libellé venait
+     se poser sur la valeur de la colonne précédente. Empilé, chaque partie tient largement. */
   .ac-info-label { display: none; }
-  .ac-card--rappele .ac-info-label { display: inline; font-size: 9px; }
+  .ac-card--rappele .ac-info-row--coupon,
+  .ac-card--rappele .ac-info-row--constat {
+    flex-direction: column; align-items: flex-end; justify-content: center; gap: 0; flex-wrap: nowrap;
+  }
+  .ac-card--rappele .ac-info-label { display: block; font-size: 8.5px; line-height: 1.35; }
+  .ac-card--rappele .ac-info-val { line-height: 1.25; }
   .ac-statut-pill { font-size: 10.5px; padding: 4px 11px; }
   .ac-info-row--coupon .ac-info-val { font-size: 12px; }
   .ac-info-row--constat .ac-info-val { font-size: 11.5px; }

@@ -985,8 +985,10 @@ function grouperCapMemeDate(rows) {
   const groupes = new Map();
   const resultat = [];
   for (const r of rows) {
-    if (r.rappele || familleProduit(r) !== 'cap') { resultat.push(r); continue; }
-    const clef = [r.sj, r.ech, r.strikeNum, r.bAuto, r.bCoupon, r.constat].join('|');
+    if (familleProduit(r) !== 'cap') { resultat.push(r); continue; }
+    // Les CAP RAPPELÉS se regroupent aussi (une seule ligne « CAP 08/2030 » au lieu de trois),
+    // mais dans un groupe distinct des actifs : d'où l'état et la date de rappel dans la clef.
+    const clef = [r.rappele ? 'rappele' : 'actif', r.sj, r.ech, r.strikeNum, r.bAuto, r.bCoupon, r.constat, r.dateRappel || ''].join('|');
     let groupe = groupes.get(clef);
     if (!groupe) {
       groupe = { ...r, isGroupeCap: true, paliers: [] };
@@ -994,7 +996,11 @@ function grouperCapMemeDate(rows) {
       resultat.push(groupe);
     }
     const m = String(r.protection || '').match(/-(\d+)/);
-    groupe.paliers.push({ pct: m ? parseInt(m[1], 10) : null, coupon: r.coupon, isin: r.isin });
+    groupe.paliers.push({
+      pct: m ? parseInt(m[1], 10) : null, coupon: r.coupon, isin: r.isin,
+      // Le total perçu est propre à chaque palier (le coupon décroît quand la protection monte).
+      total: (r.couponsVerses || 0) + (r.aVerserAuRappel || 0),
+    });
   }
   resultat.forEach(r => { if (r.isGroupeCap) r.paliers.sort((a, b) => (a.pct ?? 0) - (b.pct ?? 0)); });
   return resultat;
@@ -1084,7 +1090,7 @@ function cardAutocallHtml(r) {
   const infoBlock = r.rappele ? `
       <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${Number.isFinite(totalPercu) ? '+' + totalPercu.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %' : '—'}</span></div>
       <div class="ac-info-row ac-info-row--constat">
-        <span class="ac-info-label">Rappelé le :</span>
+        <span class="ac-info-label">Rappelé le</span>
         <span class="ac-info-val">${escHtml(formatDateCourte(r.dateRappel) || formatDateLongue(r.dateRappel))}</span>
       </div>
       <div class="ac-info-statut"><span class="ac-statut-pill grey">Rappelé</span></div>`
@@ -1126,7 +1132,9 @@ function cardAutocallHtml(r) {
 // Carte CAP regroupée : une ligne par échéance, avec un repère de protection par palier
 // (40 %, 50 %, 60 %…) plutôt qu'une carte séparée pour chaque palier.
 function cardAutocallGroupeHtml(r) {
-  const geo = geometrieBarreGroupe(r);
+  // Un groupe rappelé n'a plus de frise (comme une carte rappelée seule) : le produit est sorti,
+  // sa position par rapport aux barrières n'a plus d'objet.
+  const geo = r.rappele ? null : geometrieBarreGroupe(r);
   const zone = zoneNiveau(r);
 
   // Les paliers sont proches les uns des autres : celui du milieu (ex. -50 %) passe au-dessus
@@ -1151,16 +1159,29 @@ function cardAutocallGroupeHtml(r) {
           ${geo.niveauPos != null ? `<div class="ac-bar-niveau ac-bar-niveau--${zone.cle}" style="left:${geo.niveauPos}%"><span class="ac-bar-niveau-val">${fmtBarreBarriereCourt(geo.niveauVal, false)}</span><span class="ac-bar-niveau-dot"></span></div>` : ''}
         </div>
       </div>`
-    : '';
+    : '<div class="ac-bar-row ac-bar-row--vide"><span class="ac-bar-vide">Plus de constatation</span></div>';
 
-  // Coupon du groupe : un seul taux si tous les paliers partagent le même, sinon une fourchette.
-  const couponsGroupe = [...new Set(r.paliers.map(p => parseFloat(String(p.coupon).replace(',', '.'))).filter(n => !isNaN(n)))].sort((a, b) => a - b);
+  // Fourchette des taux du groupe : un seul nombre si tous les paliers partagent la même valeur,
+  // sinon « du plus petit au plus grand ». Sert au coupon annuel (actif) comme au total perçu
+  // (rappelé), qui varie lui aussi d'un palier à l'autre.
   const fmtTaux = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const couponTxtGroupe = couponsGroupe.length === 0 ? '—'
-    : couponsGroupe.length === 1 ? '+' + fmtTaux(couponsGroupe[0]) + ' %/an'
-    : '+' + fmtTaux(couponsGroupe[0]) + ' à ' + fmtTaux(couponsGroupe[couponsGroupe.length - 1]) + ' %/an';
+  const fourchette = (valeurs, suffixe) => {
+    const v = [...new Set(valeurs.filter(n => n != null && !isNaN(n)))].sort((a, b) => a - b);
+    if (!v.length) return '—';
+    return v.length === 1 ? '+' + fmtTaux(v[0]) + suffixe
+      : '+' + fmtTaux(v[0]) + ' à ' + fmtTaux(v[v.length - 1]) + suffixe;
+  };
+  const couponTxtGroupe = fourchette(r.paliers.map(p => parseFloat(String(p.coupon).replace(',', '.'))), ' %/an');
+  const totalTxtGroupe  = fourchette(r.paliers.map(p => p.total), ' %');
 
-  const infoBlock = `
+  const infoBlock = r.rappele ? `
+      <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Total perçu</span><span class="ac-info-val ac-info-val--coupon">${escHtml(totalTxtGroupe)}</span></div>
+      <div class="ac-info-row ac-info-row--constat">
+        <span class="ac-info-label">Rappelé le</span>
+        <span class="ac-info-val">${escHtml(formatDateCourte(r.dateRappel) || formatDateLongue(r.dateRappel))}</span>
+      </div>
+      <div class="ac-info-statut"><span class="ac-statut-pill grey">Rappelé</span></div>`
+    : `
       <div class="ac-info-row ac-info-row--coupon"><span class="ac-info-label">Coupon :</span><span class="ac-info-val ac-info-val--coupon">${escHtml(couponTxtGroupe)}</span></div>
       <div class="ac-info-sub">${escHtml(reserveLabelAutocall(r))}</div>
       <div class="ac-info-row ac-info-row--constat">
@@ -1189,7 +1210,7 @@ function cardAutocallGroupeHtml(r) {
       </span>` : '';
 
   return `
-  <div class="ac-card" data-isins="${escHtml(isinsGroupe)}"${isinsGroupe ? ` onclick="App.voirDetailGroupe('${isinsGroupe}')"` : ''}>
+  <div class="ac-card${r.rappele ? ' ac-card--rappele' : ''}" data-isins="${escHtml(isinsGroupe)}"${isinsGroupe && !r.rappele ? ` onclick="App.voirDetailGroupe('${isinsGroupe}')"` : ''}>
     <div class="ac-card-left">
       <div class="ac-card-top">
         <div class="ac-card-titre">
