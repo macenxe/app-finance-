@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-04T20:08:13.236Z",
+ "genere": "2026-08-04T20:11:03.210Z",
  "globales": [
-  {
-   "titre": "Le CAC 40 et le DAX battent de nouveaux records - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 04 Aug 2026 10:13:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUXY5cEpId3JNZk5VSnh3LU5HRWY3SmlfX2VrdDhlZUlBNUpUdVk5Y2x3Q2JYUWdfb2x5SG1idlZkNmhSQWlkckRtUFViQXhQNWZWeVhBaDlVWk13MGhZaXV6Y3NQWEM4MHBPUzVxeDJaY0JBa1RON2tBU2ZVZmZib0Vmd3VYaWlvRUFpYXVZZXgyMElmVWV5dzVkSy1iNE85STRsS3ppN0NpQnM3cElpa2NxcDBoYlZwQ0RMa3Z6Z0dXM0gxcUdZcdIByAFBVV95cUxOUXY5cEpId3JNZk5VSnh3LU5HRWY3SmlfX2VrdDhlZUlBNUpUdVk5Y2x3Q2JYUWdfb2x5SG1idlZkNmhSQWlkckRtUFViQXhQNWZWeVhBaDlVWk13MGhZaXV6Y3NQWEM4MHBPUzVxeDJaY0JBa1RON2tBU2ZVZmZib0Vmd3VYaWlvRUFpYXVZZXgyMElmVWV5dzVkSy1iNE85STRsS3ppN0NpQnM3cElpa2NxcDBoYlZwQ0RMa3Z6Z0dXM0gxcUdZcQ?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
   {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.33% - BFM Bourse",
    "source": "BFM Bourse",
@@ -27,6 +18,15 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Nouveau record pour le Cac 40 grâce à l'apaisement des tensions au Moyen-Orient et à la baisse du pétrole - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 03 Aug 2026 14:41:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPck16SDZ3WkpXS2hZUTBfRmlrTnljNlBsZlZVbFlYemdWaTZ0b1ZYaGtZMTRpSlFEVlJILTRGMmxIWDR2OUo2OHNXbTAxY0pONTM1WTBpWXRiNnNnOWk3aDBEYXNtbHFrNXNsQ0FEM3kxclkxOHkxeHoxTHJ0N0lPenIyWkFnZGo5NW5UWXdBU0drLXBnQ2lMNFMwN3JHT2t6SFQ5cklMSlRreW1sQ1JKdWRjTkwyNFNxa0hFX09fcVhkelN1bG9Db1hWLTBFNkt4TUtSTWo5R3dTUVZtS0xVM2JBR0laeFI5UldZVjJ4YzdKeGRlTWtSTmY5T0R5SmpvT2hCdEtn?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "Pourquoi la Fed fait-elle autant bouger les marchés ? - ch.zonebourse.com",
@@ -67,6 +67,15 @@
  ],
  "produits": [
   {
+   "titre": "BNP Paribas signe un nouveau record en Bourse, tout bon pour nos bonus cappés - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 04 Aug 2026 10:10:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWmZsMXJoTDlvMHl5VU9ycGoyOU1Vd21QamJta3Y4RUdsQ2hJdUVxNWdfU3FOSzd6MFdVSjd1V015Z3hKVGJPWVRnQnhBd2Q0NmQzSUxDOVYtazBKRUh1bEVpS3l4bTRsR1YxeTNrdEtNamF6cG5tMXl6TzhDX3ZFVzlhMDU4QW5UVGczNnhvWVY5OVFmalZsTVRMUHlucTZfXzRSejlmcFBCaXFpTXJiNDFneUxNbzdNRnpsZWlkTXdueGdocFg4Wm1Bdm1VLWNDQURnd3VqaEZhSkp3NzE4MmQtX3dYMmxhSGZXQ3Jra3BzSkRQ?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
    "titre": "VOLTALIA : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 03 Aug 2026 10:05:00 GMT",
@@ -76,38 +85,20 @@
    "sentiment": "negative"
   },
   {
-   "titre": "STELLANTIS (Milan) : Retour possible sur les supports - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 09:22:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUURfUDR1VGtmV1JGQ0VlcXRyQ3FJbHc0R2FFQmsybXZudExQMVpBeXdVX25uR19QRU1qNllWbTZDTlpiNjNXa2xEbWYzREliSXN3OXliNm8wQzc2UmduMFlqZGlJLVQwWWNUOXcxVXNvNUxjb3RvUWtaeHJObHYtSE1sdC03T1F3S3F2RzJkNndkSjBtdFpON1l5bmRaNVpfR3NFSnF4TG1RMFZtLXpLQmsxTHFTSEZwZ2I1bUJuNUlqSmNWbWfSAcsBQVVfeXFMTlg5alpCNndyTGlJdWhCQ1FQbFU2WDE4TlFsa2tYOWoxVFVkRU5ZcUZ3RGFuT0djc0dvQ0FXV3FRR2VqZFlfWDItWE9lU3hIRkE0WERDVEVaMGZSTU10TzN6WlRTZlhTZGlGU2E0MzduTjNscUdHZm9LdWprSld0cmVWNmZjbnJKWU9GUnlkNmZJRV84ZHNDRWJBRUpLOENvc00tS0c4MXFmSnZGYjlKQ2lHQTFHa3dSUDAwQkNEM0NaMFpFNUZ4eGdyS0U?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "WENDEL Cours Action MF, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9rbVkzTVgtLUhHelpBWWFhZ25kUWxpVDFiN21tVTRSUlNBQ1dhRzlnNUVBaGtYRzJUMWE1VzlfTEx4dHBqZGRuNUp2T1ZsU0hS?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum - Capital.fr",
    "source": "Capital.fr",
    "date": "Sat, 01 Aug 2026 06:30:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOREdLdlJmNXlhbml0cTJqSU5za0p5bXJkVFpzUUxPNTNvTmE5cElKc24wZG9aSjh4T0Y4anEwOGRnaWZRVVpWU0lsSlZlX3ZIUE1zYnZoNVVNZVdPekRxb2doTGJ2dGh4LTlLeHMwNzJ6VG9XSmd4UTB6YnhuSmdNOUF0VHkza2YzQlVUN1puYTBRWENRY0JqVGpkb3c1ODlvZTlTeTFLQUo5YWYtZGpDZFZpZWVhbTVIVWt0RUp6MWF0LWlrXzRNc1pSaE5aMUZwaHc?oc=5",
    "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les publications tirent le Cac 40 vers le haut, Amazon redonne du souffle au Nasdaq - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 31 Jul 2026 10:43:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOc25zem95bTRsaUd2enU2OE1RZGMxUWF0OXpBYjFLYkNtTXd1RW5IdV9hbEtqSm13SFJqblpTYmZDQmN1RV9EWl9DdkdQcUhjUzZvSVhXb0plY2RkRHRMclRvcjVGeTlETE12N3Rud3ZFUXNBT0QzLXRTT3pGUVhfX21ON3dPckN4QjhuZDBsWm4tdjFXYWFHX1lBNkZoSmcyZ0NobWlWZ2lnSXBGYlFIcUFpRlZHS1EzbXE0ck9DLTNycEFlaHV4UkJ6WWMtR3JyaWRINFNHTk5RaDB6MkJpZ2hadG9vTWVj?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -130,21 +121,30 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Veralto revoit à la hausse ses prévisions de bénéfices pour 2026 grâce à une forte demande en matière d'analys - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 28 Jul 2026 21:46:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPYkh1TXk1VkFnLVo2dmFWSERrUS05bkJKOVdqZXlzLUVkUFJadTJHaHpsZDFVa2l3OXphRUM3eExjUURjYXY4YjdvM2gwWlllM29IOEEwZ2JNX0lLSW1DTDZ1MTVHb3NCS2w4VHV0eWh4OGRFcjV6bWZsOVFMcHMxVDNfNU1VSVJyOVdZcmhfWk16ODJTT09mTnNhZWlqVVIteV91dlQ0eVdFRkFQSnBCbnRYdm8zWXczYjY0SllqNjV4bGs2dy16MGt2d0lKNk1IeWtkNW9nSFdkR0ZwSTA2UFZVSHVUZHlRUGlvX2I5bTNodDRTYnVtUkx1UVFydTBweV9JNGFtQTZnRnVILXRTTGFmNHEtMGRuYlNwVmZOUUo4NUNCUlZQY3NNd1FmNkhXYXlJUzhHS00yU1XSAcACQVVfeXFMTU9sZmg4SkhHWnRaRS14VFJMWlNQZ0Q5U0xpbjdHSkNkTENmaUlDcDhodGlQZFpzZTluTWJuSFdMZUZzSllzV0Rydy1qN1VDOHp6eFg5OXFmVWpjV3doZGp4SnQzSDBDLWVORmhjWXJWMkNBU2ZHTnRWUVZzaDRpVGlJMmJpb1ZtY2wwV1JGdHNFUk5WdlVlQ25mSi01T2o4TUNEUGhvSXVKNVByNWt2LTRhcHFKSzdNZ0FIM1RSSUY1WUV6OU5na3R1RjhkTnQ4Tk80SU5jWEFndWtINkdMRm8tRExmWk5ZWkViSWpFeUVpMzE5TlJGMG1zOXlpbEJWdnppb19SNDNGejZTQ25zVXZ6YnlqYjV6aDhfUmtPcFZ2X0pPYktrYkZZdXFLYk9WZmRnQlZsRE5fZEpfTkx3SGg?oc=5",
+   "titre": "30 composantes du Cac 40 publient leurs comptes semestriels cette semaine, nos analyses et conseils à retrouver ici - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 29 Jul 2026 08:12:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOZkRrd21pbUZXYXhFYW5iblJxTnBLeDhVdWdtU0tTdHRURmhTcC1xaXYzUHV1bWFZbDc2b1dRZTc5aEh5bjN4N2xSXzdpR0x6OV85aE9PWUNINVVyT1NpMGhmdDhCWXVXWFBHeGJLMUJ6MDhJTjhoUG1xcXhjRzlLREFLOE93N1pNcWZkVklUekhQdENFQjI1a09Oam9oelhYcU5YbkJwWDR0Ny1XSktRbVhrNjBQa0ZkNFJUc1F6OXBrY1JZM0szWTEyem9udUs5VUJwOWtpUUM3Tm93WlZwT3ZTQm9BNWEwVWhERGlxcXpwMDdiMVhXN1RDc2U2cS1GU21DSml1a0lHSnd2WXlNLVAzUQ?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "Le Dow Jones et le S&P 500 atteignent des records portés par l'IA et l'espoir d'un accord au Moyen-Orient - Zonebourse",
+   "titre": "Le chiffre d'affaires trimestriel de SpaceX bondit pour ses premiers résultats, porté par la forte croissance de Starlink - Zonebourse",
    "source": "Zonebourse",
+   "date": "Tue, 04 Aug 2026 20:05:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQX0o2aVdOalVxT1lNdy13V1pGdWstMmpUZ1VfVVJ2MnM4OVhheDVPaWxJY3RSVkFNcHFSU09FZmtRaXNjcHJkZjNnOWltU0tqN3ZJWHplY05aV0ZmWm93QnMyYzY0Y1h4ZTU4X3NxSWlFZTkySjZSVGlBNGswaEtZOHpOSGppQUtVZTg0Rm1BaWNsV1NPdHZXQkJKMmp6Skg4SEpQVzdPMnZFdDBySm8tX1RKTFV5NGY1eUhHMkpXSkRtMEE0SkdFZzRXektTSTB0bE9hTWh0OUdLMFNYODk4Zkp0TmN4c1dQYjhVTnlvX29WZw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Dow Jones et le S&P 500 atteignent des records portés par l'IA et l'espoir d'un accord au Moyen-Orient - ch.zonebourse.com",
+   "source": "ch.zonebourse.com",
    "date": "Tue, 04 Aug 2026 20:01:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZm9sMzFtTVZaSkFfTTFibHVqSnpuVlVwZ2diUHVmTDV1LUZ3bkF5a1pYME9PTjBCN0xZWTRoS0N3b2dCc0Z1c1ZFUnhWRVFnZEJvSFUyNGZxUVJkeUdxU0piS2Y0VGt0YjJvZDBTSjdWdlBXb2lxLXJZaEZQZ3Rrdk9HeGgtd2ZPc2pENXJRNmF3a3VpcmR2cHplcjZWREpkd3E2QnZKdFBQY2x4dnlIQWc4bGQ5d0VTVl9lMkVEdTRWMHEwZnpSdXRlckV0enFtWFJjUzlNOWlpZjJuRV9BT0tacmJ4Q3dINlY4TTZ5dTZCQ3c?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOaFBuN2FPN0dZRmI2eGk1OEMzcFFnNUZfbG1KaHYwZXJaWGhVOGt5cHltT1lDbHZxV0tIc3hyVGxOTzlXN21SeDk1cW8yMHluVW1HUFM2RFFtRXRQMjB5Tm1CdGEtV2JmbTZSSmQ3amFjSDdDWVhmZ1dUUm14akNCMEF1dmQ1MTR2X19Nd0dpSzR2QnEtMzhpRHZ6WFpsZzN0YWozVEtpTTRjZzlkYU1zS2tWLXc1THYtNWFGSkRaVjVfb3RpX1VfSWo3dWNxc0F0ZGlnVFloM1JweWlyWnNiU2Q3cUhYLTQzTHlVY3prdUladw?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
@@ -422,15 +422,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Investir après 70 ans : la liquidité prime-t-elle sur la performance ? - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Fri, 31 Jul 2026 07:31:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWVZpbjFzbVNUV0lVSm50X2ZTWm1uMnVHXzJQNU41azEzVUptR0xKdU5kaEJRLTN1eXJ1NHNqMmVvSUdndjJiUHlUUXBUa1o0elFlc09PVTNncTdVQkNpUHY5MkQzckdfMzhSZWtPMGFqLTJFWmVLdFg5VS1SNjhSeWh5S3BLQTNtY0NPaVdvSVpZU1JKZkZjSU10V1dyMGFzWTJZS1J1bS1wRDd5?oc=5",
-   "tag": "Assurance-vie / IFI",
-   "categorie": "fiscal",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "France : l'assurance vie au premier semestre a été plébiscitée comme jamais en 20 ans - TradingView",
    "source": "TradingView",
    "date": "Thu, 30 Jul 2026 15:07:48 GMT",
@@ -447,6 +438,15 @@
    "tag": "Assurance-vie / IFI",
    "categorie": "fiscal",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Assurance vie : le niveau semestriel des cotisations au plus haut depuis vingt ans - Les Echos",
+   "source": "Les Echos",
+   "date": "Thu, 30 Jul 2026 11:54:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdEwxLWliQThHV1dNT25qWTNxU2dQTGNHd0dHT3VEUGoyY3RvNU1qRmFRRnhIeEcyOXctSFdFRjdMcmZOdllod2NiOVFzd2FnalhtVmtVN3Y0MjFUdEN2SWxwNEs0LWw2WlF1Q29DVWt3aE9mWUgwVWoxMmJuLWVHUlZRNjRxQmUwLXd6bE9LRzNSNmtzdkJQMC1jSlJlaHFQLWIyNmVUbE5xaHdkclJmd1NkNnJVLTBqRUNYZEkzcXhYNG1XYW1qR1dUWXlscXNlUlJUZGE4eVBzZw?oc=5",
+   "tag": "Assurance-vie / IFI",
+   "categorie": "fiscal",
+   "sentiment": "neutre"
   },
   {
    "titre": "Assurance-vie : le premier semestre atteint un plus haut niveau depuis 20 ans - Les Echos",
