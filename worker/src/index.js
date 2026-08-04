@@ -227,9 +227,11 @@ function calculerIndicateurs(p, cours) {
 
 // ── Actualités économiques via Google News RSS + flux directs ────────────────
 // Canal eco    : Google News when:1h (requêtes larges) + when:1d (requêtes ciblées) + flux
-//                directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche).
+//                directs ABC Bourse / BFM Économie / BCE presse (dispensés de liste blanche) ;
+//                filtre « macro (MOTS_ECO_MACRO) OU grande capitalisation (GRANDES_CAPS) ».
 // Canal fiscal : Google News when:1d + when:7d (requêtes patrimoniales) + flux Sénat (Atom).
-// Canal uc     : Google News when:7d (sociétés de gestion) + when:30d (événements de vie).
+// Canal uc     : Google News when:30d, une requête par fonds du cabinet — l'actu des fonds
+//                eux-mêmes, pas des sociétés de gestion qui les gèrent (D23/D24).
 const SOURCES_AUTORISEES = [
   'les echos', 'bfm bourse', 'boursorama', 'morningstar', 'le revenu',
   'zonebourse', 'tradingview', 'capital', 'reuters', 'bloomberg', 'l\'agefi',
@@ -266,10 +268,6 @@ const MOTS_FISCAL = [
   'barème', 'niche fiscale', 'lmnp', 'per', 'droits de mutation',
   'loi de finances', 'bofip', 'redressement',
 ];
-// Canal uc : sociétés de gestion suivies + mots de vie des fonds.
-const MOTS_UC_SOCIETES = ['dnca', 'rothschild', 'comgest', 'pictet', 'r-co valor', 'fidelity', 'echiquier'];
-const MOTS_UC_VIE = ['gérant', 'opcvm', 'sicav', 'fusion', 'souscription'];
-const MOTS_UC = [...MOTS_UC_SOCIETES, ...MOTS_UC_VIE];
 const MOTS_POSITIFS = [
   'hausse','en hausse','rebond','rebondit','progression','progresse','croissance','record',
   'gains','gain','surperformance','relève','relèvement','optimisme','accord','allège',
@@ -309,6 +307,7 @@ function fluxGoogleNews(query, when, categorie, mots, sources, opts = {}) {
   return {
     url: `https://news.google.com/rss/search?q=${encodeURIComponent(query)}+when:${when}&hl=fr&gl=FR&ceid=FR:fr`,
     tag: opts.tag ?? query, categorie, mots, sources, max: opts.max ?? 6,
+    capsRegex: opts.capsRegex ?? null,
   };
 }
 
@@ -325,18 +324,60 @@ function corrigerDateAbcBourse(pubDate) {
   return new Date(d.getTime() - offsetParisHeures(d) * 3600000).toUTCString();
 }
 
+// Canal eco : mots macro (le micro-titre — résultats, dividende, objectif d'analyste — n'est
+// plus retenu seul, D23) et grandes capitalisations (retenues même sur du micro, ex. résultats
+// LVMH). GRANDES_CAPS testées à frontières de mots (regex précompilée une fois, cf. plus bas).
+const MOTS_ECO_MACRO = [
+  'taux', 'inflation', 'récession', 'croissance', 'pib', 'chômage', 'fed', 'bce',
+  'banque centrale', 'zone euro', 'obligataire', 'obligation', 'dette', 'souverain',
+  'spread', 'swap', 'euro', 'dollar', 'pétrole', 'cac', 'stoxx', 'dax', 'nasdaq', 's&p',
+  'dow', 'nikkei', 'indices', 'volatilité', 'correction', 'krach', 'marchés', 'fmi', 'ocde',
+  'géopolitique', 'droits de douane', 'tarifs douaniers', 'budget', 'loi de finances',
+  'gouvernement', 'maison blanche', 'relance', 'secteur bancaire', 'banques', 'régulation',
+  'réglementation', 'amf', 'esma', 'mifid', 'produit structuré', 'produits structurés',
+  'autocall', 'liquidité', 'crédit',
+];
+const GRANDES_CAPS = [
+  // CAC 40
+  'accor', 'air liquide', 'airbus', 'arcelormittal', 'axa', 'bnp paribas', 'bouygues',
+  'bureau veritas', 'capgemini', 'carrefour', 'crédit agricole', 'danone', 'dassault systèmes',
+  'edenred', 'engie', 'essilorluxottica', 'eurofins', 'hermès', 'kering', 'legrand',
+  'l\'oréal', 'lvmh', 'michelin', 'orange', 'pernod ricard', 'publicis', 'renault', 'safran',
+  'saint-gobain', 'sanofi', 'schneider electric', 'société générale', 'stellantis',
+  'stmicroelectronics', 'teleperformance', 'thales', 'totalenergies', 'unibail', 'veolia',
+  'vinci',
+  // Sous-jacent produit non CAC 40
+  'rheinmetall',
+  // Méga-caps européennes
+  'asml', 'sap', 'siemens', 'novo nordisk', 'nestlé', 'roche', 'novartis', 'ubs', 'hsbc',
+  'santander', 'shell', 'volkswagen', 'deutsche bank', 'allianz',
+  // Méga-caps US
+  'apple', 'microsoft', 'nvidia', 'alphabet', 'google', 'amazon', 'meta', 'tesla',
+  'berkshire', 'jpmorgan', 'goldman sachs', 'eli lilly', 'broadcom', 'tsmc',
+];
+function echapperRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+// Une seule regex précompilée pour tout le canal eco (pas reconstruite par item) : alternance
+// à frontières de mots (\w) pour qu'« axa » ne matche pas « taxa » ni « saxafone ».
+const GRANDES_CAPS_RE = new RegExp(GRANDES_CAPS.map((c) => `(?<!\\w)${echapperRegex(c)}(?!\\w)`).join('|'));
+// Les titres Google News finissent par « - Nom de la Source » : on l'amputé avant le test
+// GRANDES_CAPS pour éviter les faux positifs du type « - Orange Actualités ».
+function sansSuffixeSource(titre) {
+  const i = titre.lastIndexOf(' - ');
+  return i === -1 ? titre : titre.slice(0, i);
+}
+
 const FLUX_ECO_1H = ['bourse', 'marchés financiers', 'CAC 40', 'banque centrale'];
 const FLUX_ECO_1D = ['BCE taux', 'Fed taux', 'inflation zone euro'];
 const FLUX_ECO = [
-  ...FLUX_ECO_1H.map((q) => fluxGoogleNews(q, '1h', 'eco', MOTS_IMPACT, SOURCES_AUTORISEES)),
-  ...FLUX_ECO_1D.map((q) => fluxGoogleNews(q, '1d', 'eco', MOTS_IMPACT, SOURCES_AUTORISEES)),
+  ...FLUX_ECO_1H.map((q) => fluxGoogleNews(q, '1h', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
+  ...FLUX_ECO_1D.map((q) => fluxGoogleNews(q, '1d', 'eco', MOTS_ECO_MACRO, SOURCES_AUTORISEES, { capsRegex: GRANDES_CAPS_RE })),
   { url: 'https://www.abcbourse.com/rss/displaynewsrss', tag: 'ABC Bourse', categorie: 'eco',
-    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
-    corrigerDate: corrigerDateAbcBourse, max: 10 },
+    mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'ABC Bourse',
+    corrigerDate: corrigerDateAbcBourse, max: 10, capsRegex: GRANDES_CAPS_RE },
   { url: 'https://www.bfmtv.com/rss/economie/', tag: 'BFM Économie', categorie: 'eco',
-    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'BFM Économie', max: 10 },
+    mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BFM Économie', max: 10, capsRegex: GRANDES_CAPS_RE },
   { url: 'https://www.ecb.europa.eu/rss/press.html', tag: 'BCE presse', categorie: 'eco',
-    mots: MOTS_IMPACT, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10 },
+    mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
 const FLUX_FISCAL_QUERIES = [
@@ -354,19 +395,24 @@ const FLUX_FISCAL = [
     format: 'atom', max: 10 },
 ];
 
-const FLUX_UC_SOCIETES = [
-  'DNCA fonds', 'Rothschild & Co Asset Management', 'Comgest fonds',
-  'Pictet Asset Management', 'R-co Valor', 'Fidelity International fonds',
-];
-const FLUX_UC_EVENEMENTS = [
-  '"changement de gérant" fonds', 'OPCVM fusion absorption', 'fonds "fermé aux souscriptions"',
+// Les 13 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
+// pas des sociétés de gestion qui les gèrent (les requêtes par société ramenaient des profils
+// de personnes et du hors-sujet, D23/D24).
+const FLUX_UC_FONDS = [
+  'R-co Valor', 'Echiquier Artificial Intelligence', 'EdR Fund Big Data',
+  'Pictet Clean Energy Transition', 'Pictet-Premium Brands', 'Conservateur Actions Monde',
+  'Comgest Renaissance Europe', 'Fidelity World Fund', 'Conservateur Actions Flexibles',
+  'Conservateur Diversifié Réactif', 'Conservateur Rendement Flexible',
+  'Conservateur Diversifié', 'DNCA Invest Flex Inflation',
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
-// pas de liste blanche de sources ici, seul le titre doit être pertinent (MOTS_UC).
-const FLUX_UC = [
-  ...FLUX_UC_SOCIETES.map((q) => fluxGoogleNews(q, '7d', 'uc', MOTS_UC, [])),
-  ...FLUX_UC_EVENEMENTS.map((q) => fluxGoogleNews(q, '30d', 'uc', MOTS_UC, [])),
-].map((f) => ({ ...f, dispenseSource: true }));
+// pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.
+const FLUX_UC = FLUX_UC_FONDS.map((nom) => {
+  const mots = [nom.toLowerCase()];
+  if (nom === 'R-co Valor') mots.push('r co valor');
+  if (nom === 'Pictet-Premium Brands') mots.push('pictet premium brands');
+  return { ...fluxGoogleNews(`"${nom}"`, '30d', 'uc', mots, []), tag: nom, max: 3, dispenseSource: true };
+});
 
 function analyserSentiment(titre) {
   const t = titre.toLowerCase();
@@ -390,7 +436,7 @@ function decoderEntites(s) {
 
 function parseItemsRSS(xml, cfg) {
   const { tag, categorie, mots, sources, dispenseSource = false, sourceDefaut = '',
-          corrigerDate = (d) => d, max = 6 } = cfg;
+          corrigerDate = (d) => d, max = 6, capsRegex = null } = cfg;
   const items = [];
   const itemRe = /<item>([\s\S]*?)<\/item>/g;
   let m;
@@ -402,7 +448,7 @@ function parseItemsRSS(xml, cfg) {
     if (date) date = corrigerDate(date);
     const source = decoderEntites((/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() || sourceDefaut);
     const tLow   = titre.toLowerCase();
-    const impactant = mots.some(w => tLow.includes(w));
+    const impactant = mots.some(w => tLow.includes(w)) || (capsRegex && capsRegex.test(sansSuffixeSource(tLow)));
     const autorisee = dispenseSource || sources.some(s => source.toLowerCase().includes(s));
     if (titre && lien && date && impactant && autorisee) {
       items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
