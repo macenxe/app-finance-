@@ -165,7 +165,7 @@ export const FLUX_PRODUITS: { query: string; tag: string }[] = [
 const MOTS_ECO_MACRO = [
   'taux', 'inflation', 'récession', 'croissance', 'pib', 'chômage', 'fed', 'bce',
   'banque centrale', 'zone euro', 'obligataire', 'obligation', 'dette', 'souverain',
-  'spread', 'swap', 'euro', 'dollar', 'pétrole', 'cac', 'stoxx', 'dax', 'nasdaq', 's&p',
+  'spread', 'swap', 'l\'euro', 'le dollar', 'du dollar', 'au dollar', 'pétrole', 'cac 40', 'stoxx', 'dax', 'nasdaq', 's&p',
   'dow', 'nikkei', 'indices', 'volatilité', 'correction', 'krach', 'marchés', 'fmi', 'ocde',
   'géopolitique', 'droits de douane', 'tarifs douaniers', 'budget', 'loi de finances',
   'gouvernement', 'maison blanche', 'relance', 'secteur bancaire', 'banques', 'régulation',
@@ -275,7 +275,11 @@ function parseItems(xml: string, cfg: Flux): Article[] {
     if (date) date = corrigerDate(date);
     const source = decoderEntites((/<source[^>]*>(.*?)<\/source>/.exec(bloc))?.[1]?.trim() || sourceDefaut);
     const tLow   = titre.toLowerCase();
-    const impactant = mots.some(w => tLow.includes(w)) || (capsRegex ? capsRegex.test(sansSuffixeSource(tLow)) : false);
+    // La grande cap doit être le SUJET du titre (match débutant dans les 40 premiers
+    // caractères) : citée en fin de titre elle n'est qu'un second rôle (« Nike recule
+    // après une dégradation de JPMorgan » ne parle pas de JPMorgan), D26.
+    const mCaps = capsRegex ? capsRegex.exec(sansSuffixeSource(tLow)) : null;
+    const impactant = mots.some(w => tLow.includes(w)) || (mCaps != null && mCaps.index < 40);
     const autorisee = dispenseSource || sourceAutorisee(source, sources);
     if (titre && lien && date && impactant && autorisee) {
       items.push({ titre, source, date, lien, tag, categorie, sentiment: analyserSentiment(titre) });
