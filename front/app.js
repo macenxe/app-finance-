@@ -260,14 +260,15 @@ const App = (() => {
         </div>`;
       }).join('');
     }
-    // Date du bandeau bureau, écrite comme la mention de lieu et date d'un courrier
-    // (« Paris, le 5 août 2026 ») — le rendu italique + filet doré est dans style.css.
-    // LIEU_COURRIER est le seul endroit où changer la ville du cabinet.
-    const LIEU_COURRIER = 'Paris';
+    // Date du bandeau bureau : jour de la semaine en tête, sans mention de lieu (une ville en dur
+    // se démentirait au premier déménagement). Le rendu — italique blanc précédé d'un filet doré
+    // — est dans style.css. `toLocaleDateString` rend le jour en minuscule (« mercredi 5 août
+    // 2026 ») : la capitale initiale se pose ici, pas en CSS, car `text-transform: capitalize`
+    // capitaliserait AUSSI le mois (« Mercredi 5 Août 2026 »).
     const dtDate = document.querySelector('.dt-date');
     if (dtDate && !dtDate.textContent) {
-      const jour = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-      dtDate.textContent = `${LIEU_COURRIER}, le ${jour}`;
+      const jour = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      dtDate.textContent = jour.charAt(0).toUpperCase() + jour.slice(1);
     }
   }
 

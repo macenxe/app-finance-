@@ -1110,15 +1110,23 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
   .top-nav-desc { font-size: 10.5px; font-weight: 400; color: #6b6253; margin-top: 1px; }
   .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
-  /* Date du jour en mention de courrier — « Paris, le 5 août 2026 » en Spectral italique blanc.
-     Elle était en 12px gris-bleu (#9aa6bd) sur fond marine, à la limite du lisible et sans rôle
-     clair ; cette forme lui donne le registre du cabinet plutôt que celui d'un widget
-     d'interface. Sans filet sous le texte : essayé en doré, la ligne alourdissait la mention
-     au lieu de la poser. Le lieu fait partie du texte — il se change dans renderNav (app.js). */
+  /* Date du jour en mention de courrier — « Mercredi 5 août 2026 » en Spectral italique blanc,
+     précédée d'un filet doré vertical qui la détache des onglets. Elle était en 12px gris-bleu
+     (#9aa6bd) sur fond marine, à la limite du lisible et sans rôle clair ; cette forme lui donne
+     le registre du cabinet plutôt que celui d'un widget d'interface.
+     Filet en ::before et non en border-left : il ne fait que 30px de haut (pas toute la hauteur
+     de la ligne) et s'estompe aux deux bouts, ce qu'une bordure ne sait pas faire. Le texte,
+     lui, est écrit par renderNav (app.js). */
   .dt-date {
+    position: relative; padding-left: 14px;
     font-family: 'Spectral', serif; font-style: italic;
     font-size: 14.5px; font-weight: 400; line-height: 1.2; color: #fff; white-space: nowrap;
     -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .dt-date::before {
+    content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 30px;
+    background: linear-gradient(to bottom, rgba(201,169,106,0), #c9a96a 35%, #c9a96a 65%, rgba(201,169,106,0));
   }
   /* Bandeau légal : redondant sur bureau (déjà visible au premier chargement), retiré pour
      rendre au tableau de bord la hauteur qu'il occupait. Reste affiché sur mobile. */
