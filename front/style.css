@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+/* L'axe italique de Spectral (`ital,wght@1,400`) n'est chargé que depuis l'ajout de la date du
+   bandeau bureau, écrite en italique comme la mention de lieu et date d'un courrier. Sans lui,
+   le navigateur SYNTHÉTISE l'italique en penchant les glyphes droits — un faux italique aux
+   liaisons cassées, très visible sur un serif. */
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #fbfaf7; color: #3a3d42; }
@@ -1106,7 +1110,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .top-nav-item.active:hover { background: #f7f4ec; color: #16304f; }
   .top-nav-desc { font-size: 10.5px; font-weight: 400; color: #6b6253; margin-top: 1px; }
   .dt-right { display: flex; align-items: center; margin-left: auto; flex: none; }
-  .dt-date { font-size: 12px; color: #9aa6bd; white-space: nowrap; }
+  /* Date du jour en mention de courrier — « Paris, le 5 août 2026 » en Spectral italique blanc.
+     Elle était en 12px gris-bleu (#9aa6bd) sur fond marine, à la limite du lisible et sans rôle
+     clair ; cette forme lui donne le registre du cabinet plutôt que celui d'un widget
+     d'interface. Sans filet sous le texte : essayé en doré, la ligne alourdissait la mention
+     au lieu de la poser. Le lieu fait partie du texte — il se change dans renderNav (app.js). */
+  .dt-date {
+    font-family: 'Spectral', serif; font-style: italic;
+    font-size: 14.5px; font-weight: 400; line-height: 1.2; color: #fff; white-space: nowrap;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
   /* Bandeau légal : redondant sur bureau (déjà visible au premier chargement), retiré pour
      rendre au tableau de bord la hauteur qu'il occupait. Reste affiché sur mobile. */
   #footer { display: none; }
@@ -1330,6 +1343,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      Le sélecteur `.ac-legend + .uc-sort-banner` limite le centrage à l'Autocall : la page Fonds
      partage .uc-sort-banner mais n'a pas de légende, son bandeau reste donc aligné à gauche. */
   .ac-legend { flex-wrap: wrap; overflow-x: visible; justify-content: center; gap: 5px 12px; margin-bottom: 9px; }
+  /* La légende décrit la frise : elle se lit au même corps que les libellés qu'elle explique. */
+  .ac-legend-item { font-size: 11.5px; }
   /* `justify-content` et non `text-align` : .uc-sort-banner est un conteneur flex, son texte nu
      y devient un élément flex anonyme que text-align ne déplace pas (vérifié : calculé à
      `center` sans effet visible). */
@@ -1414,7 +1429,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      selon le navigateur et l'OS, une valeur en dur désalignerait les 4 colonnes de droite. */
   .uc-list-head {
     padding: 0 calc(23px + var(--uc-gouttiere, 0px)) 6px 19px; align-items: end;
-    font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
+    /* 9,5px et pas 10 : à 10px, « Secteur principal » réclame 112px pour une colonne de 106 et
+       mord sur la gouttière voisine. Même valeur sur .ac-list-head, les deux tableaux se lisent
+       l'un après l'autre. */
+    font-size: 9.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
   }
   .uc-list-head span:not(:first-child) { text-align: right; }
   /* Chaque titre trie sa colonne : il doit se donner pour cliquable (curseur, survol) sans
@@ -1508,24 +1526,43 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .uc-perf-5a      { order: 11; }
   /* Date du dernier cours, en fin de ligne : une donnée de fraîcheur, pas une performance —
      d'où le gris et l'absence de couleur de sens. */
-  .uc-maj          { order: 12; display: block; text-align: right; font-size: 11px; color: #a99e88; }
+  .uc-maj          { order: 12; display: block; text-align: right; font-size: 11.5px; color: #a99e88; }
   /* Colonnes de texte : même gabarit, l'ellipse en bout de cellule plutôt qu'un débordement. */
   .uc-societe, .uc-cat, .uc-secteur {
-    display: block; min-width: 0; font-size: 11.5px; color: #6b6e73;
+    display: block; min-width: 0; font-size: 12px; color: #6b6e73;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
+  /* Padding resserré à 6px : à 10,5px de texte, « Actions thématique » réclamait 120px pour une
+     colonne de 110 et passait en ellipse. Les 2px repris à la pastille le font tenir au pixel. */
   .uc-cat-badge {
-    display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px;
+    display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 6px;
     border-radius: 3px; background: #e8edf4; color: #4a6080; white-space: nowrap;
   }
+  /* Code couleur des catégories, gradué par NIVEAU DE RISQUE de la classe d'actifs — même
+     principe que les familles d'autocalls (.ac-fam--cap / --cms), mais ici les quatre teintes se
+     lisent comme une échelle : vert (obligataire, le moins exposé) › bleu (mixte / flexible) ›
+     doré (actions) › terracotta (actions thématique, le plus concentré). La règle neutre
+     ci-dessus reste le repli d'une catégorie inconnue (voir CAT_RISQUE dans pages.js).
+     Teintes désaturées volontairement : le vert et le rouge vifs de la charte disent « gagne »
+     et « perd » dans les colonnes de performance juste à droite — une pastille de classe
+     d'actifs ne doit pas se lire comme un jugement de performance. Le SRI propre à chaque fonds
+     garde sa colonne : la pastille gradue la CATÉGORIE, pas le fonds.
+     À écrire APRÈS .uc-cat-badge et dans le même bloc : à spécificité égale, c'est l'ordre du
+     fichier qui tranche, et la règle neutre du bureau annulait ces teintes depuis la base. */
+  .uc-cat-badge--oblig      { background: #e3efe7; color: #2e6a4b; }
+  .uc-cat-badge--mixte      { background: #e8edf4; color: #4a6080; }
+  /* #7d6026 et pas #86682c : le doré plus clair tombait à 4,44 de contraste sur son fond,
+     sous les 4,5 exigés à cette taille de texte. Les quatre teintes sont désormais ≥ 4,9. */
+  .uc-cat-badge--actions    { background: #f6ecd8; color: #7d6026; }
+  .uc-cat-badge--thematique { background: #f7e3dc; color: #9c4a33; }
   /* SRI en clair (« 2/7 ») plutôt qu'en frise de pastilles : la note se lit sans la compter, et
      la colonne passe de 62 à 44px. La frise reste sur la carte mobile, où elle a la place. */
   .srri-bar { display: none; }
-  .uc-sri-txt { display: inline; font-size: 11.5px; font-weight: 600; color: #4a4f57; }
+  .uc-sri-txt { display: inline; font-size: 12px; font-weight: 600; color: #4a4f57; }
   /* La note Morningstar se lit comme une barre : les étoiles non attribuées restent visibles en
      teinte éteinte, sinon une note de 2 et une note de 5 ont la même longueur apparente. */
   .uc-note-cell { display: block; text-align: right; }
-  .uc-note { font-size: 12px; letter-spacing: .5px; color: #c9a96a; white-space: nowrap; }
+  .uc-note { font-size: 12.5px; letter-spacing: .5px; color: #c9a96a; white-space: nowrap; }
   .uc-note-vide { color: #e6e0d2; }
   /* Le libellé « SRI » est déjà en tête de colonne : le répéter sur chaque ligne débordait de
      la cellule (17px de texte + 60px de pastilles pour 62px) et mordait sur la colonne voisine. */
@@ -1538,13 +1575,14 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .uc-perf-n1, .uc-perf-3a, .uc-perf-5a { display: block; }
   .uc-item-perf, .uc-perf-an, .uc-perf-txt {
     display: block; height: auto; padding: 0; border-radius: 0; background: none;
-    font-size: 11.5px; font-weight: 700; color: #9a8f7a; text-align: right;
+    font-size: 12.5px; font-weight: 700; color: #9a8f7a; text-align: right;
   }
   .uc-item-perf.up, .uc-perf-an.up, .uc-perf-txt.up { background: none; color: #1d6f4c; }
   .uc-item-perf.dn, .uc-perf-an.dn, .uc-perf-txt.dn { background: none; color: #9a3535; }
-  /* 12,5px : à 1280px de large, la colonne des noms fait 215px et « Pictet Clean Energy
-     Transition P EUR » en réclame 205 à cette taille (213 à 13px, donc l'ellipse). */
-  .uc-item-nom { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* 13,5px : le nom est la seule colonne à taille de lecture, les autres sont des données
+     secondaires. Les noms les plus longs (« Pictet Clean Energy Transition P EUR ») passent en
+     ellipse sous ~1330px — l'ISIN et le nom complet restent dans l'info-bulle de la ligne. */
+  .uc-item-nom { font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   /* Une seule ligne : l'ISIN et la pastille de catégorie sortent de la ligne (ils demandaient
      130px pour rien de plus que ce que disent déjà le nom, les filtres et la fiche de droite).
      L'ISIN reste accessible en info-bulle de la ligne. */
@@ -1604,7 +1642,7 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-list-head {
     display: grid;
     padding: 0 calc(23px + var(--ac-gouttiere, 0px)) 6px 19px; align-items: end;
-    font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
+    font-size: 9.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #a99e88;
   }
   .ac-list-head span:not(:first-child) { text-align: right; }
   /* Type, sous-jacent et frise sont du texte ou un graphique, pas des nombres : titres à gauche. */
@@ -1620,18 +1658,23 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-list { gap: 5px; }
   .ac-card--rappele { cursor: default; }
   .ac-card-left, .ac-card-top, .ac-card-titre, .ac-info { display: contents; }
-  .ac-card-nom          { order: 1; font-size: 13px; }
-  .ac-fam               { order: 2; display: inline-block; justify-self: start; font-size: 10px; font-weight: 700;
+  /* Même typographie que le tableau des fonds : le nom de produit y est en IBM Plex Sans 13,5px
+     et non en Spectral. Deux tableaux de même facture, lus l'un après l'autre, ne doivent pas
+     changer de police de ligne en ligne — le serif reste au titre de la fiche. */
+  .ac-card-nom          { order: 1; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 13.5px; }
+  .ac-fam               { order: 2; display: inline-block; justify-self: start; font-size: 10.5px; font-weight: 700;
                           padding: 2px 7px; border-radius: 3px; background: #e8edf4; color: #4a6080; letter-spacing: .02em; }
   .ac-fam--cap          { background: #eaf0e8; color: #4a6a4a; }
   .ac-fam--cms          { background: #f3ede1; color: #8a6f3c; }
-  .ac-card-sj           { order: 3; margin-top: 0; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; }
-  .ac-card-protection   { margin-left: 0; font-size: 10px; }
+  /* 12px : même corps que les colonnes de texte secondaire du tableau des fonds
+     (société / catégorie / secteur). */
+  .ac-card-sj           { order: 3; margin-top: 0; font-size: 12px; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; }
+  .ac-card-protection   { margin-left: 0; font-size: 10.5px; }
   .ac-bar-row           { order: 4; }
   .ac-bar-row--vide     { display: flex; }
-  .ac-bar-vide          { font-size: 10.5px; color: #b9b2a4; font-style: italic; }
+  .ac-bar-vide          { font-size: 11px; color: #b9b2a4; font-style: italic; }
   .ac-info-statut       { order: 5; margin-top: 0; justify-self: end; }
-  .ac-ecart             { order: 6; display: block; text-align: right; font-size: 11.5px; font-weight: 600;
+  .ac-ecart             { order: 6; display: block; text-align: right; font-size: 12.5px; font-weight: 600;
                           font-variant-numeric: tabular-nums; }
   .ac-ecart--vert       { color: #1d6f4c; }
   .ac-ecart--orange     { color: #b4701e; }
@@ -1653,11 +1696,13 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-card--rappele .ac-info-row--constat {
     flex-direction: column; align-items: flex-end; justify-content: center; gap: 0; flex-wrap: nowrap;
   }
-  .ac-card--rappele .ac-info-label { display: block; font-size: 8.5px; line-height: 1.35; }
+  .ac-card--rappele .ac-info-label { display: block; font-size: 9px; line-height: 1.35; }
   .ac-card--rappele .ac-info-val { line-height: 1.25; }
-  .ac-statut-pill { font-size: 10.5px; padding: 4px 11px; }
-  .ac-info-row--coupon .ac-info-val { font-size: 12px; }
-  .ac-info-row--constat .ac-info-val { font-size: 11.5px; }
+  .ac-statut-pill { font-size: 11px; padding: 4px 11px; }
+  /* Coupon en IBM Plex Sans comme les colonnes de performance du tableau des fonds : c'est une
+     donnée chiffrée de tableau, pas un titre — voir .ac-card-nom plus haut. */
+  .ac-info-row--coupon .ac-info-val { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; }
+  .ac-info-row--constat .ac-info-val { font-size: 12px; }
 
   /* Frise compactée pour tenir dans une ligne de tableau : mêmes repères et mêmes valeurs que
      la grande frise, en plus petit. Les `top` sont recalculés ensemble — l'axe passe de 24 à
@@ -1668,10 +1713,15 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-list .ac-bar-loss   { top: 19px; height: 5px; }
   .ac-list .ac-bar-mark   { top: 16px; }
   .ac-list .ac-bar-mark-tick  { height: 12px; }
-  .ac-list .ac-bar-mark-label { font-size: 8.5px; margin-top: 2px; }
+  /* Valeurs de barrières et badge de niveau : ce sont les chiffres les plus consultés de la
+     ligne, ils étaient les plus petits du tableau (8,5 et 9,5px). Remontés à 10 et 11px — c'est
+     l'écart entre deux libellés voisins qui plafonne la taille : mesuré 3,1px à 1280 (5,8px à
+     8,5px de texte), 5,6px à 1366, 14,7px à 1920. Sous 1120px on redescend à 8,5px, voir le
+     bloc dédié en fin de fichier. */
+  .ac-list .ac-bar-mark-label { font-size: 10px; margin-top: 2px; }
   .ac-list .ac-bar-mark--haut .ac-bar-mark-label { bottom: calc(100% + 2px); }
   .ac-list .ac-bar-niveau { top: 22px; }
-  .ac-list .ac-bar-niveau-val { font-size: 9.5px; padding: 0 5px; bottom: calc(100% + 4px); }
+  .ac-list .ac-bar-niveau-val { font-size: 11px; padding: 0 5px; bottom: calc(100% + 4px); }
 
   .ac-card--actif { border-color: #16304f; box-shadow: 0 2px 10px rgba(22,48,79,.10); }
 
@@ -2116,9 +2166,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 }
 
 /* Fenêtre bureau étroite (navigateur en demi-écran, écran 1024) : sous ~1276px, les 11 colonnes
-   ne tiennent plus sans couper les noms de fonds (le nom le plus long garde 26px de marge à
-   1280, d'où le seuil ; il était à 1250 avant que la colonne « Catégorie » ne passe en toutes
-   lettres). Le seuil est volontairement pris avec 20px de marge : à densité d'affichage
+   ne tiennent plus sans couper les noms de fonds (le nom le plus long garde 17px de marge à
+   1280, d'où le seuil — 26px tant que le nom était à 13px, 17 depuis son passage à 13,5 ; il
+   était à 1250 avant que la colonne « Catégorie » ne passe en toutes lettres).
+   Le seuil est volontairement pris avec 20px de marge : à densité d'affichage
    fractionnaire (dpr 1.5), la largeur de viewport comparée par le @media ne tombe pas sur
    l'entier renvoyé par innerWidth, une valeur au pixel près se décalerait d'un cran.
    Cèdent alors la société de gestion et la catégorie —
@@ -2158,4 +2209,15 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-list-head { padding: 0 calc(19px + var(--ac-gouttiere, 0px)) 6px 15px; }
   .ac-fam,
   .ac-list-head span:nth-child(2) { display: none; }
+}
+
+/* Fenêtre plus étroite encore : la frise reprend ses libellés d'origine (8,5 / 9,5px). Deux
+   barrières voisines ne sont séparées que par ce qui reste de la colonne — mesuré à 1100px,
+   l'écart entre deux libellés tombe à 0,3px à 10px de texte (3px à 8,5px), et ils se recouvrent
+   sous ~1095. Le corps agrandi n'a donc lieu d'être qu'au-dessus de ce seuil, pris à 1120 pour
+   la même raison que les autres : la largeur comparée par le @media ne tombe pas sur l'entier
+   d'innerWidth à densité d'affichage fractionnaire. */
+@media (min-width: 641px) and (max-width: 1120px) {
+  .ac-list .ac-bar-mark-label { font-size: 8.5px; }
+  .ac-list .ac-bar-niveau-val { font-size: 9.5px; }
 }

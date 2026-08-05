@@ -260,9 +260,14 @@ const App = (() => {
         </div>`;
       }).join('');
     }
+    // Date du bandeau bureau, écrite comme la mention de lieu et date d'un courrier
+    // (« Paris, le 5 août 2026 ») — le rendu italique + filet doré est dans style.css.
+    // LIEU_COURRIER est le seul endroit où changer la ville du cabinet.
+    const LIEU_COURRIER = 'Paris';
     const dtDate = document.querySelector('.dt-date');
     if (dtDate && !dtDate.textContent) {
-      dtDate.textContent = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      const jour = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      dtDate.textContent = `${LIEU_COURRIER}, le ${jour}`;
     }
   }
 

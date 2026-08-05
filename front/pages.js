@@ -1695,6 +1695,14 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
     'Obligataire flexible':'Obligataire',
   };
   const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
+  // Clé de teinte de la pastille de catégorie, du moins exposé au plus exposé. Les libellés sont
+  // ceux de SORTIE de CAT_MAP (donc ceux affichés), pas les catégories brutes du catalogue.
+  const CAT_RISQUE = {
+    'Obligataire':        'oblig',
+    'Mixte / Flexible':   'mixte',
+    'Actions':            'actions',
+    'Actions thématique': 'thematique',
+  };
   const anneeN = new Date().getFullYear();
   const anneeN1 = anneeN - 1;
   const hasPerfs = Object.keys(ucPerfs).length > 0;
@@ -1896,6 +1904,10 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           // Nom de catégorie en toutes lettres (« Obligataire », pas « Oblig. ») : c'est une
           // colonne de lecture, pas une pastille de filtre, et la largeur le permet.
           const catLabel = CAT_MAP[u.categorie] || u.categorie;
+          // Teinte de la pastille de catégorie : échelle de risque de la classe d'actifs
+          // (obligataire › mixte › actions › actions thématique). Voir .uc-cat-badge--* dans
+          // style.css. Une catégorie inconnue garde la pastille neutre.
+          const catCle = CAT_RISQUE[catLabel] || '';
           const filterLabel = u.nom.includes('Conservateur') ? 'C'
             : CAT_MAP[u.categorie] === 'Actions thématique' ? 'Thématique'
             : CAT_MAP[u.categorie] === 'Actions'            ? 'Actions'
@@ -1910,7 +1922,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
               <div class="uc-item-isin tnum">${u.isin}<span class="uc-filtre-badge">${filterLabel}</span></div>
             </div>
             <span class="uc-societe" title="${escHtml(meta.societe || '')}">${escHtml(societeCourte(meta.societe))}</span>
-            <span class="uc-cat"><span class="uc-cat-badge">${catLabel}</span></span>
+            <span class="uc-cat"><span class="uc-cat-badge${catCle ? ' uc-cat-badge--' + catCle : ''}">${catLabel}</span></span>
             <span class="uc-secteur"${sect ? ` title="Secteur le plus représenté : ${Math.round(sect.pct)} % de la poche actions du fonds"` : ''}>${sect ? escHtml(sect.nom) : ''}</span>
             <div class="uc-item-right">
               ${perfBadge(u.isin, ucPerfs, 'ytd')}
