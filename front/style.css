@@ -1540,29 +1540,32 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
     display: block; min-width: 0; font-size: 12px; color: #6b6e73;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
-  /* Padding resserré à 6px : à 10,5px de texte, « Actions thématique » réclamait 120px pour une
-     colonne de 110 et passait en ellipse. Les 2px repris à la pastille le font tenir au pixel. */
+  /* Pastille en contour fin sur fond blanc plutôt qu'en aplat : quatre aplats colorés alourdis-
+     saient la colonne, le filet teinté dit la même chose en retrait.
+     Padding 5px et non 6 : la bordure d'1px ajoute 2px de large, et « Actions thématique » tient
+     au pixel près dans sa colonne de 110px (il passait en ellipse à 120). Le total padding +
+     bordure reste donc de 6px de chaque côté — toute retouche de l'un se reprend sur l'autre. */
   .uc-cat-badge {
-    display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 6px;
-    border-radius: 3px; background: #e8edf4; color: #4a6080; white-space: nowrap;
+    display: inline-block; font-size: 10.5px; font-weight: 600; padding: 2px 5px;
+    border-radius: 3px; background: #fff; border: 1px solid #d7dde7; color: #4a6080;
+    white-space: nowrap;
   }
-  /* Code couleur des catégories, gradué par NIVEAU DE RISQUE de la classe d'actifs — même
-     principe que les familles d'autocalls (.ac-fam--cap / --cms), mais ici les quatre teintes se
-     lisent comme une échelle : vert (obligataire, le moins exposé) › bleu (mixte / flexible) ›
-     doré (actions) › terracotta (actions thématique, le plus concentré). La règle neutre
-     ci-dessus reste le repli d'une catégorie inconnue (voir CAT_RISQUE dans pages.js).
+  /* Code couleur des catégories (filet + texte), gradué par NIVEAU DE RISQUE de la classe
+     d'actifs — même principe que les familles d'autocalls (.ac-fam--cap / --cms), mais ici les
+     quatre teintes se lisent comme une échelle : vert (obligataire, le moins exposé) › bleu
+     (mixte / flexible) › doré (actions) › terracotta (actions thématique, le plus concentré).
+     La règle neutre ci-dessus reste le repli d'une catégorie inconnue (voir CAT_RISQUE dans
+     pages.js).
      Teintes désaturées volontairement : le vert et le rouge vifs de la charte disent « gagne »
      et « perd » dans les colonnes de performance juste à droite — une pastille de classe
      d'actifs ne doit pas se lire comme un jugement de performance. Le SRI propre à chaque fonds
      garde sa colonne : la pastille gradue la CATÉGORIE, pas le fonds.
      À écrire APRÈS .uc-cat-badge et dans le même bloc : à spécificité égale, c'est l'ordre du
      fichier qui tranche, et la règle neutre du bureau annulait ces teintes depuis la base. */
-  .uc-cat-badge--oblig      { background: #e3efe7; color: #2e6a4b; }
-  .uc-cat-badge--mixte      { background: #e8edf4; color: #4a6080; }
-  /* #7d6026 et pas #86682c : le doré plus clair tombait à 4,44 de contraste sur son fond,
-     sous les 4,5 exigés à cette taille de texte. Les quatre teintes sont désormais ≥ 4,9. */
-  .uc-cat-badge--actions    { background: #f6ecd8; color: #7d6026; }
-  .uc-cat-badge--thematique { background: #f7e3dc; color: #9c4a33; }
+  .uc-cat-badge--oblig      { border-color: #bcdbc8; color: #417a5d; }
+  .uc-cat-badge--mixte      { border-color: #c6d3e4; color: #556f92; }
+  .uc-cat-badge--actions    { border-color: #e4d2a8; color: #87703c; }
+  .uc-cat-badge--thematique { border-color: #eec8ba; color: #a2604c; }
   /* SRI en clair (« 2/7 ») plutôt qu'en frise de pastilles : la note se lit sans la compter, et
      la colonne passe de 62 à 44px. La frise reste sur la carte mobile, où elle a la place. */
   .srri-bar { display: none; }
@@ -1670,10 +1673,18 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      et non en Spectral. Deux tableaux de même facture, lus l'un après l'autre, ne doivent pas
      changer de police de ligne en ligne — le serif reste au titre de la fiche. */
   .ac-card-nom          { order: 1; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 13.5px; }
-  .ac-fam               { order: 2; display: inline-block; justify-self: start; font-size: 10.5px; font-weight: 700;
-                          padding: 2px 7px; border-radius: 3px; background: #e8edf4; color: #4a6080; letter-spacing: .02em; }
-  .ac-fam--cap          { background: #eaf0e8; color: #4a6a4a; }
-  .ac-fam--cms          { background: #f3ede1; color: #8a6f3c; }
+  /* Familles d'autocalls : même pastille que les catégories de fonds (contour fin sur blanc) et
+     même échelle de teintes, graduée par le RISQUE EN CAPITAL — vert CMS (capital garanti) ›
+     doré CAP (protection 40 à 60 %) › terracotta Athena (barrière de 50 à 70 %, le plus exposé).
+     Les deux tableaux se lisent l'un après l'autre : une pastille verte doit y vouloir dire la
+     même chose. `--autre` (famille non reconnue) garde le filet neutre de la règle de base.
+     Padding 6px et non 7 : la bordure d'1px ajoute 2px de large, cf. .uc-cat-badge. */
+  .ac-fam               { order: 2; display: inline-block; justify-self: start; font-size: 10.5px; font-weight: 600;
+                          padding: 2px 6px; border-radius: 3px; background: #fff;
+                          border: 1px solid #d7dde7; color: #4a6080; letter-spacing: .02em; }
+  .ac-fam--cms          { border-color: #bcdbc8; color: #417a5d; }
+  .ac-fam--cap          { border-color: #e4d2a8; color: #87703c; }
+  .ac-fam--athena       { border-color: #eec8ba; color: #a2604c; }
   /* 12px : même corps que les colonnes de texte secondaire du tableau des fonds
      (société / catégorie / secteur). */
   .ac-card-sj           { order: 3; margin-top: 0; font-size: 12px; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; }
