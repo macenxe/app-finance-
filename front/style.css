@@ -1696,7 +1696,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   .ac-bar-row           { order: 4; }
   .ac-bar-row--vide     { display: flex; }
   .ac-bar-vide          { font-size: 11px; color: #b9b2a4; font-style: italic; }
-  .ac-info-statut       { order: 5; margin-top: 0; justify-self: end; }
+  /* Colonne de texte : calée à gauche comme son titre (cf. `texte: true` dans AC_COLONNES). */
+  .ac-info-statut       { order: 5; margin-top: 0; justify-self: start; }
   .ac-ecart             { order: 6; display: block; text-align: right; font-size: 12.5px; font-weight: 600;
                           font-variant-numeric: tabular-nums; }
   .ac-ecart--vert       { color: #1d6f4c; }

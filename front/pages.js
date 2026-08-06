@@ -1250,8 +1250,15 @@ const AC_COLONNES = [
   { cle: 'famille',  label: 'Type',         texte: true },
   { cle: 'sj',       label: 'Sous-jacent',  texte: true },
   { cle: 'position', label: 'Position',     texte: true },
-  { cle: 'statut',   label: 'Statut' },
-  { cle: 'ecart',    label: 'Écart rappel' },
+  // Le statut est un mot, pas un nombre : à gauche comme Produit/Type/Sous-jacent, en-tête compris
+  // (même convention que le tableau des fonds). Aligné à droite, ses libellés de longueurs
+  // inégales — « Neutre », « Zone rappel » — donnaient une colonne au bord gauche en dents de scie.
+  { cle: 'statut',   label: 'Statut',       texte: true },
+  // « Écart » et non « Écart rappel » : à 9,5px le titre long mesurait 74px pour une colonne de 76
+  // (72 sous 1180px) — il la remplissait au pixel près et paraissait donc collé à gauche alors que
+  // ses valeurs sont à droite. Élargir la colonne aurait tronqué les noms de produits à 1024px
+  // (mesuré : 4 noms, 5px de trop) ; le sens complet reste dans l'info-bulle de tri.
+  { cle: 'ecart',    label: 'Écart' },
   { cle: 'coupon',   label: 'Coupon' },
   { cle: 'constat',  label: 'Constat' },
 ];
