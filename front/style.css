@@ -389,10 +389,14 @@ nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 2px; flex:
 .ac-info-row--constat .ac-info-val { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; font-weight: 600; color: #6b6e73; }
 .ac-info-sub { font-size: 10.5px; color: #9a8f7a; }
 .ac-info-statut { margin-top: 4px; }
-.ac-statut-pill { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 5px 14px; border-radius: 14px; white-space: nowrap; }
-.ac-statut-pill.green { background: #d4eddf; color: #1d6f4c; }
-.ac-statut-pill.red   { background: #f5dada; color: #9a3535; }
-.ac-statut-pill.grey  { background: #f0ece4; color: #9a9585; }
+/* Statut : la couleur du mot suffit, sans boîte. La pastille pleine d'origine (fond, rayon 14px,
+   graisse 700) était la seule forme « bouton » de la ligne, à côté des badges Type au contour fin
+   — elle attirait l'œil avant le nom du produit, et c'était la cellule la plus large du tableau. */
+.ac-statut-pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .08em;
+                  text-transform: uppercase; white-space: nowrap; }
+.ac-statut-pill.green { color: #1d6f4c; }
+.ac-statut-pill.red   { color: #9a3535; }
+.ac-statut-pill.grey  { color: #a99e88; }
 
 /* ── Page Autocall : barre de barrières ── */
 .ac-bar-row { display: flex; align-items: center; gap: 10px; }
@@ -1717,7 +1721,8 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   }
   .ac-card--rappele .ac-info-label { display: block; font-size: 9px; line-height: 1.35; }
   .ac-card--rappele .ac-info-val { line-height: 1.25; }
-  .ac-statut-pill { font-size: 11px; padding: 4px 11px; }
+  /* Plus de surcharge de taille ici : le statut n'existe qu'en bureau (le bloc mobile masque
+     .ac-info-statut), sa définition tient donc entièrement dans la règle de base. */
   /* Coupon en IBM Plex Sans comme les colonnes de performance du tableau des fonds : c'est une
      donnée chiffrée de tableau, pas un titre — voir .ac-card-nom plus haut. */
   .ac-info-row--coupon .ac-info-val { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 12.5px; font-weight: 700; }
