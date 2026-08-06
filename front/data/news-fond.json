@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-06T13:01:53.754Z",
+ "genere": "2026-08-06T15:25:39.929Z",
  "globales": [
   {
    "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
@@ -76,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "Rheinmetall mise sur d'autres contrats après l'abandon du projet de frégates par Berlin - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 06 Aug 2026 13:38:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNd3JRTnRZemdmTklqQUxLWmxxdW9NOEh3X1dRR18wUk1LSjExa0U3TEY1R1U5QmtmT29yaHFGR2ZoR3ZCVEpMV1ZhcTl6T2Z3VjRlRnhjbXNNTk56MkpodWtsbl9tRE90MGFpakpKX1dXaWpwaHRRYWVfeGhLTzNLVlBOVXUzOGVBb3p4UUJGc0wycFZfZmpLLXBrVDZYMlJBdTNTOWZYdkRsRXZ6RjhFVUFCWXFFVS1BTXNCVEg2bzhmZkstbEJoU1JhN2tKU09vTk5qSFBLMGJaVXZVRjMtQUtLeXltUnpLelVLajB4bjVQMVFySkJvM2xTd2tUQdIB_gFBVV95cUxNd3JRTnRZemdmTklqQUxLWmxxdW9NOEh3X1dRR18wUk1LSjExa0U3TEY1R1U5QmtmT29yaHFGR2ZoR3ZCVEpMV1ZhcTl6T2Z3VjRlRnhjbXNNTk56MkpodWtsbl9tRE90MGFpakpKX1dXaWpwaHRRYWVfeGhLTzNLVlBOVXUzOGVBb3p4UUJGc0wycFZfZmpLLXBrVDZYMlJBdTNTOWZYdkRsRXZ6RjhFVUFCWXFFVS1BTXNCVEg2bzhmZkstbEJoU1JhN2tKU09vTk5qSFBLMGJaVXZVRjMtQUtLeXltUnpLelVLajB4bjVQMVFySkJvM2xTd2tUQQ?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "ERAMET : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 06 Aug 2026 05:18:00 GMT",
@@ -112,15 +121,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "BNP PARIBAS : Les signaux haussiers sont intacts - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 03 Aug 2026 06:44:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUWZMTllkWmQ3aHR4SV8takVULUllam40WWY0THhFek9uSmtvUDZ6VkhhSWxMSkxTWWVNejlvZV91NEtLMXZTYUh6MklLdHpDR0lwRmNMVDlfLUx5dXZyYkt2ZTJEcUpHQTY5djhobjdFeEpLdDdtano0aEFUbFZKckpIZ2FoUDhBN0JSbWp5NnpQTHpZWDdvZG1NT1d5RWotZ085ZGR2SkRybDZQbm1wb0RjYl9LMks0MHFHWHpYZDlKZ9IBxwFBVV95cUxNejU2RERwdC0xWTIxdnBjeXBtTVFjMW9valhGMS1fWjRnTDdQcnNtbEU2MkpsMVVOR3NlMS1UaXNzakp3QXRrUzk0Wi1UcU1hMngwY29EZHNsclZpNXdmdDBWSDQtdi1EdElSV0RHcXc4WC1mM2xRUUFqcGxYZE5FcFRLSnF1TVh2RjhTOUhJQXNHbEEwWjc5bE9reTZWX3BZSmFicjFkWFBjM2oyUVNqNlhEM1JBQ0dFVXpRZnVqcU90VG82dzRr?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum - Capital.fr",
    "source": "Capital.fr",
    "date": "Sat, 01 Aug 2026 06:30:00 GMT",
@@ -141,29 +141,47 @@
  ],
  "eco": [
   {
-   "titre": "Etats-Unis: les inscriptions au chômage ont augmenté de 1.000 la semaine dernière",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 12:53:31 GMT",
-   "lien": "https://www.abcbourse.com/marches/etats-unis-les-inscriptions-au-chomage-ont-augmente-de-1000-la-semaine-dernier_701067",
-   "tag": "ABC Bourse",
+   "titre": "En guerre contre Google, Teads peine à convaincre Wall Street - Les Echos",
+   "source": "Les Echos",
+   "date": "Thu, 06 Aug 2026 15:16:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbVBQLTJfa0ZwZE52ZEtYNFVUY2kwNU9DTzZwcWNyUHpTWEU3RG9HZVpXNDNIbGY0SkJMWGxJRjlSX01CME9kTWk2eXBpR3gzeDhKV0JwTHp1Q1BIYlZPSk56SHJxaHV0QW1vQ3ZPdnlVeFRtZXlRYkdUTTNqcTRuVXByM3BYOWNMWlBaNUFkYTRJR2NwQkRicGpWVTZ6eHd0UVdzVWlrS2xSUkxPaGdFVUgxSQ?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Nouveau record en vue du Dow Jones, l'Europe aussi sur des sommets - Zonebourse Suisse",
+   "titre": "La banque centrale du Malawi maintient son taux directeur à 24 % - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Thu, 06 Aug 2026 12:49:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMUdTcGtqaGhxSXBoY2E4dnprMVN2NGN0b3RCUHl4TVZZV0JnNDRrOWtFa0VNa1c1OGhPTWJ3X0hMYVZjcVViUVQzdnQ3TGs1cUN3d19CYnRWeE9oYm5kSUQ3WlpLclhqRTZpanBtTFNEVEtfclUxNFVCOUUtSElwNE1vSzVrLWtBVzdSdmFLMFljUGg5T2M3X2Vuc255SXVxWjFKUnZXNUg4NHhWay1rMjd6LXFBRkhicmtyMnhLRmZPcHM?oc=5",
+   "date": "Thu, 06 Aug 2026 14:39:45 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObERPdXlNYXpqdDk2S3VjcEI1Y3I2cWJCNzJaRTU1YWhSYndTNy1TTWFlOTh0NUo2b3JRUU9SS1lJaDZjZ0ZsdmVMV0xWS3dRUFVTcUxoRHR1ekFIdXZtbDlvMmFNY0NhTnFBRlFYd3VVQVdxanVHVlVLZmtfUy1FUC1RSDQ0aHVjeFJON043TndLVUZfV1ZhUWdhXzVuUlFYSE44VDM0eFF6QXpkUGVmbWVnYlA1TTh4dV8tXzQyNUw?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les Bourses mondiales suspendues aux avancées géopolitiques, nouveaux records en Europe - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 06 Aug 2026 14:30:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQUUJfaU0zSjI3OW02Mzc4OWlEQzg3TmhRVTV4d1FYcGpkVHlGN2FPLWQwZjQ1alhmSFp3REVGdmpyS1ZZWlUzN3BDam1SVWpTMWloZ2hlYVRBa3ZLZzZPVVcxTkpTWWZNUTVpeGRlN2duVnc1WDRyVWJIXzI2eUdjdG5CSU1kbzM4ZEE3X3BmdThJaWRBb0k0SkE1X2VwcG5qTFVhWXJablNhOWItZ2o5bEh5WXRWQ3BXRmZTZGZiX3BfZTB0Qk56MTE2YzlYS2lHTm5zNS1jV2xRZHUya1dYUWI1eEFBX0ZJaFVyLXpzNHNpQjcyMjR30gH8AUFVX3lxTE5rV0I4TEVnMk5ZcVFUeGl2TzlIU1pjMzRKZ3BhdnRXTHNCYk93cVYtUUdIeF9wdUV4Q0FqV2JhNkhVLUhOY2t0S2ZwSkNiVXRwWHJyMV9EOS04LXVHNkFqeGFaa1M5VklaT0t5Z0dxRkNOSFBSWVBxTEEzOW5vYlhPd21YZkgtRnFTQ0tpMVlBMGJFajNDbGZSemZIUThEa2ZXMlc3ZU53UGY5Vk03bVE4eW9xa2I2MkoyV3l0LS1rR2xfTGh5OVlLYkFVa3dQT2VWcDJQODI5LU94ZDJtSjVhbGhwbUxUejVFQThXeXR5UC11V0FndGVaUGhsaw?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre jeudi: Sandisk, Western Digital, Meta, ConocoPhillips, Molson Coors - ABC Bourse",
+   "titre": "S&P 500 - Les actions à suivre jeudi: Sandisk, Western Digital, Meta, ConocoPhillips, Molson Coors, D-Wave, ionQ, Apollo",
    "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 12:48:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPelZ2b1NGWEdJekgtWUR2ZVpISF9wNzFON1Q4YkNOZEdsclYtSHRWY3VwNGFUVFhNWWxXU2NxRjVoRGpyeUJvUUZEa1UtSFJzcTdfeS03SmdKSnpBVTFHeU4xMVh2WnhrNzI0aFd0b2V3WTluNFh0eDRISVh5ZWwtNEZ5cTdZV1BDZ0NHaEVYSWUwMEhBekxkdk50eHJGWVE5b0xhSnYtZTd0b3ZjNzMzQjFEcEpNQQ?oc=5",
-   "tag": "bourse",
+   "date": "Thu, 06 Aug 2026 14:07:11 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-sandisk-western-digital-meta-conocophil_701070",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Etats-Unis: les inscriptions au chômage ont augmenté de 1.000 la semaine dernière",
+   "source": "ABC Bourse",
+   "date": "Thu, 06 Aug 2026 12:53:31 GMT",
+   "lien": "https://www.abcbourse.com/marches/etats-unis-les-inscriptions-au-chomage-ont-augmente-de-1000-la-semaine-dernier_701067",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -186,15 +204,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Bourse : l'Europe bat toujours des records dans l'espoir d'un accord - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 06 Aug 2026 12:39:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSFB2bGVtRURZdm1CaGVLbld6NzVvSXE3OGlKWjRVaUhTZFk3NkpmZzR1ODRjb1Nwb2J2Z1NyVDlMUGZGWlVHTjk2NkUzTDNLUC1NWnVUUF9CNU1xTFY4bUpDSm94V2VXdjM4Vkg0Q1FhVmpxcWc3MFpfNmJTSFcwbnhLVmY5SVZ3a3hQU3RtSllzRlJreTRKM3dNVmJic0FjVnh4UE0zY1FRY1U4ODhUWlBMRlFDZ2hQRnkwRmRzYVBQZXJYNF9JRUtSN2NRWTVIRkdaWXJocWtLeE5O0gHiAUFVX3lxTE1jU0phV1NhTDh0NUw2eVFETjFSTlVRMkdoZ016OEpxRXR4N3o2YlZSOVNEQkNmcFQ1TU1fMDdCdHpnNVE2QkNmekh5bXNwc0hGWkUyN0ZRQlBnU3dheHJocG5UYW96Z2ZrS0pIN0ktNDdUVEtKN1hCeWx0elFIZ0hFTUJnVThyYVpobElOWXd5ZGRSMno4LXpSYXNnLW42VUhNemdsQXRJSUd0ZHVFMGhCVHhWbWxjemdIWXZ2Y3RJckJjTjRQQ3RPZGJhZFUxQzZpM185ZlJ4dGFidGVrVHBzNGc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Égypte : l'inflation aurait grimpé à 15,6 % en juillet, selon un sondage - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Thu, 06 Aug 2026 12:02:20 GMT",
@@ -211,6 +220,15 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Kenvue n'atteint pas ses prévisions trimestrielles, l'inflation et les droits de douane pesant sur ses marges - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 06 Aug 2026 11:45:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPQ1BmWEpOSXlCc1pNSkNLUTZfUWhRNmRzRUdaTEd0aG4wOEFhcWUzeHZUTW5pajlkVHBRX3NNZXVkQmRLM0YtOHRkQUZUdkxBMFJaelpRZ2J2cDdGelgxODNiZHgyRU1scFRCa1MyUGw5NHAzbWpWSGhrZERMWVN0YXgwRVVLRmZCVThtMks3bkpXT1lxUjZaMndMQTlaZEFNXzRLbUxiUXBmc0tOYXd6ZXEyaXM0dHVTb2ZOdmtOcEQ2TGxlSkVIU2pwSHYxcUxJVG03RFZTU2N4T043RE9tR0xhbTY4M2NsN2JmNWtOVlh3MXRHeE1lTjdKZ0s4RlY4UzEzTW5GelppdU01cEN4YTQ5N2fSAZoCQVVfeXFMT1gwZDluUVJzNVJFY2l5WWdVTGp4N0FzazQzcWhlNF9UM3ZONlJiOVpuX3F3OW15QUdRNHVXSk1MeEpvVTNjWUZpNEhJd3poRWMwREZVdDhPOWNjVFdPLWllaDhVckZRVmtuX0lhV2VzUXplVDZ6eEJ0c1JrZmNuUGxqMnYwLXhleG02OUo3S3FPazdRbzFPdWFYVVpXanhzbzB6NlNUZUZWdE1sWlkxekdZQXV1bmJzY1dPeUdnYlZYSHFYN3EyV0tZUjFmNzJLVzlmUzFGSEd3b1pqS2F0eHNnWk9rZ0J6Y2hPMkJOLTB0aElmcTNNNktuNHpibmJSVFZFanVYdmVja3Qtb1FCdjNfSmZjVkN1cVRR?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Ghana : l'inflation ralentit en juillet, une première baisse depuis mars - Zonebourse Suisse",
@@ -337,24 +355,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "CORR: LE BRIEF MATINAL DU 6 août: L'Europe attendue en légère hausse, guettant des annonces sur une réouverture d'Ormuz",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 06:29:03 GMT",
-   "lien": "https://www.abcbourse.com/marches/corr-le-brief-matinal-du-6-aout-l-europe-attendue-en-legere-hausse-guettant-d_701046",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La gouverneure de la Fed Lisa Cook prête à relever les taux si l'inflation ne commence pas à ralentir - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 05 Aug 2026 20:42:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOTFdVeVhDSnZfQTNHRmhTeUQySkNBTDBmVGdCdjluVTBUakJLMnpMUmlOVURPTkUxRGhXNDZJd1R6djl1Q0wtTGV5NUlNN3NzbTVHVTQyQm5tMjI5RGJBdWJfR01FdjdSRnNldkVscld4ZDBnbXItc3ZGVHp5R1lFeGpCcWFtRmRFYWt2QnplT0xNUzRuNW9IWER5RjJ1RXAzUnI0cGYtMjhxaDFPbDNLQ1BXRHY2eVdsUXg0M0FLU3RHWm9QT2FsRFdSdVFVTlV1MkJ5Z0dJUGswMU5oZkJJTVBfcS1tdVlqXzFIQVpiUmRNU3pySVVucnhFTTFLYzFVeHJ3RHB6akR0ZWlLdWFJWm9zOE12STJUc21QVEtjMGp5MEnSAaMCQVVfeXFMTkxXVXlYQ0p2X0EzR0ZoU3lEMkpDQUwwZlRnQnY5blUwVGpCSzJ6TFJpTlVET05FMURoVzQ2SXdUenY5dUNMLUxleTVJTTdzc201R1U0MkJubTIyOURiQXViX0dNRXY3UkZzZXZFbHJXeGQwZ21yLXN2RlR6eUdZRXhqQnFhbUZkRWFrdkJ6ZU9MTVM0bjVvSFhEeUYydUVwM1JyNHBmLTI4cWgxT2wzS0NQV0R2NnlXbFF4NDNBS1N0R1pvUE9hbERXUnVRVU5VdTJCeWdHSVBrMDFOaGZCSU1QX3EtbXVZal8xSEFaYlJkTVN6cklVbnJ4RU0xS2MxVXhyd0RwempEdGVpS3VhSVpvczhNdkkyVHNtUFRLYzBqeTBJ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
