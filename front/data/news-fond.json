@@ -1,9 +1,9 @@
 {
- "genere": "2026-08-07T08:19:56.754Z",
+ "genere": "2026-08-07T10:08:06.745Z",
  "globales": [
   {
-   "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - TradingView",
-   "source": "TradingView",
+   "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - fr.tradingview.com",
+   "source": "fr.tradingview.com",
    "date": "Thu, 06 Aug 2026 14:32:41 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5UNjZ3dnFtbHZzX0RlWWIxLXdwaUNQS01uRjNPVHk5ZWVpSHJKMDI1UVRsSGN0aVZrZXZGODBXR2FRVmtMRmV5cWVxc0loSWlnOGdIckVvai1nV1FXcm9YUDl3?oc=5",
    "tag": "Inflation",
@@ -76,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ? - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Fri, 07 Aug 2026 05:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSThUaG5wRFdJOFhDM3JOeC1LYTA1RFNMVkh3emdiV0RucTNyQmJFUHpQRDREbEJ6SW5ENy1DM3ZoOXR2eGxFaVRramF6TnVQMFRtOF9DelJYOExISTc3OHZiRjFDTzcwV3Z6MFNGUVhSTUxoUm56RzNLR1p0R1NOd0UxSWNVeS0wRVRtYjlXRTFOWXRKTmxOT184LXhTYVh6dlVhc3FCTzkwbU4xM0g0QWdNNEhlY0ZlR2c4YUZ4N1N0VlVFM1NoSmFoQ0lvOHdneGNB?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Rheinmetall mise sur d'autres contrats après l'abandon du projet de frégates par Berlin - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 06 Aug 2026 13:38:41 GMT",
@@ -121,15 +130,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 01 Aug 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOREdLdlJmNXlhbml0cTJqSU5za0p5bXJkVFpzUUxPNTNvTmE5cElKc24wZG9aSjh4T0Y4anEwOGRnaWZRVVpWU0lsSlZlX3ZIUE1zYnZoNVVNZVdPekRxb2doTGJ2dGh4LTlLeHMwNzJ6VG9XSmd4UTB6YnhuSmdNOUF0VHkza2YzQlVUN1puYTBRWENRY0JqVGpkb3c1ODlvZTlTeTFLQUo5YWYtZGpDZFZpZWVhbTVIVWt0RUp6MWF0LWlrXzRNc1pSaE5aMUZwaHc?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Cac 40 : Les bénéfices du CAC 40 ont grimpé de 34% au premier semestre, à 73 milliards d'euros… Quels groupes ont dégagé les plus importants profits sur les six premiers mois de l'année? - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Sat, 01 Aug 2026 05:00:00 GMT",
@@ -141,38 +141,83 @@
  ],
  "eco": [
   {
-   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 08:11:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La banque centrale chinoise accroît ses réserves d'or pour le 21e mois consécutif - Zonebourse Suisse",
+   "titre": "Indonésie : le président n'a pas encore arrêté son choix pour la direction de la banque centrale, selon les médias locaux - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 08:10:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSHRVd3VKRnVvd3BOOXh3NkEyM05la2RKYnNjcXhCSXRIV1NwcUlhbHYxMF9MZ1Z5LW1kYnZZRHJFSWtpQ25hOWNGYlJMVXU3Q2pRODNEZUxELURnZlJVel9VTEUwWTM0U2hfSllxTGRKN01oejJ5c2V1MEMwTFJOWEZyR1pfV2xfdjhPVy1JNGljWUtSSDAwTy1iRDdNaXY0SmdIQjl1REROVUxYSHhxR2NMVTRTZkgwcm1CVGQtSmlLZUp4cUlqQ1otOEdzMG1vNS1hMk1QMk0?oc=5",
+   "date": "Fri, 07 Aug 2026 09:58:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPNGtNei1iR3dRb2VtdjVkTUMxRl80Tm9MZWhoUHp6RVE0a2FIMWZyLWUzRmpLTXctUHE0SnRLWHlOQzNsam43a094VndnczQyRG9RU0RkOEFjdnY5Q3JVcm0tTGUxcm1wRVAtQ0p0S0lpV3FKd1IxSk9QN0ZZZzlEUkRoNzh5NGx0TW5LU3V1bTlSUHRZUThaNlJDOTljTjRaTW5iOW55bVVQcFhjUWdld19KTTg5eXpvRFlmQjV6TlJZcGFabnZQemJLN3ZnMFRMZVY4bU93dDdGTnJXZzJ3NjJVcmtGSW81cmdzbkRB?oc=5",
    "tag": "banque centrale",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 08:05:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qTm15NEw5c0NZVzI1N0gyd1FRZlZSWmZWazNZcjZzRXdYSVBDaGhadFY1bHlwOHE2dEZQb2Y1TnBOY01pU3Y5VEh3TjZyemZEVVE?oc=5",
-   "tag": "CAC 40",
+   "titre": "Karina Kubelkova (Banque centrale tchèque) : la persistance de l'inflation sous-jacente reste la préoccupation majeure - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 09:55:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOY0UwdUc3Z2dLYnFLc091THlpblR1VTFKbEJvd3FveWkyVHpYdFJIYkJpMVJoVmJqX09pRVJUcENCUzNfMkZ2cE8yOHMzNkJrLXM4UXUxTEw5TUFjSFh1Ri12U0dKZUZUVVdiQlRRVGFaRlExbndYcE1fOVVWRjZFTmFacmZhYjFyOEFhQnUyWGJnRVlKVzF2UThxVzNzUVJITHpVZTNRd3QtUVZYTXpiZlVqdHREdjJwaTJOTXBpOWRra0tOV3BNcEQzVnMwZkh6SXUtMFpJZjYtM3FXSld0cGJlVklUSGhXSGd4ZQ?oc=5",
+   "tag": "banque centrale",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Pernod Ricard: franchit 69,80 euros et repasse au-dessus de la MM20, 85,60 en vue - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 08:00:39 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeE5peFhCVlFCbHhlblh3RkR1QUN4U181R3FoOS1oSkZRY09jQzNFNEUyYWJOZDRoSC1WSmNQSVNQZDZIN2lMRklBTkduQmhZN0tvUUU4Z0ZQdDhsU1FRMS1WM214bThrRFpTWGhNUFdzd2FrelhqRzJrVFBxc25hZGtYekpsbURQVnJnS0xlTjFEaFpJRmNyMmQtS3M3LUVnUlRsNXZZcUE4b1pYc3dxa3VJeUxBdE54UFhn?oc=5",
+   "titre": "Toujours en avance par rapport à 2025, Airbus voit ses livraisons ralentir en juillet mais ses commandes accélèrent grâce au salon aéronautique international de Farnborough",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 09:30:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/aeronautique/toujours-en-avance-par-rapport-a-2025-airbus-voit-ses-livraisons-ralentir-en-juillet-mais-ses-commandes-accelerent-grace-au-salon-aeronautique-international-de-farnborough_AD-202608070261.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "CAC 40 : la Bourse attend au tournant l’emploi aux États-Unis, les taux à long terme sont à surveiller - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Fri, 07 Aug 2026 09:29:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOV19TTFNwR2l0aHhCWWs0dUZaU25McFktUjZIMHhDUlZUaW0wNHM0eWhpSS0zSU1qQktEMm15VFp1ZUNhZjFBa0pSbW9GRkxpc0R5QXc4ZlBJLTE5OWxxcnF2dk9meXVCMFlmb1h3dzFJdlZpWjVHNmhIZDkyaVpZNTNGT091YkJrV3JoZnVXWjhBZTd1Y1Z6by1WUHN5TEpkdF9GM0RQYW5MRG9fOXNaR1Jtd0Jvcy1GOUo3Y0FFREJKbjFQQ19TTXVUNE85QkE3TzhDUk5ka0hzaWp4RmJyc1A0aw?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe progresse avant le rapport sur l'emploi américain - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 09:26:47 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUDdhd2tpdlkwaTFRU2h4b3BMbTBpNk05SzlOTUN2Z1FfNDNSelpnbjN1X0tCOFRzUDlUaER0V3NIVDhicWU3QkpWT1F3SXd1UzRRQllwS2pFalVsb3ZiWGNuMHVLUXlkZnlLLTlMZ2lpc3V2RmduY01mcnRrZC16WVktbW8wSUdDYkpSMFIzbm5DVHVuc2tER3VyQ0tPN19E?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe progresse avant le rapport sur l'emploi américain",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 09:26:47 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-progresse-avant-le-rapport-sur-l-emploi-americain_701107",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Inde : l'inflation de juillet probablement en hausse sous l'effet des prix alimentaires - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 08:48:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVVRGYzlaYk9fRWFvSTU0Z1poRFpHamZSRzVBUTFKYjhkUG0wOHlKZElqVU91QVk5b0M5R0JzQXpoT3duekJjMS1tdndKZ2lod25vTDltUktMLUdaR2xKQ1Z6OGNpRmc4c0VqaC1oU2c3VFR0dXhpT2VqZV9HTFNSYWpuNWZ3NnIzRi1TUHJhb3pvSmtLdEhPV1B4Q1FUSFgzeS1VakZjNTJ0OEJ6RHg4dGtsb25jT1pOdXA0dDlPanpOb0xBVldYVkp6OXdnUWVFMTh3T3V6bU1uYmFIdWc?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Musalem (Fed) exprime sa préférence pour une hausse des taux - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 08:47:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcUFaU25idFNJaTN2NVVYdHhzZTg2MDRsSXB1TmlRSDk1TVVweUJibklLamgzQmhrVXIyclhiaXIydkp6MjFLYUtxOHVpYkRZVlpCd0taLXFCQWJXSjdUc2NmdFdqcEwyUmptV0ZfajMtNVMtTXlvUEtWc19xZnc4MDdWYXhiRkt1R2V4ZnNyM3RpUHNpOE9paHlQSW56ZXFPdEFtOHdKZ3NMbEtKNDBJWXFtUG1YQmt6VEE?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Allemagne envisagerait de proposer la candidature de Nagel à la présidence de la BCE en remplacement de Lagarde - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 07 Aug 2026 08:20:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOLWY2ZnF3Tk5OTkxwUndGWEo0eFZwazZncjRQSUJSdXgxeG1SdXVvaEtVV1RYYkRNMXdRaVVzNWIzVkpRcUVxS3N6NURadi1RTDhjaVl2X1BZcEUxVjREQVFJSWMzaHZSRGJGQWRPd0RhODNzX1hGbGl3ZGNqblF6dXdwWFlfTDYtZHhKSWRfLU03ZWhOcVpxaV9XX0FteGYybGZlcTNja1RCOG1YdkRpTll2OElHelF6bVlUYTFRMm42bVNjZGVOVHJQN3F1bTR4eG1udHE2TzNMY004RS1SSUlZeVlhd3NuWnRiWUdQX19Qd2RmUURMb19BVFI2NFpvMmRCaVNISWVvdW9UNzVmMC1B?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -186,24 +231,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 07:59:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Stellantis : les analystes de Bernstein particulièrement inquiets sur les Etats-Unis, l'action en plus forte baisse du Cac 40 - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 07 Aug 2026 07:52:39 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNZzB6SjZPb21NLW9LRl9BZGx5NGNDb2FWZE9GdnJYYjJWQWZsMDQySW5SLV9FMmZqZ2tUeG53RllLTmxRNE11eWgxaDQteUJ4QjBqRkRWZzVyN3VEQXViV1RkVEdaVXZPaFkwakNaUFN6Wm4tMVRKbGxqbC1Yc3U2N3dvdEpucFA5WjRjdF9mY1pBMGhEYjZZb2xGQ0lKdXJUY1YyUmZaR2NkVjdzc2JuWVBGUGdWZTRuSHhNUEVlMGwyYnl2TVJIRzZraGdubW1ZcFlFOWVKbDBFYkE4TGF3OW9IN3lHQlFJUlg1RDRfaEZtWmVNVjZjVFpCdmc3QzdCQ09IaDIwTXJjMkVsZGVlRkNTenJNR3E5QVJnLTZfckIzVVoxekNSbGEwbTNlNE41?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
    "source": "BFM Économie",
    "date": "Fri, 07 Aug 2026 07:44:51 GMT",
@@ -211,15 +238,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe ouvre en hausse malgré les incertitudes liées au Moyen-Orient - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 07:32:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb3dkZ0p0V3pBUWplRklNdDBiSnhqWldZVmdYYkRWWXJ1R2tjSFdnd0VLMVg2S3FfWG5hQkREZ05nU2RZbXU5SWpOaXdGSUluSFdsR1UwNWxsdHhqUUJyX1MxT01tMVFxOUhBOGk0LTdnQ2VVSFY5OFp2NDVPQXJhRTBxRndFS1dWeXBya2VZNU1jcmw0RjM0RlF6bldqNHN1OGVpU0s2M1hTOW5VcExMUQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "L'Europe ouvre en hausse malgré les incertitudes liées au Moyen-Orient",
@@ -247,24 +265,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Ouverture de la Bourse de Francfort : le Dax progresse modérément - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 07:27:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamNXYkpJMHZkSW0wM2E2bDFDdndSSW8zSUhERjE5SVdHdzFzclJ3Q291Q2Y1Z1RpakJubHNNRjBQSVplS1FPMmwxQWdqaFk1UUMyV25DNnFwREs1MkxOdFhRemhRX0lFSV8yOGtueTdSUUJoVjQ1WVRLbjNfbE5XTmp2RlVwVDZYMGRVbDI2NE9RT3ZlcmhWdmxZU3lGcEdaVHV1eXZnZE4xUDR4QW54alN2NXNVM3hHNVBxUTMwaDg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Nikkei finit en baisse de 0,12% - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 07 Aug 2026 07:20:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWlRJNEdCRFJqbDBiV2V4ZzVXa1dVR2hka1owazh5TGl5YktUMXJsNlZrYlhWaU80THczc3Zsc2I3UWZva0o5YVpuUWVUdWJfZEdYbGZIUGQ5QlVtVVgwTTRxcUZ5WWxjMVdDV2xueDZ5UUM4eFhVSjNVNVdGWlVyUXpNS1otVDU0U0pLVEFxZWM4QWlQN3QxOEpEdnZrcUliSklETmdB?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "CAC 40: La Bourse de Paris à l'équilibre, l'emploi US et Ormuz au centre de l'attention",
@@ -339,15 +339,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Hongrie : le ralentissement de l'inflation s'accentue à 1,2 % sur un an en juillet - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 06:32:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQU1FsUnlwYVdCUEVGN3Q2WTFnSWdRdm5RdWh3M25Nay1SZTRjR2tGTG13a21adHl6VU1BWU1mYlNKOW9hR1BjYXg3UjM3dkpFQlZ2aXNfUXM4QVhPRWVEN2FlUVMyS0RISzZhOHBpQXRYRXlDWkZhdndFSW1vcVJrS2VIakZPb1ZPNmxEVVAwbFE4Wlh3cjkxNklNSlQzd0tET0ZpY1N1bXp4d2FzNDJaLTl0NXpZX1BmRzRwUnF5Zmgtck1CWVBSN0ZpSXJFYjZxTWFnTw?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "L'Europe attendue près de l'équilibre, l'emploi américain et Ormuz surveillés",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 06:00:41 GMT",
@@ -357,46 +348,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "C'est son plus haut niveau depuis l'automne 2020: le taux de chômage augmente de 0,2 point à 8,3% au deuxième trimestre",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 05:32:38 GMT",
-   "lien": "https://www.bfmtv.com/economie/emploi/c-est-son-plus-haut-niveau-depuis-l-automne-2020-le-taux-de-chomage-augmente-de-0-2-point-a-8-3-au-deuxieme-trimestre_AD-202608070086.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La BCE informée de l'intervention américaine sur le yen après l'opération, selon le FT - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 00:50:44 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcU01cmQ5MVNQTlRiUjZrclZQOXM5WWE0dXlXbkNmYTkwQl9nXzg4ZDZKeDA0LURrbnp3OXotbjQ5VklhWFFyMDdwTDRuanljOVM4ZURYM1gzX3NocVdSMG5sWWtkYmFDVDNva0ZfT01EbGhUZHRUM3BIYURXWDd0dm81V1lodjQxQ3NleG9haFU2Qno2dVVLV3NrWm9ubzJoWmh2bmpmcGFmNHU2dXRoRGpnTHExYW9SVmowNzJGN2hhTDFSR3ZaZGFwUFZqekxYS18wYklET1MzMWxVZS1kWGpRNXVaQ09tR2daR0EzOTlGUmxDOFBDeXpYc9IB-wFBVV95cUxQcU01cmQ5MVNQTlRiUjZrclZQOXM5WWE0dXlXbkNmYTkwQl9nXzg4ZDZKeDA0LURrbnp3OXotbjQ5VklhWFFyMDdwTDRuanljOVM4ZURYM1gzX3NocVdSMG5sWWtkYmFDVDNva0ZfT01EbGhUZHRUM3BIYURXWDd0dm81V1lodjQxQ3NleG9haFU2Qno2dVVLV3NrWm9ubzJoWmh2bmpmcGFmNHU2dXRoRGpnTHExYW9SVmowNzJGN2hhTDFSR3ZaZGFwUFZqekxYS18wYklET1MzMWxVZS1kWGpRNXVaQ09tR2daR0EzOTlGUmxDOFBDeXpYcw?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Musalem, de la Fed, estime que la banque centrale aurait dû relever ses taux lors de sa dernière réunion - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 06 Aug 2026 23:14:36 GMT",
    "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcEM4Q01TNU4yaWJ4MmZ6NTBvd3JodkxEd2xxNUhlNWdaRnNEd2YwbWdqemV3LUczN2tWTndWdF9QeWRvYzNseGhrUkVfU3hueXA0U3dfUTVqOUNRb0xuMVdHLTBoNmJ5ek12NXVkYmlPMVYyS3BQeUhmYTZvX2ZCSFRTVGloS21LRnpvTUMzZ1ktUTNNMEhTUkVsd0FYanlzNmt3SHlSa29jX0lJV3R6cE1BZVd1WGxnRVlhMXhXMUlBeFUzNkI4QnloaTNrb3ZUNDFZREQzNHprR1FnSXVYNHZLWWExcjdjM0FvWGRsMG1YSnBHeW5EcUxyZzY3MDJRY1pQeV9BQVAtUTlJbkxoajJEMXhoY3djMG15UzI2S05ZR2Vt0gGkAkFVX3lxTE9wQzhDTVM1TjJpYngyZno1MG93cmh2TER3bHE1SGU1Z1pGc0R3ZjBtZ2p6ZXctRzM3a1ZOd1Z0X1B5ZG9jM2x4aGtSRV9TeG55cDRTd19RNWo5Q1FvTG4xV0ctMGg2Ynl6TXY1dWRiaU8xVjJLcFB5SGZhNm9fZkJIVFNUaWhLbUtGem9NQzNnWS1RM00wSFNSRWx3QVhqeXM2a3dIeVJrb2NfSUlXdHpwTUFlV3VYbGdFWWExeFcxSUF4VTM2QjhCeWhpM2tvdlQ0MVlERDM0emtHUWdJdVg0dktZYTFyN2MzQW9YZGwwbVhKcEd5bkRxTHJnNjcwMlFjWlB5X0FBUC1ROUluTGhqMkQxeGhjd2MwbXlTMjZLTllHZW0?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Musalem, de la Fed, estime que la banque centrale aurait dû relever ses taux lors de sa dernière réunion - TradingView",
-   "source": "TradingView",
-   "date": "Thu, 06 Aug 2026 23:14:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBPbzJUQ1lVNUVLTXVZUzhBYzhCMzJzb3pyUUtPWTkyNDVDMXBWbDdqT21NMktFYzZDRWVLRjd5TFpfMVlZQjRmc2FRb2UxQWhvUXktTGNVTlVoc3U4NlNMS3NCQkFfQjdKQlprM3B3RW81Mks1NEFr?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fed : Alberto Musalem estime que la banque centrale aurait dû relever ses taux lors de la dernière réunion - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Thu, 06 Aug 2026 23:14:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNmhQNU5zUHZ1c3RiQ1l6QXE5N3h0ak5xX3JlYWRIekhRRUhQWTZ3TW1keFZGUEsybU85UWk0NEs0RnlWNl9xUzdiTG91NFA0RVI5WGlINHZyS2V6V09CZE40RmJ1dWsxRzNnX2dZM3M1UURXTXVwUllOdE5VWFJDcmhaWk8xNy10VDcwSnk3OUlsMG16UWdDTnF5SGN0dTk0dEVqZ2RSZFM5Uy1KYlJFOHEtdE5RN0NJODF0ZEdhRVdYd0hGSVpDMzB3NUs4QWhhcTlRZlV6V2VXbGNDdmZlczRkZUZVTUM0NmZsNkFpbw?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
