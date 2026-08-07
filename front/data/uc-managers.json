@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-06",
+ "genere": "2026-08-07",
  "fonds": {
   "FR0011253624": {
    "gerants": [
@@ -19,7 +19,7 @@
    "fraisCourants": 1.58,
    "societe": "Rothschild & Co Asset Management",
    "structure": "SICAV",
-   "note": 3,
+   "note": 4,
    "risque": 4
   },
   "LU1819480192": {
@@ -53,7 +53,7 @@
    "fraisCourants": 2.16,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "SICAV",
-   "note": 2,
+   "note": 3,
    "risque": 1
   },
   "LU0280435388": {
@@ -79,7 +79,7 @@
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
    "note": 4,
-   "risque": 2
+   "risque": 3
   },
   "LU0217139020": {
    "gerants": [

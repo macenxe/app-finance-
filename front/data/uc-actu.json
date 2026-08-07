@@ -1,3 +1,28 @@
 {
- "evenements": []
+ "evenements": [
+  {
+   "date": "2026-08-07",
+   "isin": "FR0011253624",
+   "fonds": "R-co Valor",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur R-co Valor : 3/5 → 4/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-08-07",
+   "isin": "LU1244893696",
+   "fonds": "EdR Big Data",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur EdR Big Data : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-08-07",
+   "isin": "LU0280435388",
+   "fonds": "Pictet Clean Energy Transition",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Pictet Clean Energy Transition : 2/5 → 3/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 2/5 à 3/5."
+  }
+ ]
 }
