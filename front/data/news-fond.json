@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-07T13:32:26.873Z",
+ "genere": "2026-08-07T15:05:58.095Z",
  "globales": [
   {
    "titre": "POINT HEBDO-Pas de vacances d'été pour les marchés financiers - Boursorama",
@@ -11,15 +11,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.14% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdElIQjRwTW83X2F0WFdUWnhMR1prRkxYS1QweGtoMmkzOWZybVVReDJBN1U1ZVdkUDFkdUJFMm9MdXc0UTZKMHNPUUVFUHVkckoyUndkcjhBX0sxaU5sX3E5TllpemU2cGd1U2tSWE9NdUNJNkFoZ29Sd21zWDM3QWpieUFJbXkyNndMWkotdGRZRTNocGc3QzJGSFkzNWcwVlFLVWxjNkRPREpaTjh0T1FTZW4xQzJZUXJTdDFCRjVTNjlTeFdUaVF3?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - TradingView",
    "source": "TradingView",
    "date": "Thu, 06 Aug 2026 14:32:41 GMT",
@@ -29,8 +20,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - global.morningstar.com",
-   "source": "global.morningstar.com",
+   "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
+   "source": "Morningstar",
    "date": "Thu, 06 Aug 2026 11:03:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU15bVVDOVVRZllFV1hRNWhSa0ZrLU11WkZzOG9XZDhfbFVKa1l6T2FFU0ZlWnJ0aDE1V3R1V2ZNa3J1MjBWakZJVUdQSG9hT2d6bW42aUx3VUtYSUtHc2NxUm5LNTZGMElDTU91eW9SQ0dRYXRiNm9Kc0hxVVU5X3lWeUt0LVhSMGdoU2x3YU1aRWZuN2pmblc3TjZ0Ni1lQ3dSdHZseERTR1hpc0lHQ3VVNUljd0dQSENEWnlvZnBMN3huMkhz?oc=5",
    "tag": "BCE / Taux",
@@ -45,6 +36,15 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Le Cac 40 pris de vertige au sommet - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 05 Aug 2026 15:40:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeWdBQ3Y3SmQ3WUREcm5DLWFXMS0yb1lZMjFCMlJmVm5HdmpVMWctOUFoa3FNQ3hEUDN2LTRRNmhsVjdVNFR6ZWswVGNNa2ZheWFGMDFJZ3JYdENHY3NTNWJHN1dWTzhSWVJpVDNHamN2cGhISDFHUHVlbkZUVDFTdlR0elpRY2t2cERGcFgtU1NnNE9sX1VoQThGOW1NMW13eldZVUdJOXRQdw?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
   },
   {
    "titre": "A suivre la semaine prochaine: L'inflation aux Etats-Unis au programme, et toujours des résultats d'entreprises - ABC Bourse",
@@ -150,6 +150,69 @@
  ],
  "eco": [
   {
+   "titre": "La Fed de New York note une quasi-stabilité des anticipations d'inflation en juillet - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 07 Aug 2026 15:01:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNcV9rSncwTnNrVzVLeDhaWVY2dmlpX2VhYkJlUWNwQkVxT0dyenpGT1M5WXlyem4xTVFoc0xadFFBRVNzTzNmajJaaTZ1ZkRjTkNfOUVGZVNXdE83LWtWeWNXaUhlNU5WbWxVa0VzdlJ4ZWF1M3NFN19HZWx6VHVyZmtMQ2tRY21paVQ3T21GcUlleUhZQ3NSZVZ2aXZabG9zeldzLUNYck0zekJTTDBaaVF1NjRKQV84akQ4dXZ2N0hrb3VFblExVFB2dVFqSHZvdGdfVGtBRjZCTm9HcXc?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le TSX progresse, la faiblesse de l'emploi américain tempère les anticipations de hausse des taux de la Fed - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 07 Aug 2026 15:00:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPQ3VwSGZnOU1PUmhzVUZ2MGFBZjBOXzRJcmFTV2E5YV92azVqVExyX2ZKeE9jVzhxUURvUWd4Z3M5T21neUllS2pRenA5RDhQV3k5M2dYMF9TeUNDUU5ZTG5MM2hTbXRpUVZEN200ZGthYXhDSUphTVQ1OTU0cG5laEdXbk1UM29oeV9lb2lmUndzczg2TVVqNjJQemNYeWtnV0NKQXBnTTRGYWEyODl1bktQcnR2ZHVTcW5Wd2tiZkxoMlBua0FhTTFmNEY3d2pCYnd1VGJ5OXYza2FtU1g3MUZ6SVJ5UmJsYUFOMUs2aHRwdw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "IA, Fed et Yen : la nouvelle équation des marchés américains - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 14:52:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOc0pKdk16SWtxenV4N3h2U2hvV0lRbGROZlhxc0ZmaWVvd0owREhsN0JFQ0tLeW5VX3M3SFFWd3FJUUdpeDZZeE1vRVNVSmRld3RCMzZWY0wwTnBzam5XeENJU1hVbVEwNkVYdXRCT3lJdkJJSktyUnl5Q01BaldIZ2R4cDRpVEhWS0M1QlQ2RVdsV3RVdkk2ZmFKYi1QSkEwREFpTjBSMnlmaTN5WmxDNWZiR21QSWlf?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Après avoir été (un temps) propulsé par l'introduction en Bourse de SpaceX, Eutelsat livre une croissance qui surprend mais affiche des perspectives décevantes, son action chute de 5% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 07 Aug 2026 14:11:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxQUHJVYUVLQTQwb2RHN1VSVHg0MDJGN19PWXUydkhCcXZVOTFGWGd2enVNSTNhNjlhZkJJX2k5eGRGaTlTTmpKR2hITlowY0NzYlNiVXZROHFGVjFBT2Y2UUJ2ZGQyX080ZlN6Mk9tZHZTRjlNQ2NSQ1FuRkhtaHlYVFpPRXlpSzFuQmJBellZeVF4NmZ5WElGTWlqM1I5NVNQRFdiNU5lcF9MdDNQZnFfMzFfakg2MFJoTzNON2hkTGE3UzZnWFB3eE95RjF1WVNXUTEyS2Fva05SMUxCQnctT2h2VnZYNmtRT3ZEWjF6Y0VUdkYzb1V3b2cxWFFGSzY2R0hQdzlqazBldEw4WGhGV2J4UklGeVJaSm52VHFQT25MZFB3TVREU3VHTkJtVDVvQnN2RElrM2x0bWlNUy0tRFNhUlVqZkxvMWRjdzNiR2c2cVhwcnJiSm9POFRjamNTXzBwLU9XWl9qVkU?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Canada: le taux de chômage poursuit sa baisse en juillet, à 6,4% - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 14:11:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTnhnZm5VMHZYQ19jVEs2Sk80LVl5ZFJrcmJ2YzlvV192OU84TUpBLXZGQVlCSTBqVVJYbFNsOEJxSEZ2bEJBNjcwMjBkT2ZyRm42RmRfX3RKXzFBdDRlZjhDNlE4c0dMOHJhbF9ONUUxS19qWmRYTXA4MmVocnpWdHc2M1ZWOGVrclktVXQxQTFrY01uRFRGTTVQY3AwZ05zMk9PaDJKaGktREpqakxKMmhYa1pEUXVUZ1NfWkI2RnQ3MkEtS09GSjFoRkg4MUJya3pYRDdlNjBlaExDNHVoYm1rcVdaVXVi0gHuAUFVX3lxTFB6QTltSW1peEFjOVJQUWtzV1hNdlI1VGI0VUdjT1ZiNEY1bHM5N0FHRE9RWW9tWW9GVkFKRE9mdG5SWm1sekJkQ081T3hUQjEyQlNac1VGNDlWUGFaREpHelFLTlp1aHBDa19RaWJpRjhSem1GRWRPcDN0VlExYlRRbEtDeDAxX1VxM1htYUROWkMyNkczdTN4VmQ4RHFmeExtREJvUVg0OWRtdHlCOHdfUHB6Ujg5RGxZNXlzLVpRSFRlM0VRcHdWM3hrNGdpc1dzSFlvZFQ1YmVNZ3NmVVB1bmxDQWRRU0R4MV85R1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre vendredi: Airbnb, Atlassian, Boeing, Meta, SK Hynix, Under Armour",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 13:58:08 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-vendredi-airbnb-atlassian-boeing-meta-sk-hyn_701119",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street ouvre en hausse, les taux se détendent après la détérioration de l'emploi",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 13:44:37 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-ouvre-en-hausse-les-taux-se-detendent-apres-la-deterioration-d_701118",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Donald Trump tente-t-il encore de faire pression sur la Fed pour baisser les taux? Le président américain a déjà appelé plusieurs fois le nouveau patron de la Réserve fédérale Kevin Warsh",
    "source": "BFM Économie",
    "date": "Fri, 07 Aug 2026 13:24:41 GMT",
@@ -159,24 +222,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Le rapport sur l'emploi de juillet, plus faible que prévu, alimente le scepticisme quant à une hausse des taux de la Fed - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 13:08:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNHNYSlZJZmY5SEhWUElMY0ZZUlBQQ3JNRWpYam92VXRxY2dOd0ZSajBvZ2Vhd2s3VjluZUFIVE4zdkxsZ2Rpd09LSnF1UW9XazBVMGp1MnIwZk9odk1hdDZydTNuYk0tQVZ5UXJuajF1X2EyR3hWVEVNVExtVGZCNUpIU01hcGlKODl4MGNkUnlNUkNKWUdqbjZjRVgybVZJVUxPNWsxTEttWERlRzJLVXNKWUp4NWxjQVFVdl9ucFB1LW1lWUUzT0Q5bVd5elpEckFMd2ZWN0lhRUE2SVRRNHpvbzdtV0VxamJVOGQxWQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "USA: Wall Street attendue en hausse, les taux se détendent après les mauvais chiffres de l'emploi - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 13:08:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQamVIV2FWQW0zVEpiaFBDUUpoa2U0c1ZiV294U0F3WGQ2bkJfWFJkcFQ4MzdENHNwOEJsSWpSNmR3ZTRLdnYxYVFFMVpnX0dBUmlOSUJOYTdGOWpuYmVCM3JxUUVHNjNQX3hMSTdVYmVfczBKY2hFbl9saG5YLWNCcVpVdWVnXzZZQVJEN2pGSlNiNjl1SjhucDdVckZ1VWN5R3N5WkhKalNVRVlYRlZpck5qWFlaVmdUV0ZV?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "USA: Wall Street attendue en hausse, les taux se détendent après les mauvais chiffres de l'emploi",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 13:08:10 GMT",
@@ -184,24 +229,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le Cac 40 enchaîne les records pendant que l'emploi américain déjoue les prévisions, 23.000 emplois supprimés en juillet - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 07 Aug 2026 12:43:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOT0dzck53b0h4LUNFLUEwakM4bVRYaE05ckdiUDB4cG9BYUVlcTQxLU5UcUNsZEhXdUpZRFhGODRCY3E4bVREWnYwZTljdlNCTVRJdEZ3ZmMxTzM2SUdjNVc4bkVOQ19iWkhWMlkwbllLYkdCdERHbE5JUDV3cV9tbFBGNFE1RUJqc0g1RllSVEdnODVCSzZBMFVGZGVnNURGUnNQSktWQkt6VzVoa0JiS0lfalp2WlB2YzB1dEdxWDV3TDBFNUtnSzRUZWxYZzZGdnJfOGNoa1dFVzNxSGtHTmRlLWE0VGY3V2JSWjZlU19zRDkxemVCaVM4NzFKSUxvQ1E0anZLQ1RZdHdnQnNiLXZUUGx6cUE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "États-Unis : les créations d'emplois non agricoles reculent en juillet, le taux de chômage fléchit à 4,1 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 07 Aug 2026 12:38:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQLW9VLXVOaXk1TkY2ekdTRk9NdWFvdTctZHJRWFRYa3lISndKeTFxdWxnWDdobWhpUXpjdVFRV3MtalVUN0JoRHZfOG5LYnlGRkczNEs0cXZFNy1aUmNlTXB3RjhYVU5JWXMtYV8wZWxSV3d2Y0tydDd3a3ZaRG41cU5RWlJGVFZIQ0p0MDdxMzhScENfaGpFQ0I3OUZLOFNINjdCVFFMMlcySlRWS3Q0bThsV1J5T21mVmNYbk9jZ1hoYk9EREdWNnNJRWpGeHpoVUZUR0JDMXZDeGppTGZUTS1zOFBWcnRUVk1LTDV6RQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "+5,6% pour le sucre, +3,4% pour les céréales... Les vagues de chaleur, les prix de l'énergie et le contexte géopolitique tendu poussent les prix alimentaires à la hausse en juillet",
@@ -229,24 +256,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Les données sur l'inflation vont tester les records de Wall Street et les perspectives de taux de la Fed - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 10:06:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOakEyYnNqYnFMeXdKQmZjQ09pTm1mU0dhaGVhWmFVLWRTWGJXeUhSSFVuSThNc0JSN2FFVDg5dmlodUlfeGJQeXlDakxvbGZHS3J4T1huNWRWSjBIQ2k4SHRIbUd4SFQzLTVFUUxIQnNCMzR1UWdCRTZEOVFNR1VJN3dkUjM0UDVQdlpLX294VzZseWtsczFHWjlXdl95ME1BOTJkWDhfQ3U2OXEyVkRVYnFDS004OW1TM0R4THc4M1kzSTNnZmNPNTFXdTdFQVBGOEZ1djdUd3dyTDQ2QmY3bGNUNURLRmJmQkZUclRSS0c0UQ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Wall Street : l'inflation va mettre à l'épreuve les records boursiers et les perspectives de taux de la Fed - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 10:04:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQWU85STljYW15RHJtN2RvZ0F6cGlYR3JiMnpab0dRNVBsWHJ1YkpETjVjN192R1BiUDBpUmpfcGpmRVhFMm1jWGVCYXBMM3p1ckZNMTIycUExTVp1YTVKRkN5Nm5qYWhESGJnTEtRV0NXaDN6VkNGT2t4WG4tWlEyOF9tMERzSlRTWmVrNl9PMnplUHlyVnU2VVdFcnR4QjlNTjRxaTQ4WXQ5bG84WTRmZmNOY25LQkpjanhXZlByLUNESkI1XzVPdFl4NTdqWkQ5cTM4ZkpZNWMtMXFKVmhSRno5eDY3TnJiQXg5aWs2NA?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "La semaine à venir à Wall Street-Les chiffres de l'inflation mettront à l'épreuve les actions américaines, qui - Boursorama",
@@ -370,24 +379,6 @@
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 06:49:23 GMT",
    "lien": "https://www.abcbourse.com/marches/france-le-taux-de-chomage-atteint-8-3-au-deuxieme-trimestre-au-plus-haut-depu_701097",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Valeo va rembourser par anticipation ses obligations 2027",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 06:48:11 GMT",
-   "lien": "https://www.abcbourse.com/marches/valeo-va-rembourser-par-anticipation-ses-obligations-2027_701098",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions à suivre vendredi: Airbus, Eutelsat",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 06:46:16 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-vendredi-airbus-eutelsat_701095",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
