@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-07T06:14:39.497Z",
+ "genere": "2026-08-07T08:19:56.754Z",
  "globales": [
   {
    "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - TradingView",
@@ -72,15 +72,6 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: En hausse de 0,20% à l'ouverture - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 31 Jul 2026 06:40:01 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQXzhIaUpOY0NoMGIyYl9aT1ZkaFM3UjJsa1BJX1RwZHNwOUVKNGo4d2tGY1NNeEYyeTBmSE1nNEhZNkFNd2J4NzZZWmQxTjNUMG5YN3A1Tkl2RjNOOTd3WkNLUFlOT0x4OE9DR1BDekZqS1lzcURURnFhME1TRVNsS0dnY0wxeGdiOTUwTk5wbHpCSFdyT0E?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
   }
  ],
  "produits": [
@@ -99,6 +90,15 @@
    "date": "Tue, 04 Aug 2026 10:10:19 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWmZsMXJoTDlvMHl5VU9ycGoyOU1Vd21QamJta3Y4RUdsQ2hJdUVxNWdfU3FOSzd6MFdVSjd1V015Z3hKVGJPWVRnQnhBd2Q0NmQzSUxDOVYtazBKRUh1bEVpS3l4bTRsR1YxeTNrdEtNamF6cG5tMXl6TzhDX3ZFVzlhMDU4QW5UVGczNnhvWVY5OVFmalZsTVRMUHlucTZfXzRSejlmcFBCaXFpTXJiNDFneUxNbzdNRnpsZWlkTXdueGdocFg4Wm1Bdm1VLWNDQURnd3VqaEZhSkp3NzE4MmQtX3dYMmxhSGZXQ3Jra3BzSkRQ?oc=5",
    "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Cac 40 profite de l'accalmie géopolitique entre Washington et Téhéran et d'une détente sur le pétrole pour remonter à 8.600 points - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 03 Aug 2026 12:53:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPd1g4Nnc1LWltRl83Uzd2RDZrVWdHd1ZEY0ctbG5aeVUwWUgwZE05cFdrdk0yMkVZV3BaaFoyczRzemhhblZMN0Z4aTBFMDRyNmRJQUJQUzVGckxVbFRmUkZoZFprM0tiOGtHcHJ3NlU3ZlZQOEhrQnE5SDNEZXhlcGZUSnNFMzJDTzd0YjB0OGFubWVuNFBrbzhNSVhhVHY0ZGlCcjhpNmZXbGxxOTBzTzIzNGNMMVdWUUo5T29MejNZT25MOUNhVXhGNmdMTkk0TVFMQWdFMUdZeGsyN1YwNVhBa2hYand3STJpcDAzNFJMWm95YmttdVA2VHkyNG5oend1WFFTYlZRX0NDTkZQOU03RXF1clVxSGhHUkVyRUtWdlNhVzhXaw?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
   },
@@ -141,13 +141,211 @@
  ],
  "eco": [
   {
-   "titre": "L'Europe attendue près de l'équilibre, l'emploi américain et Ormuz surveillés - ABC Bourse",
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 08:11:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La banque centrale chinoise accroît ses réserves d'or pour le 21e mois consécutif - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 08:10:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSHRVd3VKRnVvd3BOOXh3NkEyM05la2RKYnNjcXhCSXRIV1NwcUlhbHYxMF9MZ1Z5LW1kYnZZRHJFSWtpQ25hOWNGYlJMVXU3Q2pRODNEZUxELURnZlJVel9VTEUwWTM0U2hfSllxTGRKN01oejJ5c2V1MEMwTFJOWEZyR1pfV2xfdjhPVy1JNGljWUtSSDAwTy1iRDdNaXY0SmdIQjl1REROVUxYSHhxR2NMVTRTZkgwcm1CVGQtSmlLZUp4cUlqQ1otOEdzMG1vNS1hMk1QMk0?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 08:05:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qTm15NEw5c0NZVzI1N0gyd1FRZlZSWmZWazNZcjZzRXdYSVBDaGhadFY1bHlwOHE2dEZQb2Y1TnBOY01pU3Y5VEh3TjZyemZEVVE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Pernod Ricard: franchit 69,80 euros et repasse au-dessus de la MM20, 85,60 en vue - ABC Bourse",
    "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 06:00:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUkhyU0QySThUSWNWb2J6QllMemJFQ2t6SXgxRHd4dUYxUW43bnhMU25uVW13VWRiQzN2UDlyYmE5SWNfblhLWVFxZmFvOTY2WVRpXzQtb01sbGduVVVjVnpnM1h3RFZpQUItc1dWT2paa0NSOW5wQjZPMWJHcTJpeTROSHRvQ1RRRlFBazV3TkZLQWlKZ21obGFhRlp6WU1heVBfODRNRHBpSHoxWUFtZmo1OGpTbDFO?oc=5",
+   "date": "Fri, 07 Aug 2026 08:00:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeE5peFhCVlFCbHhlblh3RkR1QUN4U181R3FoOS1oSkZRY09jQzNFNEUyYWJOZDRoSC1WSmNQSVNQZDZIN2lMRklBTkduQmhZN0tvUUU4Z0ZQdDhsU1FRMS1WM214bThrRFpTWGhNUFdzd2FrelhqRzJrVFBxc25hZGtYekpsbURQVnJnS0xlTjFEaFpJRmNyMmQtS3M3LUVnUlRsNXZZcUE4b1pYc3dxa3VJeUxBdE54UFhn?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Pernod Ricard: franchit 69,80 euros et repasse au-dessus de la MM20, 85,60 en vue",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 08:00:39 GMT",
+   "lien": "https://www.abcbourse.com/marches/pernod-ricard-franchit-69-80-euros-et-repasse-au-dessus-de-la-mm20-85-60-en-vu_701105",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 07:59:51 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Stellantis : les analystes de Bernstein particulièrement inquiets sur les Etats-Unis, l'action en plus forte baisse du Cac 40 - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 07 Aug 2026 07:52:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNZzB6SjZPb21NLW9LRl9BZGx5NGNDb2FWZE9GdnJYYjJWQWZsMDQySW5SLV9FMmZqZ2tUeG53RllLTmxRNE11eWgxaDQteUJ4QjBqRkRWZzVyN3VEQXViV1RkVEdaVXZPaFkwakNaUFN6Wm4tMVRKbGxqbC1Yc3U2N3dvdEpucFA5WjRjdF9mY1pBMGhEYjZZb2xGQ0lKdXJUY1YyUmZaR2NkVjdzc2JuWVBGUGdWZTRuSHhNUEVlMGwyYnl2TVJIRzZraGdubW1ZcFlFOWVKbDBFYkE4TGF3OW9IN3lHQlFJUlg1RDRfaEZtWmVNVjZjVFpCdmc3QzdCQ09IaDIwTXJjMkVsZGVlRkNTenJNR3E5QVJnLTZfckIzVVoxekNSbGEwbTNlNE41?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 07:44:51 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/video-en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_VN-202608070212.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe ouvre en hausse malgré les incertitudes liées au Moyen-Orient - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 07:32:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb3dkZ0p0V3pBUWplRklNdDBiSnhqWldZVmdYYkRWWXJ1R2tjSFdnd0VLMVg2S3FfWG5hQkREZ05nU2RZbXU5SWpOaXdGSUluSFdsR1UwNWxsdHhqUUJyX1MxT01tMVFxOUhBOGk0LTdnQ2VVSFY5OFp2NDVPQXJhRTBxRndFS1dWeXBya2VZNU1jcmw0RjM0RlF6bldqNHN1OGVpU0s2M1hTOW5VcExMUQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe ouvre en hausse malgré les incertitudes liées au Moyen-Orient",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 07:32:50 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-ouvre-en-hausse-malgre-les-incertitudes-liees-au-moyen-orient_701103",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 07:31:30 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_EN-202608070201.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 07:30:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/video-en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_VN-202608070204.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Ouverture de la Bourse de Francfort : le Dax progresse modérément - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 07:27:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamNXYkpJMHZkSW0wM2E2bDFDdndSSW8zSUhERjE5SVdHdzFzclJ3Q291Q2Y1Z1RpakJubHNNRjBQSVplS1FPMmwxQWdqaFk1UUMyV25DNnFwREs1MkxOdFhRemhRX0lFSV8yOGtueTdSUUJoVjQ1WVRLbjNfbE5XTmp2RlVwVDZYMGRVbDI2NE9RT3ZlcmhWdmxZU3lGcEdaVHV1eXZnZE4xUDR4QW54alN2NXNVM3hHNVBxUTMwaDg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Nikkei finit en baisse de 0,12% - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 07 Aug 2026 07:20:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWlRJNEdCRFJqbDBiV2V4ZzVXa1dVR2hka1owazh5TGl5YktUMXJsNlZrYlhWaU80THczc3Zsc2I3UWZva0o5YVpuUWVUdWJfZEdYbGZIUGQ5QlVtVVgwTTRxcUZ5WWxjMVdDV2xueDZ5UUM4eFhVSjNVNVdGWlVyUXpNS1otVDU0U0pLVEFxZWM4QWlQN3QxOEpEdnZrcUliSklETmdB?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris à l'équilibre, l'emploi US et Ormuz au centre de l'attention",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 07:14:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-a-l-equilibre-l-emploi-us-et-ormuz-au-centre-de-l-at_701101",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le club de la Bourse : Les indicateurs économiques en zone euro s'améliorent - 07/08",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 07:07:32 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/video-le-club-de-la-bourse-france-le-chomage-a-un-plus-haut-depuis-2020-a-8-3-07-08_VN-202608070186.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le club de la Bourse : Les indicateurs économiques en zone euro s'améliorent - 07/08",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 07:06:52 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/le-club-de-la-bourse-france-le-chomage-a-un-plus-haut-depuis-2020-a-8-3-07-08_EN-202608070178.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "France: le taux de chômage atteint 8,3% au deuxième trimestre, au plus haut depuis le Covid",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 06:49:23 GMT",
+   "lien": "https://www.abcbourse.com/marches/france-le-taux-de-chomage-atteint-8-3-au-deuxieme-trimestre-au-plus-haut-depu_701097",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Valeo va rembourser par anticipation ses obligations 2027",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 06:48:11 GMT",
+   "lien": "https://www.abcbourse.com/marches/valeo-va-rembourser-par-anticipation-ses-obligations-2027_701098",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les actions à suivre vendredi: Airbus, Eutelsat",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 06:46:16 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-vendredi-airbus-eutelsat_701095",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris attendue près de l'équilibre en attendant l'emploi américain",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 06:45:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-attendue-pres-de-l-equilibre-en-attendant-l-emploi-am_701096",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Airbus a livré 67 avions en juillet et reçu 204 commandes brutes",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 06:37:52 GMT",
+   "lien": "https://www.abcbourse.com/marches/airbus-a-livre-67-avions-en-juillet-et-recu-204-commandes-brutes_701094",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Hongrie : le ralentissement de l'inflation s'accentue à 1,2 % sur un an en juillet - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 06:32:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQU1FsUnlwYVdCUEVGN3Q2WTFnSWdRdm5RdWh3M25Nay1SZTRjR2tGTG13a21adHl6VU1BWU1mYlNKOW9hR1BjYXg3UjM3dkpFQlZ2aXNfUXM4QVhPRWVEN2FlUVMyS0RISzZhOHBpQXRYRXlDWkZhdndFSW1vcVJrS2VIakZPb1ZPNmxEVVAwbFE4Wlh3cjkxNklNSlQzd0tET0ZpY1N1bXp4d2FzNDJaLTl0NXpZX1BmRzRwUnF5Zmgtck1CWVBSN0ZpSXJFYjZxTWFnTw?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "L'Europe attendue près de l'équilibre, l'emploi américain et Ormuz surveillés",
@@ -159,65 +357,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'agenda du jour pour les sociétés cotées -Cac 40 - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 06:00:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMDJNbEt4bmY3ZHE2Nk9FVG9GQmhfS2swLVFJbkUtbjlnMkw2YXZoejZKcHE2eFd4RUFuOFpCUVR3YUt6alZmLVFMVndTMnFIb21VVC1sZkY1ZE9iTjY1YllJa3VET3NaZnJDT1BnS1FnV01ISVFJYmlfcVAxNVZnTzJBV1BtMG9pRVE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "C'est son plus haut niveau depuis l'automne 2020: le taux de chômage augmente de 0,2 point à 8,3% au deuxième trimestre",
    "source": "BFM Économie",
    "date": "Fri, 07 Aug 2026 05:32:38 GMT",
    "lien": "https://www.bfmtv.com/economie/emploi/c-est-son-plus-haut-niveau-depuis-l-automne-2020-le-taux-de-chomage-augmente-de-0-2-point-a-8-3-au-deuxieme-trimestre_AD-202608070086.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 05:22:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Morning Briefing : Le CAC 40 franchit les 8 700 points en séance - 07/08",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 05:16:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/morning-briefing-le-cac-40-franchit-les-8-700-points-en-seance-07-08_EN-202608070076.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Morning Briefing : Le CAC 40 franchit les 8 700 points en séance - 07/08",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 05:16:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/podcasts/morning-briefing/morning-briefing-le-cac-40-franchit-les-8-700-points-en-seance-07-08_EN-202608070075.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le rapport sur l'emploi, nouveau test pour la stratégie de \"guidance\" limitée du président de la Fed, Kevin Warsh - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 05:02:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPUm9iQlFnQkVzSUNwZ3AySEdMbmc1Z0tTUlo0V1NaTWpvakRMc0ZWVGsxNUpHUUhtcThaTFZFTnYyU3ZtSS02dTFaZlBmM0QyQTNDa19rdU5zTlBDX2lZdklKNlFQU1JqRXNkdXN3LVRDanVTR0xQb1lBT0hBYm13V1VGSjBQR0xLNnF6TnJ6MzBJNzlvY3hldElST3ZrUktkQWdzbTQ1YURnWWZNYlM4clMxN2Z0RjZ5cVZVdFZGU2pIaVlPRWptMEZVZVVLY3lEN285UzVNbXFNaXJQVXJxY3BXeUZRamtVaWsxMFBR?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La BCE a été informée de l'intervention américaine sur le yen après l'exécution des ordres, selon le FT - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 00:51:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOZEVkVGNvTVBFZUx3bmpVNHZpajhORmdPQVZDV2UwVWJyNnNKX1B3aE5XZ2RGQ0gtUzZlY0NoVkRfSkNZUGM1MVc5R0M5N01LR0VxZTJLQ2c2NUFEZFVoUElLemNIT2VIWWIxOTVPUEY2ZTE5NlF6aXA4TFFvTFRZYl9RRW4waU1jOEw0VlgwN1BTVTlydVVfb1hCT3dHcEotZHd2RFoyQVVCMG5PazhxdWxJeGlJVENVMWhJWVh0M25VMGJCaHhPV002SzF3aGpBRUxMQWk5SHNzRGVKQmFFQjV0WmhTMDRhZU0yQ2lUV18?oc=5",
-   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -234,7 +378,16 @@
    "titre": "Musalem, de la Fed, estime que la banque centrale aurait dû relever ses taux lors de sa dernière réunion - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 06 Aug 2026 23:14:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPck10dUF3RFBoQVV2WUl2cUx4T1RXUUN2ZG5iMHdITHRQVTFRUmt6elVoU3MyQVVwQ0J2dGc5eUxzYy0wcFVsRXRGRFhmTnU3TnBDZTBlYmctdU5PVVZKaWVxU0VIVzhGNDBEb0J0WkV4V1lic0gzMElZN19wSGtaTDFRbTFjOXQxSDNKaF8zR212cGJFYS1IdGFDcXo4VGEtVmZYZzNocGxCbEVXS2t0R29fYllGWVVRUHozRWtLb3hhbEdZR2xtVk9kZkM1Y05yaTRGTDh1cFNtSHNyTFk4c1p1RmxRMkNWSW4yWW1pc05kM0RhYkQ1S2R1dS1UTTZUZGdEZ0Q5UjlJanp4WjlOLVhtRi1DZTFtdnJmOFZpb9IBpAJBVV95cUxPcEM4Q01TNU4yaWJ4MmZ6NTBvd3JodkxEd2xxNUhlNWdaRnNEd2YwbWdqemV3LUczN2tWTndWdF9QeWRvYzNseGhrUkVfU3hueXA0U3dfUTVqOUNRb0xuMVdHLTBoNmJ5ek12NXVkYmlPMVYyS3BQeUhmYTZvX2ZCSFRTVGloS21LRnpvTUMzZ1ktUTNNMEhTUkVsd0FYanlzNmt3SHlSa29jX0lJV3R6cE1BZVd1WGxnRVlhMXhXMUlBeFUzNkI4QnloaTNrb3ZUNDFZREQzNHprR1FnSXVYNHZLWWExcjdjM0FvWGRsMG1YSnBHeW5EcUxyZzY3MDJRY1pQeV9BQVAtUTlJbkxoajJEMXhoY3djMG15UzI2S05ZR2Vt?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcEM4Q01TNU4yaWJ4MmZ6NTBvd3JodkxEd2xxNUhlNWdaRnNEd2YwbWdqemV3LUczN2tWTndWdF9QeWRvYzNseGhrUkVfU3hueXA0U3dfUTVqOUNRb0xuMVdHLTBoNmJ5ek12NXVkYmlPMVYyS3BQeUhmYTZvX2ZCSFRTVGloS21LRnpvTUMzZ1ktUTNNMEhTUkVsd0FYanlzNmt3SHlSa29jX0lJV3R6cE1BZVd1WGxnRVlhMXhXMUlBeFUzNkI4QnloaTNrb3ZUNDFZREQzNHprR1FnSXVYNHZLWWExcjdjM0FvWGRsMG1YSnBHeW5EcUxyZzY3MDJRY1pQeV9BQVAtUTlJbkxoajJEMXhoY3djMG15UzI2S05ZR2Vt0gGkAkFVX3lxTE9wQzhDTVM1TjJpYngyZno1MG93cmh2TER3bHE1SGU1Z1pGc0R3ZjBtZ2p6ZXctRzM3a1ZOd1Z0X1B5ZG9jM2x4aGtSRV9TeG55cDRTd19RNWo5Q1FvTG4xV0ctMGg2Ynl6TXY1dWRiaU8xVjJLcFB5SGZhNm9fZkJIVFNUaWhLbUtGem9NQzNnWS1RM00wSFNSRWx3QVhqeXM2a3dIeVJrb2NfSUlXdHpwTUFlV3VYbGdFWWExeFcxSUF4VTM2QjhCeWhpM2tvdlQ0MVlERDM0emtHUWdJdVg0dktZYTFyN2MzQW9YZGwwbVhKcEd5bkRxTHJnNjcwMlFjWlB5X0FBUC1ROUluTGhqMkQxeGhjd2MwbXlTMjZLTllHZW0?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Musalem, de la Fed, estime que la banque centrale aurait dû relever ses taux lors de sa dernière réunion - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 06 Aug 2026 23:14:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBPbzJUQ1lVNUVLTXVZUzhBYzhCMzJzb3pyUUtPWTkyNDVDMXBWbDdqT21NMktFYzZDRWVLRjd5TFpfMVlZQjRmc2FRb2UxQWhvUXktTGNVTlVoc3U4NlNMS3NCQkFfQjdKQlprM3B3RW81Mks1NEFr?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -254,87 +407,6 @@
    "date": "Thu, 06 Aug 2026 21:30:28 GMT",
    "lien": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPQmNjZzRUTkhvU080QjNpc0dlbnFIT0o3d2RVSExyUVhCdEdFbHFHNURlSzZNeUVOX21WdXZWLUtwY2xkWldPb1llS1RSQXdxRDQ1V2RKdkFIaXAzQVY5b3hvcVdkcVpmMHlkMEFzS1Vwd1RKQmxvTEtkVTVZVTFwX0JZaWlqa3dZNEo4d0JxMEtiQVpPTnlFM1pBSFJ0S0xDdUx2Z1JpUzQxb0JmclRsZUYwM2JTT1RIMVhtRFNOaFFuRGxqMUVkQms5bzBCZkd2bHc2ZW55OXhCOVplVkd6Q0Myekk1cDdUSy01ejIweG1fMzFHeHBsdnBYYWp3Zmt3LVUtZ3J1Q1BsMU9VTFl4b19PWkV4dzlGdXU5VG9Udk1RbXdzNGFUXzdjS2JpUk3SAa8CQVVfeXFMT0JjY2c0VE5Ib1NPNEIzaXNHZW5xSE9KN3dkVUhMclFYQnRHRWxxRzVEZUs2TXlFTl9tVnV2Vi1LcGNsZFpXT29ZZUtUUkF3cUQ0NVdkSnZBSGlwM0FWOW94b3FXZHFaZjB5ZDBBc0tVcHdUSkJsb0xLZFU1WVUxcF9CWWlpamt3WTRKOHdCcTBLYkFaT055RTNaQUhSdEtMQ3VMdmdSaVM0MW9CZnJUbGVGMDNiU09USDFYbURTTmhRbkRsajFFZEJrOW8wQmZHdmx3NmVueTl4QjlaZVZHekNDMnpJNXA3VEstNXoyMHhtXzMxR3hwbHZwWGFqd2Zrdy1VLWdydUNQbDFPVUxZeG9fT1pFeHc5RnV1OVRvVHZNUW13czRhVF83Y0tiaVJN?oc=5",
    "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre jeudi: Sandisk, Western Digital, Meta, ConocoPhillips, Molson Coors, D-Wave, ionQ, Apollo, Tesla, SpaceX",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 20:32:31 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-sandisk-western-digital-meta-conocophil_701083",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street s'écarte de ses records, le pétrole se tend à nouveau",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 20:10:20 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-s-ecarte-de-ses-records-le-petrole-se-tend-a-nouveau_701081",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Adecco accélère sa croissance et améliore sa rentabilité au deuxième trimestre 2026",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 17:55:06 GMT",
-   "lien": "https://www.abcbourse.com/marches/adecco-accelere-sa-croissance-et-ameliore-sa-rentabilite-au-deuxieme-trimestre-2_701080",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Foncière Volta lance le rachat partiel de son emprunt obligataire 2021",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 16:15:07 GMT",
-   "lien": "https://www.abcbourse.com/marches/fonciere-volta-lance-le-rachat-partiel-de-son-emprunt-obligataire-2021_701078",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'Europe clôture en hausse modeste, les publications allemandes au premier plan",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 16:10:01 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-cloture-en-hausse-modeste-les-publications-allemandes-au-premier-plan_701077",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris finit en hausse après avoir décroché un nouveau record",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 15:43:27 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-en-hausse-apres-avoir-decroche-un-nouveau-recor_701073",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre jeudi: Sandisk, Western Digital, Meta, ConocoPhillips, Molson Coors, D-Wave, ionQ, Apollo",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 14:07:11 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-sandisk-western-digital-meta-conocophil_701070",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Etats-Unis: les inscriptions au chômage ont augmenté de 1.000 la semaine dernière",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 12:53:31 GMT",
-   "lien": "https://www.abcbourse.com/marches/etats-unis-les-inscriptions-au-chomage-ont-augmente-de-1000-la-semaine-dernier_701067",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre jeudi: Sandisk, Western Digital, Meta, ConocoPhillips, Molson Coors",
-   "source": "ABC Bourse",
-   "date": "Thu, 06 Aug 2026 12:48:18 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-sandisk-western-digital-meta-conocophil_701066",
-   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   }
