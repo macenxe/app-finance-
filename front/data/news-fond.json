@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-07T11:53:26.997Z",
+ "genere": "2026-08-07T13:32:26.873Z",
  "globales": [
   {
    "titre": "POINT HEBDO-Pas de vacances d'été pour les marchés financiers - Boursorama",
@@ -20,8 +20,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - fr.tradingview.com",
-   "source": "fr.tradingview.com",
+   "titre": "Agenda mensuel économique international du vendredi 7 août 2026 au dimanche 6 septembre 2026 - TradingView",
+   "source": "TradingView",
    "date": "Thu, 06 Aug 2026 14:32:41 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5UNjZ3dnFtbHZzX0RlWWIxLXdwaUNQS01uRjNPVHk5ZWVpSHJKMDI1UVRsSGN0aVZrZXZGODBXR2FRVmtMRmV5cWVxc0loSWlnOGdIckVvai1nV1FXcm9YUDl3?oc=5",
    "tag": "Inflation",
@@ -29,8 +29,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
-   "source": "Morningstar",
+   "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - global.morningstar.com",
+   "source": "global.morningstar.com",
    "date": "Thu, 06 Aug 2026 11:03:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU15bVVDOVVRZllFV1hRNWhSa0ZrLU11WkZzOG9XZDhfbFVKa1l6T2FFU0ZlWnJ0aDE1V3R1V2ZNa3J1MjBWakZJVUdQSG9hT2d6bW42aUx3VUtYSUtHc2NxUm5LNTZGMElDTU91eW9SQ0dRYXRiNm9Kc0hxVVU5X3lWeUt0LVhSMGdoU2x3YU1aRWZuN2pmblc3TjZ0Ni1lQ3dSdHZseERTR1hpc0lHQ3VVNUljd0dQSENEWnlvZnBMN3huMkhz?oc=5",
    "tag": "BCE / Taux",
@@ -150,20 +150,74 @@
  ],
  "eco": [
   {
+   "titre": "Donald Trump tente-t-il encore de faire pression sur la Fed pour baisser les taux? Le président américain a déjà appelé plusieurs fois le nouveau patron de la Réserve fédérale Kevin Warsh",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 13:24:41 GMT",
+   "lien": "https://www.bfmtv.com/economie/donald-trump-tente-t-il-encore-de-faire-pression-sur-la-fed-pour-baisser-les-taux-le-president-americain-a-deja-appele-plusieurs-fois-le-nouveau-patron-de-la-reserve-federale-kevin-warsh_AD-202608070342.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le rapport sur l'emploi de juillet, plus faible que prévu, alimente le scepticisme quant à une hausse des taux de la Fed - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 07 Aug 2026 13:08:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNHNYSlZJZmY5SEhWUElMY0ZZUlBQQ3JNRWpYam92VXRxY2dOd0ZSajBvZ2Vhd2s3VjluZUFIVE4zdkxsZ2Rpd09LSnF1UW9XazBVMGp1MnIwZk9odk1hdDZydTNuYk0tQVZ5UXJuajF1X2EyR3hWVEVNVExtVGZCNUpIU01hcGlKODl4MGNkUnlNUkNKWUdqbjZjRVgybVZJVUxPNWsxTEttWERlRzJLVXNKWUp4NWxjQVFVdl9ucFB1LW1lWUUzT0Q5bVd5elpEckFMd2ZWN0lhRUE2SVRRNHpvbzdtV0VxamJVOGQxWQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA: Wall Street attendue en hausse, les taux se détendent après les mauvais chiffres de l'emploi - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 13:08:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQamVIV2FWQW0zVEpiaFBDUUpoa2U0c1ZiV294U0F3WGQ2bkJfWFJkcFQ4MzdENHNwOEJsSWpSNmR3ZTRLdnYxYVFFMVpnX0dBUmlOSUJOYTdGOWpuYmVCM3JxUUVHNjNQX3hMSTdVYmVfczBKY2hFbl9saG5YLWNCcVpVdWVnXzZZQVJEN2pGSlNiNjl1SjhucDdVckZ1VWN5R3N5WkhKalNVRVlYRlZpck5qWFlaVmdUV0ZV?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA: Wall Street attendue en hausse, les taux se détendent après les mauvais chiffres de l'emploi",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 13:08:10 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-attendue-en-hausse-les-taux-se-detendent-apres-les-mauvais-chi_701116",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Cac 40 enchaîne les records pendant que l'emploi américain déjoue les prévisions, 23.000 emplois supprimés en juillet - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 07 Aug 2026 12:43:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOT0dzck53b0h4LUNFLUEwakM4bVRYaE05ckdiUDB4cG9BYUVlcTQxLU5UcUNsZEhXdUpZRFhGODRCY3E4bVREWnYwZTljdlNCTVRJdEZ3ZmMxTzM2SUdjNVc4bkVOQ19iWkhWMlkwbllLYkdCdERHbE5JUDV3cV9tbFBGNFE1RUJqc0g1RllSVEdnODVCSzZBMFVGZGVnNURGUnNQSktWQkt6VzVoa0JiS0lfalp2WlB2YzB1dEdxWDV3TDBFNUtnSzRUZWxYZzZGdnJfOGNoa1dFVzNxSGtHTmRlLWE0VGY3V2JSWjZlU19zRDkxemVCaVM4NzFKSUxvQ1E0anZLQ1RZdHdnQnNiLXZUUGx6cUE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "États-Unis : les créations d'emplois non agricoles reculent en juillet, le taux de chômage fléchit à 4,1 - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 07 Aug 2026 12:38:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQLW9VLXVOaXk1TkY2ekdTRk9NdWFvdTctZHJRWFRYa3lISndKeTFxdWxnWDdobWhpUXpjdVFRV3MtalVUN0JoRHZfOG5LYnlGRkczNEs0cXZFNy1aUmNlTXB3RjhYVU5JWXMtYV8wZWxSV3d2Y0tydDd3a3ZaRG41cU5RWlJGVFZIQ0p0MDdxMzhScENfaGpFQ0I3OUZLOFNINjdCVFFMMlcySlRWS3Q0bThsV1J5T21mVmNYbk9jZ1hoYk9EREdWNnNJRWpGeHpoVUZUR0JDMXZDeGppTGZUTS1zOFBWcnRUVk1LTDV6RQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "+5,6% pour le sucre, +3,4% pour les céréales... Les vagues de chaleur, les prix de l'énergie et le contexte géopolitique tendu poussent les prix alimentaires à la hausse en juillet",
+   "source": "BFM Économie",
+   "date": "Fri, 07 Aug 2026 12:26:47 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/agriculture/5-6-pour-le-sucre-3-4-pour-les-cereales-les-vagues-de-chaleur-les-prix-de-l-energie-et-le-contexte-geopolitique-tendu-poussent-les-prix-alimentaires-a-la-hausse-en-juillet_AD-202608070329.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Airbus: les livraisons d'avions ont ralenti en juillet, mais le marché n'en prend pas ombrage",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 11:51:25 GMT",
    "lien": "https://www.abcbourse.com/marches/airbus-les-livraisons-d-avions-ont-ralenti-en-juillet-mais-le-marche-n-en-pren_701112",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre vendredi: Airbnb, Atlassian, Boeing, Meta, SK Hynix - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 11:36:46 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOHRxd1FHaUpaem1jRE1KU1A3a2J0bk1QeG1JQ2xUOF82Zm5IYmpEc0hDamVTTEdnMjZDSkhpLUJQanJyckFQTV9DcHdLTWdDbER6RGtLbmJLSThDTTFiTzlHcWdYeVJvSkU4czFOZHhLMXZneDRSUEZFLUVzNDNmWENKWmNoMGV1cDg0WlJ6UnNhQ3hvNGZmN093MllpUm16clAwLUZqQ3lITTZWU0thNHY4SHY?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -175,15 +229,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Les contrats à terme sur les indices américains progressent avant les chiffres de l'emploi ; les secteurs des puces et des logiciels s'envolent - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 07 Aug 2026 11:28:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQT3ZMc2ZwRGZjdThQLTVJZkdGNzhsYm9sTEY0YThOeDZQSGNmRF85MGJtTFY3aVpPUjNqbXNlZjQ0Uk1ORlI1dUNKX2xEQmNDVVBFRVpUdE1EVW1KekdraTg5Vm1xS0RrNG10d1VZeGlyZ1BWZ0dFUlhvcDFZY09JTG5STUh5Ml8wWHBnSjZ1dVc2T2JtNmxvbDVlUDV3Tkc3bU1faWw5OTBET0t0WkZERkd4QjNsalVuZWNWWGx5TG1reFBqZzRYcUJ6bGVoUGFjUXViUEhBVUhMYVVidUtIdUtXWDRQQjlfcTR0YVZLYw?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "Les données sur l'inflation vont tester les records de Wall Street et les perspectives de taux de la Fed - Zonebourse Suisse",
@@ -207,7 +252,7 @@
    "titre": "La semaine à venir à Wall Street-Les chiffres de l'inflation mettront à l'épreuve les actions américaines, qui - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 07 Aug 2026 10:01:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijgNBVV95cUxNS012R0hQMGExWjhPUmkwSWdNOTQySU5BOGZMbVNjZk1jSGJPdVpXT3Y5c1BpSHNpNUpGdFRGNThJdDBkeXJCdUZMSGlweTFrdmdLS3FPV2Q1V3JJeTJMeVdzcmFrQTVoY1Z1YTViWlRsV0NNOU1yaHJUZ2JDR2Fub05ZTFdEdFlhdnRMb3BtUWpGVUhsbW1UbHZxUVRBVU0ybWtKUm85SkQwZTlBaXBTZDJ2ZGxVS3cyMlNCdklvVFFMdGV2UXF5V3I5ZURyZVp4Sk9BV09LYUJCUVFRY0hwdVZqQmVEWTg1UTJUc3pBVm9DNUtiVDNxQUVoTWdvRHRibTBXb3pZWWlSaU1EUVV1X3Q2OWdUREtmalZnckdyUjlFNnpWME5ZYlN4SG12UndaWHJMT0hXZERaU0JiTnFWRnhVZmVCNnhxMHFMTVl6Zk1mNlA0dmRYR2dMWWpVeFBuaDZ1bkNPcE54WlRtclB4XzlRaVdOUjRGWVdmM2gzWTRlanBCbUJValN6SVEwd9IBkwNBVV95cUxPbUdIenpSWVhoY1o2ZURWUVNXcnNkS2RGTUx3ZmNZOFJVdENJM2hVaUhfRkk5Nm84bDNCbDdoU2YwXzZKTnlGSFBZcUsxZE0wMVAtNlJQcjZ4cUlPWE9kOUw4X0dkYTBucEZ6WGtiRXV4LVpCRXJUdFhUVnlqUS1aQ05zUkRVaVFBYmM2c1J0cFllN3RiNG9EdGUyZlE4aTJ1d1ZqdGJVTHZrZzVSYzBvOXg3NWxyRFlwTVZhckdmSW5jM1NsOTlyNnNibVFoMGlvT3NRU1pmLXJQQlJZVlA3QWNIT1JzVnAxM2EtRkdrUEFQUVJZRi1JTGtEY0pIWDhkYWYxNDVCV21XQkFSVnBuU2ZoTFRfSDd2dVA2dWlrajlHejM4YVNoaGNneUtlYlAza2JlSjVIaFlNZFBkWFJSdFZ2bGE0QXBuREVXNHhDcHhXRUd0dGFHWkFMOVVZUU5LS2wtdEtwTWFGb2M0WEpIc2NRYW51dS1nQ2wxVVVIN0lPWjI3MmJvTklwWklhVGE0SVJj?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMikwNBVV95cUxPbUdIenpSWVhoY1o2ZURWUVNXcnNkS2RGTUx3ZmNZOFJVdENJM2hVaUhfRkk5Nm84bDNCbDdoU2YwXzZKTnlGSFBZcUsxZE0wMVAtNlJQcjZ4cUlPWE9kOUw4X0dkYTBucEZ6WGtiRXV4LVpCRXJUdFhUVnlqUS1aQ05zUkRVaVFBYmM2c1J0cFllN3RiNG9EdGUyZlE4aTJ1d1ZqdGJVTHZrZzVSYzBvOXg3NWxyRFlwTVZhckdmSW5jM1NsOTlyNnNibVFoMGlvT3NRU1pmLXJQQlJZVlA3QWNIT1JzVnAxM2EtRkdrUEFQUVJZRi1JTGtEY0pIWDhkYWYxNDVCV21XQkFSVnBuU2ZoTFRfSDd2dVA2dWlrajlHejM4YVNoaGNneUtlYlAza2JlSjVIaFlNZFBkWFJSdFZ2bGE0QXBuREVXNHhDcHhXRUd0dGFHWkFMOVVZUU5LS2wtdEtwTWFGb2M0WEpIc2NRYW51dS1nQ2wxVVVIN0lPWjI3MmJvTklwWklhVGE0SVJj0gGTA0FVX3lxTE9tR0h6elJZWGhjWjZlRFZRU1dyc2RLZEZNTHdmY1k4UlV0Q0kzaFVpSF9GSTk2bzhsM0JsN2hTZjBfNkpOeUZIUFlxSzFkTTAxUC02UlByNnhxSU9YT2Q5TDhfR2RhMG5wRnpYa2JFdXgtWkJFclR0WFRWeWpRLVpDTnNSRFVpUUFiYzZzUnRwWWU3dGI0b0R0ZTJmUThpMnV3Vmp0YlVMdmtnNVJjMG85eDc1bHJEWXBNVmFyR2ZJbmMzU2w5OXI2c2JtUWgwaW9Pc1FTWmYtclBCUllWUDdBY0hPUnNWcDEzYS1GR2tQQVBRUllGLUlMa0RjSkhYOGRhZjE0NUJXbVdCQVJWcG5TZmhMVF9IN3Z1UDZ1aWtqOUd6MzhhU2hoY2d5S2ViUDNrYmVKNUhoWU1kUGRYUlJ0VnZsYTRBcG5ERVc0eENweFdFR3R0YUdaQUw5VVlRTktLbC10S3BNYUZvYzRYSkhzY1FhbnV1LWdDbDFVVUg3SU9aMjcyYm9OSXBaSWFUYTRJUmM?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -343,15 +388,6 @@
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 06:46:16 GMT",
    "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-vendredi-airbus-eutelsat_701095",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris attendue près de l'équilibre en attendant l'emploi américain",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 06:45:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-attendue-pres-de-l-equilibre-en-attendant-l-emploi-am_701096",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
