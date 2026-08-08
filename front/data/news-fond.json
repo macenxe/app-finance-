@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-08T07:09:18.614Z",
+ "genere": "2026-08-08T08:54:58.714Z",
  "globales": [
-  {
-   "titre": "Avalanche de records en Europe, le CAC 40 au plus haut - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 15:56:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcnIzS1c5dDd6azZ3a0hROFVuWEhVazFiTGRTc3p2bFdOaExmWjJTbVpNaVBBQV9yZ09tQUVWeDNKR2M1NlVlZlQ4d0l6RTJMNXI0RGU4SjVfUTBSaDF3SDBodnhQNlFXdmYxWkJwR2ZsTUhYMUxwbG52cTA2VkNMRWtwOUg5RVBxeG9VVXBDVVB5c1hxdk9qdFRESWMweXEySTdRMkdPSXYxSnJpcm5PLXIxSEh3ZmxZUkdUaTA3Um1iNGY0ODlUOWdrWmlTRENo0gHQAUFVX3lxTE1ycjNLVzl0N3prNndrSFE4VW5YSFVrMWJMZFNzenZsV05oTGZaMlNtWk1pUEFBX3JnT21BRVZ4M0pHYzU2VWVmVDh3SXpFMkw1cjREZThKNV9RMFJoMXdIMGh2eFA2UVd2ZjFaQnBHZmxNSFgxTHBsbnZxMDZWQ0xFa3A5SDlFUHF4b1VVcENVUHlzWHF2T2p0VERJYzB5cTJJN1EyR09JdjFKcmlybk8tcjFISHdmbFlSR1RpMDdSbWI0ZjQ4OVQ5Z2taaVNEQ2g?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
   {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
    "source": "ABC Bourse",
@@ -27,6 +18,15 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.14% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdElIQjRwTW83X2F0WFdUWnhMR1prRkxYS1QweGtoMmkzOWZybVVReDJBN1U1ZVdkUDFkdUJFMm9MdXc0UTZKMHNPUUVFUHVkckoyUndkcjhBX0sxaU5sX3E5TllpemU2cGd1U2tSWE9NdUNJNkFoZ29Sd21zWDM3QWpieUFJbXkyNndMWkotdGRZRTNocGc3QzJGSFkzNWcwVlFLVWxjNkRPREpaTjh0T1FTZW4xQzJZUXJTdDFCRjVTNjlTeFdUaVF3?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
   },
   {
    "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
@@ -141,10 +141,64 @@
  ],
  "eco": [
   {
-   "titre": "CAC 40, Renault, Safran, Thales, Pernod-Ricard… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 08 Aug 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOajNKS3lUNURRUWNZSDNDdWpKbTFEUnFYVTg1THlzR0tUVTZseENXSU1fZEgwUWF6MktPSnprczVpV1JCS1NEaTFjS0N6NE13VWFKbHdTQjdkdFlYVFpuRGNqd0hhc0dZMzFYS3p5TURESzFFY1Fub2RRcUpfa1Jhb1UtZDRPLVNQbjY1ZV84YTR2V294cDVfdHhlSFBwQUpobUJEUks5SGNmQzI1SElReThQRXRIUlp2dTBucUdlcWFlZmIzZW56dEhlN0ticjVHNTF5SHBYbw?oc=5",
+   "titre": "TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:52:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qTm15NEw5c0NZVzI1N0gyd1FRZlZSWmZWazNZcjZzRXdYSVBDaGhadFY1bHlwOHE2dEZQb2Y1TnBOY01pU3Y5VEh3TjZyemZEVVE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "NVIDIA Cours Action NVDA, Cotation Bourse NASDAQ - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:50:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FY3p6cDdaTUwxUFkxZjNJcjdVd1YtTnJocUg0eEJhYjBhTUNsemQtbWVaMFh3TVVKRFBuQ203c2ZyNzdDMVpoOXU2YXpTNjg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:40:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:38:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:32:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:15:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 08:12:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -267,6 +321,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Les contrats à terme sur les taux américains réduisent les probabilités d'une hausse des taux en septembre apr - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 16:00:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxQbTlTS0FBU0dzSVdkQ0ltVV9HTTk5aWk3Q1hFTDNvZnV6S1dvNnRGbjdNNkxXbmpNamdva2pYZ2NTTGZnVlVPdy1wQ2FKaFowT09tb0UzMUJmTHFPWjFQeTVwV3UwN2NoTlNIVGFCRk1kWVAzSUQ2TGdqTkp1Q3lLMk5VeEtNbzg2d1ZPcC1vRkVYZzlvQ1RLcVBQTVJ1Z2x4X2NJbXRJYUFyMUh5clN2Vnc1Z2Nja0dtblZsdEVjWkxHeWRFUzBENHBUd01mT3JJUy1mN0d1NXZHWGQwSjJzdjBFcUdMTWRyeHVENm9BdlVZUDdqZGh1X2tZNkplNloyZ0JFMFVjaVhYdXdOZ0ZCY1c4UVdSelZ1ZW5qTlA0TWZmTExqejJ0MFpzMlZ0YW5uVjJSTE9QLXJISkhUVUtvcktmb1B0TUxpYzJnZWx3MU1vU3NjUmVCTi1ydXJVYWtJTTlYSHFrc9IB5wJBVV95cUxQbTlTS0FBU0dzSVdkQ0ltVV9HTTk5aWk3Q1hFTDNvZnV6S1dvNnRGbjdNNkxXbmpNamdva2pYZ2NTTGZnVlVPdy1wQ2FKaFowT09tb0UzMUJmTHFPWjFQeTVwV3UwN2NoTlNIVGFCRk1kWVAzSUQ2TGdqTkp1Q3lLMk5VeEtNbzg2d1ZPcC1vRkVYZzlvQ1RLcVBQTVJ1Z2x4X2NJbXRJYUFyMUh5clN2Vnc1Z2Nja0dtblZsdEVjWkxHeWRFUzBENHBUd01mT3JJUy1mN0d1NXZHWGQwSjJzdjBFcUdMTWRyeHVENm9BdlVZUDdqZGh1X2tZNkplNloyZ0JFMFVjaVhYdXdOZ0ZCY1c4UVdSelZ1ZW5qTlA0TWZmTExqejJ0MFpzMlZ0YW5uVjJSTE9QLXJISkhUVUtvcktmb1B0TUxpYzJnZWx3MU1vU3NjUmVCTi1ydXJVYWtJTTlYSHFrcw?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Eurofins Scientific: 2.901 actions acquises par la société liée au CEO en trois jours",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 16:00:12 GMT",
@@ -312,15 +375,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "IA, Fed et Yen : la nouvelle équation des marchés américains - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 14:50:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQUnZCcDZzd1BNdTRzazNzT3BHa1c3TGxyX2VIVlBpVEFKQkkwZ3QyTDFMVVBDQ0xPS1NacXBKdUxxWU1pX0VLZ0NIRkg1dk00c2pzUlJ1c19DUWtfcGl0RHJSUnp4TDR1QU5MMkxqcGZaUkFIZTVGYkU4TGVISnFvdHl2Tmp2aDBQbzM2a1lyNmRtNHhkQldEeVd6UjdzLTY3Y1FPS2E5X0UxczJ2M09CY3Rqc1EwOWttVXNXZDVVa2RIYmNMbG5NcmFRZEFhOXRpdkRQUVB30gHWAUFVX3lxTFBSdkJwNnN3UE11NHNrM3NPcEdrVzdMbHJfZUhWUGlUQUpCSTBndDJMMUxVUENDTE9LU1pxcEp1THFZTWlfRUtnQ0hGSDV2TTRzanNSUnVzX0NRa19waXREclJSenhMNHVBTkwyTGpwZlpSQUhlNUZiRThMZUhKcW90eXZOanZoMFBvMzZrWXI2ZG00eGRCV0R5V3pSN3MtNjdjUU9LYTlfRTFzMnYzT0JjdGpzUTA5a21Vc1dkNVVrZEhiY0xsbk1yYVFkQWE5dGl2RFBRUHc?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "S&P 500 - Les actions à suivre vendredi: Airbnb, Atlassian, Boeing, Meta, SK Hynix, Under Armour",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 13:58:08 GMT",
@@ -355,24 +409,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Toujours en avance par rapport à 2025, Airbus voit ses livraisons ralentir en juillet mais ses commandes accélèrent grâce au salon aéronautique international de Farnborough",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 09:30:04 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/aeronautique/toujours-en-avance-par-rapport-a-2025-airbus-voit-ses-livraisons-ralentir-en-juillet-mais-ses-commandes-accelerent-grace-au-salon-aeronautique-international-de-farnborough_AD-202608070261.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 07:44:51 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/video-en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_VN-202608070212.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
