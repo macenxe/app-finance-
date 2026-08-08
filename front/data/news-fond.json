@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-08T10:46:49.803Z",
+ "genere": "2026-08-08T11:38:25.752Z",
  "globales": [
-  {
-   "titre": "Avalanche de records en Europe, le CAC 40 au plus haut - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 15:56:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcnIzS1c5dDd6azZ3a0hROFVuWEhVazFiTGRTc3p2bFdOaExmWjJTbVpNaVBBQV9yZ09tQUVWeDNKR2M1NlVlZlQ4d0l6RTJMNXI0RGU4SjVfUTBSaDF3SDBodnhQNlFXdmYxWkJwR2ZsTUhYMUxwbG52cTA2VkNMRWtwOUg5RVBxeG9VVXBDVVB5c1hxdk9qdFRESWMweXEySTdRMkdPSXYxSnJpcm5PLXIxSEh3ZmxZUkdUaTA3Um1iNGY0ODlUOWdrWmlTRENo0gHQAUFVX3lxTE1ycjNLVzl0N3prNndrSFE4VW5YSFVrMWJMZFNzenZsV05oTGZaMlNtWk1pUEFBX3JnT21BRVZ4M0pHYzU2VWVmVDh3SXpFMkw1cjREZThKNV9RMFJoMXdIMGh2eFA2UVd2ZjFaQnBHZmxNSFgxTHBsbnZxMDZWQ0xFa3A5SDlFUHF4b1VVcENVUHlzWHF2T2p0VERJYzB5cTJJN1EyR09JdjFKcmlybk8tcjFISHdmbFlSR1RpMDdSbWI0ZjQ4OVQ5Z2taaVNEQ2g?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
   {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
    "source": "ABC Bourse",
@@ -27,6 +18,15 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.14% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdElIQjRwTW83X2F0WFdUWnhMR1prRkxYS1QweGtoMmkzOWZybVVReDJBN1U1ZVdkUDFkdUJFMm9MdXc0UTZKMHNPUUVFUHVkckoyUndkcjhBX0sxaU5sX3E5TllpemU2cGd1U2tSWE9NdUNJNkFoZ29Sd21zWDM3QWpieUFJbXkyNndMWkotdGRZRTNocGc3QzJGSFkzNWcwVlFLVWxjNkRPREpaTjh0T1FTZW4xQzJZUXJTdDFCRjVTNjlTeFdUaVF3?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
   },
   {
    "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
@@ -141,10 +141,19 @@
  ],
  "eco": [
   {
-   "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 08 Aug 2026 10:28:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
+   "date": "Sat, 08 Aug 2026 10:55:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 08 Aug 2026 10:55:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -202,15 +211,6 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le rapport sur l'emploi fait retomber les taux et relance Wall Street - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 20:07:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSFhZVVpFNE4tUmxhVElHTlRpbXBBdWxWZjE2SUVjbzdNd1l3UnJVN1k4dUx4dW9YWEZFVEVsZVZ0UUR4WE5WTWFzWDR2ZE9jY0lCREYzVVd6Um5Ta3BTZWVQbXRDNXNMY2pKdFdQeDhUQjcta0pQazRtRnp3MFEzY1c3akxoN2NTNGd5Vl9FOEY1WE45NGh6dUNLeXoxbVNLOERmSXNIZmlOTjRNRjRjUzRPS0hOakxaYnB6VkNFUklMQ3ExNl8xY2pkb0t5U2NhZzdzLWpzaFk0SGVfWTlEQTdXdmdRUdIB5gFBVV95cUxQSFhZVVpFNE4tUmxhVElHTlRpbXBBdWxWZjE2SUVjbzdNd1l3UnJVN1k4dUx4dW9YWEZFVEVsZVZ0UUR4WE5WTWFzWDR2ZE9jY0lCREYzVVd6Um5Ta3BTZWVQbXRDNXNMY2pKdFdQeDhUQjcta0pQazRtRnp3MFEzY1c3akxoN2NTNGd5Vl9FOEY1WE45NGh6dUNLeXoxbVNLOERmSXNIZmlOTjRNRjRjUzRPS0hOakxaYnB6VkNFUklMQ3ExNl8xY2pkb0t5U2NhZzdzLWpzaFk0SGVfWTlEQTdXdmdRUQ?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Le marché réduit les probabilités d'une hausse des taux de la Fed après la publication des chiffres de l'emplo - Boursorama",
@@ -330,6 +330,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "IA, Fed et Yen : la nouvelle équation des marchés américains - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 14:50:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQUnZCcDZzd1BNdTRzazNzT3BHa1c3TGxyX2VIVlBpVEFKQkkwZ3QyTDFMVVBDQ0xPS1NacXBKdUxxWU1pX0VLZ0NIRkg1dk00c2pzUlJ1c19DUWtfcGl0RHJSUnp4TDR1QU5MMkxqcGZaUkFIZTVGYkU4TGVISnFvdHl2Tmp2aDBQbzM2a1lyNmRtNHhkQldEeVd6UjdzLTY3Y1FPS2E5X0UxczJ2M09CY3Rqc1EwOWttVXNXZDVVa2RIYmNMbG5NcmFRZEFhOXRpdkRQUVB30gHWAUFVX3lxTFBSdkJwNnN3UE11NHNrM3NPcEdrVzdMbHJfZUhWUGlUQUpCSTBndDJMMUxVUENDTE9LU1pxcEp1THFZTWlfRUtnQ0hGSDV2TTRzanNSUnVzX0NRa19waXREclJSenhMNHVBTkwyTGpwZlpSQUhlNUZiRThMZUhKcW90eXZOanZoMFBvMzZrWXI2ZG00eGRCV0R5V3pSN3MtNjdjUU9LYTlfRTFzMnYzT0JjdGpzUTA5a21Vc1dkNVVrZEhiY0xsbk1yYVFkQWE5dGl2RFBRUHc?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "S&P 500 - Les actions à suivre vendredi: Airbnb, Atlassian, Boeing, Meta, SK Hynix, Under Armour",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 13:58:08 GMT",
@@ -352,15 +361,6 @@
    "source": "BFM Économie",
    "date": "Fri, 07 Aug 2026 12:26:47 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/agriculture/5-6-pour-le-sucre-3-4-pour-les-cereales-les-vagues-de-chaleur-les-prix-de-l-energie-et-le-contexte-geopolitique-tendu-poussent-les-prix-alimentaires-a-la-hausse-en-juillet_AD-202608070329.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Toujours en avance par rapport à 2025, Airbus voit ses livraisons ralentir en juillet mais ses commandes accélèrent grâce au salon aéronautique international de Farnborough",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 09:30:04 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/aeronautique/toujours-en-avance-par-rapport-a-2025-airbus-voit-ses-livraisons-ralentir-en-juillet-mais-ses-commandes-accelerent-grace-au-salon-aeronautique-international-de-farnborough_AD-202608070261.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
