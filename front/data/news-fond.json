@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-08T05:52:59.777Z",
+ "genere": "2026-08-08T07:09:18.614Z",
  "globales": [
   {
    "titre": "Avalanche de records en Europe, le CAC 40 au plus haut - Boursorama",
@@ -76,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "Stellantis : «La goutte d'eau qui fait déborder le vase»... Après un plongeon de 48% cette année, Bernstein voit l'action Stellantis encore chuter de près de 20% et conseille désormais de la vendre - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 07 Aug 2026 09:07:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxPS2VsVEplZnJBeDZUaTc5NmkwVmpZcGNVMVR3eTNLX3BXWHVzTk51MHJEN29hU3E0VGlPdTVYaTd3V2hYLXFGY3ItUllpNFc0aGZpM1pNSkF3VTl4dkRhdlJna0lpN1c4cWhUa2U4RHdIWTJkdndQR0huRkg4QjlXUHMyMGhOcXF5RUZzY2Qwb0ZXbVRKY2t4OFRZbW1CcUpJak1hSENJWHRJU1lXWGlwUEJBM0lETmh5RG9tU1l4dUs1REJ4S29Oa3hVUEVVelgtX1ROdzZWeWxiV3V6VWoyX3JPcExjTFB6elJSV0c3T2QzN3lzY1l3U2tPblhReV9jMk5WTlNPblBlSVU3aGxkVnFnaUtzQWRRY2tGRmxkUGc0ZDZCbml1LVllcmFNenpiQThUUUY2Mmxvc05BeWNYTnB1U3drMjMwZkNzb0UzY19uZWxfVEV2NXhMcWdfaWJNWmNQQ29UWGxnclRqTHpDQklYby0tdUpKTnc?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ? - Capital.fr",
    "source": "Capital.fr",
    "date": "Fri, 07 Aug 2026 05:00:00 GMT",
@@ -112,11 +121,11 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Stellantis : Le redressement de Stellantis aux États-Unis patine trop à son goût, UBS jette l'éponge et ne recommande plus d'acheter l'action du constructeur automobile - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 03 Aug 2026 12:52:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQMDRERmI0TjlqS294Zk43alV0em1fQUJHLW1FeDQ0UW51d2I2NVdjTnd3X2Frb0J2bGNDNHF6dEJ6aHNPcXZmTE9jb0l4eThhX0ZZWEJzNzZuSlRHV3RwalBXVmdXNDYtR0VRcXJrd1BWTHZubmlTREdxbW5xbFc4VXBzN0lfN2xZdUlQcDNYd3VKcmx0U21CSVZsbUdYQ0tkbjlBUzBWdDBxeENUeXJsVDVoX3RQSG9aYTBsVWJxMklTbTl5SE9mSm1OUHNtbGgzNnJvQ2JlenFFbDdZTndxd0RPZU5lR2hSYTVfQmUtV3hzUnU0U1d0Mlc5a00xZXN0am1JYWtiUGRONTNwWW9WQmkyTTBFaWlJWFVrNHpMSEJVd2pBUkdhc2tTMWM2YUd2U2NXNC1POGJIYW8wc3lpRmdlZnlWTUNuOTFDX0xwclB5Q3lZUTZLT2RtTDI?oc=5",
-   "tag": "Stellantis",
+   "titre": "Le Cac 40 tout proche de son record, porté par le recul du pétrole après le geste de Trump envers l'Iran - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 03 Aug 2026 10:33:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPVzFXUlVQUUZ2dzJpWnJSMGFtb0RPRTB3NW1xdldkd1Q5MnlXZl9iY1ljOU5SRk41MlkzanJCTW5GVm8yU2dfRWcxRU5xNmNFdW4zTDlYaFlVMVc3RWJqRXphdnBiX3dDSDc2bFo3MTVjUGItUmYzVkkxUDB0SVlTeGQtZEhCQUx6UmVMMXU0a282VmI2T2JZcDkzUEJtOHo1cF90QTlocnhzUmw0ZGYycTF2N1dqclNIQ2o0Q3VqNEt1bFhFRWttLU1xSVBUQ245d2lVMFZzekJQVGpycXJDNzgySFR4Y2hPNUpvUEFZVTJYc3lrTXhCajROZmRYUDJ2cDRr?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -128,41 +137,14 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "CAC 40, Engie, Bouygues, Kering, Capgemini… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 01 Aug 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOREdLdlJmNXlhbml0cTJqSU5za0p5bXJkVFpzUUxPNTNvTmE5cElKc24wZG9aSjh4T0Y4anEwOGRnaWZRVVpWU0lsSlZlX3ZIUE1zYnZoNVVNZVdPekRxb2doTGJ2dGh4LTlLeHMwNzJ6VG9XSmd4UTB6YnhuSmdNOUF0VHkza2YzQlVUN1puYTBRWENRY0JqVGpkb3c1ODlvZTlTeTFLQUo5YWYtZGpDZFZpZWVhbTVIVWt0RUp6MWF0LWlrXzRNc1pSaE5aMUZwaHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 08 Aug 2026 05:38:57 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 08 Aug 2026 05:10:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "MICROSOFT Cours Action MSFT, Cotation Bourse NASDAQ - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 08 Aug 2026 05:07:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qVl8taWpqb3ZoZnNzWmJTVDE0c08zY2JqSGh3VFJnekVaSzg2Mm8xWThrTDBCWHFDY2cyN3o3V3hoWFU5OWVFOGFmOEN6TjQ?oc=5",
+   "titre": "CAC 40, Renault, Safran, Thales, Pernod-Ricard… les actions en Bourse au programme de Momentum - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sat, 08 Aug 2026 06:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOajNKS3lUNURRUWNZSDNDdWpKbTFEUnFYVTg1THlzR0tUVTZseENXSU1fZEgwUWF6MktPSnprczVpV1JCS1NEaTFjS0N6NE13VWFKbHdTQjdkdFlYVFpuRGNqd0hhc0dZMzFYS3p5TURESzFFY1Fub2RRcUpfa1Jhb1UtZDRPLVNQbjY1ZV84YTR2V294cDVfdHhlSFBwQUpobUJEUks5SGNmQzI1SElReThQRXRIUlp2dTBucUdlcWFlZmIzZW56dEhlN0ticjVHNTF5SHBYbw?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -388,15 +370,6 @@
    "source": "BFM Économie",
    "date": "Fri, 07 Aug 2026 07:44:51 GMT",
    "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/video-en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_VN-202608070212.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "En portefeuille : Alphabet (Google) s'apprête à lever 25 mds$ sur le marché obligataire - 07/08",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 07:31:30 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/en-portefeuille-alphabet-google-s-apprete-a-lever-25-mds-sur-le-marche-obligataire-07-08_EN-202608070201.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
