@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-08T20:44:24.189Z",
+ "genere": "2026-08-09T05:54:45.478Z",
  "globales": [
   {
    "titre": "Avalanche de records en Europe, le CAC 40 au plus haut - Boursorama",
@@ -29,15 +29,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.14% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdElIQjRwTW83X2F0WFdUWnhMR1prRkxYS1QweGtoMmkzOWZybVVReDJBN1U1ZVdkUDFkdUJFMm9MdXc0UTZKMHNPUUVFUHVkckoyUndkcjhBX0sxaU5sX3E5TllpemU2cGd1U2tSWE9NdUNJNkFoZ29Sd21zWDM3QWpieUFJbXkyNndMWkotdGRZRTNocGc3QzJGSFkzNWcwVlFLVWxjNkRPREpaTjh0T1FTZW4xQzJZUXJTdDFCRjVTNjlTeFdUaVF3?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Comment les investisseurs devraient-ils s’adapter à un contexte de volatilité des taux? - Morningstar",
    "source": "Morningstar",
    "date": "Thu, 06 Aug 2026 11:03:11 GMT",
@@ -54,6 +45,15 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Nouveau record pour le Cac 40 grâce à l'apaisement des tensions au Moyen-Orient et à la baisse du pétrole - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Mon, 03 Aug 2026 14:41:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPck16SDZ3WkpXS2hZUTBfRmlrTnljNlBsZlZVbFlYemdWaTZ0b1ZYaGtZMTRpSlFEVlJILTRGMmxIWDR2OUo2OHNXbTAxY0pONTM1WTBpWXRiNnNnOWk3aDBEYXNtbHFrNXNsQ0FEM3kxclkxOHkxeHoxTHJ0N0lPenIyWkFnZGo5NW5UWXdBU0drLXBnQ2lMNFMwN3JHT2t6SFQ5cklMSlRreW1sQ1JKdWRjTkwyNFNxa0hFX09fcVhkelN1bG9Db1hWLTBFNkt4TUtSTWo5R3dTUVZtS0xVM2JBR0laeFI5UldZVjJ4YzdKeGRlTWtSTmY5T0R5SmpvT2hCdEtn?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "Pourquoi la Fed fait-elle autant bouger les marchés ? - Zonebourse Suisse",
@@ -76,47 +76,11 @@
  ],
  "produits": [
   {
-   "titre": "Stellantis : «La goutte d'eau qui fait déborder le vase»... Après un plongeon de 48% cette année, Bernstein voit l'action Stellantis encore chuter de près de 20% et conseille désormais de la vendre - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 07 Aug 2026 09:07:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxPS2VsVEplZnJBeDZUaTc5NmkwVmpZcGNVMVR3eTNLX3BXWHVzTk51MHJEN29hU3E0VGlPdTVYaTd3V2hYLXFGY3ItUllpNFc0aGZpM1pNSkF3VTl4dkRhdlJna0lpN1c4cWhUa2U4RHdIWTJkdndQR0huRkg4QjlXUHMyMGhOcXF5RUZzY2Qwb0ZXbVRKY2t4OFRZbW1CcUpJak1hSENJWHRJU1lXWGlwUEJBM0lETmh5RG9tU1l4dUs1REJ4S29Oa3hVUEVVelgtX1ROdzZWeWxiV3V6VWoyX3JPcExjTFB6elJSV0c3T2QzN3lzY1l3U2tPblhReV9jMk5WTlNPblBlSVU3aGxkVnFnaUtzQWRRY2tGRmxkUGc0ZDZCbml1LVllcmFNenpiQThUUUY2Mmxvc05BeWNYTnB1U3drMjMwZkNzb0UzY19uZWxfVEV2NXhMcWdfaWJNWmNQQ29UWGxnclRqTHpDQklYby0tdUpKTnc?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "negative"
-  },
-  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 07 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
    "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "WENDEL Cours Action MF, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9rbVkzTVgtLUhHelpBWWFhZ25kUWxpVDFiN21tVTRSUlNBQ1dhRzlnNUVBaGtYRzJUMWE1VzlfTEx4dHBqZGRuNUp2T1ZsU0hS?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IUk5rZ0h4RXBVdzUxNU9kME9md3hMa1MtV3lJbXVpOXlBazZnRWxRY2wxck10cjhEWUMxMnl1VloxYlpjbklCcUZhWlA3RVA1eEE?oc=5",
-   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -139,6 +103,24 @@
    "sentiment": "negative"
   },
   {
+   "titre": "BNP Paribas signe un nouveau record en Bourse, tout bon pour nos bonus cappés - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Tue, 04 Aug 2026 10:10:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWmZsMXJoTDlvMHl5VU9ycGoyOU1Vd21QamJta3Y4RUdsQ2hJdUVxNWdfU3FOSzd6MFdVSjd1V015Z3hKVGJPWVRnQnhBd2Q0NmQzSUxDOVYtazBKRUh1bEVpS3l4bTRsR1YxeTNrdEtNamF6cG5tMXl6TzhDX3ZFVzlhMDU4QW5UVGczNnhvWVY5OVFmalZsTVRMUHlucTZfXzRSejlmcFBCaXFpTXJiNDFneUxNbzdNRnpsZWlkTXdueGdocFg4Wm1Bdm1VLWNDQURnd3VqaEZhSkp3NzE4MmQtX3dYMmxhSGZXQ3Jra3BzSkRQ?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Cac 40 profite de l'accalmie géopolitique entre Washington et Téhéran et d'une détente sur le pétrole pour remonter à 8.600 points - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Mon, 03 Aug 2026 12:53:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPd1g4Nnc1LWltRl83Uzd2RDZrVWdHd1ZEY0ctbG5aeVUwWUgwZE05cFdrdk0yMkVZV3BaaFoyczRzemhhblZMN0Z4aTBFMDRyNmRJQUJQUzVGckxVbFRmUkZoZFprM0tiOGtHcHJ3NlU3ZlZQOEhrQnE5SDNEZXhlcGZUSnNFMzJDTzd0YjB0OGFubWVuNFBrbzhNSVhhVHY0ZGlCcjhpNmZXbGxxOTBzTzIzNGNMMVdWUUo5T29MejNZT25MOUNhVXhGNmdMTkk0TVFMQWdFMUdZeGsyN1YwNVhBa2hYand3STJpcDAzNFJMWm95YmttdVA2VHkyNG5oend1WFFTYlZRX0NDTkZQOU03RXF1clVxSGhHUkVyRUtWdlNhVzhXaw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Stellantis : Le redressement de Stellantis aux États-Unis patine trop à son goût, UBS jette l'éponge et ne recommande plus d'acheter l'action du constructeur automobile - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Mon, 03 Aug 2026 12:52:11 GMT",
@@ -146,9 +128,81 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Cac 40 tout proche de son record, porté par le recul du pétrole après le geste de Trump envers l'Iran - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Mon, 03 Aug 2026 10:33:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPVzFXUlVQUUZ2dzJpWnJSMGFtb0RPRTB3NW1xdldkd1Q5MnlXZl9iY1ljOU5SRk41MlkzanJCTW5GVm8yU2dfRWcxRU5xNmNFdW4zTDlYaFlVMVc3RWJqRXphdnBiX3dDSDc2bFo3MTVjUGItUmYzVkkxUDB0SVlTeGQtZEhCQUx6UmVMMXU0a282VmI2T2JZcDkzUEJtOHo1cF90QTlocnhzUmw0ZGYycTF2N1dqclNIQ2o0Q3VqNEt1bFhFRWttLU1xSVBUQ245d2lVMFZzekJQVGpycXJDNzgySFR4Y2hPNUpvUEFZVTJYc3lrTXhCajROZmRYUDJ2cDRr?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
   }
  ],
  "eco": [
+  {
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 09 Aug 2026 05:51:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Il y a un demi-siècle, c'était une île indonésienne paisible parsemée de villages de pêcheurs: depuis les droits de douane de Trump, le complexe industriel de Batam n'en finit plus de gonfler",
+   "source": "BFM Économie",
+   "date": "Sun, 09 Aug 2026 04:59:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/industries/il-y-a-un-demi-siecle-c-etait-une-ile-indonesienne-paisible-parsemee-de-villages-de-pecheurs-depuis-les-droits-de-douane-de-trump-le-complexe-industriel-de-batam-n-en-finit-plus-de-gonfler_AV-202608090018.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit à un plus bas de trois mois en juillet, l'IPC reflue également - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 09 Aug 2026 02:24:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQcFotNWJxZElNd0YwOWRTNlhSNHZ3SmNIMXR0bDZub1BjNHIzaTJUTlZyekdYcHFhYmJGWm9jNGdJemQ5eFI1cUpqYWhRUXB4QkFSdl9zaW01U3pYTXpncUxRNFE1QkN2LTJkZ1k1alBSd2ZqcVBZZkJBanV0Y2phQ3QzaFA2dElhNTJuRWNjRXFiZmVfQkVYT1hqakdEdERvdzZBVXhwTWhzTmJwVVpOOVp5RUpLNVJ5bXQxdTNTTGhTT1AyWU1aN05lQVZBRGhMU0ZRWUxoR3k5XzhDNTRsOWFYdE1CRG1xbk15c3dR?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit à un plus bas de trois mois en juillet, l'IPC reflue également - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Sun, 09 Aug 2026 02:24:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMUxzY3hrRTNSOS1jZFB0UHdlcUtEd3JmQUUyTzN0LXBIRnJGZXltMEF5Q3E4dHd2NmJldGlaeXB1MExxS2c3Ym5sVENpNDRCZklCck1yZ3J4Nlg2Y01nWjNadzFsS0FjNjhIUGkxTWNXUE9abTF6M0R5c0loVUJLa3FEN1VDY0d6dk9UUEdraXgwdzR3U0ljRF9UZWEwblJPNjRJMDdjczFRVnhDQUt0UlRUOTh1bUlZNVdFY1FoSW54cjA1SENyTUFxNWRhbUxjYlBYeGpMcWpETENzMk9kVUNVMVRjb3JCUndVV3Azbw?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit en juillet, sous les attentes - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Sun, 09 Aug 2026 01:41:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRHhuZW9CQlVoMWotWVV1TE1hSFpudWtHQm52YW1tU2xnWGF1Rk1aem1Ub1piakF5c1RsVUVQbkU5THROdjNvSkx6REJ3eWY1S3lsNnc2RDZrdzN3UGtXZ3NwMFhqLWRtWkhWazdTVHYzbUYtUnFPLXZWRmt2THhnZjRzd3VwWERhREY0cU12blNDQmN5YmZmQnFPYnNzdHBzWnZnVS1HQjY4Nkh2S3VSU2tyUGJnQ1FGWHhDajNlWWdiaVlFTE1XZV96T1Q?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit en juillet, sous les attentes - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 09 Aug 2026 01:41:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSTl5YmtIRjVrZ1lwYlpoYk43MzY0cTlURUVmNHozS1pRaS02cDJGTmlUeUNLbGI0T2R2WXRsMU9ZaFA0cmcwOEtMX0YwRzEtMU9Mc284RzVvM215WkxybTcwZnVWOWRvTFFjNUJ1dVpJaEVjTzB0djNDQ3Zpa2RuckFFTkdSNlJRWFk5RWREbGZ6Ylh0QUdKU3FuR0FMeGFrVEdTS0Z3N2pWeXJhd09IZU5XdHVKQ0xKYXZIY0lpeW4zWDVrRmpYR1RUNA?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine: l'inflation ralentit encore en juillet, en deçà des estimations - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 08 Aug 2026 19:44:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FTXZGZ1h4R0hDOFp2bGdkMm5BVVdfdW5FWmZXVmhnZUZoa2dkb0hyVHFQMHctcEVScWlkc2Q1U1djLTBpUTVSOGpRQVpobG1iMzJaeklYRFM3eTg5Vm5hcWZn?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Plus d'un milliard d'euros de dettes: comment les partis politiques grecs ont vu leurs comptes sombrer (ils ne comptent pas rembourser leurs créanciers)",
    "source": "BFM Économie",
@@ -182,15 +236,6 @@
    "date": "Sat, 08 Aug 2026 04:52:03 GMT",
    "lien": "https://www.bfmtv.com/economie/video-le-taux-de-chomage-en-france-atteint-son-plus-haut-niveau-depuis-l-automne-2020-en-pleine-pandemie-de-coronavirus_VN-202608080051.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Trump s'active à nouveau pour tenter de limoger Lisa Cook de la Fed - WSJ - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 07 Aug 2026 21:54:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVlNvOGZYWWQ1NGZ3UHlOUTlFYjZJRG9FVkotbDl1UGJrZlVLdXZBQURqODZ2b2toU0JkUHdPMXhRMk9Lc18tT3QtS1hmWUZJalFQWm9hcjJNbVVWTmJKTmtuZDRZbFB6UFZjb0tLUmxDMkk3M0J0TU95Tm5hbmhYNk9obkc4ajg5Zzl6dE04UmxQX0xtZk9NcFpOZ2g4UzNqcU5kRlVXc3U3VTNSUVp5ZWRDTDlmdFZCN3ZOb3RBZ3ctUURNMkVhanNGMVY?oc=5",
-   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -292,15 +337,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "CAC 40, records au milieu des incertitudes",
-   "source": "BFM Économie",
-   "date": "Fri, 07 Aug 2026 15:30:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-emission-du-7-aout-2026_VN-202608070427.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis",
