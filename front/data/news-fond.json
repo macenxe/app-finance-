@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-09T09:52:21.877Z",
+ "genere": "2026-08-09T10:48:13.597Z",
  "globales": [
-  {
-   "titre": "Avalanche de records en Europe, le CAC 40 au plus haut - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 15:56:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcnIzS1c5dDd6azZ3a0hROFVuWEhVazFiTGRTc3p2bFdOaExmWjJTbVpNaVBBQV9yZ09tQUVWeDNKR2M1NlVlZlQ4d0l6RTJMNXI0RGU4SjVfUTBSaDF3SDBodnhQNlFXdmYxWkJwR2ZsTUhYMUxwbG52cTA2VkNMRWtwOUg5RVBxeG9VVXBDVVB5c1hxdk9qdFRESWMweXEySTdRMkdPSXYxSnJpcm5PLXIxSEh3ZmxZUkdUaTA3Um1iNGY0ODlUOWdrWmlTRENo0gHQAUFVX3lxTE1ycjNLVzl0N3prNndrSFE4VW5YSFVrMWJMZFNzenZsV05oTGZaMlNtWk1pUEFBX3JnT21BRVZ4M0pHYzU2VWVmVDh3SXpFMkw1cjREZThKNV9RMFJoMXdIMGh2eFA2UVd2ZjFaQnBHZmxNSFgxTHBsbnZxMDZWQ0xFa3A5SDlFUHF4b1VVcENVUHlzWHF2T2p0VERJYzB5cTJJN1EyR09JdjFKcmlybk8tcjFISHdmbFlSR1RpMDdSbWI0ZjQ4OVQ5Z2taaVNEQ2g?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
   {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
    "source": "ABC Bourse",
@@ -25,6 +16,15 @@
    "date": "Fri, 07 Aug 2026 10:12:24 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMHZiQm0tRkNNODRkMmRFTmhLaHJHR2N6X1VxVDg5N3A2M3JEWE5fSDhFVFNoaWtBbDBKSUxqT0prNFVFU3JyaTdMYkxlajZKa2hnSEIzUDhCSHNUZ1VVRERtVzlsbTR4YnhoQUk1ZVplaGlJSzViSTJOZ0ZlaHJZTU1IX2l3cTBTMnNQSWs5Q05GSnVHb3otNG5CLWFuWl9OV0VpV0ZqMGVYbmg3eThxSmstNkJ4aVNxdm5iN3JHTXN6U1BxU2tkaDM5Sno3VndMZEJXbzJHQk9TNkXSAdsBQVVfeXFMTTB2YkJtLUZDTTg0ZDJkRU5oS2hyR0djel9VcVQ4OTdwNjNyRFhOX0g4RVRTaGlrQWwwSklMak9KazRVRVNycmk3TGJMZWo2SmtoZ0hCM1A4QkhzVGdVVUREbVc5bG00eGJ4aEFJNWVaZWhpSUs1YkkyTmdGZWhyWU1NSF9pd3EwUzJzUElrOUNORkp1R296LTRuQi1hblpfTldFaVdGajBlWG5oN3k4cUprLTZCeGlTcXZuYjdyR01zelNQcVNrZGgzOUp6N1Z3TGRCV28yR0JPUzZF?oc=5",
    "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -76,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 15:35:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 07 Aug 2026 07:00:00 GMT",
@@ -103,15 +112,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "BNP Paribas signe un nouveau record en Bourse, tout bon pour nos bonus cappés - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 04 Aug 2026 10:10:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWmZsMXJoTDlvMHl5VU9ycGoyOU1Vd21QamJta3Y4RUdsQ2hJdUVxNWdfU3FOSzd6MFdVSjd1V015Z3hKVGJPWVRnQnhBd2Q0NmQzSUxDOVYtazBKRUh1bEVpS3l4bTRsR1YxeTNrdEtNamF6cG5tMXl6TzhDX3ZFVzlhMDU4QW5UVGczNnhvWVY5OVFmalZsTVRMUHlucTZfXzRSejlmcFBCaXFpTXJiNDFneUxNbzdNRnpsZWlkTXdueGdocFg4Wm1Bdm1VLWNDQURnd3VqaEZhSkp3NzE4MmQtX3dYMmxhSGZXQ3Jra3BzSkRQ?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Le Cac 40 profite de l'accalmie géopolitique entre Washington et Téhéran et d'une détente sur le pétrole pour remonter à 8.600 points - Les Echos",
    "source": "Les Echos",
    "date": "Mon, 03 Aug 2026 12:53:21 GMT",
@@ -126,15 +126,6 @@
    "date": "Mon, 03 Aug 2026 12:52:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQMDRERmI0TjlqS294Zk43alV0em1fQUJHLW1FeDQ0UW51d2I2NVdjTnd3X2Frb0J2bGNDNHF6dEJ6aHNPcXZmTE9jb0l4eThhX0ZZWEJzNzZuSlRHV3RwalBXVmdXNDYtR0VRcXJrd1BWTHZubmlTREdxbW5xbFc4VXBzN0lfN2xZdUlQcDNYd3VKcmx0U21CSVZsbUdYQ0tkbjlBUzBWdDBxeENUeXJsVDVoX3RQSG9aYTBsVWJxMklTbTl5SE9mSm1OUHNtbGgzNnJvQ2JlenFFbDdZTndxd0RPZU5lR2hSYTVfQmUtV3hzUnU0U1d0Mlc5a00xZXN0am1JYWtiUGRONTNwWW9WQmkyTTBFaWlJWFVrNHpMSEJVd2pBUkdhc2tTMWM2YUd2U2NXNC1POGJIYW8wc3lpRmdlZnlWTUNuOTFDX0xwclB5Q3lZUTZLT2RtTDI?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le Cac 40 tout proche de son record, porté par le recul du pétrole après le geste de Trump envers l'Iran - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 03 Aug 2026 10:33:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPVzFXUlVQUUZ2dzJpWnJSMGFtb0RPRTB3NW1xdldkd1Q5MnlXZl9iY1ljOU5SRk41MlkzanJCTW5GVm8yU2dfRWcxRU5xNmNFdW4zTDlYaFlVMVc3RWJqRXphdnBiX3dDSDc2bFo3MTVjUGItUmYzVkkxUDB0SVlTeGQtZEhCQUx6UmVMMXU0a282VmI2T2JZcDkzUEJtOHo1cF90QTlocnhzUmw0ZGYycTF2N1dqclNIQ2o0Q3VqNEt1bFhFRWttLU1xSVBUQ245d2lVMFZzekJQVGpycXJDNzgySFR4Y2hPNUpvUEFZVTJYc3lrTXhCajROZmRYUDJ2cDRr?oc=5",
-   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   }
@@ -184,15 +175,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le taux de chômage en France atteint son plus haut niveau depuis l'automne 2020, en pleine pandémie de coronavirus",
-   "source": "BFM Économie",
-   "date": "Sat, 08 Aug 2026 04:52:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-le-taux-de-chomage-en-france-atteint-son-plus-haut-niveau-depuis-l-automne-2020-en-pleine-pandemie-de-coronavirus_VN-202608080051.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Records annuels: Paris brille, indices européens solides",
