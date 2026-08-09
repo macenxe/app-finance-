@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-09T10:48:13.597Z",
+ "genere": "2026-08-09T11:39:21.226Z",
  "globales": [
   {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
@@ -76,20 +76,20 @@
  ],
  "produits": [
   {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 15:35:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 07 Aug 2026 15:35:17 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -131,6 +131,15 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Selon le WSJ, Apple teste les puces mémoire chinoises CXMT pour ses iPhone et MacBook - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 09 Aug 2026 11:08:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOQ3p0NEFTWWtBT3J4Q1hybndscVJydVdKQ3BMZGlUQUhqVDdrYXROYTN6Y3AweW9jM3hPRWxnVk1pTzNDWUVibUV3aDBiNDZ6dVNaZl95SVN6b1RLM1lFRXprR3NVSkFWYmpjTVhMX0t6dkM2bDlSXzBRREJiR1I2RGRhdTljeGZjeUlXRTM4Ym9ZaTdiSnE3UDhMSTFTX3hKT1I3VjdjTlR0MC0zdGpqSWZQNm1BOXZQM2IydjVHc25pdjRXQjVhRTZqWU9BWGJjWFVDaks3QUExaEMxTlJRdWpGWXdzNno4QUNkTWlQNDNCUTBZ0gH6AUFVX3lxTE1QM0VVTVVmSkdBcjVCU2RYTkZUOXhiSGxnLXBpZ3hta1RBZjlra1RJQjVCUTQxWkktR2JaRUNxck9yelVua3BMLVBPOHpXQnFTdWFZa3dIZ0YzZTF5UElOa1M2WGtXSklEQlJlNGFZdmVSYjJZanJOQUx4M05vT2QyTTVzUG44TmQ3b3dTVEdTbkdXTWZOUEdfS210eHBmVHVVNldOTy03bnMwZUNxLUppYS14WThCREZ0b3c2U1lIWUlvVjhieU9EallLNmozWmFtZ3NKUno3REtLRzlkeUlPOXdoeTJXbkdwTUZnbWlUVGJPdjlFYmpvZFE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Il y a un demi-siècle, c'était une île indonésienne paisible parsemée de villages de pêcheurs: depuis les droits de douane de Trump, le complexe industriel de Batam n'en finit plus de gonfler",
    "source": "BFM Économie",
