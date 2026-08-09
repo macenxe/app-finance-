@@ -1,14 +1,178 @@
 {
- "genere": "2026-08-09T19:44:39.920Z",
- "globales": [],
- "produits": [],
+ "genere": "2026-08-09T20:47:46.452Z",
+ "globales": [
+  {
+   "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 07 Aug 2026 15:07:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQk9Jel83NDFtM3Q2d3JybDRWX2hHblhIb1lyV1hoQm1xemEwek1pT3Eza1drMzJBYU5XOVhTUUU4VUIxX3pjWmY4M0xZb3F4TWNUQl82TVRsN0dOcWQ0eDI3UTBLQXozLUlNbHh4U0NLRE40b1lzSDA5M1BzZ0FOUGtLMnRWbExUTVF0aUVMSTdxTUNRaGFqdDV1RkNUUmllSExzbnM5dUhkb3ZNbExFdUdXZUdacWVTTkhySg?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le marché réduit les probabilités d'une hausse de la Fed après les chiffres de l'emploi, mais les économistes privilégient toujours un resserrement - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 07 Aug 2026 12:45:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNcTIwMHhybUhJZGQwTWtlYWc3VEkzY2dpMXVna3FoZF85NnRQRzZxSVhFMVNLUnV2eWlqNFdIby1TMlk3N2lXNWZ0Nm05aG9GLUtOLXYzZXIyTmxmRTN3T1haR3NvOG80VGN3bE5za3lVZkxON0Nia3kyWTZDekxqZFpXcExMU0xoa0pDb3ZOcFZpRjRPUEFqWnZNTUpjcDNJbHpMaDJSbllpZll5bzlqeEtKeE4zazFWQ0tvOV9jaUJ1dFBTT29kX3BMSEhFdjY5dXJEZnYxdm02SWluZ0otdFpyLW1TeWJTLWlselRybE04eTQ?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "POINT HEBDO-Pas de vacances d'été pour les marchés financiers - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 10:12:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMHZiQm0tRkNNODRkMmRFTmhLaHJHR2N6X1VxVDg5N3A2M3JEWE5fSDhFVFNoaWtBbDBKSUxqT0prNFVFU3JyaTdMYkxlajZKa2hnSEIzUDhCSHNUZ1VVRERtVzlsbTR4YnhoQUk1ZVplaGlJSzViSTJOZ0ZlaHJZTU1IX2l3cTBTMnNQSWs5Q05GSnVHb3otNG5CLWFuWl9OV0VpV0ZqMGVYbmg3eThxSmstNkJ4aVNxdm5iN3JHTXN6U1BxU2tkaDM5Sno3VndMZEJXbzJHQk9TNkXSAdsBQVVfeXFMTTB2YkJtLUZDTTg0ZDJkRU5oS2hyR0djel9VcVQ4OTdwNjNyRFhOX0g4RVRTaGlrQWwwSklMak9KazRVRVNycmk3TGJMZWo2SmtoZ0hCM1A4QkhzVGdVVUREbVc5bG00eGJ4aEFJNWVaZWhpSUs1YkkyTmdGZWhyWU1NSF9pd3EwUzJzUElrOUNORkp1R296LTRuQi1hblpfTldFaVdGajBlWG5oN3k4cUprLTZCeGlTcXZuYjdyR01zelNQcVNrZGgzOUp6N1Z3TGRCV28yR0JPUzZF?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Gemmell, de Vanguard : comment les investisseurs obligataires peuvent-ils s’adapter à un environnement de taux volatil? - Morningstar",
+   "source": "Morningstar",
+   "date": "Thu, 06 Aug 2026 11:03:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU15bVVDOVVRZllFV1hRNWhSa0ZrLU11WkZzOG9XZDhfbFVKa1l6T2FFU0ZlWnJ0aDE1V3R1V2ZNa3J1MjBWakZJVUdQSG9hT2d6bW42aUx3VUtYSUtHc2NxUm5LNTZGMElDTU91eW9SQ0dRYXRiNm9Kc0hxVVU5X3lWeUt0LVhSMGdoU2x3YU1aRWZuN2pmblc3TjZ0Ni1lQ3dSdHZseERTR1hpc0lHQ3VVNUljd0dQSENEWnlvZnBMN3huMkhz?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les marchés européens hésitent, le CAC 40 continue de battre des records - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 05 Aug 2026 15:53:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS1A5RTh0ZEdJWDBpazFmb3FiMGpPMWNCM25JSUxNNUZseVB0Sy1wSjUtS0pETWpGR3lCaVpTRW1TSk9heEhJNkZGbVE4MTlCSGstcTRqbHFLSk9EUDQ0U2h1SWZ4VzRtU1hfS0ZZS09SZk5udWRHbXZrVGFzNVBESjNoeXZmalBaT1RidDJfbWpQYjZyRmdrVjczbk5IMks1WjdJRklVZlFSNnVVQ1R3UzdURC1TelQyOVhqZDU2blE4dnVYQm5CLWZ5LVI?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Nouveau record pour le Cac 40 grâce à l'apaisement des tensions au Moyen-Orient et à la baisse du pétrole - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 03 Aug 2026 14:41:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPck16SDZ3WkpXS2hZUTBfRmlrTnljNlBsZlZVbFlYemdWaTZ0b1ZYaGtZMTRpSlFEVlJILTRGMmxIWDR2OUo2OHNXbTAxY0pONTM1WTBpWXRiNnNnOWk3aDBEYXNtbHFrNXNsQ0FEM3kxclkxOHkxeHoxTHJ0N0lPenIyWkFnZGo5NW5UWXdBU0drLXBnQ2lMNFMwN3JHT2t6SFQ5cklMSlRreW1sQ1JKdWRjTkwyNFNxa0hFX09fcVhkelN1bG9Db1hWLTBFNkt4TUtSTWo5R3dTUVZtS0xVM2JBR0laeFI5UldZVjJ4YzdKeGRlTWtSTmY5T0R5SmpvT2hCdEtn?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Pourquoi la Fed fait-elle autant bouger les marchés ? - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 03 Aug 2026 08:45:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVG9DRUJZVzVVOF9pMzBFYTlYM0NtQzFUYjFFSG1fT3R4NFRJSG5rU1pWd2NWTnZHLWtydTBfS1FZMUUySU5MZ0t0SUZYRm56NENDM1FuODdDMklXMU5pWXU5QnBZcEhhOVFCbFJTb1k3MGlWT09WdFhkcHM2a2xpVHVSTi1lVmZ4bmNOb0o1Z2pvN0dfUHpsRzZEbGU5ZGRKMTVTRHhEa19Hek4ydGlXMVlR?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  }
+ ],
+ "produits": [
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 15:35:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 07 Aug 2026 15:35:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Stellantis bientôt contraint à «des baisses de prix agressives» ? En Bourse, quel potentiel ? - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Fri, 07 Aug 2026 05:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSThUaG5wRFdJOFhDM3JOeC1LYTA1RFNMVkh3emdiV0RucTNyQmJFUHpQRDREbEJ6SW5ENy1DM3ZoOXR2eGxFaVRramF6TnVQMFRtOF9DelJYOExISTc3OHZiRjFDTzcwV3Z6MFNGUVhSTUxoUm56RzNLR1p0R1NOd0UxSWNVeS0wRVRtYjlXRTFOWXRKTmxOT184LXhTYVh6dlVhc3FCTzkwbU4xM0g0QWdNNEhlY0ZlR2c4YUZ4N1N0VlVFM1NoSmFoQ0lvOHdneGNB?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "ERAMET : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 06 Aug 2026 05:18:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObmpxeUVWOTh4VDZiSThORXlCRm5KNEJ0WVVlUW5Xbi1XSjNOUWcxa0lvUDV0T0NWOUY1My1GUEo3WmRTZ2pha05jNVhsSElmX0N0ajFONVNtbjBSdG9sSTlKUjB0cXU2ckxDaWozX081XzVia1ZQWGU0NEg4MW0tQWNqR0hndmsxaDdvRkVVN25Yb3FoUUNfbGxrXzdLbnJSczVRQmtHZ3hYX1U0Rk44dmlVblliUXN3MVg4MkQ4RE4wb1hvZURzQUpBaEpXZ9IB0wFBVV95cUxPbkF2NE80Wk1zSTVPa1VkWC04dzRfOHY1T0ctWWlGeGlVUDIwVWFMVDRYTlQ4YjQxUkNVZ2hFVGFwMlBpLTZRbVIwRVNsTV9QWXJRV2gyWUtubElHVjdmXzZHQUREUlVhaFUtRmc1SlFvcE1tLTRrQzFFMDNoWFR2OVV3dU5rMFRVSkZfRm9xang4SU9fSFhHZUU2WXZvalJfRm5hMnFHZW1GcjFrSzBXYkdSNG5HaXIzT1lROE5tajVrbVlPa1diTmd2U1dweHZYenI4?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le Cac 40 profite de l'accalmie géopolitique entre Washington et Téhéran et d'une détente sur le pétrole pour remonter à 8.600 points - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 03 Aug 2026 12:53:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPd1g4Nnc1LWltRl83Uzd2RDZrVWdHd1ZEY0ctbG5aeVUwWUgwZE05cFdrdk0yMkVZV3BaaFoyczRzemhhblZMN0Z4aTBFMDRyNmRJQUJQUzVGckxVbFRmUkZoZFprM0tiOGtHcHJ3NlU3ZlZQOEhrQnE5SDNEZXhlcGZUSnNFMzJDTzd0YjB0OGFubWVuNFBrbzhNSVhhVHY0ZGlCcjhpNmZXbGxxOTBzTzIzNGNMMVdWUUo5T29MejNZT25MOUNhVXhGNmdMTkk0TVFMQWdFMUdZeGsyN1YwNVhBa2hYand3STJpcDAzNFJMWm95YmttdVA2VHkyNG5oend1WFFTYlZRX0NDTkZQOU03RXF1clVxSGhHUkVyRUtWdlNhVzhXaw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Stellantis : Le redressement de Stellantis aux États-Unis patine trop à son goût, UBS jette l'éponge et ne recommande plus d'acheter l'action du constructeur automobile - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 03 Aug 2026 12:52:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQMDRERmI0TjlqS294Zk43alV0em1fQUJHLW1FeDQ0UW51d2I2NVdjTnd3X2Frb0J2bGNDNHF6dEJ6aHNPcXZmTE9jb0l4eThhX0ZZWEJzNzZuSlRHV3RwalBXVmdXNDYtR0VRcXJrd1BWTHZubmlTREdxbW5xbFc4VXBzN0lfN2xZdUlQcDNYd3VKcmx0U21CSVZsbUdYQ0tkbjlBUzBWdDBxeENUeXJsVDVoX3RQSG9aYTBsVWJxMklTbTl5SE9mSm1OUHNtbGgzNnJvQ2JlenFFbDdZTndxd0RPZU5lR2hSYTVfQmUtV3hzUnU0U1d0Mlc5a00xZXN0am1JYWtiUGRONTNwWW9WQmkyTTBFaWlJWFVrNHpMSEJVd2pBUkdhc2tTMWM2YUd2U2NXNC1POGJIYW8wc3lpRmdlZnlWTUNuOTFDX0xwclB5Q3lZUTZLT2RtTDI?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  }
+ ],
  "eco": [
+  {
+   "titre": "Agenda Economique Zonebourse : l'inflation américaine revient au centre du jeu - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 09 Aug 2026 14:04:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcGxMTE9Ta0ZvQlZ3MURuSVZtdnM2ckRPUG15SWljWTdxYUdFZ3JZcDRHeV9aMnktdm9uR0w4MU5OdnhaY0VTeEhROGtLTHNnNUx2NmtTWGhmZWRUTlhwSVk4Z1huUmkwTlhCVWdKZDBBRTlGQ2s1aXNNaTF2cTZhVEtnekVxNWxZODA3QXJ1SG4tUTVOSkMwX1k1bnRwRkwxVUExdERJSENkbXZhTldCQWJfUF9YekxWUVd1OFp3Mm90eGk5YnZNTXB4YThtNXlBN3c?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La semaine à venir à Wall Street-Les chiffres de l'inflation mettront à l'épreuve les actions américaines, qui - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 09 Aug 2026 13:00:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwNBVV95cUxNUkZ3N1dBeDNITlJvUldOTzBBUXdFYjUzc1dxNy1GcVZPNU43REVwNEFnLXZkWkpSV1ZMd1lxckk3cXhXb0dnZmd5ZVRWQ2xHeWk3eGxvaVhra3BROGRKWFk1RHN5NUdDUHAzek9FMmdyeXJKSWxBQktjcDkzbngtMnVzbTNDS01wYkZ2ek9SYVJVUzBiRTVtcXU2azlCSVI3QmtTMGhoS2dYUFhFVVVNQlZlRVVwVEMwbzlBdnRzb1R0Z3MwZm4wanFWd0tjUU9NVl9yUGY4VDJxblFIYlJCTWc1ekw0MlpKMW1CN0k3cG43SmZQTTB4LWgxZk5yUWhOOWJseHRDN2RPMFRkT1hxTllXckhiQTdFbTgzTjBxMTZnSGdldHAtRVh3QmtzMzVGZUF0ajVtTUI1Y0pSTnVDd0RBTXpvMnBFTUdIU0xBRzU1Q0hQZmpadDY5N2tyODdfLW8wSWZsekdHb0JoQmxWX2EwdFgzZnUxWGMxNnRTc3lLYzEtS2JHUmsyTldvZDRnOWxn0gGTA0FVX3lxTE1SRnc3V0F4M0hOUm9SV05PMEFRd0ViNTNzV3E3LUZxVk81TjdERXA0QWctdmRaSlJXVkx3WXFySTdxeFdvR2dmZ3llVFZDbEd5aTd4bG9pWGtrcFE4ZEpYWTVEc3k1R0NQcDN6T0UyZ3J5ckpJbEFCS2NwOTNueC0ydXNtM0NLTXBiRnZ6T1JhUlVTMGJFNW1xdTZrOUJJUjdCa1MwaGhLZ1hQWEVVVU1CVmVFVXBUQzBvOUF2dHNvVHRnczBmbjBqcVZ3S2NRT01WX3JQZjhUMnFuUUhiUkJNZzV6TDQyWkoxbUI3STdwbjdKZlBNMHgtaDFmTnJRaE45Ymx4dEM3ZE8wVGRPWHFOWVdySGJBN0VtODNOMHExNmdIZ2V0cC1FWHdCa3MzNUZlQXRqNW1NQjVjSlJOdUN3REFNem8ycEVNR0hTTEFHNTVDSFBmalp0Njk3a3I4N18tbzBJZmx6R0dvQmhCbFZfYTB0WDNmdTFYYzE2dFNzeUtjMS1LYkdSazJOV29kNGc5bGc?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Il y a un demi-siècle, c'était une île indonésienne paisible parsemée de villages de pêcheurs: depuis les droits de douane de Trump, le complexe industriel de Batam n'en finit plus de gonfler",
    "source": "BFM Économie",
    "date": "Sun, 09 Aug 2026 04:59:00 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/industries/il-y-a-un-demi-siecle-c-etait-une-ile-indonesienne-paisible-parsemee-de-villages-de-pecheurs-depuis-les-droits-de-douane-de-trump-le-complexe-industriel-de-batam-n-en-finit-plus-de-gonfler_AV-202608090018.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit à un plus bas de trois mois en juillet, l'IPC reflue également - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 09 Aug 2026 02:24:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQcFotNWJxZElNd0YwOWRTNlhSNHZ3SmNIMXR0bDZub1BjNHIzaTJUTlZyekdYcHFhYmJGWm9jNGdJemQ5eFI1cUpqYWhRUXB4QkFSdl9zaW01U3pYTXpncUxRNFE1QkN2LTJkZ1k1alBSd2ZqcVBZZkJBanV0Y2phQ3QzaFA2dElhNTJuRWNjRXFiZmVfQkVYT1hqakdEdERvdzZBVXhwTWhzTmJwVVpOOVp5RUpLNVJ5bXQxdTNTTGhTT1AyWU1aN05lQVZBRGhMU0ZRWUxoR3k5XzhDNTRsOWFYdE1CRG1xbk15c3dR?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Chine : l'inflation à la production ralentit en juillet, sous les attentes - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 09 Aug 2026 01:41:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSTl5YmtIRjVrZ1lwYlpoYk43MzY0cTlURUVmNHozS1pRaS02cDJGTmlUeUNLbGI0T2R2WXRsMU9ZaFA0cmcwOEtMX0YwRzEtMU9Mc284RzVvM215WkxybTcwZnVWOWRvTFFjNUJ1dVpJaEVjTzB0djNDQ3Zpa2RuckFFTkdSNlJRWFk5RWREbGZ6Ylh0QUdKU3FuR0FMeGFrVEdTS0Z3N2pWeXJhd09IZU5XdHVKQ0xKYXZIY0lpeW4zWDVrRmpYR1RUNA?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
