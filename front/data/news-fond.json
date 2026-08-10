@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-10T15:12:01.314Z",
+ "genere": "2026-08-10T17:04:17.114Z",
  "globales": [
   {
    "titre": "Les marchés basculent vers une pause de la Fed à l'approche du CPI : cinq choses à savoir sur le Bitcoin cette semaine - TradingView",
@@ -29,15 +29,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.05% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 10 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS2xNVUE1aWo3MVFnQnQtVHlEZmJydEh2WEpWZ1FmYlNJQnNzRkhrRnNRbks5Wk1fb3ZWaGliVk55bGZ2Nm4yNk5yaXR4VEl1Yng4cXNKaXNTVUhoV0VYS1dBYzI5aDNTWDZEbUd3UEU4WE1OUmZmaXNSMXFvTmJfS2VNR0x5eEh1Vk9rUlQ0OHV2WXFkQmxmMVNsVVVjQTVCbTFRYkk4dGZwSE14N3Z2UlhqRTlDOE9WTWY2UTBnS21RZVVWNDMtUkJB?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
-  {
    "titre": "AGENDA DU 10 au 14 AOUT: Le marché se prépare à de nouveaux chiffres d'inflation aux Etats-Unis - ABC Bourse",
    "source": "ABC Bourse",
    "date": "Fri, 07 Aug 2026 15:07:40 GMT",
@@ -60,6 +51,15 @@
    "source": "Zonebourse",
    "date": "Wed, 05 Aug 2026 15:53:26 GMT",
    "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS1A5RTh0ZEdJWDBpazFmb3FiMGpPMWNCM25JSUxNNUZseVB0Sy1wSjUtS0pETWpGR3lCaVpTRW1TSk9heEhJNkZGbVE4MTlCSGstcTRqbHFLSk9EUDQ0U2h1SWZ4VzRtU1hfS0ZZS09SZk5udWRHbXZrVGFzNVBESjNoeXZmalBaT1RidDJfbWpQYjZyRmdrVjczbk5IMks1WjdJRklVZlFSNnVVQ1R3UzdURC1TelQyOVhqZDU2blE4dnVYQm5CLWZ5LVI?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.20% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Wed, 05 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcTVFbmZZbzh1emJXN05Ea0I3b2pRN3ZfUzdBWlEwWnRuZDhCUnNsRTVsOXZhaGczQl9hYmNCbnNlbVFlQk5QbmFGb25rTTZFZExhc2RqMWc4eVM2cXU3MmNqOXZTSVZ0ZkxjY1R0Z0J1ZGR4OWpvSlNNSnZZUWpYV2Fzam5TaExBNTBxalRDaS1jdFJpMk1XbU5mWms1QzBNMmRkNzh6bmhhb1A3c1RRSUlQMFo4SE9yRk4tSjlBV24teTRIa1FwRFh3?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
@@ -141,40 +141,103 @@
  ],
  "eco": [
   {
-   "titre": "La Banque centrale du Brésil envisage l'expansion du système de paiement Pix malgré les pressions commerciales américaines - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 10 Aug 2026 14:48:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZWtHZ2oxZjN6bXUyV0ZocDRxc3hlVTN3TTlfM3J2X3lGRDdnVHVxQXR2UkNpS3RiazVhRWU0YnB2NVhKZXFWcVZpb3VkRGNkQy1hZXF1cm05TENJWVplSnQyaHYxT1ZMUmlxYWUwOGpEZmZhYzdkdk83bkNVVGZVbzVsdVQ2NElxaDcxektCVkxUSGlaVmVPXzl4aS1rYl95d2Y3WGF2SS1TMS1YRmNOUDV2cGJ2U1UwZGl5RGlaUmwyMFFKa1ZtOVZqc3dqYlpzSmdEVndSa3A1WFJpZ3M1TXE0NG5NLXFybGkwR1gzODU5QQ?oc=5",
-   "tag": "banque centrale",
+   "titre": "TSMC : l’IA fait des merveilles, les ventes en hausse de 44,7 % sur un an - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Mon, 10 Aug 2026 17:02:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTjZYdU11cEpEeUc5Y1Fia3pCeXFIMHdaVFRLb3hnSDN4YlVhaE43Tzlva21vWTNPekZHanRKS0RWRGxBcm0yc1BmdlZmaDh3d1I4cGlXeV9Xd25uMjF3NEZHZ25kUFdXWU5FX0FnVWhBbUJsU3U0aUo0cFJfTm9XUUFpdV9wbUllNGN1WkE0TXJqTExTRTNyXzhkTTRqcU5fNXNHdWlLQnBhT0hf?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
-   "titre": "La banque centrale du Brésil envisage d'étendre le système de paiement Pix alors que les contrôles commerciaux - Boursorama",
+   "titre": "Taux : la hausse du baril fait déjà oublier le 'NFP' - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 14:48:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugJBVV95cUxONGdFa0Q4d0l1V2JDTF9vNHUwVWtKbnUxUFJpR2JLanVFV0xyX3g4Q0F5dk1rQmFYMGhKdVowZVVuaE9faGFiR19GbjgycmttbF95a1gxTXV4aVpDRGd5YWlMaWFsS1R1X1E5YVNvRHN4UnJYd01GUmM1YzFKeWVpcHhQV2dGQXM3d1ZTZ2c3eVE0Y25BVUZCR0hOWEhEOUtLNUw4bW1scnA2X25UTGdZYmdiSGJXVGN1UFB1X2RnQklMNEUyemk1X29BVnA1aFBiRUpoRDdwZll6UXVxR0pxOWdDRG5IRVZRNFpzU29xeGplWGRjUWF1Mm1VeGJYZXZjQklpOFlVNnhDQ3FNc1FfaDRnbVFrdkhTdjBRMWxKRF82Q0tDa1JVY1lTZVNpZHM2YnpCeldqNktxUdIBvwJBVV95cUxQOGs2Mk83NzZLSkQ5dHB0V1NHaFN3cVlzM3VKYmVEYlE4ZDFXYklmeVAzNTdJV3hIOF9nS29QZTQ1SWxVMzl6a2JxYkYyc09JN2VyMkIyUnMyMk01dG5yNnlpcnhBNDBGYkJxRV9iU0p3UFB5dS1hdkRqQ2wxQXJaZHp4RUlQUEVfMkJNejljWS1MUUlnZTJadDBiLU5FTjRYd2J3TXRVVV9ZcEhfSzlHVWxiQl9VcENxU21WRUVIRW9LTm1zS2hnUjUtTmxBQzVPNHZBRFFSM0d3WTdBQUg0LVQta0ZhLUR6SjRORUR5UTJIbFVEU3piSmVKZklMX3Y0TVE3anUzbFJ1OGdlMGZ1ZDExa3p4bFhxT1dSeG5CaGJ2TlJ0RjRnYVRBZS1vdmthamxBRm5nTTU4Q0VMeUF3?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "\"Jamais autant de Français n'ont travaillé\" : Lecornu défend le bilan chômage de l'ère Macron, sans \"déni\" ni - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 14:33:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNOW5hVjFRZGZGLXo0NnF5ZlV2QVh5YVVmc0dSQ1d5QUdoaUkzX0UzbkplZzVBZm9XNm5ydUQ5cDZNNWNTT1czQU1UU3NXd3VHSm1rTW13WnpUSWdneDlFc1FvSmdRRGRjdGNESUQ0aGl5Vkd5VmRwWEFTM2VSbmJYbzZJWW9DZHpLV1JLdGZzbUpSQkV4dGhLbG9vZmJjX1FLQnpCcWphOVFIZ1oxTHV0eFFLaGxMSHY0djlNX0ZINGdSYTJ5T09mbXlYOVo5d2pPV25sd3ZCY3BKbjJ0MFBFYnVMUGpobHN5SlAxMmVYNkkyRXQ0cVpsNXpxd0Z4aDVPOWVkaGpHRmM0UTB0bnZfbUprX25Pc0xvQW1xYlB2SkJDU0pfZjFFTkdBZjlRd9IBswJBVV95cUxQajByYjJVX2c3em1fb0VySGg4RzZYWGhEUWdpQXVHcFZ1dHZwUjNCUm5hOGpMS3ZTZDRWdW1KWHhIV2I3Qkk1bXVwVzJaZDVkeFl1bHgyWEpkaTc0SmZndWtGb3JQdnFxSk5PTDlxS2drOS0yZ1VUb0hCdE1fdzBkeFNsZFl3NmdLaGdZRTM0NG1qc25NaWlkMThHUlp0cHRSWW4xNUQ1T24yMUlENGlIZVNUd1I5blQtcVNZNlBRRjJ3VEVLajd1YXdnS1pEdXREZFpYYzhJN2tzREM5a3BjeE4tRk8zb1ljWUNGM0hDaEtiVExva0Z1NUVGU0NOOFNmQlhqV0dsRnJIcTcwbzBoNG9fWE9mQ2VQRUR6WFQwRDIwX0c2Mzd1bkFHN2tRNGJpZk9Z?oc=5",
+   "date": "Mon, 10 Aug 2026 16:35:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdUFHTm54MG9QM0RHZDZ5WWNheTJkWENrTGpSWHZWd1VVSVZoRmROcG5RalNSNXllajZJS08wS3BZUXVMRU1HbFdFd3dmRFZSTkV4NTE3NVlSRjNUX0dFYnpuOFdhYXZqX3J4N2hEeTVjRXlGUTAyMUhUemZ3UDd6WDgzSFFRWVN5S2hWd1ZuUEFmRHV4V0Etdk5VYktnVzFMZEloSXU2TjZXdmdjc3pVUDd0aDcxLTBSZ0RuZEl0QTRzYjZs0gHKAUFVX3lxTE9UdHlpcWRfZlRzQUFoYmdkQ2RiNTl5Ti1vc1g3d1ExS3g5N2dnLWlMMFBOR3hGTFdOREdON0M1bVV4cVZ3T091TlJUN0E2dFduTXJFS05PQ1B2bVliMVNCNnZHQ01HWTlnNDQtcTJBNHNqMkZGMEcwekFXenczUHB4Q1ZuX0kzNEZxOXVYdFlzdmNqSTF4X2ZlNjZxRlZ5WE1xUWg1SDRIVnF1a3VfVDRWYTRqcE5HSk56RHBEajVJWVRmNVlzMVkzU2c?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre lundi: Apple, Intel, Boeing, Archer Aviation, Berkshire Hathaway, Barrick - ABC Bourse",
+   "titre": "Eli Lilly en hausse après l'autorisation d'un médicament amaigrissant par l'autorité de régulation britannique - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 10 Aug 2026 16:27:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPa3VMQUJBUjBTMjc4N3ZpWXFjd2NQQmJQM3dkVUlsV1JZVHVqc29DemFBV29IaUI1RldQZXZtc1liN0dVSmtUdlE3OWRTYWhCLUptal9SUjlrVF9iWVBIZjVoYkM5YlV4dzc4OURmZlBqS0JTWXliY2FTYnhVT1hGVHEwLUxqVTNzSUxjbEUyWTIwWE8wdFdLZFlpMElvd0NVX0hhd2I2M2hnQnhKMUNxRmZqd0FuSWY2UC1oNTNoVG9MemlhS2hjSmh2MFpHN0YwSzU4bVZpOGhGTmp1OGJ6NmlNVl9ZNHpxaGk2Z0JnNF9GOGNvQmpsTEltU0JnR3BmRnVVT0dRNDFib1huVlFkVEhQYUFGRnfSAZwCQVVfeXFMTkhGRHJZV3VVTXdhTVZrZTNtUGlMQnNfWWkwR1A4RXE1ek9sOXhlX3c1eVhtZG40dUhEWFliaExMQjFUck9rV1pURkJHemJtd1RNcFhjYlNZVm5yZEk3dTJQWDZMT2VJRENQdERid293OUo4RmRSeVRBVVVKbDk5QWM1NDZ1R3dzOWNhZlloWkNENUE1aUNBelRidHdLemJJMFZRX3BBOS1RRDZfZWU0ZHA5a3RKOTdZbjF3ZEg4V3phT3lkekpWaS1yb0ZjY1lBQldySFo3N2pIZmZGVk94SUI5aHJpSDlVMkJoNENrdmNtNWI3UkFQMlR3WVc2UnVGVktISmF6b3otMkUySDJIeHU1dUV3YzUwSUJBejY?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe finit en hausse timide, incertitudes sur le détroit d'Ormuz avant des données clef - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 10 Aug 2026 16:24:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNbzgwQjZRSVJLODk3Y0lVMFFnTEFiYXNaUmZYN2tRTURQR2d3bEliZFB4Z3NTaHZwcF9Ob0o1RmNHTmUtLWFWSmxfQVpqRUs5M29xWW96MHZFcktoU0NLV1loNV8wM1lhTklWcVdadjRfRnB6YmtPV1FkS29xTzJwT1pUOTVnZkFaV21tWUVaaEdEV2RLdmpxcTgwN1BhN0t2SmMxWXhDd2NWZ3RQaGhvVHFqOGJheE5KbnVzWEgtN2cxQkxLamtVcVk5LWc1a04xVmdFcEVGU0tTUE9NRU1jV21PWnNyUkRZSUs1aEdXaENMVy1PY3lzZ0xDY07SAYICQVVfeXFMUDFVV0V2WEZqaG42di1ycC1OM2xXSERFTEpRdkJkLUV3Qi1ZU1NIWm03ZVlueVRKQ19BeU1CMVVzbG42aGZqSDY1OHJIa3NtcnhlejlaRjh5MXpYbXJpY2xZZ1EwSUM0WmMwYmR4TEhDUDNQbkhVY3FKcG1LVXk2QWNWaTdBNXNyTmpKNGlQZXNuMlptRUdpa3NtUEpTdTZneWY5ckNVQ2tzRmZ5aWVKb3VGUGRIZkllZVVlSkpNbnVNTEwyQlBLTnAwaHNHUTktQ1F0T0VDdWxpYmxmNnBORDhRc0hXMEdaYnlaQjMxMWJndTZhYnRVR0g2eFhKc0I5VHZB?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "On refait la séance : Apple recule, Jefferies abaisse sa note – 10/08",
+   "source": "BFM Économie",
+   "date": "Mon, 10 Aug 2026 16:13:12 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-apple-recule-jefferies-abaisse-sa-note-10-08_EN-202608100413.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "L'Europe entame la semaine sans direction, le Moyen-Orient obscurcit l'horizon - ABC Bourse",
    "source": "ABC Bourse",
-   "date": "Mon, 10 Aug 2026 14:21:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX25KWVZmaGJkSUJjOFVTYTFrVFNZY21rMklPVFE0QmhHTEhOQUd3OWFkR2U0ZVBaazg1eVRDTEtEYy1mTmZnbFVhaXdWTWs4TXVhZGJTRFRDSWJCdFZOR0FiRnFxUHdXTnZDYXEyT1FCdGxfYWJyRWFUVXp1ZjFJNmJ2M0YyV0tvZ0xTZlVTemd0UVY3aElZWGRuU2tFTFJQNzIzbGZMQnN2YjVsU2s5S0thaWY?oc=5",
+   "date": "Mon, 10 Aug 2026 16:09:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS09FR0tVU1AxUmxObmVFTEoxVV9NaUtJZkFJck12UEVxUDhtVmhQeE9iZ0FENWJHNERfZUxsS3hXakRmYkVoa1hLVWxZb3AyMFpxRWM3UTN6bEJGeHQwSlYxVk5paEprQ3JGbl9zVXA1VHFOQ1hYNWlZTUliV0R2QUp4X3hfOGlPazRGb1NmMnc0My1lSUc1SXZacnhpQm9GVmNzdW4zcEhSa0RHVi1GWFlyQ0ZIRThZekE?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe entame la semaine sans direction, le Moyen-Orient obscurcit l'horizon",
+   "source": "ABC Bourse",
+   "date": "Mon, 10 Aug 2026 16:09:12 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-entame-la-semaine-sans-direction-le-moyen-orient-obscurcit-l-horizon_701168",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "On refait la séance : Apple recule, Jefferies abaisse sa note - 10/08",
+   "source": "BFM Économie",
+   "date": "Mon, 10 Aug 2026 16:06:02 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-apple-recule-jefferies-abaisse-sa-note-10-08_VN-202608100419.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris finit sans grand changement, le pétrole repart à la hausse",
+   "source": "ABC Bourse",
+   "date": "Mon, 10 Aug 2026 15:45:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-sans-grand-changement-le-petrole-repart-a-la-h_701164",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les pensions de retraite pourraient être désindexées de l'inflation en 2027, ce que prépare le gouvernement - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Mon, 10 Aug 2026 15:32:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNdE50LUh1aHNCbTY0cmlBbW5ObG8zaURjZHZSQnRzSXJqUjlTWnNka1NXclk3SS1SbHgydVRMcEYwY05GenlVaXMtOXhkMXl0b2F3S1dVbklFd1hXVG1zNHB5TlZ1LWhKWE1wbHdyVEN5SUpCWmc3OEhkYjNBTG1uREljZk9lcVdKS3EwdHlXYVpKUWsyMmdJLU8xZ3liR0pEdjlGWGVtazIxc0I1b0JHbW1iUGlicmxZbENISExURDFSSDA1dTF6S3VSR21DUmhYd2w3OVdDQXM2d0dBcjl2OGhuMXNzdlk?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Apple recule, Jefferies abaisse sa note",
+   "source": "BFM Économie",
+   "date": "Mon, 10 Aug 2026 15:30:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-apple-recule-jefferies-abaisse-sa-note_VN-202608100457.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "S&P 500 - Les actions à suivre lundi: Apple, Intel, Boeing, Archer Aviation, Berkshire Hathaway, Barrick",
@@ -184,24 +247,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street attentiste avant l'inflation américaine - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 14:19:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZzdTM3FfTXlubXJwV1ZhWjh2b2pvSV92aHJiUFBKalloQlFWY3JoSUlWdGMtTFBxR3AwSkIwQ0RlYVZ1ZnpTNlcyVjByZ0VNVm1VN21uOHE3X3cycGxmMjJudFBrb1ZzUElaTzdzSXYyVFQ3TTVOS2M4aHlTUElnTnNWOGNxeGtzblVpLXI4bVh3cktQZ29vbFc1WVpWeHpnc0p3WndNeE05ZEs1OVVjcjFXZmU3eVFOVUZ4RkRhdWhBeTdnN292NNIBzgFBVV95cUxNejVWX0M3bllsdVg4ZUdtd1pzcmV6clJHWGxUeWdlbFhpaW5IQmVZaUh0bjFyYkRNYW1ydmo4aFlnUUNhcE9LQXFvQ25VRWszeXM2REd5cTBNaV9mejlZaG9ZamRtUXZZZFNhRU9mWUxBQVlNZm1mZU1FWU5BODNwaXU2ZkpMTmJmeXFyeVhweDBKOU5ObW5MelB6bDcxS3ZFc3pfUndxcWlsQzFYQ1I2MU1Hdi16eUQyaFk5YVhXMzJ3RDA2OFNYVTVJNjdmdw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street recule légèrement alors que les marchés suivent de près la situation dans le détroit d'Ormuz ; les - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 14:18:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswJBVV95cUxNbEJPUHFhSEZISFVYWXpCYzEyd2RGWTl3SkliOWR4MnNvMGhBbVpsTTNfdmZMNDUxOUlINUUwUkJZal96NE5OSWlURFZhZ3FZZS1DajB0LVZTNnZFaGRMNWVjdVlTYi1obFVhN2FyQjhaMDdOTmlWdkJfVFpwdjZQc3ZRaUE2UWd5NlloZDFhX2FzT2stWkFpbFAyUDFhc3JMSlB2aUM5QkdNNU04cDVjbVJjcTQ1bWthRUsyWTBmWlRtU2VrZldWMC1jc1VzWmJSMjVpYkFFSmtOMGJ6VFF0QktXNGxianJybDItTFpaU3VVa1dJLTB5UUh3R29UTWZvN1ZReVdEa2RvLUhFSTdxWDRoVlA1aXkyeEZReUFodjk3a2xYbjhQTDZ2T3ExTW5wSUxB0gG4AkFVX3lxTE5FSV9BWktSUjBWSG1vbVYzaGFrUmVnQlcxZXhmdUZCQ05PTEV2VGtNcTZRSmdpZDhuTnpBLTBOOHd2UXNZakVUXzFMTHFuekM1SkprVWl0eHRwVFc0STEzdTQ5SmxTWUxkUENDQ0EtcDNJMXl0djN6dWVKM29VdUN2eHlfR0pKX3p5SmRwZEp5UzdzT1RQeVBUZ1liY1Y0cFhiSjExQ0V6dW1VdUZ0R3FyV04xSWp2OFBpSTFUX2NXTFg3aEp0bF9vbmllMmV6SlZqNjJIQVpYX3dBQVpDYWkxRURheTZxOVNnQUthakVTakFTNnVZanozbkl0bkJNcTA2bmc5S2hfOUh3SENiS1k0SjlFTTF1OElvQXlNZnlCcC05dFRkYzRuU1NmaHVqQzlYZ185SXVRSA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "Wall Street attentiste avant l'inflation américaine - Zonebourse",
@@ -238,15 +283,6 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Après les records, les marchés mondiaux en pause en attendant l'inflation américaine - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 10 Aug 2026 12:34:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5KcFRWQVJiUlZTQjBXQk1sMUxYQ2FkZkZXSVFDTVVaVVJMcXFFRlk2YVhLOXVod2NqOVJ0aTNfcU5wMXNTVnQ1SnVuM0dONW9pMXh3UUpqaGZUb3hMM3RXTVdn?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "\"Pas de déni face à la hausse du chômage, mais pas de caricature non plus\": Sébastien Lecornu défend le bilan d'Emmanuel Macron, qui promettait d'atteindre le plein-emploi d'ici 2027",
@@ -328,24 +364,6 @@
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe attendue en baisse, l'incertitude s'accroît concernant une réouverture d'Ormuz",
-   "source": "ABC Bourse",
-   "date": "Mon, 10 Aug 2026 06:03:19 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-attendue-en-baisse-l-incertitude-s-accroit-concernant-une-reouverture_701142",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Records annuels: Paris brille, indices européens solides",
-   "source": "ABC Bourse",
-   "date": "Fri, 07 Aug 2026 21:37:01 GMT",
-   "lien": "https://www.abcbourse.com/marches/records-annuels-paris-brille-indices-europeens-solides_701137",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
   }
  ],
  "fiscal": [],
