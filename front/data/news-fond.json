@@ -1,6 +1,24 @@
 {
- "genere": "2026-08-10T10:34:08.763Z",
+ "genere": "2026-08-10T11:56:09.002Z",
  "globales": [
+  {
+   "titre": "L'Europe globalement stable après le record du Stoxx 600 - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 10 Aug 2026 07:21:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOOG9lcGkxempVT2ZuSUJDLVRLNWhPZHhNdklCQll4Yk1oTXlla0VSZkF6WFV0dFVOS0pud2dLUGtQbmExNE16T0U1MXNlVnkyTms2aGVBc2FKY3lGVFlWdGRRYTRQT3J4dmRSWjYyTTdKSUxCSDFaanlyR1h2V1hiLXBJUGVDd1p4b2Q3UWF3dm5kMFphVGo2bzZIYlE4Y3AzU29weDZMOGhQMlMxeldmN2h5cVFCU294YlNXbmZ1NmR6MDBRaXQ4?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.05% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 10 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS2xNVUE1aWo3MVFnQnQtVHlEZmJydEh2WEpWZ1FmYlNJQnNzRkhrRnNRbks5Wk1fb3ZWaGliVk55bGZ2Nm4yNk5yaXR4VEl1Yng4cXNKaXNTVUhoV0VYS1dBYzI5aDNTWDZEbUd3UEU4WE1OUmZmaXNSMXFvTmJfS2VNR0x5eEh1Vk9rUlQ0OHV2WXFkQmxmMVNsVVVjQTVCbTFRYkk4dGZwSE14N3Z2UlhqRTlDOE9WTWY2UTBnS21RZVVWNDMtUkJB?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
   {
    "titre": "POINT HEBDO-Pas de vacances d'été pour les marchés financiers - Boursorama",
    "source": "Boursorama",
@@ -36,24 +54,6 @@
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.60% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Thu, 06 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQno4ZzJBV2lUUjV4elN6eUNyTno0dlRPc3lIdENBd3VkdWNVUmpwNVRoTklOYmVTOHBDQUFRcnk2eUt0SEFLcVF5TUFCYXNweVM5WG15RmlHaEV3NXNRUExkRGdub2tQT0tYRXM1N2ZCY19NLVpUY0k1UnlpWTlNOWRNUE8tYzlFOE9KVGRZVUV6aWtGNVVRR2J2NmdKZUpjTlV5TUxFWTZMMXZsS0NNZEFPME5Nb28tRXdaYTk3TUU0VmhSdzM0c1FR?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les marchés européens hésitent, le CAC 40 continue de battre des records - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 05 Aug 2026 15:53:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPS1A5RTh0ZEdJWDBpazFmb3FiMGpPMWNCM25JSUxNNUZseVB0Sy1wSjUtS0pETWpGR3lCaVpTRW1TSk9heEhJNkZGbVE4MTlCSGstcTRqbHFLSk9EUDQ0U2h1SWZ4VzRtU1hfS0ZZS09SZk5udWRHbXZrVGFzNVBESjNoeXZmalBaT1RidDJfbWpQYjZyRmdrVjczbk5IMks1WjdJRklVZlFSNnVVQ1R3UzdURC1TelQyOVhqZDU2blE4dnVYQm5CLWZ5LVI?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
   },
   {
    "titre": "Nouveau record pour le Cac 40 grâce à l'apaisement des tensions au Moyen-Orient et à la baisse du pétrole - Les Echos",
@@ -132,58 +132,58 @@
  ],
  "eco": [
   {
-   "titre": "Les contrats à terme sur le S&P 500 et le Nasdaq progressent légèrement, l'attention se portant sur les perspe - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 10:18:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNQW1wWkpvRkFUWjUtbUtaUFNoM1gtWjJsU05zZ1c5alNhTFlMNWNBS19qemYzSEpQU1pPZjZDQ1BkZnJVTlBySVg1XzBqZzdEY2ZFUmJicE9NdTRoQ204cTc1U3p0MDlIeVRZa2JhMzU2NDBnYVRic3VMdmZUOHh2RWJwc2MwaEt2OTkxQ3lfTlJTb2F0SEJPV0QwNHJlSkdfN1VXMDFSR2FhaHZ1T242dTNJRXJvWnFSSlkzNFh1RTBReEl2Sl82cDFfOW9ZbkZoQ3NSUF9VOHUxUlpaVDRyUndyRUJKUXF1Z1djQlYwdE43X0wwOEpkc3RWU3ZBX0UtMlFIWVY1bEl4cnR0eXBlU05saHEtOTkzbFZ4RGtheFFDVjI0aUxmWHR5YVFiUXZmTHl6QzZnbXJZemM1alJxcWpiNzh4QdIBywJBVV95cUxOR2hicnktUXRwQkYxSjBmSHZMeURLX0ZYdURab3NaUm1fUl9vSGt1RnZoM2tzRzA5RVdlUXRXQmg2T0RQOGZCakx1UHhhZnFlTUZadTNHU3RWWGRIUkc1YzZ3M2hEVF9fZ0duelR1aGV0dk1FS1pMcUZ5d0h6YTYtTWdlamw4SU0weFJZUzVnWGxkc1NFU0NPQ2xPazd0ZUF4SjVDNkVMUU5jVmRsaTQwNUloMGVFVkdwUUprY05tZHAxYU12V1htcXhmNHNNd3JhclBlZ0JWaFd5S25zZEtjbVNDTzJYcEYwWmUtNXJTTGd4STBFdXY3ZVAzaGJVdmFUM3ZXQjh0OElPTkExZkZLOEtkam9wTGJFdDZlYnpNV1VhX3hRTmV2eEY0Z2dacUtWcUdETkt0ZVpTQlNLWVVLM09QRUNiWl95eDFr?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Meta lance un nouveau modèle d'IA tandis que Zuckerberg prône une approche « open-weight » - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 10:17:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQdl9yVGVkZUxPaG5qSEVLRlMtcUdJQ2lpeUpUTDYwUDlsbmZqOFBDb19Ibk9kUFpDeFVucHpURWNiNFQya1lJS245cGRMUFEwSEpGTzVKMEhEd0RIYlBKZGFMU21rN1Fudzc2OFhWSU16UzR3aWVOVjBmQzZmaXBjQzFPMHRUTXhJNWxSUS1HZFRnZmhvOGJkZWVCU2FZeHF2aFY1cDV0LWZHTlhHRnFGV0t3c0tIdl9ZR1lXVDNmSDlnVlBMQlpGM0FTNXVVS1VBWlNhc3l6bDFGd1laV2JhSko1VEE5NlB4NU5MdjNJbVpOQ2NUWWtF0gH8AUFVX3lxTFBTVXB5TE90M3pKUHpBbEk4Qk13Y3RGdkMzSEswSHBZSndobFF1S1VHeVZPUkNXR0Y2N081V0lPTktQWmVJRWFpUld1TVJ6clc1VV9DQzlULU1YTFQ4bEFYcXJNcHJwVnd5OVE5WHRZdm5nY0Q3all2TVVxWW5ObVhzWmJFR3F4bzM2VmtQcTZoa3lmVVktZnp2QzRKVTlCa3FMV0o1SnNBZlIyd2R5N082bkFUdnk4UmY4VDVJT2dMYS1jajZDNGkzWFRWSDBCeG9yZnJzdkJMSEZoZDF3RDNqaEU1bmFvRGJwblpJYVY3YVhRVE5HSC1Eai1zLQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'opérateur de centres de données CyrusOne envisage une introduction en bourse en 2027, les banques se positionnent - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 10 Aug 2026 10:04:02 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNS05laE8xTEJVbWVCUVUyMDd6ODhFbHYwbm1OaG4xeUQ0NlpjWk4tZHRyS2RaZUtoYllwbXU5SGZOZG5vQVRXYkVQM0NqUWtfTlo1aGFHU1NpWlJHT3FEakJrdkoxeGlWOXMxa2s1NHdzM0N1VDhmSnFUZHpiYk9FenNUcC04azF3MlBwQnRIdV9TVGJFSEd0dF9lMl9wVHVMenl1UlJHUlRPenNkSG9vUEJmc1RkSzc5a2c3Q25CV21LZkphVVZrbXRZaUhGN0lOVUE0MHo5amw0VmsyUXFvRUZhMUt6TUFtVllQeGNOVQ?oc=5",
+   "titre": "Bourse de Londres : le FTSE recule avant les chiffres du PIB britannique - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Mon, 10 Aug 2026 11:49:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOT2VUdkR3czd3THlNTENhb2FUdkdHZmNhQXJVWE9XRkNJT2JEYi1jcG42eW5scEJ6M2w1YVJLWU81SFpmSVJ6OTZMZ0V4d1lMWG1RYTdnaGpIUUxpZ1YwdXBOdE1HenpFR1VEandBOUJpNV9DQ0dMdDNIa3I4c1oxOG5wSHg2SWowZlNKZWYtQ2pEWE5BV1pRcnkzQWR4MXRqUDJPWG94dkk0dDM5?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Zone euro: Le moral des investisseurs repasse dans le vert en août, selon Sentix - Boursorama",
+   "titre": "L'Europe confrontée à la dure réalité économique de l'impact du changement climatique - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 09:54:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQTTR2VjBFSmNkWGthcE5qWDVBek9MeDZuVW9CcnE1elVkSjd0QTF1MGJqWGJvTWVVV29RRXlDdVg2X0hERWJoN1pWTjhZOGpjckpaOWtBSHc3MkxSbDVpck5fSWFiSXlwQkNXQ1hjbnRGU05RbEdTZHJQVE9ENVNOSVpNcTd0VUQ3UldwckFoMzRwTmhlTlJnbjBXZHJySndTSkdoUnZfUUQweXkwbzlHbVNhWkh4VjdzVVFwVVp5SmpvdF9nVGlSLUZrZjVmcUF2WERzQ2VPVDZPd2h4X1N1U1R4U0tHUEQyeEd6bmhUX19FcXJ6NG5HV1ZJUmdaUHPSAYQCQVVfeXFMUFNfeTNDTlVTVDhJcmtmNjJrUExkcDdDWVF6VGJvYmhzdGVKTUZPdkV5em14dE9TSTdTZWlGLXB0LUFWVW9rUnkxc255YlY2N0JXbGJIRk5zMkpGS01UWFJ0V3E3RDFpOVI4RzFObVFqZGg1cXYxSkRFWEFqNjhQTF9zMmxGUl84bGZHUnNUV1VDbnNvSURhcnJpMXhpaFp5NXhfNm96ZEQ4RmdzVnpCNVZfTmhTOTVPWlNkXzJjRTluWWxOWXQwanV3WmdHbE5pc1hSVlBpclU1TVl0UmpScHY3dWUzUG9QWTQ2eThZNjBCYmgzMFoteWJVRjdzb2hqeFdDcnY?oc=5",
+   "date": "Mon, 10 Aug 2026 11:44:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNZHVWNDRqOC1FODg4RVZFXzg2QTh5aFU1UnZlZFVpUERXcVdlX3VmTHB6a0JRa0ZaRGtfWFVxaHJXRzA4ZmxpcTQ2a1B6LTVlLTdoLTEtRXZkSDZJT19YRmhELVE5dlhMa1RqWkhOS1FKNWNURDRjY1ZoSVA0ZVBMT2FuTVVEYU9rT2RfeU1ZbGZyaEFBeXBUMlFSTlJCc2t2bHdvRUlONGRRTEFtNDM5d1VCNF84WnNVaUd0cjhxRFJDNUVMdWJfWXNkRFE1MFJKYy1OcmE3WTNqdmk0OXdaU0hGYkVoMXZiOWF1N1VwQlZuNFY1cHfSAfsBQVVfeXFMTUhoQ3gwMXVaYUUzRnI2MWt0Vm9BRW5mRmNvdTZncVFmOUVQeTdQVm5GbnBJUWVTY0EwUXQta3pET2JzaTNWUXdEZWs1OWlhWjA1aUhxWnhUdWpKOWh6SDZCU0VFTnNEeXhPS2VKMGl2UDVZRmVhU0FSV2I1Y1o3NkQyWTJwZjN3c2lOVElGekp4dVdYZ2hEaFdmbmpTLVRuVi1raWdvb0p5RUVGRG40WFdkV0lDbmtPZFdVRHc3SjYxeDZLTUNLQmNQVFlpRG9TX3BjZV9mcThtVEVYSW4waS1NZlQ3WUhTZXlpZHVwVWRkakxfNlRHQXA4Ujg?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Allianz remonte avec des propos d'analystes positifs - Boursorama",
+   "titre": "Cac 40 : L'Iran et les États-Unis peinent à s'accorder sur la réouverture du détroit d'Ormuz, le CAC 40 recule - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 10 Aug 2026 11:18:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQYjlvLWR6WklkZ0FxQ01ZRXllQjNsSlQ0QUdPY1YyQmx6SHdMcjNScmFxUTE1ZFRLdE10ZEl2eUdUckI0VlRQU01QNjhnbXJZRVBUR0M4THdzMWdCUUsyN04xcDVnZFI4S1hvVWNWWDJlNmtkN1RKYi11WEoyTThBQ0NYV0hpcDFXQVBOME1MTmtNRmV0UV80ZXd6SDJoc1dtb2Fpakx6SmFwQmQ4RkpUVnB3RXEzU3hKeENfSnZOdlZYTmlHOWIydXZPcVVJSFRlWGczSlp6S0xZNkZBV2VrRmRCYnJyNXlNa2pYQVhnOEhCOG9ZaUtVakw3d2VUWkd1TEMwMENjUjI0Zw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Apple recule, Jefferies abaisse sa note en raison des inquiétudes liées à l'anniversaire de l'iPhone - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 09:50:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOYTJtLTRMY1lfMG1qNm5OTWpWbElHVldDNmJPUFF0bElrdkhXSVdyUmE0eHVralFZb1FLci0wS2lkVnZKTk41MlFtMTdXUXJpc0tSa0JUUTc3bVNRdnVGd0NneHBqWWVDdUlHamlOa25CT3JDanl1dDhxTmxCYlNIQktBVGFqMHY0T0hFNTk4NlZobHVNMVM3OEJPQVJxTDlHMVRFdHdLRVgyWHhDdThBVFpUTWtFMFQ2WUlnVG5Wd2lndmJRTVJ4Yjd30gHPAUFVX3lxTFBCWWozVVh2SGRKY1lsYVotREh5MjhWMzJFZnBUeTFYcllibnpVR2JId2NVWmt2dnpGSllTaGw2bGs3bVlGd0hCTTEwS2NuZ0NBRmF6S3ZUMnhuSEFsOGxDdXZhUEZKZ1V1TjBRSDJtazItNUpNazVUanRQZ2w1YkZXdGQ5eXpRcUUxVjRNS3JHTExzMXVaSGg0TVNZYlpsNlg2aFBQVk1UQWhxZklabFVQRE5Cc0FoS0JRSi01aXY3ZGN5UDdMWDlJMkpYX0FUbw?oc=5",
+   "date": "Mon, 10 Aug 2026 10:56:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPTEZFcm5aREhDMkxYVnlXS256MkliV1pFZzFoRnFRNTg5dzNmWFZyazhzVTFrdzhmUk1uX3NSRTFPWnR5clVfbzd3ZWZoSXN6dGpzNmhrMVlSVDhZSFpjMXVRWGFNMWtvQlZyNmtCY3RZWkEyb2hYS1IyZ0w0MVJRWVZ3MHh3WWpjdWhVZUdCX2s1V0YxZGMzRFRFQWtoWFdSY2x2Y3JxRTZhT3ZoQWhINUdKajBDWlhlYk0yd0VVckRldXFHMHRkR09hSVdqaTF2X3h5WmNfN0lkVEpPWHNTRlB2d0ZnTUUxRHMzeEhzY2htZXZqdDExOU1iVE9XeHlBS1YtSndhN1bSAY4CQVVfeXFMUExLUkxjTkctYlFqMnRjV0dCNjU1Z3RsYnlNbTY5WDMtc1RRTmtwSHowdWFWN00yQWtuUlRjTkJKQkdHdS0tRFBXZDdHTHF4Rnc4STgtYm9SYVF1LXVRMHhTcVRqb0I1WGcteVladGhHY3M0ZGJRbklWZUNLUl9QTVpJbkR2Ri1ERTdDcC1FNjhNWlJ5aW15VkhodFNwYm1XZWR1R0NuWGd4ZTRTSkd6LXJNaS0zNmhvazhNTVNYVURhWDZ0QzAwajE2MW44Zk5aLWpuSkVHMWdfS09PZFZfV3RaclhEZkhlV2d4d2I3c09wVTlzSnZlcFJHbENySzFsQjdQMGgtUXhfbmhEc0l3?oc=5",
    "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le Cac 40 au point mort après une semaine de records, l'inflation américaine approche, aucun déblocage sur Ormuz - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 10 Aug 2026 10:39:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOZTNMUXR5Wm12UUdSWlZ3NDE5dVFFTUs0Q09jMU9Pd1BobGZCYjFCczZWUFgwZXhfUFNObUdTLU9GUVRDQVFhRW52YkdWZVBsTFJLRldzZVVMb2lIWmhkUWR6ZUllcW9QQUhZb3F4eC1qUzdOSmV6U3JRYXJyT19qT2Y5ZVRhNWlxSU1aWVZVNjktcHlnRlVaUTlmdjBXZWlIQ0F1cTRPdmxnYVNIbkJjZlhfVW1LUzFqWXhWclktbU1FTERlMFg4QVNpNlVsTUJXbUZwdk14Z0tpc1FJMmFROUlxVl9wcjF2azZhbzlILWt3OHM3bFNrcV9QdjJRNnEwY2V6M3NwZElNcC1S?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Pétrole : les tensions autour du détroit d’Ormuz continuent de peser sur les marchés - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Mon, 10 Aug 2026 09:36:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNY3duMWJWSDE1N0h1X2R0dXNiMXVlSTZPekp3MXprYmRNUzJpcmtxdDVTUllySGpuazd3QzdEZ1l2WC1fZnJpNXRjSENwQ19PS0JTWnRhLXBIZXlzOEVvamhTeHBQc1dCRDRTNndnNEVVU1dNd19sOVR4UHhscTQ0Qzl1Wm8xeE5kRWNaaWltWFJhLWFyX2FkaFJuVFJFZHVtTFdKamdZU2RNV1dQS0lPc2R2dGhJQklVR051c0syd0pGaDczb20xVGhXRm0?oc=5",
-   "tag": "bourse",
+   "titre": "L’inflation tombe à un plus bas de six mois en Chine - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Mon, 10 Aug 2026 10:39:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbFpTRGpyNU50ek9TSU1rVEMwaU1udmlWLWF4TVJJVF9PaFFkbDUzajM2QXVxUVJPNGpoMkp3aGt4dmZlWDJCTnF6YThUSWFVdWpxSm04dkJ3b0k0enlkQ09JcU5KQzVVSHNYckZYOHpTQmFyUlNVOHBweUZPUlZPaXpfMnlGbDRlTFZxRWx2UlBsZE9MU19kdFF3?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
    "titre": "Donald Trump n'en a pas fini avec la Fed - Zonebourse Suisse",
@@ -204,15 +204,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Prudence sur les marchés avant les données sur l'inflation américaine - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 10 Aug 2026 08:06:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdkVxUWhJcFVGM3RGb3F0WjZZTTBQMWlONUNuV1dYX09qY3llV0tIYnpzQ3NnY1QtUFg4SG02dERjSl8yZThIejRQSVpEYUFOMTM2Z3dRNVhuTTd1MmNSaGNHblNjM2pwRmg3WWltdy15OXdubG9DU3pNM1hncUhPN1FFdzM5RzJubEtjTldwR1RjVXhmT1ZNSVhEQzFYeS1lY0VWTFJ3YTYtdGU3cmJfWUV1M2Y5cU1MUXhINHgtb2FucC1tUlVzdg?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "L'Europe ouvre à l'équilibre, la réouverture d'Ormuz toujours incertaine",
    "source": "ABC Bourse",
    "date": "Mon, 10 Aug 2026 07:45:20 GMT",
@@ -220,15 +211,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe globalement stable après le record du Stoxx 600 - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 10 Aug 2026 07:21:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOOG9lcGkxempVT2ZuSUJDLVRLNWhPZHhNdklCQll4Yk1oTXlla0VSZkF6WFV0dFVOS0pud2dLUGtQbmExNE16T0U1MXNlVnkyTms2aGVBc2FKY3lGVFlWdGRRYTRQT3J4dmRSWjYyTTdKSUxCSDFaanlyR1h2V1hiLXBJUGVDd1p4b2Q3UWF3dm5kMFphVGo2bzZIYlE4Y3AzU29weDZMOGhQMlMxeldmN2h5cVFCU294YlNXbmZ1NmR6MDBRaXQ4?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "CAC 40: La Bourse de Paris à l'équilibre, l'Iran inflexible sur Ormuz",
