@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-12T19:15:42.302Z",
+ "genere": "2026-08-12T20:58:06.750Z",
  "globales": [
   {
    "titre": "Wall Street vue en légère hausse, l'Europe sur de faibles variations avant l'inflation américaine - Zonebourse",
@@ -76,13 +76,13 @@
  ],
  "produits": [
   {
-   "titre": "Au Japon, « la croissance des bénéfices a atteint 67% sur un an, dépassant de 25 points de pourcentage les attentes du consensus », constate Société Générale CIB - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Tue, 11 Aug 2026 10:29:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxNVHFKUHU0N0ZWQ2xqSnpDbXhaWE5qUW1rTkZxZHotNmRqaFl5MkI5YjczWFh3WldHZXp0WW1jNjVtLVZSUmNLUFoxd0FIMXV0UVJXcEVBa0ItdmtXTFZ4a3ZnQ19EZWFFWXNjZkREV01lZ2RFQWFYNUtSSUhtTkFPSmtqVmJ4REFvNVFieXl0SFZ5Y3FBNVoxRjFXNGNZd18weVVEb3ozV0dOYUZjSG82b0NuYmFZcDUxMkhWb2NwLTRxNXY3Z0U3ZFIwaFhIcnk1eEY0OEF5a0Z0NzVzdURINW4zOFNIVVhrMzg2WXJFWU5hX3gyZGk2aE16RUVvNk50UnRMcjVWV2NTemJVWVozSjI1RWlJZVpQSGN6QXVHTlZFUFpkYkVqSUlBdWZIbENVQkxiVTkxUW9VOFlSQThaU3d1cjA1MVVSeFRvb3BmUXlTQQ?oc=5",
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance à l’équilibre - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 11 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNV2JlQVE2VUlpZl8zcFpBRVRMN1VIQ01SbGM5Qnd0a1htV0ltTFY0VTdWTDdjU0lHTGRqaFZ2SW1xNUlySTVwdzFpRzhfOXdYRHYtbUxsTGZxWVZTSE51S3dyWWtiNXJsVTM2X0xKYmloVFJDTEhZOHd5NnB3WUU2Ulh1RXNFTU1mRFNyb0VKVnRmQ3N2eGtGYWFtc2VpblN6TnJSQ0lmQkFrUEF3ZFlHczR6Z2pVaWFxaXNZUFdieXREcFM1?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "Le Cac 40 en quête d'une huitième séance de hausse, Apple dégradé à Wall Street, Meta lance un modèle d'IA agentique en « open source - Investir Les Echos",
@@ -150,13 +150,85 @@
  ],
  "eco": [
   {
-   "titre": "Eclipse solaire sur l'Europe, le nord de l'Espagne plongé dans le noir total - Boursorama",
+   "titre": "S&P 500 - Les actions en vue mercredi: CoreWeave, Super Micro Computer, Lumentum, Quantinuum, Home Depot - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Wed, 12 Aug 2026 20:32:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOc0U0VjZLbGZhV0QzSkVQRWtOb3ZzUWpUcnp2ZWplT1BDZmdZaHd5NGpHTGhyMk1CbGJ6TkxFbGFobURfY3JCMUNBMVBmZEstSXV5RmRFTXVYVV9FOEFBdGVORE9yY2ZYdklsUl9Ib1ZRejZfMHdUUTQxSGxNeW1BdjhuRkFDNjNkVHNrc21rc1hyTElrT2loSnA0bno4TGo0cGtLMmNINWJxN3pxZEV3eTB6TVE1Xzg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions en vue mercredi: CoreWeave, Super Micro Computer, Lumentum, Quantinuum, Home Depot",
+   "source": "ABC Bourse",
+   "date": "Wed, 12 Aug 2026 20:32:59 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-mercredi-coreweave-super-micro-computer-lumentum_701245",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street finit en légère hausse après l'inflation américaine, CoreWeave se distingue - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Wed, 12 Aug 2026 20:31:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ2FBUnRmWk5CQ0VkY1lyVmxSLUEyejNWVHc2S093bXYyRUlvLWE4X0NuRWhOdFlaUzVqdGxoeEpPVVM5dkxIM3o2dURBZDNiU3J2WkRHYzk0NmoxNndHcXhVUjFvZnh4YlJ6ajJZZXZrbnlUbkZ3U3dreXRQWGNMOXliWm5TYTRraC1JWVVNdjY5WDdLaHQ5aXozbVNIeEhBaTc2OUxpRnE1aEJQRWxmWG91cUlWQ0pqS1E?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA: Wall Street finit en légère hausse après l'inflation américaine, CoreWeave se distingue",
+   "source": "ABC Bourse",
+   "date": "Wed, 12 Aug 2026 20:31:14 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-en-legere-hausse-apres-l-inflation-americaine-coreweave_701243",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "\"Magnifique!\" Eclipse solaire sur l'Europe, noir total sur le nord de l'Espagne - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 12 Aug 2026 19:09:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPS0h1Vjk1TjVIUExnbmtvN01QS1diWkJJLU1RdVE2STZNQVdqOWlkWms4bW1UYTZsVmlJeFdXLVh1OW1NVHh1NGgxSWxBbUh3N1NIa25UdDkxeUVVdVJ3MzI1ek5SU3RFOTY4UWNpVzdIbjVFTkZDT00tMUFwTkdfNUVyRzJWT3B2TDM0UEhRczd1ME5iR2laZXgyUVhfRzI5OTJpYU85dlF5RXhEOXYxcHl6U01ucmJVTUwyQjF3eG1xczI4akFycVljeEZWYXYwaTVkX2tpeHVKSWRQWXVLMGhWMVpQTVZ3bVpmOUFPY01xOGJqNE5nRE1MRdIBgAJBVV95cUxQY0YwUkYtVjZ0enJ6TDY1YjBfOVd1akljTERaYi1qem9KMDVJTElpUXU0ZUJMNm1NMUYxY0pVOG13WmNLUm5xNHZwMkx3UWdqU1VmYnE3Y1V2UG9mUXFoeU9DSzBEOXpOR09IMkE5R085RDhGYTF0Y09zRGt5THRUa3JkUnE3d1d1VXdFdkVHZ2pWeVZfMkMxLWxMQXNPYUV6MzFVSUVHTVFaYTgtMnR3eGQyNk5RLWdaQTRkNkVIeDdlSHkxd0ktMEZSc01oUWRoaWdpVENlbXhvUVlFd0xXSEl0eWxkLVNDeFlpd2NBTlE4M21YRUxrSXl5c1Facmd5?oc=5",
+   "date": "Wed, 12 Aug 2026 20:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNVHh3R0Y1Q3lZWS1XcTF1RlViT180eFNWd2V4R3pWVTNXQkRFOTYwODc2a0pZNlJueGdsYUlWazVfdkVBT1lKRlc2NUlOU2VxQWZuUThoUjVFYzFrQ2YxaDZPUUVjdFlmZndzcVJvcThGUGtEOV9pZjFSZTBGTjNrNmQ5bFFBLWJKMHFDR1lmbkRfTERfWlowRFNCcTQ0RGFNZ3dFUEJnaUh1UEYyVFFNYXpidEZpUnNRNHVodFZLM0hZaEtOMzExN0wtY2JteGZVTzJnZF9OM3hkRmM1Yk5sVUk5ZUlwUTZwV2V0aUlqRlQ4b1dPenJvUGJaQdIBgAJBVV95cUxNaElwWW9tVW85WjFvUE1KZF8tdWZGTEpSOEVwNWczVGdBTnN6LVB6SmZ6YWlab09Zd3BvVUN2MVoxY1lQdTBTczJVNm9wZnRyYWNPUDEzLUw5VVVjV2hWMWVVVzBqRGt4NUtIcTA0QjVCS3J3eW9WNjdfdDY3WW1yVzk3ZlFrV0lKZVVUTmthaXdNVEozZGdEUm40c3VMZ2FvLWFjc3lUYTNkS282akxyMHZQakZ5S0lidzlVR3RBX0lubFJsb3BTWkdCeGZLak56RnZtLXVRZWl6YkJnWGVhUzVDUHM5OWRpV3N0dmV3NmpvSUlmSHBPbUpISVBnWWcz?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Seva Mining Corp. (SEVA) ferme les marchés - TradingView",
+   "source": "TradingView",
+   "date": "Wed, 12 Aug 2026 20:22:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1YaUVrVHpJU0NDckVvZzZPTFNwdzBocUd1UFRnbnBnN3U3bGdWR09RYTJGdDhQSGRwNDN6enROVDIwYWdSR2RhTXh1T1pxRFlIdTJRa2RYdlNnQXN0WXRZMlBfRXkwVHN6dWl3eVlB?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street termine sur une note positive, soulagée par l'inflation américaine - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 12 Aug 2026 20:12:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNbDNfYlJuQS1hMmxUWndNNTJ4T2dha0tDWlNpSGtDMnlRYWpLZVkzUGJkU3NRbU5CZW1tLW5FbzByX1pld0tLdDh1VzN6VV92ajlSMHAySEthaTBZTGRWcEhldjBJY0VpbUxoY09IU3JqeTBxM2ZIazA3QUxrZWVPSzNoSmlYXy0xVGtnWjZlUWxDbElNdWhJLXR3ejhkTnhUNUtiUUp4SzA4bXJ5UklhQ3NETW5Kems2T0swd0E1TFJQbGtpRllrRnJLa2JCVWJrRnMyT0NpU0VQdTVVdkpRNGlUSGhrWjc3ZkQ00gHwAUFVX3lxTFBLdThkU1R6VTZKeGZuelJqdGdtZUdYbWxZbnM0Mzk5YmplNGs4dDVERkp5am8wVlBQSXN6a2gxT1BQRkp2SFU0QkF6S3pyMmJaY08yTG1EMy0yWkZxVkhBMjFMb1RIa2lJUktGTm5rdkl5cjBwLXhNQlNVVzBSenpSQzJBR0dQN3V5X2FsYWhpV203Z0ktbFY2clg2aGNoMFl6dW5FXzBuSF9Xb2ZCemNWVXJNOFRjWjB0X3Fyd0Itck90dE1MQXJfY0NESy1hekpPWk5ERW4yR3NtNlQ2ODFxMVgySGctQ251Tm55Ti1sLQ?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA-Leavitt, porte-parole de la Maison blanche, partira à la fin août - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 12 Aug 2026 20:06:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQY1R6YUNORFE0ZXd2RGtZbGJBVFVQcFdFbjQyRUYyRVQwUWRGd014OGdSY2tTbnk1c2g5d21ZTm8ydlN3WkdyQ1RIY2xKSXNqaHNRYU5ZUHZva3A4Nk5YbmIxaWRxQUc1UlBVRzdiMm1lSjN1WUZaWml1T05fMUp2cE80X3VUbm5XemFFdWdEbFlkTmVYQVloYVNYR1Nya2UxNTFEN0o4TVR5MzIxOFowZjVmdy14R3RFT2Z0dng1UUlRaldyd0VPN0tOejNhdVZrU3BpMkIyVEkxWWtaUU5vU3RCcUtWYWVXb0x2VUlSSDXSAfYBQVVfeXFMT2dDQTJYbDJGaHo1QmNma1ZrT1NGYmZWdGppRmNoUDFZYzM3RjJCS1lFRXZBX3FRQ3RRVi10WWdLTGpwNTdhMGRzSFpqa3F3dGoxSTQ4VWhhSWl5Ti1lUEc3VklrVGV6THpwVlBicGxzUXFUYndBU2xzTS1QTjFQQmkzaWxCb0NMMHBXN0tSR3E0MUc3ZzNva3g4ODVRVXZmOFJHbFlrX2FYVjk2ZVZFTXlGeFBNZmNhb1pzNi1nWml4TjZJbHRwZmlJdGc2OVo4SGx1QWFyazJmeHlUakUzbDFoOEFqYjNyUklsMEVKb0xZZmZmcml3?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street repart de l'avant, portée par l'IA et une inflation sans mauvaise surprise - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 12 Aug 2026 20:05:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOdFFPdjZOYXJMSGdJeWNvMThSNHhWMnd3U29jbHlnYU8xOGRxNk1mcHdFaDZpMnJkQVlZSU9tUGNEM0kyZnRiNHhMejNJRU1nNThqQS1wbTVwVElYVnZ5eUtSNS1zLUJ3Y1E2c1JJd2FUdi1NQWE2ZjRDdnRQb1BwUFBiQjBEaTcwdHNhMUlaVlJ2eGN4UG91dXRaemtmSmdQR3FvNUNLMlk5VUF0NDM3c0did085WXJnUGJMNXc3YTBLeWIxanNNMmhqS2FUNFBHZ2FRTmVKNDFiRWFldTd5YW5PeHVoLUtEb2s2NEpkX3hoZU9LcXfSAfsBQVVfeXFMTWhDWU96WUcySVVGN3g5alNUTlYtOWVPQUY3N2E4WTBzNXdBZC1lYmkyN3ktV09SejVQVzB0RmJDQmllUmNURnYzVUJObXMzMVBZUmJEcW5yMGxPMnBSS2Z1QnloWnkta2l6RGZudGs0UGNsSVM3UUtXRmlNcnJqanpxbjNDakRRT0t2UjR2aXhYZXNwQ1lKcUFVYTFuV3JneDRyTWJqWXMwbUxRQ0l3VjRfWU5ZYU9fbmlaTWRGTlZtOUpjODl3MTN2cHFPck1VdmtWbV9JTGF1YUdUTXJ2TE5ySXRhbVFYX0pKbGt4amg4NTVzMGtQVXBIYzg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "Le bitcoin évolue peu après les chiffres de l'inflation américaine",
@@ -195,10 +267,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'Europe finalement dans le rouge après l'inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 12 Aug 2026 15:57:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORXVLNlFicDFzaFNkMkVjajVKdEVZX09aNEtLVVlkOEMxN0h0djRoNGE1Ty1FdTEzQXFpbjdBQ3YyYnBNc3lQa0hRWUZuMjNrZnNZVkZvQmZkSks4NzM2SG1nY2RyTl8yQ1Ywc1gtd3ZZdlJTamJGeGJndUJ5aS1fcE5GVHRFNGhDckhJVVU1MWRoTjVXUFpDYy1vY25QVVliMkx1ZjJUN2ptNHFvNFg4Z01sdmxvUllLYmN4UFlwUG8?oc=5",
+   "titre": "L'Europe finalement dans le rouge après l'inflation américaine - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 12 Aug 2026 15:55:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORUF0X0FmRGE2Q3RMcEZHWmpyRmNNY1NRU1Z5cENfSk1UY0FXMmk1MWZ4cDcwZkYwOGFaMmx4RXZUbDhMQXplMXFsRV93THNjaXd5YXRBQVdBb3lfXzVZNVkxWDd4NFkxSzkxd0hTenBxVW5SRHluN0thc0hUSlJtU3E2enNIUk5WY1VzY0JnVWFkWFd1dFRjUXQ5TmM0V2dPdkd1Qy0yeWxmV0RUVXpBOFNvNy02MTFmZENHT0pZdG9URXZVSFNyaEJDVVFVbERBZFc4UVkwdnRvTTB00gHcAUFVX3lxTE5FQXRfQWZEYTZDdExwRkdaanJGY01jU1FTVnlwQ19KTVRjQVcyaTUxZnhwNzBmRjA4YVoybHhFdlRsOExBemUxcWxFX3dMc2Npd3lhdEFBV0FveV9fNVk1WTFYN3g0WTFLOTF3SFN6cHFVblJEeW43S2FzSFRKUm1TcTZ6c0hSTlZjVXNjQmdVYWRYV3V0VGNRdDlOYzRXZ092R3VDLTJ5bGZXRFRVekE4U283LTYxMWZkQ0dPSll0b1RFdlVIU3JoQkNVUVVsREFkVzhRWTB2dG9NMHQ?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -321,15 +393,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La valorisation d'Hermès reflète des craintes exagérées - Deutsche Bank",
-   "source": "ABC Bourse",
-   "date": "Wed, 12 Aug 2026 09:55:08 GMT",
-   "lien": "https://www.abcbourse.com/marches/la-valorisation-d-hermes-reflete-des-craintes-exagerees--deutsche-bank_701228",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Vladimir Poutine dénonce des mesures de \"piraterie et banditisme\": le président russe menace de saisir des bateaux occidentaux en réponse aux interceptions des navires de sa \"flotte fantôme\"",
    "source": "BFM Économie",
    "date": "Wed, 12 Aug 2026 09:47:27 GMT",
@@ -337,15 +400,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Le bitcoin est en position d'attente avant l'inflation américaine",
-   "source": "ABC Bourse",
-   "date": "Wed, 12 Aug 2026 09:20:23 GMT",
-   "lien": "https://www.abcbourse.com/marches/le-bitcoin-est-en-position-d-attente-avant-l-inflation-americaine_701227",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Face à la guerre au Moyen-Orient et à la flambée des cours, l'Agence internationale de l'énergie revoit à la baisse sa prévision de la demande de pétrole en 2026",
