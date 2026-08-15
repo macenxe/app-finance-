@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-15T11:30:26.595Z",
+ "genere": "2026-08-15T12:55:06.815Z",
  "globales": [
   {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
@@ -85,10 +85,10 @@
  ],
  "produits": [
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:38:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "titre": "Renault : Stellantis déclassé, Renault ignoré, Volkswagen et BMW sanctionnés… La saison des résultats a démontré combien la Bourse a perdu patience avec les constructeurs auto - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 15 Aug 2026 05:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -96,17 +96,17 @@
   {
    "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Sat, 15 Aug 2026 08:03:12 GMT",
+   "date": "Fri, 14 Aug 2026 11:06:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Renault : Stellantis déclassé, Renault ignoré, Volkswagen et BMW sanctionnés… La saison des résultats a démontré combien la Bourse a perdu patience avec les constructeurs auto - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 15 Aug 2026 05:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -150,20 +150,11 @@
  ],
  "eco": [
   {
-   "titre": "MICROSOFT Cours Action MSFT, Cotation Bourse NASDAQ - Boursorama",
+   "titre": "Les partisans du gouvernement taliban célèbrent cinq ans de pouvoir en Afghanistan - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 10:44:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qVl8taWpqb3ZoZnNzWmJTVDE0c08zY2JqSGh3VFJnekVaSzg2Mm8xWThrTDBCWHFDY2cyN3o3V3hoWFU5OWVFOGFmOEN6TjQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 10:42:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
-   "tag": "bourse",
+   "date": "Sat, 15 Aug 2026 12:07:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQNUdIci1YMThhdEN1UzkxZXp0NEozNVRoUl9tbzJELU9JZXR2MVQtSDFYbEZqRmpoR20yajd3aU5MYVJrMHVzOTc3Z0l5RWRRNEZiUHQ3NzQ3SEhhT2FwX1B4Q044dk5QSFRBdDJTRkU3MnRDbDRZSFdqaEVGNzJBMkRkb00xSm5VLWFUVDNPVXgxa21oUTBBSHdHNzBSUG52RzlvTWxmZWsyandtV1RMa1hsbVRKa3VfLXBBQVdCdzE4MHROLVlMc1F1NVBQM2llWEZ3SHluLS1GY2Y5clNBNWNtZTZZQTJkRXI4bHdnYXo1VVh5aVBVaHlIYVZ4eHJQekNFMtIBigJBVV95cUxOQmVUQVBmTHNoYy1wWFhtMHFkdjhUU3pIQmI4VmxSS0pIN01INzZRODdTaDNGeFM2elRqcTFiN2VHTHQxUmZ3YW5PY2dyU1pMWk00V1hDbmFJQU5na3JXdFRUMmtuVFpscmluZGZ2M2dxUV9lYThIME1XaUNPWlYzNExnZmNGdFJCUzNaa3M2X2pzdUM1YmNOck1NRG1odlBUZ2NkbW96eEt0a0ZCU09RLU9WaXdtcEozb3Qtb0hvMmZibF9lU04zclBTNHhqaFU5ZkVUWURGSC04Y1BQb1ZvOUFDODhLOWhSTjEwYUxhLUZabndtbDdYYXJlSWhlNV9kR2RGLUZMVTdvdw?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -229,6 +220,15 @@
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Moteur de la croissance américaine, les consommateurs commencent à douter - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 14 Aug 2026 16:27:51 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQV0FETmNkb1NXLUM5bWhDZVNMNEJ6MG1NVlJ0UC1nUG5taDBSaktjRThqOVFzaG1RSHZqaUtnbXVfSEh2SG0xeklMLVNLcWYxUERJVVdzekRCc0dQSlllaEtoenhEQzgwRDZqU3kwMVQ4Q09zUmtnVE01dEZUWnFrRzJEU2tfVVJlTkdibnNCWDJhTHBIMkh2MkZJd3RsUlBSYUFEU2hEQndjUUdOM0FuNUNvMk9FakFVQ2U1VlVRTUpGbWVGdGE2OGFZdDVGWk4tUF9RdVItZFA3WDhKTFY0WVAxNlRGaWZGVVpOYk5FdGplWnBlYUJXYUdBckbSAfwBQVVfeXFMUFdBRE5jZG9TVy1DOW1oQ2VTTDRCejBtTVZSdFAtZ1BubWgwUmpLY0U4ajlRc2htUUh2amlLZ211X0hIdkhtMXpJTC1TS3FmMVBESVVXc3pEQnNHUEpZZWhLaHp4REM4MEQ2alN5MDFUOENPc1JrZ1RNNXRGVFpxa0cyRFNrX1VSZU5HYm5zQlgyYUxwSDJIdjJGSXd0bFJQUmFBRFNoREJ3Y1FHTjNBbjVDbzJPRWpBVUNlNVZVUU1KRm1lRnRhNjhhWXQ1RlpOLVBfUXVSLWRQN1g4SkxWNFlQMTZURmlmRlVaTmJORXRqZVpwZWFCV2FHQXJG?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "L'Europe achève la semaine sur une note maussade, Valneva échappe à la morosité",
@@ -299,15 +299,6 @@
    "date": "Fri, 14 Aug 2026 12:05:08 GMT",
    "lien": "https://www.abcbourse.com/marches/wallix-renforce-ses-fonds-propres-apres-la-conversion-dobligations-de-nextstage_701302",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions frôlent des niveaux records ; le ralentissement de l'inflation aux États-Unis éclipse la remontée - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 11:44:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNMEptYVZ0Q0IwRnYtZGtrS041MUQzaVFCQlNIcXhadl8tZjBReDZHYlFZTTZjaEtEckM1NGZRbFRqT1VfWUNoa2pCemFfYklBUnJKRUx2UURoV0MwLVRZSkdXVjYtZzlwTU5Fc05tMHJUQ0FSMEJzT1lXdTFscUYyZkRNX0FyN3pGUDJpQW14cDlKYXRZX211ZXpsUWxSUVNYVTA3dU5wd3hSbFB2QXcwU1M3RmR6WERWLUN4WXFvZjhRcXhXSHZITWlsZ0Q2YU0yakVYSUZaT0h4STFodlBpeWowbkh1am1EMU5zT1NQb1hyODBFUjY1bVRreXNWVlQ5Z2JGVy04QVZ4dklWSmQtRGNnWjlqbDE2d29MaDFJUG9mTTRmcHNDYU1EZU9BUTNhVzlRb9IBtAJBVV95cUxNMEptYVZ0Q0IwRnYtZGtrS041MUQzaVFCQlNIcXhadl8tZjBReDZHYlFZTTZjaEtEckM1NGZRbFRqT1VfWUNoa2pCemFfYklBUnJKRUx2UURoV0MwLVRZSkdXVjYtZzlwTU5Fc05tMHJUQ0FSMEJzT1lXdTFscUYyZkRNX0FyN3pGUDJpQW14cDlKYXRZX211ZXpsUWxSUVNYVTA3dU5wd3hSbFB2QXcwU1M3RmR6WERWLUN4WXFvZjhRcXhXSHZITWlsZ0Q2YU0yakVYSUZaT0h4STFodlBpeWowbkh1am1EMU5zT1NQb1hyODBFUjY1bVRreXNWVlQ5Z2JGVy04QVZ4dklWSmQtRGNnWjlqbDE2d29MaDFJUG9mTTRmcHNDYU1EZU9BUTNhVzlRbw?oc=5",
-   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   }
