@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-15T09:35:57.361Z",
+ "genere": "2026-08-15T10:34:04.118Z",
  "globales": [
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 15 Aug 2026 09:26:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
    "source": "Capital.fr",
@@ -16,15 +25,6 @@
    "date": "Thu, 13 Aug 2026 11:57:42 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNXdvbVRaYVpoYUg0azJ2bXBzQ1VsemFvZHhZTWtzbzVZbzNYcjF0dDUyQklIOWpHd0ZBeF9SVFRwSGx3b3JHbnhtSTRGREF1OWV4SWFDaHlKYXVnN3RZb2k1ZGw1d0RhM19ZNGZqdzNhaXd4MTBpOW94czJXTmR0dlNienZLb2N6Z2pHcVo5NkRTZFJJTFlncUJMU1RiMFlldzB5VlUza2xsRW9wcF9WdXpqYTgyZ2RkSXc2UEJ1OC1QRzAzd3Z6U3NPOG9HTnJLOGczSHlPd9IB1wFBVV95cUxNNXdvbVRaYVpoYUg0azJ2bXBzQ1VsemFvZHhZTWtzbzVZbzNYcjF0dDUyQklIOWpHd0ZBeF9SVFRwSGx3b3JHbnhtSTRGREF1OWV4SWFDaHlKYXVnN3RZb2k1ZGw1d0RhM19ZNGZqdzNhaXd4MTBpOW94czJXTmR0dlNienZLb2N6Z2pHcVo5NkRTZFJJTFlncUJMU1RiMFlldzB5VlUza2xsRW9wcF9WdXpqYTgyZ2RkSXc2UEJ1OC1QRzAzd3Z6U3NPOG9HTnJLOGczSHlPdw?oc=5",
    "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40 : La Bourse de Paris attendue en hausse dans des marchés plus sereins sur les taux de la Fed - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Thu, 13 Aug 2026 06:44:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPbzRUWFBHUFRhaHBnTGp1T2RlMFBXZzVPVzFIQk9tZVU4RU02bmV3bTNNTzRKQVh6UHhJWEtOc0pSVzA0c2ZTU1gyNElqRFM3SFpDb2ZkRkNoZGQ4dzRnU2RldldranhtdlJGOGIwUi1VamZXazc0NkFWclR0SFBlYUdiNEZkOG95RGRQR2M5d2JZelYzVHJNck50dnJTRVc2ck1fQVVESUE1Rm95ZWxGWFUzRFZycng3RUMtV2xXSHBqMEc5bHNINUlCSENwb0FfemNCTVNsNUV6S3FmZWJjQzZ3a2c4TUdNUHFrWWdURQ?oc=5",
-   "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
   },
@@ -85,9 +85,18 @@
  ],
  "produits": [
   {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 15 Aug 2026 08:38:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Fri, 14 Aug 2026 06:27:47 GMT",
+   "date": "Sat, 15 Aug 2026 08:03:12 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
@@ -121,15 +130,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Cac 40 en quête d'une huitième séance de hausse, Apple dégradé à Wall Street, Meta lance un modèle d'IA agentique en « open source - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 10 Aug 2026 13:26:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPR1lSSHdoNGpIYVRZZExVQnV3NF8xanJOc2FKNkhFNHFOQUZaOG9DaDZQazd1U3Nfcmo5UlpyWHUtT1ZaTmR5LVVvT3pxY05vTVNvNEtuUUZIQXpwX0Y3Y1J1dmxrQnloX1lHSVBoM3FQVmJmVnYwUDNzNlJWT2JnUGYyTjZGQUMtWkZLRUk5aUZxelYtLVdpdXdNMlFsMTliOHhzLUdaaXhRUEtOeDNMYkY4M1FYOWNPT2tjTlhaWnRHVjZYanNmTGRTV0dHUmhoY00tdE9maWhsV3dDT3Jjb1RSZVREaFFmQW9EdE1YdHlBdkUwSUdtYVk4U21SV3VYdGdScXFuOVdyUk5zaVZQY1RwZG1Peks5bGptdktqbXY4T0Nv?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 10 Aug 2026 09:17:00 GMT",
@@ -150,10 +150,19 @@
  ],
  "eco": [
   {
-   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:26:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "date": "Sat, 15 Aug 2026 10:02:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CARREFOUR Cours Action CA, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 15 Aug 2026 09:49:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtZU5uaUhjMk1BUEU2R21SZlNmWVV0QV9MZ0hYZWNaR0VaOGNrWkxpMmNXYWtTYlB2OVlMSTMzZUk1UTV6QkpERFRrVnphQ3Bk?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -161,7 +170,7 @@
   {
    "titre": "MICROSOFT Cours Action MSFT, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:45:57 GMT",
+   "date": "Sat, 15 Aug 2026 09:45:25 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qVl8taWpqb3ZoZnNzWmJTVDE0c08zY2JqSGh3VFJnekVaSzg2Mm8xWThrTDBCWHFDY2cyN3o3V3hoWFU5OWVFOGFmOEN6TjQ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
@@ -170,20 +179,38 @@
   {
    "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:43:59 GMT",
+   "date": "Sat, 15 Aug 2026 09:43:15 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "DANONE Cours Action BN, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:38:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "date": "Sat, 15 Aug 2026 09:40:52 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1oMFc5d0lZMmZIRGlUcE12WENWbi1WQkpSZlZIWVlYR3VKc0hxQmpDWS1fanlJamFPcEhmcFpvRFJUZXdlUHYtYVBQV0JRckdx?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 15 Aug 2026 09:40:52 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fed : La probabilité d’une hausse des taux en septembre chute de 60 % à 32 % - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 15 Aug 2026 09:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41TGd4Zlh5THVnODZNUkpXZ210TGlHNF9wT0tpMmNRSkp4dWJIR2JZejU5Unp5MTl0WWlUVi1tT00wNERreW5CN29SNHd5M2xkWWozWmpzeWJjWmhXY3BoMDhuLWREQ1UxQnRGRQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "Des indices de la présence de pétrole découverts au large du Brésil par la compagnie pétrolière Petrobras (et ça inquiète les organisations environnementales)",
@@ -229,6 +256,15 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Taux : la semaine se termine mal, un 'malaise' palpable se renforce - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 14 Aug 2026 16:47:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTkkxY3ZwMmo4by11dTBTdTNOTzloamt2VVpDWWtQZjFRQ2xZbThLblFKMEFnNDYtRkZnOFdYWHRHZGtJeDQ5TWE2SjJwSGQyX3dQc3dYMG9JUVRpUmFaNlM4TEtpR2h1Z2JGLUN0Vy1tVkRMeDlRVFBCV0hJRHF2d2ZsYWZzOTI3QnpZTVZrWU05TVNYU2tGY1h2bzJhOUtaUU8xMTE5ZzVReU15YllPUEJhZWVFZl8tdmlMTk5HZGZSTDVNeTZyMTZFcmcxV1QzS0pEam9MZFJQcVFY0gHcAUFVX3lxTE9OSTFjdnAyajhvLXV1MFN1M05POWhqa3ZVWkNZa1BmMVFDbFltOEtuUUowQWc0Ni1GRmc4V1hYdEdka0l4NDlNYTZKMnBIZDJfd1Bzd1gwb0lRVGlSYVo2UzhMS2lHaHVnYkYtQ3RXLW1WREx4OVFUUEJXSElEcXZ3ZmxhZnM5MjdCellNVmtZTTlNU1hTa0ZjWHZvMmE5S1pRTzExMTlnNVF5TXliWU9QQmFlZUVmXy12aUxOTkdkZlJMNU15NnIxNkVyZzFXVDNLSkRqb0xkUlBxUVg?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "L'Europe achève la semaine sur une note maussade, Valneva échappe à la morosité",
@@ -308,33 +344,6 @@
    "date": "Fri, 14 Aug 2026 11:44:29 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNMEptYVZ0Q0IwRnYtZGtrS041MUQzaVFCQlNIcXhadl8tZjBReDZHYlFZTTZjaEtEckM1NGZRbFRqT1VfWUNoa2pCemFfYklBUnJKRUx2UURoV0MwLVRZSkdXVjYtZzlwTU5Fc05tMHJUQ0FSMEJzT1lXdTFscUYyZkRNX0FyN3pGUDJpQW14cDlKYXRZX211ZXpsUWxSUVNYVTA3dU5wd3hSbFB2QXcwU1M3RmR6WERWLUN4WXFvZjhRcXhXSHZITWlsZ0Q2YU0yakVYSUZaT0h4STFodlBpeWowbkh1am1EMU5zT1NQb1hyODBFUjY1bVRreXNWVlQ5Z2JGVy04QVZ4dklWSmQtRGNnWjlqbDE2d29MaDFJUG9mTTRmcHNDYU1EZU9BUTNhVzlRb9IBtAJBVV95cUxNMEptYVZ0Q0IwRnYtZGtrS041MUQzaVFCQlNIcXhadl8tZjBReDZHYlFZTTZjaEtEckM1NGZRbFRqT1VfWUNoa2pCemFfYklBUnJKRUx2UURoV0MwLVRZSkdXVjYtZzlwTU5Fc05tMHJUQ0FSMEJzT1lXdTFscUYyZkRNX0FyN3pGUDJpQW14cDlKYXRZX211ZXpsUWxSUVNYVTA3dU5wd3hSbFB2QXcwU1M3RmR6WERWLUN4WXFvZjhRcXhXSHZITWlsZ0Q2YU0yakVYSUZaT0h4STFodlBpeWowbkh1am1EMU5zT1NQb1hyODBFUjY1bVRreXNWVlQ5Z2JGVy04QVZ4dklWSmQtRGNnWjlqbDE2d29MaDFJUG9mTTRmcHNDYU1EZU9BUTNhVzlRbw?oc=5",
    "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Des chiffres de l'inflation en baisse pourraient contraindre la Fed, divisée sous la direction de Warsh, à mai - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 10:01:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQZ19TaFZlQkYwMU42VnBZOXFITnZSbUtIeWszaVNQT2pxYTRlaTMwNWVDeHR2QmFENk9Ec3JSLVBBV2dfQ3VyQ2FpSzFHZWNldmJ2U3ZNR21lOHFLSHZSTlFKZ1RudzB4UnhnT1A5OG5UV2xEd2prNkg5dENoS1l5MVpXY194c29qVWxVTFRGMUU1S1JKQzlHbDNvajFWS09GTkVSZUhFY1BmVnNfajVvbEQyY29vUHBXQjNLbHltTDB1ZW9xV1NUQ2F0S0JlZWtpbm10bG0yaDdSQTI0cWFMWXpnWm9hSGhjaU5vc0p6OGIyM1JSNzR2aHhqV29nNktJNzQwNkRJYTkwR2ZVc1VlSzdzQXBVV3lZa2hDbHFFRTFUZk9Rc3R6aHdKV0tkV0JRcEJHRXUxOXBCRnI2cFdseFdmNVItcmdZMzBVOURR0gHOAkFVX3lxTFBnX1NoVmVCRjAxTjZWcFk5cUhOdlJtS0h5azNpU1BPanFhNGVpMzA1ZUN4dHZCYUQ2T0RzclItUEFXZ19DdXJDYWlLMUdlY2V2YnZTdk1HbWU4cUtIdlJOUUpnVG53MHhSeGdPUDk4blRXbER3ams2SDl0Q2hLWXkxWldjX3hzb2pVbFVMVEYxRTVLUkpDOUdsM29qMVZLT0ZORVJlSEVjUGZWc19qNW9sRDJjb29QcFdCM0tseW1MMHVlb3FXU1RDYXRLQmVla2lubXRsbTJoN1JBMjRxYUxZemdab2FIaGNpTm9zSno4YjIzUlI3NHZoeGpXb2c2S0k3NDA2RElhOTBHZlVzVWVLN3NBcFVXeVlraENscUVFMVRmT1FzdHpod0pXS2RXQlFwQkdFdTE5cEJGcjZwV2x4V2Y1Ui1yZ1kzMFU5RFE?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Inflation, pouvoir d'achat : le grand fossé entre le ressenti des Français et la réalité des chiffres - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 10:00:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQUxMc1VkemEzZU83bVVaTnVsalJTdklRYTBKb1Jva3Nob1h1a3pzVWVZbVV1UTQ0emt5ZUJuWE1vdGR0U2JwNmlNSGlSdUNNZlN6WEZMX1NjNDg1eXAzV1k5VjBZN2FOQTJCN3JGcWZaY05INHNRUmNVc3hjT29uSzNCWTNuZVVxeUt3SG45NkJxamtjQXN4a1dJNHp1VDB3cEp3NkZYYmw5Z0VwMXoxaUM3S3gydVZwNlphSURSMkd2MVc1WHFISUl0Q295R2NZT3NneUpkQkl3aXpGa0FaaVNRX2dZa3hiU3gwQzhR?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La méga-panne électrique de 2025 et la guerre au Moyen-Orient ont fait plier Madrid: le gouvernement espagnol prolonge la plus grande centrale nucléaire du pays jusqu'en 2030",
-   "source": "BFM Économie",
-   "date": "Fri, 14 Aug 2026 07:42:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/la-mega-panne-electrique-de-2025-et-la-guerre-au-moyen-orient-ont-fait-plier-madrid-le-gouvernement-espagnol-prolonge-la-plus-grande-centrale-nucleaire-du-pays-jusqu-en-2030_AD-202608140201.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   }
