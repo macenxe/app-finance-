@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-15T08:41:14.586Z",
+ "genere": "2026-08-15T09:35:57.361Z",
  "globales": [
   {
    "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
@@ -85,6 +85,15 @@
  ],
  "produits": [
   {
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 14 Aug 2026 06:27:47 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Les Echos",
    "source": "Les Echos",
    "date": "Thu, 13 Aug 2026 07:11:53 GMT",
@@ -141,37 +150,19 @@
  ],
  "eco": [
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:35:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "date": "Sat, 15 Aug 2026 09:26:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "MICROSOFT Cours Action MSFT, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:35:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qTm15NEw5c0NZVzI1N0gyd1FRZlZSWmZWazNZcjZzRXdYSVBDaGhadFY1bHlwOHE2dEZQb2Y1TnBOY01pU3Y5VEh3TjZyemZEVVE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:29:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:27:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "date": "Sat, 15 Aug 2026 08:45:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qVl8taWpqb3ZoZnNzWmJTVDE0c08zY2JqSGh3VFJnekVaSzg2Mm8xWThrTDBCWHFDY2cyN3o3V3hoWFU5OWVFOGFmOEN6TjQ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -179,17 +170,17 @@
   {
    "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 08:27:18 GMT",
+   "date": "Sat, 15 Aug 2026 08:43:59 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 15 Aug 2026 08:03:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 15 Aug 2026 08:38:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -218,6 +209,15 @@
    "date": "Fri, 14 Aug 2026 19:15:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNX0lENXlPTTN2UEhXNTJhZTRpWkIzOERQeF9rQzdTcFFFWlVlVWVnbVVuZFRaaGRDa2JsOVM1RnJmM2Mzbmo4MU5CQWJ2LXFEOXhGRk1xV3RWbm8tQlhIbzV4MFFuNDY0SDg2YVBURmdzMWJBeUo5b1hYOEtEMWx2X2tNc3dEaGhJek05cnVvSlhOd3g3ejJQWGRVTW9Gdjg0VllnTC02WElaQVJOTXZXbXNIaVNRVk5Oazk0aDZmMFpSUEV4RjAyQ3MwN0RtUWdpTnk1YnVyMkFmWXJaYjVxc3hBS3RBZ9IB5gFBVV95cUxNX0lENXlPTTN2UEhXNTJhZTRpWkIzOERQeF9rQzdTcFFFWlVlVWVnbVVuZFRaaGRDa2JsOVM1RnJmM2Mzbmo4MU5CQWJ2LXFEOXhGRk1xV3RWbm8tQlhIbzV4MFFuNDY0SDg2YVBURmdzMWJBeUo5b1hYOEtEMWx2X2tNc3dEaGhJek05cnVvSlhOd3g3ejJQWGRVTW9Gdjg0VllnTC02WElaQVJOTXZXbXNIaVNRVk5Oazk0aDZmMFpSUEV4RjAyQ3MwN0RtUWdpTnk1YnVyMkFmWXJaYjVxc3hBS3RBZw?oc=5",
    "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fed : Austan Goolsbee juge les dernières données sur l'inflation plus encourageantes - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 14 Aug 2026 18:47:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOMHBLRjZHQWFUOGl4VFFxTGw3SnlvcVREclFNaG5fZHR2UFZZR00xYk8tVG1Wd2VfVDRGczBxdFFKRUs2UkhQWi1MRWFJU2t0WEFYTXUtc19WcjduWVBSX3NPX1JzaTQyQTdpUTVSQURWTWdUSUI1NzE4aHpGY0JkdjhhQmdLbVNfUVZlMDAyS1JxcTA3ZFJmcWhCZ0NsVTktVDRRNC1yLUZyXzJKQzBiMTRfTzZwMEU3cTZSRklndVk5RXZXaU5RcGNxNGpCX2dhLVZqeExHWUhRUQ?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -299,15 +299,6 @@
    "date": "Fri, 14 Aug 2026 12:05:08 GMT",
    "lien": "https://www.abcbourse.com/marches/wallix-renforce-ses-fonds-propres-apres-la-conversion-dobligations-de-nextstage_701302",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La pression monte sur les marchés en plein été - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 11:54:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWXZ1THQ0Ukh6TVVPRzh1bEVQWWlBM0ZnZ2RseHhBR1Y1SXB1bHUxOXA4Rm5fWFBGVFZMYkJZRnlici0zSFJyd1JhZWFhUjRkUGFkdEdPTVFkeTNwWW1XOFNfVTlmYWd1S2ZUOU1SQzllODlUVlBCcE13VUUybW9maHE2QVQzUVRWX2tDVGxuRWpRRUVLd1IxcVByenVZQ01INW9VU3VqY3VWWWNPaGtOS0VDUHdQNlRfUU1jbzJlcW1nLVQzZkFJ0gHHAUFVX3lxTFBZdnVMdDRSSHpNVU9HOHVsRVBZaUEzRmdnZGx4eEFHVjVJcHVsdTE5cDhGbl9YUEZUVkxiQllGeWJyLTNIUnJ3UmFlYWFSNGRQYWR0R09NUWR5M3BZbVc4U19VOWZhZ3VLZlQ5TVJDOWU4OVRWUEJwTXdVRTJtb2ZocTZBVDNRVFZfa0NUbG5FalFFRUt3UjFxUHJ6dVlDTUg1b1VTdWpjdVZZY09oa05LRUNQd1A2VF9RTWNvMmVxbWctVDNmQUk?oc=5",
-   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
