@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-15T10:34:04.118Z",
+ "genere": "2026-08-15T11:30:26.595Z",
  "globales": [
   {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
@@ -103,6 +103,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Renault : Stellantis déclassé, Renault ignoré, Volkswagen et BMW sanctionnés… La saison des résultats a démontré combien la Bourse a perdu patience avec les constructeurs auto - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 15 Aug 2026 05:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Les Echos",
    "source": "Les Echos",
    "date": "Thu, 13 Aug 2026 07:11:53 GMT",
@@ -116,15 +125,6 @@
    "source": "Capital.fr",
    "date": "Wed, 12 Aug 2026 17:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOZjdUbWlJLVdCeUxrYjhJOEw1UEVJZGFDMGRMcjNmN2pya1lTcHdJS1BTbE1GemhmeW5ZR2NUeVR0eEg2bU9YRjNGNjRUOFFZZEFqaE5HdGhLWUhKNlo3bDNrdTI0VXV3Z1daNExzbVZvei1EcGd4ejY2ZE5sTFRKSW54d3hHV0FGZE5QNmpHam1GVWo0am9NaVAtbHEzQlZEQzJPSUp2ZXBSclgzeVhCTExJV1puVGNKZTNwU2tXTW82eDBmaFo4MV9LQWlHQV9sX3NTdVVxUXNWUWdnQmZLOUhxR0VtbzdwT1VFTXVDVXc?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Point recommandations des analystes : Stellantis, Tikehau, Kering, LVMH, Hermès - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Wed, 12 Aug 2026 07:16:01 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbEtLdzgtWGxDVzlyX29IMVVoLTlNeWtsbTExUkFBeGQ0S3R4UjJsVXk1Z0o0S3JzejlQcElGbUNjRzZOVnItbGxLTGNwUkNQSFAtdXBad29KOUhsdjZaMFZOWGwzT1hIVEJMaHpUOW5zNVpWQUVQM3BuSHBDb25udnFjSE9XMW9HdWtYZUQzaGtzS2JuS0s2cFhXeFJJdUpHeFhDUjhkLWVRNGd3TXhaOG9TTE9kVlRsMzdEWFRHSHBvWEstR1VrakdPamhWelFXaVp3?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -150,55 +150,19 @@
  ],
  "eco": [
   {
-   "titre": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 10:02:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CARREFOUR Cours Action CA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:49:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtZU5uaUhjMk1BUEU2R21SZlNmWVV0QV9MZ0hYZWNaR0VaOGNrWkxpMmNXYWtTYlB2OVlMSTMzZUk1UTV6QkpERFRrVnphQ3Bk?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "MICROSOFT Cours Action MSFT, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:45:25 GMT",
+   "date": "Sat, 15 Aug 2026 10:44:52 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qVl8taWpqb3ZoZnNzWmJTVDE0c08zY2JqSGh3VFJnekVaSzg2Mm8xWThrTDBCWHFDY2cyN3o3V3hoWFU5OWVFOGFmOEN6TjQ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:43:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "DANONE Cours Action BN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:40:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1oMFc5d0lZMmZIRGlUcE12WENWbi1WQkpSZlZIWVlYR3VKc0hxQmpDWS1fanlJamFPcEhmcFpvRFJUZXdlUHYtYVBQV0JRckdx?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 15 Aug 2026 09:40:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
+   "date": "Sat, 15 Aug 2026 10:42:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
