@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-16T12:56:50.222Z",
+ "genere": "2026-08-16T13:39:33.795Z",
  "globales": [
   {
    "titre": "L'Europe en légère hausse en attendant de nouveaux indicateurs - Boursorama",
@@ -103,15 +103,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 14 Aug 2026 15:36:58 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 14 Aug 2026 15:36:35 GMT",
@@ -146,6 +137,15 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Bourse : Renault, Stellantis, Tesla, BYD… Faut-il investir sur les actions de l’auto, parfois bradées ? Quel potentiel - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Wed, 12 Aug 2026 17:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOZjdUbWlJLVdCeUxrYjhJOEw1UEVJZGFDMGRMcjNmN2pya1lTcHdJS1BTbE1GemhmeW5ZR2NUeVR0eEg2bU9YRjNGNjRUOFFZZEFqaE5HdGhLWUhKNlo3bDNrdTI0VXV3Z1daNExzbVZvei1EcGd4ejY2ZE5sTFRKSW54d3hHV0FGZE5QNmpHam1GVWo0am9NaVAtbHEzQlZEQzJPSUp2ZXBSclgzeVhCTExJV1puVGNKZTNwU2tXTW82eDBmaFo4MV9LQWlHQV9sX3NTdVVxUXNWUWdnQmZLOUhxR0VtbzdwT1VFTXVDVXc?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
