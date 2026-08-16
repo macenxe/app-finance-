@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-16T11:30:38.684Z",
+ "genere": "2026-08-16T12:56:50.222Z",
  "globales": [
   {
    "titre": "L'Europe en légère hausse en attendant de nouveaux indicateurs - Boursorama",
@@ -16,6 +16,15 @@
    "date": "Fri, 14 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Thu, 13 Aug 2026 15:58:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2h1YnJ1MllrWktJd0E0RFVKemtzQTgxWFp1MGZZTVpvQ1VyeG9mOWN0RzVCWTFSc3RRQ3ZLb1dpNGRaV1c3M05lU0VaNUFzVEVCNFhtTXVLWW9MUEdCUXh1akpPbEpqMDA1a2tvRi05ellEN1FfbEZwRE1hUG0yWVI3QzQ1dGN4Q3JCME1ZZHhqUTZIUHJlZG9HMTJ4Q1B6WHdzVjk3RkZmTWlQOXQ3MU90dUdFckZ3YzBEbA?oc=5",
+   "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -94,6 +103,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 14 Aug 2026 15:36:58 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 14 Aug 2026 15:36:35 GMT",
@@ -130,15 +148,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Bourse : Renault, Stellantis, Tesla, BYD… Faut-il investir sur les actions de l’auto, parfois bradées ? Quel potentiel - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 12 Aug 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOZjdUbWlJLVdCeUxrYjhJOEw1UEVJZGFDMGRMcjNmN2pya1lTcHdJS1BTbE1GemhmeW5ZR2NUeVR0eEg2bU9YRjNGNjRUOFFZZEFqaE5HdGhLWUhKNlo3bDNrdTI0VXV3Z1daNExzbVZvei1EcGd4ejY2ZE5sTFRKSW54d3hHV0FGZE5QNmpHam1GVWo0am9NaVAtbHEzQlZEQzJPSUp2ZXBSclgzeVhCTExJV1puVGNKZTNwU2tXTW82eDBmaFo4MV9LQWlHQV9sX3NTdVVxUXNWUWdnQmZLOUhxR0VtbzdwT1VFTXVDVXc?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 10 Aug 2026 09:17:00 GMT",
@@ -149,6 +158,24 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Plus de la moitié des électeurs déçus: entre droits de douane et inflation, la politique américaine de Donald Trump n'a pas convaincu les Américains (les midterms arrivent en novembre)",
+   "source": "BFM Économie",
+   "date": "Sun, 16 Aug 2026 12:52:47 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/plus-de-la-moitie-des-electeurs-decus-entre-droits-de-douane-et-inflation-la-politique-americaine-de-donald-trump-n-a-pas-convaincu-les-americains-les-midterms-arrivent-en-novembre_AV-202608160174.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "\"Si vous travaillez pour une usine de chars, tout va bien. Sinon, vous avez des problèmes\": derrière son retour à la croissance, la Russie affiche de nombreuses difficultés économiques",
+   "source": "BFM Économie",
+   "date": "Sun, 16 Aug 2026 11:44:11 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/si-vous-travaillez-pour-une-usine-de-chars-tout-va-bien-sinon-vous-avez-des-problemes-derriere-son-retour-a-la-croissance-la-russie-affiche-de-nombreuses-difficultes-economiques_AV-202608160166.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
   {
    "titre": "\"La crise la plus grave depuis l'invasion du pays par l'Irak en 1990\": le blocage du détroit d'Ormuz paralyse le Koweït dont le pétrole fournit plus de 90% des recettes publiques",
    "source": "BFM Économie",
