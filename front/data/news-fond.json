@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-16T05:38:23.503Z",
+ "genere": "2026-08-16T06:55:15.798Z",
  "globales": [
+  {
+   "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Thu, 13 Aug 2026 15:58:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2h1YnJ1MllrWktJd0E0RFVKemtzQTgxWFp1MGZZTVpvQ1VyeG9mOWN0RzVCWTFSc3RRQ3ZLb1dpNGRaV1c3M05lU0VaNUFzVEVCNFhtTXVLWW9MUEdCUXh1akpPbEpqMDA1a2tvRi05ellEN1FfbEZwRE1hUG0yWVI3QzQ1dGN4Q3JCME1ZZHhqUTZIUHJlZG9HMTJ4Q1B6WHdzVjk3RkZmTWlQOXQ3MU90dUdFckZ3YzBEbA?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "CAC 40 : La Bourse de Paris attendue en hausse dans des marchés plus sereins sur les taux de la Fed - Zonebourse",
    "source": "Zonebourse",
@@ -150,29 +159,20 @@
  ],
  "eco": [
   {
-   "titre": "Hermes intl : Un «algorithme de croissance» qui cale ou une chute boursière exagérée? En baisse de 23% depuis le début de l'année, Hermès peut-il repartir de l'avant? - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sun, 16 Aug 2026 05:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxNNXNVY29rdS1YNXB1cUNYRnZiQmZFeFdTYXlteWd2TVB5ZDNKNllkcHZJNXRrbVBRQndOeXR5Rzh2ekdDVVJqRHN5T042NDVWX2EtMjloMk02aWlxdy1oYWxfUWdxQWVmSW8zNUo5ekR6N1AtaEc4ZEtyVEJ1TjlZdkpiaWhQcHRmYjA1QzZyNnZ6NzFoaFZMQTY5SHZYUlZ6OHhUZTFKZnZsX3Y4Uk14NnpSXzl4cmgwYmMyUFgxOXZfam9wVjN5alI1TDJNblpnU3lEczN2dmV4eDFpSk9XZWltMERKRzVsWG9BbC1uU3d6OUthSUtsNEc0OUw3X3JyU1hNTzhrc0VRdXp0NG1UdmUyRGl2dTltUENQZF93bXVzcUdDck5TUV93S2ptTlIzQW01dEEyRE5IdFU2OXFZTF94eW8zUDB5Z3BZbTBsZGVkNXVB?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 16 Aug 2026 04:51:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Moins de 10 centimètres d'eau dans le Rhin par endroits: face à la sécheresse, faut-il creuser plus profond dans le lit des fleuves? Le gouvernement allemand se divise sur les conséquences environnementales",
    "source": "BFM Économie",
    "date": "Sat, 15 Aug 2026 15:23:24 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/transports/moins-de-10-centimetres-d-eau-dans-le-rhin-par-endroits-face-a-la-secheresse-faut-il-creuser-plus-profond-dans-le-lit-des-fleuves-le-gouvernement-allemand-se-divise-sur-les-consequences-environnementales_AD-202608150212.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Fed : La probabilité d’une hausse des taux en septembre chute de 60 % à 32 % - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 15 Aug 2026 09:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41TGd4Zlh5THVnODZNUkpXZ210TGlHNF9wT0tpMmNRSkp4dWJIR2JZejU5Unp5MTl0WWlUVi1tT00wNERreW5CN29SNHd5M2xkWWozWmpzeWJjWmhXY3BoMDhuLWREQ1UxQnRGRQ?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
