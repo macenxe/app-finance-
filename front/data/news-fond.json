@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-16T06:55:15.798Z",
+ "genere": "2026-08-16T07:39:49.345Z",
  "globales": [
+  {
+   "titre": "L'Europe en légère hausse en attendant de nouveaux indicateurs - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 14 Aug 2026 08:18:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbmVHUEV2NHF1N2hWODdLdWN6dXNYcEVDRGk3OGNraDd4cXprZm5QZDlod1RRQnJBblViVXdPUk04Q09ob1dnTnVFYTFLcEtmeWxUcXQ1Wng2NEViRnBVcEZpM3FVY3VUX0pIeFRfRVRtemUySFBuNHJmMHZvWGJfYVA1Nl93VGtTLXdVTDM2X3E3WEc2YlRVTV9UV1VJLTJRX2pUQnkyeHRHeXVHMEVSOTVwamRMVS1QNjgtWUJjWEl2SVV1X3FNRlk5a1IzNm5PakNXWk91Mk5GTHY50gHcAUFVX3lxTFBuZUdQRXY0cXU3aFY4N0t1Y3p1c1hwRUNEaTc4Y2toN3hxemtmblBkOWh3VFFCckFuVWJVd09STThDT2hvV2dOdUVhMUtwS2Z5bFRxdDVaeDY0RWJGcFVwRmkzcVVjdVRfSkh4VF9FVG16ZTJIUG40cmYwdm9YYl9hUDU2X3dUa1Mtd1VMMzZfcTdYRzZiVFVNX1RXVUktMlFfalRCeTJ4dEd5dUcwRVI5NXBqZExVLVA2OC1ZQmNYSXZJVXVfcU1GWTlrUjM2bk9qQ1daT3UyTkZMdjk?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
   {
    "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
    "source": "Capital.fr",
@@ -65,17 +74,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'Europe globalement stable après le record du Stoxx 600 - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 10 Aug 2026 07:21:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOOG9lcGkxempVT2ZuSUJDLVRLNWhPZHhNdklCQll4Yk1oTXlla0VSZkF6WFV0dFVOS0pud2dLUGtQbmExNE16T0U1MXNlVnkyTms2aGVBc2FKY3lGVFlWdGRRYTRQT3J4dmRSWjYyTTdKSUxCSDFaanlyR1h2V1hiLXBJUGVDd1p4b2Q3UWF3dm5kMFphVGo2bzZIYlE4Y3AzU29weDZMOGhQMlMxeldmN2h5cVFCU294YlNXbmZ1NmR6MDBRaXQ4?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La BCE va-t-elle relever à nouveau ses taux d’intérêt en 2026, pour ensuite les abaisser en 2027? - Morningstar",
-   "source": "Morningstar",
+   "titre": "La BCE va-t-elle relever à nouveau ses taux d’intérêt en 2026, pour ensuite les abaisser en 2027? - global.morningstar.com",
+   "source": "global.morningstar.com",
    "date": "Mon, 10 Aug 2026 06:27:32 GMT",
    "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYVM1eHhSOWxKaW1KSkZ5ak9EdDRwelEtaHM4aFlNLW9lNDRMdFFqRDhPdHA0aDdqMDgyRThyUFNhMlJhWFNZa2xrcTJNc2F2ZW5XOUFCb25zVTN2WnBfclR2dnEydzA1WDU2QWJudnZEOGF2MW5JQ1BFdXFvdTZNYVNFdEFlQmRpd0k4cGx2ai1tOElaUGdiNDhxRlFjSzBIZGRLTFp0YVRiREJicGptaGlGaG0yQU56ZjhRMUtabEc0LW03QWk0UE9uekRnUQ?oc=5",
    "tag": "BCE / Taux",
@@ -84,6 +84,15 @@
   }
  ],
  "produits": [
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 16 Aug 2026 06:22:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
@@ -103,28 +112,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 16:35:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.08% - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Fri, 14 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdDhUNzZlMld3eWlYczVZR1ZOeDRFSDFRMV9JMTJoWDhiUV9uSEJlYlVJbHN2WThvWEpTelRXY1ZTVnNkeTI4elQxeEt3bkctOTdHbGx5NHdsZlloU0c5RENTWWZ5aXFIX3lKNVVxSVQ0dkUxZC1PQTh1RTZJNUFQMUZHVUJlZ1l5dS1Fd2J0VVUtaFFVZXluQXhDWk94ZnNham9fVk1pdzVIclY1LTBhT0RTNjF3RlRuRWZ5SHpsY3F1UlEwVWVZMGdn?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 13 Aug 2026 07:11:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNV25OX282OHlmR1N0RTMxNDhHQ2lGME5VUjVKaU5ubWpCaGN2S3J2RUNFZWticnBHcTRjTzYzMklHYVJsaTBFdU5rMTFmYjI5NDJpOVZRQXZkR0w2WEVaZ01ydWlwSm1Jck9CVnRGOFBRa2RrODBqd0dpZVFpa2NfQ3lSOVA0V0NFUGFlMEpZRzM5dmM3clBGcGw3eURwSVdqUlRBVG81NHNxNkVaM0pwajdyYm05ZDlnb21uVHUxNnNXVUtkZzlTR2Z1VWxqT3RNRFg3bmVuSVpzM3VtZG0wekZJUW9OWEtDQjNndmNOWUowSkk?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
@@ -137,6 +128,15 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.01% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Wed, 12 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdHVPbEtNckhBNUhVbWJoMXFPYnRCTzhOV1Y3Ny1QS3ZPZlZGdzRqUTVXZ20tWmFvcVUxTjRQaTNCT0d0RzNJMkNkQTNrNm13TzcydHV2MmFoTi1BTUNCUEdZeTQ3NnJ6ZUwwZ2ZkWHZCY250c002M1piUlV3R1d1enpuZE1NbHFBZ2ttMjh6X1ItTGhfZm5URVUwek0wcUpPcW9CcVN0ZDdMQUg0RmQ0MHRWS3BBVWgwQkVMb2puOWExWUNLTi12Rkx3?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
   },
   {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
@@ -159,20 +159,20 @@
  ],
  "eco": [
   {
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 16 Aug 2026 06:48:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Moins de 10 centimètres d'eau dans le Rhin par endroits: face à la sécheresse, faut-il creuser plus profond dans le lit des fleuves? Le gouvernement allemand se divise sur les conséquences environnementales",
    "source": "BFM Économie",
    "date": "Sat, 15 Aug 2026 15:23:24 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/transports/moins-de-10-centimetres-d-eau-dans-le-rhin-par-endroits-face-a-la-secheresse-faut-il-creuser-plus-profond-dans-le-lit-des-fleuves-le-gouvernement-allemand-se-divise-sur-les-consequences-environnementales_AD-202608150212.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Fed : La probabilité d’une hausse des taux en septembre chute de 60 % à 32 % - TradingView",
-   "source": "TradingView",
-   "date": "Sat, 15 Aug 2026 09:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41TGd4Zlh5THVnODZNUkpXZ210TGlHNF9wT0tpMmNRSkp4dWJIR2JZejU5Unp5MTl0WWlUVi1tT00wNERreW5CN29SNHd5M2xkWWozWmpzeWJjWmhXY3BoMDhuLWREQ1UxQnRGRQ?oc=5",
-   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
