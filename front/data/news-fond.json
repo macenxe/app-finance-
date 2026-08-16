@@ -1,163 +1,17 @@
 {
- "genere": "2026-08-16T15:32:17.273Z",
- "globales": [
-  {
-   "titre": "L'Europe en légère hausse en attendant de nouveaux indicateurs - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 08:18:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbmVHUEV2NHF1N2hWODdLdWN6dXNYcEVDRGk3OGNraDd4cXprZm5QZDlod1RRQnJBblViVXdPUk04Q09ob1dnTnVFYTFLcEtmeWxUcXQ1Wng2NEViRnBVcEZpM3FVY3VUX0pIeFRfRVRtemUySFBuNHJmMHZvWGJfYVA1Nl93VGtTLXdVTDM2X3E3WEc2YlRVTV9UV1VJLTJRX2pUQnkyeHRHeXVHMEVSOTVwamRMVS1QNjgtWUJjWEl2SVV1X3FNRlk5a1IzNm5PakNXWk91Mk5GTHY50gHcAUFVX3lxTFBuZUdQRXY0cXU3aFY4N0t1Y3p1c1hwRUNEaTc4Y2toN3hxemtmblBkOWh3VFFCckFuVWJVd09STThDT2hvV2dOdUVhMUtwS2Z5bFRxdDVaeDY0RWJGcFVwRmkzcVVjdVRfSkh4VF9FVG16ZTJIUG40cmYwdm9YYl9hUDU2X3dUa1Mtd1VMMzZfcTdYRzZiVFVNX1RXVUktMlFfalRCeTJ4dEd5dUcwRVI5NXBqZExVLVA2OC1ZQmNYSXZJVXVfcU1GWTlrUjM2bk9qQ1daT3UyTkZMdjk?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - capital.fr",
-   "source": "capital.fr",
-   "date": "Thu, 13 Aug 2026 15:58:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2h1YnJ1MllrWktJd0E0RFVKemtzQTgxWFp1MGZZTVpvQ1VyeG9mOWN0RzVCWTFSc3RRQ3ZLb1dpNGRaV1c3M05lU0VaNUFzVEVCNFhtTXVLWW9MUEdCUXh1akpPbEpqMDA1a2tvRi05ellEN1FfbEZwRE1hUG0yWVI3QzQ1dGN4Q3JCME1ZZHhqUTZIUHJlZG9HMTJ4Q1B6WHdzVjk3RkZmTWlQOXQ3MU90dUdFckZ3YzBEbA?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Inflation conforme aux attentes aux Etats-Unis, le Cac 40 reste de marbre - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 12 Aug 2026 12:47:58 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbjZuU1FSR3hhNmJqa3BSdXZKQ09JV2s0UGFIN0pIdVh3MnU0bUFtUTFFNzUxRDNvTlRfdE5yZFlYLVg5SnRLbTI3ZGFJWTVFaDI1bGxZOWt1cHdlRldNTE1FbzJQV3Zia3lJakRtVEM0WjFvMjh4NEFtSjNickM0alBnRkp3QXFsSjRRWEVZb0NqRWpoa2VaeHZ0WGczVnd2VkxhQkJxX1hueWZ2NHJJQ2xNdjBEVHhvMEkwdmRVR1JyaXZPS0NGMFBvcm8xdjFXTzRRc1N4bXpyOGM?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street vue en légère hausse, l'Europe sur de faibles variations avant l'inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 12 Aug 2026 10:59:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNQ0tocENHdU51R2NrZl93NEQ1M2loY3dmTkxBR04zX2lQcWhpTzhzZUlXNUlFWnVPalN2OUtjOVBCME1GWG9BdEtqOE1vNEhGUVFWbXZlc0xtcjNBcUl6eHJ1SWJaX0NCTVd3Ukd0Nk5zLXJWWExYYi0wS3lweHpUNzVoODc2dTBPTmFVb1hzSWd5WUwtbHBlOWNFZ19NeWhuNFdrcFhNQkF3Z0lCbFJ6X21tNE9rdDNGN0x4QzRWR1FPLUdwTjJUVTROZnpKTFNhcVlfUHNYSUJfVzFYSzdoVlJRN1QwbDZzckc1U3d3?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Cac 40 : Le marché évalue l'hypothèse d'un «arrangement» entre Washington et Téhéran, le CAC 40 termine sur une petite baisse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Tue, 11 Aug 2026 16:01:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNVDgtWVFOMm5KNUhwZ2JTX3BpT1JDb2RSbERFV2RwUER6Njg1dzQ2UmJ5TE9BOUVmamZIendUOWhGd1hrSm41NUZ6N3A1MmZxelBSbkZ0aE1jVHVBeklmR1hCSFQ2UXFlYUd3bU5KRGpYTXI4TUxrUXZKY0EwVm11WElqa0ZTOW9IRXNxSElmVUVpZmNLdTJmWVNfcFZ5S1JKQlpNTHVzODE2OXllZzMwTWJkc1ZEMUp3R0FOTUdnUmpncjZfUWpqeDRVV1dZV1BET0xVMVlfdDRzak5QRkFybnhPcTRvMjdTTTBtTnJzN3kyam93MGg1dmJ1eGxQSWktMkF4ZlBSa0ZIWGRiSHhtRXN2QTdQR2tXNzg4?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Les marchés basculent vers une pause de la Fed à l'approche du CPI : cinq choses à savoir sur le Bitcoin cette semaine - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 10 Aug 2026 13:23:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jNGk3c3MwQmtmUHpqLVVDV1d3YkNTMFpFN1BxLURXcGNvUWs2SmN1Tk5MNE9YRUR1TmtBUGxhNjZtNFR6ckRDeHNVZU9HM041UWlreWItY1JUSDRyc3RkVjFxRDhRUGxVbFZfOVhQYw?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe globalement stable après le record du Stoxx 600 - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 10 Aug 2026 07:21:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOOG9lcGkxempVT2ZuSUJDLVRLNWhPZHhNdklCQll4Yk1oTXlla0VSZkF6WFV0dFVOS0pud2dLUGtQbmExNE16T0U1MXNlVnkyTms2aGVBc2FKY3lGVFlWdGRRYTRQT3J4dmRSWjYyTTdKSUxCSDFaanlyR1h2V1hiLXBJUGVDd1p4b2Q3UWF3dm5kMFphVGo2bzZIYlE4Y3AzU29weDZMOGhQMlMxeldmN2h5cVFCU294YlNXbmZ1NmR6MDBRaXQ4?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La BCE va-t-elle relever à nouveau ses taux d’intérêt en 2026, pour ensuite les abaisser en 2027? - Morningstar",
-   "source": "Morningstar",
-   "date": "Mon, 10 Aug 2026 06:27:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYVM1eHhSOWxKaW1KSkZ5ak9EdDRwelEtaHM4aFlNLW9lNDRMdFFqRDhPdHA0aDdqMDgyRThyUFNhMlJhWFNZa2xrcTJNc2F2ZW5XOUFCb25zVTN2WnBfclR2dnEydzA1WDU2QWJudnZEOGF2MW5JQ1BFdXFvdTZNYVNFdEFlQmRpd0k4cGx2ai1tOElaUGdiNDhxRlFjSzBIZGRLTFp0YVRiREJicGptaGlGaG0yQU56ZjhRMUtabEc0LW03QWk0UE9uekRnUQ?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "negative"
-  }
- ],
- "produits": [
-  {
-   "titre": "Renault : Stellantis déclassé, Renault ignoré, Volkswagen et BMW sanctionnés… La saison des résultats a démontré combien la Bourse a perdu patience avec les constructeurs auto - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 15 Aug 2026 05:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 16:35:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 14 Aug 2026 15:36:58 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 15:36:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 15:35:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.08% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdDhUNzZlMld3eWlYczVZR1ZOeDRFSDFRMV9JMTJoWDhiUV9uSEJlYlVJbHN2WThvWEpTelRXY1ZTVnNkeTI4elQxeEt3bkctOTdHbGx5NHdsZlloU0c5RENTWWZ5aXFIX3lKNVVxSVQ0dkUxZC1PQTh1RTZJNUFQMUZHVUJlZ1l5dS1Fd2J0VVUtaFFVZXluQXhDWk94ZnNham9fVk1pdzVIclY1LTBhT0RTNjF3RlRuRWZ5SHpsY3F1UlEwVWVZMGdn?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 13 Aug 2026 07:11:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNV25OX282OHlmR1N0RTMxNDhHQ2lGME5VUjVKaU5ubWpCaGN2S3J2RUNFZWticnBHcTRjTzYzMklHYVJsaTBFdU5rMTFmYjI5NDJpOVZRQXZkR0w2WEVaZ01ydWlwSm1Jck9CVnRGOFBRa2RrODBqd0dpZVFpa2NfQ3lSOVA0V0NFUGFlMEpZRzM5dmM3clBGcGw3eURwSVdqUlRBVG81NHNxNkVaM0pwajdyYm05ZDlnb21uVHUxNnNXVUtkZzlTR2Z1VWxqT3RNRFg3bmVuSVpzM3VtZG0wekZJUW9OWEtDQjNndmNOWUowSkk?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 10 Aug 2026 09:17:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWE52c3owd3l6bUtsdHdVUzlJVENXb3R2SlJneGRGcUFKMllnMk44SDFIUHdjUXlUdXhyUjh1UEpySzM0WU9hZmF2WHRsNnFaa296cGpueHI1Nl9oVS1wYVVRSjRROWktbVB1MFBZTHFaaGVMYTVjUjExQ3pkeHZrMXgwdkxsN0xrNVpyMnY1c2FJXzZuak5oOXhQc0VYUm5FVWJ3UlFCX1RfTGgwbUJaR3lmMGVCWE9IV3ZOOVBzdGdIMGhOdzRQa3B0REI5UjU30gHWAUFVX3lxTFBuVWVyeEhTcUlEZV96MFI5TkdZQW5Ga3BwaXlJcnJ0cUFsbV9zeHd4Ynl3RHBxQ0huREdUU2p0VEl5V3FWSHhPTTJlejhDanZFNms3ZTI3UC1BeWNLSGl5VF9tTFdtR29ORUd2ZDM2YWo5ZmZsZy1Cekt4MzlQQUk4cFFSQTJlZFZKQklab0VxSjRmZE9uVjdDdGVKS2J5QmJDT1FkWmV6YS1EUTRZS2ljc1lORGd0M1lzVVN2RkNjd2lldmtyMTBlUUFPdzJXdm13X1dDOGc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
-  }
- ],
+ "genere": "2026-08-16T16:37:31.389Z",
+ "globales": [],
+ "produits": [],
  "eco": [
+  {
+   "titre": "Un record d'entrées de capitaux depuis 6 ans mais la moitié de la population vit sous le seuil de pauvreté: les Nigérians attendent désespérément les fruits des douloureuses réformes du président sortant",
+   "source": "BFM Économie",
+   "date": "Sun, 16 Aug 2026 16:06:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/un-record-d-entrees-de-capitaux-depuis-6-ans-mais-la-moitie-de-la-population-vit-sous-le-seuil-de-pauvrete-les-nigerians-attendent-desesperement-les-fruits-des-douloureuses-reformes-du-president-sortant_AV-202608160025.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
   {
    "titre": "Plus de la moitié des électeurs déçus: entre droits de douane et inflation, la politique américaine de Donald Trump n'a pas convaincu les Américains (les midterms arrivent en novembre)",
    "source": "BFM Économie",
