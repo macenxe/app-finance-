@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-16T09:37:06.536Z",
+ "genere": "2026-08-16T10:34:49.592Z",
  "globales": [
+  {
+   "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Thu, 13 Aug 2026 15:58:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2h1YnJ1MllrWktJd0E0RFVKemtzQTgxWFp1MGZZTVpvQ1VyeG9mOWN0RzVCWTFSc3RRQ3ZLb1dpNGRaV1c3M05lU0VaNUFzVEVCNFhtTXVLWW9MUEdCUXh1akpPbEpqMDA1a2tvRi05ellEN1FfbEZwRE1hUG0yWVI3QzQ1dGN4Q3JCME1ZZHhqUTZIUHJlZG9HMTJ4Q1B6WHdzVjk3RkZmTWlQOXQ3MU90dUdFckZ3YzBEbA?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "CAC 40 : La Bourse de Paris attendue en hausse dans des marchés plus sereins sur les taux de la Fed - Zonebourse",
    "source": "Zonebourse",
@@ -149,6 +158,24 @@
   }
  ],
  "eco": [
+  {
+   "titre": "\"La crise la plus grave depuis l'invasion du pays par l'Irak en 1990\": le blocage du détroit d'Ormuz paralyse le Koweït dont le pétrole fournit plus de 90% des recettes publiques",
+   "source": "BFM Économie",
+   "date": "Sun, 16 Aug 2026 10:29:19 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/la-crise-la-plus-grave-depuis-l-invasion-du-pays-par-l-irak-en-1990-le-blocage-du-detroit-d-ormuz-paralyse-le-koweit-dont-le-petrole-fournit-plus-de-90-des-recettes-publiques_AD-202608160146.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "L'Inde fixe des objectifs de production de gaz de pétrole liquéfié pour sécuriser ses approvisionnements face aux tensions au Moyen-Orient - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 16 Aug 2026 09:45:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNVTdqRm5EdjF1emtha2NIZ1E2dDktU00wQm8zRDlWUHFJYW5xbThjc01SbnhjcDVVOTVKS3BHZTZjbGl6R2xsdjhFOHJRRDBJODJZYmFZWDd6UDZJaVpuWFZka0l5STRBN09PWTcxYlBvVk5OTlhRSnltc2pITmZSbWNmeW1LYVdTSS0yVmItRGdpRGhnUnR2MWZWTUhoOEtmdHZwdDh4NkJ1bEt1ZHZDZmxsUldUSnJKS2VjUDlBS0xpdG54MkJWQXExVF9Jak8zRTU1ZkJ3aXg0Q3ZCRHhYTGo1ZmZRZ3dsdjlyTzhnYTFndw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
   {
    "titre": "La solution pour contourner le détroit d'Ormuz? La Chine a envoyé un premier porte-conteneurs pour l'Europe en passant par l'Arctique",
    "source": "BFM Économie",
