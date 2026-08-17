@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-17T17:39:19.373Z",
+ "genere": "2026-08-17T18:53:57.630Z",
  "globales": [
   {
    "titre": "CAC 40 : la Bourse de Paris à l'équilibre, les doutes sur la dynamique de l'économie américaine toujours présents - Capital.fr",
@@ -150,22 +150,13 @@
  ],
  "eco": [
   {
-   "titre": "JPMorgan choisie par General Atlantic pour piloter son introduction en bourse - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 17 Aug 2026 17:27:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTEc3WnRBMmVLVVo0ZWh4Mnc3LWFWNVVUVkZRVHVuYlJQVHhJS21jQUxNMW5KX1lSLTFqcmUyTzlPX1IyNmhuX1RoTFM2ZHpxblFPYVNIY3QyVzhVNEZzRksxbVpXNmswVlBKNG03aHFPRDN2S0pBVWpLRnJTdXdIdEdTSlNWWWJKbUluUDZ3NGFad3BGMHNCbnNPZUxYYWlETjhsS09SdnUyUVcyd1NteWZMck12alBIMXhjOGJYSFlTTDFJbEtCTmMtLUxtWHlyVDVF?oc=5",
-   "tag": "bourse",
+   "titre": "Piper Sandler attribue à Dave la note « surpondérer » en raison de ses perspectives de croissance - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 18:07:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNYktScTBDUWV6blFiZk1lZWc2NXRDWlcyMTVSNDhvb0I5enlRWXlNaWZnODl2QmRvcDRPYWt0Y011T0VBN1Y2SVZvbmNLLXhpUGMtZ08xRmRnTDJ5X255NzBoTDJvSnhkdGRXeGxXa050OWxYNGhQUTlyYkRSaDVFc3kwcVhqazRGZkdCckEwX0RzU1RIa3Z3bmlmRUlveG1DcFA5VWt5VU9KRG1mSUJsS1pFTnNjUi1xRXJ2SUdlbUpCYlIwUmJRMHB4c1gtRWpHNEx3b0thaVUySjdvcHBXd3g0cTB0NS1EV3lkQ19aRERhOGZzekUtYTVmdE15eU1V0gGGAkFVX3lxTE9kSnFhVS0yT180NW1TMF9uMWIxdlZqSk5MT3hTTjJkaUg1RjlHQjVVTXVJQk1iQXJ2T3FRMllITDhnTUZtbEhMVFp0cGJWVGxjYk1lazZuaWU5bUNVTHQwTU9aQ2RuSnk5eG13YlY0V3hVTXdKTlkyUlFSeWVtSmFvR0g0bHhQQ3Q4d0VQYVo1VVNEc3VYcWpHMHdMQUNGYlBkUTdCbjMzSkdQeUx6TmZjSkthM242NGc0ckwzeDdYU1llWnB5YTBJYnpSWGg5T29sZFZVU1J3RzRKOWxIWS1lcGx2Z1NuLVlvX2d2c2txUnVBRzNhYlNNenRobzVZTXVJMWE3YlE?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le bitcoin dans le vert lundi, les craintes de hausse des taux s'apaisent - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 17 Aug 2026 17:17:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNOUFaUUJHajduS3hIN1VTS0dkQ1A5S29MaFdyRWdtMGJDX0NOTHFDNU1jd1NycF9SU2JCdjBUZXFlWkhRUXdLelN6bUliZzJicmdjTzljN1JyOEJ2WU4wYW9pY1pxYW5RSWZSSFpZWkNyWEJvdDVFcmg2eFJ3MDg2UEtwa2ZoUTc0Tm9vbFBod2VlNlFNSTBFdHotRHFFWjc0UXowU0NPOVhiTi12ZlJVa3IzNA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "Le bitcoin dans le vert lundi, les craintes de hausse des taux s'apaisent",
@@ -186,78 +177,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Nvidia garantit le financement d'un centre de données OpenAI ; l'action en hausse - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 17:01:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQTdrVlQta3NTVGRhRDVkNnE5SEdGRkpmWEc0SlBwelE4QzFJREZoY1lxdVYxME42alJneTJCQzVVYnpOZC1CMGFnMG5EdV9mSzV2YjZMTUlGaC03aUNlb2t0M2xjX29zTi1WVkZ1ZmtJbjhwUnF0UXNURnIwNmMxOHhBbTJOSW1OQW5vVVJnWkNHRzNNQ1hVMGZFZzQwY092OEktQmh0eG5IaFJNY0NTWDUzckQ0ODI3VWFfbERYaHFDcGNPWVhoZndhTWZ6VFdCTXg5S3VUQXBIUy1LNnloVTBMcEx2SGN4U1ZVWWt30gHzAUFVX3lxTE5aTk5GV3hwQ2hsclNqZ0NTRXM4dk0wYUc5XzU4M25HUDZObVlaeE5Jb0pNY01zeHdtQ1BzalUyUkhRWHFwb25mSFZPQ0lCNXhNQ2FLOUFCbXY4a3oxVTMtTzF3UGlhZXFFU0xYbzE5eVFrRmpqdTFpc2J5RmNRU0doUV9fLUZEdHFxbTdaQWw1Zm9aZ3p2RThmd2NxRm9VZzIwR1pHandFZ2dudndycnNQZ0ZEb19aS2x6amxPdi1tRDlUd3l2UUN6YUNBNVl3emk2ek5FTGZkenZkZnVZS1BDYk4tM2w0aHNIazRuQXgzV0JsVQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "SAP «est en Bourse une action de croissance solide, loin du tumulte des débats sur l’IA» - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Mon, 17 Aug 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNE41NGpuRzdrMGxCdWdpRUhlVXBCV3JBNkQ5RmIwM0RtLWFEVmN0aVJoV2M5YWd2UUxiT2JUNFF5QXZ3WVROWno2WHZBaFZDdHZab2hxVHJqWi1UcnZJdUQydkN6OC1MalF3YzJyOUNmMmEzTTBlX3p3N1pZYjdETFdxUEh3WVZkQW9kLXVmdk8wcFlqY25rSDVNYjlLemhhOFA1ZnBRUjBqMkJsRGI5WFFqajEwR0F5NGZ0dkVUOXZXTTZqM3pLclpWcnpWbVZU?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "General Atlantic aurait choisi JPMorgan pour diriger sa nouvelle tentative d'introduction en bourse, selon une source - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 17 Aug 2026 16:56:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE01Vk9zOXlaV0R3MzVWaE9DSm0zVW9hcVk2dTF3QzZHZWxnalBjdTEtYkRDLVhQZW1iRDVUeW54WkNRSWx5a2xURVNoOXluNVlIcnBJVW9UMWcxbU44QkJKMjdpc3J3Tm9oTmdtS3FfVmM4bGs0dXd3?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "General Atlantic aurait choisi JPMorgan pour diriger sa nouvelle tentative d'introduction en bourse, selon une - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 16:56:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQMXhybnY4SjdXWTBvbmJZS1plZ3FYTFVGdndhSUZzNEpnZ3ZjYnNoSS1GYzc5cWJRbWQ1MTZVdDM1QkZKTDlIN1Z6dkZpb1U0RkZXdEMtUzI2U1FUaWV3X3R3dU1BX3BjbEJUNkFCTnBfRHdjSUp4Z0FmRUZBQVhkNTZSalpRVnJBRHV0SWloN0ZUTWVlOEMyaVJialdGdHlnVGZ3SUROd01YR2E3SkNWcmswbFowX3dZcFE4b253LU9hV2oyYkRhR29LaURqWkZBX1g0R2hjei1FSmpXODdON3g3SzFzM3htUnU3Qmo0YzlBSHI3enJVdkFJRjNXVi1tRUdSOFlBZEROUkhrUkJxTlFDcU5EdmZxS05UTWh5a9IBpAJBVV95cUxOMmJtWWY4a0xOdTFKMFZDbHZLQmJDdHVldUhYQU5VQVNOY0M3U2xLRXJtVFBuQTJxWXpyX0JCd19KM056QmE3UmxZeWpxMWpRYWp2Qm9GdmNqTHFSaVR5LVFYMVJYcEViTWFzM01QUDR0VzhVV0JyNDlVaGJEeERDMURsb2pJMmNXVTFpRDN1bHZTTFZDR094Vm1PNDFzQTNtQWp3WTh3SEZwSC1BNDJrOTJGNU51eVZnVlBpcWRoMFV6U3FsX1JneVpLekgtcmRhSkhjcUIwTXhHaGZBZnZvekJxM294cTUtbGM2bEI1aU53UjNHd052V2JZcS1oQ29EVGsxUjBQZ1VSLVJRY1NpbW5faDdWMS1Ud3k3X0c2azJWT1Bs?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Pétrole brut d'Afrique de l'Ouest - TotalEnergies propose du Bonny tandis que les ventes au comptant d'ADNOC p - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 16:53:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgJBVV95cUxObTZDLUdUTUJDQTd3U0pWa05IVFB5aW1CeFR2cE8zMkJmQ2hEMTlqaEZHYkN6TjBMTW9neldVZU5DeWVpOFE0OFhuc3M1djZ5Z1Z4TjMwdk0xOW5FMHhRUjFjSWJoTDExeUdxXzRxVl9WUGo3TDhfSGo4NWVtOEJaa3VEVTJGY2F0cDczN3lPMGxaNEpnSlZOSC0xNExSbDEtbDR1U0FPYVRob0JTVDI3OHFEd2M3WVp0Y2xQOHRlM3hwTXdINzFsTC0tSUVDUW9EeDdRMVpoMzMtY0NWZnhqMkE5TVpMekxCYWNkZHBQcWNNYndIaHZ2NjRmOTkxbzR2eWEwV0o3OGZUTXVyXzhNWHl4ZnFfemZzWWl3S1Z5ZmVYV2M3bHhXdGhtQzhnUdIBswJBVV95cUxNbXZ5RkZYMlRnYkJTdV9HUlQ2WnZrdUZ2SElRTGxCX01BdW5wZ0V0LThxREJQTjRPNXJuQmxoY3MwRnJvb2NKRkFJTUpJeGdzd0xHNWJEaThxVWluZXJCVlkyeWlHcndWc1ZHS2Z0bkthUTYtcWR3VE1GT19jdjJvX0dYSmVSTkFYZGRSaFl5ZWRxSlhNMWlVZ3MtQ0FGTVp2RXlyT2VoalpqNWlpajhBeXZxaXhfYmdQMG01M05pRGc5ZXh0bzhNdmVPOTZBUHNMSDR1OFZsU3RaNTVhOVlEWlNfdS14NFJReHJYemFwcURaV2hMa0g5a3R2ak5lbU95akRPRWFlVGwwWHQ2Q0hUN19Wc3pWYVVqcHFubm12UzkwOUtfTngwOU01Nmwya0RldEU0?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "General Atlantic choisit JPMorgan pour piloter son projet d'introduction en bourse, selon une source - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 17 Aug 2026 16:52:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZXhkaGVzWVpYT3VTOUlyWVlibHlYYWM1TUtSal9IeDE2OUJWSEtDWExFS2J2Nk82ZXFfdGpQcW9pV3FuZVFaZ2tva2NYWVh6M1ZoVDdHWDlqSm9uc1Q2VENlV0RPdXlQdkEyUDdJOUlVNmJDdUFUNTFVc054SklMazQyU08wajQxSVlKYmJmSGtxVjc1TjJ2b0tYQUpBTkFIMmJuWmZrcW0xbUw4ckFGMlFPb016dEFfUTFCSFVUVkk5b0pFR3ZpcDR6ZWtlb0JBR2Y4Ukcxb1pfVFhMOVYtTHJwS1B5Z28tLS1JdTg4THY?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "General Atlantic aurait choisi JPMorgan pour diriger sa nouvelle tentative d'introduction en bourse, selon une - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 16:51:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOWUl3RGNRNjdUcWJHUlFFek8yYXo1eW1LbXRrQVNMQm5zSG44Xzk0Q0dRNGhsbVIzZXZUUk9Cd2VwT2hhYldvek5yQ3BHZFQ2OFdMNlFQWUlUWGM2Ykt1ODJRM1lZVjRENWlyUktsaEVUMkNaWm9LS2RrSEVtRnEycktkRXM0NWdUcFo1ZTdnTnV4QlRwdTVpSVFoTWdtYW5uWTVhRVZQWDlndmNMYVRFSnJLejNYYzVjRkRsUGJnTTdVOGI1OTFxaVFQMnh3SjFVY3MwLWtGU19hTU0xY1hRU05Xa01NZVlwT0RKRFVPUHJtbVY0amd1LU54SWFiOHlvVHFpLWRib2kzeUFjZUpsZ1ZZYk1rTTY2U0RtTENEONIBpAJBVV95cUxNNklFUU9pMkkzR011VHVjQmZZbDdRR0ZkdEhaTExuenlYdTdoa2RWdXQxczFyRW90SE55c3Z3VHhhLVFjYkMzelAtWV92a0MxNlJzVV82c2M2Q3VCcDh4b3V2TzJZVEJlUkRobDBOTXAwWVVhNEpYZGpBb0hTa1lRLUh6dkhiUVNOZUVRM1M3dkNzRm14WWc3dFhxVmZweGR2SHRDY2NrVlVzYlNtbW8xY0IxcldxdDRoQ2FST2tnTXF2NHZmc09razQ1cWlkLWo3dFFCX1dobnJUYWcySmtoblY4OThiUDNhNE9jSS1hMGdNR1pnRFo5UmpEREFjX3RVMzY3eERLb2ZMRGxDRWRZWngtZHAyY21OUVhyTXcxc2ZFRlVI?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions des sociétés aurifères progressent grâce à la baisse du dollar et à l'apaisement des craintes liée - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 16:46:59 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPb2lSRV9UcXVCaDd1NldwWm4waHc1N1dqQTBZampMSXVNbFJNNGt2b1FSNGVvSFp2RkQ4M2RjS283dVk0RklHQ21IdkViQWtuSV9IRWtVUGIxUzFic3dMVS1HbEwxZGQ1cTZ3NVBlcU00Wlo0Z3B5MzRDa3VFMjlTa25wR1otNkhfZFJzTHdycmR3dmxXa0VrMmxyWTBQLU9hdFFYblZzZHBROVlnc1I5U056MTkzcW40Ym8wa1hHbF9DNm81cmZuMFhpUzFWSHNhNEJacTVPd0FzMW5oMGcxajZpRFI3VnF2SlBKU21Zd0d5cTdGX2RpUVFaSzJsZ2pKQjh3WlktN252aWtsakR2TW1mYU4zYXJfaG1hQW9sVUtHR01FUlA1WFJUTUdUbEdCQk1jdFpwSnFEaDl3ZXU2cHl2QdIByAJBVV95cUxQX2xHT3ZqSnl6ajVNdkI0c2NwRjJmdEtXOWVKNjB6T0RwNFFqaktNZXVIMGZqWmlQNjJuZ3dYMVdDODBUclBzc3VBejZSOGJDLVZ2WEtmOXJnSDAyajNHVVBOMi1pNnpzWjJERzlKS01YZkdfYlJNY0lybU9BOVFMWnFZSVJpLVB4bUdZYS1mOUFHYndDTmFBVzk5bF9rZ3Vrdlpzd3dsWTBxaHJHLTE4YjlhZEM0Qzg1bk15VkVQMFJ3Sk9POFFFZVl5cmJHUF94TFpDWlI1Nk9qYURNbEpHOGk4QklFSmRvMjZnVDBqNHg1MDhlVVFDLUxjazFIMHpMTzVfUGlacV9yaE1ZYTBDQ0NQYXBYZ0l5LWw0aWdDVlJaSUc2N01BTWxRT2Etb2x5Q080MmdhdG0wOW9mbVQ0SW1HVm1GX3dO?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Réduire le déficit public \"sous les 5%\", sous-indexer certaines pensions de retraite par rapport à l'inflation... Voici les premières pistes du gouvernement pour le budget 2027",
    "source": "BFM Économie",
    "date": "Mon, 17 Aug 2026 16:44:47 GMT",
@@ -276,13 +195,13 @@
    "sentiment": "negative"
   },
   {
-   "titre": "L'inflation restera durablement au-dessus de l'objectif de la Fed, selon Kristina Hooper - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 17 Aug 2026 16:31:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNeGdpdnNDYXdHNW43ekRVbzdMVUJndFN4OFBRS01NY2ItMlRlTE9QS053R3hlZGI3OVQ5NTlJNjg1Qzh2VzlJSXU2MVVteHlCZ0ZQTGtOaWlRQlhMWloyUWJFN2d5ZXk5OF83RWc5T1FpbUUyVkV2YUVwZGRuSG5MeGdyam1RQTkzMmZqanY2STZuOWcxQ3NndE14SHdIYzltQk41cGt3QnJqc09oVko0VlRuUlFvMnZpUWZmMXJ4WmkwYkYwYUJCWG1tY01fM3JrV0RFTzBPNFJDa0wwVVVhQQ?oc=5",
-   "tag": "Fed taux",
+   "titre": "La BCE craint une correction boursière liée à l’IA - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Mon, 17 Aug 2026 16:34:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeWtwYmhHbUtLTzVuS2pacUlUTHczQmU5OHJlVHhqazh4akh2SHVFUUlObGZ6RUVDa3RGYlpOYmg1dEV5T1ZwMlE4S2tQZm83NXZBcFg5S3RVUkZXLTRZSThtcWtPQWhFaDZkYzdqWDRJclFhOVdUMzdrUnk3eF92MXZnYlZoSTZndDFBcy1ZdlQ3TnRSM0hF?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
    "titre": "L'Europe entame la semaine du mauvais pied, le Moyen-Orient a pesé",
@@ -418,6 +337,33 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "\"Le budget total de la défense dépassera pour la première fois 1.000 milliards de dollars taïwanais\": face à la pression chinoise, le président de l'île va proposer des dépenses militaires records pour 2027",
+   "source": "BFM Économie",
+   "date": "Mon, 17 Aug 2026 07:40:13 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/defense/le-budget-total-de-la-defense-depassera-pour-la-premiere-fois-1-000-milliards-de-dollars-taiwanais-face-a-la-pression-chinoise-le-president-de-l-ile-va-proposer-des-depenses-militaires-records-pour-2027_AD-202608170202.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les marchés européens amorcent la semaine sans relief, « une hausse des taux de la Fed en septembre est devenue très improbable », selon Goldman Sachs, après des données décevantes - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 17 Aug 2026 07:16:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQVmc1X2VqTnRaZmZUZTJoWVNmdlRhWlVKMVZvT2IwUVhSQ2gySjZldmV3RkJxU09NOFd3VlNoQjB5MktSR1B5X1l2SVhvSGszR05zTlJkaHNqU2hjX0dsYjdpWWNhWDdUY20xZHN0Z2syMlVHamJnT1ZuYjhGYUE0MXBsRjdCbmRVeDFmSU81Ul9fT01TZGc0ZU5ES2FwVXBSTjNZSmQ2YVJZY2t6QUNEWE9wM2hjYS11MHdYVzRycGNkcXpKZkc1TS05dzlOVTl0YzZfamdpX1NaTlRGbzFBVFM4SlRzNUhnRXRCWGNnWlY1MXBOX2dYck9pcExVR3VpQzhpcEZDWDNQNGg4cm9jSFU3WDE4eDFPc2FDTXRURTMyZ1FsZWN2dVZud3dRVWJVY0J0S0JkVXRzNng5ZmJ6cnlBcjNUVTVnbGdHRTBneG9vUjh6VkpYSjY0UEhsY2ZiR0E?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris ouvre à l'équilibre, STMicroelectronics plus forte hausse",
+   "source": "ABC Bourse",
+   "date": "Mon, 17 Aug 2026 07:12:10 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-ouvre-a-l-equilibre-stmicroelectronics-plus-forte-ha_701339",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
   }
  ],
  "fiscal": [],
