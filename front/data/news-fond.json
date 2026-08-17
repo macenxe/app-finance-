@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-16T20:33:58.403Z",
+ "genere": "2026-08-17T05:45:44.597Z",
  "globales": [
   {
    "titre": "L'Europe en légère hausse en attendant de nouveaux indicateurs - Boursorama",
@@ -11,15 +11,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Crédit immobilier : faut-il emprunter dès la rentrée 2026 avant un possible coup d'arrêt ? - Capital.fr",
    "source": "Capital.fr",
    "date": "Thu, 13 Aug 2026 15:58:00 GMT",
@@ -27,6 +18,15 @@
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40 : La Bourse de Paris attendue en hausse dans des marchés plus sereins sur les taux de la Fed - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Thu, 13 Aug 2026 06:44:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPbzRUWFBHUFRhaHBnTGp1T2RlMFBXZzVPVzFIQk9tZVU4RU02bmV3bTNNTzRKQVh6UHhJWEtOc0pSVzA0c2ZTU1gyNElqRFM3SFpDb2ZkRkNoZGQ4dzRnU2RldldranhtdlJGOGIwUi1VamZXazc0NkFWclR0SFBlYUdiNEZkOG95RGRQR2M5d2JZelYzVHJNck50dnJTRVc2ck1fQVVESUE1Rm95ZWxGWFUzRFZycng3RUMtV2xXSHBqMEc5bHNINUlCSENwb0FfemNCTVNsNUV6S3FmZWJjQzZ3a2c4TUdNUHFrWWdURQ?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
   },
   {
    "titre": "Inflation conforme aux attentes aux Etats-Unis, le Cac 40 reste de marbre - Les Echos",
@@ -67,7 +67,7 @@
   {
    "titre": "L'Europe globalement stable après le record du Stoxx 600 - Les Echos",
    "source": "Les Echos",
-   "date": "Mon, 10 Aug 2026 07:21:33 GMT",
+   "date": "Mon, 10 Aug 2026 07:21:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOOG9lcGkxempVT2ZuSUJDLVRLNWhPZHhNdklCQll4Yk1oTXlla0VSZkF6WFV0dFVOS0pud2dLUGtQbmExNE16T0U1MXNlVnkyTms2aGVBc2FKY3lGVFlWdGRRYTRQT3J4dmRSWjYyTTdKSUxCSDFaanlyR1h2V1hiLXBJUGVDd1p4b2Q3UWF3dm5kMFphVGo2bzZIYlE4Y3AzU29weDZMOGhQMlMxeldmN2h5cVFCU294YlNXbmZ1NmR6MDBRaXQ4?oc=5",
    "tag": "Inflation",
    "categorie": "globale",
@@ -92,15 +92,6 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 16:35:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
   },
   {
    "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
@@ -139,6 +130,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Les Echos",
    "source": "Les Echos",
    "date": "Thu, 13 Aug 2026 07:11:53 GMT",
@@ -159,20 +159,146 @@
  ],
  "eco": [
   {
-   "titre": "La crypto peine à séduire l’Europe : La BCE révèle une adoption qui stagne à seulement 0,2 - TradingView",
+   "titre": "VEOLIA ENVIRONNEMENT : Sous les résistances, une consolidation est probable - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 05:32:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZnQ4NDNJR0NtYWFvRGJLRVhUc3dNbkU2RmF6UFdQN2ZLZkdqNWs3Wm9TeFVXR0pwT3pQT3gyZTdaeHdsakctd0lDWEN5VUp2cjNYT2o4d3ZxeUpPM3JfcEhUc0tZVWRKLXIzQlVLWVlWcGJVOE1oNUpFTm01S1VhTjlSTHVtNUxEUk5CYTE2bGdqT041OWV2eFduLUlqQjhYTDI4WmpYQmdNTGJSOTNfSnJoZElDWm5RV05wUWxIbmRaWW9LaXc2dVRaMHp0ZWV1Wll2Qm43c1dSanJSLTEzUWt2NkHSAeoBQVVfeXFMT3ZKQ09pV1QwWHV1ejM5M0kzajgySV9MaEpuQ2FnWWdMRTBnSHBnTmdaX3cwTUVXb2JPQld3aTZzY3NyNDNUWS1ySnRLalphd3VyRkh5UHBheXJlaW94Ykw1M3p3ajRZLWd6ZW1Yb042a2J1ck1EbFFDSWlvLV9sOTUteG02b3NhNG5FX1k0cm9BY3lQZ0hvWmRYTDd3aXNNNERHSng5T0VOeTBoTDFwajhHVi1FYm1hbEM3NEt6TGhmeDFnQkJyWW05STBKQ3U3cHViNUpHaXNUZHN3UlMxRHdHUkJyVjFXckZn?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'économie japonaise poursuit sa croissance, mais des faiblesses pourraient compliquer la tâche de la BoJ - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 17 Aug 2026 05:25:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXhTaEpZbGs1SXRDckw3MU1adzhleTZYOC1rRTNleVhBRTRiZlY2Z2lJRU9aMVkwT01qSDZsUnVaRF8weXl5S3J3MzJYaE1DYXlsSG8yMkYxX18xa21lQXhVNURHNzFiN0pPN2JFeHBDakp0NHUxWV9uQzFxTWZzRXdJQk9abkVzcVVTdGNRcFBDN3Ayc3BZS2JYYXJvbkhqOURrUGYxRVZDc1dBNmg3b25VNUR3MlJvMDBGbA?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'économie japonaise poursuit sa croissance, mais des faiblesses pourraient compliquer la tâche de la BoJ",
+   "source": "ABC Bourse",
+   "date": "Mon, 17 Aug 2026 05:25:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-economie-japonaise-poursuit-sa-croissance-mais-des-faiblesses-pourraient-comp_701333",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "\"Les chiffres sont plus mauvais que prévu\": le PIB du Japon progresse de 0,3% au deuxième trimestre, mais ralentit par rapport au début d'année",
+   "source": "BFM Économie",
+   "date": "Mon, 17 Aug 2026 05:23:43 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/les-chiffres-sont-plus-mauvais-que-prevu-le-pib-du-japon-progresse-de-0-3-au-deuxieme-trimestre-mais-ralentit-par-rapport-au-debut-d-annee_AD-202608170076.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Crypto : l'AMF referme la porte aux conseillers en gestion de patrimoine - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 17 Aug 2026 05:15:08 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNN2lXak9CWmI3Z0wwS18xcE5xTnF4bVp2N3hFdERIU2o5OVc1RXhGOTFVM21Ham1hQXk2Y2VJMllMSlpVbURaR0h0S3EyRkljZUgtaFhXVEtQOW9rc29nUHJiV3lpRzVwVkw0TUdNZ25TU3VIYzlNVTNNWG9QeUx1S0dvTnlfa29VdkVva0lUQ1VaNU5iQUt1YjNoU3NJMU5OX0ZHcWRNTWwybS1fX1pmUU5TT2VQQk1tUDItX2VpTQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "\"Gouvernement, ouvre les yeux\", exhorte l'un des près de 13.000 déplacés du séisme en Indonésie - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 05:14:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPVGZtUmM1RHRXQXBWaHpzRk1Pckw3ajZYWV94U0d1OVJFU25jVVQycktnenpFbzJ5OUg2ZU9HVGtuQVJKaFZOWVloVUVoRWVWVFYxT0kyN3NPWEJuTmR1YXM5OGpsZk5oODRkVVlVTkxockEtUlB5cWhZNVVCaktBNkNHcTZYYUliS0JpOWtleUIzcEVUQ2tPQmZjY1RySzVkWTBrdGtCcVZkbXVEZS1yNkFOaUVGdF81Wm5WNFJLWXZ4b19POEFtSXl4WmdtZEFCdzQ3WWF6Y2FXUzA0S0l1VG9yZk9nSG54a3ltMURVck5jZHhpQTBTOXNTMUlJX1FEeGNWRW9wNUdYSk5ZTVVNY9IBlgJBVV95cUxOYTUtbzZGRm5IXzh6cjBHMm1EQzBRbFVsUFVIcDZjQ3F2V0JYS0VDZ2RoSHJLTmlwSWhnY2ZtcXUyVVNhUWpPdDduVEZSX0hZbnBiQkRQdjM3Wk44d1dzT0E3dEVuTGNaVGltYWpWclVsTGNIRzYybzc5WXVzbzV5cnRzVEJ3VUpGOVp2dlUwcGlSQzJROU9UcnNhRHVhZ01wcjE1RjF0UGllTWY5SmJLMy12WTNXVWtsdnZLZHJfbzdVak9FMVRYQ0sxSXlOOEQybGdaNFB6ZDVDc0t3NXpoQ3VUbHYwa0ZjT3dKVEdhVXpreHVyTlBuRFB3ai1FM2ZsV20zTldYVVRkc1ZVcTl4YVBfVHVCdw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Morning Briefing : Marchés, les taux obligataires sous tension - 17/08",
+   "source": "BFM Économie",
+   "date": "Mon, 17 Aug 2026 05:14:23 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/morning-briefing-marches-les-taux-obligataires-sous-tension-17-08_EN-202608170072.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Morning Briefing : Marchés, les taux obligataires sous tension - 17/08",
+   "source": "BFM Économie",
+   "date": "Mon, 17 Aug 2026 05:14:14 GMT",
+   "lien": "https://www.bfmtv.com/economie/podcasts/morning-briefing/morning-briefing-marches-les-taux-obligataires-sous-tension-17-08_EN-202608170071.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le « nouveau pétrole » de l'IA : comment Wall Street veut donner un prix à la puissance de calcul - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 17 Aug 2026 05:00:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNRTFQVS13NDYydXhhN1ZTQlB6cy1SM3FmeWNJSGhublF4WTB4bFpfWGJkMDI5ZkZ1NzZjQkVXRGx5WjRvZi16a2VQbGdwdFg0MFVYQUF3Y1BRaldpSDBqUUtLMl9UYjdxZl9nc3Q5d1BrM3RxQ25XMGRDa1VqVWNZLWFJM2c3VGpfRElPNEQyY21jWnVnUWRUQ2YyR1NjSjNMdzVubXF2UVMxZGZoT1dNNndTMFNMVS1KX1lnQU4ydWh6MWVUZl9BcmF2UkxmcG1FOFVNbDFlV0xWZlRWQzBfZ01lSFZDSnhhSjRRZXpR?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La consommation pourrait-elle contraindre la Fed au statu quo pendant que le Japon relève ses taux - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 17 Aug 2026 04:32:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPd08wNHdwdUtaVnBHb0FMc2Z1QjJoWUdCSi1uMG1oTVQtMHFPSGlfVDNvLVNBa1E4b3FwWTJUOENMc243eTBuWUdvVHhobTJncUdycDd3ZURteTlkT3ZtTVpLbjc1LVdEMXh6dEZ5NmlTTlhSQ3pRZGN6ckNiMk5ZRGVKZTBxSG9COElBamY0ZERRSm1iNUt1N1hKa0ZVUkJCS0tneEY0UWZtU0JWb0pPUU5DOW5DYlZnSHRXbDJyLTdYSGJpV0NROWVMWlByM20walZhV1Fwd3ZZS3RzOVJmWXlxbWJEaVVXMnVJMEhXTUs?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les jeunes fuient, le chômage est plus élevé et les revenus plus faibles qu'à l'Ouest: le parti d'extrême droite AfD est le favori d'élections régionales dans l'est de l'Allemagne, malgré le scepticisme des économistes",
+   "source": "BFM Économie",
+   "date": "Mon, 17 Aug 2026 04:16:26 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/les-jeunes-fuient-le-chomage-est-plus-eleve-et-les-revenus-plus-faibles-qu-a-l-ouest-le-parti-d-extreme-droite-af-d-est-le-favori-d-elections-regionales-dans-l-est-de-l-allemagne-malgre-le-scepticisme-des-economistes_AV-202608170032.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le yen se renforce alors que les traders réduisent leurs paris sur une hausse des taux de la Fed - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 17 Aug 2026 02:49:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNZ3NMT3dfZWlwelBURUJnU2JSX1FOUG9OZkF1Q0pBZkxjTTNKZEliZnZWTGtGa0xBU2JXV1FkMmJpbnpiRTN6Q2p2SXJKMG9JZGJVZzVNVHFRR3UxN3hSYjBCeDdadG1NUzRKMVpOaDFweVRUcXBKQzdpQ09RSkRjUUhEY0N5cUhLZ2VmT2gtY3lxUlF5bW52enZ6WjJrV1UxaTRBdjJyUnJXekFFeEZFYTBfclpSNEItQjZacFU0V2o3U2JqM1pBR2lxR0RRbWc0dXpINW8zN2tmZ2VzQTlQdk9KalVqR0x0Z0NEa0Jn?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "La banque centrale des Philippines prévoit un ralentissement progressif de l'inflation, malgré des risques persistants à la hausse - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 17 Aug 2026 02:09:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPZjgzdUxBUktKb0ltS0NGSEZwV05VOEpXN0FoWERnMl9fMFhEcTQ1UHdIUFpWSlREa2s0Ym9tLUJhTnllRndiRDFUbGtuM3dPMlRNcnpRdmE0UEZQYmtLdjhhTHhZazhJRUhsbnNrMk5ST0FrdHlYZ2VZZkdNUmI5am1xdGpNRmc1dWdNcGZ0NjlwR0lUUTh1T25QQ2hjWDFOeE41Uk16cFR3MEIwN2RRSTRkcE5TaS1vRUptQkFmWFl0Zm9FSFYwRXBfUERCSVJDTldxQnJWam1DajM3SU81X0pUU29FdzBadjd5ZmZhbG92QQ?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les actions asiatiques progressent et le dollar recule alors que les marchés réévaluent les risques liés aux taux de la Fed - TradingView",
    "source": "TradingView",
-   "date": "Sun, 16 Aug 2026 18:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1VaHpfNzFsTHd5TWJZSHhnSzRic3NLZHpnYTl1MnhrR2VqYXVpMjhHdHBuWW4wVjl3UE1BNC1CSm9oa1VTTFlQMFR3b04tU3Z4Smp6dTBkUlBOcjZXQW43VUYxbWt1cElzZlV1MA?oc=5",
+   "date": "Sun, 16 Aug 2026 22:29:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4tSUZNTHRMLWhFVDZCdU5ieEJlaFlCZ2ZNQ1FhTXIyNkkxRlpjZG04bkdZRzlNRmN5b2Y1X0dONTlTT3hMTlJSN0hyWUZ1dS1sOGVmb0RWQ2ZzVV8tYnNETmkza2FvSGVkUW90NGp2TXJhcUUySmxz?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Marchés en Asie: les Bourses résistent aux inquiétudes sur l'économie américaine - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 16 Aug 2026 21:17:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40NnFLRmh5aWlPcHJyMS13UlMybk1iZTRRdEtNRmQ1MWo4OEswR0pSZnh4NHJ2bUQ0aWJJODZpS0lZelNYYjJiQW45LUIwYlo3d0JBdFQxUDVDMTJwMS1rTXZB?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Agenda Economique Zonebourse : économies asiatiques et minutes de la Fed au menu - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 16 Aug 2026 16:43:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQUNEZ3VOT1ZpZExfTmlfUTdKWXFZdUp0eHdBVDAyTnQ5dHI1RkcxUGFIZDdmWC1UcnBWNkhRbXRzNy03Tm5Rd1draDJNeUk3cjdEbjk3SVVvcFJNZV92MXQzN21td3ZFVG1qajJzbE0zV0pRZUY3aDUtR1dmbktyUzlpQUVrNWZBX1ZrNkZqdG1UMUFqbm9PeWREQlUxVk9HekV5blp3TlM4Ulk3QVlNOU9CSXhqZ0FjcHRJY0NabllYaUw1UkNZRzBYRHRfa1FKWFExcg?oc=5",
-   "tag": "Fed taux",
+   "titre": "La crypto peine à séduire l’Europe : La BCE révèle une adoption qui stagne à seulement 0,2 - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 16 Aug 2026 18:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1VaHpfNzFsTHd5TWJZSHhnSzRic3NLZHpnYTl1MnhrR2VqYXVpMjhHdHBuWW4wVjl3UE1BNC1CSm9oa1VTTFlQMFR3b04tU3Z4Smp6dTBkUlBOcjZXQW43VUYxbWt1cElzZlV1MA?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -226,24 +352,6 @@
    "source": "BFM Économie",
    "date": "Sun, 16 Aug 2026 08:13:13 GMT",
    "lien": "https://www.bfmtv.com/economie/economie-social/nous-allons-soutenir-et-pousser-l-apprentissage-le-ministre-du-travail-jean-pierre-farandou-veut-diminuer-l-inquietant-taux-de-chomage-chez-les-jeunes_AV-202608160108.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Moins de 10 centimètres d'eau dans le Rhin par endroits: face à la sécheresse, faut-il creuser plus profond dans le lit des fleuves? Le gouvernement allemand se divise sur les conséquences environnementales",
-   "source": "BFM Économie",
-   "date": "Sat, 15 Aug 2026 15:23:24 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/transports/moins-de-10-centimetres-d-eau-dans-le-rhin-par-endroits-face-a-la-secheresse-faut-il-creuser-plus-profond-dans-le-lit-des-fleuves-le-gouvernement-allemand-se-divise-sur-les-consequences-environnementales_AD-202608150212.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Des indices de la présence de pétrole découverts au large du Brésil par la compagnie pétrolière Petrobras (et ça inquiète les organisations environnementales)",
-   "source": "BFM Économie",
-   "date": "Sat, 15 Aug 2026 07:23:16 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/des-indices-de-la-presence-de-petrole-decouverts-au-large-du-bresil-par-la-compagnie-petroliere-petrobras-et-ca-inquiete-les-organisations-environnementales_AD-202608150108.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
