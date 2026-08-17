@@ -1,8 +1,8 @@
 {
- "genere": "2026-08-10",
+ "genere": "2026-08-17",
  "fonds": {
   "FR0011253624": {
-   "note": 4,
+   "note": 5,
    "risque": 4,
    "societe": "Rothschild & Co Asset Management",
    "annuels": {
@@ -54,7 +54,7 @@
    }
   },
   "LU1244893696": {
-   "note": 2,
+   "note": 3,
    "risque": 1,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "annuels": {
@@ -72,7 +72,7 @@
   },
   "LU0280435388": {
    "note": 4,
-   "risque": 2,
+   "risque": 3,
    "societe": "Pictet Asset Management (Europe) SA",
    "annuels": {
     "2008": -54.9,
@@ -190,7 +190,7 @@
   "LU1261432659": {
    "note": 4,
    "risque": 4,
-   "societe": "Fidelity (FIL Inv Mgmt (Lux) S.A.)",
+   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
     "2016": 8.2,
     "2017": 9.4,
