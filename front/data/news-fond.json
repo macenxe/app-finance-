@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-17T18:53:57.630Z",
+ "genere": "2026-08-17T19:36:17.193Z",
  "globales": [
   {
    "titre": "CAC 40 : la Bourse de Paris à l'équilibre, les doutes sur la dynamique de l'économie américaine toujours présents - Capital.fr",
@@ -85,6 +85,15 @@
  ],
  "produits": [
   {
+   "titre": "Rheinmetall décroche un contrat de plus de 500 millions d'euros auprès de la Bundeswehr - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 08:55:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPeGx1QkJjdVdyb2NNOTQwWHNuRmVDU3RFX210LTZBWkUxaHRjZHk0UUlBb19pLUJLNmdxWmF5NnNPenoyWWNlWkRyNFZpWmZzUXlQc3UxbWswRjhwekxWSDZMZWVrdDFSUlFWbTk0UE9TcG1rWHBBV1JWb21vdGc5TnhOWGtoVm5KaGtkSG91T3Byb3Z3a1MxZ25tcWRkSTJlSTRDRURSMGV6YUloQXM4a0ptajdvNVhBLTFnT19pWk1VVnJPLWo5RFZreWNUdkNhdDBFMllIdlpoTy1adk5FRnp3Tl9sblZWaUVQTF9nRUh2OWtSazVQNUQ2VnQ3QdIB_gFBVV95cUxPeGx1QkJjdVdyb2NNOTQwWHNuRmVDU3RFX210LTZBWkUxaHRjZHk0UUlBb19pLUJLNmdxWmF5NnNPenoyWWNlWkRyNFZpWmZzUXlQc3UxbWswRjhwekxWSDZMZWVrdDFSUlFWbTk0UE9TcG1rWHBBV1JWb21vdGc5TnhOWGtoVm5KaGtkSG91T3Byb3Z3a1MxZ25tcWRkSTJlSTRDRURSMGV6YUloQXM4a0ptajdvNVhBLTFnT19pWk1VVnJPLWo5RFZreWNUdkNhdDBFMllIdlpoTy1adk5FRnp3Tl9sblZWaUVQTF9nRUh2OWtSazVQNUQ2VnQ3QQ?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Bourse : Stellantis s'agite, ArgenX communique et PayPal fait monter les enchères - Zonebourse",
    "source": "Zonebourse",
    "date": "Mon, 17 Aug 2026 06:23:31 GMT",
@@ -98,15 +107,6 @@
    "source": "BFM Bourse",
    "date": "Sat, 15 Aug 2026 05:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -150,13 +150,22 @@
  ],
  "eco": [
   {
-   "titre": "Piper Sandler attribue à Dave la note « surpondérer » en raison de ses perspectives de croissance - Boursorama",
+   "titre": "Le taux français à 10 ans dépasse 4% pour la première fois depuis 2009 - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 18:07:43 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNYktScTBDUWV6blFiZk1lZWc2NXRDWlcyMTVSNDhvb0I5enlRWXlNaWZnODl2QmRvcDRPYWt0Y011T0VBN1Y2SVZvbmNLLXhpUGMtZ08xRmRnTDJ5X255NzBoTDJvSnhkdGRXeGxXa050OWxYNGhQUTlyYkRSaDVFc3kwcVhqazRGZkdCckEwX0RzU1RIa3Z3bmlmRUlveG1DcFA5VWt5VU9KRG1mSUJsS1pFTnNjUi1xRXJ2SUdlbUpCYlIwUmJRMHB4c1gtRWpHNEx3b0thaVUySjdvcHBXd3g0cTB0NS1EV3lkQ19aRERhOGZzekUtYTVmdE15eU1V0gGGAkFVX3lxTE9kSnFhVS0yT180NW1TMF9uMWIxdlZqSk5MT3hTTjJkaUg1RjlHQjVVTXVJQk1iQXJ2T3FRMllITDhnTUZtbEhMVFp0cGJWVGxjYk1lazZuaWU5bUNVTHQwTU9aQ2RuSnk5eG13YlY0V3hVTXdKTlkyUlFSeWVtSmFvR0g0bHhQQ3Q4d0VQYVo1VVNEc3VYcWpHMHdMQUNGYlBkUTdCbjMzSkdQeUx6TmZjSkthM242NGc0ckwzeDdYU1llWnB5YTBJYnpSWGg5T29sZFZVU1J3RzRKOWxIWS1lcGx2Z1NuLVlvX2d2c2txUnVBRzNhYlNNenRobzVZTXVJMWE3YlE?oc=5",
+   "date": "Mon, 17 Aug 2026 19:21:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOM1VZeVJUampxYzJaQjZoRDBRR3g2RzF3TlZNei1SX3A0bjZ3VFVQS0RjaTdUWjZ1XzNnNlVrVTlxeXBZVTFjUExtTWd6RUJYLUNXT3JqbkVGWXZBYmJmWldDMUJGZVIwTEtVcWFGTzZoaWpzMHhoemEwZlc1ZmlyQy1LclAtNjQyQ0hQUVE5SU1xSHREYW1PMUU0MVZ3bWpSTXBiT3ZIN3pCR1o1b2FEX3VLd2dRUnlXT2pWMHBtbnhLVXdicC1ISU0tNTJiQ3UweTh2czRGN3JnZzdOZm9KctIB5gFBVV95cUxPeDdqSkxGLXN0RVh0M3NMcnF2b1BDMkl4TTlPc2ZiMU9SSkdHS0cxX055UzRxNXhzRkZ4WTFqSldtYUdkRWNQYmRTX2FzTGduQkl6d004bU1SLTlpSno4dWE1RlcySUpqRDFXVmwyRVl0Z29ZNlIzMGt0WXFuaWdOREM5VEFkRXdaYnRTUzRiQ0NLQzhJWEVXVGJfRFNabzNZeVhzOV9uX3h2UUdXTVh3ZTFJdzNCTVBwS2tZM21TelRzcnRqNXlOcFU2U2dreGFIRDZNUXlMbi1tMHljOXR5dmp0MW40dw?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Les indices de Wall Street reculent alors que l'Iran et les résultats du secteur de la distribution sont au ce - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 18:59:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQUkFxcWFYUWtpUTZrdmktSjh1QkxyQklyMlJxYXZacm9DdFhwVXpuU0JOczlEYzVFSHhKLVdYNVFHUWxNbmVsaldoaF9oN01SLUNBTC02dXF2eWItSXYyVTF0bXhWTkxWVGltWGxXZ0t5MVNNMVJIWWZMUW9sY05oekJUT0ctckJhQTlwTm5wWjdheFBVSzJNSXEwZ3ItWXdhYWZWdmk0SEpGOEQwUV9Pd2JNbjJpLTBiSm5vamNENktsVTJITlFaUXFULXBFLUdpMHI4cWN0MDR3XzZwaFlNMHhMYjdGNGxtaHU1VjQ5QmVlX3l5blpVMl9Md3JXYzJic3lvcnBfeTNZanFzOXdXa2cxMHZFbjBmZmpXY0VqTTlrcTNRM3BGN0dMOXZsdFVi0gG2AkFVX3lxTE1kT2FYLXVOanE5V3hfUmk0ZHU5T3dNM0wtWWRaREN5R3U0Vm10c0RUbmstRU5EX2c3TVJVRlBpTFVfVjIyS1RrdVpBS01VUW1ZQXBzWkhyTkVVZ1VxajY2M2ZVbGZ4dEJzWGprUl9tRnlHSTFzTXFOS1BnQ01pRFRrWnRwM2sxUk1KTk9KTTdmUmFvamVyaFMwSEp5ZFlPRlliRmw2eU13Vm1TRThWQXZlM2d2TWctM1V0ZnRhS3Z6eGtucF9ScjVyZnhhUU13Y2xVOFRyT01FTEoxcGdsb1V0OHAzV3RyaC1tTTk4aDBhcWM3UFlZZGpMVmNMOU56RWhvSDhYcmNZSmtRUWlxTzBsb253Z1lDYkxHeWpNX1Y2RzV1YXdyZnZoVU9zcWN0d2RWWTMtQVE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "Le bitcoin dans le vert lundi, les craintes de hausse des taux s'apaisent",
@@ -247,6 +256,15 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Le TSX recule légèrement, les investisseurs digèrent une inflation plus forte que prévu - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 17 Aug 2026 14:41:45 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQTnVyTEstbjlMYWIyVEtqSDFOVXRrdmNXWnBNcXlQT2lmRzRDUkZrUTNTVUZKVW12Mk9peWhheUpqeXNMS1Q5QXo0RUhqbjlzQzFKcTFsX014alNSdkZ0OHVudkU0YlZfUS1UVTJaREFqNm1lWTRfRjhocTFrVXNGVEktR1NpemJ1ODNheUNZQndmR1JLUFN1c2ltcV9reUhlOXVIb05iNEZrQ091ZEpmekRodnFKVXczWXRuTnBVRVBfeVMtemsxUVF5aFM1bkF4ODJ6NFZ4VnZPeERHNXlpNQ?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "Après une phase d'hypercroissance, le marché du crowdfunding s'est retourné: le tribunal de commerce de Bordeaux place la plateforme de financement participatif Tudigo en redressement judiciaire",
@@ -346,15 +364,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Les marchés européens amorcent la semaine sans relief, « une hausse des taux de la Fed en septembre est devenue très improbable », selon Goldman Sachs, après des données décevantes - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 17 Aug 2026 07:16:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQVmc1X2VqTnRaZmZUZTJoWVNmdlRhWlVKMVZvT2IwUVhSQ2gySjZldmV3RkJxU09NOFd3VlNoQjB5MktSR1B5X1l2SVhvSGszR05zTlJkaHNqU2hjX0dsYjdpWWNhWDdUY20xZHN0Z2syMlVHamJnT1ZuYjhGYUE0MXBsRjdCbmRVeDFmSU81Ul9fT01TZGc0ZU5ES2FwVXBSTjNZSmQ2YVJZY2t6QUNEWE9wM2hjYS11MHdYVzRycGNkcXpKZkc1TS05dzlOVTl0YzZfamdpX1NaTlRGbzFBVFM4SlRzNUhnRXRCWGNnWlY1MXBOX2dYck9pcExVR3VpQzhpcEZDWDNQNGg4cm9jSFU3WDE4eDFPc2FDTXRURTMyZ1FsZWN2dVZud3dRVWJVY0J0S0JkVXRzNng5ZmJ6cnlBcjNUVTVnbGdHRTBneG9vUjh6VkpYSjY0UEhsY2ZiR0E?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "CAC 40: La Bourse de Paris ouvre à l'équilibre, STMicroelectronics plus forte hausse",
