@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-18T13:53:53.435Z",
+ "genere": "2026-08-18T14:47:40.376Z",
  "globales": [
-  {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Tue, 18 Aug 2026 12:48:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
-   "tag": "Obligataire",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
   {
    "titre": "CAC 40 : la Bourse de Paris à l'équilibre, les doutes sur la dynamique de l'économie américaine toujours présents - Capital.fr",
    "source": "Capital.fr",
@@ -85,8 +76,8 @@
  ],
  "produits": [
   {
-   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:58:31 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
    "tag": "CAC 40",
@@ -139,8 +130,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
+   "source": "Les Echos",
    "date": "Fri, 14 Aug 2026 16:35:09 GMT",
    "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
    "tag": "CAC 40",
@@ -159,76 +150,76 @@
  ],
  "eco": [
   {
-   "titre": "La Bourse de Toronto ouvre en baisse, plombée par les valeurs technologiques ; les rendements obligataires progressent face aux incertitudes au Moyen-Orient - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 18 Aug 2026 13:42:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbGhrOWJlNzhhZkRXMXNGVlg4RmNWX0tWc2c4VU56R0FsMDRsWWlicUo2U0FRZVY0UzJseUoyVVdpclJkS2hhcEVDVjk1blI1ZjFxeDRQYmlJeFI4dUFvR2QwWFRZdk9RcTlDRFo0V3d1dzFHNmdaSTV6d1dkQThZcHo2dTgzbXgzVEc2SnNSRkxIdWNjN3ZBM2VNMkJFSkJ2V1F2dmJKR0ttcWdheWlhLTl2Qy13bkhMNjJrLTdwbk4wcm5KQUs4aFZ0NGZWaV92VkQzV2VCcUJFOUtVTF8xTjVXdG1GTFQ4WEhFdGVR?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Wall Street ouvre dans le rouge, l'obligataire sous pression - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:42:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQXzVXeVVkVkRwa253TGpQZDJRTE1STE1jTHpaY180SzhFbHZzVmx2cTdiaEdOaEE5dkdLc3g2M0pZNFd6X3RHdm5vamlTUFlJX0lpU01ISHhBREw0R1EtUV9wc1VvZE1RY3VYaVRkb18tX2N3aFQzcHZULWNkVWxrY0EwZkNlLXdhVnNaNGNhWTZqUkxGR0JQVUdEVGFaN01jZG82OWN3VW4yQjZEcUQyamJDbmJUcHIwOThjTmNsUzFLdkNQWlFHR0FjU3dac19sbVlj0gHYAUFVX3lxTE5ZN1V3MFpkZjNXd1FYaGhBeU9NWFVaUl8zSDlqQ1U2VFlGVHg4dWpDNF9XR3U0a01NaXZVZzROQy1jc3JpcUhBMlNibEVtcHpCeXJSWV8taHk0NmVFbExRYlAxYVp5cGtpcVBYczlIVU9sdUhlQ2VackgyQ253cE9oZ3JtOGZ0Y2JuZ0c4ckJ4RjJyc01hQ2I5N1lBaHlYdDhRWEo5VnAxbmNFSDhvRlhjVllxTGlyWUMwc245TG5kc2xSanotWW9NVnhVZVpWM3RVNDZOUUdxbw?oc=5",
+   "date": "Tue, 18 Aug 2026 14:22:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUVBCcWVUc2o5Q3RfV0U1UTdZNzNDYWlSdWtOUkdhbkVXYndrSllNS2E2elRHSFlhSDVQMEhYc0t1ZUk1amIzMFAzdXp1c2tuN1kyeWlteFRuUzRmLXpHUDd1aFg4MXFfaHBCeGs2SmhsbEVRTkxLSzk2M1dhbURKRFQ1Mk1hbUZYN0kwZWsycERfTXV6Ti1NTGRTTTJhX3BlSkhQQllrQ3VMV243ZUpDQ0pIUjQ2aHUxZnNPOVVSMEcyV04zR3RqZjRGbW1ydHFNNlhv0gHYAUFVX3lxTE1ZNmtYR0xjSWFibkdZLWVUWFVHTHNhTnh3Rm40ZzU5bllPUzVtM1Z2MVJwRTdOSERoMWFua2hKOEZ6ZWVOTXViSmJaU3hnRnQxQjEzNnZ3bXhnWnJGMzBDb3EzbV9EQXc5TFdRbi1GRnJNc3RQeEJlOE5mS1JUMDJfeHBWM3U3S3MtdldrVDk4aDJTdWlQczJVZERRVzVzVXlsaVhhUTVMUGhPVWlpVDB1b0NSR1dKNmNQN29pZUMxMU43ZTdQc25qRklET19PVUF1eGUzLUJLeg?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Wall Street ouvre en baisse, crispée par la hausse du pétrole et des taux obligataires - Boursorama",
+   "titre": "MÉDIAS-QTS, soutenue par Blackstone, lance une émission obligataire destinée aux centres de données à un coût - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:39:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNHF4d0M5bzQtdF8wWVlmMWlNR3pMdml4LXZvbkExcklfNnhvZS1DU1dLaFJhaWVjS2ZQSWRsbFRORmF3Rm5zVTZrSHEzUmtFWTYzY1hNUDVxcl8wZWpRSWRJa1NTWkR4THJZb3YzTzlOc3ZoV1VTNlFZc1RidEJqLU5BRnd0bkRfeS1xV2RBYUVfSUdscFF0SWJvNzUxY2t2YlRYdUIwNXBmcTRjWFp0dDcwd2JvMlBMbFNSZ1RjZ1VaX2h3RFB6YmJVVFMyeWFDTFhVLUZKV2VNaTVzT3NPdXV3a0lWTnNtYkN5T2RrTlpHZExsQlHSAfsBQVVfeXFMT1FTSTF2UHJaSVNfVXViSDVvdW5vcFRwdnhhMmFLMGk5RzI0X09BOEs3LUVOOUQ1eVdjQ0EyeWVLNTdaWm8wTkwyTjh3WGZ0U3BteWFFaGVEaHVUUWlmbkxfZnVhbDJjclFVLTBaS0ZDZTBCNGwxRzUxTkJnVzdZUFpGTDJWdUMtQWtGeXd3ZDV5eWRFS0l6Vi0zN2YzY3JDMlhSeWZLc1RPVDlwNlFCWll4LURpbzhJbVkyNGs2NElJRUE3eWozUnZVQWlvZnVvMHM3VEFOZkJSdHNDWFdIREFlV0lOZ1N4Y2dra2tocDhjRkIxc0c0UXZWNE0?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Michelin recule, AlphaValue reste à réduire - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:20:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNS0FzN0dPYmZCUGdFNkJ1d2g5dnZWckEwQ2F3VE43QVZKbjVqSHo5bWs5Wk4yeVZKYmpQWGtoWEthZGhELV82T0tORVkwZ0lhdVVaU2UzNjRaQTVxQUVZX0xRdmQ2V0lQdm1rT3VyZXltbnlxSGJxaWtxb0dFUXUwVFlaX3ZocGxlMktJWHhlQU5zOXJITUdDLXdpbF9jUm5jTlNwRTB1S1hXUHdjRjJQREpyQnloRFBKbG5JUtIBwgFBVV95cUxOZ3ZCSHdDWTFSTUhDSHNLRkVoWmI2dDdHNWo3MnBNbVhOWXVUZi1Mb2xYSTY1QlNycUllRUF0dXNxTzd4ZFRHQzdnYzYtNFJwZ1FPaXpMTFhZZldmbkJqT2tJS1poMTJKbEpHTHR4Y0dRb1JWWTBNdUM1SjNObjZfaTdfQkpzWGNpUlZSdDVtMTJZV2hKclBkZFNHQjlZQzFEVGxSY2RJY3daRmZjMVpPME1TQnFDeXh5cjEwam4wOUZGZw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Dette publique : le taux d'emprunt de la France frise les niveaux de 2008, en pleine crise financière - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:12:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNMTg5YUhMd0pxQlFtMWs5WU9yQW5haURwUEs1LVVEdG5zYW1QQV8xT1duTWIwTXN5YXQyYjdybTBtNTlLOUN4SHFTRjEzUUg2T3FUTVNnMUlTXzNPc1A3cmpGZENULXdjSERlWDVMaWtSN2h0SF9TYzd0bEpKSzFIY3dkRVlKYUp0bFF4d08zYTZoWHFlZ090WHdVVmIyZHE5cjU1S0p1azQyZDJvWWltc09HTXhiQVF5OUZaMTNrRUhjU25nM1FGQ0JRNTBVeE9ocWtpMzE4Z3J3d0xOYlRaSHRidWxVNmpfV2YwZDA0anJaOHMta3JaTEVPeXlUVjVtTExJUHctLUJhamktaERxZzkyRDZBTDh0U1HSAZ8CQVVfeXFMUGNicXJHeUx6enVTLVRaNmtpRS1oTWJpWG1YTF9tS1E5cHRGWklDTnZZT3NIUkh2MjFsTzRnU3dVSlJsdkNkOXZzakVsbF9WWmwxbVpDeS0zV3hMREZYMGg5Vkt4TDVVQmVXeUFzWDg0cXhMNTZMY05MSDI0czRMWXdwR3l6cmpLak52Y0JEVmVWX0FnRThxV0xpS0FNSl9rY0FyVURVSU1vamxzSllUQmNBV3h3VWJsc0JqZjNLLUxOWHJOV1RSSkFvSUtOTmFJb3NOaE5BLVdrSEZ1clJieHBjUThLVUw0ZVlwc0NPM18yOXRyUkxHTXpJUW5HcVZVQ2l1ZlBaUkx3a3RMakFBT3I3eV9tQUozOHJ6QXVGOHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "LES MARCHÉS BOURSIERS AMÉRICAINS EN PLEINE ÉVOLUTION-EyePoint Inc, Amer Sports, Pliant Therapeutics - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:07:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOZWM5MkZnZUNQUDdueENYbGVQMk5WTmNaMHpfdHY4TjI0STByR0ZYdkJVWVJ0a01fZ2ZTcFVlckw2dENBRkZwbDJQdlBRTDJmTWF1azNFVmhmQXl4Z3NMaWZDbzMwRUhhbzdMV0F2M2lBWVVvcUN3YWpSdjJZVmRsN3Y3cHhETUhUZkl2bjJybU5BbXgtbDBiZl9jcmtmVDYtRHJmSEZlNS1aUlV1ZkRLZUNvcVI3U0FydHZWRkRUS3RsOXhMWlNDLXU5SHBPU054aUtkakNuU3NmMWNNTnlSX1R0VFFaREZTVXN5dTlXVFBLWW5qbEE2RFIzX1F6OFR2RElObkRR0gGLAkFVX3lxTE9sWkxtYUI4TU03ZjVSSmdGQS1HLTVWaUhTa0ZMUEM4eXVMeW5vdW5YaGJtbU1pUlBDTFozdVc5Yk9Sb3ZhVVFwQ2w2R2J6NVBma01KWnRtRmpjOElteWUxNGsxTW5neTdfYjJnTE5aR0tpemRkY1QxSnE0SmtfQ2NjRmNtVXgzNUZJYmR4czZlMURzaHNFOUdVZ2tfUGl5d1ZLTzBxX3l4cmxhbjVyXzFtSUlTajdRSHdJQW9OUm5jSUtveFhsQzRndnZUbHlOSUVtem5rNkRRN1ZTbm1haENfRmtOZlFnWWM4azBXUHNJQWIyVUJiaUMxT1EtVkNuaWd4SkNoMFFidGZLMA?oc=5",
+   "date": "Tue, 18 Aug 2026 14:19:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirwJBVV95cUxON0dNUjJPMXZORUVOcnpOcjlUcy1JdG56eGg1S3N1TkhxcUQ1OFppcko3Zl96MmNRdDJJR1d2dUE3ZG4ydmN0MHQzRU0xZHpEd2FMenJoVldMUXpMbmViNnFqb1QxU2RIQlpUZDVDZTdwOWMybHIyNFhkc0Y1WmY5azRoM0wta29RQ0lfcVgwTDNmV3REX2w0QjJValBDZW5hWUo2YVcwU1FYSXhQTFdndUQ2WGlGZUtRRGJJSVhsVnNFUGF4ZTVsNVJ5cHdKNjIzY0NMQVpKQWlHeV9WWmcxaVhjZ1JwaXlKUkVLaHRuNmUxbk5KNEhzZnF1NXdEa2RkUVYxTFpiMlBhYmJYYW1CU2tmUkpwTFpvQW1ISEFWYUZZZGJ2X19kby1ZZEJGcXfSAbQCQVVfeXFMTTNPMllDbHVNVE16bzM4b2FwbFE5M2JVRHd5V0RTWi1BYjNWeXdGUEdjR1hkeDZWMlpMYS11QV9oQXRxal82X0ZTSWVVdnJZR0lHd2c1alBFdzFwcld3bjZsQUNxa1B1TktvRVRKRHVWY0M1Ny1nbnVJeXhHZ2RTODlhcWxWRnN4dFJOOUVjaXg2ai1mM1hoN01XSGdCRWxLRVJfcGQxT0llTnJrUHdhRUhCQjRsZTJLdTQ0NzkwTXFsUUhESDdlNXlDTnJhT0tXektPWjJudU1OMjVRaGVIWDdsR3hqUEFKUjZfT0k2Nm1oenhqNnRNTTZxSS0yUWppcWFiWTE5Sms0c0NSdVU0ZjJWRTU5VndVSGplVXVTQ2hkR1RObnd2ZU51RGd5bGZLdElDSS0?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "ROI-La chute de la demande privée étrangère pourrait attiser la dégringolade des obligations américaines : McG - Boursorama",
+   "titre": "Pourquoi le marché actions stresse quand le marché obligataire se réveille - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 13:01:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQdWZmT1lpeXFXQTdtS2NDdkk3X2xDMklPekczcjRxU21DeXl6RkphNy1qVkxwU2ljRl9PZWZmZzYxbS04dHgwc2xBcDJXTUJaWUlocEhrRnB6ZU9SQWpDdFp0NzU2NW5pVlRENTN2VDVINGgweFNVNEFuMk5VeGE4WG9KSms0cWEyMDNBeDMzUHNYbi0tMkV1WWFOTDFoRVdFYUdrSC1yOUhyS1YtWVJsZG1zdDdhWjhaOWl6elM4ODJoUHlnMWxfXy1idWc1SUQ0U2RMSGVrd3B6MkUyM2ZGQkdGNlFQUmh1RWFMbDNCRkdLbkJhUE5ieGxkRWpKWGNMeXFHQ1ZyZnBwT2NJZDczd0luQkV4aWhGSF9r0gGgAkFVX3lxTFAycE5KSE9aTHBTa3Z2MlU0RERmeFJZclBBWi1USEtoek9WdXRFQndVTGVMbFc2dHZsMC1ZVzRpUU4zYnRlbHRJSUxmUXZSazBnWEZld0JTT3BzRlcxWXBBTVhMa0syTk4xWE9fdUl4RXhzTllKUDVHeHo4UlRaTWFubE92b0ppemZmOUVLeVBKVkZZTjRVZUo4eGJxWEVkaXJBRUhyOEhlT0dReXQ4cUFCUmZzME13Ulk3YUwzdW5Sald6ZWpFcG1mN2QyUGRiTVB3Z2x0NUxOY2pXS3llWUxFZW5wclFjWlR4Rms0MGZQeUxXU0hYbEV1UXFjTlVXX3JJTVphVXpHb29vUmhabWxCU2E0Z3dYS2VBLXI5RVpSUw?oc=5",
+   "date": "Tue, 18 Aug 2026 14:16:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPaHNDYlBsd2dlUFBMTWJBZEtIakZnR0tjaUNvMWpuWEZBMDZneDg5b1NEa2ZDc3RacElHdnJqN0FMY2VoaXdJTlMtQUxDWkkwVnl4VUs4bUgyRHF4Mmllb192cDdNOXBmY3FwRmowX1J4OWN5TG42VTNQaFVRenZRb2hWc2s5M0lnb0xFSUJZcm1mbmNJcTdOMWhVMmtYOUNOc21NdkJzaFBPMUVHek8wR0p4Ri1hZV9wUGNncHo2cFBhb0V3cVpLaXlVUWpXak4yblpBUG1nQmlmcXh5UTVjbWNyc2xUUjTSAewBQVVfeXFMT3NvSHd0Y3ZVWUh0djZCN0hSZ2NhamdDbjJ4amxFOThkdlFLdGgxSzROaHVpdS12VXhPMEVKSFV3SlNESnFhSmR6MUdFN2x4UzRlNjV3OFl2cnZCclQ0QWtKdFFjMzRDVzB0SU9CM0I4WHJ3N3l3RXllZjBsN2l1dDlZSVNFMFJjZTJHdzhyQzJDdHdHOHpRYk8yc0pCc3o2alhTX3M3cnVJOTVSaFFhZWk4R1V4cGUweWR1R3pXTFlWemVFTktiRVI1SmhLcy1tZVhmSm5udkhNQkhPbUVhOHM1ZC1hT1NGbWt6aDc?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Tensions au Moyen-Orient : les marchés financiers au bout du rouleau - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Tue, 18 Aug 2026 13:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMXJkNllNVzNiNmFLdlIwVjM3VGRVaEVvX2V1ODlULXIwMlRVUFRDd1dSTXRkQXdsTmxtbml2ekhyN3lCcWR4WjM3UkV5ZGMyR3NydGdFTmZ0UVRSeXdMTG9OQTg0Q1RrdUxGaUo4VlVsZmYwRGhveUZwRTlHS2l6NU5zemg0c2ZoNUNqUzVpVFNLemRwV3Axa2JZSkc2TnZ0azN3QVVfSTcyb0NX?oc=5",
-   "tag": "marchés financiers",
+   "titre": "Wall Street s'inquiète de la remontée des taux d'emprunt et ouvre en baisse - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 14:15:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdzhtVlBjZEZJbFdyNFJxWUhISkZ2ZkVkR1dlR0ZOR2dBd2k1SFJvcW9YZ3NGMU45V2JUa1RfYU52cDhKcEJMMW9hUmxMMTN5RTJOSkktMXhMU1hnNWlNLTlpakZ2R21GT1VaUFdOS0FBVEtSdk12OElJejhlRTkxQ1B4elNvRUw4Mm1aa2J6TWJYczVyYVRzQzNnbFJXZXo2RUx0aFAweHl4VURjZUV0dEpISGxTNGM?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Wall Street s'inquiète de la remontée des taux d'emprunt et ouvre en baisse",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 14:15:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/wall-street-s-inquiete-de-la-remontee-des-taux-d-emprunt-et-ouvre-en-baisse_701389",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street s'inquiète de la remontée des taux d'emprunt et ouvre en baisse",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 14:10:12 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-s-inquiete-de-la-remontee-des-taux-d-emprunt-et-ouvre-en-baisse_701388",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 18 Aug 2026 14:08:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "TMX : Le Groupe TMX conclut l’acquisition de RAFI Indices auprès de Research Affiliates - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 18 Aug 2026 13:52:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOSnZGdFZIb2VRdVdvYm9wMnZtZ3ExdURVallFelJYQmF6RUhmaVJQQW1vSlpyM25qSXVPYXUwY1d4OTBWRlRycUptMFZvZ3ZieFV4RXZnTVdfeWtaREpxWlZIN2QyRGxubi1tcXdaZjBacHFnVHZMX1FGOXM3VWJndS1aSTdZYTdESEtOS1A5Vkh4eHFvVG9COHdUZ1JNcGxGQkIwRWFuT2tocGROREFnOXZuZUNjYlBvSkhmNWhJNEVDNmN4eWh5N293Z3lzczVMYXpXM2p1SndMNS0xUVFsbg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Les États-Unis n'avaient plus emprunté aussi cher depuis juin 2007: les taux à long terme s'envolent et les marchés s'inquiètent",
@@ -294,8 +285,8 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Les rendements obligataires de long terme à des plus hauts de près de 20 ans, un signal d'alarme pour les Bourses mondiales - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Les rendements obligataires de long terme à des plus hauts de près de 20 ans, un signal d'alarme pour les Bourses mondiales - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 08:46:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQNDU1Q2pyREZHVDk1RmFNb3ZZNGtrT01GQUhhMkQyRW92SEJCX0x4aW5pcEdaWmZsTGJNd0hOVkhDWWNQSGVUOG8yTFJXUGdrdXphOWhmWV9LT3VycS1mcDRHbGxxTkVCc2J2MVVuVzhGYlZGNHVmSk5qaHBNcmRrTTRvWE53MndNTE9YbVo5YlNwTlgxTTJMcWV0QmttNmR4QUtpa2FYOVJFTG1zOG9QcVBtaXFiY3pCQWF0eTZlQWZQTVcwelFXdVBJYzlNV29HRjg3VHhuOE9aVDV1ZnVCVXYxX2Z4U1JtaGZkTnVnN3E5ZGZYcGVfeVZCRVd6VVZmbnBiWU9EZ0RqVzFReEk1YXdrZVpPUQ?oc=5",
    "tag": "BCE taux",
@@ -339,10 +330,10 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Japon : les rendements obligataires frôlent les 3 % sur fond d'inflation et d'inquiétudes budgétaires - Zonebourse",
-   "source": "Zonebourse",
+   "titre": "Japon : les rendements obligataires frôlent les 3 % sur fond d'inflation et d'inquiétudes budgétaires - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Tue, 18 Aug 2026 07:46:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRTdsRUo4dlM1RTMxLU5WbmxBeVQxVzVEeFdtN2JJMWpZdGNkbWxCUVU4cGotSi0wNGZVSzY3dlUyb0hMaUF4ZkxnMkY3c1dMcVhhWjFTdVhkSDVoOHdZVkpEb3RFY09jaHVhMGZEamhpQ2NySmRyQlU1REE1VjN1eVpxT2RTWHlMNHJxa2pMMEdhNXc3T1A2b2xpd3JGeFF2VUlabjRuRVRUb3NlV1VaUFZuN1Jab0hyVGZOS1Mxa3Y0TFEwOU9GbFFneXpSalFsQ1BfLXRqYXBodmdXVE05ZFp1UzhXRDhaZERvYVdB?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPN2JqQTJDeWVmVUdlNXRHWWp5WEFBa1JaNW9qYktlaUxzb2VVV1A0QnhxbUhJQWxHRkhXRk9PUzgwVklTYldwTG5aaHF3NERVb1dDTUxGS0xOU2drQ3JvdDB5WUFGeEd6WTlKdlZwWlJfdUQxcE9zX2NhQ0NhdEVlUFhYOTJUOGEwOThLUGE1RzBQVG9VSkt4MzJtUHRMVnpmd3V6Y2RpVExYRkZlUW1qMVkzSHp0czdIMk5zcldock5vcktidzlXX0thSWpVZTdlS2hxQ1RxaVJOaDNlN2c0Q1ItUlRIZW5RY1pSLQ?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
@@ -402,15 +393,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "CAC 40: La Bourse de Paris attendue en baisse, Trump durcit le ton et fait grimper le pétrole",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 06:49:52 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-attendue-en-baisse-trump-durcit-le-ton-et-fait-grimp_701370",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Meta accusé de rendre les jeunes accros",
    "source": "BFM Économie",
    "date": "Tue, 18 Aug 2026 06:28:31 GMT",
@@ -425,6 +407,15 @@
    "date": "Tue, 18 Aug 2026 06:23:20 GMT",
    "lien": "https://www.bfmtv.com/economie/international/je-vais-le-garder-dans-un-coffret-il-sent-si-bon-le-petrole-detecte-au-large-de-l-amazonie-un-passeport-pour-l-avenir-selon-le-president-bresilien-lula_AD-202608180112.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ROI-Les hausses de taux sont peut-être un outil peu précis, mais c'est tout ce dont dispose la Fed pour freine - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 23:31:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPRzdMSU45TmV0VV9JV2x6YU5QODhicllneFpUd0E2amUxd2dmcnVJNTA3QnhveXZ5azhVTE10bW93R0tzVGl2X2xkYl9LUEFidHVBQk00TTk4LUFBa2xBaHFVbFF0VFhuT2lGcUxIc3M1SFdkOVJtaUo0blViVHFzbV82NnozNEFLcU9zRUMzLWFuTmdyQnVvSmlLYk82dFVXQVZZMjVMYS1KVWxSdFpTcVptcTFOcHgwamFnRU5SSElKVUZzWXVuanAxdU9WWWI0TDVQR09WMW9Gb3B3VThFOWpjZUdSWHJSM2ZXemYyZXNBOTIzUmdGZkxDcW9TTDNRNUhvTmdZbjJScTFkdGdKUXR3Z1d2V19PUldzX2YyamVKT2FmdEw0Vkt5Q3lWNlVUMFAzckpDeC3SAbgCQVVfeXFMT0c3TElOOU5ldFVfSVdsemFOUDg4YnJZZ3haVHdBNmplMXdnZnJ1STUwN0J4b3l2eWs4VUxNdG1vd0dLc1Rpdl9sZGJfS1BBYnR1QUJNNE05OC1BQWtsQWhxVWxRdFRYbk9pRnFMSHNzNUhXZDlSbWlKNG5VYlRxc21fNjZ6MzRBS3FPc0VDMy1hbk5nckJ1b0ppS2JPNnRVV0FWWTI1TGEtSlVsUnRaU3FabXExTnB4MGphZ0VOUkhJSlVGc1l1bmpwMXVPVlliNEw1UEdPVjFvRm9wd1U4RTlqY2VHUlhyUjNmV3pmMmVzQTkyM1JnRmZMQ3FvU0wzUTVIb05nWW4yUnExZHRnSlF0d2dXdldfT1JXc19mMmplSk9hZnRMNFZLeUN5VjZVVDBQM3JKQ3gt?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   }
