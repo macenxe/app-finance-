@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-18T19:35:34.387Z",
+ "genere": "2026-08-18T20:35:47.435Z",
  "globales": [
   {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
@@ -150,22 +150,67 @@
  ],
  "eco": [
   {
-   "titre": "Le FMI estime que l'Europe sacrifie 3% de PIB faute d'un marché financier intégré - Boursorama",
+   "titre": "USA: Wall Street finit dans le rouge, les craintes sur les taux pèsent sur les technologiques",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 20:28:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-dans-le-rouge-les-craintes-sur-les-taux-pesent-sur-les-t_701398",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le dollar stagne face aux anticipations d'une posture accommodante de la Fed - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 18 Aug 2026 20:24:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRVBEOGczc0tJTTY1YVc5OURwZVEtM0xnQWdTdG1SV1ZuYXVRN3F0WVl0Y0pHMG1FTnVaYjNVTkl1NkpxT1BFZ2NuX3FmVDhNbUxxc0tJOUZMY1FYSkJJWG5SMDNTZmdJX0xoMGJVSUxPWU5TNXBPMnJ1b0l3N25wZzlaUUdyanNqdWw0RTA5QWpsNzI2eWZlN3Y3UUJzdFJrVEczRnBUQkU1RkN3WENOOXFJd21kV1V0aE9zOXg1Tmlwck1CZnlmd3V2M3VyQ1ZaOVE?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Devises : le FOREX figé en attendant les 'minutes' de la FED - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 18 Aug 2026 20:03:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS00xVTZJdVVBbzdud1pmMUd2WVRQU1lsNEV6OWRhZXZrLU5uVW9qSUZ1UHlEN0ptTVJDNUJDbzlZVzJiOXpha05sWWJSRDJRLW9iYUdtdzhjT0FwalRXRm9OWnM4TFpRMUFSVlhPWHhZMjFKWHpGRnVicWVWRTVTcVpEUlF2TE90bnpRempDQkw5cm9aemFwMnZBSHpVbUFyc1JrWlVpVTE1M3p2SzVhTU5YQWsyNmlm?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La chute des valeurs technologiques pèse sur Wall Street alors que les rendements obligataires progressent - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 19:09:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQaXVESzNrblFIYzFTQmpiak40UjhSZ3NFbHhDa3NqQ1cwRzFRWVJkeDN6ekRJa2VkYkR3bkw3cDg1enVSbThOZzhyc2ZtMG1OMWZ6RElCengxRnpaTjV0X0VaMEozbUhqRnpVSjZXejBsNzBaNFhXQm5EMkZMQjducTRrSW5oTG1yMjlGWnRoSzlYblBFSmZCNEJnVzdiVmJBUnhZR3prdm5ib09MeUN3V0lHdS1FWEsxcXJBZ3hYSEt2VVBZaUowZUNyWTlGdy1JZUhsUDdqSUxRUEp1OW45b01FWWhzZmVxWk9pbXEtWdIB9AFBVV95cUxPT1ZkX2lqeDQ4YVBwM2ZaS2hSRGl4Tm16R08wcWJPNlpubmd2RHROc19GM2N5cEZxQjY5Z3lVYV9SQW1XVndKZU1URW81R2tLMXhob2V6UDF4ckpIdzg3NDU3cFExbERJTUNGaWhkMUZwWjE1OXVOcURrZmZoSDEwYWhITUVkNkwxNEUxbkJXZl9tV1FQV3RSdUROLWxPMmVmMHlfUEJYLWVqeVhmaGp2a09kcVVwa1dpdlVEeGo2UFZuSG1aLVdlZXczdmJ5NTZOR0hISUJ0RHRGRndhVDJwUzNBdl8teEtrMW13N3hkMThwUm1S?oc=5",
+   "date": "Tue, 18 Aug 2026 20:02:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNMU9WVFVfelJyWEFuOE0xcGRCOW5jUXNndS1wdEVwTlA0MG5pN2dNcENvVTdUcU5xNEI4THBfam05alFBalh3a242UC12Y0lqOWRoY3UwNFJod1Nkd1RaQURiY2tQV3lPc1ZkM0FYdmc5OHowY0RNbWR2UnRZZUV1ZnRzODIteXI5N2t6SjNTYmVMVnhEdnhUWTVoSHE3b1Y4LW40cG5zWGdWM0ZkVDVEQjVMWFAyWXBqZ0FSQ0xRaWhJb1B1cVUySkNTdkdRcDQ5cFlTN05fQzctbGtsN1h5cHFMR2g5anp5Q0VxUFJPOGVib01wRzhXVmt0dkJpQTM5YUhmUTRkdUdZUENHTi1Zbk9R0gGXAkFVX3lxTE91OXVQQXNDazRxU19GczBVUS1BX2RYYmtjUmNjbzlHOW1JS3IyUUJGbEI4bWhQSWpHTWdhUl9PZVNtZkhMRlJ4YXVtUjdqZ1h4X1JlamlackwtakdhVTJxdlR3RWpwbXNXTVREbldiaF9sOHBiQWdEek1TZGJRM0ZTUFhYcE9CVWotajZWc19wUUsyRTlJMkltcEY3elJkS0JHNloxTXBNMUJhbUUtbXlSYkVydjF1VEt4bUhpZFFaQWFBbDlZQU1MR21VWWl4WTBVWjA3N2dNVGtsZHllcGFIdzBucUlYRmlMano3RUI4czc3RjRrYndNM3ZIWWdrTmdqR3NkdElNbVRybm1tUS0yNmxLYUd1NA?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Devises : le FOREX figé en attendant les 'minutes' de la FED - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 20:01:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdzB5QWNfQlVWUEdUZGd3QjZDeDVuczJoa3JVcnhQS3lDYzFmMGhsQ2g1OWd0YV9xQnVISFc5Y2VVcjNzMUY0V2dPZVc3T0dWNVpxSHJsS0p3VE5WcE5NMnN5SWNodVhqT2xvN21oTzUwbjA2cGlWMW4yRHluZGtIdEg4Q2hKbllSaEZfMkJQRDFXN2NNd3E4c1BybV9IUWN6SFNvNWpkZVJmLUhVN0NqMXVzVmMweDd5TXVXRU1BYklHeldVb1BBaGphVDFGbzTSAdQBQVVfeXFMUGw5eFFnV1ZLcWVMNVdkQmVySUY1S3N3RzVHRDlfblduMjdJaHhwdFl3LVJoVjgwU3hiUTZxUS1yMmlxMDVDVlVxY29iZWkxUFVXWXFGalhzVW1uN3hiMWFXYkNfeTd1NDhKU1VqTG9tVTNyaWRfZTcyZjBKUDdoZm9RZkpDaDhBci1lNTlmT3dkbVBBSzRadVFMM0stVU9IX1JlQVFMS1BJVFlxTE5yVHBXd1RNVzU0bW5tQ2NWVm83eWpMTmlreVFIMDZ2bGpvWGcwVTg?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés obligataires mondiaux mettent les gouvernements en garde contre les risques budgétaires et inflati - Boursorama",
+   "titre": "Meta rejette les accusations selon lesquelles elle aurait cherché à rendre les enfants dépendants, alors que s - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 19:02:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQUEVQb3RucWs3bWttNTdnaU5VcGNiSE93UDJHN1dqV1N1UnU2NWpLVktzWVZTMzdkTUlPa3hha3hNZXVPNHRpc1FHalc1ZV9XaDh4aERWbVRmdlNNcWphaWxaUVg3ZnVTNlMzY0MyNlczV0h3WVJIUUNyTVBGU1d1eXY1V0o0Y0IwajR2V3JYZFBZNmgzamlpSnUxcGVIRkJYWGU0NkVOUEV1dElRNk1fVEN4eUtfRW05VloyQldPZTVOZHhxQjM4NHk3enRRUlM5U1dCcG5JN3ZvZFVoTWNYdzRNeGM1aHpNeHAxYVoyWFJVd0NlaUNVd1BVdlVuemVUWFNyUGdRUVhPeEZpLVdaVkV6LUtZTU4tNlNQMEI2RUVKd9IBpwJBVV95cUxPVW00T01MOU5qeDVzeXhoUkpwQmlFeklSV3lET0dTNUxSTVo2aFM5aWtxUk5Cc3hXZjZSRVJIMGgtZ0dsU0x4QXQ3Q09VTHBWSHpmN2ZIaDBPTlZxcVFpc3dwYlVyaUZ1LUxkV3FEWlpkV3ZrM0ZBVEZiWFJVZlJ3dXBxekpYM3VKWEt6cXFvNFpUNVBudnFzbVRtQURmZkE4MUJybW41X2xERzVURlM3RnNxT0tVb0FwZEpBdlZkSXVkRVVBSzhMNi1qN1lnODFkNUo3Y0F4aXdlNk9BR01UQVA0UThDR2JJV0o0ZEtncmlxeUdBUDRyNWZYUXVaak5qU1dfQ3JNYlVBNlQxY1ZKWXNMWFkwMkZ2eTZoWHhtVjBoaUIzcVcw?oc=5",
-   "tag": "bourse",
+   "date": "Tue, 18 Aug 2026 19:54:52 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiugJBVV95cUxNZ2Rfd1N4QmQyWmRmcXY4OHdBbUhBd1dmNWxmNmVZMTFPelFnS0Fhbk9Canc3dlg1cEs0XzFZNHkzQ0dZRXNnY2NMWlNORjBQWjlPLWhRRVlsV0xYQVZLcVhDLXEtWDNTWm9Wb0QyNFZPR0ladTFhLXVFRG5TT2dIa1lobU5sNXJLdlE5T3V0Z2MxR2VnUXVkNkM1czFVSHFvUU9oUmxVT0wyaFpmMzg0alNmY2hNV0k3aUtlcFZfY2VWejZkQ0psVzFYY3ZXeDFoTWt3bDJBT2tHV0QzNEdGRVpXU2NOTmMwSXBsSGFmeVI3VlFFV0ZMYXV5ai1IRW8wUUF5clgtUGctTUk4X0lCTk5yZ29DZmtjRU9aTzZwVXUxVVAwTjFsOG5XNEx1Wk9iaE9wS2lJQ0hYd9IBvwJBVV95cUxOakRhTlhsWGgzdVp3c1NETWY5QjZodHNRblV1S2Nha19CblVyZ1ZsQk01OHRiWGVnSDVQSUVXdDBQaW5zcktYZEdLZ1FkcHFMRVdQT1NualFoSHpQd050MVdaRktJcUFha1pvVXA3SndrUXJYOUpwbng3XzhYWUNPM3RNY0RLRWM3Qjdqd0prdnJQOHYyWEtldXp0WnFZM1oteVhnNjBvUjBpMkx1cWo0SVV2MmpnM2VzZHlVQ1M0NUMzckpXUW5aQWQxOF84MWZOQzYtaE83dmJlM3Y2SlFoYktUWnRXNFQ3Zks1RDY5anpRVFdWemJPRUFoLTk5VEFndEJUOHBzMXotempBeVc1U3FIZER6VGN2eWwxQ2gycFRTSmNMT2Q2TW1TY1hpZVRmRWxQRmdUV2hZN1c3cEJR?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le dollar impassible face à l'impasse diplomatique au Moyen-Orient - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 18 Aug 2026 19:19:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBZMWFUWTd5amV0bzdRZm1QRU9BM0xFbE92WElGZVNUZEVVVERleTJtZk9meG9VdnZVTWtoeU4wTWVCdG9VZm96cWhjdkI5bk1xd2NYVXVtcmw0VkN2OHdVa2Vn?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "On refait la séance : Taux obligataires, la hausse est mondiale – 18/08",
@@ -249,15 +294,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'indice des services de la Fed de New York recule plus que prévu en août - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Tue, 18 Aug 2026 12:46:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNc21IMzVxMkY1ZDMxcGV1N3RzWEVDUFJaTGVEZlpZOHpSX24wMGlKTTVveDhaZGh4MmRqSnllX0hJbEtCY3VZLUwydDZram1TTlpud0xIRW45SXFhYlgwdHdaenA0dFljV3E1T0NGQzhnM1BEeDRDQ1h3X3huM084TU1aeWhVcWJZdENaTk51UWN0Q2F6NUFlaUhnZFNGSmZiMnJCMlhuUGtGLU5tX2JtOVd0UzdnYkVuZE5LM1QzUU9zRm9lMVhCX1lSckx2cmc?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Les États-Unis n'avaient plus emprunté aussi cher depuis juin 2007: les taux à long terme s'envolent et les marchés s'inquiètent",
    "source": "BFM Économie",
    "date": "Tue, 18 Aug 2026 12:35:00 GMT",
@@ -339,15 +375,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Stellantis rappelle près d’un million de véhicules dans le monde pour un risque de dysfonctionnement des caméras de recul",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 08:05:06 GMT",
-   "lien": "https://www.abcbourse.com/marches/stellantis-rappelle-pres-dun-million-de-vehicules-dans-le-monde-pour-un-risque_701376",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "En portefeuille : Schneider Electric, GEA Group et Infineon - 18/08",
    "source": "BFM Économie",
    "date": "Tue, 18 Aug 2026 07:32:11 GMT",
@@ -380,24 +407,6 @@
    "date": "Tue, 18 Aug 2026 07:04:21 GMT",
    "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/le-club-de-la-bourse-les-taux-longs-retrouvent-leurs-plus-hauts-18-08_EN-202608180164.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Royaume-Uni : l'inflation des produits alimentaires poursuit son ralentissement, selon Worldpanel - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 18 Aug 2026 07:04:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOenRnbl9aLXlYejN0LWdaQmhhX1VXbnJpVXdxOGM0akdicW1venhGN2lVdW5jT1doVndnVGpTTmNGUVVrUElYYXZrUllOOHgzX3lBTllsSHU4Rm4zZWNtWGFvWkE1WGhmVnRIbDhiMTBFemV3V3Q3NVFrakFjM2RyZXJQeC1BaWh6QS1fQVFLNlVmTVdwV01hNXAwZWsteExxcHFNSmVMX09aYk9yQy1Cc0hlc2xoWDBGcnBORUlYVEFZVzdISGY2MzF4cC1pamxicWN6bTVxNjV0MUpxS1dFVUtTMVN2dG1rQVE?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "ROI-Les hausses de taux sont peut-être un outil peu précis, mais c'est tout ce dont dispose la Fed pour freine - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 23:31:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPRzdMSU45TmV0VV9JV2x6YU5QODhicllneFpUd0E2amUxd2dmcnVJNTA3QnhveXZ5azhVTE10bW93R0tzVGl2X2xkYl9LUEFidHVBQk00TTk4LUFBa2xBaHFVbFF0VFhuT2lGcUxIc3M1SFdkOVJtaUo0blViVHFzbV82NnozNEFLcU9zRUMzLWFuTmdyQnVvSmlLYk82dFVXQVZZMjVMYS1KVWxSdFpTcVptcTFOcHgwamFnRU5SSElKVUZzWXVuanAxdU9WWWI0TDVQR09WMW9Gb3B3VThFOWpjZUdSWHJSM2ZXemYyZXNBOTIzUmdGZkxDcW9TTDNRNUhvTmdZbjJScTFkdGdKUXR3Z1d2V19PUldzX2YyamVKT2FmdEw0Vkt5Q3lWNlVUMFAzckpDeC3SAbgCQVVfeXFMT0c3TElOOU5ldFVfSVdsemFOUDg4YnJZZ3haVHdBNmplMXdnZnJ1STUwN0J4b3l2eWs4VUxNdG1vd0dLc1Rpdl9sZGJfS1BBYnR1QUJNNE05OC1BQWtsQWhxVWxRdFRYbk9pRnFMSHNzNUhXZDlSbWlKNG5VYlRxc21fNjZ6MzRBS3FPc0VDMy1hbk5nckJ1b0ppS2JPNnRVV0FWWTI1TGEtSlVsUnRaU3FabXExTnB4MGphZ0VOUkhJSlVGc1l1bmpwMXVPVlliNEw1UEdPVjFvRm9wd1U4RTlqY2VHUlhyUjNmV3pmMmVzQTkyM1JnRmZMQ3FvU0wzUTVIb05nWW4yUnExZHRnSlF0d2dXdldfT1JXc19mMmplSk9hZnRMNFZLeUN5VjZVVDBQM3JKQ3gt?oc=5",
-   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   }
