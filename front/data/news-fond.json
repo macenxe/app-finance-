@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-18T15:41:49.404Z",
+ "genere": "2026-08-18T16:44:53.812Z",
  "globales": [
-  {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 18 Aug 2026 12:48:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
-   "tag": "Obligataire",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
   {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
    "source": "BFM Bourse",
@@ -27,6 +18,15 @@
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 14 Aug 2026 16:35:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
   },
   {
    "titre": "La BCE va-t-elle relever ses taux d’intérêt en 2026, puis les abaisser en 2027 ? - Morningstar",
@@ -94,6 +94,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.19% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 18 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTzFlMGJYWS1kMmYtcDhFU1Y0YXhrMVhib2VTTHRsUExVUzlNNGJ4LVp6aUJ2MU92a09sWFd6X3JHNU1MTDRoN1BCSmUwcmRYdm1WcnFlalA4ajBBY1pTeXAyOUFjeG1vVXNoZ1JHU3RtaWFoQ2Y4MVpwdTRlNWxkR0RNTE5JN0l2eFVQMzlnNGtwblFrdmhFNFp1Mzd3QTkxdVUteEpOWmNESndLOUVUZHJqa2s1UV9scW81NGN5SFJBd2hIZzVUdGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Bourse : Stellantis en chute libre, Intel rêve à nouveau de DRAM, le cuivre dope BHP - Zonebourse",
    "source": "Zonebourse",
    "date": "Tue, 18 Aug 2026 06:21:38 GMT",
@@ -107,15 +116,6 @@
    "source": "Boursorama",
    "date": "Mon, 17 Aug 2026 08:28:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaWFtRklVaGw2aWc5RUhubWh1U2ExRlJUNUw5c2lBTEd1RVFSOGhDOF9ENjF2TGF3VWZRN1NIUXlHOVpSWHZtbzNNcEtPQXZJV2xkYzQwR0hHaDVpX3dVSl96SnctYXVnZHVlS2poRUcxcXVHaHVHSHdnTG1pY3UwcjV5c2ZLRURLUUd6Y0I5b25jbk1UT3ptZHFnREJQeG9PeEw5Tlp6WVJIRXdMUlItQXNmWmhxMmZHSDExQzU1Mk0wWnV5WVJ3Rmk5Nk9BYmdz0gHWAUFVX3lxTE5qRW43MC1QM2lSRXExSTN1V0tZNFp0UnlIYWRMb0ZxRlJDQ2V0MF9tcktlbzZJa3l6V1VVMHJJX0JWMFo1X2hlVHVPV1ZTbllTQmZMSjRndV9XRThmNExwNjlyVVZ4MERDQ3FyRlBueDY0bXhSOFRxN0VXVHMydFNvN1F0WUhzYjV6dGNzdEZLSUtkSmJCQTBaQl80eklfNTA4cFlvenA2SWdxVnU4Vk5qRW16ZUhCX3J0LUNvODJHak1TdEpKZy11Tk1tc2t1Wl9OM3Y2Q3c?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.09% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 17 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONEo1U0Y4WGhENy1EbGZNU3I2XzZCZjhCY3FIYmdyS1BGandTdEdZYzlLMDN5bnNacFZtQlN5QjZ2djllelhwVURpY1ExVlktZ1FUcHVCYjJrYWFodXJRNVFOczR0NXk3dTZPaklMdDRkb3ZNUzRwa0I4QTJOTmQzLV8zRWJySEZBMDZWWS1WRTVyckI0SWNqbTYycW51d3NZSV9rN05qYzEtWUFJUldoOVVzVEpjTHMtVzVIZFd2Q09McTBMTW5lcE5R?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
@@ -139,15 +139,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les records du Cac 40 suivis de prises de bénéfices - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 16:35:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUROTlZCcU1JdGtwZTJGTHFwR0R3ZVJqU01Vd0s2eDFYNGxRQ0daS2NVNm9lZ3A0bDhiNmZyR2hieDF0M211R2xuOVhKemoyOU9SaGRTNE5SU0ZkOWZSSjdLU090YWc3LXlqQURvb1VZQU4zb0paMGNGNVVUZk9ReUowWFZmakd1SmhVaTNieDNKazQ0WDExSHVORG9wN1MyNG1EUURzOXRQZ0lrRjMtTjFFOThYT1E1Y3l2UVc5MA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Bourse : Renault, Stellantis, Tesla, BYD… Faut-il investir sur les actions de l’auto, parfois bradées ? Quel potentiel - Capital.fr",
    "source": "Capital.fr",
    "date": "Wed, 12 Aug 2026 17:00:00 GMT",
@@ -159,37 +150,100 @@
  ],
  "eco": [
   {
-   "titre": "Foot: Patrick Vieira nommé pour relancer le Sénégal - Boursorama",
+   "titre": "Ouverture du procès Meta qui pourrait remodeler Facebook et Instagram - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 15:14:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZlFLci1FZzAyU0x4NmtqdTNkZm40ZU1fcjl0ZGtwXzdIZVltcjZ4cE4yeFpVenFtMUJGWDlGT2hvako2OWdubEwwN0Q3dzZfeXhoTnFGOXNHUnoxdUNnamUzOXRTUkQ3enZsaFNGbG95bTg4NHZ2ZTdjRGxFd0l3S1V3Ql81MjlsSGVpLU92bGFvRm9OSm81RkNGT0NlZ0ZyR1MyMjI5Wnc3TE9hT2FZNVUyUzQwaEdyMGFDVFZEV0lDOXZIcHJlNC1WSFlqWnJJRkZpdlBIUV9fd9IB3wFBVV95cUxPSGd5d2NxRGNLTkJucVo4TWZQLTUyb1pxcXh6YzdxQ1BBWTdFSDlnUTZUZXkxNUl2RnhHT0FNekt2ckpWMjBRaVFCdXRyT2dWYTE3MnZ4LWxXLXZoWTFjT1pNUWc5VUFGVDZTTmNHTHl1ekhXUUUtYllLSUlLc2RhdVItSmpXVFAwRVp4M0VXakFfZXFkOWlZZ0YxakNiNWNGSURJQkpURDZxVE96ZnBiTi1pWE1mY3JvZll2ZWU5RElrdGRDS0FUWURUQ0pPbDA2NzBrNzcwWW53TFVIa3o4?oc=5",
+   "date": "Tue, 18 Aug 2026 16:17:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWkMzS00xWkVDS1lCREVIdFFnRFJsQTYtbzFzV2dKSWdrdkJ4MlYtR2J1UUJVVVFpZnJfVEd0djQ1WHdkSWF3a3kwRTV6YzFWTHpjTHQ2YTczU1padkoyUVVfeTJTek5vSE1xOHZZRjNmY1lnNG1MSnFGMzYzdkFXY3lGN0xuQ3FKQm4xR0NySkpnYmZLUXhXQ1kyUU5CeDFRdEJMUE00cGptYW93WWQ1LU1PbWhEb1ltR3hKZEFadjVVLWI3RzFwMkdoQkVzdXlLd21VS0lWMmlaMVpISnExNNIB5gFBVV95cUxNV3F3YXAxM0F2Um0tSFVJb1VORHRNbTAybFBlSlRIMUE0WEh1SGgwSXIxZl9pV0JxTXZvZDgxazVFSkJRUHZkdmxKeHAtOHd2TGNRcHUzYlhtRUlpX3hSSXlVWWN1Uk9hM1ZCdmlKZE4tbWNYWXAxaFpha0ZnbzlsOHdrb25qRE9BaGs1U1dkS0VlQnFCdUdJSWlRU1ZlTGwxWURsNTRSanZCbHNJNTNIWW9velhVVklRdE9UdHNUVTY5QzBDU1JtalpaR2NkLTdDY2hjX2pPQzExZC13ZFk0RWhWTzhBdw?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Blackstone et Blue Owl sollicitent le marché obligataire - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Tue, 18 Aug 2026 15:11:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNWx3U3FOUVBFcVZvTWRBeWRCbkt0cktCbktwa0ZzdUtkam1mYkwzYzZWb1QtcWtJd1FMd0JMbWlyTy11NnNNZTdybGM3cndsbmlkeHFQLUk0NG1Eay03RzZGWm84Wl9DSzB6Q2pLUXM0QlVmQkxKZ1g0bXZTa1Q5dXVpZUdaMlNuV0FuYzNiU2RfOXZtaGNYSkl3ZGpxREJvMFljNm9uSEVoaHBvbjBvbXc0LW5FUE1Y?oc=5",
-   "tag": "bourse",
+   "titre": "Meta en baisse ; début d'un procès historique qui pourrait redéfinir Instagram et Facebook - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 16:14:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQZFNZVWlwMDFHWWhENmVNNzZkb2FCSkFjMFNuR2pNLXM4Vkx4ZEJaYkM3SENhaGxYYU1fWEtpOTk2eU9GQUozQXJmcTVpcnZMaUkzNl8yRjFPclc1NkxfUldwUFBmZ0xGb0dUcVBwdnJYdEpHbVZLY0szd1AzOFNvdDZGY2ZZVDVmdHZPMld2bDR6RWVLWVhVb2RNN25FelhOZzRwdGlzR0VSaUZRTFN6dTZOZVJtcWZtS0NRcFhmYjFFSG83bmhid2JqbnhlY1FXSTloVEFqQ2NwSHpZT1NHY3BTWXVxMEc0cHZST2VRcHhOVU1XTC1OYXR30gH_AUFVX3lxTFBkbkZkajRRMFc4bnlrQUxKQnJiYzRIb05XZUpCZU5aM28wVVBRRFFrbTZrU2h6UGxaWE5rMy1YSmRzTUlJeDNxemtYSWlrWVlaZ1dEcGdKQmd6Q0hfbnA3VlVrWHFCeGhCeG1yN3AxUjdlM3Z3cGprY2hWSXFmQV92OEhTbDFOTGlXQUtyMWRpVjFHY2hkN2I4blVvcGN3bXFaSVMzSE5wNVFyZTZ6VTNkQjRTQ3FSNmdpajZ6LTlFcjZKT0RIeXo5RlZKV01iczM5d3pzQWdiSWdkQTQxS0YzNjVHMU1lM2Z4MHlobVBaYVJFRDRrdWRDaW9HaUJZaw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "On refait la séance : Taux obligataires, la hausse est mondiale – 18/08",
+   "source": "BFM Économie",
+   "date": "Tue, 18 Aug 2026 16:07:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-taux-obligataires-la-hausse-est-mondiale-18-08_EN-202608180452.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "On refait la séance : Taux obligataires, la hausse est mondiale - 18/08",
+   "source": "BFM Économie",
+   "date": "Tue, 18 Aug 2026 16:05:32 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-taux-obligataires-la-hausse-est-mondiale-18-08_VN-202608180460.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe finit dans le rouge, prise en étau entre Moyen-Orient et hausse des taux longs",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 16:04:36 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-finit-dans-le-rouge-prise-en-etau-entre-moyen-orient-et-hausse-des-tau_701394",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe clôt dans le rouge, pénalisée par le Moyen-Orient et l'obligataire - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 16:03:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOR0JneUdOdmowbXZ1UEFMb2tOUU9xRGcyTFk2MkF1djZCOHgzd3lZa0JCR3g3clc3VnE5b0xKSFFMS094WXlEYVFCakJBVmI3S1RxVHFaVFNlQ29CZWdxajJuRXNvSm94dFFteTJrMm54cG5JNndZZXo1M05JQWNUYkFSQ0VJT0t2a0JzaEZGVG1VTk16S3lwdEJiOFdRclVSS3J2bUVsN3p5cjQ0Q0UzWFZNNExvcFYtS3g2d3pPbFFwTkhFZ21mU1JtTDZTMVJDcUl6RGdIY3NQODI4X29aZDNzdnNKVDjSAewBQVVfeXFMT20zcUtVZG92WXRVVnBaZDZwRjU1M0VtaHpCdXJZVGQyRDRQclpqV21jZ091M09rcDVINnE1ZjRmdWQ5aF9Qckg1c20wVmRUdUFMeEJwRjlCeFdjalpZQ1d2eDRMd2hUMUFCTmNvcWh3UWJIMGhtX3l2Q25GSmMteDFnV2FyX0RDTk5RV0M3RHNkRXFxMlhGWmtpSG5Jd05QalBYRkJHMmdsQ1ZZbWE0bWhqSW5La3NrdWlKZnJjRVRLVkhyZDEyT19uTkZtQklKYmgzemUxMzRMNHp2bTZyajZKdWlLSGMtNWpHeHI?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "La Bourse de Toronto recule, plombée par les mines et la hausse des rendements obligataires sur fond d'incertitudes au Moyen-Orient - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 18 Aug 2026 14:54:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNNS13QmRETi1od1luY1B0WkU1RFNSUkRBX2RoQll3SEFaTkFjUXhTMkRHUmpzQTU0NEtHZG1zeEJFdHEyaVdjLVdEamFGY1NHZGNzT2ZWNklSYkdzN1QtNHE5bVBVaklSZ3E4LWRSMUxGM3Nnay13RkcxeTYyenBRbWFCdG44Rm4wZ0VsM0lvdXV4b2RRLWt6TFNfOVhOVWlzRWNSOW1qMnN6SEdaSzEyNUdRN1VKSmo0TTNSNXBDaUNHSW9jUFQxaE1JaktXZ0hkR2hoWUpmUmJWOVAxZmdwdzduYnZHd2E2enpWNjBveXE?oc=5",
+   "titre": "Apple modifie les frais applicables aux boutiques d'applications alternatives dans l'UE - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 16:00:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWXJmMHZwUFUwMWFFY1BnV1lTZk5OS1VLZE5ZMzZsT3ptc29jN2pZUUtxMDBOODAxUjZUTk9FWTVRRnVlTURnRjFrclRiS3Qya2JkVlZsY1N6STJ4clBTV011ZU5xRlI4bDJfekoza05FU1gtZUZvVVlGZVhmZ0lUam95Q1h2ejJDdU1qa3FnNEJlaWQ1aDFGTEQ5ZjdQZzlPNTAtQ0ZJbUVMdDRzSXN0RVZxSEZaVEhDdG9Ccm9qUG5OX29DeTFXWEVDTHJwTlpUR0J0ekNWUl9POXBiUDlvRnBQRmxoWkxERzA0OGN2bXZYY1FiSmtpSNIB_gFBVV95cUxOM3Y4LVZvZVVSa1p5bjRhbHFROFVZNnI2bXEtbmZiZTBFTmFQY2tpSXcwZWo0VEZWWHBrZlp1dFVYaTJIdzJQUXNWc3N5MTNlREhla2E4RXNrR0h0aDk1UnJqRzJSX21aNzBrV3RUX2s3UWFHZjIyT2FVNjhETEYzM1F5bXEyX21mazhSSEoxVlY0b1B4OEtaZC1XWk44Y1BlR2NtSzNFaDZ3ZXZ6UDNLSjRDWnJuSUZLN1k4VVRQU0hqMmpsb0dIUDVzZXFKRkRsV1Vjcno0Ymk4Z0t5RmpxcldTSXFZREc1WlJDQ2pYbndfUXMxNW9nQUIxMWJSQQ?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40 : La Bourse de Paris finit dans le rouge après de nouvelles tensions sur les taux - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 18 Aug 2026 15:51:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQVTlaTnBLNG9SU2JtZWpSWDFvaU5EemNnRm9wZVdrRlVZOEM0V3E0Y0pqRW1mV29DQ05sYldUckFkendHRUk3WkwxNnhiazNWVzh5eWI0NjZOZXgzai13VUZjSXBKX0pRYWtRR2U3Y3dDZDREOXFpeTdBYXBCTDZyR1FZNWI5UVNIa3pxbHkwX0phVi1kdXF2OUFSWFg5bWhidFNkLWJyMnVsblRZekZycWJLZDdGTHY3czlIZzNXd3pMbGk0alJEanlBOTRlTmJFSy1mNzhhcDZFTUQyNzVTeQ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "QTS, soutenu par Blackstone, lance une émission obligataire pour financer la construction de centres de données - Zonebourse Suisse",
+   "titre": "Bourse de Francfort : Le Dax sous pression face à la remontée des rendements obligataires et des cours du pétrole - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Tue, 18 Aug 2026 14:43:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMXRRVFpvX1dHb1FGempsb0pPYUhocGowYlh6eDRsR0tNX3plQXNxTjBmRTZ3VE5MeE9tMTdmd0lzOTBqN0FERklheDlaU3B1NFozemM3dGU1QVhtaXp2Wi0yaUFqVWtZbm04Yi1qOW9pS0puLWlLY0g1Tlp1b1p0VkJ1NlA2bnp3UHNSdXRZaDU0TkFIUmEzNEZ5aUVnaVhTWDZ5QnA4TVdpanE1RTlQQnR5U3I2WUFDdUpyTXJXTno5SUZrNGxfWmZvVS0zY05NbEttSlpWd01EMTUyYUZ1ZjE1UkRTTklQaUlrUEhQcw?oc=5",
+   "date": "Tue, 18 Aug 2026 15:51:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQdkhSX093UTVWcHRfbXJRYVJMLWhNVi1SMWdLR084aWFaaWFxZzVwMlhDM3psWFZ2alQ4MkdUQnZzZ1FQWHczc0VBWXlIZHp6REtoU2hHWVNyZjVpTENmV0ZIcVNSRmE0enJGLVJYMkExdV9RWTdpMUx1ZE9IeTJXQW1ReXg2NkxCenAycjZsUlo4cmtyd25WMUI4d3J3MmhwVUc0aFhhd0tOSXJTdU83RG8xdkdpUlJPTnB0NGowUmV0LXpzMWhoQTNwdUtDakNSZTZNSEE0MjdwR29TeFllczM0UjJiTWgyQkxQb0lJcw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris finit dans le rouge après de nouvelles tensions sur les taux",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 15:50:59 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-dans-le-rouge-apres-de-nouvelles-tensions-sur-l_701392",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "STMicroelectronics et Schneider Electric, plus fortes baisses d'un Cac 40 qui aligne une sixième séance dans le rouge - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 18 Aug 2026 15:48:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOSmFHdFYxMG1vUVhvdUpzLWU2ZzJ2dlI0bG1SeVRWUUI1V2NVSjJqX1hzNDQxTi1CeW1ZRWtTdW53bGs3NU5TVmJxVUVfanFTd2pHeDVjUnI1OWZnNXF2QVZ0VHVQbkJYeEQ3NnBqalRRaGw4ekVBWDJJVkVxakV5aEFodTYtOXg3QjhNVEVfLVMtRkpYZlltRnhiamk4bUJaSmNZc19zSmh0R29wQnB0ZWdQSUJpRWZxZjhMVmpic0dFSV9ZYzFqeEtuelU3emhWZzZVRGMxa0J0MTBnUlVwVE45TEZQbENpZWM1NXBJcl9DOHlWQklRenBBUTFNUVlXNUhCOHgzbV9BWDlFbG03UjA3cUE?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -312,15 +366,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Hermès: RBC Abaisse son objectif de cours à 1700 euros",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 08:02:33 GMT",
-   "lien": "https://www.abcbourse.com/marches/hermes-rbc-abaisse-son-objectif-de-cours-a-1700-euros_701375",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Japon : les rendements obligataires frôlent les 3 % sur fond d'inflation et d'inquiétudes budgétaires - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Tue, 18 Aug 2026 07:46:25 GMT",
@@ -348,15 +393,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40: La Bourse de Paris en léger recul, inquiète des tensions au Moyen-Orient",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 07:17:10 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-en-leger-recul-inquiete-des-tensions-au-moyen-orient_701372",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Le club de la Bourse : Encore des plus hauts pour les taux longs - 18/08",
    "source": "BFM Économie",
    "date": "Tue, 18 Aug 2026 07:04:55 GMT",
@@ -379,33 +415,6 @@
    "source": "Zonebourse Suisse",
    "date": "Tue, 18 Aug 2026 07:04:09 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOenRnbl9aLXlYejN0LWdaQmhhX1VXbnJpVXdxOGM0akdicW1venhGN2lVdW5jT1doVndnVGpTTmNGUVVrUElYYXZrUllOOHgzX3lBTllsSHU4Rm4zZWNtWGFvWkE1WGhmVnRIbDhiMTBFemV3V3Q3NVFrakFjM2RyZXJQeC1BaWh6QS1fQVFLNlVmTVdwV01hNXAwZWsteExxcHFNSmVMX09aYk9yQy1Cc0hlc2xoWDBGcnBORUlYVEFZVzdISGY2MzF4cC1pamxicWN6bTVxNjV0MUpxS1dFVUtTMVN2dG1rQVE?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Meta accusé de rendre les jeunes accros",
-   "source": "BFM Économie",
-   "date": "Tue, 18 Aug 2026 06:28:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/video-meta-accuse-de-rendre-les-jeunes-accros_VN-202608180125.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ROI-Les hausses de taux sont peut-être un outil peu précis, mais c'est tout ce dont dispose la Fed pour freine - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 23:31:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPRzdMSU45TmV0VV9JV2x6YU5QODhicllneFpUd0E2amUxd2dmcnVJNTA3QnhveXZ5azhVTE10bW93R0tzVGl2X2xkYl9LUEFidHVBQk00TTk4LUFBa2xBaHFVbFF0VFhuT2lGcUxIc3M1SFdkOVJtaUo0blViVHFzbV82NnozNEFLcU9zRUMzLWFuTmdyQnVvSmlLYk82dFVXQVZZMjVMYS1KVWxSdFpTcVptcTFOcHgwamFnRU5SSElKVUZzWXVuanAxdU9WWWI0TDVQR09WMW9Gb3B3VThFOWpjZUdSWHJSM2ZXemYyZXNBOTIzUmdGZkxDcW9TTDNRNUhvTmdZbjJScTFkdGdKUXR3Z1d2V19PUldzX2YyamVKT2FmdEw0Vkt5Q3lWNlVUMFAzckpDeC3SAbgCQVVfeXFMT0c3TElOOU5ldFVfSVdsemFOUDg4YnJZZ3haVHdBNmplMXdnZnJ1STUwN0J4b3l2eWs4VUxNdG1vd0dLc1Rpdl9sZGJfS1BBYnR1QUJNNE05OC1BQWtsQWhxVWxRdFRYbk9pRnFMSHNzNUhXZDlSbWlKNG5VYlRxc21fNjZ6MzRBS3FPc0VDMy1hbk5nckJ1b0ppS2JPNnRVV0FWWTI1TGEtSlVsUnRaU3FabXExTnB4MGphZ0VOUkhJSlVGc1l1bmpwMXVPVlliNEw1UEdPVjFvRm9wd1U4RTlqY2VHUlhyUjNmV3pmMmVzQTkyM1JnRmZMQ3FvU0wzUTVIb05nWW4yUnExZHRnSlF0d2dXdldfT1JXc19mMmplSk9hZnRMNFZLeUN5VjZVVDBQM3JKQ3gt?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street recule, le pétrole ravive l'inflation et propulse les taux longs - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 17 Aug 2026 20:08:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNWEtzbWVQSkNKMkFRUDNYcVkwN21BakhlQkFybXVWUVBuX3lHd0xncXJ3V21KYThLSnhUY09BNTM0M29VR0lwaXZuclBhaDFoZnpZbXBXQ0JjWnRHTVBfQVFBMnVQVWpTdTE5Z1AxNDJQYjhMOVRIRmR3bDBLT2tpYml6cWFva1ZzZ3ZFMnY4aE5DcGp3V3E4cndVbjhNcGI1LVd0MU04WTNmV0doY0tvOFdRZVJUTkFHZ0tEZ1M5aDY0YkMzaVVPRW1NcUJFZjRZOGVPWXlib1oxX1I0RkRkQ3NOSVNDZEEzcXZwQVF30gHuAUFVX3lxTE1YS3NtZVBKQ0oyQVFQM1hxWTA3bUFqSGVCQXJtdVZRUG5feUd3TGdxcndXbUphOEtKeFRjT0E1MzQzb1VHSXBpdm5yUGFoMWhmelltcFdDQmNadEdNUF9BUUEydVBValN1MTlnUDE0MlBiOEw5VEhGZHdsMEtPa2liaXpxYW9rVnNndkUydjhoTkNwandXcThyd1VuOE1wYjUtV3QxTThZM2ZXR2hjS284V1FlUlROQUdnS0RnUzloNjRiQzNpVU9FbU1xQkVmNFk4ZU9ZeWJvWjFfUjRGRGRDc05JU0NkQTNxdnBBUXc?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
