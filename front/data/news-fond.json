@@ -1,6 +1,15 @@
 {
- "genere": "2026-08-18T13:04:07.641Z",
+ "genere": "2026-08-18T13:53:53.435Z",
  "globales": [
+  {
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Tue, 18 Aug 2026 12:48:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
+   "tag": "Obligataire",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
   {
    "titre": "CAC 40 : la Bourse de Paris à l'équilibre, les doutes sur la dynamique de l'économie américaine toujours présents - Capital.fr",
    "source": "Capital.fr",
@@ -76,6 +85,15 @@
  ],
  "produits": [
   {
+   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Tue, 18 Aug 2026 12:58:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Bourse : Stellantis en chute libre, Intel rêve à nouveau de DRAM, le cuivre dope BHP - Zonebourse",
    "source": "Zonebourse",
    "date": "Tue, 18 Aug 2026 06:21:38 GMT",
@@ -130,15 +148,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Légère progression du Cac 40 avant un autre test pour la Fed avec les prix à la production - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Thu, 13 Aug 2026 07:11:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNV25OX282OHlmR1N0RTMxNDhHQ2lGME5VUjVKaU5ubWpCaGN2S3J2RUNFZWticnBHcTRjTzYzMklHYVJsaTBFdU5rMTFmYjI5NDJpOVZRQXZkR0w2WEVaZ01ydWlwSm1Jck9CVnRGOFBRa2RrODBqd0dpZVFpa2NfQ3lSOVA0V0NFUGFlMEpZRzM5dmM3clBGcGw3eURwSVdqUlRBVG81NHNxNkVaM0pwajdyYm05ZDlnb21uVHUxNnNXVUtkZzlTR2Z1VWxqT3RNRFg3bmVuSVpzM3VtZG0wekZJUW9OWEtDQjNndmNOWUowSkk?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Bourse : Renault, Stellantis, Tesla, BYD… Faut-il investir sur les actions de l’auto, parfois bradées ? Quel potentiel - Capital.fr",
    "source": "Capital.fr",
    "date": "Wed, 12 Aug 2026 17:00:00 GMT",
@@ -150,6 +159,69 @@
  ],
  "eco": [
   {
+   "titre": "La Bourse de Toronto ouvre en baisse, plombée par les valeurs technologiques ; les rendements obligataires progressent face aux incertitudes au Moyen-Orient - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 18 Aug 2026 13:42:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbGhrOWJlNzhhZkRXMXNGVlg4RmNWX0tWc2c4VU56R0FsMDRsWWlicUo2U0FRZVY0UzJseUoyVVdpclJkS2hhcEVDVjk1blI1ZjFxeDRQYmlJeFI4dUFvR2QwWFRZdk9RcTlDRFo0V3d1dzFHNmdaSTV6d1dkQThZcHo2dTgzbXgzVEc2SnNSRkxIdWNjN3ZBM2VNMkJFSkJ2V1F2dmJKR0ttcWdheWlhLTl2Qy13bkhMNjJrLTdwbk4wcm5KQUs4aFZ0NGZWaV92VkQzV2VCcUJFOUtVTF8xTjVXdG1GTFQ4WEhFdGVR?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Wall Street ouvre dans le rouge, l'obligataire sous pression - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:42:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQXzVXeVVkVkRwa253TGpQZDJRTE1STE1jTHpaY180SzhFbHZzVmx2cTdiaEdOaEE5dkdLc3g2M0pZNFd6X3RHdm5vamlTUFlJX0lpU01ISHhBREw0R1EtUV9wc1VvZE1RY3VYaVRkb18tX2N3aFQzcHZULWNkVWxrY0EwZkNlLXdhVnNaNGNhWTZqUkxGR0JQVUdEVGFaN01jZG82OWN3VW4yQjZEcUQyamJDbmJUcHIwOThjTmNsUzFLdkNQWlFHR0FjU3dac19sbVlj0gHYAUFVX3lxTE5ZN1V3MFpkZjNXd1FYaGhBeU9NWFVaUl8zSDlqQ1U2VFlGVHg4dWpDNF9XR3U0a01NaXZVZzROQy1jc3JpcUhBMlNibEVtcHpCeXJSWV8taHk0NmVFbExRYlAxYVp5cGtpcVBYczlIVU9sdUhlQ2VackgyQ253cE9oZ3JtOGZ0Y2JuZ0c4ckJ4RjJyc01hQ2I5N1lBaHlYdDhRWEo5VnAxbmNFSDhvRlhjVllxTGlyWUMwc245TG5kc2xSanotWW9NVnhVZVpWM3RVNDZOUUdxbw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Wall Street ouvre en baisse, crispée par la hausse du pétrole et des taux obligataires - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:39:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNHF4d0M5bzQtdF8wWVlmMWlNR3pMdml4LXZvbkExcklfNnhvZS1DU1dLaFJhaWVjS2ZQSWRsbFRORmF3Rm5zVTZrSHEzUmtFWTYzY1hNUDVxcl8wZWpRSWRJa1NTWkR4THJZb3YzTzlOc3ZoV1VTNlFZc1RidEJqLU5BRnd0bkRfeS1xV2RBYUVfSUdscFF0SWJvNzUxY2t2YlRYdUIwNXBmcTRjWFp0dDcwd2JvMlBMbFNSZ1RjZ1VaX2h3RFB6YmJVVFMyeWFDTFhVLUZKV2VNaTVzT3NPdXV3a0lWTnNtYkN5T2RrTlpHZExsQlHSAfsBQVVfeXFMT1FTSTF2UHJaSVNfVXViSDVvdW5vcFRwdnhhMmFLMGk5RzI0X09BOEs3LUVOOUQ1eVdjQ0EyeWVLNTdaWm8wTkwyTjh3WGZ0U3BteWFFaGVEaHVUUWlmbkxfZnVhbDJjclFVLTBaS0ZDZTBCNGwxRzUxTkJnVzdZUFpGTDJWdUMtQWtGeXd3ZDV5eWRFS0l6Vi0zN2YzY3JDMlhSeWZLc1RPVDlwNlFCWll4LURpbzhJbVkyNGs2NElJRUE3eWozUnZVQWlvZnVvMHM3VEFOZkJSdHNDWFdIREFlV0lOZ1N4Y2dra2tocDhjRkIxc0c0UXZWNE0?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Michelin recule, AlphaValue reste à réduire - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:20:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNS0FzN0dPYmZCUGdFNkJ1d2g5dnZWckEwQ2F3VE43QVZKbjVqSHo5bWs5Wk4yeVZKYmpQWGtoWEthZGhELV82T0tORVkwZ0lhdVVaU2UzNjRaQTVxQUVZX0xRdmQ2V0lQdm1rT3VyZXltbnlxSGJxaWtxb0dFUXUwVFlaX3ZocGxlMktJWHhlQU5zOXJITUdDLXdpbF9jUm5jTlNwRTB1S1hXUHdjRjJQREpyQnloRFBKbG5JUtIBwgFBVV95cUxOZ3ZCSHdDWTFSTUhDSHNLRkVoWmI2dDdHNWo3MnBNbVhOWXVUZi1Mb2xYSTY1QlNycUllRUF0dXNxTzd4ZFRHQzdnYzYtNFJwZ1FPaXpMTFhZZldmbkJqT2tJS1poMTJKbEpHTHR4Y0dRb1JWWTBNdUM1SjNObjZfaTdfQkpzWGNpUlZSdDVtMTJZV2hKclBkZFNHQjlZQzFEVGxSY2RJY3daRmZjMVpPME1TQnFDeXh5cjEwam4wOUZGZw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Dette publique : le taux d'emprunt de la France frise les niveaux de 2008, en pleine crise financière - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:12:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNMTg5YUhMd0pxQlFtMWs5WU9yQW5haURwUEs1LVVEdG5zYW1QQV8xT1duTWIwTXN5YXQyYjdybTBtNTlLOUN4SHFTRjEzUUg2T3FUTVNnMUlTXzNPc1A3cmpGZENULXdjSERlWDVMaWtSN2h0SF9TYzd0bEpKSzFIY3dkRVlKYUp0bFF4d08zYTZoWHFlZ090WHdVVmIyZHE5cjU1S0p1azQyZDJvWWltc09HTXhiQVF5OUZaMTNrRUhjU25nM1FGQ0JRNTBVeE9ocWtpMzE4Z3J3d0xOYlRaSHRidWxVNmpfV2YwZDA0anJaOHMta3JaTEVPeXlUVjVtTExJUHctLUJhamktaERxZzkyRDZBTDh0U1HSAZ8CQVVfeXFMUGNicXJHeUx6enVTLVRaNmtpRS1oTWJpWG1YTF9tS1E5cHRGWklDTnZZT3NIUkh2MjFsTzRnU3dVSlJsdkNkOXZzakVsbF9WWmwxbVpDeS0zV3hMREZYMGg5Vkt4TDVVQmVXeUFzWDg0cXhMNTZMY05MSDI0czRMWXdwR3l6cmpLak52Y0JEVmVWX0FnRThxV0xpS0FNSl9rY0FyVURVSU1vamxzSllUQmNBV3h3VWJsc0JqZjNLLUxOWHJOV1RSSkFvSUtOTmFJb3NOaE5BLVdrSEZ1clJieHBjUThLVUw0ZVlwc0NPM18yOXRyUkxHTXpJUW5HcVZVQ2l1ZlBaUkx3a3RMakFBT3I3eV9tQUozOHJ6QXVGOHc?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "LES MARCHÉS BOURSIERS AMÉRICAINS EN PLEINE ÉVOLUTION-EyePoint Inc, Amer Sports, Pliant Therapeutics - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:07:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOZWM5MkZnZUNQUDdueENYbGVQMk5WTmNaMHpfdHY4TjI0STByR0ZYdkJVWVJ0a01fZ2ZTcFVlckw2dENBRkZwbDJQdlBRTDJmTWF1azNFVmhmQXl4Z3NMaWZDbzMwRUhhbzdMV0F2M2lBWVVvcUN3YWpSdjJZVmRsN3Y3cHhETUhUZkl2bjJybU5BbXgtbDBiZl9jcmtmVDYtRHJmSEZlNS1aUlV1ZkRLZUNvcVI3U0FydHZWRkRUS3RsOXhMWlNDLXU5SHBPU054aUtkakNuU3NmMWNNTnlSX1R0VFFaREZTVXN5dTlXVFBLWW5qbEE2RFIzX1F6OFR2RElObkRR0gGLAkFVX3lxTE9sWkxtYUI4TU03ZjVSSmdGQS1HLTVWaUhTa0ZMUEM4eXVMeW5vdW5YaGJtbU1pUlBDTFozdVc5Yk9Sb3ZhVVFwQ2w2R2J6NVBma01KWnRtRmpjOElteWUxNGsxTW5neTdfYjJnTE5aR0tpemRkY1QxSnE0SmtfQ2NjRmNtVXgzNUZJYmR4czZlMURzaHNFOUdVZ2tfUGl5d1ZLTzBxX3l4cmxhbjVyXzFtSUlTajdRSHdJQW9OUm5jSUtveFhsQzRndnZUbHlOSUVtem5rNkRRN1ZTbm1haENfRmtOZlFnWWM4azBXUHNJQWIyVUJiaUMxT1EtVkNuaWd4SkNoMFFidGZLMA?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ROI-La chute de la demande privée étrangère pourrait attiser la dégringolade des obligations américaines : McG - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 13:01:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQdWZmT1lpeXFXQTdtS2NDdkk3X2xDMklPekczcjRxU21DeXl6RkphNy1qVkxwU2ljRl9PZWZmZzYxbS04dHgwc2xBcDJXTUJaWUlocEhrRnB6ZU9SQWpDdFp0NzU2NW5pVlRENTN2VDVINGgweFNVNEFuMk5VeGE4WG9KSms0cWEyMDNBeDMzUHNYbi0tMkV1WWFOTDFoRVdFYUdrSC1yOUhyS1YtWVJsZG1zdDdhWjhaOWl6elM4ODJoUHlnMWxfXy1idWc1SUQ0U2RMSGVrd3B6MkUyM2ZGQkdGNlFQUmh1RWFMbDNCRkdLbkJhUE5ieGxkRWpKWGNMeXFHQ1ZyZnBwT2NJZDczd0luQkV4aWhGSF9r0gGgAkFVX3lxTFAycE5KSE9aTHBTa3Z2MlU0RERmeFJZclBBWi1USEtoek9WdXRFQndVTGVMbFc2dHZsMC1ZVzRpUU4zYnRlbHRJSUxmUXZSazBnWEZld0JTT3BzRlcxWXBBTVhMa0syTk4xWE9fdUl4RXhzTllKUDVHeHo4UlRaTWFubE92b0ppemZmOUVLeVBKVkZZTjRVZUo4eGJxWEVkaXJBRUhyOEhlT0dReXQ4cUFCUmZzME13Ulk3YUwzdW5Sald6ZWpFcG1mN2QyUGRiTVB3Z2x0NUxOY2pXS3llWUxFZW5wclFjWlR4Rms0MGZQeUxXU0hYbEV1UXFjTlVXX3JJTVphVXpHb29vUmhabWxCU2E0Z3dYS2VBLXI5RVpSUw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Tensions au Moyen-Orient : les marchés financiers au bout du rouleau - Le Revenu",
    "source": "Le Revenu",
    "date": "Tue, 18 Aug 2026 13:00:00 GMT",
@@ -157,33 +229,6 @@
    "tag": "marchés financiers",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Figeac Aero : la croissance est là, mais la valorisation est exigeante - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 12:55:39 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdGx4LWhGb04yaExlSTd1bmc3eHBVWW1Vd0VOQkVHRVJaenNUNms1ZUlpaEhmSWExWDJ4SmJTejB1czNva2xmNzN3cEhjTG1iNG9RRURReGowZDdTZ19HQTZ3WUN1V1l3QzRmbTY5UmsxNEhMVHhKYXlScnA1VDN0aUJQUHNRX054S1Fnb2oyOTBySGloaXRGcGRReHRuSTE1UXFLSjBFZGh0QU0?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Tue, 18 Aug 2026 12:48:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'indice d'activité des services de la Fed de New York s'établit à 0,5 en août, contre 4,6 attendus et 8,7 précédemment - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 18 Aug 2026 12:35:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZXlna3Y3ZUJmeXVkTk9yak55RDFxTVFNc3hjU1ZQNEthbHdWS3BDT0dIUl9kR0dWbVVTUV9KazcyZ2NpUHFuekhoTGhjOTR4M05XV2pTS1JDSTVyTFM2ZjQzYk1hcDlnYXI3N3ZCU1dRYVZHZFpQVXpTLTY4YTVRdU9Xd1g4bjZtZUc3ZzVrdFM2VWY3dFRoUDlpRU15MmVReXBra085OEZ3UGNuT3hpN0hFbXRMb1ZRZGk4M1ZzSExKMnl5ZFZhbzVoSkxkN1RES20ybUxCcWZ0YVFIT1hJcDJKWGpMQ1U1akxDeVBVZw?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Les États-Unis n'avaient plus emprunté aussi cher depuis juin 2007: les taux à long terme s'envolent et les marchés s'inquiètent",
@@ -195,74 +240,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Disney et ABC poursuivent l'autorité de régulation américaine pour avoir menacé de retirer leurs autorisations - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 12:27:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxQamktMTFaQ3ZWMjdySlBmd2JHc1Z2X3ZmVWxScGRMekM2R2k1YW5GZW1sVFAyRGphMUx4WG8wank2Xy1tUUVBODFud0ljSDgwbl9qdkNZZ0hTa2IyeHl6dUxSQ2dOY0cxMFRCNHFXNkx4bjF3QXZ3aXNJTGpTYXJqM0JVTGVrVWNRZG5vTE5RamxJbF9SNklLSm52MllFYUk1SV9XRExYTzNaTnIyM3VlSUpKY3ZQaVNoY0FuRmFkZGh0ZWMtZjlpYmh1RmR0V1U5WGNhd3V5Nno4cmlZSzJMWDNXSGgxUmJkcmFHelEwajRTT1p2Q3Q0OXlwQ0pyeVkydnRzTzN4U09WYmQ3cGkxY1NlTDlwNW5RM3dZVlpvbnNyQmk3M2h0bNIBrgJBVV95cUxQd3g2RXJ2LXFGZjdyWGs2N2Y4Z3Itamw5S0txRW9EaFdIbHpVQXlCZDlyNHc4ZUhnQXc0YVV4UkVCbURTOXZpN1NaOVQwTWtPLTJYYWg3TjZCRUgwR0tCdmhoTmtQbEdITkpfRXNselFrSVBSX1NyRXdtYmNacGJjb19OUE5FenRDbzVEbW1ya3lFTGVoUkdDZlFpWGtoVzF4dGxROXBjWVpOa0s3QjBzQmJjZC01eGxBN0RHeGxhSGwtQllJTjZCZ0hEQlFRZDlHaTVjcEhjZndQTjFoZEtaeVo2NGV5WWg4U0IwRmVjd0hzT0JSUDV1MTRydmVIeGt3akZSY2JjRXhsS0F3cFRmcktfVE5EbWozQzM4UFA4TnJ4dEZoNlRJVmNSZGM4UQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Dette publique : le taux d'emprunt de la France frise avec les niveaux de 2008, en pleine crise financière - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 12:25:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPR1FDUjAyaGVoenhrMUd0RElacmxBLVAwT0hKbnBYTG5UY0tybjJPdUFOQkxLVmR3THBDbUN0UzRXY1Zkb2tDUEV5MGpDUURIRXJWbExibzZLbmFJcWFMTFdac0FfZWk1QlZZYnpPc2NVbmVWQjhfTEt0WVdxRWdBbW1vcDQtbm1EMjZhTTI2U3NHSER2bnF4dTBTcDcxeWl6b2VKc2JkQXJIZG1iRm82bjVWM0Q4Tmt0WmRoelFoNEk4aVhPQWVlR0VDVnN6QU13QkJqZjBwV003T09IbU41Tk1BUmdFVV9vMlYxbmFScHR1VWtkcU93WXhwaFFqaUZpanVPZHh2c19MbXk0TzItcXVEUVJFNk95VlJfbE1UZlbSAaYCQVVfeXFMTXh5clU4VTJTYldCekxLc1V5N3QwX2pRZUR1YVFKSWY4S2swOFlRa2tMRjYxWXRHWElUd0tPdWJIWjVWWkd2cGNtVzdCblB6UGpWZ0pXemtJeUlBZEw5c21hbG5LZEpRNV9MTERBOWhCbXBTMVBQSmdoVU5JQ2FWY0t5RFhQVjlvNjI0Um5qMzdKS0g4ZEhKUS1VcmI0NllTRC1xQTlYcnRXWndEZnFhckozbGZHbVI3QURRN05IU2RZYWR2enRybTZ3V3VVSlZZdlJjR3B5cmVwVnE0R1hGVC1vbmVIdkR4TG1GM2t3VnRlbUNhc2owLWs2Z1REbFNCMVZjUEdYa3JSMGhLUUV2Vk9tZkl0VkU4cGh2ZW9RZWt1THVGOEh3?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Medartis accélère sa croissance et relève ses objectifs - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 12:20:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWTV3b0J6OFlsdmZqZE0tTTk3LWk5TXdkVFlOSElzTnpfWXU2em1rbzVrZ3k3blAtczJmUUttRjM3anAzT1Nmdk5wbloyU2NQOTVUcXY5MVFHeUlMbVZ6U1BQUkZmcVZoR01POVFyLU1NTWpSc25WWXJvbE1GZVpTOEs3S0RzNmY0MWNRcjFoeGkzMUFVUWMwUDUyR1Z1a292M3RBSGZuSVE4U2NNTklGd21XeC1qZm5XN3pIUGZOVVZYRVI0cWZCQnZzYm4yUdIB0wFBVV95cUxQcVREN19Ec0RjZkIwc3gtNVRPTURzZGlEVkpiYVRDeTM5QkN2bEh1REN6R0N4Y0FlN0NvNUxMaldrYnZtN3BjdW5ZNE1yRjRsZU5VdEE1RlV4eVh4ZG9UQTdRVzY1VDcza0IzV2gtMGYxM1FzczFGU01jQ1ZmTWV3NGFNdHRYMUVFYnlVcm1ZVlZxUWl1SWZPMEtLZzRNem5FNXdEakZvRFo3dURpdkZrZzVnSGhzNXBoTkktN2FIZ3J3dE14cnZBWjBtNm14ekpsaG9J?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mardi: Coherent, Home Depot, Micron, Nike, Tesla - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 12:16:04 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNemxhNlMxX1VfS3l5NjV2Ni1tT3pRVnFMS012WE5aVjl3cHlFaTNXelU5Q1c4ckRZcDJCc2FjQWxnSnNFNnYwRnpKV2M2N1JGRlQ3cy1IbnVRUlk0Y3dteFB2WXdiZUxYNVl4cVBTdTFCbVlybmFoVjk2WDBwV1dUWUlFeFM2UnNVZzQ3WEU5TXdCZV9wOElYRmU2M1czUkVKeElWQW9OdTFkS2VYVFFnVnFQMA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "S&P 500 - Les actions à suivre mardi: Coherent, Home Depot, Micron, Nike, Tesla",
    "source": "ABC Bourse",
    "date": "Tue, 18 Aug 2026 12:16:04 GMT",
    "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-coherent-home-depot-micron-nike-tesla_701387",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Kalshi dépose une demande d'autorisation pour des contrats à terme perpétuels sur l'indice S&P 500, remettant - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 12:15:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQQ3prZTRuODhZZDZGMEo1Q29xZGtCd1VMdmt5ejdIZTAyTTlvTF9IY0hKdy1SSXp5VUxNYzJNN3pmcnpUcDJXdW5zcUZzai1sRzJlZms1dWhmUG5KWVMyZ1M2c0RCYVdubWctY0RCUlkzdFQ4amZLeDdPYU1lWUdwbWlQYV9FQUFmUzQxdEJJZjVOUy1hTktFQ2JyUUZIZlpsSzlpTFo3RjVBNFdycjVNWkhvakJRdmpMZExSTVRCeFJ2TlRqaUxpZExIdUg4NUJ4Z05yUDVfVV94UEVKTFk0WWEycXpYX3Y0QXpuZmRfU0lmNFJGcnRiM2RaRHRraDEzUHpuLVBsNkdHY0xURko0blkyeTlUd2U5OTAxSWtiLTNlUzk5Qlp0Q041TVRpbDFRckQySTEzNnR2ZzUyaV9iM0pjMVNtLV9iNjlNRm9B0gHTAkFVX3lxTFBJWm9hTGJUTDhfd2JhamUxVFF1dExvTmdQZDhwQWVMYlRPcVI1R3kzNVF6MXlnbkxUenM5ZnZXNm5IWnRaanJ0NnRsSFZyOG5zMkRzODh5VkM5NWhLQnltZlRZYndhMTVKX0loNk85aGNzdXVlY0JGNnlWT09KT0M1VE5VMnk0dzczYXFSc2R1WEdudXIyTEFlc2dNdnVVWTNpQzh5QlF0dkJBMEItZXEzYzdXRmNndURsRGJkZHdEb1YxMG5nUS1sd21DUWZLX0RLb0ktTUdyVVRvdVIyR0habUZVM2tKY3VsdzhaeVNMVUMtM1doTk1rdTBXNURscVJJaksyQ0NndmZNcHVfN3FYTXlTMkozcnZ4VHNuV1lROWtKeTlKcDRCUEttcWNKb2xWSGI0M2M0dFV5eGJVSjYzN1FNb2VkRUxCb084MnR5RUZuOA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Kalshi dépose une demande d'autorisation pour des contrats à terme perpétuels sur l'indice S&P 500, remettant ainsi en cause les bourses traditionnelles - TradingView",
-   "source": "TradingView",
-   "date": "Tue, 18 Aug 2026 12:15:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBucDZPbmY0NzJod0lob1lhS3BLcVl0MS11d0hzdHZXc2FqYWFBWFhZYWV1RFZjN3BRVFJoYnpjZTVINThOLXRYSVQ0RC1rOXFCUFVHWWx2QnhaZEtyTzYwMTVsTnkxZEx3MV94eko0aGVZRDVqUkJ3?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "FedEx autorisé avec Advent à prendre le contrôle d'InPost - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 12:12:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOLUVDb1ZZRWp6UTRCakdUb3EtNHFKMXJsbV95Q2JmUk9ldDZVb2M0WnhVcUp4Rzc0ZFY2Z055WV9YRHFZeVdmajU3UkVlQ3dJTXh6NWNFRDB3QjI5WlpRLVJTMlM2U2R6YjRIRzY4b2FxQ2JfMTdFb19MenlvNVVHTmE0VmhJS2pvM2dDb1BnSmlaTThOdDlCTFpabkRzdFVfbmxEaDFueHlRamdGMk5XU2NscFVGZUtRd1lUTi02Y3VVQWdFRTlvN1NCdk1tS1Jq0gHWAUFVX3lxTE4xSUdFbVhTVFVYX2p4OGNoN3ZPSXg0ck10VmdNT2YwZ1JpRk9BaWhjYjVieUFLX3RSNFVKV2oxb3UxaWtjOUdINFkwWlRyd1B5NEdMWUgzNHgwbXV2ZnhaT0l6MzJkOTFDd1drUmZfMmxXWVgyOWp6OVo5Y1FMbUxCYjhoTHRLNjhQN2I1LUJrSXBhUi1fM0RqYm8wMEFmakVzcDNUQUNDeG1Oa1UzQ0xCai05dEdkNk9PZ1RHZk1kNUNrOFFld0FGM1U1RGozU0pVclM5TGc?oc=5",
-   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -357,6 +339,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "Japon : les rendements obligataires frôlent les 3 % sur fond d'inflation et d'inquiétudes budgétaires - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 18 Aug 2026 07:46:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRTdsRUo4dlM1RTMxLU5WbmxBeVQxVzVEeFdtN2JJMWpZdGNkbWxCUVU4cGotSi0wNGZVSzY3dlUyb0hMaUF4ZkxnMkY3c1dMcVhhWjFTdVhkSDVoOHdZVkpEb3RFY09jaHVhMGZEamhpQ2NySmRyQlU1REE1VjN1eVpxT2RTWHlMNHJxa2pMMEdhNXc3T1A2b2xpd3JGeFF2VUlabjRuRVRUb3NlV1VaUFZuN1Jab0hyVGZOS1Mxa3Y0TFEwOU9GbFFneXpSalFsQ1BfLXRqYXBodmdXVE05ZFp1UzhXRDhaZERvYVdB?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
    "titre": "En portefeuille : Schneider Electric, GEA Group et Infineon - 18/08",
    "source": "BFM Économie",
    "date": "Tue, 18 Aug 2026 07:32:11 GMT",
@@ -418,6 +409,24 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Meta accusé de rendre les jeunes accros",
+   "source": "BFM Économie",
+   "date": "Tue, 18 Aug 2026 06:28:31 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/video-meta-accuse-de-rendre-les-jeunes-accros_VN-202608180125.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "\"Je vais le garder dans un coffret (...) il sent si bon\": le pétrole détecté au large de l'Amazonie, un \"passeport pour l'avenir\" selon le président brésilien Lula",
+   "source": "BFM Économie",
+   "date": "Tue, 18 Aug 2026 06:23:20 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/je-vais-le-garder-dans-un-coffret-il-sent-si-bon-le-petrole-detecte-au-large-de-l-amazonie-un-passeport-pour-l-avenir-selon-le-president-bresilien-lula_AD-202608180112.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
