@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-19T17:36:08.414Z",
+ "genere": "2026-08-19T18:49:45.833Z",
  "globales": [
   {
    "titre": "Zone euro-L'inflation confirmée à +2,9% sur un an en juillet - Boursorama",
@@ -85,6 +85,15 @@
  ],
  "produits": [
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 15:48:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.16% - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Wed, 19 Aug 2026 07:00:00 GMT",
@@ -146,44 +155,89 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Plus forte baisse des ventes au détail aux Etats-Unis depuis mai 2025, Dassault Systèmes en tête du Cac 40 dans le sillage des rumeurs autour de Workday - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 14 Aug 2026 13:04:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPOXpUZkJFczVwLXNaUm5zelp1LUUwZWUyT3VuRGxhWElSUmJmMUp3NGI5VDJMX3Uyb01vWEJYV3E3TmIzVi1XU0VNOWRodmNmYWJqUXdPd09zaUkwWUN6cE51R01EWEpUOExiQndOaWV3Z2RiT1FSM1owRjRTcFBWcVVPUkM2czI0SnpHNkVVREQ1ZHk0cml2YTBXV2V3S01pLWNtbFdTeEFNdVBYWnNmYXQ3YU5PRDFRdDJIUDgyVUtJRGNpeFJWTWtnYXJwMUFKUUxYcGt6MWtQcjRVNldfUXVfY2hwWExvb2EzZkNnRHBJTnZFbEIxT29RZjhPNlVuOEJEOTNUM0RWamhhRlR0Q1hjbVdyeGhZaUV3WVFaOWF5OS1OdjVvS28xcW1ubE4tYi1UZm13?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
   }
  ],
  "eco": [
   {
-   "titre": "Les marchés mondiaux surveillent les taux comme le lait sur le feu - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 19 Aug 2026 17:11:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNFMtWmwxU281Y3JPUUp0OF8ySGZXZDJVUnA0RDhFemY1M3NPUzh1Qk1Od0lrakdnRERMUkJyamVaalQ4azc4aHhUYWJkUjZHbHo5cW1EOC1uMUZIbmFta19EV1d6bmtCa3ozQ1ZZcWp5Y3RULUpDV2VQaXJZUnNOS3NBcERZNi1HWHNtdzB0ZmRIODZMNUlGYUNjR1VOY1UtSDBCdlhvSEpkRnJRdHV2cWZGdGx5Q0ZtSkgwUXBtbGI3MU80dy1Wcy1YWDBKdw?oc=5",
-   "tag": "bourse",
+   "titre": "Les préoccupations des responsables de la Fed concernant l'inflation se sont accrues lors de la réunion de jui - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 18:34:45 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxOMmdyTWZrN1d5OVA0N3o1SEttbENSZ1Z2eG5xWnZBUFZuN0dNay1tM2JuRlZxNlowd3k4bUpzY2VZTWhPcWh3MHRYRmRTSGVHSnFjRzljaHJUYy05enRiYlM5TW1CRHV0cU5XVnBQZ09IX19tYklCLTNxLVp0aE5xNlpIaUZIb0xwdDByN3FpU0xsRUxQZUs3QlM0VGFjUnZIbVdUWlhVdkE2QmVvWlN5UllqdE9iVTZUUE55RUhQUjl6X1NrVXRrN2pqd3FRYXdUV0hidTk0WkgwWWdGZjJPOEZIRHVCZ0R0VVhWZ2NxdC1FOVpPNUFrZjhOTlFHNExFWGVWMFNuSTUxM1IyMkhvbUZyeVhJMVdUZWoweEk3RmpIWTlzT2dZV09sMHlzZkE4clRwM2draWhEMWJkcEx3ZWc4YURDNnlkSFhDVERtRDN4eU92S2x1Yl8xUWNSY3k20gHmAkFVX3lxTFBPc0FTYy1FZ3FNcXJxNU1GUFdtRTJjM2FEZU1LNXRkZkxEc2NkbGkycmVFU05Sd182QVhCdUY0V2g5dEM0T1ZVQmpLTE95eWFCOVZDYUdycmllWWRtQ2o0bmsxdUxQaGFvRGlSZXZjYmhyWUtpVnRWNG43dS1tZlNiZlYxcndiQ3RpS25INzVQWkM1ejJ1eWNIbXpyd2Nub2dTZTFVZC1TdTkwY0diY1hxNW81WEdIUVBmRk5DRjFlSGFyckhxSWpTVWFnSnBFLVBFdnRyaExVOXd0ajFUVGRBWHM4Ty1TZ2FYZDFwN0dKOHA3dndjNmdZZnZEcURXdWJ1V3N6eGI4ajBrNTMzdlROU2NhY2doMkZyanNSTnhJNzhXcHd4em1ERmFpZkJjb3lVaVYwWWJRRG9XVnpQUjhSNHVVMllSY21BWGxKOFdZRjNKSlc0NmNwaHFHODBTUEVoeko4eUE?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Legrand «profite en Bourse de l'explosion des investissements en data centers destinés à l'IA !» A acheter - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 19 Aug 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1B2aFJZNkVVR1Q1WC1TbkgwbHJ3aTEyOGZDX2FWUHV1WXdYSW1LcWZTaGlzdUQ5S3N0UGFZUk1DZjBVQlh5em54Mi1MVTZ0TmdvRWc1amZNeHI3OTM3Y1JWb01xLW5aTEZhWUZLX2pfcTl6cTBvZ0diaVROaUJRM0hBaFI0VE1aZ3VGY1BfaWx0TXRyb2pmSHg4bWRrcWlmc1hPYWFJQTB1Rjl2WE9LWFNfcE5PeVN0YlpKM3pOS3ZtRFE2T25KR2tSclh2aEl4UGRha3Z6Uk9EUnU1a1lpTmNMRXZtNmxv?oc=5",
+   "titre": "Fed : une hausse des taux gagnait du terrain en juillet, avant le coup de froid sur l'emploi - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 19 Aug 2026 18:33:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPRXdkV2ZMWjl5S29qbFEzWDZVWDkwVkNxX2U1Z1lDWWxDd2w1Sjl6ZXdMbmswejAtZ2dKMDJSVmFzWU1neWVrSzhGeGdRVGpYZjZzb0hjYmFNdU5ld1ZGcnVGaW5PS2dHNDVOMUFqX0M5WmpfeUdtSTQxVHRxZ09oT0g0Ukt4WDhrQkhYSW4zRUNFcFhwdVRHSTNlVklaclBzTEhFSS1DeWNMLWYwbFZtdXRCZGdMNC0yRXhRam1XVzdDOUdUZ3lEY2NST2xLdVVyd1IwR2NTYm1CX19lY0xQSHZmNA?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Fed : une hausse des taux gagnait du terrain en juillet, avant le coup de froid sur l'emploi - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 18:31:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcm1yb0RxOFAzM0Jia0FxVXNha3FEcEZqZHJneVNrOTZvYjJOZjU5ekVEZGJJMmM1ZXNvVDVpX1FhYmRaLVNmTDl4eUl4U0M5MFgyTEhyQXpIZ0NmRVdJZXRLNndIai03VEE2R19Xek9pUEZIVWxOa3JlWkw1ZGE1MFBueWhMbU5PUTBqdnhzM0g5ODNwU1dJdGlXem5sTkVpNEtBUmFBcDRpNFEyZVl1R0FOUEFlTWhnYk1zLVlQLUV0WXpvUmdLQ1NKQ3ZJcFk4MFJNMl83ZU84b09PS29QdDFrblo5RUt1ZU9vRU9uV0xQUDNQRmJfQ1BqMNIBgAJBVV95cUxOOG1pRWlBRWZqTy05R1RCTWlsNWpoZlBzR2xoMTZ1N2t4dVJBTy1WdFRLLTZFVGthTjdhQlY5bFpXS2JxNGtrTkdnNGdtZ2ZVUVhFOHE0bDdzUUExbXJPN1luOUJOV2lTU3dzeVBkc09jMkZDdWlPTTVkMnk2d2NLVWdqcDV4Q2tIMmthX091clFqSlV5TGNNWUZsaFFXbnl3V1hWQWZjaE1CaXlMeWJxMEVqYUk2NlBkamg5YmRHcFE4d09GSkFwWUF3Vklnb2hOTDZNdzBQNEZfeTU1THl2T3ZoUEtrbzRQV244NTN3Rm5aZEVldXZYLWd0TVo0Y21S?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les taux longs américains se détendent après le renforcement des rachats de bons du Trésor - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 19 Aug 2026 18:28:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZkFFTWI5V1ZGSUdDNVhZVTlqN29zOEU1NEptbnlRZGM3N2lMVGtaNy1ZcFdSdFdSREtOZmtVMUZZbVdHSXRVbGpQRXliVmsxNzFBaC1lVExwNno5UDNtcUJ6RVkwY2k0OUN5aUNJSkI1RTB5UjhRZTlXNTliSmlTdGNTcjVvR0JuSlZLUE4yWnFkbmFnRnptQXpVQlV5NlZGOTZIVENreVI3RXh0a0pYQ016QndMeDg5WDNES0I3VjhNS1lHcnNaM1pWcnJpUHR0dmxOQkdveWRTTjRYbDVsdV9fWUY?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Wall Street rebondit grâce à la baisse des rendements obligataires ; Moderna tire vers le haut les valeurs du - Boursorama",
+   "titre": "USA-Les responsables de la Fed encore plus préoccupés en juillet par l'inflation-\"minutes\" - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 16:44:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgJBVV95cUxQSlJqMkI4cy1MNk94X2wwV0VDS0NhNDRvcHMwdHU1UW1vY3Y0bmtwSWc5OEEybXlYWnhvN0tkUmV5cmg3ZXFNZEttRzlLaGV3SzI0MUVJRGRlSGpsU2hHczJwMkdrWnBkemxxWTFrYmFvVXZfcFljZk9JRWNaYnlDX0JheThhdjA2RFZnYUlJY1JISFFHOURVeWxKbEtHQ1NkVWlLenNWZkg4RFZLcU5qTUFkejR1ZWtoTHlOZW13d0o5Q001WjZJRXcwZE1fcGV0TXQzRWpzM0ZDVE51QnlOZ3ktWXJqOWRrUUVQWWcwV1Z2T0lUUTNPNjJqUkxnWks5NFVTMDZMYkhaQ0lISU13cDJXV0g4Y3dySmdqZG0xc1N3Qnp1blozdFI2LXA5QdIBswJBVV95cUxPZHVIVnB4aFc4OXUyblV2QzdKS3NxQWRaNE1OM3prQjh0MXp2UnZtX2ZCTFVMSi1XeDB6aTBQeEZSV2thNmFnMmZzRjBha2U5dVdWMGZOWTFiYUVtSUotbmdUbS1LTDRIb1BUaDBPQ1BLWGVFLURXVHNXSkNpOEVUMkxrRlFzdlg4UTVNN0Vtc2tCMEpCcjhIeWtyN2kzSTBrQ050M2xLclVRc3dMUDFoZ2Jpd2FDVnlCdE1Pc1NycjJZeDZJQnFkdFNXemhjMGhpbzhHMC1jWUpsbWt1MDBSY0dPclBLT29XUFJLZGw4MUtDckhhNkRXTV9wWGNaQkQ4ZnZXSXFxS1paMXN0ejFCck5BYzhRejVzZTE1VjllZzdlZ0VHbDc5QUFpc1VKX25oQlow?oc=5",
+   "date": "Wed, 19 Aug 2026 18:27:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNSmNSZ0dlN2h6blRfOE93YWNuVHpjYV9FTlY0YS1UN3dVZHhwZHd2ZmlzbkhkS0laSmtxMEs4N1p0eFhuM0hZZkR3QzlZNm1EQnZhOUp0TnJVanItN2Vyc3c3bGNMVFNoVHcyLTZIWVo3YUN2OWp3bnpOaEs1c3BLVXZQRFpaMmNVYjRKNkR4ZDFWM1hNR01vRGZWX2FJcnQ0V0Q3aFFxOWdtUEJKNVN0bFdYcjJUdkRNalVGc3Nka3ZLUkRzRm0xMHdlbnQzV0hVQkxXZS1EcUFFQlo0NTB6R2VmUVhHQ3k2dzV4T0xrcjhLSFFwdklxVUhKUDBES00xNEZxNGNFaG5WVmxM0gGSAkFVX3lxTE5uS3djaUVabzFGZEI5VUNPaWlkQ0JpaHM2S282VGZYVFliY1NBUDJIdWNYWmptdmpIOU5PcXE1YUN5ck1pUVFjaTZuS1NCWHZwQlgxSHZDb1ExZEl4QmdZMXhWUDJkd2JjRU8ySWZ2YUQ3VlBha2FablVKckdDMkVnT0VnQU14N3pBRUdRSU1NY3lJX1lyN2dPdUR6TW5ReWE2WVFvTGt5cnBIMmZDWDdCM2xValFNQlNNd0pjNUwwYTEyaWszdDhFWkRtOG91UVdlVXppaUdyMk9zSXR5NkxpQ254TVZzeUtLLVFyYXl6ZUNOWG5pc0k2dnEwTlB2RXNtT3pJLVp1ZzNSUGVTWEgxX2c?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "BNP Paribas : rounding-top validé sous 112,8 EUR - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 18:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbV8wakRrR0s5TFJET05aTXc5d0s5eVdjQ05uU2ZPNlJUSEtmaEhsZXVXLWZQQTZnNEk5LVhCbmQxbHdLcXJqXzlEcDJ0SXE3blZEdU1WNkRmWXZwMEF5cFdiZjBhVFl3M2V6N0pyWkpaZEJuc0lHd3lYMjRTQ1lpYzJDX3poUTBZRzFSY1FGT2hlTmFPZ3VjS2hkV1NRQmlENGdta2Y0eUJXZk53ZHhjei1YY2ZYcXhZYzdCTTl1THZ5UdIBxwFBVV95cUxOZVJJTW9KYWhsNGlfS3RWVDg1aXFyNVlhM09Jc29ZdE5CZGpHOTJtTEVFR2FmY0hsSmdwM21KYzA1TmpacDdrZGhaT0FsVHdmQkV5c3pDd3lZdU9ya2c4dzh3cEttSnJBTW1IUnFuWTBzbjFGM2J6WWxmYlRyYmcyOXd6Y2hKUmprQXBlXzV5RE1qQk9UYllXQjVKLVVlNUcyeFFWMzlhWndmU3l6RGoybTBXdnBuLWduaEdIcWRXNlljdUNuMnBV?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les valeurs des sidérurgistes américains chutent après l'annonce d'une réduction des droits de douane américains sur les métaux canadiens - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 18:08:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQa2Rybkw4VXJIenkwZXg5cEYyRmgtSDRKOHpBZEFVSkFSeEQyb01RWldlQjM2Z2VDdTh5RVM5Y1FuVi13MDJmTlhQRVAySDBISVljOGtlQXFJemNGUnJDRE43NVhLMjRwWTM1aUxFOXJnWHM3N2pBZmxLb1g0WjNIQ2EweVJEbG9PWTBvVF9XbXRvVllQMlJUSTNMVDNRMXdjVThSOTl1MklDX1RNWThmaGFQU2o0VlMwTWk4N2VfNXB1QXpqQ0YxRldhVkZJX1R6TlZZZG5kVVlkMHFtV2NJX3p4SGZ6TnFyNTcxWkNlanZzdVZ6bWYxYTg0ZU91Wml3dzdnLWpLNXhxZUtrazEtUllGWlVYajlKVXlybnhZaXoxdjVlMF95TnFScE5MOUFfNUlKTmRuYzlzT00?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Plusieurs membres de la Fed favorables à une hausse des taux si l'inflation ne baisse pas - minutes - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 19 Aug 2026 18:06:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSEhlaFFxaUo3R25jZFJBbnIzOXQtcVJ1WjBBUThMZ2cwZW1uNUdEMlVIM0VIaktrTWNRVGptMlhGYWlqNEdCcURqc09VNk5vTmN4bUQ3WnM3MGo4WlVHRy04bEd0akhyVlExNGxRQkpHNGtTc0pYbTZ2dE9mZmlNbFh0NXluLUhvSk5jeVFSZDdDcl9QNEhTSDFVTk1PeU9fakdXWkh0cjJqX2lZNXlDR1MtRkFxU09KeHJ1OF9RNjYwTXZNTHlBQ1ZBRUpqUHJvVkVmcExxajBjU0lmbTRqU3QxRnRkeWZoVVczTkZn?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Les préoccupations des responsables de la Fed concernant l'inflation se sont accrues lors de la réunion de jui - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 18:01:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPRGtiUzZPcmhWUjl4eFhHYUVPckltblpkbVBXUFE5YXdQb3oyZEtmcTJYQmRWYTVWNDY0Z2pMNzVQV3Y5YVJDNEY3ZnZad29oUXIxamdFeTBYd3Y1VTlrV3VoUUR4alFPbmpzcF9jeWVFUnBaQXozSVRFUnJiVm5yMEE1SF8tY2JHajZrQ3VFOXhPdVBpdHhuQ1E1ZFNHVnlnbkQ0R3lUVWFUX1BvUlZOREk2bVJleHd6OE4tT2pPamJvNlQ4aVVOOElnblUtM1RqRS1ZWnUxUEhXdmNiSjZSQXYwZGd1azF3LWFrcHgzeHZMWWFzcFl2U3AtU2hZZ3NUUUoxemY5Z3d2b2c1dlhMOTYxMXIza1lxb2RqR1pUbHdZd1JqbUstOUZ0Qjd0VHVkSmFhcTRLR0MwSE1kWWlZbFRRTUVqa0dyUlZCT9IB0gJBVV95cUxQWnIzVm94cXFzb2ZYUi1tTGVZLVlUdUlyTFpYVVpfV0UxTkQ3bU9UaUVkNnJpRHZlZG9sVF9nZ2dzbnpZZkVxZ0t6V2FwQ0Y5QlJPRGZlMS1EY3p0SEN4dkYzcjYyeXprd0JiNW5Ta3ItZU9qeDV1TE9lbDVlMjVsRzdCaVBVVkg5NzVLWkJmb3JuYTBJZXl0U0Q2NGlQSHE4cV8tWURLZ1lfX1doeHhaMXlqNmFyc284T0w1YnIwMVlOcF80WnJPbmFhTG9ZLVk3SFBLdURJLW9BZnhWcE5ZUzNmd0RFWGJLSTNYSnZRbmVBNENoVkR0RWVzdjh3QUtYdWJkeGpZNUJOdUNSSHprRUhha1JTNkZmQjUtVWJLOUJGd21CVnVZWXlEMmdGbEtLRHVsb1B1UnVjbXFrZFhSSTBpQW9kaVFnNWRUWlRCN2p1UQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Le bitcoin bondit après la détente des taux longs américains",
@@ -240,15 +294,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Selon la Fed de Boston, la forte productivité a atténué l'impact inflationniste des tarifs douaniers - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 19 Aug 2026 14:01:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSzBXUDViRVFRVWdHM1FncEJKWDdLWWd2c1p3Q3dIWklyVHZGUzd0b1k4ZnF1RG1oamxvM2thY1lzT0VPdm55RXRzUlUtZWJGSHJ6MWJfZzVudnBLZlpkUEYtU0hUaFFGUzNjdEZZOEIxbW5kZ1hzb3ZXUTdFMmNfcF9rS0ZUaWlRek84SkdxWkxzdDd6N1ZXVE5LZllDcTMxdUE1VUZRMldtbmRSS1JiVTlOaExKY3ZTaWhvdktpYzdtSC1BN3pVSXV6ZkdUdHYxbXJySUcyNk5mOElzUjFJWndlejQ5UFE5MTN3WWdfYms?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "La France n'a pas fini d'être perçue \"comme le point de fragilité de la zone euro en termes d'endettement\": pourquoi la flambée du coût de la dette française va encore plus compliquer le budget 2027",
    "source": "BFM Économie",
    "date": "Wed, 19 Aug 2026 13:14:53 GMT",
@@ -303,29 +348,11 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Royaume-Uni : conformément aux attentes, l’inflation en hausse de 0,3 % en juillet - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 19 Aug 2026 10:01:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRHJtTEJwLVhKSDVyN3VSVW5kcEJCbFRxX3lzS3BLVlFCUF8yY3RvazllVTBEYWF1U2lhM2xXdUFUWklEX2RKVkVIWXVkN24xNDV4MWstNlQ0c1RaUWRmZmlwY0stemo3NUQxRGVrTzlORk43XzFabFI3T2JkOGZ6WXhZVDZIdlF3UlI4clhGMUwxWkVybmg5d3JVN0Y4ZDFGT2tLRGJMTQ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Zone euro: l'inflation confirmée à 2,9% sur un an en juillet",
    "source": "ABC Bourse",
    "date": "Wed, 19 Aug 2026 09:16:51 GMT",
    "lien": "https://www.abcbourse.com/marches/zone-euro-l-inflation-confirmee-a-2-9-sur-un-an-en-juillet_701411",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Zone euro : l'inflation conforme aux attentes en juillet - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 09:07:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcWhvMy1LaXdmQ0NLWDEweXp4c0tKVF83dUJybGJLQnJ2Tk5Sd09QdkhzV1ozcEd2bUFCcmhRNFhzNGhVc2NIUVBoajJGOWpEZWJURUJmWTFGN3lCZXhjLUQxbk5BNzdWdDdFQUFFVjZoQkxPOURCaFM5ZWhucU1YbWxVYWd0LWpWRXVIZDh4S0NjMFN2UzMzUjZXUGxmcy11VkY1WE1FclQzNHVvVzRCNjd6WnhlcjZoRmZVZy0wUDUxdmI3eGprd1dsT1I0MWFRZEHSAdIBQVVfeXFMTnFobzMtS2l3ZkNDS1gxMHl6eHNLSlRfN3VCcmxiS0Jydk5OUndPUHZIc1daM3BHdm1BQnJoUTRYczRoVXNjSFFQaGoyRjlqRGViVEVCZlkxRjd5QmV4Yy1EMW5OQTc3VnQ3RUFBRVY2aEJMTzlEQmhTOWVobnFNWG1sVWFndC1qVkV1SGQ4eEtDYzBTdlMzM1I2V1BsZnMtdVZGNVhNRXJUMzR1b1c0QjY3elp4ZXI2aEZmVWctMFA1MXZiN3hqa3dXbE9SNDFhUWRB?oc=5",
-   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -400,15 +427,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Royaume-Uni: l'inflation repart à la hausse en juillet, à 2,9% - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 06:39:59 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNT1l3cXYxUWlKU2NXcVVwa0h0Rjl0Rks1Q09yMkE4eVdwemhJMkVqaHRjRzltaDBZVUpEX2dEdWtMazBRVldZZjM4emFROXVhYXFRd2xLTlphN2FBSTRiTWVFcGx6MUkyejRsdlFITE1ocTdNX1p5ZjE1ejAzcU0ybVgwYm83dUtSNkwwRkhPaGdJamViUGdhb21YUmgxcDkyNk1HVXN3dW1jMnNBRkNlNWQ0dzU0NkVKUFhDenppaEthUDkxZXdIRVZPWUZFRm9McmhCMkxSdWFuQW93clJ6TDEtZ3o0d3dDaUlV0gHrAUFVX3lxTE1PWXdxdjFRaUpTY1dxVXBrSHRGOXRGSzVDT3IyQTh5V3B6aEkyRWpodGNHOW1oMFlVSkRfZ0R1a0xrMFFWV1lmMzh6YVE5dWFhcVF3bEtOWmE3YUFJNGJNZUVwbHoxSTJ6NGx2UUhMTWhxN01fWnlmMTV6MDNxTTJtWDBibzd1S1I2TDBGSE9oZ0lqZWJQZ2FvbVhSaDFwOTI2TUdVc3d1bWMyc0FGQ2U1ZDR3NTQ2RUpQWEN6emloS2FQOTFld0hFVk9ZRkVGb0xyaEIyTFJ1YW5Bb3dyUnpMMS1nejR3d0NpSVU?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
   }
  ],
  "fiscal": [],
