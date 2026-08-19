@@ -1,15 +1,6 @@
 {
- "genere": "2026-08-19T14:47:54.677Z",
+ "genere": "2026-08-19T15:41:30.077Z",
  "globales": [
-  {
-   "titre": "Zone euro-L'inflation confirmée à +2,9% sur un an en juillet - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 09:12:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeDhScG4zVVhMVXpVRE9fYWpLSFpEZVZaNkNmNXk4Y3h5SG5sNEZHa1M2cl9Jd3RnWkRpelhKOUFiWW1PVWJCMmlRZU8wU3RGUHVZVDNIdWU2a3ZWQ0xzdWRreGxjc0xtclR3WVZGWVlOUjRERkxSd2xib25hNVZoVXRTeGxHQzhJX3FJblg0R19VV2VGY3B5ekRZNG9tNDRYMmpsOFcwWlBNenJ4b1lTdDNPQ3VHaF9vdDJQUTdoUlNhMy1HQ1ZfZWpYU1FzTm56RnfSAdcBQVVfeXFMTnBSUDFXYXVfSFlVUzNKMkV4NGJyWGIzNWo1ZXBkZkMteGhxYkhLVVZubVJaOThKN09aenBOOXRtME9pV2UzdUVuTjcyeXdxUTUyckhZZjNCWGQ3S1JEZTNOSHQtRl9wSzVvOFBseUxrMG1YUGI1ZkdSTnU1TmlvVV9EZFJJS19CLW85c3J2T09qTndEMGs4emN4R0lidHZHN1BXb1Z4S1lkWmlVS25VcG1iRjNJbFJCbXRBZEdZNU83dFF6bUxvbUg4T00zZTNoX0VGaWhMa0k?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
   {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
    "source": "BFM Bourse",
@@ -72,15 +63,6 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Zone euro : les rendements obligataires reculent face à la stabilité du pétrole et au ralentissement de l'inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 12 Aug 2026 15:38:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTWl2SUpBbk1adnl5RTZlMllMMnh0WkUzNnBGNS14LTBfa1UyMlRkRHp5LWVjeDFqZ1F4RmZSOWRQQm43YlRkZjRTVkZVVVhsT2xVeHdaaEFwT1J1aTVpZ3J4ZFpNSDNwWHZaNzVzMnZyaG13TXpLYVR0RUltNzF3VUNiUVdJZHplNl82b2ZxdGRYSzh3U0tNVS1jRDN5LXFLVy1HVi1teUJQZWxDV1ZHVVpGRXZWMzZ3Yk1yRVByQ0VZS0VlY0lFRW5ndkJjaW53a3NpdEtwRzNXWUtJM3gxOWRqTDlPaDFJaUFyU2d4dlQ?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "negative"
   }
  ],
  "produits": [
@@ -150,22 +132,13 @@
  ],
  "eco": [
   {
-   "titre": "Rebond de la Bourse de Toronto : le sursis sur les tarifs douaniers de Trump soulage le marché, les minières s'envolent - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 19 Aug 2026 14:25:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPTWwxTThJVFV2aHdoRHB4Y09ockFIWUNTdV9OZXBpdUVMVFBOQ1UyWTN6NjkxdFpGMGZ0WDFMb0JyYUpDY3BBcGRPSDhSWHRhMjR3WUtmMmd2SzF3RGFfdUlnLVFEdlF0WjVQNlB4SHVWQ3lvbVRuOEowdTZwWkdSVTJIR3lqQ1dCUm8weDFxWTVlMGUwZGppckRIckVPXzV1TEZsUDJvZ3BrS1ppR0Y0OTZQRnVzNE1yVi01MkxQa2llczhXSndhaXJERFdmSjRIY1d3UnJEN09kNXFGdE1peTB2TUhQNERjVmtNNg?oc=5",
-   "tag": "bourse",
+   "titre": "Devise : coup de tonnerre sur le $, le Trésor US accroit fortement la liquidité - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 15:17:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOc2xYckV6UGxfMkt5NzVaMXBISjFUa21DSnZqMlpFWU0tcHhEc25GNW5fZHNVeXZhOVJUaGFJaEJyM1ZuNlhHRHluNGhQLURpV015enhpWkVnQzJQYUVBSlZVekJ2WHIyc0RnWkVVaWhDczVsMGlybDdVS2RmYVZXTkdwN0xzNk9oRHZ1MVpDU2JZV3hPVk1sX05mME5JWktpMHpWUGxoWVhVbjlPN3o4QmRXTkI3aXA5TG1RbUlQRnh0TEE3VzVxeEk0ejRWa3NSbS1sZWZzOXdqemV6T0xzeUpNUmVFNlnSAewBQVVfeXFMTmFXZHlEVy1vcDlGQmpva3pOcU1ONXBLMGpZOUNTUWtCRjFtS3ZqUWF3bWZmOGpDak4xMDZSaW90MTY2S2ZsQUNrWndLaDlHQkdkcnJldVR0MTF3WDF4UjBUM1NFd1dueldGVEw5Ym8yOUl5N1dLaVdrbVppZ0E4eDB6UENITUxnemFYcE03OVpKVUUxenkzTVlIenJ4SHhydzk1N1VtNWFtOTMwMlBodkxDa3Y5NWtMRUE0OEhaNkVkRmhSUWFMbW8wekozVE13djlwMW9aVzdNbzJLa1VtMjRDQlJXczlrekVUQ0I?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "USA: Wall Street ouvre dans le vert, les taux se détendent après l'intervention du Trésor - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Wed, 19 Aug 2026 14:09:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMEo4bkh1VGlSdktRSzlsOXpob0NsYURPakZFMmxScVBnLTd0VzRVSnE4eGtmU1cwekZNQnRMcHN6c2VvSlJJUHp6TFZZeGhiZlFTdVlaTVRmVXZaNm13aDFXQXN6WjVEVzVYcDhnUzZEMVozb3hqUENlNkxmcU5hUEtJQ05zRE5FNkFtWC13akoxbS05bjFBeDNnNm1yVnMtcTFFdlNBRC0yT2tkN1pOMVd1cm5oN040S3c?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "USA: Wall Street ouvre dans le vert, les taux se détendent après l'intervention du Trésor",
@@ -184,33 +157,6 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Wall Street en hausse après la correction du secteur technologique, dans un contexte de baisse des rendements - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 14:00:04 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOOHB1ZEdQVG5uc282bjJzdEx0UEw0LUh0UTNHZEVOd0tuUWFEQXNxak1yVlNlb3QzQTJGcHNGRUtKNWVLcHBYS3g3R3pvd2lBWDJzTUxyTWFDbjNfbklLUGxZYm82ZjFsQnZEbHpodTdnVTZpZHpoNFBqZUs5bVh3UWFxeml1d2t5amdzUnZsSG9Xd1FYcV9lUTBmSS1sYk1Id2otTzFMMkN6VHBkaHRQbXk3Ui0yWUdEdk5lYWYyOVdBaTRKWS0wZmdTRFpGTTByT0xjMWhaUTE0V01PVjdYSVRSeHdBc1ppLUc2bmZVeWJ2M0ZCaWQ0RThISE1qNzhEQjEzeHZ2dVJadmdIX212dUtVeXRDdlFCWTBmanRxSlRYcEpFalBac2tQY9IBsAJBVV95cUxNV3N0N2ZfVEpsbDRIUk9FTEpCS0JmLURwWlpuNWZ3bFdUVkZYd3RxLVZGeTBxSXBySWNsVHIxYlNWcEtPaFZ0eTRQYmJEMnhyU2NjbGxjMkQtU1RmdVd3WUZ2OUYxMWFESFlRUlRaYzhDMUVaOExxa3JzeEhweUVCV185eUZwdko1S0ZKaUZSMWIxWVJ4NWVvRXpHWTc5aXI1N3c2LU9iWThfYXdyODA2bXJGbnlGTmhSd3k4aE10T0NDNy1IblpyWVd2Ti1aZnV5OVFRNUU5Qndrc3RhSzNzMW15a0lTclFLRVRZeHl5Y0hKWmhPM1pRYWx6VFh4SHZIRXhIejdQQ25TNFFlSGFWaE55T1diRFRpdVp0XzZtM054R1QyZ1o5Z2tXRXZxVFpP?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les obligations mondiales rebondissent grâce aux signes de soutien au marché des bons du Trésor américain - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 13:53:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPNld6VnRLcDFxTGpsRDh2WWNTVDdWcTduWWdTeV91V19icF92QnI3TWJrcG5vTV9zU2QxVFVzSy1zQ3NYZ0RrVnhlb01uRndzNUNwVnFfZVFOVXk0ZV90SnppcElIZmVyRWhlUFBhaFNxSWFsMmtleVVFcGtUN041TGxlTnotSTRuYU8xazFiT0xoYU9GUjdBMmdVSnVnY0V4UGRkbDBoQUVOZFNKOWtxT0NfRG9TVmY4UVhkZnBTZ2F4c0xURHVLZFZVMC1JVmVfbW10TjRLalZEamhFWnc4bHFHcGx0OE54OVBXOXhVMzVKNjAwQ2w0MTl1bFhHc0FFZTJ2el9OQ2RUdGhJRTZ3cNIBlgJBVV95cUxOUTBkMWJCeHc4endXcGtHT21FaFdMQ2d2UUFHSzVuVW5CNlg5TlRwZWZuNGI4MHMyMDFqS05rblJCVVlHM2VUOG4xbUNXQUNCejFWYjBGcF8zTTdKdkRQcmh1N0diMFN4UUppLXdyWVZmT3JtX2hBTVNzQ2t3RTk5WDRPQ0lhNDhyUWpLa213RUo3VzFWM0xZUjNNMVNBZXo4X00tMjU0MnF5bzZGWHVrWWs3eGFaNEtINWUxdndqZzJ6RkM3YlVKSk5TLXVmS2pCVTFiTjM2Yk1rYWk5RGlFYnhxcE9ZY09fZVpJZmlpSV8xdHJUdzBWcjRUVkRaYW5kbDZlYm9wNzlsbW9IaHdYNkZCRUtJQQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les actions des sociétés aurifères progressent alors que le dollar s'affaiblit et que les rendements obligatai - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 13:52:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOODgtM3M2bGZSLXpRNDVkQU9nNW5PRmJZdnotREhoVXBFQ003bGlSRFJ6cEVDcjJfQzdUZjFhckZkRE5hOXZfSzJGZnplU1ZsWmt2enNIVjJ6NVNOVzdFTF9uXzUzcnpqMUoxOEc5V2MzYmx1OW9aUUVtVlVjTGtDT3pIYmx0X2U1X3hBOXBLYVY0SHE3UGdkamN5akRzYVRORjNiUVpYLWdEZURJTFVpOUJjQW1maWFFbElDMGlkTC1kcXFldjlOejJORy1kQk9jMlIyamNPV244cjlWbVVNdjRxbnU1S1cwTVhHcG5TY2pBZ1ozcFFubHRZeXcxTWl6OW5FQ0JMRjAza1F4VnR4UjBRRlhQcmduMlFmY1AtX2ttNElyUk9j0gGsAkFVX3lxTFBmNjZFQ0JoNTZvU2lQbFhPNGMtcUZOSWw3aFNhVE10VnJucXZoU1RUN1hxaktnaUhGS3dZVV9nMmFzSGpBMDJFUzl2MzFpYnp5Yno0dWc0NHUzU1FINmFpZTRray1HTkdMTGU5dVdmekxWa1h2enZCZDF5bm9JMlBGcVFmcTNGVzZMR08weVpCNF9iRmkycTlURFdoSlRVUks3OGFsY202WUhaNzhsckNHX042WWZxM1dJT3VqLVZGUTBidDUxZDNYQTctRF90VE1xS0gyYi1Bbzk2WDMwdzVJNlJsZXpyRHpIUEVIcnRjdFZvbDZiZFZSbWEyamg1UE5YYkRQVEdISXk4QnV2dHRxalpmaHpjRVRETUZJRG5PQVhEWGhpRTJkZ1NXdg?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "La France n'a pas fini d'être perçue \"comme le point de fragilité de la zone euro en termes d'endettement\": pourquoi la flambée du coût de la dette française va encore plus compliquer le budget 2027",
@@ -267,20 +213,20 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Royaume-Uni : conformément aux attentes, l’inflation en hausse de 0,3 % en juillet - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 19 Aug 2026 10:01:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRHJtTEJwLVhKSDVyN3VSVW5kcEJCbFRxX3lzS3BLVlFCUF8yY3RvazllVTBEYWF1U2lhM2xXdUFUWklEX2RKVkVIWXVkN24xNDV4MWstNlQ0c1RaUWRmZmlwY0stemo3NUQxRGVrTzlORk43XzFabFI3T2JkOGZ6WXhZVDZIdlF3UlI4clhGMUwxWkVybmg5d3JVN0Y4ZDFGT2tLRGJMTQ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Zone euro: l'inflation confirmée à 2,9% sur un an en juillet",
    "source": "ABC Bourse",
    "date": "Wed, 19 Aug 2026 09:16:51 GMT",
    "lien": "https://www.abcbourse.com/marches/zone-euro-l-inflation-confirmee-a-2-9-sur-un-an-en-juillet_701411",
    "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Zone euro-L'inflation confirmée à +2,9% sur un an en juillet - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 09:12:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeDhScG4zVVhMVXpVRE9fYWpLSFpEZVZaNkNmNXk4Y3h5SG5sNEZHa1M2cl9Jd3RnWkRpelhKOUFiWW1PVWJCMmlRZU8wU3RGUHVZVDNIdWU2a3ZWQ0xzdWRreGxjc0xtclR3WVZGWVlOUjRERkxSd2xib25hNVZoVXRTeGxHQzhJX3FJblg0R19VV2VGY3B5ekRZNG9tNDRYMmpsOFcwWlBNenJ4b1lTdDNPQ3VHaF9vdDJQUTdoUlNhMy1HQ1ZfZWpYU1FzTm56RnfSAdcBQVVfeXFMTnBSUDFXYXVfSFlVUzNKMkV4NGJyWGIzNWo1ZXBkZkMteGhxYkhLVVZubVJaOThKN09aenBOOXRtME9pV2UzdUVuTjcyeXdxUTUyckhZZjNCWGQ3S1JEZTNOSHQtRl9wSzVvOFBseUxrMG1YUGI1ZkdSTnU1TmlvVV9EZFJJS19CLW85c3J2T09qTndEMGs4emN4R0lidHZHN1BXb1Z4S1lkWmlVS25VcG1iRjNJbFJCbXRBZEdZNU83dFF6bUxvbUg4T00zZTNoX0VGaWhMa0k?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
