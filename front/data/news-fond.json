@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-19T16:42:41.202Z",
+ "genere": "2026-08-19T17:36:08.414Z",
  "globales": [
   {
    "titre": "Zone euro-L'inflation confirmée à +2,9% sur un an en juillet - Boursorama",
@@ -9,6 +9,15 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: Marchés sous pression, ouverture prudente en vue - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 19 Aug 2026 06:00:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaEhsaWpCM3BzUDNFUVZGaUNRQW9tNlgtSk9ucjVJY21iLUVxSktNVGhpVEF3NTltaG56OGY4T3JqZFI4MXYzU2o1VUhKMDNRbkIwLTV1N0pLU21UZkFQbUhpSjZ4TTRJdEZFaXVXR2lZQUliVVdiS1NkMVVQWmZsbVE0UjlnRU15OVNWN0pKT2I4bFBEdzE1cGpmZWhybzduQXZFZVVLQ096QTFB?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
@@ -94,6 +103,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Bourse : Stellantis en chute libre, Intel rêve à nouveau de DRAM, le cuivre dope BHP - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 18 Aug 2026 06:21:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPdzNZWmJyVFF2QzBBN1R6TlpJeVRvSTdaTTRqclhNVmtWak02QmVaU25qT2NMSjZqcmI0MlM2RmZfSHlNWVgtYnEzckwxNnFhaUxEU2lxT2kxYVBRLXFabng0ekdrT3U4eFprYlR6ZnVWQ285NGlVQnZPd2U4bExFN3VKRGN1QjJteURweDFjdDBjQzJfa2tJSWRGMlU0c2RUekVuRElNVFNIUVgzblo5ZDZnZm1KeU1DM1IzbGJsWXNBdE91Vmw2N2JSaEJWYmx0MXZheW9BbGE?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 17 Aug 2026 08:28:00 GMT",
@@ -137,18 +155,36 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Bourse : Renault, Stellantis, Tesla, BYD… Faut-il investir sur les actions de l’auto, parfois bradées ? Quel potentiel - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 12 Aug 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOZjdUbWlJLVdCeUxrYjhJOEw1UEVJZGFDMGRMcjNmN2pya1lTcHdJS1BTbE1GemhmeW5ZR2NUeVR0eEg2bU9YRjNGNjRUOFFZZEFqaE5HdGhLWUhKNlo3bDNrdTI0VXV3Z1daNExzbVZvei1EcGd4ejY2ZE5sTFRKSW54d3hHV0FGZE5QNmpHam1GVWo0am9NaVAtbHEzQlZEQzJPSUp2ZXBSclgzeVhCTExJV1puVGNKZTNwU2tXTW82eDBmaFo4MV9LQWlHQV9sX3NTdVVxUXNWUWdnQmZLOUhxR0VtbzdwT1VFTXVDVXc?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
+  {
+   "titre": "Les marchés mondiaux surveillent les taux comme le lait sur le feu - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 19 Aug 2026 17:11:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNFMtWmwxU281Y3JPUUp0OF8ySGZXZDJVUnA0RDhFemY1M3NPUzh1Qk1Od0lrakdnRERMUkJyamVaalQ4azc4aHhUYWJkUjZHbHo5cW1EOC1uMUZIbmFta19EV1d6bmtCa3ozQ1ZZcWp5Y3RULUpDV2VQaXJZUnNOS3NBcERZNi1HWHNtdzB0ZmRIODZMNUlGYUNjR1VOY1UtSDBCdlhvSEpkRnJRdHV2cWZGdGx5Q0ZtSkgwUXBtbGI3MU80dy1Wcy1YWDBKdw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Legrand «profite en Bourse de l'explosion des investissements en data centers destinés à l'IA !» A acheter - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Wed, 19 Aug 2026 17:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1B2aFJZNkVVR1Q1WC1TbkgwbHJ3aTEyOGZDX2FWUHV1WXdYSW1LcWZTaGlzdUQ5S3N0UGFZUk1DZjBVQlh5em54Mi1MVTZ0TmdvRWc1amZNeHI3OTM3Y1JWb01xLW5aTEZhWUZLX2pfcTl6cTBvZ0diaVROaUJRM0hBaFI0VE1aZ3VGY1BfaWx0TXRyb2pmSHg4bWRrcWlmc1hPYWFJQTB1Rjl2WE9LWFNfcE5PeVN0YlpKM3pOS3ZtRFE2T25KR2tSclh2aEl4UGRha3Z6Uk9EUnU1a1lpTmNMRXZtNmxv?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Wall Street rebondit grâce à la baisse des rendements obligataires ; Moderna tire vers le haut les valeurs du - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 16:44:52 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirgJBVV95cUxQSlJqMkI4cy1MNk94X2wwV0VDS0NhNDRvcHMwdHU1UW1vY3Y0bmtwSWc5OEEybXlYWnhvN0tkUmV5cmg3ZXFNZEttRzlLaGV3SzI0MUVJRGRlSGpsU2hHczJwMkdrWnBkemxxWTFrYmFvVXZfcFljZk9JRWNaYnlDX0JheThhdjA2RFZnYUlJY1JISFFHOURVeWxKbEtHQ1NkVWlLenNWZkg4RFZLcU5qTUFkejR1ZWtoTHlOZW13d0o5Q001WjZJRXcwZE1fcGV0TXQzRWpzM0ZDVE51QnlOZ3ktWXJqOWRrUUVQWWcwV1Z2T0lUUTNPNjJqUkxnWks5NFVTMDZMYkhaQ0lISU13cDJXV0g4Y3dySmdqZG0xc1N3Qnp1blozdFI2LXA5QdIBswJBVV95cUxPZHVIVnB4aFc4OXUyblV2QzdKS3NxQWRaNE1OM3prQjh0MXp2UnZtX2ZCTFVMSi1XeDB6aTBQeEZSV2thNmFnMmZzRjBha2U5dVdWMGZOWTFiYUVtSUotbmdUbS1LTDRIb1BUaDBPQ1BLWGVFLURXVHNXSkNpOEVUMkxrRlFzdlg4UTVNN0Vtc2tCMEpCcjhIeWtyN2kzSTBrQ050M2xLclVRc3dMUDFoZ2Jpd2FDVnlCdE1Pc1NycjJZeDZJQnFkdFNXemhjMGhpbzhHMC1jWUpsbWt1MDBSY0dPclBLT29XUFJLZGw4MUtDckhhNkRXTV9wWGNaQkQ4ZnZXSXFxS1paMXN0ejFCck5BYzhRejVzZTE1VjllZzdlZ0VHbDc5QUFpc1VKX25oQlow?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
   {
    "titre": "Le bitcoin bondit après la détente des taux longs américains",
    "source": "ABC Bourse",
@@ -177,65 +213,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse Zurich: dans le vert malgré les inquiétudes sur les taux et le pétrole - ch.zonebourse.com",
-   "source": "ch.zonebourse.com",
-   "date": "Wed, 19 Aug 2026 16:17:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNdkxNTmFueFV2SmFmM1pvTC1WdkRqUy1GNEgwXy1iVER6clRsZWZnNmZqT29leG9tUW9tbmt3WU81ak5Wd2otR1pfeWhVeWM3SUJmcld5ckJzVFlXZ0Z6ZkJLSW5HUmdpd0hZdnc5OEdCamNTelg1S2dVUjU2MkFSc1BVeGU3bzAxQlFyeWVCWW16ODl2NVJtTUFrUkY1RGJPOTExYm1vVEVXYmdLTGJya2FXUjVUYk5QSG1WZVJfbHVLV0pnWkpOR0pvSnpheWdrNVE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Une cour d'appel américaine relance l'action en justice sur la faillite de Signature Bank malgré l'opposition - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 16:09:45 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPOHFUM0ZmeUtwNGVnM25xRW80a2dieU16amVJektOMDIyazdUMXZtR2hYRXZaSUVrVndOME4xX0dtZENuaTN0T19rNGpRZDdjQ003T1lpNUdyRVBDS3hORGZmclFDZWF3S0RVSU9BdGNBenhBcGhkNEczU0xuRVJvODJYNUFYenVkSVkwLWhQOVlIWEUtWXg5dHBLeGlTbnRYeEdNbTN6d1ljbkFNUE9pRjBOOS1RU0tKTlNiWVNtUU04OXZMQUVDSXNqMFotNUg5UXVCNDhEdmpGQm0yMDRzRUFvNUljbkNFSTdxUzRNeW1idzR0aHlUa3lWQkhzd29QU2hqeThSVElZV3d2eERaempOZEQyX0FHQUROQl9nTHY2b1I30gGqAkFVX3lxTFBzUXBWeVNRbUY5ck9tNW5IOUtGczBoel9zWlNaYnFDams2d2EzZHRKVmJEeFhjSExfUnp1UHlyUEttbDRpTU9TZFotNHJZUk9zSVgxa3lZNkZaN1BOcmdUYmlMOU1MTWlucEMxLVRpem1vUUl2U1BFMTZKQ3QtOTVjcG1JM0J5SWJDRUZZakIyLUpsWS1ldnh6dnd0WGo4bzBUQVhmQU5TX0VFU25GQnp0bHdqVjBkYkZpTlcycTZwMnBEUXdlcHZFYW03Y0dPLWdyLXJUbVc2aG81WkVpUmxNUlRRRmk3OTR4R05NVTM1R0hfamNZU3pyeHF0bmRVeWoyTFotSFQ1U0wzdzBINi1IRDAwMVNjbTVJejhiRnhFTVgyX0M3S3MwSHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe finit en petite baisse, la pression sur l'obligataire et le pétrole continue - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 16:06:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQTXlwcjRLa3BtQjc4X1VnNks5M04yWUp6WXRHME11aHJiLWVlenQ1Q0trbUlhVjJqUnlpUm12ZUJGUEI5VTJHa0RVT1QzRUVVTk1XSEFCVUlZUV9DbmsxWkVrNWUzMjhzNWgyNk9fV2Jub2VBcDRmQXZFZHdQT1JWdTMwLWpab2hubTZGZFVRd3M4NkQ4b09acDN0SG4wVUpLdUdBSU1vWGVHWE5PQzJWNUlTWmhuTS1IemZhdjhlcE1UbDQ0a2lqVDBvUVNFTTBwQkxrUnNiZFJxMmlwQXYxME1pQjZnbFM1MGFza1JTakpabUM20gH6AUFVX3lxTFBkWEZpT2RrSjZuS3p1ZFlzVlduNm5RV2x0Y0tlLWtTb1FPQ0tldnU4eXZWdUgtaEZ6QkJheWItNEZIa2NaSTR1Y3hUXzluUkpnS3l5R1c4dDlER1otcUdKc0NXV3BOUXJ6TnlpWHVYMXpVY180a3ZHZEM2SUxWSGEtX045YnJYbjVWNlBTYjN1bTUxZ21udGN1cE5Tb3IxakN5emFXYzRpdk1kVm95WHNPa1BxUVlXY0FJWDRqcjBUaDBQaG82REl5c0pLek8tZFFWWkp4Vjl2dHRKWUtXUUhpbkxkdTY0UTRUMmM4NXlyUm1kQkQwZ3FHdEE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Taux : nette détente des T-Bonds, pas de réaction sur Bund et OAT - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 15:59:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeHZtZnFnZE9qc0VYc3dicTFSeW9HZGhFQXh4TWpOeGxlQlRyd2t5Vk1UaG5lNFQ4MmkxLXRmM3hhOWQtUDRhX0FQd3RGZEZWSmp4b3kzV05DSHNiZ0p2NWJtSVZlVTQ5bFgxNjd0TnJjR3lZT2ZULWo0RVdTcF80MVRIMlpnSGtGTnRkbzBQUTREbnctLTZRdDIwaThVOFNUWE1tNS13a0h6bnBiam5rMGgwWG8tZVhpbG1hTkllSFpXQVJwNERZdWdObFFrVUU3cENtT3dNNNIB3AFBVV95cUxPcFNvY2FRM2ZTck5BVEdvLS1udWNDLURvNUFWZWJ3SV9Ec2djOVFYMUNKZGxydGZPalhWWVctZ3MxQlVWdklUVjRvZ1lZenZTZ19QTV9zY2xLZXJqekotcV9Ha084YzdrQW9Tby1uZzU1TklVZkNacngyN1U2YXM4MkhzY2NHeUV1a1NjaTNxM2JLeDA1ci1OX21tek9iTTFGbll0SkRDWDlrbS1YQW1fTFlwMTRfX3VQNDd3MHFMYXhZZVpEYUZhX3ZsMEI3UnVmajhIV2tIU0h3c1dU?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40 : La Bourse de Paris s'essouffle à la clôture, les taux longs au plus haut depuis 2008 - ch.zonebourse.com",
-   "source": "ch.zonebourse.com",
-   "date": "Wed, 19 Aug 2026 15:52:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQU0lzQnBYX1Z0WTJNM1RxNFdkU2M3dGtvV2pOZEYtU01LQWw2RkRZdHM1bERfNTFFZ0Y2YWtCaDR4alFLRWIyTE5wNTRlV1h1VUdOTTEyZVRNWHdMLVZVWHRpeE0tdmJ0bG9USURrZHBwczgwT3Jvd1VmS185dC0ycFR4SkpBSjBKdEw3TU42SDBsWlBZc3BpUENjcFE1dWVhc3ZQWXdzSHBheUFyRmNOZEhNc3FVU2p1Rnc3Z09ycm1uLVRwTlMydHlwOEtkcHFSS25uODZMekZQQVVpQ0hEbDJUVDc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris s'essouffle à la clôture, les taux longs au plus haut depuis 2008",
    "source": "ABC Bourse",
    "date": "Wed, 19 Aug 2026 15:51:21 GMT",
    "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-s-essouffle-a-la-cloture-les-taux-longs-au-plus-haut_701420",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe sans direction claire - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 15:49:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVzk2N2JUM2NvU25XY0ZDYjU1emJ3bnNrcE9WN181MkZxQ3Q1bEpFUzdyTUk4Y0QzbDZEWEpPbzlOX2JVaDFTZXVNeWRZemJPS3ZBZGQydGJpZlktUjgzbDFfb1hBWFRtX0dlMW50eDByWC1jZGJ2NkNrNV96MDIzeHY5Qzhvako1NXpySEJtb2pMcjBOX3RYUjhzbVNfd01ZdUFYbFF5UzdxTEgt0gGyAUFVX3lxTE40Ym1DMjVIcWVwT3lfNm5pejZHd0l4a2l5NG5RNmhPUWxWQk1QeWtSYVd5VGZLeHphZ0MxRTZMVmJwZ21pa3E3eUV3VDN4bXo5QkMxVFBTRmhUXzRiOEpZdXJfV2MzSlp2ZlRRUlY3WFc2SjRrZ00zY0tRc2R5SzB2SXo3eEx6R0YzNFJOQmZSZHBjTzMwX1R3Qlk1OWozR0UtLW9LYVFjaVc1d21BUE5UWXc?oc=5",
-   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -258,8 +240,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Selon la Fed de Boston, la forte productivité a atténué l'impact inflationniste des tarifs douaniers - ch.zonebourse.com",
-   "source": "ch.zonebourse.com",
+   "titre": "Selon la Fed de Boston, la forte productivité a atténué l'impact inflationniste des tarifs douaniers - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Wed, 19 Aug 2026 14:01:15 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSzBXUDViRVFRVWdHM1FncEJKWDdLWWd2c1p3Q3dIWklyVHZGUzd0b1k4ZnF1RG1oamxvM2thY1lzT0VPdm55RXRzUlUtZWJGSHJ6MWJfZzVudnBLZlpkUEYtU0hUaFFGUzNjdEZZOEIxbW5kZ1hzb3ZXUTdFMmNfcF9rS0ZUaWlRek84SkdxWkxzdDd6N1ZXVE5LZllDcTMxdUE1VUZRMldtbmRSS1JiVTlOaExKY3ZTaWhvdktpYzdtSC1BN3pVSXV6ZkdUdHYxbXJySUcyNk5mOElzUjFJWndlejQ5UFE5MTN3WWdfYms?oc=5",
    "tag": "Fed taux",
@@ -418,6 +400,15 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Royaume-Uni: l'inflation repart à la hausse en juillet, à 2,9% - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 06:39:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNT1l3cXYxUWlKU2NXcVVwa0h0Rjl0Rks1Q09yMkE4eVdwemhJMkVqaHRjRzltaDBZVUpEX2dEdWtMazBRVldZZjM4emFROXVhYXFRd2xLTlphN2FBSTRiTWVFcGx6MUkyejRsdlFITE1ocTdNX1p5ZjE1ejAzcU0ybVgwYm83dUtSNkwwRkhPaGdJamViUGdhb21YUmgxcDkyNk1HVXN3dW1jMnNBRkNlNWQ0dzU0NkVKUFhDenppaEthUDkxZXdIRVZPWUZFRm9McmhCMkxSdWFuQW93clJ6TDEtZ3o0d3dDaUlV0gHrAUFVX3lxTE1PWXdxdjFRaUpTY1dxVXBrSHRGOXRGSzVDT3IyQTh5V3B6aEkyRWpodGNHOW1oMFlVSkRfZ0R1a0xrMFFWV1lmMzh6YVE5dWFhcVF3bEtOWmE3YUFJNGJNZUVwbHoxSTJ6NGx2UUhMTWhxN01fWnlmMTV6MDNxTTJtWDBibzd1S1I2TDBGSE9oZ0lqZWJQZ2FvbVhSaDFwOTI2TUdVc3d1bWMyc0FGQ2U1ZDR3NTQ2RUpQWEN6emloS2FQOTFld0hFVk9ZRkVGb0xyaEIyTFJ1YW5Bb3dyUnpMMS1nejR3d0NpSVU?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
   }
  ],
  "fiscal": [],
