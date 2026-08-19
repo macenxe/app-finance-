@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-19T08:50:44.666Z",
+ "genere": "2026-08-19T09:45:00.338Z",
  "globales": [
   {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
@@ -56,10 +56,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Zone euro : les rendements obligataires reculent face à la stabilité du pétrole et au ralentissement de l'inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 12 Aug 2026 15:38:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTWl2SUpBbk1adnl5RTZlMllMMnh0WkUzNnBGNS14LTBfa1UyMlRkRHp5LWVjeDFqZ1F4RmZSOWRQQm43YlRkZjRTVkZVVVhsT2xVeHdaaEFwT1J1aTVpZ3J4ZFpNSDNwWHZaNzVzMnZyaG13TXpLYVR0RUltNzF3VUNiUVdJZHplNl82b2ZxdGRYSzh3U0tNVS1jRDN5LXFLVy1HVi1teUJQZWxDV1ZHVVpGRXZWMzZ3Yk1yRVByQ0VZS0VlY0lFRW5ndkJjaW53a3NpdEtwRzNXWUtJM3gxOWRqTDlPaDFJaUFyU2d4dlQ?oc=5",
+   "titre": "L'Europe finit en baisse malgré un ralentissement de l'inflation aux USA - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Wed, 12 Aug 2026 16:24:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZUtXTlVqalRLRC0wd21ueUlyenBGXzhtejJhV2xlUXMzdEE3LUZtLUNYUXM0bldfZl9laEd3emFnQk5Cc3ZYYmU0TUhOUHNTeFdkTnU2OV91cEZjejF2U3FsSkw3ZjQ2Z0dEQjlRckhvQURjRHlLR2J0NF9fQ1d2RVVSMVlDbHh0WEJIb2FjeUVNa3g1Q2k2Z3BTdWtOQnIwMlRDajk3X0gyWlJ1ektBc3Q1Yw?oc=5",
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "negative"
@@ -94,13 +94,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.19% - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Mon, 17 Aug 2026 23:21:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "date": "Tue, 18 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTzFlMGJYWS1kMmYtcDhFU1Y0YXhrMVhib2VTTHRsUExVUzlNNGJ4LVp6aUJ2MU92a09sWFd6X3JHNU1MTDRoN1BCSmUwcmRYdm1WcnFlalA4ajBBY1pTeXAyOUFjeG1vVXNoZ1JHU3RtaWFoQ2Y4MVpwdTRlNWxkR0RNTE5JN0l2eFVQMzlnNGtwblFrdmhFNFp1Mzd3QTkxdVUteEpOWmNESndLOUVUZHJqa2s1UV9scW81NGN5SFJBd2hIZzVUdGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
    "titre": "EQUASENS : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
@@ -159,6 +159,33 @@
  ],
  "eco": [
   {
+   "titre": "Zone euro: l'inflation confirmée à 2,9% sur un an en juillet",
+   "source": "ABC Bourse",
+   "date": "Wed, 19 Aug 2026 09:16:51 GMT",
+   "lien": "https://www.abcbourse.com/marches/zone-euro-l-inflation-confirmee-a-2-9-sur-un-an-en-juillet_701411",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "\"L'Europe a largement manqué la première révolution numérique\": Christine Lagarde estime qu'elle \"ne peut pas se permettre\" de rater la deuxième autour de l'intelligence artificielle",
+   "source": "BFM Économie",
+   "date": "Wed, 19 Aug 2026 09:04:05 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/l-europe-a-largement-manque-la-premiere-revolution-numerique-christine-lagarde-estime-qu-elle-ne-peut-pas-se-permettre-de-rater-la-deuxieme-autour-de-l-intelligence-artificielle_AD-202608190241.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Alphabet lève 3,9 milliards de dollars grâce à son premier emprunt obligataire libellé en dollars australiens - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 08:47:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPb1UtTmFlM0MyNVp2aVJPaVVEdzVRa25FQjViSE5pUzI4MTVob3I3SDNhZzFESUVxQV9tVjJPWllzdmlXX2dTaHFWeUM4a2dlN2JCenotTHItaTlDZ3pXNWxYbkFyeHZnd1V2eDJfdHgyd2xIUUtzZWZtclV4WVV1NUlFQjJBTHliMmY2VXF0LTJwM0hmc1BpeW5nUk9qeE52R3QwRm0za2xDMThDWkZScEVndFhxV3JhZlEzMGVCcm5fa01lcnpqS2lFS0tFdjlOaHBMRWY5U3ZqbFQ1aWVxMmxzMmoxS253NlpBcmRTZlhtNVdhaENJa0pyME9EZjAyTm1fNzJ6QTVEOUxRR1lVcllUQzktd9IBmwJBVV95cUxPWjhvR2dFbkVXcllfN000ajBFQ1FMWkdmRjVxbXUyME9MemYzNWVXVjNaN1AwTHR1LXRoOWNGRHYyRXpqTklpSFllQTNSVjFEWEIzOXl0TGF6TmlBQzY1bzMwQWtBb1ozWFpseUFTUkhQZmFsQ3J6Q015M1l1aE1sSVVUbVJwWTIwTFk1dXV1R2tHR3hNOUNoYnR3OFpPTUZkOVRtSERUQXI0bmNFUlRzVUR0VVNJdzhEY2lHdEdycXNMMDg1QVhXQXZCOXFtZVQ5blVBSVRrd080TndGNEVxV3djcVBVWnB2OTd3T2hHbHlIMHpzcjBqSk1vYWc2SzZXV3NHeVhlaUstb3dsTGNQdXFNdjk4UkV0anFF?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "GB-L'inflation a accéléré en juillet avec les factures énergétiques - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Wed, 19 Aug 2026 08:42:25 GMT",
@@ -177,74 +204,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "GB-L'inflation a accéléré en juillet avec les factures énergétiques - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 08:40:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa3ZsUktKSkFzVzFmeFFocFVaZW94UVhuY19nS0ZtZE9rSGNqbHJYMVNVbHZiZjFPZVFpMGNEalNTT3RwczNMd2tHM2RCZkJkS2RnU0lyQ2JBelBpR2ZON2szYkUtQlhvWldaNXhpeUtRSzZ0bVZ3cmk4S1RzNnNYLVBhbTI1bHFjR2R6ZFdFMzJHRWdZVDhnbElSTnNTRzBSSndvU2xJNmh3aXdZZFN2eld1UUVPaDRqaFJKYzN1OWxIc19CQ1ljVnJhbDJPWV81dzN2c2VsVllwcnVKMWfSAeMBQVVfeXFMT1JQN2F0Si1ia0lXZnlZVHgxVmZkcXdrQUNDZXQzVFFLN3RfYmwxM3hhSnpwRTZoQTMtVmdoc3F0TXppLXkwUFVxNFRtSGNTRUh6a3hBQzlJYjNtd0hWUk5zRVU4V19wQTJ0ODJVQlRidkEtVG95MThBYTJXeFZ3LUFKOGhyVDJweHptclU1c093YkpjWWQ3cm1KekFONVR5RXNwWWYzbFpsZFNqQjBTX0NVR1o0STJTcnhiZVlqMmVaSWdQak8wVkhQVmhpU0R6WWphUUNSOXhmd1hCTXBTMzBvUk0?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Aberdeen n'attend pas de hausse de taux de la BoE, malgré l'inflation - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 19 Aug 2026 08:35:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWmhUdVROd3dkTHE0UHBPLWgxdGxIdmlGVDJPcFJOLVZ2SkFCVGJSR2ZuNmt1VVVmTm5HdEdOYW5OVUk2dFpwWDFJU0VkVXN3Y2tleXN0Um9sVEpDeXpLYVFrcDdKT0JqaWtYcTMwWFZpdmRPb3ZSWXBHcHhxandhZUNDYzRQREQxbFlIOFQwOG8wRkdWSHZIdTc1Y1JiOV9DZS1BcGNQdjVjZEJfRTQtUjhfbDFDTGdWc3ZzWjlDMGE1b3ZwYUYxb0QtTnlraHdhaG9NOUcwM3QwZXN4a0VB0gHkAUFVX3lxTE01X04zZ2lQaGZLSzZaN3JCcU8tWmw3REtXaHNuaE54UG8zMWIxaFNzMk4teHowU1JxalVVU3FLT1JfTEFpOUpxMUR5bC1zdDM4TW9kSTc0ZGtzaW1IQW41RVh1OVdWQ3l0QUhtSHI5MWE3cy1lUzNDSWZzR0hvWFEwU296YmpjeDFtUUw1WHd1RE9va0FMZ1hKSnF3Q2hqMWRvNGRjZEk2Wk5Yci1RYnZtN04xenhEYnhvaE9kWnR4RXdGbVhOS3M4ajJLTW1PS0V2RnkwRWJtMFoxMmVSbzBpZlRDaA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La banque centrale d'Islande relève son taux directeur à 8,00 % - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 19 Aug 2026 08:33:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRTk5ZFN4d0FMS2U4TXN0ZVZTYzg4SnFZUk4wcWdWOV9iYjVPeUthNThIRGRpZDdIUmdjaW1DWVlTZlhCSUNXdzF4NkhmejRCSV9KUUtHSjBfMUhDN1JoY1BuTXJLb0w5OTNCeUl6Z0xTZXM1NWQ0bHp4N0dlSGk0SHdDZThqRzJhSGxUTkxNMmc2Vl9zdkJLdnZoSVZUUE1pOWsycHJCZUxncGJjRkc4d3hGWWE4Y2RHYXlrVGxZUQ?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40 : timide rebond après six séances de baisse - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 19 Aug 2026 08:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaGVTY2MyaUMtdTdKWElDRXZ0RlNYWUxzWUQ1UU5VeWtjQUEtU3lTbXlidXY2dGNPWkx0ZmxCRzY3TTRuTUtKQUZseGhzYTYwTVUyNEJTeVhPOHNwd0dadFVKem81cHphaS0zMEhFTVhDMjY4d05hTks0RUlSOUNYUW9kNVRCd2tQREtjLVc4TkhFbVpnM1lSTVZzdFJLWDd2NjQ0?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Prudence générale en Europe, même si le CAC 40 tente un rebond - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 19 Aug 2026 08:26:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaWhRV0JGNXdWWHlWeDZoM2RPOFB3WTh4aGFHVkRZTXVIZk5iRWs3Q1ZoZTI0RUtMRm9UZXhpZnNRVXI3Nm14ZXFHaDVyeTdVTkI5VlctNjNubXF0NDRiUjVGUEUtYnNmS3d4WkxtNG9RVWx3Q3RIYWcwN1FuT2ZlNzhUWFVkc0xoTEt6LUNSaTM3Q0ZXaHlmWGV2REdtR2Faa194NWV6aDl0R01Bc2tkZFZFTXp5WXFtLWxiNFNtNA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Bourses : l'inflation rassure, mais les risques s'accumulent - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 19 Aug 2026 08:26:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPb0hxcEdfcWVLR0R4cC1QYkY1c3VlRTFWUFo1bXVFVVBUcktEN1NQeDViMEx5NjZuTUNXTmk4YnBUbVhaZjVST3p6MjFtM0gtVDFoTGRXUEhNY0ZnWWpBWkEtcmNTN0xtZUY5TDNfZjNaM1dBRVB5U3U5TlZNcVNYMmNLVVMtTGp6akY5OGQyWTBTN3dYcWdlM0Q2SHlqWXNLTHpwZ0RoLWFPMlU?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Dette mondiale sous pression, les taux français dépassent 4 % et les records tombent",
    "source": "ABC Bourse",
    "date": "Wed, 19 Aug 2026 08:01:58 GMT",
    "lien": "https://www.abcbourse.com/marches/dette-mondiale-sous-pression-les-taux-francais-depassent-4-et-les-records-tom_701409",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'Europe monte timidement en attendant les minutes de la Fed - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Wed, 19 Aug 2026 07:59:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYzhCa1ZGaTdDZGJaamRscHpDM08xbGJ2eU5qZXdqSXBJYUVJVnFkQ1RrOEJlN3NPMXdSTjB4ZTV6enlKYjE4OGotWG1YZ2VkUzFMUEI2YzUyYmp2OXJCVEpCcklzYWtiQjhyVk90OVhvVVlkRGlGVkt0aEk1OFhKczNSS1lBeXdlWU5pc3NWTXNFcFBteUhsUU00aTRXekR5ellR?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
@@ -256,15 +220,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Veolia se distingue sur le CAC 40, RBC voit encore du potentiel - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 19 Aug 2026 07:59:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRElEdmJEcWRUTFRoNHhIU1BFT3FLaEZYZ2lmN2VRbFA3R2hKY2Fib25DTENkaUZreUk3ZGg0R2IzMm1rb3VyVjlOM2tGcmlya1F5cTdfMjVyRWI3YjRPaGNZUTdReEx0Q3ZQX3c3MHNKZUpvcEx1dDB2c09nbGJoNnZfWlBBdk9jRm1jR0ZsRFlHUVRNR1Q4dDhBX0gzTUJVVmEzM29oS2xQM2RDTFNZWFZHRkVadENRZlp4NWlyams?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "L'inflation britannique accélère de nouveau en juillet et frôle les 3% sur un an après le relèvement du plafond des prix de l'énergie",
@@ -357,6 +312,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "Royaume-Uni : l'inflation accélère comme prévu en juillet - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 06:08:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUzlPN0p0WFhVMFdxWm1fcmxscUtzcEFPdVZVbTRHVUs2eDJReXdnVzVoM25INFhUb2w5dEQwMFdSV0JYYnJjbm9NNFBiR3p2dXNQekp1ci1vTlZEZHF3YnZVcFhBYWo1aElQdHVqYl9UY0N0RVhFeHZLdW1KVExUMDZYdTNZUEFIX04tR19KWmhjcE14NG1FeV9wYmdsaGVTLTU2dXVpRG9CUlJVdWRRNDgxRkRGSDROVy1URWdoWGtQd19JTmVkaEFuODlqbVE0WGxN0gHTAUFVX3lxTFBTOU83SnRYWFUwV3FabV9ybGxxS3NwQU91VlVtNEdVSzZ4MlF5d2dXNWgzbkg0WFRvbDl0RDAwV1JXQlhicmNub000UGJHenZ1c1B6SnVyLW9OVkRkcXdidlVwWEFhajVoSVB0dWpiX1RjQ3RFWEV4dkt1bUpUTFQwNlh1M1lQQUhfTi1HX0paaGNwTXg0bUV5X3BiZ2xoZVMtNTZ1dWlEb0JSUlV1ZFE0ODFGREZINE5XLVRFZ2hYa1B3X0lOZWRoQW44OWptUTRYbE0?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "L'Europe devrait ouvrir en baisse, Moyen-Orient et minutes de la Fed dans le viseur",
    "source": "ABC Bourse",
    "date": "Wed, 19 Aug 2026 06:06:30 GMT",
@@ -400,15 +364,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe finit dans le rouge, prise en étau entre Moyen-Orient et hausse des taux longs",
-   "source": "ABC Bourse",
-   "date": "Tue, 18 Aug 2026 16:04:36 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-finit-dans-le-rouge-prise-en-etau-entre-moyen-orient-et-hausse-des-tau_701394",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
   }
  ],
  "fiscal": [],
