@@ -11,6 +11,13 @@ Périmètre : 56 UC (D7), 41 nouvelles (les 15 actuelles sont toutes dans le fic
 | 3 | Données générées (npm run uc / fonds / ucmanagers) | c3.py | **conforme** (essai 2 — seuils/arrondi de mesure corrigés, bug composer D12) |
 | 4 | Badges éligibilité Mut/Fin (lignes + fiche) | c4.py | **conforme** (essai 1 — mesure C4 épousée au code, exigence inchangée) |
 | 5 | Actus UC étendues au catalogue | c5.py | **conforme** (essai 1) |
-| 6 | Bilan : tous contrôles, typecheck, aperçu mobile, commit final | tous | à faire |
+| 6 | Bilan : tous contrôles, typecheck, aperçu mobile, commit final | tous | **conforme** (C0→C5 tous verts à la relance, typecheck OK, aperçu mobile capturé) |
 
-Bornes git : lot 0 = « chantier UC : lot 0 » ; lot 1 = « chantier UC : lot 1 » ; lot 2 = « chantier UC : lot 2 » ; lot 3 = « chantier UC : lot 3 » ; lot 4 = « chantier UC : lot 4 » ; lot 5 = « chantier UC : lot 5 ».
+Bornes git : lot 0 = « chantier UC : lot 0 » ; lot 1 = « chantier UC : lot 1 » ; lot 2 = « chantier UC : lot 2 » ; lot 3 = « chantier UC : lot 3 » ; lot 4 = « chantier UC : lot 4 » ; lot 5 = « chantier UC : lot 5 » ; lot 6 = « chantier UC : lot 6 — bilan ».
+
+## Chantier terminé le 20/08/2026
+
+Relance finale des contrôles : C0 à C5 tous conformes. Bilan rendu en conversation.
+En attente d'arbitrage utilisateur : I1 (faux doublon FF), I2/I3 (fonds sans source de
+données gratuite), I4 (centrage bureau, mineure) — voir journal-attente.md.
+Aucun push effectué (consigne).
