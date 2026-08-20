@@ -9,8 +9,8 @@ Périmètre : 56 UC (D7), 41 nouvelles (les 15 actuelles sont toutes dans le fic
 | 1 | Identifiants (Yahoo/FT) + éditorial (SRI, stratégie) des 41 nouvelles | c1.py | **conforme** (essai 1) |
 | 2 | Catalogue front + listes back + CAT_MAP 4 catégories | c2.py | **conforme** (essai 1) |
 | 3 | Données générées (npm run uc / fonds / ucmanagers) | c3.py | **conforme** (essai 2 — seuils/arrondi de mesure corrigés, bug composer D12) |
-| 4 | Badges éligibilité Mut/Fin (lignes + fiche) | c4.py | à faire |
+| 4 | Badges éligibilité Mut/Fin (lignes + fiche) | c4.py | **conforme** (essai 1 — mesure C4 épousée au code, exigence inchangée) |
 | 5 | Actus UC étendues au catalogue | c5.py | à faire |
 | 6 | Bilan : tous contrôles, typecheck, aperçu mobile, commit final | tous | à faire |
 
-Bornes git : lot 0 = « chantier UC : lot 0 » ; lot 1 = « chantier UC : lot 1 » ; lot 2 = « chantier UC : lot 2 » ; lot 3 = « chantier UC : lot 3 ».
+Bornes git : lot 0 = « chantier UC : lot 0 » ; lot 1 = « chantier UC : lot 1 » ; lot 2 = « chantier UC : lot 2 » ; lot 3 = « chantier UC : lot 3 » ; lot 4 = « chantier UC : lot 4 ».

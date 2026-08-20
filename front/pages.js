@@ -35,6 +35,19 @@ function perfBadge(isin, ucPerfs, cle, classe) {
   return perfCell(ucPerfVal(ucPerfs, isin, cle || 'ytd'), classe);
 }
 
+// Éligibilité d'une UC aux deux enveloppes (booléens `mut` / `fin` de UC_CATALOGUE, data.js).
+// Abrégée en pastille dans le tableau, où la place est comptée ; en toutes lettres sur la fiche,
+// où l'abréviation n'apporterait rien. Les contrats visés restent en info-bulle dans les deux cas.
+const UC_ELIG = [
+  { cle: 'mut', court: 'Mut', long: 'Mutuelle', titre: 'Éligible Mutuelle : CHP, CHC, CER' },
+  { cle: 'fin', court: 'Fin', long: 'Finance', titre: 'Éligible Finance : CTO' },
+];
+function eligBadges(u, enToutesLettres) {
+  return UC_ELIG.filter(e => u && u[e.cle]).map(e =>
+    `<span class="uc-elig-badge uc-elig-badge--${e.cle}" title="${escHtml(e.titre)}">`
+    + `${enToutesLettres ? e.long : e.court}</span>`).join('');
+}
+
 // Performance d'une année civile, lue dans la fiche signalétique (front/data/fonds-meta.json) :
 // c'est la performance officielle publiée, dividendes réinvestis, exacte au 31 décembre — nos
 // séries de cours ne donneraient qu'une approximation (Yahoo ne sert que de l'hebdomadaire
@@ -1932,7 +1945,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           <div class="uc-item-haut">
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
-              <div class="uc-item-isin tnum">${u.isin}<span class="uc-filtre-badge">${filterLabel}</span></div>
+              <div class="uc-item-isin tnum"><span class="uc-item-isin-code">${u.isin}</span><span class="uc-filtre-badge">${filterLabel}</span>${eligBadges(u)}</div>
             </div>
             <span class="uc-societe" title="${escHtml(meta.societe || '')}">${escHtml(societeCourte(meta.societe))}</span>
             <span class="uc-cat"><span class="uc-cat-badge${catCle ? ' uc-cat-badge--' + catCle : ''}">${catLabel}</span></span>
@@ -2048,12 +2061,14 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
       <div class="fe-collapse${strategieOuvert ? ' open' : ''}">
         <div class="fe-collapse-inner">${strategieBlocs}</div>
       </div>` : strategieBlocs;
+  const eligPastilles = eligBadges(u, true);
   return `
   <div class="ac-detail-panneau" data-uc="${escHtml(u.isin)}" data-graph="${escHtml(u.graphId || '')}" data-compare="${extras.map(e => escHtml(e.isin)).join(',')}" data-cmp-idx="${idxCmp.map(escHtml).join(',')}" data-chart-id="${chartId}" data-compo-id="${compoId}">
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>
         <div class="ac-detail-sous">${escHtml(u.categorie || '')} · ${escHtml(u.isin)} · Actions ${escHtml(String(u.equity ?? '—'))} %</div>
+        ${eligPastilles ? `<div class="uc-elig-ligne">${eligPastilles}</div>` : ''}
       </div>
       <div class="ac-detail-niveau">
         <div class="ac-detail-niveau-val tnum">${perfTxt}</div>

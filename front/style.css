@@ -1029,8 +1029,23 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .uc-item-haut { display: flex; align-items: flex-start; gap: 10px; }
 .uc-item-id { flex: 1 1 auto; min-width: 0; }
 .uc-item-nom { font-size: 13px; color: #16304f; font-weight: 600; }
-.uc-item-isin { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: #9a8f7a; margin-top: 2px; letter-spacing: .01em; }
+/* `flex-wrap` : la rangée porte l'ISIN, la pastille de filtre et jusqu'à deux pastilles
+   d'éligibilité — sur un écran de 375px elle passe à la ligne plutôt que de comprimer l'ISIN. */
+.uc-item-isin { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 6px; font-size: 10.5px; color: #9a8f7a; margin-top: 2px; letter-spacing: .01em; }
 .uc-filtre-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 3px; background: #e8edf4; color: #4a6080; white-space: nowrap; letter-spacing: .02em; }
+/* ── Pastilles d'éligibilité (Mut / Fin) ──
+   Deux teintes de la charte, l'or pour la Mutuelle et le bleu nuit pour la Finance. Facture en
+   filet sur fond très clair, et non en aplat comme .uc-filtre-badge juste à gauche : deux aplats
+   bleutés côte à côte se seraient lus comme une seule et même information. */
+.uc-elig-badge {
+  display: inline-block; font-size: 9.5px; font-weight: 700; padding: 1px 5px;
+  border-radius: 3px; border: 1px solid; white-space: nowrap; letter-spacing: .02em;
+}
+.uc-elig-badge--mut { border-color: #dcc38b; background: #fdf6e8; color: #9a7020; }
+.uc-elig-badge--fin { border-color: #b9c8dd; background: #f2f6fb; color: #16304f; }
+/* Fiche d'un fonds : mêmes teintes, libellés en toutes lettres, sous la ligne d'identité. */
+.uc-elig-ligne { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.uc-elig-ligne .uc-elig-badge { font-size: 10.5px; padding: 2px 7px; }
 .uc-item-right { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
 .uc-item-perf-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
 .uc-item-perf-label { font-size: 9px; color: #9a8f7a; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
@@ -1604,10 +1619,15 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
      secondaires. Les noms les plus longs (« Pictet Clean Energy Transition P EUR ») passent en
      ellipse sous ~1330px — l'ISIN et le nom complet restent dans l'info-bulle de la ligne. */
   .uc-item-nom { font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  /* Une seule ligne : l'ISIN et la pastille de catégorie sortent de la ligne (ils demandaient
-     130px pour rien de plus que ce que disent déjà le nom, les filtres et la fiche de droite).
-     L'ISIN reste accessible en info-bulle de la ligne. */
-  .uc-item-isin { display: none; }
+  /* L'ISIN et la pastille de catégorie sortent de la ligne (ils demandaient 130px pour rien de
+     plus que ce que disent déjà le nom, les filtres et la fiche de droite). L'ISIN reste
+     accessible en info-bulle de la ligne. La RANGÉE, elle, reste affichée : elle porte les
+     pastilles d'éligibilité, qui doivent se lire en bureau comme en mobile. Vidée de ses deux
+     autres enfants, elle est de hauteur nulle sur un fonds éligible à rien — la ligne garde donc
+     ses 46px mini, et la grille ses colonnes. */
+  .uc-item-isin-code,
+  .uc-item-isin .uc-filtre-badge { display: none; }
+  .uc-item-isin { margin-top: 3px; }
 
   /* Page Fonds : le tableau prend toute la page (une seule colonne de grille), la fiche s'ouvre
      par-dessus au clic. On garde .ac-split en grille plutôt qu'en display:block pour conserver
