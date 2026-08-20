@@ -95,6 +95,12 @@ type Compo = {
 
 const brut = (v: any) => (v && typeof v === 'object' && 'raw' in v ? v.raw : v);
 
+// Compositions SUPPRIMÉES à la demande de l'utilisateur (données de reporting trop anciennes
+// chez toutes les sources — la fiche affiche « données indisponibles ») : la génération ne
+// doit pas les recréer avec les mêmes données périmées. Eurose (FR0007051040) n'est pas dans
+// FONDS ; Carmignac Patrimoine et Conservateur Immo-Or y sont, d'où cette garde.
+const COMPO_MANUELLES = new Set(['FR0007051040', 'FR0010135103', 'FR0011199314']);
+
 // Libellés français des secteurs Yahoo (mêmes intitulés que les fichiers uc-compo historiques).
 const SECTEURS_FR: Record<string, string> = {
   consumer_cyclical: 'Conso. cyclique', basic_materials: 'Matériaux', healthcare: 'Santé',
@@ -185,7 +191,7 @@ async function main() {
       fonds[isin] = m;
       ok++;
       // Composition écrite seulement si exploitable : un échec conserve le fichier précédent.
-      if (compo) {
+      if (compo && !COMPO_MANUELLES.has(isin)) {
         writeFileSync(join(SORTIE_COMPO, `${isin}.json`), JSON.stringify(compo, null, 1) + '\n');
         compos++;
       }

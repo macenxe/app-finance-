@@ -277,8 +277,8 @@ const AppAPI = (() => {
         const d = await fetchJson(`${WORKER}?${q}`, 8000);
         if ((d.points || []).length >= 2) return d;
       } catch { /* Worker injoignable : on tente le repli statique */ }
-      const fichier = id === 'scrape:oat' ? 'oat' : 'cms';
-      const d = await fetchJson(`./data/history/${fichier}.json`);
+      // Repli statique générique : scrape:<nom> → ./data/history/<nom>.json (cms, oat).
+      const d = await fetchJson(`./data/history/${id.slice(7)}.json`);
       return { ...d, points: filtrerPeriode(d.points || [], periode) };
     }
     try {

@@ -803,7 +803,7 @@
    "equity": 50,
    "graphId": null,
    "xid": null,
-   "graphId_note": "fonds vivant (VL DNCA ~470 EUR) mais absent de Yahoo Finance et de FT Markets sous cet ISIN (seules les parts DNCA Invest Eurose lux y figurent) — D5 : ligne non cliquable, incohérence I2",
+   "graphId_note": "fonds vivant (VL Bourse Direct ~472 EUR) mais absent de Yahoo/FT/Morningstar sous cet ISIN — D17 : le cours construit depuis Bourse Direct (D16) est retiré, l'historique disponible (amorce 30/04/2026) étant jugé trop mince par l'utilisateur ; ligne sans valeur, fiche sans graphique.",
    "xid_note": "idem graphId_note (aucune tearsheet FT pour FR0007051040)",
    "srri": 2,
    "srri_source": "DIC officiel DNCA Finance, EUROSE - Part C (EUR), daté du 16/04/2026 (téléchargé via epr.amfinesoft.com) : \"Ce Produit est classé 2 sur 7, soit une classe de risque basse.\"",

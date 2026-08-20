@@ -1703,7 +1703,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
   // Filtre restauré depuis un état antérieur : un onglet disparu (ex. « Actions thématique »)
   // retombe sur « Tous » plutôt que d'afficher une liste vide.
-  const CATS_VALIDES = ['Conservateur', 'Favoris', 'Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
+  const CATS_VALIDES = ['Conservateur', 'Favoris', 'Mut', 'Fin', 'Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
   const ucCat  = (state && state.ucCat && CATS_VALIDES.includes(state.ucCat)) ? state.ucCat : null;
   const feOuvert = !!(state && state.feOuvert);
 
@@ -1766,12 +1766,23 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
       + ' Les VL sont diffusées avec un jour ouvré de décalage, et la plupart des fonds valorisent le même jour.';
   };
   const dateNotes = ucMetaGenere ? jjmm(Date.parse(ucMetaGenere) / 1000) : null;
+  // Recherche : filtre sur le nom, l'ISIN et la société de gestion, insensible aux accents,
+  // cumulée avec l'onglet actif. L'état n'est pas persisté (filtre d'écran).
+  const ucRecherche = ((state && state.ucRecherche) || '').trim();
+  const plier = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const ucFiltrees = (() => {
-    const base = ucCat === 'Conservateur'
+    let base = ucCat === 'Conservateur'
       ? uc.filter(u => u.nom.includes('Conservateur'))
       : ucCat === 'Favoris'
       ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin))
+      : ucCat === 'Mut' ? uc.filter(u => u.mut)
+      : ucCat === 'Fin' ? uc.filter(u => u.fin)
       : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
+    if (ucRecherche) {
+      const q = plier(ucRecherche);
+      base = base.filter(u => plier(u.nom).includes(q) || plier(u.isin).includes(q)
+        || plier((ucMeta[u.isin] || {}).societe).includes(q));
+    }
     if (!hasPerfs && tri.cle === 'ytd') return base;
     const lire = VALEUR_TRI[tri.cle];
     return [...base].sort((a, b) => {
@@ -1869,11 +1880,15 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           { cle: 'Mixte / Flexible', long: 'Mixte / Flexible', court: 'Mixte' },
           { cle: 'Obligataire',      long: 'Obligataire',  court: 'Oblig.' },
           { cle: 'Monétaire',        long: 'Monétaire',    court: 'Monét.' },
+          { cle: 'Mut',              long: 'Mutuelle',     court: 'Mut' },
+          { cle: 'Fin',              long: 'Finance',      court: 'Fin' },
           { cle: 'Favoris',          long: 'Favoris',      court: 'Fav.' },
         ].map(f => {
           const n = f.cle === null ? uc.length
             : f.cle === 'Conservateur' ? uc.filter(u => u.nom.includes('Conservateur')).length
             : f.cle === 'Favoris' ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin)).length
+            : f.cle === 'Mut' ? uc.filter(u => u.mut).length
+            : f.cle === 'Fin' ? uc.filter(u => u.fin).length
             : uc.filter(u => CAT_MAP[u.categorie] === f.cle).length;
           const actif = ucCat === f.cle;
           const arg = f.cle === null ? 'null' : `'${f.cle}'`;
@@ -1884,6 +1899,15 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
       </div>
       ${ucCmpBarreHtml(state)}
       </div><!-- /uc-filtres-ligne -->
+
+      <!-- Recherche : avec 56 supports, les onglets ne suffisent plus à retrouver un fonds.
+           Rendue à chaque frappe (App.rechercherUC re-rend puis restaure le focus). -->
+      <div class="uc-recherche-ligne">
+        <input id="uc-recherche" class="uc-recherche" type="search" inputmode="search" autocomplete="off"
+          placeholder="Rechercher un fonds (nom, ISIN, société)" value="${escHtml(ucRecherche)}"
+          oninput="App.rechercherUC(this.value)">
+        ${ucRecherche ? `<span class="uc-recherche-nb">${ucFiltrees.length} résultat${ucFiltrees.length > 1 ? 's' : ''}</span>` : ''}
+      </div>
 
       <!-- Bandeau de tri conservé POUR LE MOBILE seulement : sans en-tête de colonnes, c'est le
            seul endroit qui dise selon quoi la liste est triée, et il porte l'indicateur de
@@ -1920,6 +1944,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
       </div>
 
       <div class="uc-liste${modeCompare ? ' uc-liste--choix' : ''}">
+        ${ucFiltrees.length === 0 ? `<div class="uc-liste-vide">Aucun fonds ne correspond${ucRecherche ? ` à « ${escHtml(ucRecherche)} »` : ''}${ucCat ? ' dans cet onglet' : ''}.</div>` : ''}
         ${ucFiltrees.map(u => {
           const sect = ucSecteurs[u.isin];
           const meta = ucMeta[u.isin] || {};
@@ -1941,7 +1966,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             : CAT_MAP[u.categorie] === 'Monétaire'          ? 'Monét.'
             : u.categorie;
           return `
-        <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel && !modeCompare ? ' uc-item--actif' : ''}${choisis.includes(u.isin) ? ' uc-item--choisi' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}"${u.graphId ? ` onclick="App.clicUC('${u.isin}')"` : ''}>
+        <div class="uc-item clic${u.isin === ucSel && !modeCompare ? ' uc-item--actif' : ''}${choisis.includes(u.isin) ? ' uc-item--choisi' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}" onclick="App.clicUC('${u.isin}')">
           <div class="uc-item-haut">
             <div class="uc-item-id">
               <div class="uc-item-nom">${u.nom}</div>
@@ -1955,7 +1980,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             </div>
           </div>
           <div class="uc-item-bas">
-            <span class="uc-expo"><span class="uc-expo-long">Actions </span>${u.equity} %<span class="uc-expo-bar"><i style="width:${Math.max(0, Math.min(100, u.equity || 0))}%"></i></span></span>
+            <span class="uc-expo"><span class="uc-expo-long">Actions </span>${u.equity == null ? '-' : u.equity} %<span class="uc-expo-bar"><i style="width:${Math.max(0, Math.min(100, u.equity || 0))}%"></i></span></span>
             <span class="uc-srri-inline"><span class="uc-srri-label">SRI</span>${srriDots(u.srri)}<span class="uc-sri-txt tnum">${u.srri == null ? '—' : u.srri + '/7'}</span></span>
             <span class="uc-note-cell">${ucEtoiles(meta.note)}</span>
             <span class="uc-perf-n1">${perfCell(metaPerfAnnee(meta, anneeN1), 'uc-perf-txt')}</span>
@@ -2067,7 +2092,7 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>
-        <div class="ac-detail-sous">${escHtml(u.categorie || '')} · ${escHtml(u.isin)} · Actions ${escHtml(String(u.equity ?? '—'))} %</div>
+        <div class="ac-detail-sous">${escHtml(u.categorie || '')} · ${escHtml(u.isin)} · Actions ${escHtml(String(u.equity ?? '-'))} %</div>
         ${eligPastilles ? `<div class="uc-elig-ligne">${eligPastilles}</div>` : ''}
       </div>
       <div class="ac-detail-niveau">

@@ -194,7 +194,9 @@ const App = (() => {
     await Promise.allSettled(
       UC_CATALOGUE.map(async u => {
         try {
-          const r = await fetch(`./data/uc-compo/${u.isin}.json`, { cache: 'force-cache' });
+          // Cache HTTP normal : force-cache épinglait indéfiniment anciennes versions et 404
+          // alors que ces fichiers sont désormais régénérés chaque semaine.
+          const r = await fetch(`./data/uc-compo/${u.isin}.json`);
           if (!r.ok) return;
           const d = await r.json();
           const s = (d.secteurs || [])[0];
@@ -413,10 +415,12 @@ const App = (() => {
     const gid = panneau.getAttribute('data-graph');
     const isin = panneau.getAttribute('data-uc');
     const compareIsins = (panneau.getAttribute('data-compare') || '').split(',').filter(Boolean);
-    if (!gid) return;
     // Conteneurs propres à ce panneau : la feuille mobile et le panneau de page coexistent dans
     // le DOM (celui-ci reste rendu, juste masqué), donc ils ne peuvent pas partager leurs ids.
     const chartId = panneau.getAttribute('data-chart-id') || 'uc-chart-inline';
+    // Fonds sans source de cours (graphId null, ex. Eurose C) : la fiche s'ouvre quand même,
+    // la composition remplace le graphique.
+    if (!gid) { if (Chart.ouvrirCompoSeule && isin) Chart.ouvrirCompoSeule(chartId, isin); return; }
     const compoId = panneau.getAttribute('data-compo-id') || 'uc-compo-cmp';
     const uc = typeof UC_CATALOGUE !== 'undefined' ? UC_CATALOGUE : [];
     const u = uc.find(x => x.isin === isin);
@@ -1083,6 +1087,14 @@ const App = (() => {
       state = { ...state, ucCat: state.ucCat === cat ? null : cat, ucCompare: [], ucComparePickerOuvert: false, ucStrategieOuvert: false };
       sauvegarderEtat();
       renderPage(true);
+    },
+    // Recherche de fonds : re-rend la liste à chaque frappe puis restaure le focus et le
+    // curseur (le rendu remplace l'input). État d'écran, non persisté.
+    rechercherUC(v) {
+      state = { ...state, ucRecherche: v };
+      renderPage(true);
+      const el = document.getElementById('uc-recherche');
+      if (el) { el.focus(); try { el.setSelectionRange(el.value.length, el.value.length); } catch (_) {} }
     },
     toggleFondsEuros() {
       state = { ...state, feOuvert: !state.feOuvert };

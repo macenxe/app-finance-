@@ -356,16 +356,20 @@ const Chart = (() => {
   function retour() { if (etat.retour) etat.retour(); }
 
   // ── Composition d'une UC (sous le graphique) ──
+  // Cache HTTP normal (pas de force-cache) : les compositions sont régénérées chaque semaine
+  // et certaines sont maintenues à la main — un force-cache épinglait indéfiniment l'ancienne
+  // version, et même les 404 (fichier apparu après une première visite).
+  const fetchCompo = (isin) => fetch(`./data/uc-compo/${isin}.json`);
   async function chargerCompo(isin) {
     const el = document.getElementById('chart-compo');
     if (!el) return;
     el.innerHTML = '<div class="chart-loading" style="padding:8px 0">Composition…</div>';
     try {
-      const r = await fetch(`./data/uc-compo/${isin}.json`, { cache: 'force-cache' });
+      const r = await fetchCompo(isin);
       if (!r.ok) throw 0;
       renderCompo(await r.json());
     } catch (_) {
-      el.innerHTML = '<div class="chart-compo-note">Composition indisponible pour cette UC.</div>';
+      el.innerHTML = '<div class="chart-compo-note">Composition : données indisponibles pour cette UC.</div>';
     }
   }
 
@@ -373,6 +377,18 @@ const Chart = (() => {
     const el = document.getElementById('chart-compo');
     if (!el) return;
     const esc = (s) => (window.escHtml ? escHtml(String(s)) : String(s));
+    // Date d'arrêté de la répartition (compositions manuelles datées) : affichée quand elle
+    // diffère du dernier point du graphique — c'est-à-dire quasi toujours, un reporting de
+    // composition étant plus ancien que la dernière VL — ou quand la fiche n'a pas de graphique.
+    let dateLbl = '';
+    if (d.date) {
+      const dernierPoint = etat && etat.points && etat.points.length
+        ? new Date(etat.points[etat.points.length - 1].t * 1000).toISOString().slice(0, 10) : null;
+      if (d.date !== dernierPoint) {
+        const [a, m, j] = d.date.split('-');
+        dateLbl = ` <span class="compo-date tnum">au ${j}/${m}/${a}</span>`;
+      }
+    }
     const a = d.alloc || {};
     const v = { action: Math.max(0, a.action || 0), obligation: Math.max(0, a.obligation || 0), liquidite: Math.max(0, a.liquidite || 0), autre: Math.max(0, a.autre || 0) };
     const tot = v.action + v.obligation + v.liquidite + v.autre || 1;
@@ -392,13 +408,26 @@ const Chart = (() => {
       ? d.holdings.map(h => `<div class="compo-hold"><span class="compo-hold-nom">${esc(h.nom)}</span><span class="tnum">${h.pct} %</span></div>`).join('')
       : '<div class="chart-compo-note">Principales lignes non communiquées par la source.</div>';
     el.innerHTML = `
-      <div class="compo-titre">Répartition par classe d'actifs</div>
+      <div class="compo-titre">Répartition par classe d'actifs${dateLbl}</div>
       <div class="compo-barre">${seg}</div>
       <div class="compo-legende">${leg}</div>
       ${secteurs ? `<div class="compo-titre">Secteurs</div><div class="compo-secteurs">${secteurs}</div>` : ''}
       <div class="compo-titre">Principales lignes</div>
       <div class="compo-holdings">${holdings}</div>
-      <div class="chart-compo-note">Répartition géographique non disponible en source gratuite. Source : Yahoo Finance / Morningstar, dernier reporting connu.</div>`;
+      <div class="chart-compo-note">${d.source ? esc(d.source) : 'Répartition géographique non disponible en source gratuite. Source : Yahoo Finance / Morningstar, dernier reporting connu.'}</div>`;
+  }
+
+  // Fiche sans graphique (fonds absent des sources de cours, ex. Eurose C) : la composition
+  // s'affiche seule, avec une note à la place de la courbe. Réutilise le conteneur #chart-compo
+  // de renderCompo, et vide etat.points pour que la date d'arrêté soit toujours affichée.
+  function ouvrirCompoSeule(containerId, isin) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    etat = { points: [], inlineId: containerId };
+    el.innerHTML = `
+      <div class="chart-compo-note" style="padding:10px 0 4px">Graphique indisponible : ce fonds n'est servi par aucune source de cours gratuite.</div>
+      <div class="chart-compo" id="chart-compo"></div>`;
+    chargerCompo(isin);
   }
 
   function ouvrirInline(containerId, ticker, label, opts) {
@@ -710,7 +739,7 @@ const Chart = (() => {
     const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', autre: 'Autres' };
     const cartes = await Promise.all((items || []).map(async (it) => {
       try {
-        const r = await fetch(`./data/uc-compo/${it.isin}.json`, { cache: 'force-cache' });
+        const r = await fetchCompo(it.isin);
         if (!r.ok) throw 0;
         const d = await r.json();
         const a = d.alloc || {};
@@ -744,7 +773,7 @@ const Chart = (() => {
     el.innerHTML = `<div class="compo-titre">Composition comparée</div><div class="uc-compo-cmp-grid">${cartes.join('')}</div>`;
   }
 
-  return { ouvrir, ouvrirInline, fermer, changer, retour, comparer, comparerCompo, changerComparaison, smooth: smoothPathD };
+  return { ouvrir, ouvrirInline, ouvrirCompoSeule, fermer, changer, retour, comparer, comparerCompo, changerComparaison, smooth: smoothPathD };
 })();
 
 window.Chart = Chart;

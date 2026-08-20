@@ -34,7 +34,7 @@ const INDICES_MARCHE = [
 ];
 
 const TAUX = [
-  { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'stable', hausse:null  },
+  { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'', hausse:null  },
   { nom:'OAT 10 ans',        valeur:'4,07 %', var:'+3 pb',  hausse:true  }, // dernier recours — live via majOAT
   { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:true  },
   { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:false },
@@ -56,7 +56,7 @@ const HISTO_DERNIER = {
   // OAT 10 ans : plus d'entrée ici — la carte est servie en live par majOAT (app.js), qui lit
   // le dernier point de front/data/history/oat.json (append quotidien par Actions).
   'fred:IRLTLT01DEM156N':       { valeur:'2,97 %', var:'-8 pb',   hausse:false, date:'juin 2026' },
-  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,19 %', var:'stable',  hausse:null,  date:'au 30/07' },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,19 %', var:'',        hausse:null,  date:'au 30/07' },
   'hicp:CP0000EZ19M086NEST':    { valeur:'2,7 %',  var:'-0,4 pt', hausse:false, date:'juin 2026' },
 };
 
@@ -331,7 +331,7 @@ const UC_CATALOGUE = [
     strategie:"Fonds obligataire (catégorie « Obligations et autres titres de créance libellés en euro ») visant, sur un horizon de placement supérieur à 3 ans, une performance nette de frais supérieure à son indice de référence (Bloomberg Euro Aggregate Corporate). La sélection des émetteurs applique d'abord des exclusions sectorielles puis un filtre ESG (élimination d'au moins 30 % des émetteurs les moins bien notés), suivi d'un score « Carbon Impact » excluant les émetteurs jugés « retardataires » sur la transition énergétique ; le fonds s'engage à une intensité carbone du portefeuille au moins 50 % inférieure à celle de son univers comparable. Fonds labellisé ISR, classé article 8 SFDR." },
   { rang:39, gerant:"ODDO", nom:"ODDO BHF Sust Credit Opportunities (CR-EUR)", isin:"LU1752460292", categorie:"Obligataire", srri:2, equity:0, graphId:"0P0001EITS.F", mut:true, fin:true,
     strategie:"Fonds obligataire crédit à gestion active, visant une performance nette supérieure à l'indice €STR + 2 % (capitalisé) par an, sans indicateur de référence formel. Au moins 70 % de l'actif est investi dans des titres d'émetteurs domiciliés dans un pays de l'OCDE, avec intégration de critères ESG (article 8 SFDR) ; l'univers combine investment grade et high yield (notation minimale B-), dette subordonnée financière et obligations hybrides corporate, avec une sensibilité aux taux comprise entre -2 et +8. Horizon de placement recommandé : 3 ans." },
-  { rang:40, gerant:"Carm", nom:"Carmignac Patrimoine (A)", isin:"FR0010135103", categorie:"Mixte / Flexible", srri:3, equity:48, graphId:"0P00000FB4.F", mut:true, fin:false,
+  { rang:40, gerant:"Carm", nom:"Carmignac Patrimoine (A)", isin:"FR0010135103", categorie:"Mixte / Flexible", srri:3, equity:null, graphId:"0P00000FB4.F", mut:true, fin:false,
     strategie:"FCP patrimonial diversifié visant, sur un horizon de 3 ans, une performance nette supérieure à un indicateur composite (40 % MSCI AC World NR, 40 % ICE BofA Global Government, 20 % €STR capitalisé). Le fonds est exposé à 25-50 % de son actif net en actions internationales toutes capitalisations, au moins 40 % en obligations à taux fixe/variable de notation moyenne au moins « Investment Grade » et produits monétaires, avec gestion active des devises et possibilité de positions vendeuses via dérivés. Approche ISR intégrée (article 8 SFDR), au moins 10 % de l'actif en investissements durables au sens SFDR." },
   { rang:41, gerant:"C", nom:"Congrégation Investissement (C)", isin:"FR0007439666", categorie:"Mixte / Flexible", srri:3, equity:17, graphId:"0P00005VUH.F", mut:false, fin:true,
     strategie:"FCP à gestion active et discrétionnaire visant, sur 3 ans, une performance supérieure ou égale à un indicateur de comparaison composé à 25 % de l'EuroStoxx 50 (dividendes nets réinvestis) et 75 % de l'ICE BofA 3-5 Year All Euro Government Index, avec exclusion des secteurs armement et jeux. Exposition actions comprise entre -5 % et 100 % de l'actif net, obligations/titres de créance jusqu'à 100 % (sensibilité taux -1 à 10), investissements concentrés sur les marchés UE et OCDE, recours possible aux dérivés de crédit (CDS sur indices, max 60 %) et aux matières premières (max 10 %)." },
@@ -341,7 +341,7 @@ const UC_CATALOGUE = [
     strategie:"Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum." },
   { rang:44, gerant:"C", nom:"Conservateur Diversifié Réactif C", isin:"FR0010489542", categorie:"Mixte / Flexible", srri:3, equity:23, graphId:"0P0000JZWP.F", mut:true, fin:true,
     strategie:"Gestion diversifiée dynamique, réactive et discrétionnaire, sans biais de style ni de taille, visant une valorisation du capital sur un horizon de 4 ans." },
-  { rang:45, gerant:"C", nom:"Conservateur Immo-Or (C)", isin:"FR0011199314", categorie:"Mixte / Flexible", srri:3, equity:0, graphId:"0P0000VYE0.F", mut:true, fin:true,
+  { rang:45, gerant:"C", nom:"Conservateur Immo-Or (C)", isin:"FR0011199314", categorie:"Mixte / Flexible", srri:3, equity:null, graphId:"0P0000VYE0.F", mut:true, fin:true,
     strategie:"FIA à gestion discrétionnaire visant, sur 5 ans minimum, une performance non corrélée à celle des actifs classiques, en investissant notamment dans l'or et les métaux précieux, l'immobilier, les obligations d'État et les titres financiers corrélés à l'inflation. Le fonds n'a pas d'indicateur de référence formel (comparaison a posteriori possible à l'IPCH zone euro hors tabac) ; exposition actions -25 % à 65 %, obligations -20 % à 150 %, matières premières jusqu'à 50 % via dérivés, change jusqu'à 70 %. Classé article 6 SFDR." },
   { rang:46, gerant:"C", nom:"Conservateur Rendement Flexible C", isin:"FR0013087152", categorie:"Mixte / Flexible", srri:2, equity:0, graphId:"0P00019OMO.F", mut:true, fin:true,
     strategie:"Fonds diversifié à gestion flexible visant une performance supérieure à l’€ster capitalisé + 1,5 %, avec intégration de critères ESG, horizon recommandé de 4 ans." },
@@ -351,7 +351,7 @@ const UC_CATALOGUE = [
     strategie:"Fonds diversifié international dont l'objectif de gestion est d'obtenir, sur 4 ans minimum, une performance supérieure à son indice de référence (100% ESTR capitalisé depuis le 01/01/2022) avec une volatilité maximale prévisionnelle de 15%. L'exposition actions du portefeuille oscille entre 0% et 80% et sa sensibilité taux entre -2 et +5." },
   { rang:49, gerant:"DNCA", nom:"DNCA Invest - Convertibles (B)", isin:"LU0512124107", categorie:"Mixte / Flexible", srri:3, equity:4, graphId:"0P0000P3DN.F", mut:true, fin:true,
     strategie:"Le compartiment vise l'appréciation du capital avec une faible volatilité en investissant en obligations convertibles. Gestion discrétionnaire intégrant des critères ESG (approche « best in universe », réduction d'au moins 20% de l'univers d'investissement de départ). Le fonds investit toujours au moins 50% de son actif total en obligations convertibles, échangeables ou remboursables obligatoirement d'émetteurs domiciliés dans l'UE ou y exerçant l'essentiel de leur activité, dont au moins 30% notées investment grade. L'indice Refinitiv Europe Focus Hedged CB (EUR) n'est utilisé qu'a posteriori comme indicateur de comparaison des performances, sans contrainte de réplication." },
-  { rang:50, gerant:"DNCA", nom:"Eurose (C)", isin:"FR0007051040", categorie:"Mixte / Flexible", srri:2, equity:50, graphId:null, mut:true, fin:true,
+  { rang:50, gerant:"DNCA", nom:"Eurose (C)", isin:"FR0007051040", categorie:"Mixte / Flexible", srri:2, equity:null, graphId:null, mut:true, fin:true,
     strategie:"L'objectif de gestion est la recherche d'une performance supérieure à l'indice composite 20% EURO STOXX 50 et 80% Bloomberg Euro Aggregate 1-10 year, dividendes et coupons réinvestis, sur la durée de placement recommandée (3 ans). Fonds flexible qui améliore la rentabilité d'un placement patrimonial par une gestion active d'actions et d'obligations principalement libellées en euro, avec sélection ESG (\"best in universe\") : jusqu'à 100% de l'actif en produits de taux (duration limitée à 7 ans, 50% maximum en catégorie \"Speculative Grade\") et jusqu'à 35% en actions de sociétés de l'OCDE de toute capitalisation." },
   { rang:51, gerant:"R·co", nom:"R-co Valor C EUR", isin:"FR0011253624", categorie:"Mixte / Flexible", srri:4, equity:74, graphId:"0P00017T6E.F", mut:true, fin:true,
     strategie:"Gestion flexible et discrétionnaire, sans contrainte d’indice : sélection d’actions et de taux internationaux, de 0 à 100 % investis en actions selon les convictions du gérant." },
