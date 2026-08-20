@@ -1694,19 +1694,14 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   const ucCat  = (state && state.ucCat && CATS_VALIDES.includes(state.ucCat)) ? state.ucCat : null;
   const feOuvert = !!(state && state.feOuvert);
 
-  // Regroupement des catégories UC en 4 groupes d'affichage. Les fonds thématiques rejoignent
-  // « Actions » (l'onglet « Thématique » a été retiré) ; la catégorie brute reste visible sur
-  // la fiche détail.
+  // Catégories UC : depuis le chantier « 56 supports », le catalogue porte directement les
+  // 4 groupes d'affichage (sections du référentiel Excel) — CAT_MAP est une identité conservée
+  // pour les points d'usage existants.
   const CAT_MAP = {
-    'Actions thématique':  'Actions',
-    'Actions Monde':       'Actions',
-    'Actions Europe':      'Actions',
-    'Flexible':            'Mixte / Flexible',
-    'Mixte / Flexible':    'Mixte / Flexible',
-    'Mixte obligataire':   'Obligataire',
-    'Obligataire flexible':'Obligataire',
-    'Obligataire court terme':'Obligataire',
-    'Monétaire':           'Monétaire',
+    'Actions':          'Actions',
+    'Mixte / Flexible': 'Mixte / Flexible',
+    'Obligataire':      'Obligataire',
+    'Monétaire':        'Monétaire',
   };
   const CATS_ORDER = ['Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
   // Clé de teinte de la pastille de catégorie, du moins exposé au plus exposé. Les libellés sont
