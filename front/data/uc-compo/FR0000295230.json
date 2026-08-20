@@ -1,1 +1,89 @@
-{"isin": "FR0000295230", "alloc": {"action": 96.1, "obligation": 0, "liquidite": 1.9, "autre": 1.9}, "secteurs": [{"nom": "Industrie", "pct": 22.4}, {"nom": "Santé", "pct": 21.1}, {"nom": "Conso. cyclique", "pct": 17.0}, {"nom": "Technologie", "pct": 15.8}, {"nom": "Matériaux", "pct": 9.6}, {"nom": "Finance", "pct": 8.6}, {"nom": "Conso. de base", "pct": 3.8}, {"nom": "Communication", "pct": 1.7}, {"nom": "Immobilier", "pct": 0.0}, {"nom": "Services collectifs", "pct": 0.0}, {"nom": "Énergie", "pct": 0.0}], "holdings": [{"nom": "ASML Holding NV", "pct": 6.0}, {"nom": "Novonesis (Novozymes) B Class B", "pct": 5.0}, {"nom": "Schneider Electric SE", "pct": 4.6}, {"nom": "Essilorluxottica", "pct": 4.2}, {"nom": "Adyen NV", "pct": 4.2}, {"nom": "Industria De Diseno Textil SA Share From Split", "pct": 3.9}, {"nom": "London Stock Exchange Group PLC", "pct": 3.9}, {"nom": "Atlas Copco AB Class A", "pct": 3.8}]}
+{
+ "isin": "FR0000295230",
+ "alloc": {
+  "action": 96.1,
+  "obligation": 0,
+  "liquidite": 1.9,
+  "autre": 1.9
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 22.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 21.1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 17
+  },
+  {
+   "nom": "Technologie",
+   "pct": 15.8
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 9.6
+  },
+  {
+   "nom": "Finance",
+   "pct": 8.6
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3.8
+  },
+  {
+   "nom": "Communication",
+   "pct": 1.7
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 6
+  },
+  {
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 5
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 4.6
+  },
+  {
+   "nom": "Essilorluxottica",
+   "pct": 4.2
+  },
+  {
+   "nom": "Adyen NV",
+   "pct": 4.2
+  },
+  {
+   "nom": "Industria De Diseno Textil SA Share From Split",
+   "pct": 3.9
+  },
+  {
+   "nom": "London Stock Exchange Group PLC",
+   "pct": 3.9
+  },
+  {
+   "nom": "Atlas Copco AB Class A",
+   "pct": 3.8
+  }
+ ]
+}

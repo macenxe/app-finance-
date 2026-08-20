@@ -1,4 +1,4 @@
-// Génère front/data/uc-managers.json : fiche gérants/frais/note des 13 UC (snapshot Morningstar)
+// Génère front/data/uc-managers.json : fiche gérants/frais/note des 15 UC (snapshot Morningstar)
 // et détecte les événements de vie des fonds par DIFF avec le fichier précédent — gérant
 // (arrivée/départ/changement, y compris passage à zéro), frais courants, note et risque
 // Morningstar, société de gestion, structure juridique. Les événements détectés sont apposés
@@ -43,6 +43,8 @@ const FONDS: [string, string, string][] = [
   ['FR0013087152', '0P00019OMO', 'Conservateur Rendement Flexible'],
   ['FR0010564336', '0P0000JLHZ', 'Conservateur Diversifié'],
   ['LU1694790202', '0P0001CH1A', 'DNCA Flex Inflation'],
+  ['FR0011461326', '0P0000ZL7Q', 'Conservateur Obligations Court Terme'],
+  ['FR0013287315', '0P0001CB5C', 'Palatine Monétaire Court Terme'],
 ];
 
 type Gerant = { nom: string; depuis: string };

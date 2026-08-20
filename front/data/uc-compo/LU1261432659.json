@@ -1,1 +1,93 @@
-{"isin": "LU1261432659", "alloc": {"action": 96.2, "obligation": 0.3, "liquidite": 3.5, "autre": 0}, "secteurs": [{"nom": "Technologie", "pct": 30.0}, {"nom": "Industrie", "pct": 15.8}, {"nom": "Finance", "pct": 13.9}, {"nom": "Santé", "pct": 10.7}, {"nom": "Communication", "pct": 9.8}, {"nom": "Conso. cyclique", "pct": 8.9}, {"nom": "Services collectifs", "pct": 3.6}, {"nom": "Énergie", "pct": 3.6}, {"nom": "Matériaux", "pct": 2.8}, {"nom": "Conso. de base", "pct": 0.9}, {"nom": "Immobilier", "pct": 0.0}], "holdings": [{"nom": "Alphabet Inc Class A", "pct": 5.3}, {"nom": "Microsoft Corp", "pct": 4.0}, {"nom": "NVIDIA Corp", "pct": 3.9}, {"nom": "Amazon.com Inc", "pct": 3.7}, {"nom": "JPMorgan Chase & Co", "pct": 2.8}, {"nom": "Meta Platforms Inc Class A", "pct": 2.3}, {"nom": "ASML Holding NV", "pct": 2.2}, {"nom": "Marvell Technology Inc", "pct": 2.2}, {"nom": "Samsung Electronics Co Ltd", "pct": 2.0}]}
+{
+ "isin": "LU1261432659",
+ "alloc": {
+  "action": 96.2,
+  "obligation": 0.3,
+  "liquidite": 3.5,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 30
+  },
+  {
+   "nom": "Industrie",
+   "pct": 15.8
+  },
+  {
+   "nom": "Finance",
+   "pct": 13.9
+  },
+  {
+   "nom": "Santé",
+   "pct": 10.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 8.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.6
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 2.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 5.3
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 4
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 3.9
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 3.7
+  },
+  {
+   "nom": "JPMorgan Chase & Co",
+   "pct": 2.8
+  },
+  {
+   "nom": "Meta Platforms Inc Class A",
+   "pct": 2.3
+  },
+  {
+   "nom": "ASML Holding NV",
+   "pct": 2.2
+  },
+  {
+   "nom": "Marvell Technology Inc",
+   "pct": 2.2
+  },
+  {
+   "nom": "Samsung Electronics Co Ltd",
+   "pct": 2
+  }
+ ]
+}

@@ -214,7 +214,7 @@ const FLUX_ECO: Flux[] = [
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
-// Les 13 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
+// Les 15 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
 // pas des sociétés de gestion qui les gèrent (les requêtes par société ramenaient des profils
 // de personnes et du hors-sujet, D23/D24).
 const FLUX_UC_FONDS = [
@@ -223,10 +223,11 @@ const FLUX_UC_FONDS = [
   'Comgest Renaissance Europe', 'Fidelity World Fund', 'Conservateur Actions Flexibles',
   'Conservateur Diversifié Réactif', 'Conservateur Rendement Flexible',
   'Conservateur Diversifié', 'DNCA Invest Flex Inflation',
+  'Conservateur Obligations Court Terme', 'Palatine Monétaire Court Terme',
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
 // pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.
-// Les 13 fonds sont regroupés en 3 requêtes OR (budget sous-requêtes, D27) ; le label de
+// Les 15 fonds sont regroupés en 3 requêtes OR (budget sous-requêtes, D27) ; le label de
 // carte reste le fonds matché grâce à tagParMot (mot minuscule → nom exact).
 const FLUX_UC: Flux[] = [
   FLUX_UC_FONDS.slice(0, 5), FLUX_UC_FONDS.slice(5, 9), FLUX_UC_FONDS.slice(9),

@@ -182,6 +182,8 @@ const App = (() => {
 
   // Premier secteur de chaque UC, lu dans les compositions statiques déjà présentes
   // (front/data/uc-compo/<ISIN>.json, servies aussi à la fiche et au comparatif).
+  // Aligne aussi l'exposition actions du catalogue (u.equity, bandeau et liste) sur la
+  // répartition du dernier reporting : la valeur codée dans data.js n'est qu'une amorce.
   // Seuil d'exposition : sous 10 % d'actions, la répartition sectorielle décrit une poche
   // résiduelle et afficherait des « Finance 100 % » trompeurs sur un fonds obligataire.
   // Une seule campagne par session (ucSecteursCharge) : ces fichiers ne bougent pas.
@@ -197,6 +199,7 @@ const App = (() => {
           const d = await r.json();
           const s = (d.secteurs || [])[0];
           const actions = (d.alloc && d.alloc.action) || 0;
+          if (d.alloc && isFinite(actions)) u.equity = Math.round(actions);
           if (s && actions >= SECTEUR_EXPO_MIN) ucSecteursCache[u.isin] = { nom: s.nom, pct: s.pct };
         } catch { /* on ignore */ }
       })
@@ -744,6 +747,31 @@ const App = (() => {
     } catch (_) { /* on garde la valeur saisie */ } finally { majCMSEnCours = false; }
   }
 
+  // Valeur courante de l'OAT 10 ans : dernier point de front/data/history/oat.json (append
+  // quotidien par Actions, source Boursorama). Fichier same-origin : ni Worker ni clé. La carte
+  // du tableau de bord lit donnees.taux (plus d'entrée HISTO_DERNIER pour l'OAT).
+  let majOATEnCours = false;
+  async function majOAT() {
+    if (majOATEnCours) return;
+    majOATEnCours = true;
+    try {
+      const r = await fetch('./data/history/oat.json', { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+      if (!r.ok) return;
+      const pts = (await r.json()).points || [];
+      if (pts.length < 2) return;
+      const dernier = pts[pts.length - 1], precedent = pts[pts.length - 2];
+      const dp = Math.round((dernier.c - precedent.c) * 100);
+      const t = (donnees.taux || []).find(x => /OAT/.test(x.nom));
+      if (!t) return;
+      const inchange = t.dateMaj === new Date(dernier.t * 1000).toISOString().slice(0, 10) && !t.manuel;
+      t.valeur  = dernier.c.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %';
+      t.var     = dp === 0 ? 'stable' : (dp > 0 ? '+' : '') + dp + ' pb';
+      t.hausse  = dp === 0 ? null : dp > 0;
+      t.dateMaj = new Date(dernier.t * 1000).toISOString().slice(0, 10);
+      if (!inchange && state.page === 'dash') renderPage(true);
+    } catch (_) { /* la valeur statique reste */ } finally { majOATEnCours = false; }
+  }
+
   function fermerFormulaire() {
     const root = document.getElementById('modal-root');
     if (root) root.innerHTML = '';
@@ -802,6 +830,7 @@ const App = (() => {
         }).catch(() => {});
       }
       majCMS();
+      majOAT();
       ind.classList.remove('refreshing');
       ind.style.height = '0';
       setTimeout(() => { ind.style.transition = ''; refreshing = false; }, 200);
@@ -981,6 +1010,7 @@ const App = (() => {
       }).catch(() => {});
     }
     majCMS();
+    majOAT();
   }
 
   return {

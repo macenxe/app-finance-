@@ -1,1 +1,89 @@
-{"isin": "FR0011253624", "alloc": {"action": 74.4, "obligation": 4.6, "liquidite": 19.8, "autre": 1.2}, "secteurs": [{"nom": "Conso. cyclique", "pct": 17.5}, {"nom": "Matériaux", "pct": 15.9}, {"nom": "Santé", "pct": 15.1}, {"nom": "Industrie", "pct": 12.8}, {"nom": "Communication", "pct": 12.6}, {"nom": "Technologie", "pct": 12.3}, {"nom": "Finance", "pct": 11.1}, {"nom": "Services collectifs", "pct": 1.8}, {"nom": "Conso. de base", "pct": 0.6}, {"nom": "Immobilier", "pct": 0.4}, {"nom": "Énergie", "pct": 0.0}], "holdings": [{"nom": "Lvmh Moet Hennessy Louis Vuitton SE", "pct": 2.6}, {"nom": "Tencent Holdings Ltd", "pct": 2.5}, {"nom": "Thermo Fisher Scientific Inc", "pct": 2.5}, {"nom": "Freeport-McMoRan Inc", "pct": 2.5}, {"nom": "Huntington Bancshares Inc", "pct": 2.5}, {"nom": "Ferrari NV", "pct": 2.4}, {"nom": "MercadoLibre Inc", "pct": 2.4}, {"nom": "Grab Holdings Ltd Class A", "pct": 2.3}]}
+{
+ "isin": "FR0011253624",
+ "alloc": {
+  "action": 74.4,
+  "obligation": 4.6,
+  "liquidite": 19.8,
+  "autre": 1.2
+ },
+ "secteurs": [
+  {
+   "nom": "Conso. cyclique",
+   "pct": 17.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 15.9
+  },
+  {
+   "nom": "Santé",
+   "pct": 15.1
+  },
+  {
+   "nom": "Industrie",
+   "pct": 12.8
+  },
+  {
+   "nom": "Communication",
+   "pct": 12.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 12.3
+  },
+  {
+   "nom": "Finance",
+   "pct": 11.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 1.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.4
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "pct": 2.6
+  },
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 2.5
+  },
+  {
+   "nom": "Thermo Fisher Scientific Inc",
+   "pct": 2.5
+  },
+  {
+   "nom": "Freeport-McMoRan Inc",
+   "pct": 2.5
+  },
+  {
+   "nom": "Huntington Bancshares Inc",
+   "pct": 2.5
+  },
+  {
+   "nom": "Ferrari NV",
+   "pct": 2.4
+  },
+  {
+   "nom": "MercadoLibre Inc",
+   "pct": 2.4
+  },
+  {
+   "nom": "Grab Holdings Ltd Class A",
+   "pct": 2.3
+  }
+ ]
+}

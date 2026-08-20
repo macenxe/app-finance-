@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add front/data/snapshot.json front/data/history/eq/ front/data/fonds-meta.json front/data/history/uc/
+          git add front/data/snapshot.json front/data/history/eq/ front/data/fonds-meta.json front/data/uc-compo/ front/data/history/uc/
           if git diff --staged --quiet; then
             echo "Aucun changement de données."
           else

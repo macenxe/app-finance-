@@ -231,6 +231,32 @@
    "structure": "SICAV",
    "note": 3,
    "risque": 3
+  },
+  "FR0011461326": {
+   "gerants": [
+    {
+     "nom": "Not Disclosed",
+     "depuis": "2013-06-26"
+    }
+   ],
+   "fraisCourants": 0.88,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 2
+  },
+  "FR0013287315": {
+   "gerants": [
+    {
+     "nom": "Didier Lacombe",
+     "depuis": "2025-11-01"
+    }
+   ],
+   "fraisCourants": 0.3,
+   "societe": "Palatine Asset Management",
+   "structure": "FCP",
+   "note": null,
+   "risque": null
   }
  }
 }

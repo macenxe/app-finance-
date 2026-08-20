@@ -138,6 +138,9 @@ async function historiqueHicp(series, periode, key) {
 // longue (backfill + append quotidien) vit dans le fichier statique CMS_HISTORY_URL.
 const CHATHAM_URL = 'https://cf.com/public-api/public-rates/euribor6monthswap.json/';
 const CMS_HISTORY_URL = 'https://macenxe.github.io/app-finance-/data/history/cms.json';
+// OAT 10 ans : rendement quotidien de l'emprunt phare (append quotidien par Actions,
+// source Boursorama — inaccessible aux IP Workers, d'où le fichier statique).
+const OAT_HISTORY_URL = 'https://macenxe.github.io/app-finance-/data/history/oat.json';
 
 // Dernière clôture publiée par Chatham pour le ténor 10 ans (LengthInMonths=120).
 async function chathamDernierePoint() {
@@ -151,14 +154,14 @@ async function chathamDernierePoint() {
   return { valeur, date };
 }
 
-// Dernier point du fichier statique publié, strictement antérieur à `avantDate` (pour le
-// calcul de la variation en pb) ; sans filtre, le dernier point tout court (repli de valeur).
-async function cmsHistoriqueStatiqueBrut() {
-  const r = await fetch(CMS_HISTORY_URL, { cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
+// Points d'un fichier d'historique statique publié (cms.json, oat.json) — même forme {points:[{t,c}]}.
+async function fichierStatiqueBrut(url) {
+  const r = await fetch(url, { cf: { cacheTtl: 900 }, signal: AbortSignal.timeout(8000) });
   if (!r.ok) return null;
   const d = await r.json();
   return Array.isArray(d.points) ? d.points : null;
 }
+const cmsHistoriqueStatiqueBrut = () => fichierStatiqueBrut(CMS_HISTORY_URL);
 
 // Valeur « du moment » du CMS 10 ans = dernière clôture Chatham (J-1 ouvré), avec la variation
 // en pb vs le point précédent du fichier statique publié. Repli si Chatham est indisponible :
@@ -185,23 +188,24 @@ async function coursCmsChatham() {
   return null;
 }
 
-// Historique du CMS 10 ans : filtre le fichier statique publié par période. Pas de « Jour » :
-// le swap n'a pas d'intraday (une valeur par jour), donc « 1j » perdrait son sens ; la période
-// est retirée côté front (chart.js).
-async function historiqueCmsStatique(periode) {
-  const points = await cmsHistoriqueStatiqueBrut();
+// Historique d'une série statique (CMS, OAT) : filtre le fichier publié par période. Pas de
+// « Jour » : une seule valeur par jour, donc « 1j » perdrait son sens ; la période est retirée
+// côté front (chart.js).
+async function historiqueStatique(url, ticker, periode) {
+  const points = await fichierStatiqueBrut(url);
   if (!points || !points.length) return null;
   const debut = Math.floor(debutPeriode(periode).getTime() / 1000);
   const filtres = points.filter((p) => p.t >= debut);
   const retenus = filtres.length >= 2 ? filtres : points;
   if (retenus.length < 2) return null;
-  return { ticker: 'scrape:cms', periode, points: retenus, devise: '%' };
+  return { ticker, periode, points: retenus, devise: '%' };
 }
 
 function historique(id, periode, env) {
   if (id.startsWith('fred:')) return historiqueFred(id.slice(5), periode, env?.FRED_API_KEY);
   if (id.startsWith('hicp:')) return historiqueHicp(id.slice(5), periode, env?.FRED_API_KEY);
-  if (id === 'scrape:cms')    return historiqueCmsStatique(periode);
+  if (id === 'scrape:cms')    return historiqueStatique(CMS_HISTORY_URL, 'scrape:cms', periode);
+  if (id === 'scrape:oat')    return historiqueStatique(OAT_HISTORY_URL, 'scrape:oat', periode);
   return historiqueYahoo(id, periode);
 }
 

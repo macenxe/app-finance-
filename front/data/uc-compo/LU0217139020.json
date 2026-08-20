@@ -1,1 +1,97 @@
-{"isin": "LU0217139020", "alloc": {"action": 98.8, "obligation": 0.1, "liquidite": 1.1, "autre": 0}, "secteurs": [{"nom": "Conso. cyclique", "pct": 61.5}, {"nom": "Finance", "pct": 12.7}, {"nom": "Conso. de base", "pct": 9.9}, {"nom": "Santé", "pct": 7.4}, {"nom": "Technologie", "pct": 7.1}, {"nom": "Immobilier", "pct": 1.4}, {"nom": "Matériaux", "pct": 0.0}, {"nom": "Communication", "pct": 0.0}, {"nom": "Services collectifs", "pct": 0.0}, {"nom": "Industrie", "pct": 0.0}, {"nom": "Énergie", "pct": 0.0}], "holdings": [{"nom": "American Express Co", "pct": 4.7}, {"nom": "Visa Inc Class A", "pct": 4.6}, {"nom": "Marriott International Inc Class A", "pct": 4.3}, {"nom": "Hermes International SA", "pct": 4.3}, {"nom": "Hilton Worldwide Holdings Inc", "pct": 4.2}, {"nom": "Galderma Group AG Registered Shares", "pct": 4.2}, {"nom": "Moncler SpA", "pct": 4.1}, {"nom": "Lvmh Moet Hennessy Louis Vuitton SE", "pct": 4.1}, {"nom": "Apple Inc", "pct": 3.9}, {"nom": "InterContinental Hotels Group PLC", "pct": 3.8}]}
+{
+ "isin": "LU0217139020",
+ "alloc": {
+  "action": 98.8,
+  "obligation": 0.1,
+  "liquidite": 1.1,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Conso. cyclique",
+   "pct": 61.5
+  },
+  {
+   "nom": "Finance",
+   "pct": 12.7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 9.9
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.4
+  },
+  {
+   "nom": "Technologie",
+   "pct": 7.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Industrie",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "American Express Co",
+   "pct": 4.7
+  },
+  {
+   "nom": "Visa Inc Class A",
+   "pct": 4.6
+  },
+  {
+   "nom": "Marriott International Inc Class A",
+   "pct": 4.3
+  },
+  {
+   "nom": "Hermes International SA",
+   "pct": 4.3
+  },
+  {
+   "nom": "Hilton Worldwide Holdings Inc",
+   "pct": 4.2
+  },
+  {
+   "nom": "Galderma Group AG Registered Shares",
+   "pct": 4.2
+  },
+  {
+   "nom": "Moncler SpA",
+   "pct": 4.1
+  },
+  {
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "pct": 4.1
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 3.9
+  },
+  {
+   "nom": "InterContinental Hotels Group PLC",
+   "pct": 3.8
+  }
+ ]
+}

@@ -35,7 +35,7 @@ const INDICES_MARCHE = [
 
 const TAUX = [
   { nom:'€STR (taux moné.)', valeur:'2,14 %', var:'stable', hausse:null  },
-  { nom:'OAT 10 ans',        valeur:'3,12 %', var:'+4 pb',  hausse:true  },
+  { nom:'OAT 10 ans',        valeur:'4,07 %', var:'+3 pb',  hausse:true  }, // dernier recours — live via majOAT
   { nom:'Bund 10 ans',       valeur:'2,48 %', var:'+3 pb',  hausse:true  },
   { nom:'US 10 ans',         valeur:'4,28 %', var:'−2 pb',  hausse:false },
   { nom:'CMS 10 ans',        valeur:null,     var:null,     hausse:null  }, // live via majCMS
@@ -53,7 +53,8 @@ const MACRO = [
 // affichée sur le tableau de bord pour coller au dernier point du graphique.
 const HISTO_DERNIER = {
   'fred:DGS10':                 { valeur:'4,68 %', var:'+1 pb',   hausse:true,  date:'au 30/07' },
-  'fred:IRLTLT01FRM156N':       { valeur:'3,68 %', var:'-6 pb',   hausse:false, date:'juin 2026' },
+  // OAT 10 ans : plus d'entrée ici — la carte est servie en live par majOAT (app.js), qui lit
+  // le dernier point de front/data/history/oat.json (append quotidien par Actions).
   'fred:IRLTLT01DEM156N':       { valeur:'2,97 %', var:'-8 pb',   hausse:false, date:'juin 2026' },
   'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,19 %', var:'stable',  hausse:null,  date:'au 30/07' },
   'hicp:CP0000EZ19M086NEST':    { valeur:'2,7 %',  var:'-0,4 pt', hausse:false, date:'juin 2026' },
@@ -128,7 +129,7 @@ const GRAPH_IDS_SUB = [
   ['Euro Stoxx Banks', 'BNKE.PA'],          // ETF proxy de l'indice (Yahoo ne sert pas SX7E)
   ['MSCI World',       'IWDA.AS'],
   ['STR',              'fred:ECBESTRVOLWGTTRMDMNRT'],
-  ['OAT',              'fred:IRLTLT01FRM156N'],
+  ['OAT',              'scrape:oat'],          // rendement quotidien (fichier statique, append Actions)
   ['Bund',             'fred:IRLTLT01DEM156N'],
   ['US 10',            'fred:DGS10'],
   ['CMS',              'scrape:cms'],         // vrai swap EUR 10y via FT (Worker)
@@ -242,13 +243,15 @@ const FONDS_EUROS_PERF = {
 };
 
 // ── Catalogue UC suivi (sélection ordonnée : actions → obligataire) ──
-// Cliquables : graphId = symbole Yahoo du fonds (historique de VL). equity = exposition actions indicative.
+// Cliquables : graphId = symbole Yahoo du fonds (historique de VL). equity = exposition actions
+// d'amorce, réalignée au chargement sur la répartition du dernier reporting (chargerSecteursUC,
+// depuis front/data/uc-compo/ régénéré chaque semaine par fonds-meta.ts).
 // `strategie` : objectif de gestion résumé d'après la documentation officielle de chaque société de
 // gestion (page produit du gérant ou, pour les fonds « Conservateur », conservateur.fr) — recherché le
 // 24 juillet 2026. Si absent, ucStrategieTxt() (pages.js) retombe sur un résumé générique de faits déjà
 // connus (catégorie/exposition/SRRI), sans jamais inventer une stratégie non sourcée.
 const UC_CATALOGUE = [
-  { rang:1,  gerant:'R·co', nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:65,  graphId:'0P00017T6E.F',
+  { rang:1,  gerant:'R·co', nom:'R-co Valor C EUR',                     isin:'FR0011253624', categorie:'Flexible',             srri:4, equity:74,  graphId:'0P00017T6E.F',
     strategie:'Gestion flexible et discrétionnaire, sans contrainte d’indice : sélection d’actions et de taux internationaux, de 0 à 100 % investis en actions selon les convictions du gérant.' },
   { rang:2,  gerant:'LFDE', nom:'Echiquier Artificial Intelligence B',  isin:'LU1819480192', categorie:'Actions thématique',   srri:6, equity:100, graphId:'0P0001DYQM.F',
     strategie:'Fonds actions thématique concentré (moins de 50 valeurs) sur les entreprises qui développent ou exploitent l’intelligence artificielle, exposition internationale d’au moins 60 %.' },
@@ -274,4 +277,17 @@ const UC_CATALOGUE = [
     strategie:'Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum.' },
   { rang:13, gerant:'DNCA', nom:'DNCA Invest Flex Inflation B',         isin:'LU1694790202', categorie:'Obligataire flexible', srri:2, equity:0,   graphId:'0P0001CH1A.F',
     strategie:'Fonds obligataire flexible visant à protéger et valoriser le capital face à l’inflation : gestion active de l’exposition aux obligations d’État indexées sur l’inflation et de la sensibilité aux taux (duration), sans contrainte d’indice, approche ISR.' },
+  { rang:14, gerant:'C',    nom:'Conservateur Obligations Court Terme C', isin:'FR0011461326', categorie:'Obligataire court terme', srri:2, equity:0, graphId:'0P0000ZL7Q.F',
+    strategie:'Fonds obligataire court terme à gestion active et discrétionnaire sur l’ensemble des marchés obligataires et de taux, dans une fourchette de sensibilité de 0 à 3, visant une performance supérieure au taux monétaire capitalisé, horizon recommandé de 1 an.' },
+  { rang:15, gerant:'Pal',  nom:'Palatine Monétaire Court Terme R',     isin:'FR0013287315', categorie:'Monétaire',            srri:1, equity:0,   graphId:'0P0001CB5C.F',
+    strategie:'Fonds monétaire visant une performance égale à l’€STR (taux monétaire au jour le jour) après frais : instruments du marché monétaire et obligations court terme de la zone euro (maturité maximale 13 mois), approche ESG, durée de placement recommandée inférieure à 3 mois.' },
+];
+
+// Onglet « Favoris » de la page Fonds : sélection curatée à la main (l'ensemble du catalogue
+// au 20/08/2026, hors DNCA Invest Flex Inflation). Un fonds ajouté au catalogue n'y entre pas
+// automatiquement : compléter la liste explicitement.
+const UC_FAVORIS = [
+  'FR0011253624', 'LU1819480192', 'LU1244893696', 'LU0280435388', 'LU0217139020',
+  'FR0010564229', 'FR0000295230', 'LU1261432659', 'FR0013256930', 'FR0010489542',
+  'FR0013087152', 'FR0010564336', 'FR0011461326', 'FR0013287315',
 ];

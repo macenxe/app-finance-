@@ -35,6 +35,13 @@ jobs:
         working-directory: back
         run: npm run cms
 
+      # OAT 10 ans quotidienne (Boursorama). Non bloquant : source tierce sans garantie,
+      # le fichier précédent reste en place si l'appel échoue.
+      - name: Ajouter la clôture du jour de l'OAT 10 ans
+        working-directory: back
+        run: npm run oat
+        continue-on-error: true
+
       - name: Détecter les événements de vie des UC (gérants, frais, note)
         working-directory: back
         run: npm run ucmanagers
@@ -46,7 +53,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add front/data/history/cms.json front/data/uc-managers.json front/data/uc-actu.json
+          git add front/data/history/cms.json front/data/history/oat.json front/data/uc-managers.json front/data/uc-actu.json
           if git diff --staged --quiet; then
             echo "Aucun changement de données."
           else

@@ -1,1 +1,97 @@
-{"isin": "LU1819480192", "alloc": {"action": 100.1, "obligation": 0, "liquidite": -0.1, "autre": 0}, "secteurs": [{"nom": "Technologie", "pct": 68.5}, {"nom": "Conso. cyclique", "pct": 11.0}, {"nom": "Communication", "pct": 10.0}, {"nom": "Industrie", "pct": 6.4}, {"nom": "Santé", "pct": 2.8}, {"nom": "Services collectifs", "pct": 1.1}, {"nom": "Finance", "pct": 0.1}, {"nom": "Immobilier", "pct": 0.0}, {"nom": "Matériaux", "pct": 0.0}, {"nom": "Conso. de base", "pct": 0.0}, {"nom": "Énergie", "pct": 0.0}], "holdings": [{"nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR", "pct": 7.1}, {"nom": "Amazon.com Inc", "pct": 6.0}, {"nom": "Alphabet Inc Class A", "pct": 5.5}, {"nom": "Microsoft Corp", "pct": 5.3}, {"nom": "NVIDIA Corp", "pct": 4.9}, {"nom": "Advanced Micro Devices Inc", "pct": 4.7}, {"nom": "Apple Inc", "pct": 4.4}, {"nom": "Broadcom Inc", "pct": 4.4}, {"nom": "Vertiv Holdings Co Class A", "pct": 4.3}, {"nom": "SK Hynix Inc", "pct": 4.2}]}
+{
+ "isin": "LU1819480192",
+ "alloc": {
+  "action": 100,
+  "obligation": 0,
+  "liquidite": 0,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 68.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 11
+  },
+  {
+   "nom": "Communication",
+   "pct": 10
+  },
+  {
+   "nom": "Industrie",
+   "pct": 6.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 2.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 1.1
+  },
+  {
+   "nom": "Finance",
+   "pct": 0.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+   "pct": 7.1
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 6
+  },
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 5.5
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 5.3
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 4.9
+  },
+  {
+   "nom": "Advanced Micro Devices Inc",
+   "pct": 4.7
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 4.4
+  },
+  {
+   "nom": "Broadcom Inc",
+   "pct": 4.4
+  },
+  {
+   "nom": "Vertiv Holdings Co Class A",
+   "pct": 4.3
+  },
+  {
+   "nom": "SK Hynix Inc",
+   "pct": 4.2
+  }
+ ]
+}

@@ -1688,27 +1688,34 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
 
   const perf   = typeof FONDS_EUROS_PERF !== 'undefined' ? FONDS_EUROS_PERF : null;
   const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
-  const ucCat  = (state && state.ucCat) || null;
+  // Filtre restauré depuis un état antérieur : un onglet disparu (ex. « Actions thématique »)
+  // retombe sur « Tous » plutôt que d'afficher une liste vide.
+  const CATS_VALIDES = ['Conservateur', 'Favoris', 'Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
+  const ucCat  = (state && state.ucCat && CATS_VALIDES.includes(state.ucCat)) ? state.ucCat : null;
   const feOuvert = !!(state && state.feOuvert);
 
-  // Regroupement des catégories UC en 4 groupes d'affichage
+  // Regroupement des catégories UC en 4 groupes d'affichage. Les fonds thématiques rejoignent
+  // « Actions » (l'onglet « Thématique » a été retiré) ; la catégorie brute reste visible sur
+  // la fiche détail.
   const CAT_MAP = {
-    'Actions thématique':  'Actions thématique',
+    'Actions thématique':  'Actions',
     'Actions Monde':       'Actions',
     'Actions Europe':      'Actions',
     'Flexible':            'Mixte / Flexible',
     'Mixte / Flexible':    'Mixte / Flexible',
     'Mixte obligataire':   'Obligataire',
     'Obligataire flexible':'Obligataire',
+    'Obligataire court terme':'Obligataire',
+    'Monétaire':           'Monétaire',
   };
-  const CATS_ORDER = ['Actions thématique', 'Actions', 'Mixte / Flexible', 'Obligataire'];
+  const CATS_ORDER = ['Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
   // Clé de teinte de la pastille de catégorie, du moins exposé au plus exposé. Les libellés sont
   // ceux de SORTIE de CAT_MAP (donc ceux affichés), pas les catégories brutes du catalogue.
   const CAT_RISQUE = {
+    'Monétaire':          'oblig',
     'Obligataire':        'oblig',
     'Mixte / Flexible':   'mixte',
     'Actions':            'actions',
-    'Actions thématique': 'thematique',
   };
   const anneeN = new Date().getFullYear();
   const anneeN1 = anneeN - 1;
@@ -1754,6 +1761,8 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   const ucFiltrees = (() => {
     const base = ucCat === 'Conservateur'
       ? uc.filter(u => u.nom.includes('Conservateur'))
+      : ucCat === 'Favoris'
+      ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin))
       : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
     if (!hasPerfs && tri.cle === 'ytd') return base;
     const lire = VALEUR_TRI[tri.cle];
@@ -1848,13 +1857,15 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
         ${[
           { cle: null,               long: 'Tous',         court: 'Tous', classe: ' uc-chip-tous' },
           { cle: 'Conservateur',     long: 'Conservateur', court: 'C', classe: ' uc-chip-csr' },
-          { cle: 'Actions thématique', long: 'Thématique', court: 'Thém.' },
           { cle: 'Actions',          long: 'Actions',      court: 'Actions' },
           { cle: 'Mixte / Flexible', long: 'Mixte / Flexible', court: 'Mixte' },
           { cle: 'Obligataire',      long: 'Obligataire',  court: 'Oblig.' },
+          { cle: 'Monétaire',        long: 'Monétaire',    court: 'Monét.' },
+          { cle: 'Favoris',          long: 'Favoris',      court: 'Fav.' },
         ].map(f => {
           const n = f.cle === null ? uc.length
             : f.cle === 'Conservateur' ? uc.filter(u => u.nom.includes('Conservateur')).length
+            : f.cle === 'Favoris' ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin)).length
             : uc.filter(u => CAT_MAP[u.categorie] === f.cle).length;
           const actif = ucCat === f.cle;
           const arg = f.cle === null ? 'null' : `'${f.cle}'`;
@@ -1916,10 +1927,10 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           // style.css. Une catégorie inconnue garde la pastille neutre.
           const catCle = CAT_RISQUE[catLabel] || '';
           const filterLabel = u.nom.includes('Conservateur') ? 'C'
-            : CAT_MAP[u.categorie] === 'Actions thématique' ? 'Thématique'
             : CAT_MAP[u.categorie] === 'Actions'            ? 'Actions'
             : CAT_MAP[u.categorie] === 'Mixte / Flexible'   ? 'Mixte'
             : CAT_MAP[u.categorie] === 'Obligataire'        ? 'Oblig.'
+            : CAT_MAP[u.categorie] === 'Monétaire'          ? 'Monét.'
             : u.categorie;
           return `
         <div class="uc-item${u.graphId ? ' clic' : ''}${u.isin === ucSel && !modeCompare ? ' uc-item--actif' : ''}${choisis.includes(u.isin) ? ' uc-item--choisi' : ''}" data-isin="${escHtml(u.isin)}" title="${escHtml(u.nom)} · ${escHtml(u.isin)}"${u.graphId ? ` onclick="App.clicUC('${u.isin}')"` : ''}>

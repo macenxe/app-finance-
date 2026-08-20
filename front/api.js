@@ -277,7 +277,8 @@ const AppAPI = (() => {
         const d = await fetchJson(`${WORKER}?${q}`, 8000);
         if ((d.points || []).length >= 2) return d;
       } catch { /* Worker injoignable : on tente le repli statique */ }
-      const d = await fetchJson('./data/history/cms.json');
+      const fichier = id === 'scrape:oat' ? 'oat' : 'cms';
+      const d = await fetchJson(`./data/history/${fichier}.json`);
       return { ...d, points: filtrerPeriode(d.points || [], periode) };
     }
     try {

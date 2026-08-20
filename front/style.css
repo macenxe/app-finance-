@@ -744,13 +744,19 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .cat-card-csr.active .cat-card-csr-icon { color: #c9a96a; }
 
 /* ── Chips filtres UC ── */
-.uc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; justify-content: center; }
+/* Mobile : une seule ligne qui défile horizontalement (pas de retour à la ligne) ; la barre de
+   défilement est masquée, le débordement à droite sert d'indice. Le bureau redéfinit tout. */
+.uc-chips {
+  display: flex; flex-wrap: nowrap; gap: 6px; margin-bottom: 16px; justify-content: flex-start;
+  overflow-x: auto; scrollbar-width: none;
+}
+.uc-chips::-webkit-scrollbar { display: none; }
 .uc-chip {
   height: 28px; padding: 0 12px; border-radius: 14px;
   border: 1.5px solid #ece7dc; background: #fff;
   font-size: 12px; font-weight: 600; color: #6b6e73;
   cursor: pointer; transition: border-color .15s, background .15s, color .15s;
-  white-space: nowrap;
+  white-space: nowrap; flex: none;
 }
 .uc-chip:hover { border-color: #c9a96a; color: #16304f; }
 .uc-chip.active { border-color: #16304f; background: #16304f; color: #fff; }

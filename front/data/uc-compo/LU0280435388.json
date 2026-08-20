@@ -1,1 +1,97 @@
-{"isin": "LU0280435388", "alloc": {"action": 98.0, "obligation": 0.2, "liquidite": 1.8, "autre": 0}, "secteurs": [{"nom": "Technologie", "pct": 61.2}, {"nom": "Industrie", "pct": 19.2}, {"nom": "Services collectifs", "pct": 15.0}, {"nom": "Matériaux", "pct": 3.4}, {"nom": "Conso. cyclique", "pct": 1.2}, {"nom": "Immobilier", "pct": 0.0}, {"nom": "Conso. de base", "pct": 0.0}, {"nom": "Communication", "pct": 0.0}, {"nom": "Finance", "pct": 0.0}, {"nom": "Énergie", "pct": 0.0}, {"nom": "Santé", "pct": 0.0}], "holdings": [{"nom": "Broadcom Inc", "pct": 6.2}, {"nom": "Applied Materials Inc", "pct": 5.8}, {"nom": "Infineon Technologies AG", "pct": 4.7}, {"nom": "Marvell Technology Inc", "pct": 4.1}, {"nom": "ASML Holding NV", "pct": 3.8}, {"nom": "Builders FirstSource Inc", "pct": 3.6}, {"nom": "Xcel Energy Inc", "pct": 3.5}, {"nom": "Compagnie de Saint-Gobain SA", "pct": 3.5}, {"nom": "NXP Semiconductors NV", "pct": 3.4}, {"nom": "Iberdrola SA", "pct": 3.4}]}
+{
+ "isin": "LU0280435388",
+ "alloc": {
+  "action": 98,
+  "obligation": 0.2,
+  "liquidite": 1.8,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 61.2
+  },
+  {
+   "nom": "Industrie",
+   "pct": 19.2
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 15
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 3.4
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 1.2
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  },
+  {
+   "nom": "Santé",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Broadcom Inc",
+   "pct": 6.2
+  },
+  {
+   "nom": "Applied Materials Inc",
+   "pct": 5.8
+  },
+  {
+   "nom": "Infineon Technologies AG",
+   "pct": 4.7
+  },
+  {
+   "nom": "Marvell Technology Inc",
+   "pct": 4.1
+  },
+  {
+   "nom": "ASML Holding NV",
+   "pct": 3.8
+  },
+  {
+   "nom": "Builders FirstSource Inc",
+   "pct": 3.6
+  },
+  {
+   "nom": "Xcel Energy Inc",
+   "pct": 3.5
+  },
+  {
+   "nom": "Compagnie de Saint-Gobain SA",
+   "pct": 3.5
+  },
+  {
+   "nom": "NXP Semiconductors NV",
+   "pct": 3.4
+  },
+  {
+   "nom": "Iberdrola SA",
+   "pct": 3.4
+  }
+ ]
+}
