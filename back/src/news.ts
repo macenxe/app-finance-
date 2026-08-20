@@ -214,31 +214,45 @@ const FLUX_ECO: Flux[] = [
     mots: MOTS_ECO_MACRO, sources: [], dispenseSource: true, sourceDefaut: 'BCE', max: 10, capsRegex: GRANDES_CAPS_RE },
 ];
 
-// Les 15 fonds du cabinet (nom de base, sans suffixe de part) — actu des fonds eux-mêmes,
-// pas des sociétés de gestion qui les gèrent (les requêtes par société ramenaient des profils
-// de personnes et du hors-sujet, D23/D24).
+// Les fonds du catalogue (nom de recherche par fonds, sans suffixe de part — généré par
+// .claude/chantier-uc/scripts/lot5-actus.mjs depuis le référentiel « Supports éligibles ») —
+// actu des fonds eux-mêmes, pas des sociétés de gestion (D23/D24). Les parts multiples d'un
+// même fonds partagent un nom unique (ex. Congrégation Investissement C/R).
 const FLUX_UC_FONDS = [
-  'R-co Valor', 'Echiquier Artificial Intelligence', 'EdR Fund Big Data',
-  'Pictet Clean Energy Transition', 'Pictet-Premium Brands', 'Conservateur Actions Monde',
-  'Comgest Renaissance Europe', 'Fidelity World Fund', 'Conservateur Actions Flexibles',
-  'Conservateur Diversifié Réactif', 'Conservateur Rendement Flexible',
-  'Conservateur Diversifié', 'DNCA Invest Flex Inflation',
-  'Conservateur Obligations Court Terme', 'Palatine Monétaire Court Terme',
+  'Candriam Equities L Biotech', 'Centifolia', 'Comgest Renaissance Europe', 'Conservateur Actions Euro',
+  'Conservateur Actions Flexibles', 'Conservateur Actions Monde', 'Conservateur Emploi Durable', 'Conservateur Investissement Proximité',
+  'CPR Global Silver Age', 'CPR Invest Food For Generations', 'CPR Invest Climate Action', 'DNCA Invest SRI Europe Growth',
+  'DNCA Invest SRI Norden Europe', 'Echiquier Artificial Intelligence', 'Echiquier Positive Impact Europe', 'EdR Fund Big Data',
+  'EdR Fund China', 'EdR Fund US Value', 'EdR India', 'Fidelity Global Demographics',
+  'Fidelity Sustainable Water & Waste', 'Fidelity World Fund', 'La Française Carbon Impact Global', 'Magellan',
+  'Moneta Multi Caps', 'ODDO BHF Avenir', 'ODDO BHF Avenir Europe', 'ODDO BHF Immobilier',
+  'OFI RS Croissance Durable et Solidaire', 'Palatine France Small Cap', 'Palatine Planète', 'Pictet Clean Energy Transition',
+  'Pictet Nutrition', 'Pictet-Premium Brands', 'Conservateur Horizon 2031', 'Conservateur Obligations Moyen Terme',
+  'DNCA Invest Flex Inflation', 'La Française Obligation Carbon Impact', 'ODDO BHF Sustainable Credit Opportunities', 'Carmignac Patrimoine',
+  'Congrégation Investissement', 'Conservateur Diversifié', 'Conservateur Diversifié Réactif', 'Conservateur Immo-Or',
+  'Conservateur Rendement Flexible', 'Conservateur Reverso', 'CPR Croissance Réactive', 'DNCA Invest Convertibles',
+  'Eurose', 'R-co Valor', 'Sextant Grand Large', 'Tikehau International Cross Assets',
+  'Conservateur Obligations Court Terme', 'Palatine Monétaire Court Terme', 'Tikehau Short Duration',
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
 // pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.
-// Les 15 fonds sont regroupés en 3 requêtes OR (budget sous-requêtes, D27) ; le label de
-// carte reste le fonds matché grâce à tagParMot (mot minuscule → nom exact).
-const FLUX_UC: Flux[] = [
-  FLUX_UC_FONDS.slice(0, 5), FLUX_UC_FONDS.slice(5, 9), FLUX_UC_FONDS.slice(9),
-].map(groupe => {
-  const mots = groupe.map(n => n.toLowerCase());
-  const tagParMot: Record<string, string> = Object.fromEntries(groupe.map(n => [n.toLowerCase(), n]));
-  if (groupe.includes('R-co Valor')) { mots.push('r co valor'); tagParMot['r co valor'] = 'R-co Valor'; }
-  if (groupe.includes('Pictet-Premium Brands')) { mots.push('pictet premium brands'); tagParMot['pictet premium brands'] = 'Pictet-Premium Brands'; }
-  const q = groupe.map(n => `"${n}"`).join(' OR ');
-  return { ...fluxGoogleNews(q, '30d', 'uc', mots, []), tag: groupe[0], tagParMot, max: 6, dispenseSource: true };
-});
+// Les fonds sont regroupés en requêtes OR par tranches de 7 (budget sous-requêtes : ce flux
+// n'est exécuté que par GitHub Actions, D30). Le label de carte reste le fonds matché grâce à
+// tagParMot ; ses clés sont triées par longueur décroissante pour qu'un nom court préfixe d'un
+// nom plus long (« Conservateur Diversifié » vs « … Réactif ») ne capte pas ses titres.
+const FLUX_UC: Flux[] = (() => {
+  const groupes: string[][] = [];
+  for (let i = 0; i < FLUX_UC_FONDS.length; i += 7) groupes.push(FLUX_UC_FONDS.slice(i, i + 7));
+  return groupes.map((groupe) => {
+    const tries = [...groupe].sort((a, b) => b.length - a.length);
+    const mots = tries.map((n) => n.toLowerCase());
+    const tagParMot: Record<string, string> = Object.fromEntries(tries.map((n) => [n.toLowerCase(), n]));
+    if (groupe.includes('R-co Valor')) { mots.push('r co valor'); tagParMot['r co valor'] = 'R-co Valor'; }
+    if (groupe.includes('Pictet-Premium Brands')) { mots.push('pictet premium brands'); tagParMot['pictet premium brands'] = 'Pictet-Premium Brands'; }
+    const q = groupe.map((n) => `"${n}"`).join(' OR ');
+    return { ...fluxGoogleNews(q, '30d', 'uc', mots, []), tag: groupe[0], tagParMot, max: 6, dispenseSource: true };
+  });
+})();
 
 // Les flux échappent les entités XML (&amp;, &#39;…) ; le front rééchappe tout à l'affichage
 // (escHtml), le serveur doit donc livrer du texte décodé. &amp; en dernier pour ne pas
