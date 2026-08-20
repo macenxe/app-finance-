@@ -1,14 +1,16 @@
 # Contrôle C2 — lot 2 (catalogue front + listes back).
-# Mesure : front/data.js (UC_CATALOGUE, UC_FAVORIS), front/pages.js (CAT_MAP),
+# Mesure : front/data.js (UC_CATALOGUE), front/pages.js (CAT_MAP),
 #          back/src/fonds-meta.ts, back/src/uc-history.ts, back/src/uc-managers.ts,
 #          syntaxe des 4 fichiers front (node --check), referentiel.json en référence.
 # Conforme si :
 #  - UC_CATALOGUE = 56 entrées, même ordre que le référentiel, categorie ∈ {Actions,
-#    Mixte / Flexible, Obligataire, Monétaire} conforme à la section, mut/fin booléens
-#    = éligibilités du référentiel, srri/graphId = référentiel ;
-#  - comptes par catégorie : Actions 34, Mixte / Flexible 14, Obligataire 5, Monétaire 3 ;
+#    Mixte / Flexible, Obligataire, Monétaire} conforme à la section (ou au
+#    categorie_override du référentiel, D19), mut/fin booléens = éligibilités du
+#    référentiel, srri/graphId = référentiel ;
+#  - comptes par catégorie : Actions 34, Mixte / Flexible 14, Obligataire 7, Monétaire 1 (D19) ;
 #  - compte « Conservateur » dans le nom = compte du référentiel (onglet C, D6) ;
-#  - UC_FAVORIS = exactement les 14 ISIN d'avant-chantier (intouché) ;
+#  - UC_FAVORIS et son onglet supprimés (D20, arbitrage utilisateur du 20/08/2026 —
+#    l'exigence « Favoris intouché » n'existe plus) : aucune trace « Favoris » au front ;
 #  - listes back = tous les ISIN du référentiel AVEC graphId (55), aucune autre entrée ;
 #  - node --check passe sur data.js, pages.js, app.js, api.js.
 # Un catalogue resté à 15 entrées échoue (non traité ≠ conforme).
@@ -17,9 +19,6 @@ import json, re, subprocess, sys, collections
 BASE = '/Users/maxenceevrard/Documents/claude/application finance'
 REF = json.load(open(f'{BASE}/.claude/chantier-uc/referentiel.json'))['ucs']
 CAT = {'Actions': 'Actions', 'Obligations': 'Obligataire', 'Mixtes': 'Mixte / Flexible', 'Monétaires': 'Monétaire'}
-FAVORIS_FIGES = ['FR0011253624', 'LU1819480192', 'LU1244893696', 'LU0280435388', 'LU0217139020',
-                 'FR0010564229', 'FR0000295230', 'LU1261432659', 'FR0013256930', 'FR0010489542',
-                 'FR0013087152', 'FR0010564336', 'FR0011461326', 'FR0013287315']
 
 def echec(msg):
     print(f'C2 NON CONFORME : {msg}')
@@ -30,22 +29,23 @@ for f in ('data.js', 'pages.js', 'app.js', 'api.js'):
     if r.returncode != 0:
         echec(f'node --check {f} : {r.stderr.strip()[:300]}')
 
-# Catalogue et favoris lus par évaluation Node de data.js (fichier de constantes).
+# Catalogue lu par évaluation Node de data.js (fichier de constantes).
 lecture = subprocess.run(['node', '-e', '''
 const vm = require('vm'); const fs = require('fs');
 const ctx = vm.createContext({});
-const res = vm.runInContext(fs.readFileSync(process.argv[1], 'utf8') + '\\n;JSON.stringify({cat: UC_CATALOGUE, fav: UC_FAVORIS});', ctx);
+const res = vm.runInContext(fs.readFileSync(process.argv[1], 'utf8') + '\\n;JSON.stringify({cat: UC_CATALOGUE});', ctx);
 console.log(res);
 ''', f'{BASE}/front/data.js'], capture_output=True, text=True)
 if lecture.returncode != 0:
     echec(f'évaluation data.js impossible : {lecture.stderr.strip()[:300]}')
-data = json.loads(lecture.stdout)
-cat, fav = data['cat'], data['fav']
+cat = json.loads(lecture.stdout)['cat']
 
 if len(cat) != 56:
     echec(f'UC_CATALOGUE : {len(cat)} entrées, 56 attendues')
-if fav != FAVORIS_FIGES:
-    echec(f'UC_FAVORIS modifié : {fav}')
+# D20 : l'onglet Favoris et UC_FAVORIS sont supprimés — toute résurgence est un écart.
+for f in ('data.js', 'pages.js'):
+    if 'Favoris' in open(f'{BASE}/front/{f}').read():
+        echec(f'{f} : trace « Favoris » restante (D20)')
 
 for i, (u, r) in enumerate(zip(cat, REF)):
     if u['isin'] != r['isin']:
@@ -82,5 +82,5 @@ for fichier, motif in (
         manque = set(attendu) - set(trouves); trop = set(trouves) - set(attendu)
         echec(f'{fichier} : manque {sorted(manque)[:5]}…({len(manque)}) / en trop {sorted(trop)[:5]}…({len(trop)})')
 
-print(f'C2 CONFORME : catalogue 56, catégories {dict(comptes)}, onglet C {nb_c}, favoris figés, listes back {len(attendu)}.')
+print(f'C2 CONFORME : catalogue 56, catégories {dict(comptes)}, onglet C {nb_c}, sans Favoris (D20), listes back {len(attendu)}.')
 sys.exit(0)

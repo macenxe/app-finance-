@@ -1703,7 +1703,7 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   const uc     = typeof UC_CATALOGUE    !== 'undefined' ? UC_CATALOGUE    : [];
   // Filtre restauré depuis un état antérieur : un onglet disparu (ex. « Actions thématique »)
   // retombe sur « Tous » plutôt que d'afficher une liste vide.
-  const CATS_VALIDES = ['Conservateur', 'Favoris', 'Mut', 'Fin', 'Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
+  const CATS_VALIDES = ['Conservateur', 'Mut', 'Fin', 'Actions', 'Mixte / Flexible', 'Obligataire', 'Monétaire'];
   const ucCat  = (state && state.ucCat && CATS_VALIDES.includes(state.ucCat)) ? state.ucCat : null;
   const feOuvert = !!(state && state.feOuvert);
 
@@ -1773,8 +1773,6 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
   const ucFiltrees = (() => {
     let base = ucCat === 'Conservateur'
       ? uc.filter(u => u.nom.includes('Conservateur'))
-      : ucCat === 'Favoris'
-      ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin))
       : ucCat === 'Mut' ? uc.filter(u => u.mut)
       : ucCat === 'Fin' ? uc.filter(u => u.fin)
       : ucCat ? uc.filter(u => CAT_MAP[u.categorie] === ucCat) : uc;
@@ -1882,11 +1880,9 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
           { cle: 'Monétaire',        long: 'Monétaire',    court: 'Monét.' },
           { cle: 'Mut',              long: 'Mutuelle',     court: 'Mut' },
           { cle: 'Fin',              long: 'Finance',      court: 'Fin' },
-          { cle: 'Favoris',          long: 'Favoris',      court: 'Fav.' },
         ].map(f => {
           const n = f.cle === null ? uc.length
             : f.cle === 'Conservateur' ? uc.filter(u => u.nom.includes('Conservateur')).length
-            : f.cle === 'Favoris' ? uc.filter(u => typeof UC_FAVORIS !== 'undefined' && UC_FAVORIS.includes(u.isin)).length
             : f.cle === 'Mut' ? uc.filter(u => u.mut).length
             : f.cle === 'Fin' ? uc.filter(u => u.fin).length
             : uc.filter(u => CAT_MAP[u.categorie] === f.cle).length;
@@ -2092,7 +2088,6 @@ function renderUCPanneau(u, ucPerfs, state, opts = {}) {
     <div class="ac-detail-entete">
       <div class="ac-detail-id">
         <div class="ac-detail-titre">${escHtml(u.nom)}</div>
-        <div class="ac-detail-sous">${escHtml(u.categorie || '')} · ${escHtml(u.isin)} · Actions ${escHtml(String(u.equity ?? '-'))} %</div>
         ${eligPastilles ? `<div class="uc-elig-ligne">${eligPastilles}</div>` : ''}
       </div>
       <div class="ac-detail-niveau">

@@ -366,12 +366,3 @@ const UC_CATALOGUE = [
   { rang:56, gerant:"Tik", nom:"TF - Tikehau Short Duration (R)", isin:"LU1585265066", categorie:"Obligataire", srri:2, equity:0, graphId:"0P0001KJDD.F", mut:true, fin:false,
     strategie:"Le compartiment vise une performance annualisée supérieure à l'indice EURIBOR 3 mois + 100 points de base, nette des frais de gestion, sur un horizon d'investissement d'au moins 12 à 18 mois, en gestion active et discrétionnaire. Portefeuille diversifié de titres de créance d'émetteurs privés ou publics situés principalement en zone euro et appartenant essentiellement à la catégorie Investment Grade, avec un risque de taux minimisé (fourchette de sensibilité taux comprise entre -1 et +1) ; l'exposition globale aux titres à haut rendement ou non notés est limitée à 45% de l'actif net (dont 35% maximum en High Yield)." },
 ];
-
-// Onglet « Favoris » de la page Fonds : sélection curatée à la main (l'ensemble du catalogue
-// au 20/08/2026, hors DNCA Invest Flex Inflation). Un fonds ajouté au catalogue n'y entre pas
-// automatiquement : compléter la liste explicitement.
-const UC_FAVORIS = [
-  'FR0011253624', 'LU1819480192', 'LU1244893696', 'LU0280435388', 'LU0217139020',
-  'FR0010564229', 'FR0000295230', 'LU1261432659', 'FR0013256930', 'FR0010489542',
-  'FR0013087152', 'FR0010564336', 'FR0011461326', 'FR0013287315',
-];
