@@ -50,15 +50,19 @@ if fav != FAVORIS_FIGES:
 for i, (u, r) in enumerate(zip(cat, REF)):
     if u['isin'] != r['isin']:
         echec(f'ordre : position {i} = {u["isin"]}, référentiel = {r["isin"]}')
-    if u.get('categorie') != CAT[r['section']]:
-        echec(f'{u["isin"]} : categorie {u.get("categorie")!r} ≠ {CAT[r["section"]]!r}')
+    # D19 (arbitrage utilisateur) : categorie_override du référentiel prime sur la section
+    # du fichier Excel (Tikehau Short Duration et Conservateur Obligations Court Terme → Obligataire).
+    attendu_cat = r.get('categorie_override') or CAT[r['section']]
+    if u.get('categorie') != attendu_cat:
+        echec(f'{u["isin"]} : categorie {u.get("categorie")!r} ≠ {attendu_cat!r}')
     if u.get('mut') is not (r['mutuelle'] == 'Ouvert') or u.get('fin') is not (r['cto'] == 'Ouvert'):
         echec(f'{u["isin"]} : mut/fin ({u.get("mut")}, {u.get("fin")}) ≠ référentiel')
     if u.get('srri', 'X') != r.get('srri') or u.get('graphId', 'X') != r.get('graphId'):
         echec(f'{u["isin"]} : srri/graphId ≠ référentiel')
 
 comptes = collections.Counter(u['categorie'] for u in cat)
-if dict(comptes) != {'Actions': 34, 'Mixte / Flexible': 14, 'Obligataire': 5, 'Monétaire': 3}:
+# Obligataire 7 / Monétaire 1 depuis D19 (2 fonds basculés de Monétaire vers Obligataire).
+if dict(comptes) != {'Actions': 34, 'Mixte / Flexible': 14, 'Obligataire': 7, 'Monétaire': 1}:
     echec(f'comptes par catégorie : {dict(comptes)}')
 nb_c = sum(1 for u in cat if 'Conservateur' in u['nom'])
 nb_c_ref = sum(1 for r in REF if 'Conservateur' in r['libelle'])

@@ -872,7 +872,9 @@
    "equity": 0,
    "libelleProd": "Conservateur Obligations Court Terme C",
    "xid": null,
-   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)",
+   "categorie_override": "Obligataire",
+   "categorie_override_note": "D19 (utilisateur, 20/08/2026) : affiché dans l'onglet Obligataire malgré la section Monétaires du fichier Excel"
   },
   {
    "isin": "FR0013287315",
@@ -904,7 +906,9 @@
    "srri": 2,
    "srri_source": "DIC PRIIPS officiel Tikehau Investment Management, Tikehau Fund - Tikehau Short Duration, Catégorie R-Acc-EUR, daté du 23/10/2023 (consulté via prepar-vie.fr/wp-content/uploads/2023/07/LU1585265066.pdf) : \"Nous avons classé ce produit dans la classe de risque 2 sur 7, qui est une classe de risque basse.\"",
    "strategie": "Le compartiment vise une performance annualisée supérieure à l'indice EURIBOR 3 mois + 100 points de base, nette des frais de gestion, sur un horizon d'investissement d'au moins 12 à 18 mois, en gestion active et discrétionnaire. Portefeuille diversifié de titres de créance d'émetteurs privés ou publics situés principalement en zone euro et appartenant essentiellement à la catégorie Investment Grade, avec un risque de taux minimisé (fourchette de sensibilité taux comprise entre -1 et +1) ; l'exposition globale aux titres à haut rendement ou non notés est limitée à 45% de l'actif net (dont 35% maximum en High Yield).",
-   "strategie_source": "DIC PRIIPS officiel Tikehau IM, LU1585265066, daté du 23/10/2023 (prepar-vie.fr), rubrique \"Objectifs\"."
+   "strategie_source": "DIC PRIIPS officiel Tikehau IM, LU1585265066, daté du 23/10/2023 (prepar-vie.fr), rubrique \"Objectifs\".",
+   "categorie_override": "Obligataire",
+   "categorie_override_note": "D19 (utilisateur, 20/08/2026) : affiché dans l'onglet Obligataire malgré la section Monétaires du fichier Excel"
   }
  ]
 }
