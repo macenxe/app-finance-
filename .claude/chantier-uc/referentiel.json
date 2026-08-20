@@ -1,0 +1,456 @@
+{
+ "source": "Supports éligibles CHP CHC CER CTO - 12-2025.xlsx",
+ "meta": {
+  "ff_note": "Le fichier liste deux lignes 'FF - Sustainable W & W Fund (A)'. Vérification FT : LU0528228074 = FF Global Demographics Fund A-Acc-EUR (hedged) (libellé Excel erroné, corrigé ici) ; LU1892829828 = FF Water & Waste Fund A-Acc-EUR. Deux fonds distincts, tous deux capitalisants : les deux sont retenus (décision D7), incohérence I1 remontée pour arbitrage."
+ },
+ "ucs": [
+  {
+   "isin": "LU1120766388",
+   "libelle": "Candriam Equities L Biotech (C)",
+   "societe": "Candriam",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0007076930",
+   "libelle": "Centifolia (C)",
+   "societe": "DNCA Finance",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0000295230",
+   "libelle": "Comgest Renaissance Europe (C)",
+   "societe": "COMGEST",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0014008EI2",
+   "libelle": "Conservateur Actions Euro (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0013256930",
+   "libelle": "Conservateur Actions Flexibles (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010564229",
+   "libelle": "Conservateur Actions Monde (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010038257",
+   "libelle": "Conservateur Emploi Durable (C)",
+   "societe": "Palatine AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR001400U512",
+   "libelle": "Conservateur Investissement Proximité (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0012844140",
+   "libelle": "CPR Global Silver Age (E)",
+   "societe": "CPR AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1653748860",
+   "libelle": "CPR Invest - Food For Gene (A)",
+   "societe": "CPR AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1902443420",
+   "libelle": "CPR Invest Climate Action (A)",
+   "societe": "CPR AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0870553020",
+   "libelle": "DNCA Invest SRI Europe Growth (A)",
+   "societe": "DNCA Finance",
+   "section": "Actions",
+   "mutuelle": "Non éligible",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "LU1490785091",
+   "libelle": "DNCA Invest SRI Norden Europe (A)",
+   "societe": "DNCA Finance",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "LU1819480192",
+   "libelle": "Echiquier Artificial Intel. (B)",
+   "societe": "La Financière de l'Echiquier",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0010863688",
+   "libelle": "Echiquier Positive Impact Europe (A)",
+   "societe": "La Financière de l'Echiquier",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "LU1244893696",
+   "libelle": "EdR Fund - Big Data (A)",
+   "societe": "Edmond de Rothschild AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1160365091",
+   "libelle": "EdR Fund - China (A)",
+   "societe": "Edmond de Rothschild AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1103305709",
+   "libelle": "EdR Fund - US Value (R)",
+   "societe": "Edmond de Rothschild AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0010479931",
+   "libelle": "EdR India (A)",
+   "societe": "Edmond de Rothschild AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0528228074",
+   "libelle": "FF - Global Demographics Fund (A-Acc-EUR H)",
+   "societe": "FIL Investment Management",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1892829828",
+   "libelle": "FF - Sustainable W & W Fund (A)",
+   "societe": "FIL Investment Management",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1261432659",
+   "libelle": "FF - World Fund (A)",
+   "societe": "FIL Investment Management",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1744646933",
+   "libelle": "La Francaise IP Carbon Impact Glb (R)",
+   "societe": "La Française AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0000292278",
+   "libelle": "Magellan (C)",
+   "societe": "COMGEST",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0010298596",
+   "libelle": "Moneta Multi Caps (C)",
+   "societe": "Moneta AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0000989899",
+   "libelle": "ODDO BHF Avenir (CR-EUR)",
+   "societe": "ODDO BHF AM SAS",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0000974149",
+   "libelle": "ODDO BHF Avenir Europe (CR-EUR)",
+   "societe": "ODDO BHF AM SAS",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0000989915",
+   "libelle": "ODDO BHF Immobilier (CR-EUR)",
+   "societe": "ODDO BHF AM SAS",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0000983819",
+   "libelle": "OFI RS Croissance Durable et Solidaire (C)",
+   "societe": "OFI AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0000978439",
+   "libelle": "Palatine France Small Cap (I)",
+   "societe": "Palatine AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0010649079",
+   "libelle": "Palatine Planète (R)",
+   "societe": "Palatine AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0280435388",
+   "libelle": "Pictet - Clean Energy Transition (P)",
+   "societe": "Pictet AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0366534344",
+   "libelle": "Pictet - Nutrition (P)",
+   "societe": "Pictet AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0217139020",
+   "libelle": "Pictet - Premium Brands (P)",
+   "societe": "Pictet AM",
+   "section": "Actions",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR001400PL02",
+   "libelle": "Conservateur Horizon 2031 (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Obligations",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010564328",
+   "libelle": "Conservateur Obligations Moyen Terme (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Obligations",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "LU1694790202",
+   "libelle": "DNCA Invest Flex Inflation (B)",
+   "societe": "DNCA Finance",
+   "section": "Obligations",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010915314",
+   "libelle": "La Française Obligation Carbon Impact (C)",
+   "societe": "La Française AM",
+   "section": "Obligations",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU1752460292",
+   "libelle": "ODDO BHF Sust Credit Opportunities (CR-EUR)",
+   "societe": "ODDO BHF AM SAS",
+   "section": "Obligations",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010135103",
+   "libelle": "Carmignac Patrimoine (A)",
+   "societe": "Carmignac Gestion",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0007439666",
+   "libelle": "Congrégation Investissement (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Non éligible",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR001400UAZ4",
+   "libelle": "Congrégation Investissement (R)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "FR0010564336",
+   "libelle": "Conservateur Diversifié (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010489542",
+   "libelle": "Conservateur Diversifié Réactif (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0011199314",
+   "libelle": "Conservateur Immo-Or (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0013087152",
+   "libelle": "Conservateur Rendement Flexible (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0011175652",
+   "libelle": "Conservateur Reverso (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010097683",
+   "libelle": "CPR Croissance Réactive (P)",
+   "societe": "CPR AM",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU0512124107",
+   "libelle": "DNCA Invest - Convertibles (B)",
+   "societe": "DNCA Finance",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0007051040",
+   "libelle": "Eurose (C)",
+   "societe": "DNCA Finance",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0011253624",
+   "libelle": "R-co Valor (C)",
+   "societe": "Rothschild & Co AM",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0010286013",
+   "libelle": "Sextant Grand Large (A)",
+   "societe": "Amiral Gestion",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  },
+  {
+   "isin": "LU2147879543",
+   "libelle": "Tikehau International Cross Assets (R)",
+   "societe": "Tikehau IM",
+   "section": "Mixtes",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0011461326",
+   "libelle": "Conservateur Obligations Court Terme (C)",
+   "societe": "Conservateur Gestion Valor",
+   "section": "Monétaires",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "FR0013287315",
+   "libelle": "Palatine Monétaire Court Terme (R)",
+   "societe": "Palatine AM",
+   "section": "Monétaires",
+   "mutuelle": "Ouvert",
+   "cto": "Ouvert"
+  },
+  {
+   "isin": "LU1585265066",
+   "libelle": "TF - Tikehau Short Duration (R)",
+   "societe": "Tikehau IM",
+   "section": "Monétaires",
+   "mutuelle": "Ouvert",
+   "cto": "Non éligible"
+  }
+ ]
+}
