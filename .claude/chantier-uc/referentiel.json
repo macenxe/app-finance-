@@ -10,7 +10,15 @@
    "societe": "Candriam",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Cand",
+   "equity": 95,
+   "graphId": "0P00016ALF.F",
+   "xid": "89433279",
+   "srri": 6,
+   "srri_source": "Boursorama, page « Performances et risques » du fonds (indicateur SRI affiché 6/7, https://www.boursorama.com/bourse/opcvm/cours/performances-risques/0P00016ALF/). Incertitude signalée : accès direct au site officiel candriam.com systématiquement refusé (HTTP 403) sur toutes les tentatives (pages fund-detail multiples locales fr-fr/en-lu, et documents KID via FundDocumentDownload), donc le DIC PRIIPS officiel n'a pas pu être consulté directement pour confirmer ce chiffre. Une recherche web générale mentionnait aussi un SRRI de 6 pour ce fonds sans citer le DIC précisément.",
+   "strategie": "Fonds actions internationales sectoriel : gestion discrétionnaire visant à bénéficier de la performance du marché actions mondial des sociétés du secteur biotechnologique (développement de médicaments dans diverses aires pathologiques, diagnostic moléculaire, équipement scientifique). Indice de référence : NASDAQ Biotechnology Index (Net Return), utilisé a posteriori. Horizon de placement recommandé de 6 ans.",
+   "strategie_source": "Reconstitué à partir de sources secondaires convergentes (page produit Boursorama pour LU1120766388, et extraits indexés des pages produit officielles Candriam pour ce compartiment sous plusieurs devises/classes de parts) car le site candriam.com a bloqué toutes les tentatives d'accès direct (403). Fidélité au DIC officiel non garantie à 100 % — à vérifier auprès de Candriam si besoin d'une confirmation exacte."
   },
   {
    "isin": "FR0007076930",
@@ -18,7 +26,15 @@
    "societe": "DNCA Finance",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "equity": 95,
+   "graphId": "0P00000NME.F",
+   "xid": "129283105",
+   "srri": 4,
+   "srri_source": "DIC PRIIPS officiel DNCA Finance, daté du 17/04/2026, consulté en intégralité (PDF officiel dnca-investments.com) : « Ce Produit est classé 4 sur 7, soit une classe de risque moyenne. »",
+   "strategie": "Recherche d'une performance supérieure à l'indice CAC 40 dividendes réinvestis sur la durée de placement recommandée (5 ans), par sélection de valeurs socialement responsables (approche ISR « best in universe ») au sein d'un univers d'environ 500 valeurs françaises (capitalisation > 100 M€, flottant > 10 M€) élargi aux valeurs du SBF 120. Gestion discrétionnaire par stock-picking, sans réplication d'indice ; exposition actions françaises de toute capitalisation d'au moins 60 % de l'actif ; éligible au PEA (75 % minimum en titres éligibles).",
+   "strategie_source": "DIC PRIIPS officiel DNCA Finance, daté du 17/04/2026, ISIN FR0007076930, section « Objectifs »."
   },
   {
    "isin": "FR0000295230",
@@ -26,7 +42,15 @@
    "societe": "COMGEST",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "Cg",
+   "graphId": "0P00000PM8.F",
+   "srri": 5,
+   "strategie": "Fonds actions Europe « Quality Growth » : sélection de valeurs européennes de qualité à la croissance visible et durable, sans référence à un indice, horizon long terme.",
+   "equity": 100,
+   "libelleProd": "Comgest Renaissance Europe C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0014008EI2",
@@ -34,7 +58,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 95,
+   "graphId": "0P0001P8TA.F",
+   "xid": "736104161",
+   "srri": 4,
+   "srri_source": "DIC PRIIPS officiel Conservateur Gestion Valor, daté du 31/12/2025, consulté en intégralité (PDF officiel conservateur.fr) : « Nous avons classé ce produit dans la classe de risque 4 sur 7. »",
+   "strategie": "Objectif de réaliser, sur une durée de placement recommandée de 5 ans minimum, une performance annualisée nette de frais supérieure à l'indicateur EUROSTOXX 50 dividendes réinvestis, sans que cet indice contraigne la composition du portefeuille. Gestion active et discrétionnaire fondée sur une analyse fondamentale privilégiant les sociétés de qualité, à bonne visibilité et prix raisonnable, sans contrainte sectorielle. Exposition permanente de 60 % à 110 % de l'actif au risque actions des pays de l'Union européenne (grandes et moyennes capitalisations) ; contrainte d'éligibilité PEA (75 % minimum en actions françaises ou européennes).",
+   "strategie_source": "DIC PRIIPS officiel Conservateur Gestion Valor, daté du 31/12/2025, ISIN FR0014008EI2, section « En quoi consiste ce produit ? »."
   },
   {
    "isin": "FR0013256930",
@@ -42,7 +74,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P0001HI3U.F",
+   "srri": 3,
+   "strategie": "Fonds actions Europe à gestion flexible et discrétionnaire, combinant analyse macroéconomique (top-down) et sélection de valeurs (bottom-up), horizon recommandé de 5 ans.",
+   "equity": 55,
+   "libelleProd": "Conservateur Actions Flexibles C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010564229",
@@ -50,7 +90,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P0000INCI.F",
+   "srri": 6,
+   "strategie": "Fonds actions internationales géré activement, exposé aux grandes places boursières mondiales (Europe, États-Unis, Asie-Pacifique), horizon recommandé de 5 ans.",
+   "equity": 95,
+   "libelleProd": "Conservateur Actions Monde C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010038257",
@@ -58,7 +106,15 @@
    "societe": "Palatine AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "Pal",
+   "equity": 95,
+   "graphId": "0P00001NMQ.F",
+   "xid": "29243392",
+   "srri": 4,
+   "srri_source": "Reporting mensuel officiel Palatine Asset Management daté du 28/02/2025 pour « Conservateur Emploi Durable (C) » (ISIN FR0010038257 confirmé dans le document), section « Profil de risque » : case 4 sur 7 surlignée, avec la mention explicite en bas de document que cet indicateur correspond à « l'indicateur synthétique de risque et de rendement » réglementaire. Confirmé par recoupement (Sicavonline / recherche web citant le DIC : 4/7). Incertitude signalée : une première extraction automatique de la page produit officielle palatine-am.com avait indiqué un SRRI de 5, valeur écartée car obtenue par résumé automatique peu fiable d'une page web et contredite par le document PDF officiel et par les sources croisées.",
+   "strategie": "La SICAV vise une performance supérieure à son indicateur de référence, l'indice SBF 120 dividendes nets réinvestis, sur un horizon de 5 ans. Elle intègre les risques de durabilité et les caractéristiques ESG dans son processus de sélection de valeurs, avec un objectif d'investissement social (sélection d'entreprises françaises ayant un impact positif sur l'emploi en France). Labellisée ISR. Investie à 75 % minimum en actions françaises cotées appartenant au SBF 120.",
+   "strategie_source": "Reporting mensuel officiel Palatine Asset Management daté du 28/02/2025, ISIN FR0010038257, section « Objectif de gestion ». Point de doute à signaler : ce même reporting classe le fonds « SFDR Article 8 », alors que la page produit officielle Palatine AM et une recherche web croisée indiquent un objectif d'investissement social relevant de l'article 9 SFDR — incohérence entre sources non résolue, à vérifier auprès de la société de gestion."
   },
   {
    "isin": "FR001400U512",
@@ -66,7 +122,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 95,
+   "graphId": "0P0001UVBG.F",
+   "xid": "971918157",
+   "srri": 4,
+   "srri_source": "Page officielle conservateur.fr (fiche produit « Conservateur Investissement Proximité (part C) »), citant l'échelle de risque du DIC : niveau 4 sur 7.",
+   "strategie": "Objectif de réaliser, sur une durée de placement recommandée de 5 ans, une performance nette de frais supérieure à l'indice de comparaison STOXX Europe 600 dividendes réinvestis, en investissant dans des entreprises françaises ou internationales ayant une présence économique significative dans les régions Auvergne-Rhône-Alpes et Bourgogne-Franche-Comté (implantation mesurée par le siège social et l'emploi local généré). Gestion flexible en allocation géographique et sectorielle, fondée sur une analyse qualitative (positionnement concurrentiel, solidité financière, qualité du management).",
+   "strategie_source": "Page officielle conservateur.fr, fiche produit « Conservateur Investissement Proximité (part C) »."
   },
   {
    "isin": "FR0012844140",
@@ -74,7 +138,15 @@
    "societe": "CPR AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "CPR",
+   "equity": 95,
+   "graphId": "0P00016HZ8.F",
+   "xid": "121433264",
+   "srri": 4,
+   "srri_source": "DIC PRIIPS officiel CPR Asset Management (part E), daté du 18/08/2025, consulté en intégralité (PDF officiel, faisant partie du prospectus complet CPR Global Silver Age) : « Nous avons classé ce produit dans la classe de risque 4 sur 7. »",
+   "strategie": "FCP nourricier investissant quasi intégralement dans le compartiment maître CPR Invest - Global Silver Age (SICAV luxembourgeoise). Objectif de surperformer les marchés boursiers mondiaux sur la période de détention recommandée (5 ans) en tirant profit de la dynamique des titres internationaux associés au vieillissement de la population, tout en intégrant des critères ESG dans la construction de l'univers d'investissement. Indice MSCI World (dividendes nets réinvestis) utilisé a posteriori comme simple référence de performance, sans contrainte de gestion. Exposition actions internationales de toutes capitalisations, jusqu'à 25 % en pays émergents.",
+   "strategie_source": "DIC PRIIPS officiel CPR Asset Management (part E, FR0012844140), daté du 18/08/2025, ainsi que le prospectus CPR Global Silver Age (dernière mise à jour 18/08/2025)."
   },
   {
    "isin": "LU1653748860",
@@ -82,7 +154,15 @@
    "societe": "CPR AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "CPR",
+   "equity": 95,
+   "graphId": "0P0001BOX5.F",
+   "xid": "535659169",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel CPR Asset Management, publié le 03/08/2026, consulté en intégralité (PDF officiel amundi.com pour le compartiment « CPR Invest - Food For Generations - A EUR - Acc », LU1653748860) : « Nous avons classé ce produit dans la catégorie de risque 3 sur 7. » Point de doute à signaler : un agrégateur (Cbonds) indiquait un SRRI de 6 avec une date de changement au 27/10/2022 ; cette valeur a été écartée car en contradiction directe avec le DIC officiel le plus récent (03/08/2026), jugé prioritaire selon la consigne.",
+   "strategie": "Objectif de surperformer les marchés d'actions mondiaux sur la période de détention recommandée (au moins 5 ans), avec une intention d'impact climatique indirect sur la transition agroalimentaire, en investissant dans des actions internationales de la chaîne de valeur alimentaire, de l'eau ou de l'agriculture. Intégration de critères ESG (exclusions sur les notes ESG les plus faibles et les controverses graves), fonds labellisé ISR, classé Article 8 SFDR. Exposition actions comprise entre 75 % et 120 % des actifs.",
+   "strategie_source": "DIC PRIIPS officiel CPR Asset Management, publié le 03/08/2026, ISIN LU1653748860, section « En quoi consiste ce produit ? »."
   },
   {
    "isin": "LU1902443420",
@@ -90,7 +170,15 @@
    "societe": "CPR AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "CPR",
+   "equity": 95,
+   "graphId": "0P0001FLNU.F",
+   "xid": "124339677",
+   "srri": 4,
+   "srri_source": "DIC PRIIPS officiel CPR Asset Management (Amundi), publié le 12/09/2025, PDF lu intégralement via le distributeur Crédit Agricole (ca-sicavetfcp.fr/ca_sicav_fcp_fr_fr/dl/doc/kid-priips/LU1902443420/FRA/FRA/20250912) : « Nous avons classé ce produit dans la catégorie de risque 4 sur 7, qui est une catégorie de risque moyenne. »",
+   "strategie": "Surperformer les marchés d'actions mondiaux sur la période de détention recommandée (au moins 5 ans) en investissant dans des actions internationales engagées dans la lutte contre le changement climatique, avec intégration de critères ESG. Le portefeuille vise une intensité carbone inférieure à celle de l'indice MSCI All Country World (MSCI ACWI) Net Return et un alignement sur l'objectif 1,5°C de l'Accord de Paris, via des exclusions ESG/controverses/notes CDP et un mécanisme de compensation de l'empreinte carbone résiduelle. Article 8 SFDR, fonds labellisé ISR.",
+   "strategie_source": "Même DIC PRIIPS officiel CPR AM du 12/09/2025 (source ci-dessus), section « Objectifs »."
   },
   {
    "isin": "LU0870553020",
@@ -98,7 +186,15 @@
    "societe": "DNCA Finance",
    "section": "Actions",
    "mutuelle": "Non éligible",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "equity": 95,
+   "graphId": "0P0000XTFD.F",
+   "xid": "577573691",
+   "srri": 4,
+   "srri_source": "DICI officiel DNCA Finance, document produit le 16/04/2026, PDF lu intégralement (dnca-investments.com/funds/dnca-invest-sri-europe-growth/parts/a-lu0870553020/KIID-a-lu0870553020) : « Ce Produit est classé 4 sur 7, soit une classe de risque moyenne. »",
+   "strategie": "Surperformer les marchés d'actions paneuropéens sur la durée de placement recommandée (indice STOXX Europe 600 Net Return EUR fourni à titre de comparaison a posteriori), par une gestion active discrétionnaire investie dans des valeurs de croissance de qualité sélectionnées sur leur valeur intrinsèque et non sur la composition de l'indice (portefeuille pouvant être concentré, au moins 20 valeurs). Approche ISR intégrée : analyse extra-financière sur au moins 90 % de l'actif, exclusion d'au moins 30 % des émetteurs les moins bien notés. Article 8 SFDR, label ISR français.",
+   "strategie_source": "Même DICI DNCA Finance du 16/04/2026 (source ci-dessus), section « Objectifs »."
   },
   {
    "isin": "LU1490785091",
@@ -106,7 +202,15 @@
    "societe": "DNCA Finance",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "equity": 95,
+   "graphId": "0P000195NQ.F",
+   "xid": "535660703",
+   "srri": 4,
+   "srri_source": "DICI officiel DNCA Finance, document produit le 16/04/2026, PDF lu intégralement (dnca-investments.com/funds/dnca-invest-sri-norden-europe/parts/a-lu1490785091/KIID-a-lu1490785091) : « Ce Produit est classé 4 sur 7. » Cohérent avec deux agrégateurs consultés en amont (Quantalys, epargnoo.com) qui citaient déjà SRRI 4.",
+   "strategie": "Surperformer un indice composite (35 % MSCI Nordic + 25 % DAX + 15 % SMI + 15 % AEX + 10 % MSCI UK TR Net Local Currency) par une gestion active discrétionnaire intégrant des critères ESG (approche best-in-universe réduisant l'univers d'au moins 30 %). Investissement permanent d'au moins 90 % de l'actif total en actions de sociétés cotées en Europe du Nord ou y exerçant l'essentiel de leur activité (Royaume-Uni, Irlande, Benelux, Norvège, Suède, Finlande, Danemark, Allemagne, Suisse, Autriche), sans contrainte de capitalisation. Article 8 SFDR, label ISR.",
+   "strategie_source": "Même DICI DNCA Finance du 16/04/2026 (source ci-dessus), section « Objectifs »."
   },
   {
    "isin": "LU1819480192",
@@ -114,7 +218,15 @@
    "societe": "La Financière de l'Echiquier",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "LFDE",
+   "graphId": "0P0001DYQM.F",
+   "srri": 6,
+   "strategie": "Fonds actions thématique concentré (moins de 50 valeurs) sur les entreprises qui développent ou exploitent l’intelligence artificielle, exposition internationale d’au moins 60 %.",
+   "equity": 100,
+   "libelleProd": "Echiquier Artificial Intelligence B",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010863688",
@@ -122,7 +234,15 @@
    "societe": "La Financière de l'Echiquier",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "LFDE",
+   "equity": 95,
+   "graphId": "0P0000O4H2.F",
+   "xid": "725351543",
+   "srri": 4,
+   "srri_source": "DIC officiel La Financière de l'Echiquier, document produit le 14/04/2026, PDF lu intégralement (cdn.lfde.com/upload/documents/KIDDOC-FR-FR-FR0010863688.pdf) : « Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne. »",
+   "strategie": "Recherche d'une performance nette de frais de gestion à long terme via l'exposition aux marchés actions européens, investie dans des entreprises dont l'activité apporte des solutions aux enjeux du développement durable et se distinguant par la qualité de leur gouvernance et de leur politique sociale et environnementale (score impact ODD). Gestion active et discrétionnaire par stock-picking, exposition permanente de 60 % à 100 % en actions européennes (au moins 75 % pour l'éligibilité PEA), univers d'investissement Stoxx Europe Total Market (80 %) + MSCI USA Large Cap (20 %), indice MSCI Europe NR fourni à titre indicatif. Classification SFDR : Article 9.",
+   "strategie_source": "Même DIC La Financière de l'Echiquier du 14/04/2026 (source ci-dessus), section « Objectifs »."
   },
   {
    "isin": "LU1244893696",
@@ -130,7 +250,15 @@
    "societe": "Edmond de Rothschild AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "EdR",
+   "graphId": "0P00016P7T.F",
+   "srri": 4,
+   "strategie": "Fonds actions internationales du secteur technologique (Big Data), géré activement avec pour objectif de surperformer l’indice MSCI World.",
+   "equity": 100,
+   "libelleProd": "EdR Fund Big Data A EUR",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "LU1160365091",
@@ -138,7 +266,15 @@
    "societe": "Edmond de Rothschild AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "EdR",
+   "equity": 95,
+   "graphId": "0P00016716.F",
+   "xid": "535682298",
+   "srri": 5,
+   "srri_source": "Boursorama, rubrique « Performances et risques », données au 18/08/2026 (boursorama.com/bourse/opcvm/cours/performances-risques/0P00016716/) : « RISQUE DU FONDS (SRI) : 5/7 ». DOUTE À SIGNALER : je n'ai pas pu accéder au DIC PRIIPS officiel actuel du gérant (liens medianet.edmond-de-rothschild.fr et epr.amfinesoft.com inaccessibles ou protégés). Un ancien KIID UCITS (format pré-PRIIPS, daté du 27/10/2022, obtenu via previ-direct.com/webstore/WsPUS/DocDICI/LU1160365091.pdf, PDF lu intégralement) indiquait une catégorie 6/7 — écart avec la donnée Boursorama actuelle non expliqué, probablement lié à l'évolution de la volatilité et/ou au changement de méthodologie KIID→PRIIPS entre 2022 et 2026. Confiance modérée, à recouper sur le DIC PRIIPS d'origine si possible.",
+   "strategie": "Surperformer l'indice de référence MSCI China 10/40 Net Return en investissant dans des actions de sociétés satisfaisant des critères ESG et dont l'activité est majoritairement liée à la Chine. Approche d'investissement responsable exclusive privilégiant les sociétés ESG bien notées quelle que soit leur capitalisation (filtrage positif et négatif, univers réduit d'au moins 20 %, exclusion armes/charbon/tabac). Exposition actions et titres assimilés (actions A/B chinoises, ADR/GDR) de 75 % à 110 % des actifs nets, capitalisation généralement supérieure à 500 M USD. Article 8 SFDR.",
+   "strategie_source": "KIID EdR Asset Management (Luxembourg) daté du 27/10/2022 (previ-direct.com/webstore/WsPUS/DocDICI/LU1160365091.pdf, PDF lu intégralement) ; objectif confirmé par une formulation quasi identique relevée sur crosassets.com (page « EDR CHINA A-EUR »). Document source daté 2022 (pas le DIC PRIIPS actuel), mais l'objectif de gestion évolue rarement — à vérifier sur une version plus récente si disponible."
   },
   {
    "isin": "LU1103305709",
@@ -146,7 +282,16 @@
    "societe": "Edmond de Rothschild AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "EdR",
+   "equity": 95,
+   "graphId": "0P000172SH.F",
+   "xid": "535640226",
+   "srri": null,
+   "srri_source": "Introuvable de façon fiable pour cette part précise (R-EUR). Boursorama affiche le champ « RISQUE DU FONDS (SRI) » vide, aussi bien pour la part R-EUR (LU1103305709) que pour la part A-EUR (LU1103303167), consulté le 20/08/2026. Zonebourse.com (fiche R-EUR) ne mentionne aucun indicateur de risque numérique. Un premier passage de recherche avait laissé penser que crosassets.com citait un « risk category 5 » pour la part A-EUR, mais une relecture ciblée de cette page n'y trouve in fine aucune mention de SRI/SRRI ni de chiffre 1-7 — cette donnée initiale était probablement une erreur du résumé automatique et n'est pas retenue. Le DIC PRIIPS officiel n'a pas pu être localisé/téléchargé pour cette part lors de cette recherche. Valeur non renseignée plutôt que de risquer un chiffre incorrect.",
+   "srri_note": "Introuvable de façon fiable pour cette part précise (R-EUR). Boursorama affiche le champ « RISQUE DU FONDS (SRI) » vide, aussi bien pour la part R-EUR (LU1103305709) que pour la part A-EUR (LU1103303167), consulté le 20/08/2026. Zonebourse.com (fiche R-EUR) ne mentionne aucun indicateur de risque numérique. Un premier passage de recherche avait laissé penser que crosassets.com citait un « risk category 5 » pour la part A-EUR, mais une relecture ciblée de cette page n'y trouve in fine aucune mention de SRI/SRRI ni de chiffre 1-7 — cette donnée initiale était probablement une erreur du résumé automatique et n'est pas retenue. Le DIC PRIIPS officiel n'a pas pu être localisé/téléchargé pour cette part lors de cette recherche. Valeur non renseignée plutôt que de risquer un chiffre incorrect.",
+   "strategie": "L'objectif d'investissement est de générer des performances en sélectionnant essentiellement des titres nord-américains susceptibles de réduire leur décote par rapport à leur secteur d'activité ou au marché sur lequel ils sont cotés (gestion « value », grandes capitalisations américaines).",
+   "strategie_source": "crosassets.com (page « EDR US VALUE A-EUR »), citant une formulation ayant la forme typique de l'objectif d'un DIC PRIIPS, mais non recoupée sur un document officiel téléchargé pour cette part — le DIC PRIIPS d'origine n'a pas pu être localisé en accès direct lors de cette recherche. À vérifier si une confirmation plus solide est nécessaire."
   },
   {
    "isin": "FR0010479931",
@@ -154,7 +299,15 @@
    "societe": "Edmond de Rothschild AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "EdR",
+   "equity": 95,
+   "graphId": "0P000018ZI.F",
+   "xid": "129515405",
+   "srri": 4,
+   "srri_source": "Convergence de deux agrégateurs indépendants citant le DIC PRIIPS actuel (document daté du 30/05/2025 selon un résultat de recherche indexant sa page de garde) : Sicavonline (« risque indicateur de 4 sur 7 ») et epargnoo.com (« SRRI Risk Indicator: 4 out of 7 »), consultés le 20/08/2026. Boursorama affiche le champ vide à cette date. Le DIC PRIIPS lui-même n'a pas pu être téléchargé directement (endpoint officiel epr.amfinesoft.com renvoie une erreur d'accès/clé invalide). Un ancien KIID UCITS (pré-PRIIPS, daté du 01/06/2022, obtenu via previ-direct.com/webstore/WsPUS/DocDICI/FR0010479931.pdf, PDF lu intégralement) indiquait une catégorie 6/7 — écart non expliqué, comme pour EdR Fund China. Confiance modérée à bonne (2 sources convergentes sur la donnée actuelle, mais aucune lecture directe du DIC PRIIPS).",
+   "strategie": "Sur un horizon de placement recommandé supérieur à 5 ans, l'OPCVM vise une progression de la valeur liquidative par des placements dans des sociétés du sous-continent indien (Inde principalement, ainsi que Pakistan, Sri Lanka et Bangladesh), sélectionnées sur des critères financiers et extra-financiers ESG (approche best-in-universe réduisant l'univers éligible d'au moins 20 %). Exposition actions permanente d'au moins 60 % de l'actif net, dont au moins 80 % en sociétés indiennes. Indice de référence : MSCI India 10/40 NR. Classification SFDR : Article 8.",
+   "strategie_source": "KIID EdR Asset Management (France) daté du 01/06/2022 (previ-direct.com/webstore/WsPUS/DocDICI/FR0010479931.pdf, PDF lu intégralement) ; éléments de stratégie (zone géographique, seuils, ESG) confirmés par epargnoo.com et Sicavonline. Document source daté 2022, mais objectif/stratégie stable dans le temps."
   },
   {
    "isin": "LU0528228074",
@@ -162,7 +315,15 @@
    "societe": "FIL Investment Management",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Fid",
+   "equity": 95,
+   "graphId": "0P0000VTJH.F",
+   "xid": "535676989",
+   "srri": 4,
+   "srri_source": "Fidelity France, page produit officielle du gérant (indicateur de risque PRIIPS affiché) : https://www.fidelity.fr/nos-fonds/factsheet/LU0528228074 — consultée le 20/08/2026, VL au 19/08/2026. Cohérent avec le libellé part A-ACC-Euro (hedged).",
+   "strategie": "Fonds actions internationales géré selon une approche bottom-up de sélection de titres, visant à ce que plus de 70 % des revenus et de la création de valeur du portefeuille proviennent de facteurs démographiques (allongement de l'espérance de vie, essor de la classe moyenne, croissance démographique mondiale). Indice de comparaison : MSCI ACWI (Net) Hedged to EUR ; critères ESG pleinement intégrés au processus d'investissement.",
+   "strategie_source": "Fidelity France, page produit officielle (rubrique « Stratégie ») : https://www.fidelity.fr/nos-fonds/factsheet/LU0528228074"
   },
   {
    "isin": "LU1892829828",
@@ -170,7 +331,15 @@
    "societe": "FIL Investment Management",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Fid",
+   "equity": 95,
+   "graphId": "0P0001EVSZ.F",
+   "xid": "632611556",
+   "srri": 4,
+   "srri_source": "Fidelity France, page produit officielle du gérant (indicateur de risque PRIIPS affiché, case 4/7 surlignée) : https://www.fidelity.fr/nos-fonds/factsheet/LU1892829828 — consultée le 20/08/2026. La page signale elle-même une mise à jour en cours suite à l'ajout d'un nouvel indice de référence (avis du 13/03/2026) : à recontrôler sur le DIC le plus récent si une décision d'investissement en dépend.",
+   "strategie": "Fonds actions internationales investi dans des sociétés mondiales liées à la conception, la fabrication ou la vente de produits et services pour la gestion de l'eau et des déchets, avec une construction de portefeuille sans contrainte d'indice et une intégration de critères ESG. Indice principal : MSCI ACWI IMI Water Filtered Index (Net) ; indice de comparaison : MSCI ACWI Index (Net).",
+   "strategie_source": "Fidelity France, page produit officielle (rubrique « Stratégie ») : https://www.fidelity.fr/nos-fonds/factsheet/LU1892829828 — même réserve que ci-dessus sur l'actualisation en cours de la page."
   },
   {
    "isin": "LU1261432659",
@@ -178,7 +347,15 @@
    "societe": "FIL Investment Management",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Fid",
+   "graphId": "0P00016FY4.F",
+   "srri": 5,
+   "strategie": "Fonds actions internationales largement diversifié, avec une allocation proche de son indice de référence MSCI World, pour une croissance du capital à long terme.",
+   "equity": 100,
+   "libelleProd": "Fidelity World Fund A-ACC-EUR",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "LU1744646933",
@@ -186,7 +363,15 @@
    "societe": "La Française AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "LF",
+   "equity": 95,
+   "graphId": "0P0001DK5M.F",
+   "xid": "121434284",
+   "srri": 6,
+   "srri_source": "KIID officiel La Française AM (part R EUR Capitalisation, LU1744646933), daté du 30/06/2022, servi par le site documentaire officiel : https://doc.la-francaise.com/documents/lt/LU1744646933/dici/fr/. C'est le document le plus récent trouvé à cette URL officielle ; sa date (mi-2022) est plus ancienne que les DIC des autres fonds du lot, sans confirmation trouvée d'une version postérieure.",
+   "strategie": "Fonds actions internationales (Article 9 SFDR) visant à contribuer à la transition vers une économie bas-carbone tout en recherchant une croissance du capital à long terme, avec un objectif de surperformance de l'indice MSCI ACWI (Net Total Return) sur un horizon minimum de 5 ans. Au moins 66 % de l'actif est investi en actions de grandes capitalisations mondiales (y compris marchés émergents), sélectionnées via un processus d'exclusions puis de notation ESG, avec un objectif d'émissions de carbone évitées au moins équivalentes aux émissions du portefeuille.",
+   "strategie_source": "KIID officiel La Française AM, daté du 30/06/2022 : https://doc.la-francaise.com/documents/lt/LU1744646933/dici/fr/"
   },
   {
    "isin": "FR0000292278",
@@ -194,7 +379,15 @@
    "societe": "COMGEST",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Cg",
+   "equity": 95,
+   "graphId": "0P00000PM7.F",
+   "xid": "28293700",
+   "srri": 5,
+   "srri_source": "Comgest, page produit officielle Magellan C : https://www.comgest.com/fr/fr/private-investor/funds/magellan-c (indicateur synthétique de risque du DIC PRIIPS, niveau 5/7).",
+   "strategie": "Fonds actions des marchés émergents géré sans référence à un indice, par sélection de titres (stock-picking) d'entreprises de qualité à la croissance visible. Le portefeuille est investi en permanence à au moins 60 % en actions de sociétés domiciliées ou réalisant l'essentiel de leur activité dans des pays émergents à fort potentiel de croissance, sur un horizon recommandé supérieur à 5 ans.",
+   "strategie_source": "Comgest, page produit officielle Magellan C : https://www.comgest.com/fr/fr/private-investor/funds/magellan-c"
   },
   {
    "isin": "FR0010298596",
@@ -202,7 +395,15 @@
    "societe": "Moneta AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "Mon",
+   "equity": 95,
+   "graphId": "0P00005ZUG.F",
+   "xid": "28304590",
+   "srri": 4,
+   "srri_source": "Document d'Informations Clés (DIC PRIIPS) officiel Moneta Asset Management, part C, daté du 17/02/2023 : https://www.moneta.fr/documents/DIC_MMC_part_C_FR_fr_2023_02_17.pdf (classe de risque 4 sur 7). Signalé : une synthèse d'agrégateur croisée lors de la recherche web indiquait un SRRI de 6 pour ce fonds ; le DIC officiel PRIIPS, source privilégiée par la consigne, fait foi ici avec la valeur 4.",
+   "strategie": "Fonds actions françaises et européennes toutes capitalisations visant à surperformer le marché actions sur le long terme (indice de référence CAC All-Tradable dividendes nets réinvestis, durée de placement recommandée 5 ans), par sélection de titres sans contrainte de secteur ni d'indice. Exposition actions de la Zone euro comprise entre 60 % et 150 %, avec au moins 30 % investis en actions de sociétés ayant leur siège social en France et au moins 75 % en actions françaises ou de l'Union européenne.",
+   "strategie_source": "DIC officiel Moneta Asset Management, part C, daté du 17/02/2023 : https://www.moneta.fr/documents/DIC_MMC_part_C_FR_fr_2023_02_17.pdf"
   },
   {
    "isin": "FR0000989899",
@@ -210,7 +411,15 @@
    "societe": "ODDO BHF AM SAS",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "ODDO",
+   "equity": 95,
+   "graphId": "0P00000QLE.F",
+   "xid": "535673245",
+   "srri": 4,
+   "srri_source": "Document d'Informations Clés (DIC PRIIPS) officiel ODDO BHF Asset Management, part CR-EUR, daté du 07/07/2023 : https://www.carac.fr/media/Docs_PDF/DIC%20Oddo%20BHF%20Avenir%20FR0000989899%2007072023.pdf (classe de risque 4 sur 7).",
+   "strategie": "Fonds actions françaises petites et moyennes capitalisations visant une performance supérieure à son indice de référence (90 % MSCI SMID France NR + 10 % €STR capitalisé + 8,5 points de base) sur un horizon de placement supérieur à 5 ans, en intégrant des critères ESG (exclusions puis notation ESG MSCI). Le portefeuille est investi en permanence à au moins 75 % en actions éligibles au PEA, dont 70 % minimum d'actions françaises.",
+   "strategie_source": "DIC officiel ODDO BHF Asset Management, part CR-EUR, daté du 07/07/2023 : https://www.carac.fr/media/Docs_PDF/DIC%20Oddo%20BHF%20Avenir%20FR0000989899%2007072023.pdf"
   },
   {
    "isin": "FR0000974149",
@@ -218,7 +427,15 @@
    "societe": "ODDO BHF AM SAS",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "ODDO",
+   "equity": 95,
+   "graphId": "0P00000QLM.F",
+   "xid": "31877975",
+   "srri": 4,
+   "srri_source": "Document d'Informations Clés (DIC PRIIPS) officiel ODDO BHF Asset Management, part CR-EUR, daté du 05/09/2025 : https://epr.amfinesoft.com/api/v1/download/SOGECAP/underlying/kid/FR0000974149/lang/fr?key=7pPlB7HoeaCTjsHOsYGA87RfJcmpSQ (classe de risque 4 sur 7). URL d'hébergement tiers (plateforme de diffusion réglementaire pour distributeur), mais document PRIIPS signé ODDO BHF AM.",
+   "strategie": "Fonds actions européennes petites et moyennes capitalisations (Article 8 SFDR) visant la valorisation du capital à long terme en surperformant l'indice MSCI Europe Smid Cap Net Return EUR sur un horizon minimum de 5 ans, avec intégration de critères ESG (exclusions puis notation ESG MSCI). Le portefeuille est investi en permanence de 75 % à 100 % en actions d'émetteurs dont le siège social est situé dans l'Espace économique européen ou dans un pays européen membre de l'OCDE.",
+   "strategie_source": "DIC officiel ODDO BHF Asset Management, part CR-EUR, daté du 05/09/2025 : https://epr.amfinesoft.com/api/v1/download/SOGECAP/underlying/kid/FR0000974149/lang/fr?key=7pPlB7HoeaCTjsHOsYGA87RfJcmpSQ"
   },
   {
    "isin": "FR0000989915",
@@ -226,7 +443,15 @@
    "societe": "ODDO BHF AM SAS",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "ODDO",
+   "equity": 95,
+   "graphId": "0P00000QLD.F",
+   "xid": "535667228",
+   "srri": 5,
+   "srri_source": "Page produit officielle ODDO BHF AM (retail France) : https://am.oddo-bhf.com/fr-fr/investisseur-non-professionnel/fonds/oddo-bhf-immobilier-cr-eur/ — indicateur SRI lu directement dans le DOM (élément <li class=\"riskScaleItem active\">... en fait balise de la jauge marquée comme étape active = 5/7). Le DIC PRIIPS officiel (daté 08.08.2026) est référencé et téléchargeable sur cette même page. Recoupement : Boursorama, gauge SRI également à 5/7 (data-gauge-current-step=\"5\") — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-800743/",
+   "strategie": "Fonds actions investi principalement en foncières et valeurs immobilières cotées de la Communauté européenne (centres commerciaux, bureaux, résidentiel), sélectionnées selon une gestion de convictions bottom-up. Objectif : surperformer l'indice MSCI EMU IMI Core RE 10/40 (dividendes nets réinvestis) sur un horizon de placement minimum de 5 ans.",
+   "strategie_source": "Page produit officielle ODDO BHF AM, section « Présentation » : https://am.oddo-bhf.com/fr-fr/investisseur-non-professionnel/fonds/oddo-bhf-immobilier-cr-eur/ (texte repris quasi verbatim de la documentation officielle)."
   },
   {
    "isin": "FR0000983819",
@@ -234,7 +459,15 @@
    "societe": "OFI AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "OFI",
+   "equity": 95,
+   "graphId": "0P00000HN7.F",
+   "xid": "29231066",
+   "srri": 4,
+   "srri_source": "Page produit officielle Ofi Invest AM : https://www.ofi-invest-am.com/fr/produit/ofi-invest-esg-actions-croissance-durable-et-solidaire-part-c/FR0000983819 — valeur lue dans l'attribut data-options du slider de risque (\"theValue:4\") = 4/7. Recoupement : Boursorama, gauge SRI également à 4/7 — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-805200/. À signaler : le fonds a été renommé « Ofi Invest ESG Actions Solidaire Euro » le 16/05/2025 (règle ESMA fund naming), avec mise à jour des données PRIIPS à cette date ; le libellé du référentiel (« OFI RS Croissance Durable et Solidaire ») correspond au nom antérieur mais à la même ligne ISIN.",
+   "strategie": "Fonds actions investi principalement dans les grandes capitalisations de la zone euro, sélectionnées sur leurs pratiques en matière de ressources humaines (dialogue social, diversité, formation), avec jusqu'à 10% du portefeuille alloué à des entreprises solidaires via France Active/SIFA. Objectif : surperformer l'indice EURO STOXX (dividendes nets réinvestis) sur un horizon de placement recommandé supérieur à 5 ans ; fonds labellisé ISR, classé Article 8 SFDR.",
+   "strategie_source": "Page produit officielle Ofi Invest AM : https://www.ofi-invest-am.com/fr/produit/ofi-invest-esg-actions-croissance-durable-et-solidaire-part-c/FR0000983819. À noter : l'indice de référence a changé le 01/07/2025 (EURO STOXX 50 → EURO STOXX, dividendes nets réinvestis) ; le texte ci-dessus reflète la stratégie actuelle."
   },
   {
    "isin": "FR0000978439",
@@ -242,7 +475,15 @@
    "societe": "Palatine AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Pal",
+   "equity": 95,
+   "graphId": "0P00000QN4.F",
+   "xid": "535703298",
+   "srri": 4,
+   "srri_source": "Page produit officielle Palatine Asset Management, part I : https://www.palatine-am.com/investisseur-institutionnel/actions/palatine-france-small-cap-i — indicateur de risque lu dans le DOM (span.riskScaleItem.active = \"4\") = 4/7. Recoupement : Boursorama, gauge SRI également à 4/7 — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-800357/",
+   "strategie": "Fonds actions investi sur les petites et moyennes valeurs françaises (capitalisations entre 100 millions et 1 milliard d'euros), sélectionnées selon une approche ESG pour leur potentiel de croissance à moyen terme. Éligible PEA et PEA-PME (plus de 75% de l'actif en permanence en titres éligibles à ces régimes), classé Article 8 SFDR.",
+   "strategie_source": "Page produit officielle Palatine AM (https://www.palatine-am.com/investisseur-institutionnel/actions/palatine-france-small-cap-i) complétée par le texte de l'objectif de gestion repris du prospectus/DIC via abcbourse.com : https://www.abcbourse.com/opcvm/palatine-france-small-cap-i_sFR0000978439"
   },
   {
    "isin": "FR0010649079",
@@ -250,7 +491,15 @@
    "societe": "Palatine AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Pal",
+   "equity": 95,
+   "graphId": "0P0000KM3B.F",
+   "xid": "29427001",
+   "srri": 4,
+   "srri_source": "DIC PRIIPS officiel Palatine Planète part R (FR0010649079), daté 15/02/2023, page 2, phrase exacte : « We have classified the product in risk class 4 out of 7, which is a medium risk class. » — https://www.palatine-am.com/fileadmin/Depot-documentation/EN_DIC_-_PALATINE_PLANETE_R_-_FR0010649079_-_2023-02-15.pdf (PDF lu intégralement). Valeur toujours d'actualité selon Boursorama, gauge SRI à 4/7 — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-534378/. ATTENTION : une première recherche web (résumé automatique non vérifié d'une page dynamique) avait indiqué par erreur 5/7 ; cette valeur a été écartée après lecture directe du PDF officiel et confirmation croisée sur Boursorama — la valeur retenue (4) est donc double-vérifiée.",
+   "strategie": "Fonds actions à gestion discrétionnaire investi dans des sociétés européennes dont l'activité est liée à l'environnement, notamment la lutte contre le réchauffement climatique, la pollution et la raréfaction des ressources (5 thèmes : efficacité énergétique, énergies renouvelables, gestion de l'eau et des déchets, mobilité durable, santé et bien-être). Classé Article 8 SFDR avec au moins 75% d'investissements durables à objectif environnemental ; horizon de placement recommandé de 5 ans.",
+   "strategie_source": "DIC PRIIPS officiel Palatine Planète part R, 15/02/2023 : https://www.palatine-am.com/fileadmin/Depot-documentation/EN_DIC_-_PALATINE_PLANETE_R_-_FR0010649079_-_2023-02-15.pdf (texte extrait intégralement du PDF)."
   },
   {
    "isin": "LU0280435388",
@@ -258,7 +507,15 @@
    "societe": "Pictet AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Pct",
+   "graphId": "0P00008OBQ.F",
+   "srri": 5,
+   "strategie": "Fonds actions thématique (Article 9 SFDR) investi dans les entreprises qui contribuent à la réduction des émissions de carbone : énergies propres, transport et efficacité énergétique.",
+   "equity": 100,
+   "libelleProd": "Pictet Clean Energy Transition P EUR",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "LU0366534344",
@@ -266,7 +523,15 @@
    "societe": "Pictet AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Pct",
+   "equity": 95,
+   "graphId": "0P0000K8E5.F",
+   "xid": "67838099",
+   "srri": 4,
+   "srri_source": "Page produit officielle Pictet Asset Management France : https://am.pictet.com/fr/fr/individuals/funds/pictet-nutrition/LU0366534344 — indicateur de risque lu dans le DOM (case du chiffre 4 avec classe CSS distincte des 6 autres = étape active) = 4/7 ; Document d'information clé référencé sur cette page daté 19/06/2026. Recoupement : Boursorama, gauge SRI également à 4/7 — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-521217/",
+   "strategie": "Fonds actions thématique (classé Article 9 SFDR) investi mondialement, y compris marchés émergents et Chine continentale, dans des entreprises actives dans les secteurs liés à la nutrition, en particulier celles qui améliorent la qualité, l'accès et la durabilité de la production alimentaire. Indice de référence MSCI AC World (EUR), utilisé pour le suivi du risque et la mesure de performance, sans contrainte de composition du portefeuille par rapport à cet indice.",
+   "strategie_source": "Page produit officielle Pictet Asset Management France : https://am.pictet.com/fr/fr/individuals/funds/pictet-nutrition/LU0366534344 (rubriques « Objectif », « Actifs en portefeuille », « Indice de référence »)."
   },
   {
    "isin": "LU0217139020",
@@ -274,7 +539,15 @@
    "societe": "Pictet AM",
    "section": "Actions",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Pct",
+   "graphId": "0P000021C4.F",
+   "srri": 5,
+   "strategie": "Fonds actions thématique investi dans les grandes marques mondiales à fort pouvoir de fixation des prix, sans contrainte géographique.",
+   "equity": 95,
+   "libelleProd": "Pictet-Premium Brands P EUR",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR001400PL02",
@@ -282,7 +555,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Obligations",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 5,
+   "graphId": "0P0001UGT3.F",
+   "xid": "946894421",
+   "srri": 2,
+   "srri_source": "Page produit officielle Le Conservateur : https://www.conservateur.fr/nos-produits/placements-financiers/liste-des-fonds/conservateur-horizon-2031-part-c-et-i/ — indicateur de risque 2/7 indiqué sur la fiche. Recoupement : Boursorama, gauge SRI également à 2/7 (data-gauge-current-step=\"2\") — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/0P0001UGT3/",
+   "strategie": "Fonds obligataire daté à gestion « Buy & Hold » : portefeuille discrétionnaire d'obligations émises par des entités privées ou publiques, de maturité au plus tard le 31 décembre 2031, conservées jusqu'à l'échéance. Objectif de performance annualisée nette de frais de 4,29% pour la part C entre la date d'ouverture du fonds et le 31/12/2031 ; objectif non garanti, dépendant des conditions de marché à la souscription.",
+   "strategie_source": "Page produit officielle Le Conservateur : https://www.conservateur.fr/nos-produits/placements-financiers/liste-des-fonds/conservateur-horizon-2031-part-c-et-i/"
   },
   {
    "isin": "FR0010564328",
@@ -290,7 +571,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Obligations",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 5,
+   "graphId": "0P0000INO5.F",
+   "xid": "535682367",
+   "srri": 2,
+   "srri_source": "Page produit officielle Le Conservateur : https://www.conservateur.fr/nos-produits/placements-financiers/liste-des-fonds/conservateur-obligations-moyen-terme/ — indicateur de risque 2/7 indiqué sur la fiche (DIC PRIIPS). Recoupement : Boursorama, gauge SRI également à 2/7 (data-gauge-current-step=\"2\") — https://www.boursorama.com/bourse/opcvm/cours/performances-risques/MP-460761/",
+   "strategie": "Fonds obligataire investi principalement en obligations internationales (émetteurs privés), avec un objectif de performance égale ou supérieure à l'indice ICE BofA 3-5 Year Euro Corporate (coupons nets réinvestis) sur un horizon de placement recommandé d'au moins 2 ans. Classé Article 8 SFDR.",
+   "strategie_source": "Page produit officielle Le Conservateur : https://www.conservateur.fr/nos-produits/placements-financiers/liste-des-fonds/conservateur-obligations-moyen-terme/"
   },
   {
    "isin": "LU1694790202",
@@ -298,7 +587,15 @@
    "societe": "DNCA Finance",
    "section": "Obligations",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "graphId": "0P0001CH1A.F",
+   "srri": 2,
+   "strategie": "Fonds obligataire flexible visant à protéger et valoriser le capital face à l’inflation : gestion active de l’exposition aux obligations d’État indexées sur l’inflation et de la sensibilité aux taux (duration), sans contrainte d’indice, approche ISR.",
+   "equity": 0,
+   "libelleProd": "DNCA Invest Flex Inflation B",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010915314",
@@ -306,7 +603,15 @@
    "societe": "La Française AM",
    "section": "Obligations",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "LF",
+   "equity": 5,
+   "graphId": "0P0000236X.F",
+   "xid": "126470672",
+   "srri": 2,
+   "srri_source": "DIC PRIIPS officiel La Française AM / Crédit Mutuel AM, « La Française Obligations Carbon Impact - action C », daté 15/05/2026, section « Indicateur de risque » : « Nous avons classé ce produit dans la classe de risque 2 sur 7 ». PDF récupéré via https://doc.la-francaise.com/documents/lt/FR0010915314/dic/fr/. Incertitude signalée : un premier passage par WebFetch sur la même URL avait résumé (à tort) un SRRI de 3 — lecture directe du PDF officiel qui donne bien 2 sur 7 ; à retenir.",
+   "strategie": "Fonds obligataire (catégorie « Obligations et autres titres de créance libellés en euro ») visant, sur un horizon de placement supérieur à 3 ans, une performance nette de frais supérieure à son indice de référence (Bloomberg Euro Aggregate Corporate). La sélection des émetteurs applique d'abord des exclusions sectorielles puis un filtre ESG (élimination d'au moins 30 % des émetteurs les moins bien notés), suivi d'un score « Carbon Impact » excluant les émetteurs jugés « retardataires » sur la transition énergétique ; le fonds s'engage à une intensité carbone du portefeuille au moins 50 % inférieure à celle de son univers comparable. Fonds labellisé ISR, classé article 8 SFDR.",
+   "strategie_source": "DIC PRIIPS officiel « La Française Obligations Carbon Impact - action C », daté 15/05/2026, sections « Objectifs » et « Stratégie d'investissement », https://doc.la-francaise.com/documents/lt/FR0010915314/dic/fr/"
   },
   {
    "isin": "LU1752460292",
@@ -314,7 +619,15 @@
    "societe": "ODDO BHF AM SAS",
    "section": "Obligations",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "ODDO",
+   "equity": 5,
+   "graphId": "0P0001EITS.F",
+   "xid": "120854472",
+   "srri": 2,
+   "srri_source": "DIC PRIIPS officiel ODDO BHF Asset Management SAS, action CR-EUR (LU1752460292), daté 13/07/2026, section « Indicateur de risque » : « Nous avons classé ce produit dans la classe de risque 2 sur 7 ». PDF récupéré via la bibliothèque documentaire doc.morningstar.com (documenttype=299, relais officiel du DIC ODDO BHF), le site am.oddo-bhf.com étant inaccessible via WebFetch (erreur de certificat TLS). Incertitude signalée : incohérence de nommage à l'intérieur du DIC officiel lui-même — l'en-tête et le corps du document nomment le fonds « ODDO BHF Credit Opportunities CR-EUR », alors que le paragraphe « Durée » précise que le fonds s'appelle en réalité « ODDO BHF Sustainable Credit Opportunities » (nom utilisé dans le référentiel fourni) ; il s'agit bien du même ISIN et du même document.",
+   "strategie": "Fonds obligataire crédit à gestion active, visant une performance nette supérieure à l'indice €STR + 2 % (capitalisé) par an, sans indicateur de référence formel. Au moins 70 % de l'actif est investi dans des titres d'émetteurs domiciliés dans un pays de l'OCDE, avec intégration de critères ESG (article 8 SFDR) ; l'univers combine investment grade et high yield (notation minimale B-), dette subordonnée financière et obligations hybrides corporate, avec une sensibilité aux taux comprise entre -2 et +8. Horizon de placement recommandé : 3 ans.",
+   "strategie_source": "DIC PRIIPS officiel ODDO BHF Credit Opportunities / Sustainable Credit Opportunities CR-EUR, daté 13/07/2026, section « Objectifs », récupéré via doc.morningstar.com (documenttype=299, relais du DIC officiel ODDO BHF AM SAS)"
   },
   {
    "isin": "FR0010135103",
@@ -322,7 +635,16 @@
    "societe": "Carmignac Gestion",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Carm",
+   "equity": 50,
+   "graphId": "0P00000FB4.F",
+   "xid": null,
+   "xid_note": "tearsheet FT sans xid — uc-history résoudra à chaud ou le fonds restera sans historique statique",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Carmignac Gestion, « Carmignac Patrimoine A EUR Acc », daté 09/02/2026 : « classe de risque 3 sur 7 » (classe de risque entre basse et moyenne). PDF récupéré via https://www.macsf.fr/content/download/6810/fichier/MACSF_DIC_Carmignac_Patrimoine.pdf. Confirmé par cohérence avec une version antérieure du DIC (26/07/2023) qui indiquait déjà 3 sur 7.",
+   "strategie": "FCP patrimonial diversifié visant, sur un horizon de 3 ans, une performance nette supérieure à un indicateur composite (40 % MSCI AC World NR, 40 % ICE BofA Global Government, 20 % €STR capitalisé). Le fonds est exposé à 25-50 % de son actif net en actions internationales toutes capitalisations, au moins 40 % en obligations à taux fixe/variable de notation moyenne au moins « Investment Grade » et produits monétaires, avec gestion active des devises et possibilité de positions vendeuses via dérivés. Approche ISR intégrée (article 8 SFDR), au moins 10 % de l'actif en investissements durables au sens SFDR.",
+   "strategie_source": "DIC PRIIPS officiel Carmignac Patrimoine A EUR Acc, daté 09/02/2026, section « Objectif », https://www.macsf.fr/content/download/6810/fichier/MACSF_DIC_Carmignac_Patrimoine.pdf"
   },
   {
    "isin": "FR0007439666",
@@ -330,7 +652,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Non éligible",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 50,
+   "graphId": "0P00005VUH.F",
+   "xid": "112049394",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Conservateur Gestion Valor, « Congrégation Investissement » part C, daté 27/06/2025 : « classe de risque 3 sur 7 ». PDF officiel : https://www.conservateur.fr/app/uploads/sites/2/2024/01/Le-Conservateur-2025-06-27-DIC-CONGREGATION-INVESTISSEMENT-C-R-0925.pdf",
+   "strategie": "FCP à gestion active et discrétionnaire visant, sur 3 ans, une performance supérieure ou égale à un indicateur de comparaison composé à 25 % de l'EuroStoxx 50 (dividendes nets réinvestis) et 75 % de l'ICE BofA 3-5 Year All Euro Government Index, avec exclusion des secteurs armement et jeux. Exposition actions comprise entre -5 % et 100 % de l'actif net, obligations/titres de créance jusqu'à 100 % (sensibilité taux -1 à 10), investissements concentrés sur les marchés UE et OCDE, recours possible aux dérivés de crédit (CDS sur indices, max 60 %) et aux matières premières (max 10 %).",
+   "strategie_source": "DIC PRIIPS officiel « Congrégation Investissement » part C, daté 27/06/2025, section « Objectifs », https://www.conservateur.fr/app/uploads/sites/2/2024/01/Le-Conservateur-2025-06-27-DIC-CONGREGATION-INVESTISSEMENT-C-R-0925.pdf"
   },
   {
    "isin": "FR001400UAZ4",
@@ -338,7 +668,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "C",
+   "equity": 50,
+   "graphId": "0P0001XK54.F",
+   "xid": "1065471905",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Conservateur Gestion Valor, « Congrégation Investissement » part R, daté 27/06/2025 (même document PDF que la part C, pages dédiées à la part R) : « classe de risque 3 sur 7 ». PDF officiel : https://www.conservateur.fr/app/uploads/sites/2/2024/01/Le-Conservateur-2025-06-27-DIC-CONGREGATION-INVESTISSEMENT-C-R-0925.pdf",
+   "strategie": "Même FCP et même objectif de gestion que la part C (indicateur composite 25 % EuroStoxx 50 + 75 % ICE BofA 3-5 Year All Euro Government, exclusion armement/jeux, horizon 3 ans) ; seule la part diffère (R au lieu de C). Exposition actions -5 % à 100 %, obligations jusqu'à 100 % (sensibilité taux -1 à 10), recours possible aux dérivés de crédit et aux matières premières dans les mêmes limites que la part C.",
+   "strategie_source": "DIC PRIIPS officiel « Congrégation Investissement » part R, daté 27/06/2025, section « Objectifs », https://www.conservateur.fr/app/uploads/sites/2/2024/01/Le-Conservateur-2025-06-27-DIC-CONGREGATION-INVESTISSEMENT-C-R-0925.pdf. Incertitude signalée : une source secondaire non officielle (résumé web) indiquait la part R réservée en priorité aux congrégations religieuses avec souscription min. 10 000 € / max. 300 000 € — non retrouvé formellement dans le texte du DIC lui-même, à vérifier si besoin dans le prospectus."
   },
   {
    "isin": "FR0010564336",
@@ -346,7 +684,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P0000JLHZ.F",
+   "srri": 2,
+   "strategie": "Fonds diversifié prudent combinant obligations d’État et grandes capitalisations de la zone euro, horizon recommandé de 2 ans minimum.",
+   "equity": 15,
+   "libelleProd": "Conservateur Diversifié C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010489542",
@@ -354,7 +700,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P0000JZWP.F",
+   "srri": 3,
+   "strategie": "Gestion diversifiée dynamique, réactive et discrétionnaire, sans biais de style ni de taille, visant une valorisation du capital sur un horizon de 4 ans.",
+   "equity": 25,
+   "libelleProd": "Conservateur Diversifié Réactif C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0011199314",
@@ -362,7 +716,16 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 50,
+   "graphId": "0P0000VYE0.F",
+   "xid": null,
+   "xid_note": "tearsheet FT sans xid — uc-history résoudra à chaud ou le fonds restera sans historique statique",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Conservateur Gestion Valor, « Conservateur Immo-Or » part C, daté 31/12/2025 : « classe de risque 3 sur 7 ». PDF officiel : https://www.conservateur.fr/app/uploads/sites/2/2024/01/2025.12.31-DIC-CONSERVATEUR-IMMO-OR-par-C-D.pdf",
+   "strategie": "FIA à gestion discrétionnaire visant, sur 5 ans minimum, une performance non corrélée à celle des actifs classiques, en investissant notamment dans l'or et les métaux précieux, l'immobilier, les obligations d'État et les titres financiers corrélés à l'inflation. Le fonds n'a pas d'indicateur de référence formel (comparaison a posteriori possible à l'IPCH zone euro hors tabac) ; exposition actions -25 % à 65 %, obligations -20 % à 150 %, matières premières jusqu'à 50 % via dérivés, change jusqu'à 70 %. Classé article 6 SFDR.",
+   "strategie_source": "DIC PRIIPS officiel « Conservateur Immo-Or » part C, daté 31/12/2025, section « Objectifs », https://www.conservateur.fr/app/uploads/sites/2/2024/01/2025.12.31-DIC-CONSERVATEUR-IMMO-OR-par-C-D.pdf"
   },
   {
    "isin": "FR0013087152",
@@ -370,7 +733,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P00019OMO.F",
+   "srri": 2,
+   "strategie": "Fonds diversifié à gestion flexible visant une performance supérieure à l’€ster capitalisé + 1,5 %, avec intégration de critères ESG, horizon recommandé de 4 ans.",
+   "equity": 20,
+   "libelleProd": "Conservateur Rendement Flexible C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0011175652",
@@ -378,7 +749,16 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "equity": 50,
+   "graphId": "0P00015XU2.F",
+   "xid": null,
+   "xid_note": "tearsheet FT sans xid — uc-history résoudra à chaud ou le fonds restera sans historique statique",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Conservateur Gestion Valor, « Conservateur Reverso » part C, daté 31/12/2025 : « classe de risque 3 sur 7 ». PDF officiel : https://www.conservateur.fr/app/uploads/sites/2/2024/01/2025.12.31-DIC-CONSERVATEUR-REVERSO-part-C-D.pdf",
+   "strategie": "FIA à gestion active et discrétionnaire visant, sur 3 ans minimum, une performance supérieure à celle de l'€STR capitalisé (simple indicateur de comparaison a posteriori, sans indicateur de référence formel). Exposition actions internationales -25 % à 100 % de l'actif net (tous secteurs et zones géographiques), obligations/titres de créance -25 % à 170 % (sensibilité taux -5 à 10), pays émergents limités à 65 %, matières premières jusqu'à 45 % via dérivés, change jusqu'à 70 %. Classé article 6 SFDR.",
+   "strategie_source": "DIC PRIIPS officiel « Conservateur Reverso » part C, daté 31/12/2025, section « Objectifs », https://www.conservateur.fr/app/uploads/sites/2/2024/01/2025.12.31-DIC-CONSERVATEUR-REVERSO-part-C-D.pdf"
   },
   {
    "isin": "FR0010097683",
@@ -386,7 +766,15 @@
    "societe": "CPR AM",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "CPR",
+   "equity": 50,
+   "graphId": "0P00000CGO.F",
+   "xid": "535672644",
+   "srri": 3,
+   "srri_source": "Fiche mensuelle officielle CPR Asset Management / Groupe Amundi, CPR Croissance Réactive - P, arrêtée au 30/09/2025 (funds.amundi.com/dl/doc/monthly-factsheet/FR0010097683/...) : indicateur de risque affiché en case 3/7, la fiche précisant explicitement \"Le SRI représente le profil de risque tel qu'exposé dans le Document d'Information Clé (DIC)\". Document officiel de la société de gestion reproduisant le SRRI du DIC, mais pas le DIC lui-même consulté directement.",
+   "strategie": "Fonds diversifié international dont l'objectif de gestion est d'obtenir, sur 4 ans minimum, une performance supérieure à son indice de référence (100% ESTR capitalisé depuis le 01/01/2022) avec une volatilité maximale prévisionnelle de 15%. L'exposition actions du portefeuille oscille entre 0% et 80% et sa sensibilité taux entre -2 et +5.",
+   "strategie_source": "Fiche mensuelle officielle CPR Asset Management / Groupe Amundi, CPR Croissance Réactive - P, 30/09/2025, rubrique \"Stratégie d'investissement\" (funds.amundi.com/dl/doc/monthly-factsheet/FR0010097683/FRA/FRA/RETAIL/AMUNDI/20250930)."
   },
   {
    "isin": "LU0512124107",
@@ -394,7 +782,15 @@
    "societe": "DNCA Finance",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "equity": 50,
+   "graphId": "0P0000P3DN.F",
+   "xid": "535690001",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel DNCA Finance, DNCA Invest Convertibles - Classe B (EUR), daté du 16/04/2026, consulté en version italienne via dnca-investments.com (téléchargement direct) : \"Abbiamo classificato questo prodotto al livello 3 su 7\" (le contenu réglementaire est identique dans toutes les langues, seule la version italienne était accessible en téléchargement direct).",
+   "strategie": "Le compartiment vise l'appréciation du capital avec une faible volatilité en investissant en obligations convertibles. Gestion discrétionnaire intégrant des critères ESG (approche « best in universe », réduction d'au moins 20% de l'univers d'investissement de départ). Le fonds investit toujours au moins 50% de son actif total en obligations convertibles, échangeables ou remboursables obligatoirement d'émetteurs domiciliés dans l'UE ou y exerçant l'essentiel de leur activité, dont au moins 30% notées investment grade. L'indice Refinitiv Europe Focus Hedged CB (EUR) n'est utilisé qu'a posteriori comme indicateur de comparaison des performances, sans contrainte de réplication.",
+   "strategie_source": "DIC PRIIPS officiel DNCA Finance, LU0512124107, daté du 16/04/2026 (dnca-investments.com), rubrique \"Objectifs\"."
   },
   {
    "isin": "FR0007051040",
@@ -402,7 +798,17 @@
    "societe": "DNCA Finance",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "DNCA",
+   "equity": 50,
+   "graphId": null,
+   "xid": null,
+   "graphId_note": "fonds vivant (VL DNCA ~470 EUR) mais absent de Yahoo Finance et de FT Markets sous cet ISIN (seules les parts DNCA Invest Eurose lux y figurent) — D5 : ligne non cliquable, incohérence I2",
+   "xid_note": "idem graphId_note (aucune tearsheet FT pour FR0007051040)",
+   "srri": 2,
+   "srri_source": "DIC officiel DNCA Finance, EUROSE - Part C (EUR), daté du 16/04/2026 (téléchargé via epr.amfinesoft.com) : \"Ce Produit est classé 2 sur 7, soit une classe de risque basse.\"",
+   "strategie": "L'objectif de gestion est la recherche d'une performance supérieure à l'indice composite 20% EURO STOXX 50 et 80% Bloomberg Euro Aggregate 1-10 year, dividendes et coupons réinvestis, sur la durée de placement recommandée (3 ans). Fonds flexible qui améliore la rentabilité d'un placement patrimonial par une gestion active d'actions et d'obligations principalement libellées en euro, avec sélection ESG (\"best in universe\") : jusqu'à 100% de l'actif en produits de taux (duration limitée à 7 ans, 50% maximum en catégorie \"Speculative Grade\") et jusqu'à 35% en actions de sociétés de l'OCDE de toute capitalisation.",
+   "strategie_source": "DIC officiel DNCA Finance, FR0007051040, daté du 16/04/2026 (epr.amfinesoft.com), rubrique \"Objectifs\"."
   },
   {
    "isin": "FR0011253624",
@@ -410,7 +816,15 @@
    "societe": "Rothschild & Co AM",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "R·co",
+   "graphId": "0P00017T6E.F",
+   "srri": 4,
+   "strategie": "Gestion flexible et discrétionnaire, sans contrainte d’indice : sélection d’actions et de taux internationaux, de 0 à 100 % investis en actions selon les convictions du gérant.",
+   "equity": 74,
+   "libelleProd": "R-co Valor C EUR",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0010286013",
@@ -418,7 +832,15 @@
    "societe": "Amiral Gestion",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Am",
+   "equity": 50,
+   "graphId": "0P00000EUQ.F",
+   "xid": "535679011",
+   "srri": 3,
+   "srri_source": "Rapport mensuel officiel Amiral Gestion, Sextant Grand Large - Part A, arrêté au 30/08/2024 (files.h24finance.com/opcvm/372.pdf) : \"Profil de risque\" affiché en case 3/7, avec la mention \"Echelle allant de 1 (risque le plus faible) à 7 (risque le plus élevé)\". Document officiel de la société de gestion reproduisant le profil de risque du DIC, mais pas le DIC lui-même consulté directement ; c'est aussi le document le plus récent trouvé (aucun DIC PDF direct localisé pour ce fonds).",
+   "strategie": "Compartiment diversifié dont l'exposition aux actions peut varier de 0 à 100% en fonction de la valorisation à long terme des marchés actions. Les actions sont sélectionnées individuellement dans le monde entier, en dehors de toute référence indicielle. La part de l'actif non investie en actions est placée en obligations sélectionnées selon la même approche, ainsi qu'en produits monétaires. Horizon d'investissement recommandé : supérieur à 5 ans.",
+   "strategie_source": "Rapport mensuel officiel Amiral Gestion, FR0010286013, 30/08/2024 (files.h24finance.com/opcvm/372.pdf), et page produit amiralgestion.com/en/sextant-grand-large (formulation cohérente)."
   },
   {
    "isin": "LU2147879543",
@@ -426,7 +848,15 @@
    "societe": "Tikehau IM",
    "section": "Mixtes",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "Tik",
+   "equity": 50,
+   "graphId": "0P0001L9PD.F",
+   "xid": "637716559",
+   "srri": 3,
+   "srri_source": "DIC PRIIPS officiel Tikehau Investment Management, Tikehau Fund - Tikehau International Cross Assets, Catégorie R-Acc-EUR, daté du 20/01/2023 (consulté via magellanconseil.fr/images/DICI-fonds/Tikehau_International_Cross_Assets_-_DIC_022023.pdf) : \"Nous avons classé ce produit dans la classe de risque 3 sur 7\". ATTENTION : c'est le DIC le plus récent trouvé en ligne, daté de janvier 2023 (plus de 3 ans) ; aucune version plus récente n'a été localisée pour confirmer que le niveau n'a pas changé depuis. La lettre d'information Tikehau de mars 2026 reprend la même orientation de gestion mais son indicateur graphique n'a pas pu être lu avec certitude en texte.",
+   "strategie": "Le compartiment vise une performance supérieure à l'€STR +150 points de base, nette des frais de gestion, sur un horizon d'investissement minimum recommandé de 5 ans, dans le cadre d'une gestion active et discrétionnaire. La stratégie repose sur un portefeuille diversifié d'actions (entre -20% et 100% de l'actif net) et de titres de créance (entre 0% et 100% de l'actif net), tous secteurs économiques et zones géographiques, avec possibilité d'investir en titres High Yield et en obligations financières subordonnées, dont des CoCo (dans la limite de 20% de l'actif net).",
+   "strategie_source": "DIC PRIIPS officiel Tikehau IM, LU2147879543, daté du 20/01/2023 (magellanconseil.fr), rubrique \"Objectifs\" ; formulation identique dans la lettre d'information Tikehau de mars 2026 (funds.tikehaucapital.com), rubrique \"Orientation de gestion\"."
   },
   {
    "isin": "FR0011461326",
@@ -434,7 +864,15 @@
    "societe": "Conservateur Gestion Valor",
    "section": "Monétaires",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "C",
+   "graphId": "0P0000ZL7Q.F",
+   "srri": 2,
+   "strategie": "Fonds obligataire court terme à gestion active et discrétionnaire sur l’ensemble des marchés obligataires et de taux, dans une fourchette de sensibilité de 0 à 3, visant une performance supérieure au taux monétaire capitalisé, horizon recommandé de 1 an.",
+   "equity": 0,
+   "libelleProd": "Conservateur Obligations Court Terme C",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "FR0013287315",
@@ -442,7 +880,15 @@
    "societe": "Palatine AM",
    "section": "Monétaires",
    "mutuelle": "Ouvert",
-   "cto": "Ouvert"
+   "cto": "Ouvert",
+   "gerant": "Pal",
+   "graphId": "0P0001CB5C.F",
+   "srri": 1,
+   "strategie": "Fonds monétaire visant une performance égale à l’€STR (taux monétaire au jour le jour) après frais : instruments du marché monétaire et obligations court terme de la zone euro (maturité maximale 13 mois), approche ESG, durée de placement recommandée inférieure à 3 mois.",
+   "equity": 0,
+   "libelleProd": "Palatine Monétaire Court Terme R",
+   "xid": null,
+   "xid_note": "déjà en production (xidRepli maintenu dans uc-history.ts)"
   },
   {
    "isin": "LU1585265066",
@@ -450,7 +896,15 @@
    "societe": "Tikehau IM",
    "section": "Monétaires",
    "mutuelle": "Ouvert",
-   "cto": "Non éligible"
+   "cto": "Non éligible",
+   "gerant": "Tik",
+   "equity": 0,
+   "graphId": "0P0001KJDD.F",
+   "xid": "617134022",
+   "srri": 2,
+   "srri_source": "DIC PRIIPS officiel Tikehau Investment Management, Tikehau Fund - Tikehau Short Duration, Catégorie R-Acc-EUR, daté du 23/10/2023 (consulté via prepar-vie.fr/wp-content/uploads/2023/07/LU1585265066.pdf) : \"Nous avons classé ce produit dans la classe de risque 2 sur 7, qui est une classe de risque basse.\"",
+   "strategie": "Le compartiment vise une performance annualisée supérieure à l'indice EURIBOR 3 mois + 100 points de base, nette des frais de gestion, sur un horizon d'investissement d'au moins 12 à 18 mois, en gestion active et discrétionnaire. Portefeuille diversifié de titres de créance d'émetteurs privés ou publics situés principalement en zone euro et appartenant essentiellement à la catégorie Investment Grade, avec un risque de taux minimisé (fourchette de sensibilité taux comprise entre -1 et +1) ; l'exposition globale aux titres à haut rendement ou non notés est limitée à 45% de l'actif net (dont 35% maximum en High Yield).",
+   "strategie_source": "DIC PRIIPS officiel Tikehau IM, LU1585265066, daté du 23/10/2023 (prepar-vie.fr), rubrique \"Objectifs\"."
   }
  ]
 }
