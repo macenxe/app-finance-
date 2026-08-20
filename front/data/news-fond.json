@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-20T17:39:48.356Z",
+ "genere": "2026-08-20T18:55:15.059Z",
  "globales": [
   {
    "titre": "Les rachats effectués par le Trésor américain atténuent les difficultés du marché obligataire, mais ce soulage - Boursorama",
@@ -94,15 +94,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 18 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Tue, 18 Aug 2026 07:00:00 GMT",
@@ -112,11 +103,20 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 17 Aug 2026 13:45:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRGJnR3NvaHBkelNrQWgwdVRIYi1PRWZwN2lXMGItZ3FFX01teXRoN1dFYWE1TlE5Tk03T3c1WDJSTzFVOHNRS01Kalpzc0NoeWd5YnEzcE5tSnJIVFVWZTU5MDg3ejlWSWhZdFMwZ2hNUkdkNU4zcFpXcVdfQ2ZSLTFSNUozZ3lIX3F2aEY5V3M1QlRDbzZCdjl2NlpLMURoOGZNYTkyeGN6d3NzRDRLV3JleEc3bGRZQmRYLWNNU2ZpSnJWWEMxZ2w4M3dlazU3M2ZfTXNoQQ?oc=5",
-   "tag": "BNP Paribas",
+   "titre": "Les actions à suivre mardi: Stellantis, Hermès, Groupe ADP - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 06:21:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVnprTU8zOVptWUpRUEtFS012Z2tTQldOUVRRWnNZN0RGcVU1NzBJVzhCaTZhZHFsVFkyMDhueWIzNGdDU3FGdno0d05ONmdrNl9XSFJkbWpsWXdUT1JCNk5yTXVfeFFHN0l6eHFtSjZ0bUl6OE8tTWd6OW9nb21HU09yNnZZLThxNjF0alJRVTV4ZWdWX24tUWsxZGY?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 18 Aug 2026 06:13:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -150,38 +150,20 @@
  ],
  "eco": [
   {
-   "titre": "Le rachat de titres par le Trésor américain apaise brièvement la chute des obligations, mais les inquiétudes l - Boursorama",
+   "titre": "Trump relance le pari crypto, le bitcoin et les valeurs du secteur s'envolent - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 20 Aug 2026 17:20:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxONHpNMVhEQVJJVnBtSHJGNEE5RS1ZaU5zc3dYLTNmb1NzVjNNQnl6UE5FY3pONDdHbnQ0S1ZWS2JscVZoTzA5bkMyRGJ6WTVVakZldHBTMmJsZmtoVzJJM2k1RS1NYnVUdnM3RnRzdFJGMEg1R3BNX2szNWx5NFVmdWJXdmpOcWN5aTdyLU1NOXVPZUwwZWtsRC15XzZma3JZQzZnUnB2dWpoRktMMVlQWktLNlNsZkl2XzFSNkdVQlh2eDlSRzVYT1VNNUR1QXpuVFpFNUsyTlM2T2gwd1FLS0ZlWDhydl9uSVhEbHVBWTJObTY2QWRRUjBiNDQ2YmdWUUtEeEJxcWJXOG5kWERnaG9SazJ6S3d2QU9NejkzVnVtUjZEZkFudF9aNW5meWVEeHUtc2RxRETSAb4CQVVfeXFMT1ZldEZVdlpBMl9BbU5NdnBRQlg5TDBPc0Nnb3lxZ1ZaVFhpdW1iMFV3VnctWVlfSDZZa1doWmhPeVE0WngtZHVpdkFUS1ZYcU4wVWpBdWlxb2duOW5fLUdhdnRmQjh1V2s4bUMxWmRsN0oyQ3c4VzdsRkhKR2NhUUM0dmhCbHpKcVdQNlRheXB4VXpkb3I3MzBleExJSzR5QzNfdW5mbEh4Vzc5OEVqMHJuWlVWY1g3S0dlS3FDaFVSNGdhc2laTnpUdTFQRExpbVFmWlJ4dFBWcmJnY0VVZnhHYlp6anNiUWZxOU5BeERHRER3TDBTVm02N2hxS3BXYldqVmQ5cEVrYkVRdmhHWFlNQzdFaDBQY2ZVbkRyZWUxX2RYNUxYOGtTVmREc01RMUd3RUI0SlhaUVBJd1pR?oc=5",
+   "date": "Thu, 20 Aug 2026 18:04:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOemJabXRxczI2NVVHWnppMElmQVhqU3lOU0FFWWVRWi05MnNiSHNkUVhQNTYzUFdSWEFwR3FlRGUxTDNDZWVORkw2SkRwdGZ5OWFWcUtZcGMzaEVWeHh2cXowYjc2eUtHb0FxVmpKdmpVRndEaHlQSDFpVUpvTXJoVlBqT1gtWkNfRTd6OGhZZkRnTVpwQ2hQS0ZjZUdqUmM0SDdnZkMwcFdEWDRTLTJ3R3h4R3lRNFdrUG5HVVdSR2FWd1RiemFVTkZjMXdlVTR0T0NaNnFSRzB6OTRxeG5iSTNUWEx2RWI4ZUHSAe8BQVVfeXFMUGd6Y2t6a0FQNDYzY0l5Vm4ybFhVbnJLSnlDb3JVNFdvb0VGMmZWU3dpRlJ6Y01LWmtGR2h5Wl9mdE1fYWpxbHVFM0tXMXdIa2Z3QTl2VFJvTmZaRUpLSWZzeF9WSTNHZ2FMaUZyZFJha2kxYlVSVGMzV1gtTjU2TFJkZHpISVM4TXhiR25UekFzU3VXSzR6ckFPODdHZXZLSmkzZ0RBWG1JZVBRWDgzQ1pxZFNDNEhXMzZmYVg0bkFOWTdFYWhIX2VnLVBjbUwxZzB1dEdWWDZzVWlGQ3RmRUpBTE1pUXpEN2RfQmFBNUk?oc=5",
    "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Bourse : Airbus, Schneider Electric, Air liquide, Safran, Total… Les actions de la souveraineté ont du potentiel - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Thu, 20 Aug 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQVGI1cVp2NVhxTVJWejBhQkpwTjRidW0wUTlVdVpXd1lRUHpvQjZLR2Z4cW14ZXh5U3ZHcGxQR2J0SU5YcWoxMXdaT3c3dEVkXzV2bDVOWmRvNWtSN3dUd1NqR0drcjZMOHBIRURnMzhPaFRValpKSHVna0RsYXVWcGpDVU5xLWNOUWxhbWJpaktlcTlpRzdUVk5sMEl5NjQxdlFSYkp2Zi1FNDFCbFc5dEl0SlIyUmpEWnJzOHFGSzFyVXl1TS1KV0ZQWkhrVDlPeUJEcXhjcHdyY1FYdEcyZ0dUcnQ2MXI5R0FBMA?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40 : huitième séance de baisse, pétrole et taux sous tension - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Thu, 20 Aug 2026 16:54:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOV1l2SzVTcWNGemFVSnFIaVBkRk9qT3p3ZGNtZHJpUTBSNXZ0NkpNQmkyQ2d2REJfNTlnZjJwTEhPRDJuQXZjcm16aDJYLTJ6QkJIS3ZqWUkwVWRLNXNRQWdZc2Rremx4d2E3WkNEeWxtQ00zSm10UUFKaENEX1R5NWZNaURUNGRqdGdjRTlISmJCa1NIUkp0b2Etc0ZXQTZF?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Procès Meta:certains outils de sécurité \"conçus pour échouer\", accuse un ex-ingénieur - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 20 Aug 2026 16:39:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQN3dOYm9WSW85clhsQmxqRlpEY3NqOHkwcnVRMU9FcC1DZWVXQlBIRUtvdmVwTXFnY0FiY2ZoQUcxMjI4eVdMdFZGVkRzVVhFNTdHNExGejVNbFZlcHNTZGVGWEVCY1ZBeUs0ZWppbVF6WUVkTWFBbmN4RUNMQXRpcGVDVHZUNnA1VFk4S1dYQ3dWT1N0Rk5QMnV3ZEtKSU0xcGxUaW5zVFJoNExVWkdtR3V4NnVPbWRlbmlMQzR5QlJhbEtvdk93RUtBUXdrM2tydFNFSkFPTzQwSnlVVWNnc2Y0TldxRVJYT29PZUxOckJJQdIB9wFBVV95cUxPaWU3WFI1VElMMFlXZmJEZ1JwMFFTcklkVlc1VmtTaGlBQnFRMHhKWnZCRmhaUFVOWUNqZ1RsclEtYjdGdkt0eXl2XzhIckJsRk9YLUNWaU55bGpTS1p6TXlRTXZNMzlKaEtpbHZ4QnlCaHIzS3o5OTZFR0R6Q3Utb2Y3UUQ2czA3ZUFyR09hbWJ4VEgwbUdtdVhyS281dlRXZFlCWEt2TnJDX3pUVFp3UDVSRzhCZzhBbXB0TVR6djMyNzJTeHB4WnBIUmtGaldHY3Q3WEV3ZDFOd090Ym5SdGo2T2J2WGJUSXEtck1ZLVdSTEh1b25n?oc=5",
-   "tag": "CAC 40",
+   "titre": "\"Nous travaillons désormais à une réforme juste\": le gouvernement renonce à doubler le plafond des franchises médicales",
+   "source": "BFM Économie",
+   "date": "Thu, 20 Aug 2026 17:48:28 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/nous-travaillons-desormais-a-une-reforme-juste-le-gouvernement-renonce-a-doubler-le-plafond-des-franchises-medicales_AN-202608200532.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -303,15 +285,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'action du Trésor ne change pas la donne pour la Fed en septembre, selon Guha d'Evercore - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Thu, 20 Aug 2026 12:32:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOajVZckJCRHBLRlNCLUR4TmpiVTRjWDJSOGZ3YnFqQXNMWnN2TTBFNDFkb296SVVhRkFsS1ZtOHlCSHZFVTJNLXh5Y2l2QnlhM0NuWk9mR2ZMMGV1TFV0cHJlanhhLWhyUVE3Y1F1WlplRW5zbXd3dlZlU1loTzlocWJqSi00UlZCVlptOVRVZmxraTV4MkdweTRVeDU5eG5yMW1Zdm1SSU50bDhBR0hIemlCaUJrckJJd2xsOXM4dWxFWWFMUEJ1RVpVTXZ3bHJ6c3FtMmtBRldmQnplYnhseXdB?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Ils sont \"le point d’entrée des investisseurs\" mais le gouvernement ne les voit pas d'un bon œil: pourquoi certains ETF risquent de devenir inéligibles au PEA",
    "source": "BFM Économie",
    "date": "Thu, 20 Aug 2026 11:55:51 GMT",
@@ -411,11 +384,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "En portefeuille : Publicis, BBVA et Singapore Telecom - 20/08",
-   "source": "BFM Économie",
-   "date": "Thu, 20 Aug 2026 07:30:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/en-portefeuille-publicis-bbva-et-singapore-telecom-20-08_EN-202608200190.html",
-   "tag": "BFM Économie",
+   "titre": "Etats-Unis: Les responsables de la Fed encore plus préoccupés en juillet par l'inflation - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 20 Aug 2026 05:13:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxONkp3OS1oSWtOb1JfOW9Sem5qWmtNLXlscTVfbHlxenV0bGlqcW5iM2lMc2dwTDE3bk5rVmF2U1E3SUliTTM5NkpxdjYzQUtUd0RFUG10NGtPREU0aFhxdGFMN3VRTEtLWVd3MWFFYmZSRWNueFpUdjU1Wk9hcmluN2VxODhhaUxidTNHNmtQTk1kQUdFa01hUlowOGd2WkJyaFVPMVlkdFZPa0tOTjhLU3pnQ0FFZlJ5LUNDTTYyX1lic0NFeFlleTRtekhQX052X1JlbG1DR1pBeXExNXhTdkwzV0czNDNtVG1uY0daeXNvTjNxb3p6XzZjUjFXZG94OHg4dWFIY1c4bGp6UFNyONIBkAJBVV95cUxONkp3OS1oSWtOb1JfOW9Sem5qWmtNLXlscTVfbHlxenV0bGlqcW5iM2lMc2dwTDE3bk5rVmF2U1E3SUliTTM5NkpxdjYzQUtUd0RFUG10NGtPREU0aFhxdGFMN3VRTEtLWVd3MWFFYmZSRWNueFpUdjU1Wk9hcmluN2VxODhhaUxidTNHNmtQTk1kQUdFa01hUlowOGd2WkJyaFVPMVlkdFZPa0tOTjhLU3pnQ0FFZlJ5LUNDTTYyX1lic0NFeFlleTRtekhQX052X1JlbG1DR1pBeXExNXhTdkwzV0czNDNtVG1uY0daeXNvTjNxb3p6XzZjUjFXZG94OHg4dWFIY1c4bGp6UFNyOA?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   }
