@@ -1,0 +1,61 @@
+{
+ "isin": "FR0011175652",
+ "alloc": {
+  "action": 0,
+  "obligation": 79.8,
+  "liquidite": 13.6,
+  "autre": 6.6
+ },
+ "secteurs": [
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Technologie",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Industrie",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  },
+  {
+   "nom": "Santé",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "iShares Physical Gold ETC",
+   "pct": 8.4
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "isin": "FR0010038257",
+ "alloc": {
+  "action": 94.7,
+  "obligation": 1.5,
+  "liquidite": 3.7,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 42.5
+  },
+  {
+   "nom": "Finance",
+   "pct": 13.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 10.6
+  },
+  {
+   "nom": "Santé",
+   "pct": 9.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 7.5
+  },
+  {
+   "nom": "Technologie",
+   "pct": 5.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.7
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.1
+  },
+  {
+   "nom": "Communication",
+   "pct": 0.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 8.3
+  },
+  {
+   "nom": "Air Liquide SA",
+   "pct": 7.4
+  },
+  {
+   "nom": "Safran SA",
+   "pct": 5.7
+  },
+  {
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "pct": 5.6
+  },
+  {
+   "nom": "Legrand SA",
+   "pct": 5.3
+  },
+  {
+   "nom": "Societe Generale SA",
+   "pct": 5.1
+  },
+  {
+   "nom": "AXA SA",
+   "pct": 4.7
+  },
+  {
+   "nom": "L'Oreal SA",
+   "pct": 4.6
+  },
+  {
+   "nom": "Sanofi SA",
+   "pct": 4.4
+  }
+ ]
+}

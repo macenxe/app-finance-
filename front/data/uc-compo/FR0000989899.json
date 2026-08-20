@@ -1,0 +1,97 @@
+{
+ "isin": "FR0000989899",
+ "alloc": {
+  "action": 94.1,
+  "obligation": 1.2,
+  "liquidite": 4.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 33.1
+  },
+  {
+   "nom": "Santé",
+   "pct": 26.4
+  },
+  {
+   "nom": "Technologie",
+   "pct": 22.2
+  },
+  {
+   "nom": "Communication",
+   "pct": 6.3
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 4.3
+  },
+  {
+   "nom": "Finance",
+   "pct": 3.8
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 1.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Publicis Groupe SA",
+   "pct": 6
+  },
+  {
+   "nom": "Virbac SA",
+   "pct": 5.6
+  },
+  {
+   "nom": "Ipsen SA",
+   "pct": 5.3
+  },
+  {
+   "nom": "MTU Aero Engines AG",
+   "pct": 5.2
+  },
+  {
+   "nom": "Safran SA",
+   "pct": 4.4
+  },
+  {
+   "nom": "Rexel SA",
+   "pct": 4.2
+  },
+  {
+   "nom": "Exosens SA",
+   "pct": 3.8
+  },
+  {
+   "nom": "Sopra Steria Group SA",
+   "pct": 3.6
+  },
+  {
+   "nom": "Edenred SE",
+   "pct": 3.6
+  },
+  {
+   "nom": "BioMerieux SA",
+   "pct": 3.5
+  }
+ ]
+}

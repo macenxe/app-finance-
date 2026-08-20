@@ -1,0 +1,97 @@
+{
+ "isin": "FR0010649079",
+ "alloc": {
+  "action": 96.7,
+  "obligation": 0,
+  "liquidite": 3.3,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 41.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 25.5
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 13.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 6.6
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 6.1
+  },
+  {
+   "nom": "Énergie",
+   "pct": 4.6
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 1.2
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 6.3
+  },
+  {
+   "nom": "Prysmian SpA",
+   "pct": 3.7
+  },
+  {
+   "nom": "Infineon Technologies AG",
+   "pct": 3.4
+  },
+  {
+   "nom": "Iberdrola SA",
+   "pct": 2.9
+  },
+  {
+   "nom": "SPIE SA",
+   "pct": 2.9
+  },
+  {
+   "nom": "Novartis AG Registered Shares",
+   "pct": 2.8
+  },
+  {
+   "nom": "Grenergy Renovables SA",
+   "pct": 2.7
+  },
+  {
+   "nom": "BE Semiconductor Industries NV",
+   "pct": 2.7
+  },
+  {
+   "nom": "Legrand SA",
+   "pct": 2.7
+  },
+  {
+   "nom": "STMicroelectronics NV",
+   "pct": 2.6
+  }
+ ]
+}

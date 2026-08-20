@@ -1,0 +1,69 @@
+{
+ "isin": "LU1752460292",
+ "alloc": {
+  "action": 0,
+  "obligation": 100,
+  "liquidite": 0,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 20.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 13.5
+  },
+  {
+   "nom": "Technologie",
+   "pct": 12.8
+  },
+  {
+   "nom": "Industrie",
+   "pct": 11.1
+  },
+  {
+   "nom": "Communication",
+   "pct": 10
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 8.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 6.1
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 4.3
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 4.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 2.8
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Euro Schatz Future Sept 26",
+   "pct": 84
+  },
+  {
+   "nom": "Euro Bobl Future Sept 26",
+   "pct": 16.3
+  },
+  {
+   "nom": "Euro Bund Future Sept 26",
+   "pct": 6.4
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "isin": "FR0010564328",
+ "alloc": {
+  "action": 0,
+  "obligation": 91.1,
+  "liquidite": 8.2,
+  "autre": 0.8
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 22.4
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 16.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 16.5
+  },
+  {
+   "nom": "Technologie",
+   "pct": 15.6
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 7.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 6.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 5.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 4.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Santé",
+   "pct": 0
+  }
+ ],
+ "holdings": []
+}

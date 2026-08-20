@@ -1,0 +1,97 @@
+{
+ "isin": "LU1892829828",
+ "alloc": {
+  "action": 99.3,
+  "obligation": 0.1,
+  "liquidite": 0.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 66.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 17.9
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 5.3
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 3.1
+  },
+  {
+   "nom": "Technologie",
+   "pct": 2.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Severn Trent PLC",
+   "pct": 5.3
+  },
+  {
+   "nom": "Ball Corp",
+   "pct": 4.2
+  },
+  {
+   "nom": "Veolia Environnement SA",
+   "pct": 4.1
+  },
+  {
+   "nom": "Aalberts NV",
+   "pct": 3.9
+  },
+  {
+   "nom": "Companhia De Saneamento Basico Do Estado De Sao Paulo",
+   "pct": 3.8
+  },
+  {
+   "nom": "Tetra Tech Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "IDEX Corp",
+   "pct": 3.7
+  },
+  {
+   "nom": "Clean Harbors Inc",
+   "pct": 3.7
+  },
+  {
+   "nom": "Veralto Corp",
+   "pct": 3.6
+  },
+  {
+   "nom": "Ferguson Enterprises Inc",
+   "pct": 3.1
+  }
+ ]
+}

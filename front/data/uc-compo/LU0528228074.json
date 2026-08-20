@@ -1,0 +1,97 @@
+{
+ "isin": "LU0528228074",
+ "alloc": {
+  "action": 100,
+  "obligation": 0,
+  "liquidite": 0,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 31.2
+  },
+  {
+   "nom": "Industrie",
+   "pct": 13.7
+  },
+  {
+   "nom": "Santé",
+   "pct": 13
+  },
+  {
+   "nom": "Communication",
+   "pct": 10.7
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 10.3
+  },
+  {
+   "nom": "Finance",
+   "pct": 8.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.6
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3.7
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.3
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 1.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 6.8
+  },
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 6.5
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 6.2
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 5.4
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 4.9
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 4
+  },
+  {
+   "nom": "Keyence Corp",
+   "pct": 3.1
+  },
+  {
+   "nom": "Compagnie Financiere Richemont SA Class A",
+   "pct": 3
+  },
+  {
+   "nom": "Johnson Controls International PLC Registered Shares",
+   "pct": 2.9
+  },
+  {
+   "nom": "Roche Holding AG Ordinary Shares new",
+   "pct": 2.9
+  }
+ ]
+}

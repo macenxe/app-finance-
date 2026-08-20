@@ -1,0 +1,93 @@
+{
+ "isin": "LU1103305709",
+ "alloc": {
+  "action": 94,
+  "obligation": 0.9,
+  "liquidite": 5.1,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Santé",
+   "pct": 31.4
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 13.9
+  },
+  {
+   "nom": "Énergie",
+   "pct": 13.9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 9.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 7.2
+  },
+  {
+   "nom": "Finance",
+   "pct": 7.1
+  },
+  {
+   "nom": "Industrie",
+   "pct": 6.6
+  },
+  {
+   "nom": "Communication",
+   "pct": 5.2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 2.8
+  },
+  {
+   "nom": "Technologie",
+   "pct": 2.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Weyerhaeuser Co",
+   "pct": 4.9
+  },
+  {
+   "nom": "Dentsply Sirona Inc",
+   "pct": 4.5
+  },
+  {
+   "nom": "Bank of America Corp",
+   "pct": 4.2
+  },
+  {
+   "nom": "Mohawk Industries Inc",
+   "pct": 4.1
+  },
+  {
+   "nom": "Baxter International Inc",
+   "pct": 3.9
+  },
+  {
+   "nom": "PulteGroup Inc",
+   "pct": 3.7
+  },
+  {
+   "nom": "SLB Ltd",
+   "pct": 3.2
+  },
+  {
+   "nom": "BioMarin Pharmaceutical Inc",
+   "pct": 3.1
+  },
+  {
+   "nom": "Perrigo Co PLC",
+   "pct": 3
+  }
+ ]
+}

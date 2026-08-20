@@ -1,0 +1,97 @@
+{
+ "isin": "LU1490785091",
+ "alloc": {
+  "action": 99.4,
+  "obligation": 0,
+  "liquidite": 0.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Santé",
+   "pct": 26.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 25.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 19.4
+  },
+  {
+   "nom": "Finance",
+   "pct": 11.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 9.3
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 2
+  },
+  {
+   "nom": "Communication",
+   "pct": 0.3
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 7.5
+  },
+  {
+   "nom": "NKT AS",
+   "pct": 4.9
+  },
+  {
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 4.7
+  },
+  {
+   "nom": "Harvia PLC Ordinary Shares",
+   "pct": 3.8
+  },
+  {
+   "nom": "Siemens Energy AG Ordinary Shares",
+   "pct": 3.7
+  },
+  {
+   "nom": "Galderma Group AG Registered Shares",
+   "pct": 3.7
+  },
+  {
+   "nom": "AstraZeneca PLC",
+   "pct": 3.6
+  },
+  {
+   "nom": "Sartorius Stedim Biotech SA",
+   "pct": 3.5
+  },
+  {
+   "nom": "Lonza Group Ltd",
+   "pct": 3.5
+  },
+  {
+   "nom": "Erste Group Bank AG.",
+   "pct": 3.5
+  }
+ ]
+}

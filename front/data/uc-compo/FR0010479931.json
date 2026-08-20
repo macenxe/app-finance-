@@ -1,0 +1,97 @@
+{
+ "isin": "FR0010479931",
+ "alloc": {
+  "action": 98.8,
+  "obligation": 0,
+  "liquidite": 1.2,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 27.1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 19.1
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 9.9
+  },
+  {
+   "nom": "Santé",
+   "pct": 9.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 7.7
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 5.5
+  },
+  {
+   "nom": "Industrie",
+   "pct": 5.4
+  },
+  {
+   "nom": "Technologie",
+   "pct": 5.2
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ICICI Bank Ltd",
+   "pct": 8.3
+  },
+  {
+   "nom": "Reliance Industries Ltd",
+   "pct": 6.1
+  },
+  {
+   "nom": "Bharti Airtel Ltd",
+   "pct": 5.5
+  },
+  {
+   "nom": "HDFC Bank Ltd",
+   "pct": 4.8
+  },
+  {
+   "nom": "Axis Bank Ltd",
+   "pct": 3.4
+  },
+  {
+   "nom": "Apollo Hospitals Enterprise Ltd",
+   "pct": 3.3
+  },
+  {
+   "nom": "Varun Beverages Ltd",
+   "pct": 3.1
+  },
+  {
+   "nom": "Tata Steel Ltd",
+   "pct": 3.1
+  },
+  {
+   "nom": "Avenue Supermarts Ltd",
+   "pct": 3
+  },
+  {
+   "nom": "Titan Co Ltd",
+   "pct": 2.9
+  }
+ ]
+}

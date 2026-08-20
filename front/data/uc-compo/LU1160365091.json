@@ -1,0 +1,97 @@
+{
+ "isin": "LU1160365091",
+ "alloc": {
+  "action": 97.3,
+  "obligation": 0,
+  "liquidite": 2.7,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Conso. cyclique",
+   "pct": 20.9
+  },
+  {
+   "nom": "Technologie",
+   "pct": 19.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 19.1
+  },
+  {
+   "nom": "Finance",
+   "pct": 15.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 10.7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 4.8
+  },
+  {
+   "nom": "Industrie",
+   "pct": 4.3
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 1.6
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 8.7
+  },
+  {
+   "nom": "Alibaba Group Holding Ltd ADR",
+   "pct": 7.4
+  },
+  {
+   "nom": "NAURA Technology Group Co Ltd Class A",
+   "pct": 5.2
+  },
+  {
+   "nom": "NetEase Inc ADR",
+   "pct": 4.4
+  },
+  {
+   "nom": "Ping An Insurance (Group) Co. of China Ltd Class H",
+   "pct": 3.9
+  },
+  {
+   "nom": "China Merchants Bank Co Ltd Class H",
+   "pct": 3.6
+  },
+  {
+   "nom": "Pop Mart International Group Ltd Ordinary Shares",
+   "pct": 3.1
+  },
+  {
+   "nom": "Contemporary Amperex Technology Co Ltd Class A",
+   "pct": 3
+  },
+  {
+   "nom": "WuXi Biologics (Cayman) Inc",
+   "pct": 2.9
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 2.9
+  }
+ ]
+}

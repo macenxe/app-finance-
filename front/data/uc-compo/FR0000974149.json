@@ -1,0 +1,97 @@
+{
+ "isin": "FR0000974149",
+ "alloc": {
+  "action": 95,
+  "obligation": 0.6,
+  "liquidite": 4.5,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 43.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 29.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 11.2
+  },
+  {
+   "nom": "Finance",
+   "pct": 9.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 5.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 0.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Amundi STOXX Europe 600 Banks ETF Acc",
+   "pct": 6.1
+  },
+  {
+   "nom": "MTU Aero Engines AG",
+   "pct": 4.7
+  },
+  {
+   "nom": "Andritz AG",
+   "pct": 4.2
+  },
+  {
+   "nom": "De'Longhi SpA",
+   "pct": 4.1
+  },
+  {
+   "nom": "GEA Group AG",
+   "pct": 4
+  },
+  {
+   "nom": "LivaNova PLC",
+   "pct": 3.7
+  },
+  {
+   "nom": "IMI PLC",
+   "pct": 3.4
+  },
+  {
+   "nom": "Krones AG",
+   "pct": 3.4
+  },
+  {
+   "nom": "Metso Corp",
+   "pct": 3.2
+  },
+  {
+   "nom": "Nordex SE Akt. nach Kapitalherabsetzung",
+   "pct": 2.9
+  }
+ ]
+}

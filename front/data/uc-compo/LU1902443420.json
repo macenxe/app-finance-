@@ -1,0 +1,97 @@
+{
+ "isin": "LU1902443420",
+ "alloc": {
+  "action": 99.1,
+  "obligation": 0.1,
+  "liquidite": 0.9,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 34.1
+  },
+  {
+   "nom": "Industrie",
+   "pct": 15.9
+  },
+  {
+   "nom": "Finance",
+   "pct": 15.6
+  },
+  {
+   "nom": "Communication",
+   "pct": 8
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.4
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 5.2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.4
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 4
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.8
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 5.4
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 4
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+   "pct": 3.9
+  },
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 3.9
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 3.5
+  },
+  {
+   "nom": "Broadcom Inc",
+   "pct": 3.2
+  },
+  {
+   "nom": "Samsung Electronics Co Ltd",
+   "pct": 2.7
+  },
+  {
+   "nom": "TJX Companies Inc",
+   "pct": 2.4
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 1.8
+  },
+  {
+   "nom": "Infineon Technologies AG",
+   "pct": 1.8
+  }
+ ]
+}

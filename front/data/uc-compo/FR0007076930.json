@@ -1,0 +1,97 @@
+{
+ "isin": "FR0007076930",
+ "alloc": {
+  "action": 99.9,
+  "obligation": 0.1,
+  "liquidite": 0,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 28.7
+  },
+  {
+   "nom": "Industrie",
+   "pct": 14.4
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 12.2
+  },
+  {
+   "nom": "Énergie",
+   "pct": 11.3
+  },
+  {
+   "nom": "Communication",
+   "pct": 11.1
+  },
+  {
+   "nom": "Santé",
+   "pct": 6.3
+  },
+  {
+   "nom": "Technologie",
+   "pct": 5.7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 5.3
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 3.2
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "BNP Paribas Act. Cat.A",
+   "pct": 9.9
+  },
+  {
+   "nom": "TotalEnergies SE",
+   "pct": 8.3
+  },
+  {
+   "nom": "Societe Generale SA",
+   "pct": 6.8
+  },
+  {
+   "nom": "AXA SA",
+   "pct": 6.8
+  },
+  {
+   "nom": "Sanofi SA",
+   "pct": 6.3
+  },
+  {
+   "nom": "Compagnie de Saint-Gobain SA",
+   "pct": 4.8
+  },
+  {
+   "nom": "Publicis Groupe SA",
+   "pct": 3.8
+  },
+  {
+   "nom": "Michelin",
+   "pct": 3.5
+  },
+  {
+   "nom": "Bouygues",
+   "pct": 2.7
+  },
+  {
+   "nom": "Dassault Aviation SA",
+   "pct": 2.5
+  }
+ ]
+}

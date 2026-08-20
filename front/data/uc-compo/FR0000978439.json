@@ -1,0 +1,93 @@
+{
+ "isin": "FR0000978439",
+ "alloc": {
+  "action": 95.3,
+  "obligation": 0.3,
+  "liquidite": 4.3,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 40.7
+  },
+  {
+   "nom": "Technologie",
+   "pct": 23.2
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 15.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 8.5
+  },
+  {
+   "nom": "Santé",
+   "pct": 4.8
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 2.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "GL Events",
+   "pct": 8.3
+  },
+  {
+   "nom": "Figeac Aero SA",
+   "pct": 6.9
+  },
+  {
+   "nom": "ID Logistics",
+   "pct": 6.2
+  },
+  {
+   "nom": "Jacquet Metals Ordinary Shares",
+   "pct": 4.9
+  },
+  {
+   "nom": "Virbac SA",
+   "pct": 4.5
+  },
+  {
+   "nom": "Wavestone SA",
+   "pct": 4.5
+  },
+  {
+   "nom": "Delfingen",
+   "pct": 4.4
+  },
+  {
+   "nom": "Aubay",
+   "pct": 4.4
+  },
+  {
+   "nom": "Vusion",
+   "pct": 4.1
+  }
+ ]
+}

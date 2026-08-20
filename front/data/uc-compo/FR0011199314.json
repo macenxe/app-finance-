@@ -1,0 +1,69 @@
+{
+ "isin": "FR0011199314",
+ "alloc": {
+  "action": 0,
+  "obligation": 75.8,
+  "liquidite": 4.4,
+  "autre": 19.8
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 100
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Technologie",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Industrie",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  },
+  {
+   "nom": "Santé",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Amundi Physical Gold ETC C",
+   "pct": 7.6
+  },
+  {
+   "nom": "iShares Physical Gold ETC",
+   "pct": 5
+  },
+  {
+   "nom": "Invesco Physical Gold ETC",
+   "pct": 3.7
+  }
+ ]
+}

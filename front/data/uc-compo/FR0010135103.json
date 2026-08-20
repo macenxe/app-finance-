@@ -1,0 +1,81 @@
+{
+ "isin": "FR0010135103",
+ "alloc": {
+  "action": 47.9,
+  "obligation": 30.2,
+  "liquidite": 21.8,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 31.2
+  },
+  {
+   "nom": "Finance",
+   "pct": 20.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 14
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 13.2
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.3
+  },
+  {
+   "nom": "Industrie",
+   "pct": 7.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 3.5
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 6.2
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 3.8
+  },
+  {
+   "nom": "MercadoLibre Inc",
+   "pct": 2.4
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 2.2
+  },
+  {
+   "nom": "Meta Platforms Inc Class A",
+   "pct": 2
+  },
+  {
+   "nom": "Cencora Inc",
+   "pct": 2
+  }
+ ]
+}

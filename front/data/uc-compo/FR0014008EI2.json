@@ -1,0 +1,97 @@
+{
+ "isin": "FR0014008EI2",
+ "alloc": {
+  "action": 97.2,
+  "obligation": 0,
+  "liquidite": 2.8,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 18.3
+  },
+  {
+   "nom": "Technologie",
+   "pct": 15.6
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 14.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 11.9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 9.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 8.1
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 5.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 5.2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 6.8
+  },
+  {
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "pct": 5.5
+  },
+  {
+   "nom": "Amundi MSCI EMU ESG Ldrs Sel DR EUR (C)",
+   "pct": 4.6
+  },
+  {
+   "nom": "SAP SE",
+   "pct": 4.2
+  },
+  {
+   "nom": "TotalEnergies SE",
+   "pct": 4
+  },
+  {
+   "nom": "Siemens AG",
+   "pct": 3.5
+  },
+  {
+   "nom": "Sanofi SA",
+   "pct": 3.3
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 3.1
+  },
+  {
+   "nom": "Allianz SE",
+   "pct": 3.1
+  },
+  {
+   "nom": "BNP Paribas Act. Cat.A",
+   "pct": 2.9
+  }
+ ]
+}

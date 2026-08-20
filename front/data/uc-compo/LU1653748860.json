@@ -1,0 +1,97 @@
+{
+ "isin": "LU1653748860",
+ "alloc": {
+  "action": 96.8,
+  "obligation": 0.2,
+  "liquidite": 2.9,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Conso. de base",
+   "pct": 39.3
+  },
+  {
+   "nom": "Industrie",
+   "pct": 27.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 10.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 9.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 4.9
+  },
+  {
+   "nom": "Technologie",
+   "pct": 1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "GEA Group AG",
+   "pct": 4.4
+  },
+  {
+   "nom": "Unilever PLC",
+   "pct": 3.4
+  },
+  {
+   "nom": "Canadian Pacific Kansas City Ltd",
+   "pct": 3.3
+  },
+  {
+   "nom": "Kerry Group PLC Class A",
+   "pct": 2.9
+  },
+  {
+   "nom": "Danone SA",
+   "pct": 2.9
+  },
+  {
+   "nom": "Koninklijke Ahold Delhaize NV",
+   "pct": 2.8
+  },
+  {
+   "nom": "Sysco Corp",
+   "pct": 2.8
+  },
+  {
+   "nom": "The Kroger Co",
+   "pct": 2.7
+  },
+  {
+   "nom": "Pentair PLC",
+   "pct": 2.7
+  },
+  {
+   "nom": "Sainsbury (J) PLC",
+   "pct": 2.5
+  }
+ ]
+}

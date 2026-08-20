@@ -1,0 +1,61 @@
+{
+ "isin": "FR0007439666",
+ "alloc": {
+  "action": 17,
+  "obligation": 65,
+  "liquidite": 16.3,
+  "autre": 1.7
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 17.7
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 16.1
+  },
+  {
+   "nom": "Technologie",
+   "pct": 12.3
+  },
+  {
+   "nom": "Industrie",
+   "pct": 12.1
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 11.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 6.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 6.7
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 5.1
+  },
+  {
+   "nom": "Santé",
+   "pct": 4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Amundi MSCI EMU ESG Ldrs Sel DR EUR (C)",
+   "pct": 9.5
+  }
+ ]
+}

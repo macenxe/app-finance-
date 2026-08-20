@@ -1,0 +1,61 @@
+{
+ "isin": "FR0010097683",
+ "alloc": {
+  "action": 24.6,
+  "obligation": 74,
+  "liquidite": 0,
+  "autre": 1.4
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 21.2
+  },
+  {
+   "nom": "Finance",
+   "pct": 19.7
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 10.1
+  },
+  {
+   "nom": "Industrie",
+   "pct": 10
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.9
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 8.5
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.3
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 4.4
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.7
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 2.1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Amundi MSCI World ESGBrdTrnstnETFAcc",
+   "pct": 10.6
+  }
+ ]
+}

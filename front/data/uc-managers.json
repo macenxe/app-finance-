@@ -1,25 +1,214 @@
 {
  "genere": "2026-08-20",
  "fonds": {
-  "FR0011253624": {
+  "LU1120766388": {
    "gerants": [
     {
-     "nom": "Yoann Ignatiew",
-     "depuis": "2008-09-08"
+     "nom": "Linden Thomson",
+     "depuis": "2024-02-29"
     },
     {
-     "nom": "Charles-Edouard Bilbault",
-     "depuis": "2017-07-01"
-    },
-    {
-     "nom": "Henri Captier",
-     "depuis": "2025-12-01"
+     "nom": "Servaas Michielssens",
+     "depuis": "2024-04-30"
     }
    ],
-   "fraisCourants": 1.58,
-   "societe": "Rothschild & Co Asset Management",
+   "fraisCourants": 2.02,
+   "societe": "Candriam",
    "structure": "SICAV",
    "note": 4,
+   "risque": 3
+  },
+  "FR0007076930": {
+   "gerants": [
+    {
+     "nom": "Jean-Charles Mériaux",
+     "depuis": "2002-10-04"
+    },
+    {
+     "nom": "Damien Lanternier",
+     "depuis": "2017-10-01"
+    },
+    {
+     "nom": "Adrien Le Clainche",
+     "depuis": "2007-05-02"
+    },
+    {
+     "nom": "Emilie BRUNET-MANARDO",
+     "depuis": "2019-01-28"
+    }
+   ],
+   "fraisCourants": 2.47,
+   "societe": "DNCA Finance",
+   "structure": "FCP",
+   "note": 5,
+   "risque": 3
+  },
+  "FR0000295230": {
+   "gerants": [
+    {
+     "nom": "Franz Weis",
+     "depuis": "2009-11-01"
+    },
+    {
+     "nom": "Eva Fornadi",
+     "depuis": "2024-08-30"
+    },
+    {
+     "nom": "Bassel Choughari",
+     "depuis": "2025-10-01"
+    }
+   ],
+   "fraisCourants": 1.86,
+   "societe": "Comgest SA",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 3
+  },
+  "FR0014008EI2": {
+   "gerants": [],
+   "fraisCourants": null,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 3
+  },
+  "FR0013256930": {
+   "gerants": [],
+   "fraisCourants": 2.1,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0010564229": {
+   "gerants": [
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2005-01-01"
+    }
+   ],
+   "fraisCourants": 2.06,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0010038257": {
+   "gerants": [
+    {
+     "nom": "Bruno Vacossin",
+     "depuis": "2021-04-21"
+    }
+   ],
+   "fraisCourants": 1.54,
+   "societe": "Palatine Asset Management",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 4
+  },
+  "FR001400U512": {
+   "gerants": [],
+   "fraisCourants": null,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": null,
+   "risque": null
+  },
+  "FR0012844140": {
+   "gerants": [
+    {
+     "nom": "Jean-Dominique Seta",
+     "depuis": "2017-10-01"
+    },
+    {
+     "nom": "Vafa Ahmadi",
+     "depuis": "2014-12-22"
+    },
+    {
+     "nom": "Florian Peudevin",
+     "depuis": "2014-12-22"
+    }
+   ],
+   "fraisCourants": 2.4,
+   "societe": "CPR Asset Management",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 1
+  },
+  "LU1653748860": {
+   "gerants": [
+    {
+     "nom": "Stéphane Soussan",
+     "depuis": "2017-09-18"
+    }
+   ],
+   "fraisCourants": 1.87,
+   "societe": "CPR Asset Management",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 1
+  },
+  "LU1902443420": {
+   "gerants": [
+    {
+     "nom": "Alexandre Blein",
+     "depuis": "2018-12-07"
+    }
+   ],
+   "fraisCourants": 1.95,
+   "societe": "CPR Asset Management",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 2
+  },
+  "LU0870553020": {
+   "gerants": [
+    {
+     "nom": "Carl Auffret",
+     "depuis": "2012-12-28"
+    },
+    {
+     "nom": "Ronan Poupon",
+     "depuis": "2025-01-30"
+    },
+    {
+     "nom": "Kevin Tran",
+     "depuis": "2025-01-30"
+    },
+    {
+     "nom": "Alexandre STEENMAN",
+     "depuis": "2023-06-26"
+    }
+   ],
+   "fraisCourants": 2.06,
+   "societe": "DNCA Finance",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 3
+  },
+  "LU1490785091": {
+   "gerants": [
+    {
+     "nom": "Carl Auffret",
+     "depuis": "2016-11-02"
+    },
+    {
+     "nom": "Ronan Poupon",
+     "depuis": "2025-01-30"
+    },
+    {
+     "nom": "Kevin Tran",
+     "depuis": "2025-01-30"
+    },
+    {
+     "nom": "Alexandre STEENMAN",
+     "depuis": "2023-06-26"
+    }
+   ],
+   "fraisCourants": 1.91,
+   "societe": "DNCA Finance",
+   "structure": "SICAV",
+   "note": 1,
    "risque": 4
   },
   "LU1819480192": {
@@ -39,6 +228,27 @@
    "note": 3,
    "risque": 4
   },
+  "FR0010863688": {
+   "gerants": [
+    {
+     "nom": "Adrien Bommelaer",
+     "depuis": "2020-07-01"
+    },
+    {
+     "nom": "Paul Merle",
+     "depuis": "2021-12-16"
+    },
+    {
+     "nom": "Luc Olivier",
+     "depuis": "2020-07-01"
+    }
+   ],
+   "fraisCourants": 1.8,
+   "societe": "La Financière de l'Echiquier",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 3
+  },
   "LU1244893696": {
    "gerants": [
     {
@@ -55,6 +265,277 @@
    "structure": "SICAV",
    "note": 3,
    "risque": 1
+  },
+  "LU1160365091": {
+   "gerants": [
+    {
+     "nom": "Xiadong Bao",
+     "depuis": "2018-01-04"
+    },
+    {
+     "nom": "Bing YUAN",
+     "depuis": "2025-01-09"
+    },
+    {
+     "nom": "Marchés Emergents",
+     "depuis": "2021-10-15"
+    }
+   ],
+   "fraisCourants": 2.39,
+   "societe": "Edmond de Rothschild Asset Management (France)",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 3
+  },
+  "LU1103305709": {
+   "gerants": [
+    {
+     "nom": "Christophe Foliot",
+     "depuis": "2003-09-01"
+    },
+    {
+     "nom": "Adeline Salat-Baroux",
+     "depuis": "2007-09-01"
+    }
+   ],
+   "fraisCourants": 2.84,
+   "societe": "Edmond de Rothschild Asset Management (France)",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 4
+  },
+  "FR0010479931": {
+   "gerants": [
+    {
+     "nom": "Patricia Urbano",
+     "depuis": "2014-02-21"
+    },
+    {
+     "nom": "Bing YUAN",
+     "depuis": "2025-07-18"
+    }
+   ],
+   "fraisCourants": 2.31,
+   "societe": "Edmond de Rothschild Asset Management (France)",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 3
+  },
+  "LU0528228074": {
+   "gerants": [
+    {
+     "nom": "Aneta Wynimko",
+     "depuis": "2019-05-01"
+    },
+    {
+     "nom": "Alex Gold",
+     "depuis": "2019-05-01"
+    },
+    {
+     "nom": "Oliver Hextall",
+     "depuis": "2019-07-01"
+    }
+   ],
+   "fraisCourants": 1.91,
+   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
+   "structure": "SICAV",
+   "note": null,
+   "risque": null
+  },
+  "LU1892829828": {
+   "gerants": [
+    {
+     "nom": "Cornelia Furse",
+     "depuis": "2021-02-10"
+    },
+    {
+     "nom": "Alexander Laing",
+     "depuis": "2025-01-01"
+    }
+   ],
+   "fraisCourants": 1.9,
+   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 3
+  },
+  "LU1261432659": {
+   "gerants": [
+    {
+     "nom": "Christine Baalham",
+     "depuis": "2024-03-31"
+    },
+    {
+     "nom": "Tom Record",
+     "depuis": "2024-03-31"
+    }
+   ],
+   "fraisCourants": 1.88,
+   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "LU1744646933": {
+   "gerants": [
+    {
+     "nom": "Thomas Dhainaut",
+     "depuis": "2022-02-01"
+    },
+    {
+     "nom": "Gaspard Bramat",
+     "depuis": "2022-02-01"
+    }
+   ],
+   "fraisCourants": 2.01,
+   "societe": "Credit Mutuel Asset Management",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 3
+  },
+  "FR0000292278": {
+   "gerants": [
+    {
+     "nom": "Slabbert van Zyl",
+     "depuis": "2021-09-30"
+    },
+    {
+     "nom": "Nick Payne",
+     "depuis": "2025-05-19"
+    }
+   ],
+   "fraisCourants": 2.09,
+   "societe": "Comgest SA",
+   "structure": "SICAV",
+   "note": 2,
+   "risque": 3
+  },
+  "FR0010298596": {
+   "gerants": [
+    {
+     "nom": "Romain Burnand",
+     "depuis": "2006-03-24"
+    }
+   ],
+   "fraisCourants": 1.49,
+   "societe": "Moneta Asset Management",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 4
+  },
+  "FR0000989899": {
+   "gerants": [
+    {
+     "nom": "Pascal Riegis",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Sébastien Maillard",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Grégory Deschamps",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Frédéric Doussard",
+     "depuis": "2003-07-01"
+    }
+   ],
+   "fraisCourants": 1.82,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 1
+  },
+  "FR0000974149": {
+   "gerants": [
+    {
+     "nom": "Pascal Riegis",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Sébastien Maillard",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Grégory Deschamps",
+     "depuis": "2003-07-01"
+    },
+    {
+     "nom": "Frédéric Doussard",
+     "depuis": "2003-07-01"
+    }
+   ],
+   "fraisCourants": 2.17,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 3
+  },
+  "FR0000989915": {
+   "gerants": [
+    {
+     "nom": "Véronique Gomez",
+     "depuis": "2000-09-01"
+    },
+    {
+     "nom": "Pierre Toussain",
+     "depuis": "2000-09-01"
+    }
+   ],
+   "fraisCourants": 2.04,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0000983819": {
+   "gerants": [
+    {
+     "nom": "Corinne Martin",
+     "depuis": "2018-11-01"
+    },
+    {
+     "nom": "Arnaud Bauduin",
+     "depuis": "2016-01-01"
+    },
+    {
+     "nom": "Olivier Baduel",
+     "depuis": "2020-08-01"
+    }
+   ],
+   "fraisCourants": 1.08,
+   "societe": "OFI Invest Asset Management",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 3
+  },
+  "FR0000978439": {
+   "gerants": [
+    {
+     "nom": "Laurent Pancé",
+     "depuis": "2000-03-06"
+    }
+   ],
+   "fraisCourants": 1.89,
+   "societe": "Palatine Asset Management",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 4
+  },
+  "FR0010649079": {
+   "gerants": [
+    {
+     "nom": "Juliette Journo",
+     "depuis": "2024-04-01"
+    }
+   ],
+   "fraisCourants": 2.47,
+   "societe": "Palatine Asset Management",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 4
   },
   "LU0280435388": {
    "gerants": [
@@ -79,6 +560,27 @@
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
    "note": 4,
+   "risque": 3
+  },
+  "LU0366534344": {
+   "gerants": [
+    {
+     "nom": "Mayssa Al Midani",
+     "depuis": "2018-09-01"
+    },
+    {
+     "nom": "Alex Howson",
+     "depuis": "2020-04-01"
+    },
+    {
+     "nom": "May Hammoud",
+     "depuis": "2023-02-01"
+    }
+   ],
+   "fraisCourants": 2.01,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 2,
    "risque": 3
   },
   "LU0217139020": {
@@ -106,106 +608,30 @@
    "note": 2,
    "risque": 3
   },
-  "FR0010564229": {
-   "gerants": [
-    {
-     "nom": "Stéphane Ravel",
-     "depuis": "2005-01-01"
-    }
-   ],
-   "fraisCourants": 2.06,
-   "societe": "Conservateur Gestion Valor",
-   "structure": "FCP",
-   "note": 3,
-   "risque": 4
-  },
-  "FR0000295230": {
-   "gerants": [
-    {
-     "nom": "Franz Weis",
-     "depuis": "2009-11-01"
-    },
-    {
-     "nom": "Eva Fornadi",
-     "depuis": "2024-08-30"
-    },
-    {
-     "nom": "Bassel Choughari",
-     "depuis": "2025-10-01"
-    }
-   ],
-   "fraisCourants": 1.86,
-   "societe": "Comgest SA",
-   "structure": "SICAV",
-   "note": 1,
-   "risque": 3
-  },
-  "LU1261432659": {
-   "gerants": [
-    {
-     "nom": "Christine Baalham",
-     "depuis": "2024-03-31"
-    },
-    {
-     "nom": "Tom Record",
-     "depuis": "2024-03-31"
-    }
-   ],
-   "fraisCourants": 1.88,
-   "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
-   "structure": "SICAV",
-   "note": 3,
-   "risque": 4
-  },
-  "FR0013256930": {
+  "FR001400PL02": {
    "gerants": [],
-   "fraisCourants": 2.1,
+   "fraisCourants": null,
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
-   "note": 3,
-   "risque": 4
+   "note": null,
+   "risque": null
   },
-  "FR0010489542": {
+  "FR0010564328": {
    "gerants": [
     {
      "nom": "Christophe Quesnel",
-     "depuis": "2007-09-21"
+     "depuis": "1998-06-01"
     },
     {
      "nom": "Stéphane Ravel",
-     "depuis": "2007-09-21"
+     "depuis": "2000-03-01"
     }
    ],
-   "fraisCourants": 1.61,
-   "societe": "Conservateur Gestion Valor",
-   "structure": "FCP",
-   "note": 3,
-   "risque": 2
-  },
-  "FR0013087152": {
-   "gerants": [],
-   "fraisCourants": 1.72,
+   "fraisCourants": 1.1,
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
    "note": 2,
-   "risque": 1
-  },
-  "FR0010564336": {
-   "gerants": [
-    {
-     "nom": "Christophe Quesnel",
-     "depuis": "2004-04-02"
-    },
-    {
-     "nom": "Stéphane Ravel",
-     "depuis": "2004-04-02"
-    }
-   ],
-   "fraisCourants": 1.58,
-   "societe": "Conservateur Gestion Valor",
-   "structure": "FCP",
-   "note": 4,
-   "risque": 3
+   "risque": 2
   },
   "LU1694790202": {
    "gerants": [
@@ -232,6 +658,247 @@
    "note": 3,
    "risque": 3
   },
+  "FR0010915314": {
+   "gerants": [
+    {
+     "nom": "Jean-Sébastien Poquet",
+     "depuis": "2024-10-02"
+    }
+   ],
+   "fraisCourants": 1.01,
+   "societe": "Crédit Mutuel Asset Management",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 3
+  },
+  "LU1752460292": {
+   "gerants": [
+    {
+     "nom": "Bastian Gries",
+     "depuis": "2018-09-07"
+    },
+    {
+     "nom": "Matthias Lackmann",
+     "depuis": "2018-09-07"
+    },
+    {
+     "nom": "Haiyan Ding",
+     "depuis": "2018-09-07"
+    },
+    {
+     "nom": "Philippe Vantrimpont",
+     "depuis": "2024-01-01"
+    }
+   ],
+   "fraisCourants": 1.12,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "FR0010135103": {
+   "gerants": [
+    {
+     "nom": "Guillaume Rigeade",
+     "depuis": "2023-09-20"
+    },
+    {
+     "nom": "Kristofer Barrett",
+     "depuis": "2024-04-08"
+    },
+    {
+     "nom": "Eliezer Ben Zimra",
+     "depuis": "2023-09-20"
+    },
+    {
+     "nom": "Jacques Hirsch",
+     "depuis": "2023-09-20"
+    }
+   ],
+   "fraisCourants": 1.91,
+   "societe": "Carmignac Gestion",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 2
+  },
+  "FR0007439666": {
+   "gerants": [
+    {
+     "nom": "Not Disclosed",
+     "depuis": "1988-09-13"
+    }
+   ],
+   "fraisCourants": 0.56,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 3
+  },
+  "FR001400UAZ4": {
+   "gerants": [
+    {
+     "nom": "Not Disclosed",
+     "depuis": "1988-09-13"
+    }
+   ],
+   "fraisCourants": null,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": null,
+   "risque": null
+  },
+  "FR0010564336": {
+   "gerants": [
+    {
+     "nom": "Christophe Quesnel",
+     "depuis": "2004-04-02"
+    },
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2004-04-02"
+    }
+   ],
+   "fraisCourants": 1.58,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 3
+  },
+  "FR0010489542": {
+   "gerants": [
+    {
+     "nom": "Christophe Quesnel",
+     "depuis": "2007-09-21"
+    },
+    {
+     "nom": "Stéphane Ravel",
+     "depuis": "2007-09-21"
+    }
+   ],
+   "fraisCourants": 1.61,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 3,
+   "risque": 2
+  },
+  "FR0011199314": {
+   "gerants": [
+    {
+     "nom": "Not Disclosed",
+     "depuis": "2012-04-11"
+    }
+   ],
+   "fraisCourants": 2.3,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": null,
+   "risque": null
+  },
+  "FR0013087152": {
+   "gerants": [],
+   "fraisCourants": 1.72,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 1
+  },
+  "FR0011175652": {
+   "gerants": [],
+   "fraisCourants": 1.89,
+   "societe": "Conservateur Gestion Valor",
+   "structure": "FCP",
+   "note": 1,
+   "risque": 1
+  },
+  "FR0010097683": {
+   "gerants": [
+    {
+     "nom": "Malik Haddouk",
+     "depuis": "2013-04-09"
+    },
+    {
+     "nom": "Samir Saadi",
+     "depuis": "2014-02-10"
+    }
+   ],
+   "fraisCourants": 1.61,
+   "societe": "CPR Asset Management",
+   "structure": "FCP",
+   "note": 2,
+   "risque": 3
+  },
+  "LU0512124107": {
+   "gerants": [
+    {
+     "nom": "Denis Passot",
+     "depuis": "2021-06-29"
+    },
+    {
+     "nom": "Felix Haron",
+     "depuis": "2013-09-23"
+    },
+    {
+     "nom": "Jean Ing",
+     "depuis": "2021-06-29"
+    }
+   ],
+   "fraisCourants": 1.9,
+   "societe": "DNCA Finance",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 5
+  },
+  "FR0011253624": {
+   "gerants": [
+    {
+     "nom": "Yoann Ignatiew",
+     "depuis": "2008-09-08"
+    },
+    {
+     "nom": "Charles-Edouard Bilbault",
+     "depuis": "2017-07-01"
+    },
+    {
+     "nom": "Henri Captier",
+     "depuis": "2025-12-01"
+    }
+   ],
+   "fraisCourants": 1.58,
+   "societe": "Rothschild & Co Asset Management",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 4
+  },
+  "FR0010286013": {
+   "gerants": [
+    {
+     "nom": "Louis D'Arvieu",
+     "depuis": "2010-01-01"
+    }
+   ],
+   "fraisCourants": 1.7,
+   "societe": "Amiral Gestion",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 2
+  },
+  "LU2147879543": {
+   "gerants": [
+    {
+     "nom": "Jean-Marc Delfieux",
+     "depuis": "2023-03-01"
+    },
+    {
+     "nom": "Clovis Couasnon",
+     "depuis": "2021-11-01"
+    }
+   ],
+   "fraisCourants": 1.34,
+   "societe": "Tikehau Investment Management",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 2
+  },
   "FR0011461326": {
    "gerants": [
     {
@@ -257,6 +924,35 @@
    "structure": "FCP",
    "note": null,
    "risque": null
+  },
+  "LU1585265066": {
+   "gerants": [
+    {
+     "nom": "Laurent Calvet",
+     "depuis": "2026-07-31"
+    },
+    {
+     "nom": "Benoît Martin",
+     "depuis": "2020-04-14"
+    },
+    {
+     "nom": "Benjamin Pesquier",
+     "depuis": "2026-07-31"
+    },
+    {
+     "nom": "Pierre Le Jaouen",
+     "depuis": "2026-07-31"
+    },
+    {
+     "nom": "Jean-Marc Delfieux",
+     "depuis": "2009-11-25"
+    }
+   ],
+   "fraisCourants": 1.04,
+   "societe": "Tikehau Investment Management",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 2
   }
  }
 }

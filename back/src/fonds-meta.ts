@@ -108,7 +108,9 @@ const SECTEURS_FR: Record<string, string> = {
 // données sont inexploitables (somme quasi nulle) pour conserver le fichier précédent.
 function composer(isin: string, th: any): Compo | null {
   if (!th) return null;
-  const pos = (k: string) => Math.max(0, brut(th[k]) ?? 0) * 100;
+  // Une position non numérique (null, objet vide) vaut 0 — sinon un NaN traverse la garde
+  // `tot < 50` (NaN < 50 est faux) et écrit une composition entièrement nulle.
+  const pos = (k: string) => { const v = brut(th[k]); return typeof v === 'number' && isFinite(v) ? Math.max(0, v) * 100 : 0; };
   const cru = {
     action: pos('stockPosition'),
     obligation: pos('bondPosition') + pos('preferredPosition') + pos('convertiblePosition'),
@@ -116,7 +118,7 @@ function composer(isin: string, th: any): Compo | null {
     autre: pos('otherPosition'),
   };
   const tot = cru.action + cru.obligation + cru.liquidite + cru.autre;
-  if (tot < 50) return null;
+  if (!isFinite(tot) || tot < 50) return null;
   const alloc = Object.fromEntries(
     Object.entries(cru).map(([k, v]) => [k, +(v / tot * 100).toFixed(1)]),
   ) as Compo['alloc'];

@@ -1,0 +1,93 @@
+{
+ "isin": "LU1744646933",
+ "alloc": {
+  "action": 93.5,
+  "obligation": 0.8,
+  "liquidite": 5.4,
+  "autre": 0.3
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 35.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 32.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 10.2
+  },
+  {
+   "nom": "Santé",
+   "pct": 5.8
+  },
+  {
+   "nom": "Finance",
+   "pct": 5
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 2.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 1.4
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0.9
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 5.3
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 5.2
+  },
+  {
+   "nom": "Siemens Energy AG Ordinary Shares",
+   "pct": 4.1
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 4.1
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 3
+  },
+  {
+   "nom": "Broadcom Inc",
+   "pct": 2.5
+  },
+  {
+   "nom": "Xylem Inc",
+   "pct": 2.5
+  },
+  {
+   "nom": "Elia Group SA/NV",
+   "pct": 2.5
+  },
+  {
+   "nom": "Prysmian SpA",
+   "pct": 2.4
+  }
+ ]
+}

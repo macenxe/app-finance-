@@ -1,0 +1,81 @@
+{
+ "isin": "LU2147879543",
+ "alloc": {
+  "action": 42.2,
+  "obligation": 57.7,
+  "liquidite": 0,
+  "autre": 0.1
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 23.8
+  },
+  {
+   "nom": "Industrie",
+   "pct": 17.1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 12.7
+  },
+  {
+   "nom": "Finance",
+   "pct": 11.7
+  },
+  {
+   "nom": "Communication",
+   "pct": 10.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 6.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 2.8
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.3
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 1.2
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Euro Stoxx Banks Future June 26",
+   "pct": 2.2
+  },
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 2.2
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 1.9
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 1.6
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 1.4
+  },
+  {
+   "nom": "Visa Inc Class A",
+   "pct": 1.3
+  }
+ ]
+}

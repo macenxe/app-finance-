@@ -1,0 +1,97 @@
+{
+ "isin": "FR0010863688",
+ "alloc": {
+  "action": 99.8,
+  "obligation": 0,
+  "liquidite": 0.2,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 27.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 16.1
+  },
+  {
+   "nom": "Finance",
+   "pct": 15.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 11.5
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 11.5
+  },
+  {
+   "nom": "Technologie",
+   "pct": 9.3
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3
+  },
+  {
+   "nom": "Communication",
+   "pct": 2.9
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Novartis AG Registered Shares",
+   "pct": 5.4
+  },
+  {
+   "nom": "Iberdrola SA",
+   "pct": 5.4
+  },
+  {
+   "nom": "AstraZeneca PLC",
+   "pct": 5.1
+  },
+  {
+   "nom": "Allianz SE",
+   "pct": 4.4
+  },
+  {
+   "nom": "Munchener Ruckversicherungs-Gesellschaft AG",
+   "pct": 4
+  },
+  {
+   "nom": "ASML Holding NV",
+   "pct": 3.9
+  },
+  {
+   "nom": "Ecolab Inc",
+   "pct": 3.6
+  },
+  {
+   "nom": "E.ON SE",
+   "pct": 3.4
+  },
+  {
+   "nom": "Air Liquide SA",
+   "pct": 3.4
+  },
+  {
+   "nom": "Alfa Laval AB",
+   "pct": 3.3
+  }
+ ]
+}

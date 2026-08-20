@@ -1,0 +1,97 @@
+{
+ "isin": "FR0000989915",
+ "alloc": {
+  "action": 97.1,
+  "obligation": 0,
+  "liquidite": 2,
+  "autre": 0.8
+ },
+ "secteurs": [
+  {
+   "nom": "Immobilier",
+   "pct": 100
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Technologie",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Industrie",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  },
+  {
+   "nom": "Santé",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Klepierre",
+   "pct": 9.9
+  },
+  {
+   "nom": "Unibail-Rodamco-Westfield Act. SIIC ET STES FONC.EUROP.",
+   "pct": 9.9
+  },
+  {
+   "nom": "Merlin Properties SOCIMI SA",
+   "pct": 9.3
+  },
+  {
+   "nom": "Vonovia SE",
+   "pct": 8.8
+  },
+  {
+   "nom": "TAG Immobilien AG",
+   "pct": 4.9
+  },
+  {
+   "nom": "Aedifica SA",
+   "pct": 4.8
+  },
+  {
+   "nom": "Warehouses De Pauw SA",
+   "pct": 4.7
+  },
+  {
+   "nom": "Covivio SA",
+   "pct": 4.7
+  },
+  {
+   "nom": "Gecina Nom",
+   "pct": 4.5
+  },
+  {
+   "nom": "LEG Immobilien SE",
+   "pct": 3.8
+  }
+ ]
+}

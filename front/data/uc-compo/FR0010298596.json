@@ -1,0 +1,89 @@
+{
+ "isin": "FR0010298596",
+ "alloc": {
+  "action": 97.3,
+  "obligation": 0,
+  "liquidite": 2.7,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 33.3
+  },
+  {
+   "nom": "Finance",
+   "pct": 17.3
+  },
+  {
+   "nom": "Technologie",
+   "pct": 10.7
+  },
+  {
+   "nom": "Santé",
+   "pct": 10.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.3
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 4.5
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3.8
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3.7
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.7
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 2
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 1.3
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Ayvens SA",
+   "pct": 4.3
+  },
+  {
+   "nom": "DSV AS",
+   "pct": 3.8
+  },
+  {
+   "nom": "UCB SA",
+   "pct": 3.7
+  },
+  {
+   "nom": "Commerzbank AG",
+   "pct": 3.3
+  },
+  {
+   "nom": "Elis SA",
+   "pct": 3.1
+  },
+  {
+   "nom": "Safran SA",
+   "pct": 3
+  },
+  {
+   "nom": "Airbus SE",
+   "pct": 3
+  },
+  {
+   "nom": "STMicroelectronics NV",
+   "pct": 2.8
+  }
+ ]
+}

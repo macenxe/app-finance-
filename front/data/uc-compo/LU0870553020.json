@@ -1,0 +1,97 @@
+{
+ "isin": "LU0870553020",
+ "alloc": {
+  "action": 98.4,
+  "obligation": 0,
+  "liquidite": 1.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 29.9
+  },
+  {
+   "nom": "Santé",
+   "pct": 22.3
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 14.5
+  },
+  {
+   "nom": "Technologie",
+   "pct": 13.8
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 5.1
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3
+  },
+  {
+   "nom": "Finance",
+   "pct": 2.1
+  },
+  {
+   "nom": "Communication",
+   "pct": 0.2
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 7.3
+  },
+  {
+   "nom": "Air Liquide SA",
+   "pct": 4.8
+  },
+  {
+   "nom": "Safran SA",
+   "pct": 4.7
+  },
+  {
+   "nom": "Galderma Group AG Registered Shares",
+   "pct": 4.6
+  },
+  {
+   "nom": "Exosens SA",
+   "pct": 4.2
+  },
+  {
+   "nom": "Lottomatica Group SpA",
+   "pct": 4.1
+  },
+  {
+   "nom": "Lonza Group Ltd",
+   "pct": 4.1
+  },
+  {
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 4
+  },
+  {
+   "nom": "AstraZeneca PLC",
+   "pct": 3.9
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 3.7
+  }
+ ]
+}

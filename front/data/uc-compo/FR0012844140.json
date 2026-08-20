@@ -1,0 +1,56 @@
+{
+ "isin": "FR0012844140",
+ "alloc": {
+  "action": 98.8,
+  "obligation": 0,
+  "liquidite": 0,
+  "autre": 1.2
+ },
+ "secteurs": [
+  {
+   "nom": "Santé",
+   "pct": 43.1
+  },
+  {
+   "nom": "Finance",
+   "pct": 24.6
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 17
+  },
+  {
+   "nom": "Technologie",
+   "pct": 5.7
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3.8
+  },
+  {
+   "nom": "Industrie",
+   "pct": 2.5
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 1.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 0.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0.2
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0.2
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0.1
+  }
+ ],
+ "holdings": []
+}

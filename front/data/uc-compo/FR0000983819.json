@@ -1,0 +1,93 @@
+{
+ "isin": "FR0000983819",
+ "alloc": {
+  "action": 98.7,
+  "obligation": 0.1,
+  "liquidite": 1.2,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 24.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 21.4
+  },
+  {
+   "nom": "Technologie",
+   "pct": 19.1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 9.9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 5.5
+  },
+  {
+   "nom": "Santé",
+   "pct": 5.5
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 5.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.6
+  },
+  {
+   "nom": "Communication",
+   "pct": 1.8
+  },
+  {
+   "nom": "Énergie",
+   "pct": 1.6
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.5
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 10.3
+  },
+  {
+   "nom": "Banco Santander SA",
+   "pct": 3.5
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 3
+  },
+  {
+   "nom": "Siemens AG",
+   "pct": 2.9
+  },
+  {
+   "nom": "Allianz SE",
+   "pct": 2.8
+  },
+  {
+   "nom": "Airbus SE",
+   "pct": 2.4
+  },
+  {
+   "nom": "Intesa Sanpaolo",
+   "pct": 2.4
+  },
+  {
+   "nom": "SAP SE",
+   "pct": 2.4
+  },
+  {
+   "nom": "Banco Bilbao Vizcaya Argentaria SA",
+   "pct": 2.3
+  }
+ ]
+}

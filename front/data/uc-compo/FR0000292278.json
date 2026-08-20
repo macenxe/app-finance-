@@ -1,0 +1,97 @@
+{
+ "isin": "FR0000292278",
+ "alloc": {
+  "action": 97.3,
+  "obligation": 0,
+  "liquidite": 2.7,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 41.4
+  },
+  {
+   "nom": "Finance",
+   "pct": 24
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 11.4
+  },
+  {
+   "nom": "Industrie",
+   "pct": 10.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 7.9
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3
+  },
+  {
+   "nom": "Santé",
+   "pct": 1.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Delta Electronics Inc",
+   "pct": 9.8
+  },
+  {
+   "nom": "SK Hynix Inc",
+   "pct": 9.7
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 9.2
+  },
+  {
+   "nom": "Aspeed Technology Inc",
+   "pct": 5.9
+  },
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 5.2
+  },
+  {
+   "nom": "Discovery Ltd",
+   "pct": 3.8
+  },
+  {
+   "nom": "Contemporary Amperex Technology Co Ltd Class A",
+   "pct": 3.8
+  },
+  {
+   "nom": "Samsung Electronics Co Ltd",
+   "pct": 3.6
+  },
+  {
+   "nom": "B3 SA - Brasil Bolsa Balcao",
+   "pct": 3.5
+  },
+  {
+   "nom": "Capitec Bank Holdings Ltd",
+   "pct": 3.3
+  }
+ ]
+}
