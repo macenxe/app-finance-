@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-21T13:05:55.353Z",
+ "genere": "2026-08-21T13:56:09.700Z",
  "globales": [
   {
    "titre": "TAUX-Le spread français met les marchés d'actions sous pression - Boursorama",
@@ -67,19 +67,28 @@
  ],
  "produits": [
   {
-   "titre": "UBS anticipe une hausse des actions de la zone euro de 10% d'ici à la fin juin 2027 - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 10:09:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPdGVGaDg0OXhkN2g4SDYzMW1MLU5YYkN2b0pkcjBCRDllV2IwUW5WQ05RQjYyQU4tVVpkQ1dmRUlwNUd5S2JtVG1pVmtWZzBUdWVpQWpSYUtlTVo3VmZraFdsQWhQR1htRUVBck9lZTk4WVRkb3ZRazhyLTdPbS1VbTR5aG1fejZxV1Z1WnI5cWJJT2hMUi1feTJDaVZHMzdWdkpvVWZjZEFsWVhod3RDSThYLVRwVmVnQzFGb3FPUHFzSmJaTElXU0ctbXpPNk13TkpMOFVHUklsN1hSeVI0ZjFUTVAwVWs?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 21 Aug 2026 09:00:46 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 08:41:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Veolia se distingue sur le CAC 40, RBC voit encore du potentiel - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 19 Aug 2026 07:57:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdFJJVXhCdFJ2em4yZ0w1NldBMUxGVUQzUWt4SkZLejdEVzVFdXhuQTRTS3pPWi1BZzlSYWNtYWUzaENVU1J3LWhGX3lldHBVZk1kdTR3dnljbzVCcU9EOFRpWVZTOEhYZHY3NHVEcVpEdnlDVHloRnRUdkIyVVp0bll1R01CaXp0ZW9NeDExTVlVb1VROGNmbXlkUlZNMEVVY252Q2V3azhld213LXQxeVZBbm5jajU3QUJqN1NBVW1PWmVTSTc4N2ZYQVRCeTFQMWdGTFBEY2NySXFi0gHcAUFVX3lxTE50UklVeEJ0UnZ6bjJnTDU2V0ExTEZVRDNRa3hKRkt6N0RXNUV1eG5BNFNLek9aLUFnOVJhY21hZTNoQ1VTUnctaEZfeWV0cFVmTWR1NHd2eWNvNUJxT0Q4VGlZVlM4SFhkdjc0dURxWkR2eUNUeWhGdFR2QjJVWnRuWXVHTUJpenRlb014MTFNWVVvVVE4Y2ZteWRSVk0wRVVjbnZDZXdrOGV3bXctdDF5VkFubmNqNTdBQmo3U0FVbU9aZVNJNzg3ZlhBVEJ5MVAxZ0ZMUERjY3JJcWI?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -90,15 +99,6 @@
    "date": "Wed, 19 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 18 Aug 2026 12:58:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
-   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -141,6 +141,60 @@
  ],
  "eco": [
   {
+   "titre": "USA: Wall Street ouvre en hausse vendredi, le pétrole se stabilise - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 21 Aug 2026 13:42:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTFFZYkhJWHdVelVwdU1FZXlZWWxmejRRYXc1TDhWSjVxTjdYZHVsbU9sTlh5VXd6Ty1wV19fWm9Lbmc0M3V3bVR0SC1qRE1vbkNSNXdwZmtYZGYwVjFIQWJ2R1hkbnBiSDZISXo3azFxZnhZZW1RZmxCS3hNNVNJS2lpMTA2TGc0VEJJbG9adEVoQzdlTFRtN052SXh2Q29RTXMxQ0VEREg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA: Wall Street ouvre en hausse vendredi, le pétrole se stabilise",
+   "source": "ABC Bourse",
+   "date": "Fri, 21 Aug 2026 13:42:00 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-ouvre-en-hausse-vendredi-le-petrole-se-stabilise_701489",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "La banque centrale polonaise a ralenti ses achats d'or en juillet, selon les données officielles - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 21 Aug 2026 13:36:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNV1k1cnBSTlJuOVhEbjZqODlTZ1NpaWZodElSSmxBVHQxZzdjcWJtRjJyTXdDc293YUZxRHNyTExMY1poS2pJRXF0V2VWcy1VTHlfekMwS3lyeXd3X3ladU8yWnhWelppT0xnWmg1enNibUNkaWZMUnlfbVBoNGFpeXhpOWtCbWkxTWhMWlRmT21aZU95amtTNDRuNHhNRl9uR2tlNW83eE1VRGllQWx5UHpkZDJpaUg3QUNZUWFYa21maDdpWVEzZ2N3ODl0WUtxV0V4REtkeEp3dnVYNHBBc3NFeU82QUVfM3Y0?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "EXCLUSIF-Un document révèle que l'autorité de régulation néerlandaise a infligé une amende de 966 millions de - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 13:30:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOSlhIcC1nVVFkMVB3VE16N2lHZ1dHYUxMQnFPNWdUOVEzVVZsSmdnN2FjOVJvb2EwbDlKSmFJQmlEZjRCdW0xQlJ2UW92UG5TbEwyTTZmWDY5d3VkQ2NqUmdyT1R2ZVpyLUdQZ2NNRVBWU2lwM3RsSi1POE96SUdIRkJLSmpoaWZOWUljTXN5VVZhUVBfV29kMmVkS1huZV8xYThKSjJUZlZpbm91WDFxZUhUYUNVU0lnQ1BLZmlScTNkNE5oWGg1c0M4dkl0MERHdzVISWVVZk1aaWY3OTVoY18yWEdlSWFZbDFjU19JcHJpdVVjNGEwNGR3anhpMTBHMTZxNUNNMXdaZFhmZ1o2M045RW9uRGNiRlZmSk51Z2pWd1dtM2Y3a015WTdRLWFnVG9RR1gzLVRXc1lKdEE3dmJsc2UyLVVjWDNaX2ZhQ3F0WUFpWGdjSW5BOHdaVUx5ZkpPbzJhWUJuVzlpVG1n0gH0AkFVX3lxTFBGTk9YUDFlZ21adGQtdUplM2RCdFpGTXpzaVRMQ2dXb3ZIUlFaYnZIb09BZE1BVV9oaEUxWXdDYTV5Mi1LdVk3R3dnYVpnWGloWEx2YmRlY0w3cDNiWmNGejJ3d2VMaWpLU1I2RkJXX285ZjZ4dkRELXZ4RE43Ry1EZEV0ZVptbmNSR0xwMkhDY2FSNElKTlRVOWRkS25hdXRkT1lXbUk4TE5hdjYwRzhoYmxFV0w4RVgwaVhpYVpJZ2Jhc3V3TmlVSmx1UzVmNlVsNXRuT2tZa1BrSHFpOFoxclg5QUxYUldCbFFtNUxqaGF4emNFY2NLNmtUNjItT2JuSl9PN1pUZFZsZ2xaMVozOVRhZHI2eTd0STVsNi1FMS15clpTUkhvRXdMV1NER1VEYVlCT0tWa3N3N0NwT0wwVWRBc1BlQVRqR2ZENzRWbktVYWlDczhSSkRWaWtvME95RVNvSmw0S2JWdmdXcGVBTnRWMg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "LES MARCHÉS BOURSIERS AMÉRICAINS EN PLEINE ÉVOLUTION-Ubiquiti, BJ's Wholesale, Arbutus - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 13:08:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNOHNWcWstelp6UE9HazNEMTlkTWtxVUdEMmk5RnVJZ0RqNFRhU3BhZHU2X0lENXFONElMVXY1cHQ5cGpaUGxWdnlVWEVhWnpqMk5DaENObDZGOUNKSGhRN0FQTWhNLTNlZ1BrU21IU2N1bWthdTBlTk9hN2t4U1UyUWc2cW1NLWdEaVBNVlRaVHZxVndaUEVldFVYU0Y3ck9fYkJqeDVZd015NU9WVEE2VzliTGc5NGNfRzBUazJDODBERU1FMWhQMDEzOUlqb0dKLXZ0blAxNUlnU1FFTW9fRmhRTVZzNTM2eUlFU1hQS3Nqdkhp0gH6AUFVX3lxTE80cTZQeEJZbUtlRUVvV1dqSE9vckh5WVZmTTVQMWFvenFzVDhQekQ2cDluOHFPQmxPZ0x5dXJYT25DZWh2NUZWZXk2dTFJYWU2QUd2SWs2cTQ0bWR3XzZHOXg2Yno3YlBYTWlqZHozZ094ZmlQbWQwaFdKaUxCYzN2a21ZczAxNE9lQ2V3cVB1WmREUUZaZVRibHliaHUtMC0yT1k0LXdCTnNEb2dkWldwRzBGUDNNOGJsYU1VaTBhY2plczVlREk4cVozdDA4QjdDb1JqNDlIdEFvX1JPWjhJUC1lMVVjM0JQQllXVG1CTUJmNFJyWVluZ2c?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les 26 000 points sur la sellette - Nvidia et Jackson Hole au centre de l'attention - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 21 Aug 2026 13:03:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQcVdqaUpKWVZSZC0xa2NRbzcyMlVlZ0c2SnRwR19ob3dlMHZ4ZElseEdiNHk1cllUMnQ1RnFCZUYzSm1OUElLZEl6aUxhYXBqMFBHZFVMUUk3YXJiVEw0bHpENkdwNGpnRmFlR3daQ3FLRjM2SjdXSlExbUtZT2NiaERRYlk2SkpXWnI4cUtScy1NNE5hZC1LeHMwZmplMDc2aXhfdEh3MEJSb0RCRElGVGhIcm1nampGSzVuMkhidDlLbDJwOThNRjkyVC04VjI0SFZYbDNlRmQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Le Cac 40 proche de briser une série de huit baisses consécutives - Les Echos",
    "source": "Les Echos",
    "date": "Fri, 21 Aug 2026 13:02:55 GMT",
@@ -181,36 +235,18 @@
    "source": "Boursorama",
    "date": "Fri, 21 Aug 2026 12:36:22 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNV1RPdmhvRVc5QmFmb2dJNjRLZUotRThrZjY3a3VMMzR6ZHBRMGdKSFcyRzFGWWE3TUZMNzR4dkZTYWk1bC1FRG1LSmR3RjV2S1BhTVA3aDdycTdwTUY0YzdWVXNFZFB0dFBHeDZVZmVjS0l2YVU0RGwzdHJRaC1mU0RKZXZENnoxbUE2MmhldnB5Z1ZXWkJaTklXME1nem5udGh0R05qZWZtX1MyQUhITEJzTmJqb0t2MGVDTjNuQk1kU0JFeVA2eEp5akQ0cWloeW5RN3NzTjhDSllyUmlnU0RmYjJCb01vYmh4UGF6M0tEZkVHcnYtdVh2eXPSAYICQVVfeXFMTWNrZWFZd0d5TG1GX0dJWmstbkpYaGNPbDE5ZVkzOXJFZmF1VnFuRzdGQUNmMHNpVzU4ZW8tVDZ4bThCcVJWeEIwZC1Ic01aUlhOaUZqS0NuN185Y2NLVVB1Skw1Z0JWclpzZjZES1hIaW9yRWFzMVd4allvSzdCWDA1VExEb2dwU01RaG9FUlhKb1l6MklIMkU1RW9zc1ZNRF9sT2I1RVREbXNDZ1ZCVXNjc2FJTzA0Ry0tZGMtNTFOOWhhUnFXeDB2MU9LUHhabGZtVlYyQWFWT2RLY2QwZWhwbVNZdHVQVGl3WGVMVHBtVE9CNC1IQnE3d25tMWlXSm5R?oc=5",
-   "tag": "CAC 40",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Les traders se préparent à une Banque centrale européenne de plus en plus restrictive - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 21 Aug 2026 12:35:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWUx1aUJ3VmdXeGxPLXQzX1QyTzRMZEdjWWhDTlNvSVB1czZacHlGWFFtVTJTTThabUk5WW5UTFctWWRKSThYcGRLY1dic1l3eE1UVmlpMHpQOFRnQ2ZuOF9YR3FtTEVkWUdfTkhFVXdQUTJib3dDSTlPQmtEaXdhRHJBZUN5Yk9icVdTTXZqUlpKbWFVQzhFSDFZQXllbXU3RVM3clNGVm9rQXhkaC1GVW4wN0Mzb2psSFVQTlQwYVF2aDZYckk0aVU4aXBleE5LRkhVQ0JiZ2s3NWR6MVE?oc=5",
-   "tag": "banque centrale",
+   "titre": "Les opérateurs s'attendent à ce que la BCE adopte une position de plus en plus restrictive - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 21 Aug 2026 12:36:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qaUhmUzFkNl9KdzE4TjNfLUQyeXhpaUtCckZXS0o4WmptNFV4M3JkVU90cjdNMnJmX0VwQXlsVUZWekpuRE5oMkp5RzRXSmgtUlhuTTFOMjEzc1VzTHFlWGUyR2tiYmxOb3ZYY2VHR1lqZjJIQ2VJ?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Afrique du Sud : Cell C publie des résultats annuels en hausse et prévoit une croissance accrue en 2027 - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 21 Aug 2026 12:13:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOWh3VXJBbUJ4WGpVWnNVSUtFRXdfOWxIVGFhSDFTYVQtbmVCd2xjSzFDa2UzLTZwUDBMYzQ3Wk03SFBCZXlRTHhscUloSGtzRmMzeXNuS19FSWZTTmVidjFCT2x0OGo3QUppZ01QeHp2VjVpWWVZQ0stQWVPM0ZpSjZ2N3MweFFvMFFadWV2OWhRUDVlcDBxb2FGTGhrU2E0Q0V5SHZaMUZYMTR1U2FsbzVKT2E1OHd0d29UWGpOVjJDSHBUN1FYZUFXRXMxMG5CTS1RQkVtbU5ScEFRdGJRWktrUm11empnSjFnR1NFQQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "COMPTE RENDU - Procès-verbal de la réunion du Conseil d'administration de la banque centrale de Roumanie du 10 août - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 21 Aug 2026 12:12:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNN0lHekE1WF93TG8ycEVjM3VVTElrUmE5aGF1RmlpN2lHRlAzRm5mZF8xaHRhdHh1R1JIdDAwNlBBMGs1a2dTM0Nnbk9DandMQmpMc29xMXhFY01JM0NQcUpVSW5Kc1gwRzBmd3dJcWl1ZktCWTJyU3RZV2lCMTFsQ28tU0FzVTFleGYtVGxObmJVWlVXZzk1MWMyWW9QMzAtOC1kUS1vT0pUVGlnTzNpWEVCVnBoZlFMcnlGb0VHLTFVcU1PamZTdlVZVlVTUjY4SV80YjdXUnQteW5nZWpHbjVUUmRHcU94ZWVJcjEyTQ?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
    "titre": "Droits de douane de Trump",
@@ -285,15 +321,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Zone euro-Les consommateurs abaissent leurs anticipations d'inflation - enquête BCE - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 21 Aug 2026 09:52:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9oN1d3RVlGOEQxR2JPM1ZlTXVELWJocWdfM3JPRVdZN1A1UFd6QmprdjdPQ292ZUxCSEpoeE1RNDBwTUVLR2tSUnpzYXF2S3dkNGluMXdZcUhqMTBENGE1cjBuQUdlZHQ4SFpyRVVmckRFTzJUelpR?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "L'Europe progresse, mais les taux longs et le Moyen-Orient restent scrutés",
    "source": "ABC Bourse",
    "date": "Fri, 21 Aug 2026 09:17:07 GMT",
@@ -348,15 +375,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "CAC 40: La Bourse de Paris hésite en surveillant les tensions sur les taux",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 07:15:25 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-hesite-en-surveillant-les-tensions-sur-les-taux_701471",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Le club de la Bourse : Semaine négative pour les indices actions - 21/08",
    "source": "BFM Économie",
    "date": "Fri, 21 Aug 2026 07:06:05 GMT",
@@ -382,15 +400,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Budget 2027 : le scénario noir de la loi spéciale",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 06:24:20 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/video-budget-2027-le-scenario-noir-de-la-loi-speciale_VN-202608210115.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
