@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-21T17:39:11.271Z",
+ "genere": "2026-08-21T18:51:52.749Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -38,15 +38,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "CAC 40: Marchés sous pression, ouverture prudente en vue - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 19 Aug 2026 06:00:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaEhsaWpCM3BzUDNFUVZGaUNRQW9tNlgtSk9ucjVJY21iLUVxSktNVGhpVEF3NTltaG56OGY4T3JqZFI4MXYzU2o1VUhKMDNRbkIwLTV1N0pLU21UZkFQbUhpSjZ4TTRJdEZFaXVXR2lZQUliVVdiS1NkMVVQWmZsbVE0UjlnRU15OVNWN0pKT2I4bFBEdzE1cGpmZWhybzduQXZFZVVLQ096QTFB?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Tue, 18 Aug 2026 14:42:44 GMT",
@@ -76,15 +67,6 @@
  ],
  "produits": [
   {
-   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:37:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
    "titre": "La Bourse européenne, cette « championne méconnue », selon Goldman Sachs Research - Les Echos",
    "source": "Les Echos",
    "date": "Fri, 21 Aug 2026 15:01:14 GMT",
@@ -92,6 +74,15 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "UBS anticipe une hausse des actions de la zone euro de 10% d'ici à la fin juin 2027 - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 10:09:03 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPdGVGaDg0OXhkN2g4SDYzMW1MLU5YYkN2b0pkcjBCRDllV2IwUW5WQ05RQjYyQU4tVVpkQ1dmRUlwNUd5S2JtVG1pVmtWZzBUdWVpQWpSYUtlTVo3VmZraFdsQWhQR1htRUVBck9lZTk4WVRkb3ZRazhyLTdPbS1VbTR5aG1fejZxV1Z1WnI5cWJJT2hMUi1feTJDaVZHMzdWdkpvVWZjZEFsWVhod3RDSThYLVRwVmVnQzFGb3FPUHFzSmJaTElXU0ctbXpPNk13TkpMOFVHUklsN1hSeVI0ZjFUTVAwVWs?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
   },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
@@ -150,22 +141,13 @@
  ],
  "eco": [
   {
-   "titre": "Pétrole brut de la mer du Nord – WTI Midland, Forties : cotations - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 17:09:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQd0E5Y3Z0SXNXUHdIMGlqQnJxQndPb0tuUmVUTFJxVlo1Y2RieDY0eG8zVkpvMWYya2hIWmdLUVlaVTVScTdkQkpEaEtNbUN3RzdIclpySXRxaWV1Z1FiaF9YNG1fbndvT1c1U3l4d2ppQ2x6TEJKUl9UY3ZaTlh0ZG9ia18ybkd0Tnh2XzJZdlB0RC1oa05Pa2Q5aEVSTl80VVhHa1JIUDNLc0l4OVVVM29SOWF4T09ZY3ltcldJUDFoVFgtUGZQU3ZIX3doLVdNeGdCUdIB2gFBVV95cUxQNERrM1VwTndNalUtS1hzY0E1dXp6NXEyemRPRVZFVml3NkF5bjQ1VE9OM0lWYkl1RGUwZ2NGcFJscjVaMlg5MWN3T1JVRThhUEJIUG1rREdDNm5PWkhDUnJ0azJSMzlPdDEwUGNjSFN3a0NIYmY2bjRUbm45ZWNlV1FvTEUxcXVqcDA0SlJ2alcwWVJBVTh3MWJEMlg1N2ZyQ0V6T2ZyVVRhclhVNklCal9jXzdMZGlfWnFmOTZVVklSS0E0eW55cWVRNUswb2VDNHRKX0NSaUdBZw?oc=5",
-   "tag": "bourse",
+   "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 21 Aug 2026 17:53:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42TnlrcTYzRTR2RVFhcjlwTW91ZTZDRTFoZGMzOUc1Rm1lTDA0VTd6YU5aRjhCYjN0aG5qVUFpMllMNDRxUE83dVU1M1VPeFlZYUpxalJGWE0wcVdOdXN4R3NR?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Taux : les pertes se creusent brusquement aux US, 9Pts sur nos OAT en hebdo - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 16:52:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSHBpLWRvUU1pUnpfWTJXaFlSOEk0UWY4b3ZBRmVKem5LaTBac0d4UXVZTUdMRXo4aWlHbHozTUNfTE40akIwX2s5UXk0NlFOdnIxLVZPeXVKQlBvcFM5UmhFZHRwS3J3NXFVb1g0QTZMZWNjdk4zSERLZXk0eXQ3OUEzVEtIdVFpN1pGdE10bG1LdkFMZHdtNzNvVXJDVzVKN3FsWHFzNDg3VGotdnhwbVlhMmpyeGN4UW5ZWFJyUlZXcG15cm1iT3cwZ1RFc0FEenZ0RXlfUjdsLTNqYWdlNmFGV1PSAeoBQVVfeXFMUEV2SW9EZnRRdjBwTUNrZHlta3FybU1BMFIzRjY5ZlJ4MnhZdl8yMGNENWZ4cm9ycDhXM1FhcEU2YWZZb1IzUURQRWl0aDg5SVZIQTkyUkhTWkhxaGF1cFRlWDhBMXR6dDBkUkRURHBmNmdHVVpTY0E2bTQ3T2xvNWdfRVBRa0tpbVpXNk15Y0c0ZHlHOGp2Y1BONnBmRExIWjBGMDFnT0tXOE0tdkl1MkZ1Q292eGJWdUs4WS1OYk43TWtDMHlpdkpOaVlTemlEeXlpd3IteHlRTUVvMVY5ZXpsWXJ1R3lXQTRR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
    "titre": "Droits de douane de Trump",
@@ -191,15 +173,6 @@
    "date": "Fri, 21 Aug 2026 16:42:28 GMT",
    "lien": "https://www.bfmtv.com/economie/video-budget-2027-les-pistes-qui-restent-sur-la-table_VN-202608210489.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 16:40:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZk5nMlF2UWwtUm5WY3Z2LW8zcFFocExkWVdVVC1FYnNVczkyUHhCU1JZTERJdlFwamd4UlJ6SnRiMHJnNHNnazhBMl9tZ2lwcGF6cnljQkVCSEdzNmhrN3hKVmhLVG9tOVpMQXdWM3hMZ2Y3SUxCNEVIZHlVRThjMmVNZXg3U01majVudnVJV1J1UUxleFp3NEtyckktbW1JS00zTkEwc1dPZGNkR2QtT3RXRmY0LVZoVzdjRFpNa0xNeW14bWxlNTJpcy00UWtVWnZCX2RVeFkwSTFWZjRnWGUzQ0ZwUVJLa0M40gHwAUFVX3lxTE41b1Fpc1JsTUFpQW5MV2pwdlN4TDQwOWkwb2RHRzM0Smo3YlJXeC0xR005bTF0eVlpNlE4anpFb3Fma19rbmZtVUl5OUhpUGlBOW00bnFGZjFVc3E1cUpLYk5YbzFHcUl4Q3VkNmxzNVdPRzZyalY3dGtCcVhxX1FqQzhzTVRnOUtDWnlwMFhEdi1ReVplalVWSVk5T0N2TktTZjF0WnJfQ0dGWV9UV3ZOVExKZUFHci1RM2Z6OEw3bFFmY09lNTN0aEtQR29NUFkwZ0E1T2U1Zm11N0cyMlZDam5iSWJRWVJvV1lSdHFRcQ?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -303,15 +276,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Bitcoin : les taux américains mènent la hausse - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 11:54:59 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMWE2VU1STkxnc3k5RGJDY0lsV3M5aFA1UU9PRHhhYW9LQ0tfWV85YlMzbzZId3l1SGFnLWxHTDRZclZKM1ZFNklkQVNlV1ZIX0FNUXA1Y0hYQW52elNNYlhTanV4NkJTOVhjMVdGY2YzWFI2X1BMMjk5cWx6eW5XS2d3SnVJeXIzdWtSV2lrSWhfNDBUMnNndmpNMHZWbWNzVm5pMHB1RWVTN1NwYzI5RWpkT0R0Z0dxTnZpZ2pxNzBtc0VT0gHEAUFVX3lxTFAxYTZVTVJOTGdzeTlEYkNjSWxXczloUDVRT09EeGFhb0tDS19ZXzliUzNvNkh3eXVIYWctbEdMNFlyVkozVkU2SWRBU2VXVkhfQU1RcDVjSFhBbnZ6U01iWFNqdXg2QlM5WGMxV0ZjZjNYUjZfUEwyOTlxbHp5bldLZ3dKdUl5cjN1a1JXaWtJaF80MFQyc2d2ak0wdlZtY3NWbmkwcHVFZVM3U3BjMjlFamRPRHRnR3FOdmlnanE3MG1zRVM?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Inflation : les ménages européens se montrent légèrement plus optimistes - Le Revenu",
    "source": "Le Revenu",
    "date": "Fri, 21 Aug 2026 11:54:00 GMT",
@@ -389,15 +353,6 @@
    "date": "Fri, 21 Aug 2026 08:12:28 GMT",
    "lien": "https://www.abcbourse.com/marches/zone-euro-l-activite-du-secteur-prive-croit-davantage-que-prevu-en-aout_701480",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le club de la Bourse : Semaine négative pour les indices actions - 21/08",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 07:06:05 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/le-club-de-la-bourse-semaine-negative-pour-les-indices-actions-21-08_EN-202608210165.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   }
