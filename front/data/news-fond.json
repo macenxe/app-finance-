@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T10:35:24.966Z",
+ "genere": "2026-08-22T11:31:05.518Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -76,22 +76,22 @@
  ],
  "produits": [
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 07:01:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 22 Aug 2026 08:30:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
+   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Les Echos",
    "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:37:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
+   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
@@ -150,38 +150,29 @@
  ],
  "eco": [
   {
+   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 10:41:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le gouvernement a donné un premier feu vert: EDF va pouvoir lancer des travaux préparatoires pour les deux réacteurs EPR 2 prévus à la centrale de Gravelines",
+   "source": "BFM Économie",
+   "date": "Sat, 22 Aug 2026 10:35:31 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/le-gouvernement-a-donne-un-premier-feu-vert-edf-va-pouvoir-lancer-des-travaux-preparatoires-pour-les-deux-reacteurs-epr-2-prevus-a-la-centrale-de-gravelines_AD-202608220198.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Sat, 22 Aug 2026 10:33:28 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 09:58:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "EDENRED Cours Action EDEN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 09:48:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1VckxBZWtfRDJhQmU5NG81d1FVZk1mXzVlWHVsTHZiMkE1NElIRG9rU283WTdjSk9nNTNaSEdQWFF0M3diUDJ1c3NhbHY2ZDQyVUhj?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 09:40:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "bourse",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -238,6 +229,15 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 21 Aug 2026 17:53:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42TnlrcTYzRTR2RVFhcjlwTW91ZTZDRTFoZGMzOUc1Rm1lTDA0VTd6YU5aRjhCYjN0aG5qVUFpMllMNDRxUE83dVU1M1VPeFlZYUpxalJGWE0wcVdOdXN4R3NR?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Selon lui, les droits de douane américains sont \"infondés\": après un appel avec Donald Trump, Lula veut que le Brésil et les États-Unis \"restent à la table des négociations\"",
@@ -348,15 +348,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "\"Le secteur manufacturier a de nouveau été le principal moteur\": l'activité du secteur privé dans la zone euro confirme sa hausse en août",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 12:37:46 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/le-secteur-manufacturier-a-de-nouveau-ete-le-principal-moteur-l-activite-du-secteur-prive-dans-la-zone-euro-confirme-sa-hausse-en-aout_AD-202608210351.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Les opérateurs s'attendent à ce que la BCE adopte une position de plus en plus restrictive - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 21 Aug 2026 12:36:22 GMT",
@@ -391,15 +382,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "« Que faut-il ? Une ferme politique maîtrisant l'inflation mais renforçant aussi les capacités de l'appareil de production et de vente » : « Les Echos » racontent l'arrivée de Raymond Barre à Matignon en 1976 - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 11:00:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxPSVhULWxpX2JaejAxa20tZ005OE9qMnBTdlFlc2xwM0tjY1FrTDZrbVJXZUNaWnpEd0xsXzl6TmVfR0dKeHp2RjYzOHJyNE1mbWM0bEJGeExNZjZhY2xQWTZzMkd1XzhfOGRaa25FSXJseEJDLVF3WnltTHdLQ0hmRGN2ODVSSUMzTnMwdVp2cXBTWUtoWG9lRTFFUnJWYTAyblo0S3F3czB5NmhpM09qaGUxTmRSUEtsTTRmNmZiZ2Y5bU5GeV82V05MUWxhQzRhXy1WNk05YWlvZjRmLW5HNTB5eV9nblU4Y25FNXg1M2ttSXowcTh2SzkwaFIyWlU5MXhjUld0b3NsMEhZdS1rVHZha2FlNXZrTzBycGdQVmZZdy1ob19qTXBlaTVLRFkwMC04dVEwLUxseXFwcGIwbkk2SS1pbVhNZERPRVplY1RURXR5QlFJdmZzaWZVbE9lczN5RDBTbEpRaXcyZ0xJ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "L'Europe progresse, mais les taux longs et le Moyen-Orient restent scrutés",
@@ -468,15 +450,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Idées de fonds: Sextant Grand Large - 16/01 - Orange Actualités",
-   "source": "Orange Actualités",
-   "date": "Wed, 12 Aug 2026 18:04:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUTR6bFBwSXp0dG0zWWFGZkhZeW5JdHFEanhkWV9YT0ttVmZTVEVZbDNZaFVRd19FY3lqalFONHVMc1V5UUhxNVJnZUpHUEdyUUlKR0hvTnlRUHY1VjFGa1h4ZWVNX1NfNmJ2ZkpCWnpjR3E5NFdwRkt4eDZqbm94ZkNpay1qTHFFZ1dmTlJVUnJyVXF3bWY5NGZZTWpBRkpz?oc=5",
-   "tag": "Sextant Grand Large",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Les performances du titre Carmignac Patrimoine - 10/09 - Orange Actualités",
    "source": "Orange Actualités",
    "date": "Mon, 10 Aug 2026 00:16:25 GMT",
@@ -533,7 +506,7 @@
   {
    "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
    "source": "Banque Populaire",
-   "date": "Thu, 25 May 2023 20:49:48 GMT",
+   "date": "Thu, 25 May 2023 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
    "tag": "Eurose",
    "categorie": "uc",
@@ -554,6 +527,15 @@
    "date": "Wed, 12 Jan 2022 16:36:39 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
    "tag": "DNCA Invest SRI Norden Europe",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
+   "source": "Profession CGP",
+   "date": "Thu, 24 Sep 2020 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
+   "tag": "Eurose",
    "categorie": "uc",
    "sentiment": "neutre"
   }
