@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T17:31:51.004Z",
+ "genere": "2026-08-22T18:45:35.366Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -58,7 +58,7 @@
  ],
  "produits": [
   {
-   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Les Echos",
+   "titre": "La Bourse européenne, cette « championne méconnue », selon Goldman Sachs Research - Les Echos",
    "source": "Les Echos",
    "date": "Fri, 21 Aug 2026 15:01:14 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
@@ -72,6 +72,15 @@
    "date": "Fri, 21 Aug 2026 14:32:06 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 20 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -122,24 +131,6 @@
   }
  ],
  "eco": [
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 17:25:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Droits de douane: le Canada prend des mesures de rétorsion contre les Etats-Unis - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 16:35:44 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNbGZpR1JGQmU1bFVxZXBJaUhEbWZvOVFRLWNLeGV0SlNZSnBYT2Z6YUNGNDRoTHU4REJRTEV3SlZrTHMydVAwdDhtdUJwWjdlLXBXRXZlTTRqN0ZMLWs5cXR1Qk03c2ktWVQ0c3cwU2YzM21Md0Z3Vm5VbkgyRUNEUnQ5a1JfdGtEalcxNEtIR2tjVV9WWklpRmV1VGhVcThTb2pzTThoY3RQVE51UVNPZUJqZ2FBczU0cExZd2NCYnFzbkYwOUJzbnY5UVFkSlA5c25yM3NtOHlNdDJoU1k1WjhiZDlpQXFBWm9PaUNuX2xZR1JUdVM3a1ExLUNmb0dr0gGGAkFVX3lxTFBIMHoxeHZmbVVDX3dmSFd5cDFsMjRxYUN0YkNOQ0pVOHZWcEFRQms5ek90R285QTh5WlUtOXIzcEpOamRRMVM0eVZPR2Z6UUFENEJqRVpheG1wVDlZVVBSbFVvM3pabmgxTy05V2duTHh2a0xhY3MwcFZrVzlqbEdJVXAtNDhQSUZURVNPNnZqdUFRSmpULVdOM2xLR0lzVWh4N2NuNzNRMGNLQ1hvOGF1c0JOWEthWW5feUxBTXBhS2VqejJrTlhOdXdfV1ZHTkM1dnlibTlQSEJNQWVqYlNTaGM3OE1kcmdVRHhva3JqMUtrM0R1Ty1PTHlQbngtRk9iTWp2ZEE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
   {
    "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
    "source": "Morningstar",
@@ -247,24 +238,6 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Le dollar se stabilise à l'issue d'une semaine difficile - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 21 Aug 2026 18:41:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJSXU5TGhFVzUwQTV2UzdCUW1PSUtwMnpKR1BrNzZsRUpySHd6VDdOc3BHazN1eVRZMUJ0akR6MWZueDhQelRZay03Tk0tYU84eG53by1vQ3FGcmpsbkJLS01R?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 21 Aug 2026 17:53:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42TnlrcTYzRTR2RVFhcjlwTW91ZTZDRTFoZGMzOUc1Rm1lTDA0VTd6YU5aRjhCYjN0aG5qVUFpMllMNDRxUE83dVU1M1VPeFlZYUpxalJGWE0wcVdOdXN4R3NR?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Selon lui, les droits de douane américains sont \"infondés\": après un appel avec Donald Trump, Lula veut que le Brésil et les États-Unis \"restent à la table des négociations\"",
