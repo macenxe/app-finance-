@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T07:39:52.636Z",
+ "genere": "2026-08-22T08:43:08.689Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -38,6 +38,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "CAC 40: Marchés sous pression, ouverture prudente en vue - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 19 Aug 2026 06:00:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaEhsaWpCM3BzUDNFUVZGaUNRQW9tNlgtSk9ucjVJY21iLUVxSktNVGhpVEF3NTltaG56OGY4T3JqZFI4MXYzU2o1VUhKMDNRbkIwLTV1N0pLU21UZkFQbUhpSjZ4TTRJdEZFaXVXR2lZQUliVVdiS1NkMVVQWmZsbVE0UjlnRU15OVNWN0pKT2I4bFBEdzE1cGpmZWhybzduQXZFZVVLQ096QTFB?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Tue, 18 Aug 2026 14:42:44 GMT",
@@ -67,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 07:01:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Sat, 22 Aug 2026 05:19:24 GMT",
@@ -83,15 +101,6 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
-  },
-  {
-   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
   },
   {
    "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Investir Les Echos",
@@ -141,11 +150,65 @@
  ],
  "eco": [
   {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 07:31:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
+   "date": "Sat, 22 Aug 2026 08:31:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "MODERNA Cours Action MRNA, Cotation Bourse NASDAQ - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 08:30:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4c2dDTk9ibzNmQ0N6ZkJLVXRKZHZQUkhpS3MxMHFmVEdFQ2FGY3JlYWV1eE9yTTNiWmFwZU5vM0U0M1NCQndQWEFldkVEeEE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 22 Aug 2026 08:30:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 08:22:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 08:18:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 08:18:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 08:06:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -155,15 +218,6 @@
    "date": "Sat, 22 Aug 2026 07:09:30 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/transports/seules-la-chine-et-la-russie-exploitent-aujourd-hui-des-services-de-fret-sur-cette-route-un-porte-conteneurs-quitte-la-coree-du-sud-pour-rejoindre-l-europe-en-passant-par-l-arctique_AV-202608220132.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 06:57:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -364,33 +418,6 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Zone euro: Les consommateurs abaissent leurs anticipations d'inflation, selon une enquête de la BCE - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 10:35:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxOc3NJeDNGNTZkVjc2a3dGXzgtVEdvMGZHTUVYVzBpX2NNSUZEbjZsejkwakhqOGhPaWw0eVVKd1lxRlRjTllIRXBJamV4RE5oQkZjc0pFbjJoUkNkY2FWdHdRQWx0OWpReDk5ZzRhczQ5SW5OaVkxU05BSDZfX1BtcVJNajR3Y2dLTzhLa0FJWEtQUnZJZ3hDb1F5cUpnSVlMd3BDc1hmTW9CdlVTRVVzZ0kzdWNrV3lhRjlBdEtWWi1WdVlsb0JudUo1WmVVanBVYXc5eGQzeWpVUG1xT1dxanRsbmFENlV0Y21pYlJSUkUwMU9XNGdjcHlMNDhBNUhxa2t6X2xVN1hsUUQ5OUo1RjBNZEJYcTZaX095SW9n0gGeAkFVX3lxTE5zc0l4M0Y1NmRWNzZrd0ZfOC1UR28wZkdNRVhXMGlfY01JRkRuNmx6OTBqSGo4aE9pbDR5VUp3WXFGVGNOWUhFcElqZXhETmhCRmNzSkVuMmhSQ2RjYVZ0d1FBbHQ5alF4OTlnNGFzNDlJbk5pWTFTTkFINl9fUG1xUk1qNHdjZ0tPOEtrQUlYS1BSdklneENvUXlxSmdJWUx3cENzWGZNb0J2VVNFVXNnSTN1Y2tXeWFGOUF0S1ZaLVZ1WWxvQm51SjVaZVVqcFVhdzl4ZDN5alVQbXFPV3FqdGxuYUQ2VXRjbWliUlJSRTAxT1c0Z2NweUw0OEE1SHFra3pfbFU3WGxRRDk5SjVGME1kQlhxNlpfT3lJb2c?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe progresse, mais les taux longs et le Moyen-Orient restent scrutés",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 09:17:07 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-progresse-mais-les-taux-longs-et-le-moyen-orient-restent-scrutes_701484",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'activité du secteur privé dans la zone euro continue de croître en août",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 09:00:24 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-activite-du-secteur-prive-dans-la-zone-euro-continue-de-croitre-en-aout_701483",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
