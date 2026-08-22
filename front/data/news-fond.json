@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T15:31:48.225Z",
+ "genere": "2026-08-22T16:36:27.468Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -54,35 +54,26 @@
    "tag": "Obligataire",
    "categorie": "globale",
    "sentiment": "negative"
-  },
-  {
-   "titre": "CAC 40 : la Bourse de Paris à l'équilibre, les doutes sur la dynamique de l'économie américaine toujours présents - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Mon, 17 Aug 2026 08:41:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOaFg4dHQ0U0VmMldaem83RVpLUDRjbDBjcjNzZWhBWDNZWm5zdUlsQnBwZ3hGTnhzd1lQOTFveEF2eEk1ZlNIdnA1dTlBZFBWV0NlVVB6SnNBZmJjcC1FbjJkUjFYbnc5ZHRMQ0VlRHNZb2NRSkc4cGpVQTM1UHpwZFZkc1F6T3RtRmF6VWN2X2xCRFFWNGpRUzExaWpHMTdvcFNWZFhEdVVicmFTRWlJbWR4TzJnZ053QmFMYU5sTVVYdm9ZUXNud2dGUGl4ZnpRaFBhMEpoWXlCcWU4VUJnRmlYejRzN1I0UEVoekZXYmE5ODA?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
   }
  ],
  "produits": [
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 10:02:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:37:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 21 Aug 2026 14:32:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
@@ -140,6 +131,24 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Droits de douane : le Canada va riposter à Washington, dit Carney - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 16:09:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb0NhanZjWFZMdFNCbW9nc1h1RHZfclBBSm9XRGROOFdVTGtQZWRKeV9BUHZEMTluLWlmbkhRNUxUZHNqdllWRHU3U0NraEYwMzlaNDFFNFE2WUdwUWdrLTNVZUc0ZURycTdKdTUyVlRlVHVGa2JLb1p2N2pROWFnMkNMMlMwQUNtTTduUGt6YTVXdG53bjRzS0tSQTBsdHdSajlxWVdfcHY0ZDVzTWRwVDFtOWJZR3I1Nnhid0tQcEUwSHRqdWFDd282dUZPQ2ZvMlhubjlDTdIB3AFBVV95cUxNMjFKWVB3c21pVHZ2X1E5dGRSdFBaVWZ1WHpMUW90LUQwX0V5MHB5am5WaTF4X0trVEpCTVBBa3hlenBZRG1OOUVoMmpRV0VudEF3ZU5lOVg1RjNPdkRzM1REWDFuR0pUSlduOTVtWGxDT2NKOWQ1YXhKWHRudl9ZVHU2VDZsSUQxS1hNdkRvR05YUXMyUTVBcmFFTHlLcVhuOFBTTS1vcTlBbjQxOWp1OUxibDd1LVZxR0d0Mm1QajJzRXQ4Q3JHTk5qeFJoUjAyS2o0Y3B6aGNsREFK?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
+   "source": "Morningstar",
+   "date": "Sat, 22 Aug 2026 15:54:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTBwZXUwTDM0cGY1cE13ckZua185TGNsMHpGMmNFNjNWb2NJSVBQNW42R21mQm9hbkRfcEJiVHhkUUZ1aGVCbWRHZ1NFY2xCdnV6R3JGRWRZTW5MdTFsYzNLRU04MUdTVU5LcmtBVXNxTkxkUWJPd2lkRkFpLWREZF9Ub1VWRVlIbmR1NUlYTWQyLXNLMER2ZTQ5UFI2TFVHY0E3cG9FaVRjTmNpNXZFekFJQzJQWXVmcVI1N2tpNmstUW15?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Français détenus au Togo: le gouvernement assure que la justice locale détient des \"indices graves\" contre les deux hommes",
    "source": "BFM Économie",
@@ -204,10 +213,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Agenda Economique Zonebourse : cap sur l'inflation PCE et le PIB américain - Zonebourse",
-   "source": "Zonebourse",
+   "titre": "Agenda Economique Zonebourse : cap sur l'inflation PCE et le PIB américain - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Sat, 22 Aug 2026 03:41:01 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLXJvbTVDWGE4ZkFTNTJzbkhMdlFsVVFiZkpaX1ZrRHJveUhNVklyeWt4YUpIVDRXWnV5SFZrR1AwXzRXMXZCTXNFRi04YmI4bnFzc2pZb2VTa3NTVkdwNjhXdlZCWWt5VnBwbDNvbE1QMC1Sb1pHcVpZR2NzZkN1ZVRWX1k1VzlkY2I5eUN0ZU9id2t2SU9kUUl1dWxWTGNfNldEM3pNdXlvWW4wbmpoSlFTQi1BcHNKM1RSdFdsd05vSVpSS2RXd1gwYzBxZw?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3l4Y2FPX2lDeUpSanBCZ1J3eUxIdExqQTNjYWc1Q0R1aGZBVi16aFk0VFoxaV9kZnVGQmR1bW5VT0xKMFhIRVNjYlZ4N24zWEpOdm45QllYYzJhTFNYZXNESzMwZFhfRy1hNzhnWUNrWkpZa3VyV0E2SkdZQmMtX3VNY3ZucVFsRnVJMnlET1F6WUtOdWxHRUwwM2Izc25CSmt2eTBpT3B0Um4yUzJZVmpGVzhjMlNCd2tZeW5XcnhhOGhoUFRuTDJwS04?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -301,15 +310,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Malgré le plan américain de rachats d'obligations, les retours de capitaux vers le Japon pèsent sur les marchés de taux - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:51:57 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPVFBRQU5xdDFKTmRiTVBJOV81Zk9PZFJ0S2ZYa2hHSFRiTXVQNS1tWlVaaEVYb0JPc3AyREd6dUpZX0k4TGt2a1NkT1JLYTJCaF9Dc2hRWlJPTHFsaV91eTF3UzBDZkZ3WHBQZm42dkppYzl0dU1XbXFmV2VQQUFucE94bmdiU3BtSVpNeUNDQ0pfYndzYVpWNlEyRk9ZOGtGYVhFYjVMellBdnhFM3ZZNTlwcGNvLXZxak44UTRKby15MC1CMkNJdFRzQ3g2TWxaam1pclZaRjJUZTJTRzA3bS1sSTN3QzZfREVOV1pSMnZtSkY1UnBiZVJtU1FIQVdnak5GSHd6ejJHR1hTY0d2Mw?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "S&P 500 - Les actions à suivre vendredi: Strategy, Coinbase, Ross Stores, Moderna, Nvidia, Abbott Laboratories",
@@ -468,7 +468,7 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "titre": "DNCA Invest Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
    "source": "MACSF",
    "date": "Mon, 18 May 2026 21:01:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
@@ -488,7 +488,7 @@
   {
    "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
    "source": "Banque Populaire",
-   "date": "Thu, 25 May 2023 07:00:00 GMT",
+   "date": "Thu, 25 May 2023 20:49:48 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
    "tag": "Eurose",
    "categorie": "uc",
