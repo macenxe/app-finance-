@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T16:36:27.468Z",
+ "genere": "2026-08-22T17:31:51.004Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -76,15 +76,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 20 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
    "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:58:31 GMT",
@@ -132,11 +123,20 @@
  ],
  "eco": [
   {
-   "titre": "Droits de douane : le Canada va riposter à Washington, dit Carney - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 22 Aug 2026 16:09:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb0NhanZjWFZMdFNCbW9nc1h1RHZfclBBSm9XRGROOFdVTGtQZWRKeV9BUHZEMTluLWlmbkhRNUxUZHNqdllWRHU3U0NraEYwMzlaNDFFNFE2WUdwUWdrLTNVZUc0ZURycTdKdTUyVlRlVHVGa2JLb1p2N2pROWFnMkNMMlMwQUNtTTduUGt6YTVXdG53bjRzS0tSQTBsdHdSajlxWVdfcHY0ZDVzTWRwVDFtOWJZR3I1Nnhid0tQcEUwSHRqdWFDd282dUZPQ2ZvMlhubjlDTdIB3AFBVV95cUxNMjFKWVB3c21pVHZ2X1E5dGRSdFBaVWZ1WHpMUW90LUQwX0V5MHB5am5WaTF4X0trVEpCTVBBa3hlenBZRG1OOUVoMmpRV0VudEF3ZU5lOVg1RjNPdkRzM1REWDFuR0pUSlduOTVtWGxDT2NKOWQ1YXhKWHRudl9ZVHU2VDZsSUQxS1hNdkRvR05YUXMyUTVBcmFFTHlLcVhuOFBTTS1vcTlBbjQxOWp1OUxibDd1LVZxR0d0Mm1QajJzRXQ4Q3JHTk5qeFJoUjAyS2o0Y3B6aGNsREFK?oc=5",
+   "date": "Sat, 22 Aug 2026 17:25:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Droits de douane: le Canada prend des mesures de rétorsion contre les Etats-Unis - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 16:35:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNbGZpR1JGQmU1bFVxZXBJaUhEbWZvOVFRLWNLeGV0SlNZSnBYT2Z6YUNGNDRoTHU4REJRTEV3SlZrTHMydVAwdDhtdUJwWjdlLXBXRXZlTTRqN0ZMLWs5cXR1Qk03c2ktWVQ0c3cwU2YzM21Md0Z3Vm5VbkgyRUNEUnQ5a1JfdGtEalcxNEtIR2tjVV9WWklpRmV1VGhVcThTb2pzTThoY3RQVE51UVNPZUJqZ2FBczU0cExZd2NCYnFzbkYwOUJzbnY5UVFkSlA5c25yM3NtOHlNdDJoU1k1WjhiZDlpQXFBWm9PaUNuX2xZR1JUdVM3a1ExLUNmb0dr0gGGAkFVX3lxTFBIMHoxeHZmbVVDX3dmSFd5cDFsMjRxYUN0YkNOQ0pVOHZWcEFRQms5ek90R285QTh5WlUtOXIzcEpOamRRMVM0eVZPR2Z6UUFENEJqRVpheG1wVDlZVVBSbFVvM3pabmgxTy05V2duTHh2a0xhY3MwcFZrVzlqbEdJVXAtNDhQSUZURVNPNnZqdUFRSmpULVdOM2xLR0lzVWh4N2NuNzNRMGNLQ1hvOGF1c0JOWEthWW5feUxBTXBhS2VqejJrTlhOdXdfV1ZHTkM1dnlibTlQSEJNQWVqYlNTaGM3OE1kcmdVRHhva3JqMUtrM0R1Ty1PTHlQbngtRk9iTWp2ZEE?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -249,6 +249,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "Le dollar se stabilise à l'issue d'une semaine difficile - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 21 Aug 2026 18:41:51 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJSXU5TGhFVzUwQTV2UzdCUW1PSUtwMnpKR1BrNzZsRUpySHd6VDdOc3BHazN1eVRZMUJ0akR6MWZueDhQelRZay03Tk0tYU84eG53by1vQ3FGcmpsbkJLS01R?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
    "source": "TradingView",
    "date": "Fri, 21 Aug 2026 17:53:11 GMT",
@@ -256,15 +265,6 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Taux : les pertes se creusent brusquement aux US, 9Pts sur nos OAT en hebdo - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 21 Aug 2026 16:52:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRXZJb0RmdFF2MHBNQ2tkeW1rcXJtTUEwUjNGNjlmUngyeFl2XzIwY0Q1Znhyb3JwOFczUWFwRTZhZllvUjNRRFBFaXRoODlJVkhBOTJSSFNaSHFoYXVwVGVYOEExdHp0MGRSRFREcGY2Z0dVWlNjQTZtNDdPbG81Z19FUFFrS2ltWlc2TXljRzRkeUc4anZjUE42cGZETEhaMEYwMWdPS1c4TS12SXUyRnVDb3Z4YlZ1SzhZLU5iTjdNa0MweWl2Sk5pWVN6aUR5eWl3ci14eVFNRW8xVjllemxZcnVHeVdBNFHSAeoBQVVfeXFMUEV2SW9EZnRRdjBwTUNrZHlta3FybU1BMFIzRjY5ZlJ4MnhZdl8yMGNENWZ4cm9ycDhXM1FhcEU2YWZZb1IzUURQRWl0aDg5SVZIQTkyUkhTWkhxaGF1cFRlWDhBMXR6dDBkUkRURHBmNmdHVVpTY0E2bTQ3T2xvNWdfRVBRa0tpbVpXNk15Y0c0ZHlHOGp2Y1BONnBmRExIWjBGMDFnT0tXOE0tdkl1MkZ1Q292eGJWdUs4WS1OYk43TWtDMHlpdkpOaVlTemlEeXlpd3IteHlRTUVvMVY5ZXpsWXJ1R3lXQTRR?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "Selon lui, les droits de douane américains sont \"infondés\": après un appel avec Donald Trump, Lula veut que le Brésil et les États-Unis \"restent à la table des négociations\"",
