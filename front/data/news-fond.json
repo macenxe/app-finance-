@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T12:57:10.364Z",
+ "genere": "2026-08-22T13:39:44.334Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -67,10 +67,10 @@
  ],
  "produits": [
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 22 Aug 2026 08:30:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 10:02:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -140,6 +140,24 @@
   }
  ],
  "eco": [
+  {
+   "titre": "CAC 40 : les taux montent, la hiérarchie des valeurs se renverse - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Sat, 22 Aug 2026 13:37:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYzBYSExXMUJHY0VOQ01lV1VfcmFka2pSby0tV3NzankxV1k5RHJKNGU0dDdWTURhcDRrWTJIbmFqV3VyR0Q3aVVTaXBDTTlBanhJRFBQcTc0TDNZMTZ6R3N3RXBTS2F0Y0hvMjUxZ050aWR2MzEtUnBHYTgxUlI0UWVXajdnMmVFTTU0RC13UlVMRjNNanc?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Un navire sud-coréen part vers l'Europe par la route maritime de l'Arctique - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 13:09:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMXVicEdCNWRLRndBTF9OM2hWRmx3NE43WWVndFpPekdFM0R0OUZkS0NNYm12OXBOYzRzdlZoSk1yNGFrUmhLLTN2R2VpU2VqS3V0TjNDREl0YUlkNW4xNmdPMHBzMkYydnJqRlZJQmhFZ1JuNXV6aGIza0ZrOFY0cS1ianZKQXo4WG1qY1BrRWo3dkg4SGprTWJjVlFWRWNsbWJWUURJM3V5RUVGWldqNjBpWnYtRzlHNktzV0hJRkJvSWowekhweU5aY3N5N2FMMVJRWDZGRkVOVnU5cHdSNW5OVnBXWUlY0gHuAUFVX3lxTE9pUHpuWU5YYkt1aWlxU3VOUXIyQWtJX0xFLWoyRUphWjJORWpaQnlCNzIyNjc3eE1zZ3BKNklwNW9qS3o4MnJISExnbHp0dlJ1eGU1Z05xdGlPNDhidTRrX01hYVdtQXA4aUdrb3RwRGFHRGMtb3dBajNtazRPajJZMEdKSE5ITUR5Y01UY1I5bXlVQjZmVkFuWjRjU0NxeXZNMzFtajAwSzVOT05kVW40MWtOY2N1SnNWRFlBeHFnSXpkMjZkVXdEOFpndGhJSWR0MVhJQVJNTk80Xzd5RDRxLUxZR2ZWTkRaS3puR3c?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "\"Douche froide\" pour les éleveurs américains: ils dénoncent une \"trahison\" après la baisse des droits de douane sur le boeuf décidée par Donald Trump",
    "source": "BFM Économie",
@@ -468,7 +486,7 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "DNCA Invest Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
    "source": "MACSF",
    "date": "Mon, 18 May 2026 21:01:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
