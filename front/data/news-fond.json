@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-21T20:36:05.562Z",
+ "genere": "2026-08-22T05:37:23.082Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -47,8 +47,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:48:18 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
    "tag": "Obligataire",
@@ -67,8 +67,17 @@
  ],
  "produits": [
   {
-   "titre": "La Bourse européenne, cette « championne méconnue », selon Goldman Sachs Research - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 15:37:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Les Echos",
+   "source": "Les Echos",
    "date": "Fri, 21 Aug 2026 15:01:14 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
    "tag": "CAC 40",
@@ -76,17 +85,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 20 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:58:31 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
    "tag": "CAC 40",
@@ -103,8 +103,8 @@
    "sentiment": "negative"
   },
   {
-   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Les Echos",
+   "source": "Les Echos",
    "date": "Mon, 17 Aug 2026 13:45:20 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRGJnR3NvaHBkelNrQWgwdVRIYi1PRWZwN2lXMGItZ3FFX01teXRoN1dFYWE1TlE5Tk03T3c1WDJSTzFVOHNRS01Kalpzc0NoeWd5YnEzcE5tSnJIVFVWZTU5MDg3ejlWSWhZdFMwZ2hNUkdkNU4zcFpXcVdfQ2ZSLTFSNUozZ3lIX3F2aEY5V3M1QlRDbzZCdjl2NlpLMURoOGZNYTkyeGN6d3NzRDRLV3JleEc3bGRZQmRYLWNNU2ZpSnJWWEMxZ2w4M3dlazU3M2ZfTXNoQQ?oc=5",
    "tag": "BNP Paribas",
@@ -128,35 +128,80 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Renault : Stellantis déclassé, Renault ignoré, Volkswagen et BMW sanctionnés… La saison des résultats a démontré combien la Bourse a perdu patience avec les constructeurs auto - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 15 Aug 2026 05:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOWHpJVXJqdG9NeVRyT1UxdkhYeVVkVnQ1dmlNdDhyTWZ3dThub182TE9HMERoT1VhWDRlc0cxUms3QXFweU0xb3g3OGZZb1Y0eW9rN256emF6UzVNQlV2V1g2akppZFFtaUdfelFvUkE4LVN2QzhlNWZ6bm93Q1ZSY1U0UFhnNUZURXBtb0JBNlZOM19vZnVNZ3ZFckFxTlJMVGdKOXVDeGVveGtmRG9XVEpSV3B4N091QWNrSGhkQTk3dlphWk1aNUVHWUV2ekJXMUtiNHNPdnc3dm1DUzVQd0dUQUJmMXBYbllEUkMtUTQtbWt1Y09UYkQyU2pTVHhWbnN0M3UtbkktdG1DOXEzanduV2t6ZWxuM3NTazdGeVdVQmZBSlF3TDVJY1YtYThHTVkzMzlheUd6MVB5MGlLQ3FPbjdETHhpM1lxaWlTZmViVjh2THFUbVluMGtzcDQ?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 21 Aug 2026 17:53:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42TnlrcTYzRTR2RVFhcjlwTW91ZTZDRTFoZGMzOUc1Rm1lTDA0VTd6YU5aRjhCYjN0aG5qVUFpMllMNDRxUE83dVU1M1VPeFlZYUpxalJGWE0wcVdOdXN4R3NR?oc=5",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 05:19:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 05:17:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 05:17:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Faute d'accord, le Canada subit de nouveaux droits de douane américains punitifs - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 22 Aug 2026 05:04:53 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQam1CTWlza1NhZmZsLUNpZE1LWFpCcUJ2UTNKZk1mTzdTd2JBNHAxYVowa2NFQ1lVSHZkRUNYbWFpN2N3eEtIYnY2ZnpvMW15TC1QTk44ZC1jTVROWC1YLXI0Qk9JdlVic1ZQRHB4cUt0TmVZM19XbEtNejUyRkNOa3JZUGxIVGcyMEVWaGtGWGFzWHNZZ3ZSb05JNi1helZkVG5iaDJVUm1TZDhIN3NDWk9WcEpmdFBpeWRGX28xUW80N3NaYWJWcHR5ZTBUdXFyeDdJV1RsWWxuLVJ2TEg0aVN5Y256T25yblBFNFA2dUIzdVI5aTBjQTRFdGc3SnVG0gGGAkFVX3lxTE5XZTN4RC1DMDJMcjZpb3hNWG5OamJ2azZBWWhiRzFiWDRrNTJPb0lWR1FuUWM4NUgyUXN2ZEZ0eDZOUGh0dnFNV3ByY3lxVlRkY2JraGFNRVZGclRvNkVLWmJsOVZ4TlBUX01SRTRsNG93c0NIOVEyT2tPMmtwSGh5ZE5CLU9TTnVNUmpFMXREZURpZTRIMGNaUGdiNEt6WG95VDQ1WGt4RkxyMXQ3RE11TjJpSzdaaU9RSlVPZGdCRm5YY0ZqdWpFUjlZdHV4dGVfVU9BZE1Sanc2UjhRRXBCd0hOQ055LW1vMmwteTFTeHI2U3BhZ0xlUmVRd2pnTC1UWjFVR3c?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Droits de douane de Trump",
+   "source": "BFM Économie",
+   "date": "Sat, 22 Aug 2026 04:02:20 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/droits-de-douane-de-trump_DN-202504040609.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "De nouveaux droits de douane américains visant le Canada entrent en vigueur après l'échec des négociations, Mark Carney dénonce des positions \"injustes\" posées par Washington",
+   "source": "BFM Économie",
+   "date": "Sat, 22 Aug 2026 04:02:19 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/pas-d-accord-trouve-entre-les-etats-unis-et-le-canada-pour-eviter-de-nouveaux-droits-de-douane-mark-carney-denonce-des-positions-injustes-posees-par-washington_AN-202608220044.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Agenda Economique Zonebourse : cap sur l'inflation PCE et le PIB américain - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sat, 22 Aug 2026 03:41:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3l4Y2FPX2lDeUpSanBCZ1J3eUxIdExqQTNjYWc1Q0R1aGZBVi16aFk0VFoxaV9kZnVGQmR1bW5VT0xKMFhIRVNjYlZ4N24zWEpOdm45QllYYzJhTFNYZXNESzMwZFhfRy1hNzhnWUNrWkpZa3VyV0E2SkdZQmMtX3VNY3ZucVFsRnVJMnlET1F6WUtOdWxHRUwwM2Izc25CSmt2eTBpT3B0Um4yUzJZVmpGVzhjMlNCd2tZeW5XcnhhOGhoUFRuTDJwS04?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Droits de douane de Trump",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 16:45:40 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/droits-de-douane-de-trump_DN-202504040609.html",
-   "tag": "BFM Économie",
+   "titre": "S&P 500 - Les actions en vue vendredi: Strategy, Coinbase, Tesla, Ross Stores, Moderna, Nvidia, Abbott",
+   "source": "ABC Bourse",
+   "date": "Fri, 21 Aug 2026 21:04:20 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-vendredi-strategy-coinbase-tesla-ross-stores-m_701501",
+   "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
    "titre": "Selon lui, les droits de douane américains sont \"infondés\": après un appel avec Donald Trump, Lula veut que le Brésil et les États-Unis \"restent à la table des négociations\"",
@@ -213,20 +258,20 @@
    "sentiment": "negative"
   },
   {
-   "titre": "L'intelligence artificielle pourrait alimenter l'inflation, selon Petra Tschudin de la BNS - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 21 Aug 2026 15:24:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNkVOMnZIMGNpUkk5UHNpTmlUZGRON09ZUzNzU0FKZnRBZVFkMG15ZEtkaTBZRG5pV2dKVWowZ0dZVDRMcHVtVWdMNUQ0azZENEdfbHQzWWFVUW9HcXdLVVN3S1dqaDRVYnotQnR2cFB5SUx6Q2tpNVN5bjVhbk9vT1AyZ3JVTGR6Z0FodU5LRlB4TFBMZ2h4ZHdhU1hHa0c0MUJMaWR0VC10Z0NjZFhoNk9XSUw4VnlNNU9ZbzViNDZieXNuRHFzX25jTFN6Y2IyZTZkcFAzZm1IaWNwdUgyOXNNbw?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Pas doublés mais plutôt indexés sur l'inflation? Le gouvernement n'a pas dit son dernier mot pour augmenter les plafonds des franchises médicales",
    "source": "BFM Économie",
    "date": "Fri, 21 Aug 2026 14:25:00 GMT",
    "lien": "https://www.bfmtv.com/economie/economie-social/pas-doubles-mais-plutot-indexes-sur-l-inflation-le-gouvernement-n-a-pas-dit-son-dernier-mot-pour-augmenter-les-plafonds-des-franchises-medicales_AV-202608210412.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Dette : pourquoi l'annulation proposée par Jean-Luc Mélenchon ne peut pas fonctionner - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 14:17:58 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNZGdWbVFpckg4MTdSWmxybU5YaExvR0locldad0JtSDhLb3Rta2tueXNLTUZHbk9wR0lfS05GcVZKMGRjdFBia0hEcV8zTWJCZTVEdEhCODR3QkMzeFNjOC1aM0N4Ny1Yb01STVo4V1hCb09JaUVObXp3TDA4ZV9ZNGN6V0hYM1BFdXZwb1BhTmgwM2tnUkc2aS1iRllZTWdmWG1fVHZrNHdELW52dDBxZzRMMjUyWk02Slg0TGFpQmhabTUtN09QX3ZvV0hqWFdtTk04TXY4NERnQ3lkbTNNcA?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -346,15 +391,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Zone euro: l'activité du secteur privé croît davantage que prévu en août",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 08:12:28 GMT",
-   "lien": "https://www.abcbourse.com/marches/zone-euro-l-activite-du-secteur-prive-croit-davantage-que-prevu-en-aout_701480",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
@@ -459,15 +495,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
-   "date": "Wed, 06 May 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "positive"
-  },
-  {
    "titre": "DNCA Finance renforce son équipe Eurose - L'Agefi",
    "source": "L'Agefi",
    "date": "Tue, 17 Mar 2026 07:00:00 GMT",
@@ -491,6 +518,15 @@
    "date": "Fri, 17 Jun 2022 01:42:12 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
    "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest SRI Norden Europe - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 12 Jan 2022 16:36:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
+   "tag": "DNCA Invest SRI Norden Europe",
    "categorie": "uc",
    "sentiment": "neutre"
   }
