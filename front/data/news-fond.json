@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-22T14:33:08.984Z",
+ "genere": "2026-08-22T15:31:48.225Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -76,13 +76,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Bourse européenne, cette « secrète championne », selon Goldman Sachs Research - Les Echos",
+   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
    "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
+   "date": "Fri, 21 Aug 2026 15:37:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
@@ -141,13 +141,13 @@
  ],
  "eco": [
   {
-   "titre": "CAC 40 : les taux montent, la hiérarchie des valeurs se renverse - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Sat, 22 Aug 2026 13:37:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYzBYSExXMUJHY0VOQ01lV1VfcmFka2pSby0tV3NzankxV1k5RHJKNGU0dDdWTURhcDRrWTJIbmFqV3VyR0Q3aVVTaXBDTTlBanhJRFBQcTc0TDNZMTZ6R3N3RXBTS2F0Y0hvMjUxZ050aWR2MzEtUnBHYTgxUlI0UWVXajdnMmVFTTU0RC13UlVMRjNNanc?oc=5",
-   "tag": "bourse",
+   "titre": "Français détenus au Togo: le gouvernement assure que la justice locale détient des \"indices graves\" contre les deux hommes",
+   "source": "BFM Économie",
+   "date": "Sat, 22 Aug 2026 15:11:30 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/francais-detenus-au-togo-le-gouvernement-assure-que-la-justice-locale-detient-des-indices-graves-contre-les-deux-hommes_AD-202608220279.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "\"Douche froide\" pour les éleveurs américains: ils dénoncent une \"trahison\" après la baisse des droits de douane sur le boeuf décidée par Donald Trump",
@@ -231,6 +231,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "L'activisme du Trésor américain risque de saper l'autorité du président de la Fed - MarketWatch - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 21 Aug 2026 20:22:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSGR0WlRnTHJnTUw4Zzdqd3pMR3d6ZTllMW5QRVA4bFBjZ2FJNUphOW1YYVl2MmYwSUhuMnl6VFUtZVJuM3VBa09HMWlGMUFnTGFISnFfbE1rcFFSeUNWSnMyYVMtRTlOT2ZfR3kydENNZVVyMkU2Y2hJZ29vWDBJQXRXendwMVVxQ0VDbFdta0dWamR3MVFZVTZ5X25iU21ROXB5enNKbEtXMy00Y0V4X3dhYmkzZVN1VWpvNzBoeVpHLUVoM0JQSmlSRTNXdFkxTXdWbjRZcE1VUVQwNjBpODJPSUQ2dDFy?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
    "titre": "BNS: les anticipations d'inflation en Suisse sont bien ancrées (Tschudin) - TradingView",
    "source": "TradingView",
    "date": "Fri, 21 Aug 2026 17:53:11 GMT",
@@ -285,15 +294,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "TotalEnergies",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 15:57:23 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/total-energies_DN-202108310507.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris finit dans le vert et limite son repli hebdomadaire",
    "source": "ABC Bourse",
    "date": "Fri, 21 Aug 2026 15:51:59 GMT",
@@ -308,15 +308,6 @@
    "date": "Fri, 21 Aug 2026 15:51:57 GMT",
    "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPVFBRQU5xdDFKTmRiTVBJOV81Zk9PZFJ0S2ZYa2hHSFRiTXVQNS1tWlVaaEVYb0JPc3AyREd6dUpZX0k4TGt2a1NkT1JLYTJCaF9Dc2hRWlJPTHFsaV91eTF3UzBDZkZ3WHBQZm42dkppYzl0dU1XbXFmV2VQQUFucE94bmdiU3BtSVpNeUNDQ0pfYndzYVpWNlEyRk9ZOGtGYVhFYjVMellBdnhFM3ZZNTlwcGNvLXZxak44UTRKby15MC1CMkNJdFRzQ3g2TWxaam1pclZaRjJUZTJTRzA3bS1sSTN3QzZfREVOV1pSMnZtSkY1UnBiZVJtU1FIQVdnak5GSHd6ejJHR1hTY0d2Mw?oc=5",
    "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'intelligence artificielle pourrait alimenter l'inflation, selon Petra Tschudin de la BNS - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 21 Aug 2026 15:24:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNkVOMnZIMGNpUkk5UHNpTmlUZGRON09ZUzNzU0FKZnRBZVFkMG15ZEtkaTBZRG5pV2dKVWowZ0dZVDRMcHVtVWdMNUQ0azZENEdfbHQzWWFVUW9HcXdLVVN3S1dqaDRVYnotQnR2cFB5SUx6Q2tpNVN5bjVhbk9vT1AyZ3JVTGR6Z0FodU5LRlB4TFBMZ2h4ZHdhU1hHa0c0MUJMaWR0VC10Z0NjZFhoNk9XSUw4VnlNNU9ZbzViNDZieXNuRHFzX25jTFN6Y2IyZTZkcFAzZm1IaWNwdUgyOXNNbw?oc=5",
-   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -477,7 +468,7 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "DNCA Invest Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
    "source": "MACSF",
    "date": "Mon, 18 May 2026 21:01:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
