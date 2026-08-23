@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-23T13:41:35.622Z",
+ "genere": "2026-08-23T14:35:09.727Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -38,6 +38,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "CAC 40: Marchés sous pression, ouverture prudente en vue - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 19 Aug 2026 06:00:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaEhsaWpCM3BzUDNFUVZGaUNRQW9tNlgtSk9ucjVJY21iLUVxSktNVGhpVEF3NTltaG56OGY4T3JqZFI4MXYzU2o1VUhKMDNRbkIwLTV1N0pLU21UZkFQbUhpSjZ4TTRJdEZFaXVXR2lZQUliVVdiS1NkMVVQWmZsbVE0UjlnRU15OVNWN0pKT2I4bFBEdzE1cGpmZWhybzduQXZFZVVLQ096QTFB?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Tue, 18 Aug 2026 14:42:44 GMT",
@@ -47,8 +56,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:48:18 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
    "tag": "Obligataire",
@@ -57,6 +66,15 @@
   }
  ],
  "produits": [
+  {
+   "titre": "Action Rheinmetall AG | Cours RHM Bourse Deutsche Boerse AG - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 21 Aug 2026 19:59:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wa2JDbHZDRHE1RUNweWdNdWdzMjJla2d0TlhfSm1YSlppNWFHSy05cjV1RktpNXYtek9kMjFUOG9GZkdKWWc0WDJMak5yRTNfOGJrQWI3QS03QU9VQTdoYW1fQjJJbXRaTWxTQlJHRQ?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
@@ -76,8 +94,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Le Cac 40 rebondit après huit séances de baisse d'affilée - Les Echos",
+   "source": "Les Echos",
    "date": "Fri, 21 Aug 2026 15:37:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUE5WYm5HRkd5X3Rza2g2NEd0VUdoc1UxWFczTF9UdlF2NE42Z1l6UEl2S01obV9GSTN1cXlsaGZQS2RKaE5jU2l5b2lyYWlxYTJ6VGswQXVIb2UwSkpwa2VjT3JJakN1dlBLWHVIUlNsMWtncXE4YWhob2tlQjMwSElmZjQ5UXR1bTRVTHJUNFd0UFdBVW1KU21ENFJySXdXTGp3TnVYeUM0MlBRYnk0Vl9ERmFrUmEzVUNRampZbkhoeVhQdHc?oc=5",
    "tag": "CAC 40",
@@ -103,20 +121,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 18 Aug 2026 12:58:31 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
    "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Mon, 17 Aug 2026 13:45:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRGJnR3NvaHBkelNrQWgwdVRIYi1PRWZwN2lXMGItZ3FFX01teXRoN1dFYWE1TlE5Tk03T3c1WDJSTzFVOHNRS01Kalpzc0NoeWd5YnEzcE5tSnJIVFVWZTU5MDg3ejlWSWhZdFMwZ2hNUkdkNU4zcFpXcVdfQ2ZSLTFSNUozZ3lIX3F2aEY5V3M1QlRDbzZCdjl2NlpLMURoOGZNYTkyeGN6d3NzRDRLV3JleEc3bGRZQmRYLWNNU2ZpSnJWWEMxZ2w4M3dlazU3M2ZfTXNoQQ?oc=5",
-   "tag": "BNP Paribas",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -132,6 +141,15 @@
  ],
  "eco": [
   {
+   "titre": "Droits de douane: le Canada riposte, les Etats-Unis menacent de surenchérir - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 23 Aug 2026 13:50:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOX0J5U3pmZUEtYnhhQk9vejlkckx3UXlGY3VkTmx4eUZWdGhUV0JuR2llTGZqc2hYcERoZ19NZm5Ia0FlRExVWGhHUmdmejhxX3l2cEhMWVR3QTctNThrY2pwVlNWWHJ4UkhsWFF2ZWNNdUM2NktXaFFKTVg5Wk1FYmhuS21oZEVYQXU0b1BZOXJuUDVCRDlIeVJ1R3BwSTJKVnV2Qm5kVFlhcnB0ODBhQ0hENE9LYm50RkxzMHJmTmg4cTFlNExUUERFNHdYeVVPT0dUWXlfaWVzYlo0dmxob1h6cVFoOHo2LWJWQzU1WVBOS0pmVWNoOdIB_gFBVV95cUxQZWEtdVd1OHlIMF85TUxUSmxia1phRDVMVmVlaWdjbmUwOTRSMEN2RGpfSlBQLW5aZ0Q2LUFTcDRNXzJ3Zk5yUHdfeVctQ1QxS3dQamdwdVJhNlFUemRHVC1XQ2pBTDgxOTVMX3dqZWtYSUp4NlU2ZVBMcERFSkQwa2I5TW5ZSGJ5bVU4R3FrdHFxMjdac1U2Q1NjZVpzV3RZOU1zRWxIeHdZMzdoLWVsOVJlQklIV0I5OFZZcFVNRWZiUGZLSk1KSDA5dHNnS25hTENQalBKZk5EeXVXdXl0Tk85NjZTQlJDOHNjNkxlRl9zSGp4ektkbkJON3pvdw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Budget 2027: \"Je ne crois pas un instant, qu'à quelques mois de la présidentielle, on ne vote pas un budget\", assure Jean-Hervé Lorenzi, fondateur du Cercle des économistes",
    "source": "BFM Économie",
    "date": "Sun, 23 Aug 2026 13:22:29 GMT",
@@ -139,15 +157,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Bourses du Moyen-Orient : les marchés du Golfe progressent, portés par la hausse du pétrole - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 23 Aug 2026 13:06:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPQnRvcTlsU0N1a2U5N1kxZl9yWWk0M0NBalFHZXE3ODF4X2J3bDFsZVgwd0c0ZzhlcTl1QzVGT0pGS1o3NjhLelhqTFdycTR2Y2RUdThGaDZYUVpqQ1hfR21wYWU3Y0R2UUpKWkdTemdlR0Q3RzM5QTNjRF9OM0pjQ3RSLVFfSUdTVS02RkYwMzc2b2Y4UC1rMF9qVVcwMjNvdDFGWU1ad0pQcWdxczlJR3hiVmp2U1NHRkhsbk85Tnl3RTJuQXh5Q1ZuS1VYWWhjOGVsWTh0d2xlQU5YYTg4MC1n?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "Droits de douane de Trump",
@@ -172,6 +181,15 @@
    "source": "Zonebourse Suisse",
    "date": "Sun, 23 Aug 2026 08:11:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWkxpNkpOOUp6LUZ5Y1FmbHRwOTlKVUFsSUZJZVdGbVlzOEprb0J4Yldndk9EUWlsY3BZZ0VJM0ZqZHhqSnptZDBXRk8xendQRmU2RlpscldMYzRpY0dxOE5Sdmt0M0xBeTB5Rk1fYVJDYlZOTVFjd3g4X1NDNWVwcjZUR2JISDJTM1RQbnB2S2F3M3RYYWMzWnRJM00zcHhIbzZxQ216MW9ZbUxBRTlKU1czTnhHVU8yV19ZSnR1RURUVVdHYy04cmxYUE1hbGxWUURHSkJOOFdvM0JXa0k5SGZveW9hUHJJ?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Christine Lagarde, présidente de la BCE, \" prête à servir » le WEF, selon un journal suisse - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Sun, 23 Aug 2026 08:11:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNY3RRME9YZnVtd0dZZEdDMUh1eUV5dTdEV041QUF2eUhXRWRyLWxWaFNRZ18yVktfV0F4TUt4ZERVWGs3SmRoNmMtejBTbzZlanBLOURONFFuR0IxcUhHbE44dEVYcmswLUFwTVpWMUtURTJlcmVUQ0lXRWNQYVNmWFdMcUVKVGg4LVIwbVUwa2hmelprRjFHcGhOb1RpanJEdWVORE9XNzNUdjVMRlgwR2xMT2dCSFRISzk3NE5Cb0xvUUVyT3VEV0JLeWlzeDFydGJBVU83VnRHbzlyNGw4TU83T3dwdFpmVFE?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
