@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-23T11:31:01.302Z",
+ "genere": "2026-08-23T12:58:21.376Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -47,8 +47,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
-   "source": "Les Echos",
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Tue, 18 Aug 2026 12:48:18 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
    "tag": "Obligataire",
@@ -57,6 +57,15 @@
   }
  ],
  "produits": [
+  {
+   "titre": "Action Rheinmetall AG | Cours RHM Bourse Deutsche Boerse AG - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 21 Aug 2026 19:59:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wa2JDbHZDRHE1RUNweWdNdWdzMjJla2d0TlhfSm1YSlppNWFHSy05cjV1RktpNXYtek9kMjFUOG9GZkdKWWc0WDJMak5yRTNfOGJrQWI3QS03QU9VQTdoYW1fQjJJbXRaTWxTQlJHRQ?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
@@ -67,11 +76,20 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 21 Aug 2026 15:37:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 15:36:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 15:35:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -85,15 +103,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Bourse européenne, cette « championne méconnue », selon Goldman Sachs Research - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 21 Aug 2026 07:00:00 GMT",
@@ -103,17 +112,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 18 Aug 2026 12:58:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Les Echos",
-   "source": "Les Echos",
+   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Mon, 17 Aug 2026 13:45:20 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRGJnR3NvaHBkelNrQWgwdVRIYi1PRWZwN2lXMGItZ3FFX01teXRoN1dFYWE1TlE5Tk03T3c1WDJSTzFVOHNRS01Kalpzc0NoeWd5YnEzcE5tSnJIVFVWZTU5MDg3ejlWSWhZdFMwZ2hNUkdkNU4zcFpXcVdfQ2ZSLTFSNUozZ3lIX3F2aEY5V3M1QlRDbzZCdjl2NlpLMURoOGZNYTkyeGN6d3NzRDRLV3JleEc3bGRZQmRYLWNNU2ZpSnJWWEMxZ2w4M3dlazU3M2ZfTXNoQQ?oc=5",
    "tag": "BNP Paribas",
