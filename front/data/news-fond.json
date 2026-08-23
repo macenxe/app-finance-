@@ -1,8 +1,163 @@
 {
- "genere": "2026-08-23T07:43:27.466Z",
- "globales": [],
- "produits": [],
+ "genere": "2026-08-23T08:44:00.576Z",
+ "globales": [
+  {
+   "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 16:06:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOemxXRVFGUWJRdHczcGxVSnpRbUhEUURtRFdIVDAzeElyY0ZfZE1jWUhOa1ROTEJ6Z3YxYjc0Z3BzeGJEZXg2dHpmT2xtejFXOWpwemFDd2x0X3FCUHVYMWNiTGFlQTAyTGJ4UUgzRFdXTW1QT3R2bjRWdzFEdWZsbnRYaHVZS0Nrb1k4eWdIT1pHQUVSaXVEdGdSaU9vQnE2UnFwa2tndmZ4d0trZkltWTVZbHR6b0dTdlpHcWZVRVgxWTBxNzAxTTc3b3ZKbVk4RW1uaGZ5UkdWZ0NkbHZiNXRiRjdQTWE4RGE5ZGIwOWHSAfABQVVfeXFMTnpsV0VRRlFiUXR3M3BsVUp6UW1IRFFEbURXSFQwM3hJcmNGX2RNY1lITmtUTkxCemd2MWI3NGdwc3hiRGV4NnR6Zk9sbXoxVzlqcHphQ3dsdF9xQlB1WDFjYkxhZUEwMkxieFFIM0RXV01tUE90dm40VncxRHVmbG50WGh1WUtDa29ZOHlnSE9aR0FFUml1RHRnUmlPb0JxNlJxcGtrZ3ZmeHdLa2ZJbVk1WWx0em9HU3ZaR3FmVUVYMVkwcTcwMU03N292Sm1ZOEVtbmhmeVJHVmdDZGx2YjV0YkY3UE1hOERhOWRiMDlh?oc=5",
+   "tag": "Obligataire",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "« Une vraie résilience » : pourquoi la croissance mondiale a résisté à la crise du détroit d'Ormuz - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 15:01:53 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPR3Z4ZjZ5Y0xYMDNLQ1FKVy1Ub2gxS1M2bGJOSVdVQzlEcGVKUm4tOVhPTUl0UVJRVGRoS3JTdm92RVdMd2lIVS1xLVdNZ25MTDAxTFVhQi04MjJVOVZ4UUdpbFZnYWNwdExsTGVvdlUxcWEyMHhyaHpacU1BQnZNNlNLT01PMXJseEdwRm5aTlhlbXZVX0NkVUIwMmhfUkJ5TE9JcHllNm9hdXBqYmNlYjFiSVVKZHRUVHcxNVAtNXpyU0FOMGZZMGYyMHVtdWw5eDkzeXJIOXVuOXFoYWlWZmtXakxjdw?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les responsables de la Fed prudents après l'intervention du Trésor sur le marché obligataire - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Thu, 20 Aug 2026 20:17:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMDl1X1luVGtSWlFfSUtFcHczaTRYVmxmV0RYRXZid3Vxam1zaFZqSUxBT1hMNTRZdWhjN2NwMTJobkJpdlhvVjNFT1FuOEpKVm5rN0VTTzhTMWpxNWgtTzhKZE9RU2dPV3Vrc2lVTEY4VENUTUFrUHFmX0hZMGlxRm1MUW5HSXlaYnI0c2lOQ1M2N1BYdjJud3pWbi1nVEVhczVPdkRpZnc1amk0WEI3OWZzaU1GbnJDYXV5a2dydG9kaFBTX0VIWjh0b3gwTXU3X05Cc2JuUnliNHk3YzBYLXVqQmZDMkU?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "RÉSUMÉ 1-Les responsables de la Fed font preuve de prudence après l'intervention du Trésor sur le marché oblig - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 20 Aug 2026 20:17:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNeGE5dmV0Wm1kUUc4RVZEeWJTZUFhbklhX2xfM1NDMkxPRFF1bUNUc3VZdjZQaUU1TFZ2TTFNMWhjdkZYcWNvVlZDN2RrQTFhVjNvVWZIVXQwdTlmbWFEWjBqQkJhZndJdXpidlJNSWl5ZFlkVV9EUFdXT1FtX1BhYmg0eENNX3lKSHU1SmlQbFZ3Skp1bUNXVE5CYTh1dF9DdEdPSGhTdVpfazBYeGVMTmp3UE1tejBtakNNSUE0X0lZSkxEN2JuR3NZU29kY05WTHVxeUpCMmRNOWdQWHFBN2tFUHN3dnNIUkQ2TlRMUW53TWpOLWFjUXFIdlpGWGtuQXR2N1dhd1lXdmJ2T0J6YXlBNGtYX3ZYM1hZWXpKYUw4aml5VVQyUTY1NjVrZ0hnT1VVT1ZKTdIBtwJBVV95cUxNeGE5dmV0Wm1kUUc4RVZEeWJTZUFhbklhX2xfM1NDMkxPRFF1bUNUc3VZdjZQaUU1TFZ2TTFNMWhjdkZYcWNvVlZDN2RrQTFhVjNvVWZIVXQwdTlmbWFEWjBqQkJhZndJdXpidlJNSWl5ZFlkVV9EUFdXT1FtX1BhYmg0eENNX3lKSHU1SmlQbFZ3Skp1bUNXVE5CYTh1dF9DdEdPSGhTdVpfazBYeGVMTmp3UE1tejBtakNNSUE0X0lZSkxEN2JuR3NZU29kY05WTHVxeUpCMmRNOWdQWHFBN2tFUHN3dnNIUkQ2TlRMUW53TWpOLWFjUXFIdlpGWGtuQXR2N1dhd1lXdmJ2T0J6YXlBNGtYX3ZYM1hZWXpKYUw4aml5VVQyUTY1NjVrZ0hnT1VVT1ZKTQ?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Cac 40 : La France est le marché actions européen de loin le plus boudé par les investisseurs, avec un taux de réponse négative record selon une enquête de Bank of America - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 18 Aug 2026 14:42:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPUU5CLV83OVpNZ0w5dTJoX3FDNUdybkhFdTQ2aGdkTzZkTF9OeEtPbGpNR19PLVltVlJpemljWmxuMDU5Zm5kT2ttQ2RZQXgtUVl4cmoyQUVaWGxLVlhSaGZ3NjBzd0hVQkVxX0xXZFhpdEUxeUhQMGlPdlVId3JDMnp6clhQMXhLZ3RDdVBPRzRrdVJxa2s1Y2lFMmhCVjRZaVJCQTNxVHBFMmloSmJkclNBZkdURXYxQzNxOTRJQzU0VUxEVW55Ym5mSUJrYkgyU3E1YUpOUksweC1Ba2ZxMzFjX2ptWEpNbjljRWhpdWhOdFZyaVFkSGZiZTVnUGt1dkhXV1FwU19KRjUxQUluVkhZbEhuVE5SQk5zQ0dlZFpwXzh2aGE0aXo2Rll4SHZUckVMQmFZcWUwd1NnVzJCMTU2X2JCZ0ZPUlJEM3puNDJuQTR2SkdXNENJdw?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le marché obligataire commence à inquiéter, nouvelle baisse du Cac 40 - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 18 Aug 2026 12:48:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZGY0S2xxOU5jSEpVY2hSdXNCRlVWSTdmb0pHVldmVnJ1cWNVcE13Yms0SlVQYV90cUM2azAwVmpBamxpS3NYR3JNZzJVVXBkVnZka29WNnRZbnBTN1AwanhYMHJfYmI2b0hNRTNkODRwNEFVbkZGOTNCMGhFR0R3RWZfV0dQc050MTY0Mm5zSDNhVkw2Z0o3S3FnSnd4Qk9pYmduY0pMMWVFdENPY2JMWTQ0MGFHLUw1ODNVaEt1SHZQdGRidjRyTGtzYmtqSk96cHRleThR?oc=5",
+   "tag": "Obligataire",
+   "categorie": "globale",
+   "sentiment": "negative"
+  }
+ ],
+ "produits": [
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 23 Aug 2026 05:31:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Bourse européenne, cette « championne méconnue », selon Goldman Sachs Research - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 21 Aug 2026 15:01:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSlN0Tm9EbUpPM1FvT0VsWkhlZnVrNDlFckdZVGNaY3ZhREF2SXN4YWFqTGxORHIyY0F2eDZmSkdENXQ1VFVMdWhjdHhVYTJaM3NMVWMyd2toVUo1S2ZSU2hzc09ZRGxvRWI1SFJzaU9feDRyZUQtcGtla3FWN1B5Y3VtamtocFVVYkR1RVNUYWtXbmdJQktjbkFUTTQ3OEdPTjZDRmZxbkdubEpyVUVzN05rR1ZYY2ZCRmlrYWJWYjlQSmpQaEFMQ2gxZEZMV21SLUtvcURzZ1Z4Rk82RHc?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Il s'agit de l'été le plus calme sur les Bourses européennes depuis plus de vingt ans - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 18 Aug 2026 12:58:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc3NTZHZxQkozMDRzQUVFSlE4Z09qRU5rcjE3RWhCSUtIa2c1ZmZoZmxVeU11emZ0N1pPOWpxVHZrd1h1ZkhQWlVFMFVXa1hqVXRfQUhPaDRtQ2FnRzRzdVQwaUN6WDB3VC1UMGw1dENNeWtQVzdQNC1JV1hlZkJWUXlsQV9rWThMQ0pvRHdBTl9nNG43Wi03cldlVUdyR3VOcnVhVlBHS0VZcm5sYzE3eWVxSmIxZUtzM1pRVmZnTnpTZk9NNDlydU05cWgzdmFIRWF5Y3NManZ6N3BZUWt1NWJHZThkM1ZDcEE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les actions à suivre mardi: Stellantis, Hermès, Groupe ADP - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Tue, 18 Aug 2026 06:21:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVnprTU8zOVptWUpRUEtFS012Z2tTQldOUVRRWnNZN0RGcVU1NzBJVzhCaTZhZHFsVFkyMDhueWIzNGdDU3FGdno0d05ONmdrNl9XSFJkbWpsWXdUT1JCNk5yTXVfeFFHN0l6eHFtSjZ0bUl6OE8tTWd6OW9nb21HU09yNnZZLThxNjF0alJRVTV4ZWdWX24tUWsxZGY?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse : Stellantis en chute libre, Intel rêve à nouveau de DRAM, le cuivre dope BHP - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 18 Aug 2026 06:21:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSG84MG5NVHNBQVlJcjZ3Z1VlbGd3Q2lwWVl4MEp0d3U2Uk5sVFdENFRvVnVxSGZjMHloaEx0Sm55MFBYNGcta09TLTNVQVFaNHlJdmlEajZPT3ByRWJEWThyYllXMk9CakRaZTFaUmFqZEp0TXdnalNocEdQWnRONlJrZ3kzOExQUTdoZm1UMFVBelVQb1NHcmtlS1g5dFhPdXNTQnZZM1dHX1k0SzU5Z3dIUnJJTVRmRWgwLVQyanp4RHNMYVBUSzE0VHY4NkZkVXg0LUU2Yw?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "BNP Paribas : l'acquisition de la société de location Athlon finalisée - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 17 Aug 2026 13:45:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRGJnR3NvaHBkelNrQWgwdVRIYi1PRWZwN2lXMGItZ3FFX01teXRoN1dFYWE1TlE5Tk03T3c1WDJSTzFVOHNRS01Kalpzc0NoeWd5YnEzcE5tSnJIVFVWZTU5MDg3ejlWSWhZdFMwZ2hNUkdkNU4zcFpXcVdfQ2ZSLTFSNUozZ3lIX3F2aEY5V3M1QlRDbzZCdjl2NlpLMURoOGZNYTkyeGN6d3NzRDRLV3JleEc3bGRZQmRYLWNNU2ZpSnJWWEMxZ2w4M3dlazU3M2ZfTXNoQQ?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "NEXITY : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 17 Aug 2026 06:51:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbkp1Znh1VUFRcWY2dFBSMnNXWWNCWFh1LUlSX09lR1VLbW4wNzE3UExqal81eWwwUF9MQjNUVDY0Q19KMklqalduVnVNbDk0MzhER3cxTFEzaWU3RUVxNU1BMWM4a2tKZ2hTcUxQZGZXRE5SOU90NlQ5R2gtZUZBT05RVkNsVXhKQlpCM05NeG5KNGthdWxYTktvUEJrYTRYLXVNYV80RGhYLWxLTnJPMXJUa1hJS1ZCcmhjWXJVSGhPaExLNjluNHpYN2hxUdIB0wFBVV95cUxPWFhkcy1ta0VPbERrZTMtLWFZU1FYRUlWUV9KRHBkZHVxQlM4N01JczhFeVIyTGRiTk9CR3p4RGRWOGdEdk1YNlpNMmFtUXNCLUR0akdFZ1hKa09fQ2M4RVZzNERmbUljM2NyZjVyOUdDc0tnV2lMRFg1bVktQnMzOEczUG5DSTl0ZTk4M2JaamRZUGR5ZzNRUEVIekpIYk45UUhLYjkySkVhZmxNX2FMLTFHQ2s3S0MyX1h0cWN6Mkx1MTNJQlhwNEhXbnFoblc0TEQw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  }
+ ],
  "eco": [
+  {
+   "titre": "Droits de douane de Trump",
+   "source": "BFM Économie",
+   "date": "Sun, 23 Aug 2026 08:15:25 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/droits-de-douane-de-trump_DN-202504040609.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "\"Nous avons été attaqués\": le Canada va riposter \"au dollar près\" aux nouveaux droits de douane américains, Donald Trump menace de surenchérir",
+   "source": "BFM Économie",
+   "date": "Sun, 23 Aug 2026 08:15:24 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/nous-avons-ete-attaques-le-canada-va-riposter-au-dollar-pres-aux-nouveaux-droits-de-douane-americains-donald-trump-menace-de-surencherir_AD-202608230117.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La présidente de la BCE, Christine Lagarde, serait \" prête à servir » le WEF, selon un journal suisse - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 23 Aug 2026 08:11:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWkxpNkpOOUp6LUZ5Y1FmbHRwOTlKVUFsSUZJZVdGbVlzOEprb0J4Yldndk9EUWlsY3BZZ0VJM0ZqZHhqSnptZDBXRk8xendQRmU2RlpscldMYzRpY0dxOE5Sdmt0M0xBeTB5Rk1fYVJDYlZOTVFjd3g4X1NDNWVwcjZUR2JISDJTM1RQbnB2S2F3M3RYYWMzWnRJM00zcHhIbzZxQ216MW9ZbUxBRTlKU1czTnhHVU8yV19ZSnR1RURUVVdHYy04cmxYUE1hbGxWUURHSkJOOFdvM0JXa0k5SGZveW9hUHJJ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Le prix de l'eau en bouteille en hausse de 2 à 4% depuis le début de l'été, conséquence de la hausse du prix du pétrole",
    "source": "BFM Économie",
@@ -11,6 +166,15 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
+   "source": "Morningstar",
+   "date": "Sat, 22 Aug 2026 15:54:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTBwZXUwTDM0cGY1cE13ckZua185TGNsMHpGMmNFNjNWb2NJSVBQNW42R21mQm9hbkRfcEJiVHhkUUZ1aGVCbWRHZ1NFY2xCdnV6R3JGRWRZTW5MdTFsYzNLRU04MUdTVU5LcmtBVXNxTkxkUWJPd2lkRkFpLWREZF9Ub1VWRVlIbmR1NUlYTWQyLXNLMER2ZTQ5UFI2TFVHY0E3cG9FaVRjTmNpNXZFekFJQzJQWXVmcVI1N2tpNmstUW15?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "\"Douche froide\" pour les éleveurs américains: ils dénoncent une \"trahison\" après la baisse des droits de douane sur le boeuf décidée par Donald Trump",
@@ -49,15 +213,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Droits de douane de Trump",
-   "source": "BFM Économie",
-   "date": "Sat, 22 Aug 2026 04:02:20 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/droits-de-douane-de-trump_DN-202504040609.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "De nouveaux droits de douane américains visant le Canada entrent en vigueur après l'échec des négociations, Mark Carney dénonce des conditions \"injustes\" imposées par Washington",
    "source": "BFM Économie",
    "date": "Sat, 22 Aug 2026 04:02:19 GMT",
@@ -74,24 +229,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Selon lui, les droits de douane américains sont \"infondés\": après un appel avec Donald Trump, Lula veut que le Brésil et les États-Unis \"restent à la table des négociations\"",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 16:45:40 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/selon-lui-les-motivations-aux-droits-de-douane-americains-sont-infondees-apres-un-appel-avec-donald-trump-lula-veut-que-le-bresil-et-les-etats-unis-restent-a-la-table-des-negociations_AD-202608210490.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Budget 2027 : les pistes qui restent sur la table",
-   "source": "BFM Économie",
-   "date": "Fri, 21 Aug 2026 16:42:28 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-budget-2027-les-pistes-qui-restent-sur-la-table_VN-202608210489.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "L'Europe finit dans le vert malgré l'incertitude géopolitique, les PMI en soutien",
@@ -176,5 +313,141 @@
   }
  ],
  "fiscal": [],
- "uc": []
+ "uc": [
+  {
+   "titre": "Balma. Conférence : la vérité sur le cas Magellan - ladepeche.fr",
+   "source": "ladepeche.fr",
+   "date": "Fri, 21 Aug 2026 03:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeUtPOW05S1Q4cjRzVDJtR1phcTUzTmVSS0Zmdmd1WEFWYm11NnhpaEdQTWdfN2RpTDVuUjhhdFJGLTF3NzVvc0ROUkp1cmk3MHplVC00aXZvY2VjN1VzOHlVaXNQcjhBU0xWYi0zSmNfaTM1U3dEN3ZNYzhPcFE5TUFzT3U5S3BIcXg2a0pmQXhaOFU?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le fonds Carmignac Patrimoine réduit son exposition aux actions: Jean-François Filliatre - 09/10 - Orange Actualités",
+   "source": "Orange Actualités",
+   "date": "Tue, 18 Aug 2026 17:49:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbWk4eUI5YkI2U1RkQkZCdktBWG9VdkJIdFJMN3JmbTYxZ3E4TUJXZVRHUnJ0d1VNMTkwZGlqc1draXd2MEpwRVdTQzFvTFk4NVlHcnN5QkhGcldkVmJkVGRnWG1mcGhsR1ZVMVF5NFBkMXhwaldNMV9qWUFiNm1ZQ2JjU0JQUFBWc3UwYkV5ZWxzNldwNkJub3FHd2dzVGNOeEVGbEZ2TlVLREgyak1qcVZVeGVSNXBtX2ZldEUtalF0TlVEaVVKenNTc2lTaExiTkc1X0N2ZHlSdmd1Y0RyazJtWTUxWVk?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Des images inédites de Star Wars : Magellan, le TPS annulé d'Echtra Games, font surface - Gamekult",
+   "source": "Gamekult",
+   "date": "Tue, 18 Aug 2026 06:16:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNcGE0UGVMM2s1bjQtVUFoZy1UdlVJYXV4ellQZWxFczBXSVF4Q2pWbURNb3RUdkZ0ZXJtVGdvSE9Bc0dRclkzbVIzRUhTdXNsLWlvZlBZQWE5UDJnemdBTWg1eDFJbGlIc2RpOXBUMUliWEtpajdmQ1VyWTRRZkQxYkhrTEVRaXRMXzBZeWpwVjRoM2tkSjJtVk51SV9UNkEyRWgtd0l1LTIwazJweTdKSDFpZ0JDUHU0UUFXeDJsSWlaSVRDakw0NEN4OTBlQWM?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - RFI",
+   "source": "RFI",
+   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOd2N3d3EwT2lQNGNTVDhBR2xzYjI3OFgwNDFZazAtdVBkRVo1a1loMWVtSVVJVi00dkJ0c1N1OW9yNk45Q2ZJbl9fc2t2Ul9OckxnOGRobUJjNlBRLXI3MVBqcUI2SHFqbzJrbzAzNUNyT0ZiRC0yY1hBUmlNWW5rWGNnano5eWJjb0hxM3Utb1Baem1RSlFqZGUzZklOb09iQXdtVjBnMks2WjNxcWlGQmhYWEtMS194UUIxbjhJWkJJbDkwc3g3SzZLYjBpbWFTT1lWYTNQWHVkNFhRcHc4YVlsdw?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Flash résultats (MAL.TO) : Magellan Aerospace Corporation publie un chiffre d'affaires de 305,6 millions de dollars canadiens au deuxième trimestre, contre un consensus FactSet de 289,5 millions - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 12 Aug 2026 21:25:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPUi1naUxKYmFvcE4xenhvbjc2T2tVMURTdlJGMHhXak9JRl9MckZHYXc4a3FYUXZlU3d6SVVfekVWSTRWaDlaX0s1NVE0dzVfVVh4LUk5Y0tzRlQwNWVpWmRqSHhmeC1XQXBjN1haQ0wyLUtvcHNZajlyN0NPVXcyV3J4OV9nbk14Nkl2cGQtSDZsYkl1ek5yOV9NOTJYMktOeUVFZDFqOGNBUlRZd0s0aUFOa0ZvWE5ydS01UnhZekh6cHYzTzhNTXNDbk1oTzJHODRYVjFKZW9ObFhsOUkzQ1RTdGhBYTY3RXRiSA?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les performances du titre Carmignac Patrimoine - 10/09 - Orange Actualités",
+   "source": "Orange Actualités",
+   "date": "Mon, 10 Aug 2026 00:16:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWU5pcjRFMG0zdDJrUXAtYU9kaTRvcmhBUV8xNXozU2JzR1BZYVg3RHF4c0JhbUtsMkhZbFFrXzhhREpBNTFSMDJuOUlyUVRoWGRFcE8ySWY4V243cmpzb1hsbGdhOTBUVWZTZDhBY1ZvNUF0cHN0aC1MejhQUjdxYWlFMU1kcWFObGZ1bVFwLVpTRWhpSHRCM080enBkTlpWZzNUTG42YlR6WlpLanNMYQ?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Magellan Aerospace déclare un dividende trimestriel de 0,05 $ - Investing.com France",
+   "source": "Investing.com France",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZzY5VkYxUEhsU1p2NDdHN01mNVdqMzVmNF9HQm92WjI1UElhOHpZMXlrS2F5NVB3TnFsdkZwUVcyZVJUMVhfOWJuZkJ0RE5hS3lWeHlnR1RMeDlMVVRvNmpwVjBVQmJKQ0kxMURQRTNpNnZMUmpydDI0OE5QdjdyZHVObUFWU0luU0o0T0poaDNYS0g5RTRmZUExR1hSQXNpY3drU2FEMVpUdXZ2QTZ4Yi05NWZhUQ?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Au Stang, Magellan a embarqué le public pour un tour du monde en musique - Le Télégramme",
+   "source": "Le Télégramme",
+   "date": "Sat, 01 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaWQ5aG1vb3U2eGpUZ3VmdExiajhUWnBNZHFhVHcwS3daZXMtbnctSzdKTjhEMUhOU05HTGpNS08tQUsybkpCSDVlVDdZM0hzNWlTdGtJN2w2SmRuZU54emIwTml2SnFoXzNrOVVBdlNiQXVuQlFaRVRCUXZSU2w0SmM4elR6SUdXeVlMbEF5VGgtY0JHaHZldHZiN3pXTjBLTGVybFRFYnJxZ1phYjhqc0FtdjFzRHo4d0pxNUlMZEluLXlPY3JMblpxN1Q1RG9XQXc?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 03 Jun 2026 09:13:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9EdXNoZExkZFRqdGxXOWtaYnF1ZjV0ZXhwYjdDVWJrNXBiMlpTQmo3T0FYQnZFTGtJTGl4YkZuZ0NxSU5jZVA4NFlrUlJEeF9OaGpvMUpqYzhIbkx3aUNINU1NSWxlNnFOckdtbHFrb05zdWFoS0pqWXZaRHo?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "DNCA Invest Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "source": "MACSF",
+   "date": "Mon, 18 May 2026 21:01:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
+   "source": "Club Patrimoine",
+   "date": "Wed, 06 May 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Thu, 25 May 2023 20:49:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
+   "source": "MACSF",
+   "date": "Fri, 17 Jun 2022 01:42:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest SRI Norden Europe - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 12 Jan 2022 16:36:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
+   "tag": "DNCA Invest SRI Norden Europe",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
+   "source": "Profession CGP",
+   "date": "Thu, 24 Sep 2020 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  }
+ ]
 }
