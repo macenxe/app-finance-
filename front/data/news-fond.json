@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-23T05:39:26.225Z",
+ "genere": "2026-08-23T06:56:53.394Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, l'obligataire et la géopolitique restent un frein - Boursorama",
@@ -132,13 +132,13 @@
  ],
  "eco": [
   {
-   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 23 Aug 2026 05:01:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
-   "tag": "bourse",
+   "titre": "Le prix de l'eau en bouteille en hausse de 2 à 4% depuis le début de l'été, conséquence de la hausse du prix du pétrole",
+   "source": "BFM Économie",
+   "date": "Sun, 23 Aug 2026 05:39:42 GMT",
+   "lien": "https://www.bfmtv.com/economie/consommation/video-le-prix-de-l-eau-en-bouteille-en-hausse-de-2-a-4-depuis-le-debut-de-l-ete-consequence-de-la-hausse-du-prix-du-petrole_VN-202608230063.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
@@ -360,6 +360,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Video: Pops Magellan on Groove, Gear, and Finding Her Sound - Reverb",
+   "source": "Reverb",
+   "date": "Wed, 12 Aug 2026 17:26:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTDVoTmdzakE3SGw3NV9fZkRhVWlWS2s1WkNfRkkwMVVabGpEMncwMzVLUG1iLUVtNzBBVE82ZkRtR1lOYUt2RzJlY3kzb1g1MXp5T3NGU1RibHQ0MjlMWGpMUHlfTkl1SnFxa3hVQXNlWWFhcHdXSE42UTZwRUNsVTd1YmRYQWpleXhr?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Les performances du titre Carmignac Patrimoine - 10/09 - Orange Actualités",
    "source": "Orange Actualités",
    "date": "Mon, 10 Aug 2026 00:16:25 GMT",
@@ -367,15 +376,6 @@
    "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - Presse Agence",
-   "source": "Presse Agence",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYUpUU3BvQ19nZFNLZU0wV25SVlgzVGhPc2FTdm51VG5YdnlKNzM2MHVyU0lNelNBX3FaT0FtdVotTGtCOFpNNGtpRUZjSjQ3RV9DMmZtZk52VzRnYjRlUnlrY2p5SWJOazB5UHJaTS1TV05lZy04M2NkYW42cC1iS3pBT1dSNnZCYUR5ZGd3MXV6ekhLcEdCX1FDbnh4T3ZWRC1YVExpX0czTlBRMHRRRWxrcG8yQ1ppRS0xaXlsNm5vYzQ2Z2RILTdOamdiNzQ?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "negative"
   },
   {
    "titre": "Magellan Aerospace déclare un dividende trimestriel de 0,05 $ - Investing.com France",
