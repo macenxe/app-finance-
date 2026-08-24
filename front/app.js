@@ -1081,6 +1081,16 @@ const App = (() => {
       sauvegarderEtat();
       renderPage(true);
     },
+    // Bandeau de tri du MOBILE : un toucher fait défiler les périodes de performance
+    // (depuis le 01/01 → 1 an → 3 ans → 5 ans → …), cf. ucTriSuivant() dans pages.js.
+    // Toujours décroissant : le bandeau n'offre pas de sens de tri, et la meilleure
+    // performance en tête est le seul classement attendu sur ces quatre colonnes.
+    cyclerTriUC() {
+      const cle = ucTriSuivant((state.ucTri && state.ucTri.cle) || 'ytd');
+      state = { ...state, ucTri: { cle, sens: -1 } };
+      sauvegarderEtat();
+      renderPage(true);
+    },
     setUcCat(cat) {
       // Le filtre peut faire disparaître l'UC ouverte de la liste (le panneau retombe alors sur
       // la 1re UC du nouveau filtre) : on referme la comparaison en cours pour ne pas la lui laisser attachée.

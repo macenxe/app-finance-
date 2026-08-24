@@ -1628,9 +1628,24 @@ function escHtml(s) {
 const TRI_LIBELLES = {
   nom: 'nom de fonds', societe: 'société de gestion', categorie: 'catégorie', secteur: 'secteur',
   sri: 'niveau de risque (SRI)', note: 'note Morningstar', ytd: 'performance depuis le 01/01',
-  n1: 'performance de l\'année précédente', an: 'performance 1 an', a3: 'performance 3 ans', a5: 'performance 5 ans',
+  n1: 'performance de l\'année précédente', an: 'performance sur 1 an glissant',
+  a3: 'performance cumulée sur 3 ans', a5: 'performance cumulée sur 5 ans',
   maj: 'date d\'actualisation',
 };
+
+// Cycle du bandeau de tri du MOBILE : un toucher passe à la période suivante et revient au
+// début. Le bureau, lui, trie par clic sur l'en-tête de colonne (App.trierUC) — le bandeau y
+// est masqué, et ces quatre clés sont exactement ses quatre colonnes de performance.
+const UC_TRI_CYCLE = ['ytd', 'an', 'a3', 'a5'];
+// Libellé court de la puce « ↻ … » du bandeau : la période qu'on obtiendra au prochain toucher.
+const UC_TRI_CYCLE_COURT = { ytd: 'depuis 01/01', an: '1 an', a3: '3 ans', a5: '5 ans' };
+// Clé suivante dans le cycle. Une clé HORS cycle (tri posé depuis le tableau du bureau : nom,
+// société, SRI…) ramène à « depuis le 01/01 », le tri par défaut de la page — la puce annonce
+// donc toujours la destination réelle du toucher.
+function ucTriSuivant(cle) {
+  const i = UC_TRI_CYCLE.indexOf(cle);
+  return i < 0 ? 'ytd' : UC_TRI_CYCLE[(i + 1) % UC_TRI_CYCLE.length];
+}
 
 // Barre « Comparer », à droite de la ligne de filtres (bureau seul — sur mobile la comparaison
 // reste pilotée depuis la fiche d'un fonds). Deux temps, sur le MÊME bouton :
@@ -1749,6 +1764,12 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
     maj:       u => (ucPerfs[u.isin] || {}).t,
   };
   const tri = (state && state.ucTri && VALEUR_TRI[state.ucTri.cle]) ? state.ucTri : { cle: 'ytd', sens: -1 };
+  // Période de performance affichée sur la carte MOBILE : celle du tri en cours quand il porte
+  // sur une performance, « depuis le 01/01 » sinon (tri par nom, société… posé depuis le
+  // bureau). Sans ça, trier sur 3 ans classerait la liste selon un chiffre qu'elle n'affiche
+  // pas — le mobile ne montre qu'une pastille de performance par carte.
+  const triCarte = UC_TRI_CYCLE.includes(tri.cle) ? tri.cle : 'ytd';
+  const triSuivant = ucTriSuivant(tri.cle);
 
   // Colonne « VL du » : date de la dernière VALEUR LIQUIDATIVE du fonds — la valorisation
   // publiée par la société de gestion, pas la date de rafraîchissement du site. Le montant part
@@ -1909,8 +1930,12 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
            seul endroit qui dise selon quoi la liste est triée, et il porte l'indicateur de
            chargement des performances. En bureau, son aplat coupait la page juste au-dessus du
            tableau — remplacé par la ligne d'état à droite du titre de section. -->
-      <div class="uc-sort-banner uc-sort-banner--mobile${hasPerfs ? '' : ' loading'}">
-        ${hasPerfs ? `${tri.sens < 0 ? '↓' : '↑'} Trié par ${TRI_LIBELLES[tri.cle] || 'performance'}` : '⟳ Chargement des performances…'}
+      <div class="uc-sort-banner uc-sort-banner--mobile${hasPerfs ? ' uc-sort-banner--clic' : ' loading'}"
+        ${hasPerfs ? `role="button" tabindex="0"
+        title="Toucher pour trier par ${escHtml(TRI_LIBELLES[triSuivant])}"
+        onclick="App.cyclerTriUC()"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();App.cyclerTriUC();}"` : ''}>
+        ${hasPerfs ? `${tri.sens < 0 ? '↓' : '↑'} Trié par ${TRI_LIBELLES[tri.cle] || 'performance'}<span class="uc-sort-banner-suiv">↻ ${UC_TRI_CYCLE_COURT[triSuivant]}</span>` : '⟳ Chargement des performances…'}
       </div>
 
       <!-- En-tête de colonnes, bureau seul (le mobile garde la carte empilée). Chaque titre trie
@@ -1971,8 +1996,12 @@ function renderContrats(state, ucPerfs, ucSecteurs, ucMeta, ucMetaGenere) {
             <span class="uc-societe" title="${escHtml(meta.societe || '')}">${escHtml(societeCourte(meta.societe))}</span>
             <span class="uc-cat"><span class="uc-cat-badge${catCle ? ' uc-cat-badge--' + catCle : ''}">${catLabel}</span></span>
             <span class="uc-secteur"${sect ? ` title="Secteur le plus représenté : ${Math.round(sect.pct)} % de la poche actions du fonds"` : ''}>${sect ? escHtml(sect.nom) : ''}</span>
+            <!-- Deux pastilles pour une seule cellule, une par écran : le bureau garde sa
+                 colonne « Depuis 01/01 » fixe (les autres périodes ont leurs propres colonnes),
+                 le mobile affiche celle du tri en cours. Voir .uc-item-perf--bureau/--tri. -->
             <div class="uc-item-right">
-              ${perfBadge(u.isin, ucPerfs, 'ytd')}
+              ${perfBadge(u.isin, ucPerfs, 'ytd', 'uc-item-perf uc-item-perf--bureau')}
+              ${perfBadge(u.isin, ucPerfs, triCarte, 'uc-item-perf uc-item-perf--tri')}
             </div>
           </div>
           <div class="uc-item-bas">

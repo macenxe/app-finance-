@@ -1030,6 +1030,16 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 .uc-sort-banner.loading {
   background: #f5f4f1; color: #9a8f7a; font-weight: 400;
 }
+/* Bandeau cliquable (mobile) : un toucher passe à la période suivante — App.cyclerTriUC().
+   La puce de droite annonce cette période, sans quoi rien ne dirait que le bandeau est une
+   commande. Pas de surbrillance système au tap : l'aplat :active suffit et reste dans la teinte. */
+.uc-sort-banner--clic { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+.uc-sort-banner--clic:active { background: #e2e7ee; }
+.uc-sort-banner-suiv {
+  margin-left: auto; display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 10px;
+  background: #fff; color: #46618a; font-size: 11px; font-weight: 700;
+}
 
 /* Liste UC verticale (cliquable, sans défilement horizontal) */
 .uc-liste { display: flex; flex-direction: column; gap: 8px; }
@@ -1069,6 +1079,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
 }
 .uc-item-perf.up { background: #e6f4ed; color: #1d6f4c; }
 .uc-item-perf.dn { background: #fbeaea; color: #9a3535; }
+/* Pastille de performance de la carte : le mobile montre la période du bandeau de tri
+   (--tri), le bureau sa colonne « Depuis 01/01 » (--bureau). Les deux sont rendues dans la
+   même cellule, une seule s'affiche par écran (règle inverse dans @media min-width:641px). */
+.uc-item-perf--bureau { display: none; }
 .uc-item-bas { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
 .uc-srri-inline { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .uc-srri-label { font-size: 9px; font-weight: 700; color: #9a8f7a; letter-spacing: .04em; text-transform: uppercase; }
@@ -1629,6 +1643,10 @@ a.news-card:hover { border-color: #c9a96a; box-shadow: 0 3px 12px rgba(22,48,79,
   }
   .uc-item-perf.up, .uc-perf-an.up, .uc-perf-txt.up { background: none; color: #1d6f4c; }
   .uc-item-perf.dn, .uc-perf-an.dn, .uc-perf-txt.dn { background: none; color: #9a3535; }
+  /* Colonne « Depuis 01/01 » toujours en place ici : le tableau a ses propres colonnes 1 an,
+     3 ans et 5 ans, la pastille suiveuse du mobile n'y a donc rien à montrer. */
+  .uc-item-perf--bureau { display: block; }
+  .uc-item-perf--tri { display: none; }
   /* 13,5px : le nom est la seule colonne à taille de lecture, les autres sont des données
      secondaires. Les noms les plus longs (« Pictet Clean Energy Transition P EUR ») passent en
      ellipse sous ~1330px — l'ISIN et le nom complet restent dans l'info-bulle de la ligne. */
