@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-24T11:39:14.071Z",
+ "genere": "2026-08-24T13:09:14.421Z",
  "globales": [
   {
    "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
@@ -67,6 +67,15 @@
  ],
  "produits": [
   {
+   "titre": "RAMSAY GENERALE : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 09:25:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSWVCaUxGbzlRelZ2RDRVWG5pV3Y1VWtYUGV4bmVvcTlPaTdteHc2RVZJdC1sM0wxWU0zZW1TRkVpNW5MMEl1djV6anBSNE5uTHExSlI0ZnE2UHlqRU1XUnBDUTlQQ090bHdrNUMyNVZqckkxa0lKVzdEcmw5dXA5Nk4xM0tVOXA2azQ4bERUVXMyNE9pdUxIb2RYQUhKdnJnS2F6UjdxRGt0cGlmWXFjUU9MVElRQUFNbk5CZmswT1NMNm5ncXdNVjZ5SGE0UjB4Z0tIMzNWdFJBZ9IB3wFBVV95cUxQd01XcXV6RjZUTmYtdXR0OU5UWHktcUZMQmt1bkQtX3k1VEMzY3hBaWRoZHRJNzgtOVBWNTU0SVNzSWttcmhobFVYR2F2eV9jSjF3MjBUTmh0NDBscHR3YnFhLUZuQVR1OXB4QzBXREpkemFxTnNycFNRbGVWNFJhV2pBOVFtMlJWSmJveHo4S0dOdHUzQVQzNmFSNWlSMjJzZ25oSFBvcG1mVGpaYVNmQTF0d3RNWWUxOEgwSk9ySjBDRF9ZdWt4N0hybkxjUkQ3TG1KdUtqUEcxcUFsV19n?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 24 Aug 2026 09:00:59 GMT",
@@ -74,15 +83,6 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "M6 : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 05:40:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNamNfZ3FhQVRiY1QwNVJqWkJ4dUxCRGlsQVZUSm83TmdCTTJBbnZlY0RnSEpUNU1qajFRN2VPWUxVT2dKNm9yWkhJREJ6S2dEMXVOUXJNSUdEQW9oNkxGWUpSMm1WQUdvQVozMzZMMFZ2MVBaR3NSNXZGaTFUM3ozMXNXeXQ0ZlhXSWFGN1ZYbDdzZXFNdEhyZG54bzJsRHVoRTRMNE9pOXRFLXVqV2xzNkprWWJhRlRDazFmczFlRmFFQ1RIdHFfU9IBzgFBVV95cUxNMkZtQ3pOamxZMWdwWEVBVG83OTFWU1IwMDQxUHZVVGJsNWtCT1NoOUo0dnVwXzgtY1lITFZxaEhYMW5WTnlXeDBaZmx4eGhHQW9EWkNudExUOFhHeUlabzBLd3pyQ1JydWNUNlpvOVl6X2ZjeEF4eDQzeVNPbDJiZWF6ZFhTbGF6SUw1dXNGOWhWdDFEU0QwbHNnMmFKQThCVmJHbk45aDhISTBUbGtocGJYVVJleHdHWGJmcHJTT2oya3A4OXd4N2lBSVB2Zw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
   },
   {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
@@ -141,6 +141,60 @@
  ],
  "eco": [
   {
+   "titre": "Mexique : l'inflation s'accélère au début du mois d'août - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 24 Aug 2026 12:40:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZERwallUTmFRN0pLX1NsbDhjakZfMGpPVmVpMWdzOVFJaXR3SWpaZDB1TjBxY3hMLWpzalJSNWpybllRcWFRLWVzNllxS1JpZDZDMmpkdVBfZkFnS3FjS3FJamZtU3BUQk92S1R4eEpmRFJMem9PbTdLQWl0Z1F5dDl0dlYzQ1hzZ3htaW9ZeGVNQkN6NlJJTWYteS04S1BxUTh1d3F3Z0lLbTZEVkQ4REh6MUk?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA : l'indice de la Fed de Chicago sous les attentes - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 12:36:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQLXFWdFROcU9HR05xVVdwVHdnaGw3REJTeTYwRTM3ckFtNE5tOGk1TURiRjhhaVY0NVBTd0hSTVoyY2oyTlgzMHBiRWdNTnlIdjZQWDQ0SGp2UW01X0x1SUw4TktjYzBveVBWamVpYWx5Ny1UQzZlMWJZdW82OWNNd3ZtYTVmQWMxdldIUllGSVhQSko3bXlaVDI1dXFHbkFlSE12dGs5SzdhMjlQcWZrTDVSNmd0MDFLWE9wYno3WGhHdnlicWpSYtIBzgFBVV95cUxNR3BNUzlQVlJkVnVoSjBRMXB4Z09UZGtxajZwVF9WVUJTYU5XTzFMbHFSaXdFLVZLRGpvakFHWHdsTkRta1BqU0dJb3Q1Q0U0UkZkVlhGVGItODhPQnBwMktYVHVlQWJrQ1g2MHNWdUFUN2VWRUhTaTF0Wm13RU1FWGVEaktpOVlHUXRjczE4d0U1aGw0LWo4YUN4eGloQWw2WkJWOTV5UHlLaWdMc1F2ZFpQSm1RbzNuS0dUbElqQWpXbVhUcmQ2N2dZaEZzUQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street vue en baisse, la géopolitique dans le viseur - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 12:27:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbGpVejB1WjRKNkFiS2VBQnRfdU00dnUwN3RwWHhfX3BiT0RTNDY4NHp0clZJZ3cwWVFJbHd0dTNoekJ3UndVY09BdTlfeTdseUxleHFXbG9ha0pNLTJCWlJzd0RxSjR2a1UtNGtma2dIVDAxWk1CNUFxMEFLall6UWxyZUs4anRsSGswaFRzWkdGZWlSaklyY1NMZWFlWkY2eTQwUl9pQkY5QWlUQi1GQkV4cTlwa3VCMnU0TW14cmczWXNBcWtnSFpKQi1mMTjSAdQBQVVfeXFMTno4VnkxbHAzZTlZakhnOUJMcU9FTGVjbmdmenlmSjQyTFhmTHBHM0N0R21SSm5RdWk5THNxMzRTaUpCUDNxc3BMVW1JYjBoS0lwN3hfTnZMa0VVSDdob3J0NHFNbmdzX0lheFFiczRPQmlES01PbVBTektFS0tRSjMwTzRQR2ptMmlGallXSDE0LTdiZHY1UVZVRUtQU2FHb3A1OGoyMmtHZDdoSFZSRjFWN29KR3ltRXl1Z05JOVhqUE9KY2ZINFBoOE5YMXNhV1h0VTE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les marchés mondiaux patientent avant Nvidia et Jackson Hole - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 24 Aug 2026 12:23:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbUw1VjU3WXR2c3U2UEtXelBRM2xtTlllRjFMcWlMYmNJMXhfbXdfbG4ydUNlOV85WC01MFJFbVE5aUJhbkZMdE5Tbmxqd19nQjk2NXo5MkYxVURJQnZ5eFk1UzRQQWw5aWZYNGxlOEdzM0FDUlhXNjdXUEVXcDVxZnlWYUxpMllpZlp3N0Rad19RanlFcFlJTFVKUG5CX1pkblhQMmRjMk5KcFJnZWVYSEpiTGl4WlVLck93TQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'inquiétude qui règne sur le marché obligataire rend le premier discours de Warsh à Jackson Hole d'autant plu - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 12:22:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPRzUtVW91MGhmOUZBdndaV3FEX1NtUG9KdElZVGZuRnYwaXFPdUpNT1BtTlVMNktkc0lNZ2JSdWo4TlpaSVdqWWp2VmJXNnlmSV9DTGRMc1ZWM3M0cUZQMkk0aG9fcjFSU1FkbUtaRGpKbEdVRkFMSy1McWZxZ3ZIVWpsQnJRQUNuVnpTZ0VrY3N2cW5uU0xDMGlzNkxOZWpnTmdHQl9lRTBvNS1qS2ROUzFGQmpjbUgyNndzRTRJZzNvbnFUWlI0Y3RxRDFZNmN5dnVFSUZVNWkxYkhUWHZFdHAyNVp1ZTJfa2tVZ3FrbWgzUS1fQ0RkWmxfQW1naUdrMUNvS2lSTU9DN0taQ2xoUkRUUEZzLWhnSmd0cEw2S3pzYWZmOUE4aEFqblRUY3ItOXM3MXRB0gG7AkFVX3lxTE1VY2ZCVkFkaGRKbGQ3cU9fUEJ1NEZ5WkhHa1ZiR2ltU05HX2pkRGE4ZU0tSWhOckVab1AtRmVKdWxfM1ZDRW5nYmI0a0stN2pkM1ExNkpRTXdCWTYtVWVIVmFxVGt3NVpsNEpwNmtLYnpybVZUUjdHcnlBeGRfSHVLRGNuMXFZa3dsMlI1YkdCUFBvYXJzUEtabUxSN09xV0VjdHVUMHZCTnAxaHJaMjNfVFA1Zm5VVVJZeFU1azJpd3poeUpZbWc3RGJTX1FoWFEzc1ItT1VsOXBNR3Awd0NORHJHTTEyMDdNUnp3dkZ6OXlVMDJuS3ZDbW9leFNwLXBWLW01STQ3NU5uSmhhSDgtR3hKbTVpWldXRXdSclZJcnZQWDJsOXg2aHVDS2dIa2k2T0k1ZGlFaTRaYw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Budget 2027: le ministre de l'Économie confirme qu'une désindexation partielle des retraites \"fait partie des pistes\"",
+   "source": "BFM Économie",
+   "date": "Mon, 24 Aug 2026 12:16:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-budget-2027-le-ministre-de-l-economie-confirme-qu-une-desindexation-partielle-des-retraites-fait-partie-des-pistes_VN-202608240496.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "\"Chaque enfant recevra près de 70.000 dollars\": Singapour augmente massivement ses aides pour relancer une natalité au plus bas historique (mais ne pourra pas se passer d'immigration)",
    "source": "BFM Économie",
    "date": "Mon, 24 Aug 2026 11:34:02 GMT",
@@ -150,56 +204,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Nvidia et les perspectives de la Fed pèsent sur Wall Street ; l'Asie recule, l'Europe progresse - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 24 Aug 2026 11:28:39 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQNEFTMExFT1ZDM3l1STdqVTZncFJwWDFENUdab1J6Yk5faDVZdW1BZU9ZN1Z0MGlyN2MybGpZYzBtdlJXdWgxTnlZNm1VeXQxbE5OdmhHT3F3ckFZQVd4SnNUdjVZUHNza09OR3dWY29ETXVtOTEzQ2p2bjc4ZmRtTE1ZcDZPajhGZWNndlQ4MHEtcHBVWlBqdzVMbU5NWlZsdGprd1JJNmY1ZnhkOXZmV3cyVHg4Y0FaTndHNGN6UGJvUWtoR1FSMUo1YU41bFhESEp0X2dmcHJWOXh5THgyenFVSnhDeWs?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "STELLANTIS (Milan) : La tendance baissière peut reprendre - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 11:13:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTnhwTGw0eFNoSUhBdjVUYmkyckhrYnJRamtmZFItMlQycWM3anMxNTdiZWVNTFAzckQxWDR3TGttMXpObUpMaUp4Q05rSkZEQlVxS2NRVGh2YUZKZFd2N0tXOVBLT0ZSTjlSc2xQYWJUNXFzN3VyRnhfX25IMUZ0amRBMjFRWmdvVHRqdm1TemhWNW1HYmJjQml0ZmpHbVU0SXh2VHJLbzNUT1QxS0hoS1VqOF90OEtQQ0RWMVkyTTdNejhYS21yZG0wY9IB0AFBVV95cUxQRFdlTDVXRmpBNVhudVFWVXdQNDVsZFI2RkwzSWZIU0NNMnZWQkRfaUFtd3VDUl82YlpFOU9FYlZvQkFfWGRCUGhELThqN2FIY04yaGE4OG12TTJBUnd3eUhCTnlsZjhYZ3ZMdnhTaDU1d3JscjFmWEdMeVdwWjlLWjg5RDZrblpESEZWTTBPRzktcC1yN1A5QndIMXlDRTBRLXBtUDBQNG9fX0M0VGlvOUlsNnAxNERjd3pKbS1XRGN5UGZVSTlJRUIwcVktNVBB?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Tesla rappelle 3 millions de véhicules en Chine pour des poignées de porte - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 11:11:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPSjdobVc2RkVvS2M3cG1sVVFkU3k5SWJJQ1ZxY3R4MkdFdGo0WXlKNkFNa2U2d1k2MGVzYlJJMzBtYTcza21kZHZSNEJQaU1zaTRjZzRyNTYwTGt0a1RXTFlyQ2w1di1CMzY3MDNaMWF5T1ROOVRIZDBjNThSbU1qUTJ1ekl5SHFkZWcxMHd3OWVJQURoaC1FR1hXb2plMXBFem03QTdIM0NDdlRHUXJtUkR0UXZkcjFWWV9sRmJNdl9wUVFxTjZvZ2tZaktwTHdaNGRPRkdWdTJkczFTNTJ5bnBiTnYtVknSAewBQVVfeXFMTXE4bkM2THA3R1JhaEY4U0k0MF9JN2lrY2dPMlBQR0g3N2pkWC1QS0RVRmU1NFdPNlhfZDRKRG1tTV85WlRreVUtdG5ZczFNdTlfM1BLSHFnTXRtdFRiMFEzSFhmX0lBQXdjR0h1bUY4Wm9GelJ6cjlPVHMwdXFzMDJMLVRyMG40UF9iaGFXSTNmQk5mNGxzenZYYmNfNFk3VDdUblU0V3RJbFNLMnFDQVFrREhoZU1yVURSekRLMDlzZnFiNmxKSlZXRlQ0NFZHeXhBczU2TUdwMkdFcTRsTFd5bkhWbmZDWW5NZXo?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40 : début de semaine prudent, le marché reste indécis - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Mon, 24 Aug 2026 11:07:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQ29rQ3E2a1l4R0ZNNndFbGVSNWxQWVQ5d0wtQnlpLTRPaVh3NzhJdjFKYVp1SU5DTWhBUnB0THI3T0d1dGdJOEJPQkVOVGxQVTduZ0hxTS1lRnJYcGRiVjU5LUV6RE1Pa3BCcWZFMDVmMEhpUHNlNEltR2pfVTZ3T3FCTGk2MFlpaFdTWDREWE1RbHNOVFBZVmktR2Fadw?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Volkswagen: les salariés fustigent la communication de la direction - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 11:06:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQQS1rTHdqNDhNT2IzWEhHUEV2WHBmMU1BdF9SckotSWFJV1BrekJfMzZCVVh0VmV4cGZJOEotdjA4Mm5IUllzVnUyaDBxbVhIOVMyalFnbk5oOU5YYnB3VVpNNXdnbHVDdlBpbjJUZC1XNGJEVHRYMVBjVXdRWWFZNk55Um4wYTVyNjNBVzJPbWRCSlNhczM0RS1wRzBfSi1aSXRXNTdDU1hZSzJJWk91aFdzT0FsU2hraFppUHFVUXJKMGhsRFN1ZE1PNmp1c1prSk05MmtsRGJPQk1J0gHiAUFVX3lxTFBPS3MxaVNVTVRDeFRWNnRpd1RUeVBJaDkzX2x6M1RxbUNYNU9XZzlDd0xIVXpreGxmNmd3TDdBNGNVOVUwMzYxWnF1eG1qemtJUTRId1Vid3BfME5pcEtJaktIQmJ4QWJES0dQZllwMjMyRENOT3Q5Mm80V3IyeFBsWHdpcmVVYXNzT0U4RE5KYm9Mei1BTkVRUEMtdWlDY2R3dEc3Nm15MlFTMTU4M2VTWGtLWEJSU3JVOVNKaDRQZ0FSQ0RURS1RT0w2WGgtWWZ5Nmo3Q2UwODR3eGQtcjRVekE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre lundi: Nvidia, Micron, Coinbase, Alibaba - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 24 Aug 2026 11:00:44 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeHk2SG1QNXhqTHFZa1duamRqNjZiUGtLZTM0d0dHa3Q4Zm42RHpkUVBYYl9iSThHQ1N4b1YydXpRdGlsWE9Gb0RqV0FwZ0xJZ09iNGtKcjhJdjRma1R1NDZzR3NiRTBpNXVIQ2Y4RW0zTUJVZUVZZEV3MEM1YklXSjNTRG1qRDhzR1M5ekxBc2hoUmdnNWxrUnFRT09QdkViU2owdjVaSFNYZw?oc=5",
-   "tag": "bourse",
+   "titre": "La BCE défend la confidentialité de l’euro numérique alors que les MNBC font l’objet d’un examen mondial - TradingView",
+   "source": "TradingView",
+   "date": "Mon, 24 Aug 2026 11:21:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAtelQxNFNnRjduQmt0ZnFHM1lnZTRjc1MwdHk3R2tpekVGZUM2YTRISVNUVnRZbzc2b2wxQWZnb3lySzFQRzNXNS1qNDdneGVwQnA0eXlKenhzOEJVTC14bXJkUUtEdFdod1hheEhZaw?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -213,24 +222,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 10:59:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Vers une ouverture dans le rouge à Wall Street, sanctions US et taux longs seront scrutés - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 24 Aug 2026 10:57:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQM2hPYTZBYjdET1BTOWQ2Skg1cjE2c1ZVd3N0Zkl2N3RpVUIyZGxaTWNEa1ExS05rNlBpNEM4ZTM3Ml9IOUZjT3ltSUtiWDFDbExOUW85SElJV3hTQ2ZRdDhSdkJLQXduRDJFVzdkbzF6LV9vMkRYdWgwMXZUQ0U5SGRSZjAyeDAyOFNmNXF3TFFDSWM0cWNVcVN1ZmRHUXVRV2ZNTUd2ZTJHaHFkOF82MktzREFFa3ZkZGc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "USA: Vers une ouverture dans le rouge à Wall Street, sanctions US et taux longs seront scrutés",
    "source": "ABC Bourse",
    "date": "Mon, 24 Aug 2026 10:57:47 GMT",
@@ -240,47 +231,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Cac 40 : A l'aube d'une semaine chargée, le CAC 40 est sur la retenue - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 24 Aug 2026 10:54:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZlFkS2N0ZzZOS1dUQWdtcDBvNjZJU2JDaXVCSVR5RTBtVnBuWXJ1aE5Ud0lyWEdBZ0VyNjJFZlZfbk92eUpmdzAtSVNuazZqLXpBbHNrLUxkU1l5RFZjV2JhTkZyZ1hQNDhKNWtJRjJld1JNSU9tNmZ6Q29mRWlxWG9lWXRla2c4S0VNSmV4TnNhSkRpX2s1aEhERFZrQmRENEFlS2lCY1F4c2lKX05lcTVieS1HV09idTlMNHNNWFh0S21CYUFVSWJBZTllNjVQRzJv?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions et le pétrole reculent à l'approche des sanctions américaines contre l'Iran - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 10:53:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNbnd1MURyQUZmYVpvbVZsUUhiUS1mc3QzVnZONmpZbzBnanFVMnh5UUVpQ1NESXVfTWkxQy1xeXExb3V5ZTcxdkZfaGJzMmMxU1VRSXhOdG5iQjU4TkVVdFY4RFlHZDVPanRxazBfbFhESGZVRVFqWnhQRnZhOXhnN2hCaDJVQzFpMzJjbTE1ZnZqWVFXZDZaNUZra1JEVGFYWWdrbWFaYzlpcW0wakpaSUVSMTlsT0RKN1ViX0I0a3NSeUhpUFlHQ0RoWU1GVy1UM2dHYTRGVG1HbmYtbFNHZFItckNBaFVCUEV5UThLdkY0S3JsalR2RNIB_gFBVV95cUxNLURsWUtzZDRqRzZVbFFrbHFJVzdwdkYxYXJod2NQemo4V0lqRmpVd0VPT2Y4enNramRNVGdZd0N3VTlJNTl5RHNPM0dReW4zYlpJcERHelg4TzlkZUltS04zZTJpVkplVG1NUTAySlBCLXRRdTVlNHdLeTdOU0lyTS1EcnR3Q1BKLXdtOVFZTVM1cHcydlNRN3MwSjF1U0pSZlI5NVlJS0dhZEtMZmN4WGVISlRrc05LeEkwRFF0eERJX19wTWVrTDhzcGtqbmpKZ0ZZT2h1ZEJvcERiYUd4dUw2X2JGQjlmU05Mak9MSm5tVVg5dUJSMDdDcmh1UQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Anthropic, soutenue par Amazon, pourrait viser une levée de fonds de plus de 100 milliards de dollars lors d'une introduction en bourse historique - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 24 Aug 2026 10:48:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMFZQUENTOHF3ZnlTc1AzOFFzblNkVUk1c0pKdXd2N3dMYVFfenlPeVRwLUZxUXJqeUdYeExrdzFwRFpPY2pxbHdaZ1pKRm00MHFJNHlpanptMXVNVmc1S1F2dTJ0YlpEaHpJRjFYQUoxbm04aUJBcC14djVnOUtTaklBQ0F0ak1fU0Y3SnBBS0dNaGhLQVI1ZFEtcjdsUFZ5ZkNBb1BLRVJucVduanhUY3BuaFYwM2NKalhVSU8tcUF5d2Y4ZmJjck1WR2R2bWpjaWNCdlRRNzdNUDZfdkNmSUQ4c2pTQnNVazBpYlplSQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La Bourse de Paris hésite, Scott Bessent attendu sur la dette américaine et le D-Day économique en Iran - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 24 Aug 2026 10:45:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNQWJ5ZG5TaXBWVWZzaVhPZlY3STQybDZfcjY2aHhIZzZhZU9VQXdVaDVxWEZ3TkZQSGo2REtvcExWcTJsMjVKQzI2eHd2Z1FNVjktNVdVSHhWS29hbG55V2RYLWc4TnpRcVdSS0RybDhZVHFFTG1LaG4tcXB6ck8zQ2cyUGY4NzlLeFJ1Q0F2QzZUWEY1YUdSdGVNVVotbDh0U1NuUGVCdVZRRnFqM2hPQzk1U2pxMjd6V2lRNjNVSjJhY0ttTFcxZ0o2Q2xieGkxcmIzWVFxdFQxSnBiM1NWZDZVY3RfN1UtR2NsMk0yd0I2SnkzVk1EVllEVVAwSmFqTldr?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Jackson Hole: Le premier discours de Warsh sous surveillance avec l'agitation sur l'obligataire - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 24 Aug 2026 10:41:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPQ0lwVElKZ0hYbFM2ZEg1QldZeEwwQ2dVZjl0MDctam9XRkFJVzVidC03Mlg5aGg4anNLVmZOUjBoNF81MWZXZ25DYkl2SzRXV2g5SW9HZER5aUpUZGc5VE5HS0tXcnA5dUc2Nk1qMVRKUGl6elJTNVNDNUplcEgyNDE3VmJ4UTBLY05rQVVuU3pvbzd5aTFHb2NGSEpleS1OaC1yeVdDNk1jaENNRkVJSkNnOHZ1RUlianBiZXlwQUZvTV9ud1ZmMkd1Yl9qWUxoYlNhZlpDdkt5MjROWHE3aS1Ma29nak5hWE1pbWFNWm1HSFZ5Rkg0TlFIRzBEV2dsc0ctZ0FBQjZWUmZtVVdjVEYwMWbSAZoCQVVfeXFMUFU0SzdJSTZUSzdkR2w2Z01yT1ZKUHVGU0M2ejRzNkQyXy15VVhLZ2Z6blVFajBIRWowNzUyREtZVGotUldOQVM4N3BkTXAyWHYwMnNXR0p1cHBUcm5lOFlYWm9qVUlHdUFleXV0WWZKdUxXNDJHU1ZySk1GbkN1cy1UTDJMSDNjNU1BSVRnOGVWRmduUm0zbDZTaW80d3FwR0tsanc0ZDRHcFN2UVl1NFB5UDZkVmVkb1NiWkxCMmxIWTJDUzMwM2p4NXVSN1N0OGJFZFQ0d3BoVFBaWXUwZ1pqZGR2a3E5VjVyZnFVbnRUeTlWVXoyWW80R2dDaklTQjc5ZTJnYV9LcFp4TjZ4MWZqNDUyTUQ1MDRR?oc=5",
-   "tag": "CAC 40",
+   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQVTRLN0lJNlRLN2RHbDZnTXJPVkpQdUZTQzZ6NHM2RDJfLXlVWEtnZnpuVUVqMEhFajA3NTJES1lUai1SV05BUzg3cGRNcDJYdjAyc1dHSnVwcFRybmU4WVhab2pVSUd1QWV5dXRZZkp1TFc0MkdTVnJKTUZuQ3VzLVRMMkxIM2M1TUFJVGc4ZVZGZ25SbTNsNlNpbzR3cXBHS2xqdzRkNEdwU3ZRWXU0UHlQNmRWZWRvU2JaTEIybEhZMkNTMzAzang1dVI3U3Q4YkVkVDR3cGhUUFpZdTBnWmpkZHZrcTlWNXJmcVVudFR5OVZVejJZbzRHZ0NqSVNCNzllMmdhX0twWnhONngxZmo0NTJNRDUwNFHSAZoCQVVfeXFMUFU0SzdJSTZUSzdkR2w2Z01yT1ZKUHVGU0M2ejRzNkQyXy15VVhLZ2Z6blVFajBIRWowNzUyREtZVGotUldOQVM4N3BkTXAyWHYwMnNXR0p1cHBUcm5lOFlYWm9qVUlHdUFleXV0WWZKdUxXNDJHU1ZySk1GbkN1cy1UTDJMSDNjNU1BSVRnOGVWRmduUm0zbDZTaW80d3FwR0tsanc0ZDRHcFN2UVl1NFB5UDZkVmVkb1NiWkxCMmxIWTJDUzMwM2p4NXVSN1N0OGJFZFQ0d3BoVFBaWXUwZ1pqZGR2a3E5VjVyZnFVbnRUeTlWVXoyWW80R2dDaklTQjc5ZTJnYV9LcFp4TjZ4MWZqNDUyTUQ1MDRR?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -292,15 +247,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "L'inquiétude qui règne sur le marché obligataire rend le premier discours de Warsh à Jackson Hole d'autant plu - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 10:01:43 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPTGpqSHYzLXBXd3ktNVRtcV9DTkpQV050ZVpVa0F3bXhraEtFN0g5MHN0QnJLcmVPWU5Wb2RGcThXWjZvWldvVkFzMGhaOThpcms0MmNEaFVYM0xfbmszSEFQdXBtT1h6TVRMcVhMSjFLTGVzOE9XVWV2Y054ckhqVDZyMmlsaTJTTlJqVDRzOE5KelNlb2ttWEhldG1KU2NsUWw4elloNDA2NWJlbTBSWHM1LTktZWF1WjBBNVQwR2hGNUtFSVo4RFVmVmI2bDJfSTFBUXRZbDNGR285NU5pbEhjOUlpX1RHWTdtVEpoWTlLS0U2c2pBZmxJbHlXNy10MFNIVTl5d1I5enBUQXZhajM3MEVscWZ1XzVNWHBvTFlKQW5sQWozcG11ZVZpS0FDLV8teWwtaDdVajDSAbsCQVVfeXFMT0xqakh2My1wV3d5LTVUbXFfQ05KUFdOdGVaVWtBd214a2hLRTdIOTBzdEJyS3JlT1lOVm9kRnE4V1o2b1pXb1ZBczBoWjk4aXJrNDJjRGhVWDNMX25rM0hBUHVwbU9Yek1UTHFYTEoxS0xlczhPV1VldmNOeHJIalQ2cjJpbGkyU05SalQ0czhOSnpTZW9rbVhIZXRtSlNjbFFsOHpZaDQwNjViZW0wUlhzNS05LWVhdVowQTVUMEdoRjVLRUlaOERVZlZiNmwyX0kxQVF0WWwzRkdvOTVOaWxIYzlJaV9UR1k3bVRKaFk5S0tFNnNqQWZsSWx5VzctdDBTSFU5eXdSOXpwVEF2YWozNzBFbHFmdV81TVhwb0xZSkFubEFqM3BtdWVWaUtBQy1fLXlsLWg3VWow?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "\"On ne peut pas seul déterminer notre sort en termes de dette\": Stéphanie Villers, économiste, évoque la proposition de Jean-Luc Mélenchon d'annuler une partie de la dette française",
@@ -384,15 +330,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "\"Demander des efforts aux plus fortunés, on l'a déjà fait\": alors que le gouvernement prépare le budget 2027, le ministre des Comptes publics affirme \"tous devront faire des efforts\" (les retraités dans le viseur)",
-   "source": "BFM Économie",
-   "date": "Mon, 24 Aug 2026 08:24:27 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/demander-des-efforts-aux-plus-fortunes-on-l-a-deja-fait-alors-que-le-gouvernement-prepare-le-budget-2027-le-ministre-des-comptes-publics-affirme-tous-devront-faire-des-efforts-les-retraites-dans-le-viseur_AD-202608240310.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Bourse : Nvidia, inflation et Fed au cœur d'une semaine explosive - Le Revenu",
    "source": "Le Revenu",
    "date": "Mon, 24 Aug 2026 07:54:00 GMT",
@@ -409,6 +346,33 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Les marchés restent nerveux en ce début de semaine importante pour l'IA, les taux et la Fed - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 24 Aug 2026 07:20:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQWHotcDRMdWJ2N3R2LXlEYXNuNkg5ek1CM0Q1VG1xNzlGT2EzN2JTYTNyU3FsWGQ5Sld6aF9FY1otbU9Td255OHdoTGVuRkphdm9tVGJvVmd4U3FSLVhlTjdfOUVxLXFzUVpMUTFqd3YyNm9RWXA1bEdjb1JGZzBWbFBzVWZGWDAzTUVsOW10VWl3bXlaUzJBdTNwVUdVRU1qUVkyVUJpUzI5N2owQ3MzUjhkN2lQNGVSV2ZPOER0aGxNMjJ2NGZHZTBUS1A1djdyZGUzdjIySDdNTFlTMmI4b2Z4QlQzY0lTaF90OF80S1JFUQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris se replie avant l'annonce des sanctions américaines contre l'Iran",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 07:09:23 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-se-replie-avant-l-annonce-des-sanctions-americaines-c_701516",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Danone: Kate Farms devrait bénéficier du mouvement MAHA aux Etats-Unis",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 07:00:26 GMT",
+   "lien": "https://www.abcbourse.com/marches/danone-kate-farms-devrait-beneficier-du-mouvement-maha-aux-etats-unis_701515",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
