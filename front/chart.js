@@ -19,7 +19,7 @@ const Chart = (() => {
   // Version compacte (Jour / Semaine / 3 ans retirés) : tient sur une seule ligne. Utilisée
   // pour les fiches détail Autocall et Fonds, où la lisibilité prime sur le choix fin de période.
   const PERIODES_COMPACT = PERIODES.filter(p => !['1j', '1s', '3a'].includes(p.key));
-  const DEFAUT = '1a';
+  const DEFAUT = 'ytd'; // ouverture sur l'année en cours (depuis le 1er janvier), mobile comme bureau
 
   // Géométrie du tracé (unités viewBox). VBH n'est que la hauteur PAR DÉFAUT : une instance peut
   // la changer via opts.vbh (ouvrirInline / comparer), auquel cas dessiner() recalcule sa propre
