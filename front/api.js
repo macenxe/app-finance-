@@ -8,6 +8,13 @@ const AppAPI = (() => {
   const WORKER = 'https://app-finance-live.maxenceevrd.workers.dev';
   let backOk = false;
 
+  // Le back local n'existe qu'en développement. Hors localhost, l'appeler quand même
+  // laisserait deux erreurs réseau dans la console du visiteur et retarderait le repli.
+  function estLocal() {
+    const h = location.hostname;
+    return h === 'localhost' || h === '127.0.0.1';
+  }
+
   async function fetchJson(url, timeout = 4000) {
     // cache: 'no-store' → le navigateur ne sert jamais une réponse en cache,
     // pour que chaque ouverture/rafraîchissement reparte des cours du moment.
@@ -162,17 +169,20 @@ const AppAPI = (() => {
   }
 
   async function chargerDonnees() {
-    // 1. Back local (développement). En production https, l'appel vers localhost échoue vite.
-    try {
-      const [indicesAPI, produitsAPI] = await Promise.all([
-        fetchJson(`${BASE}/indices`),
-        fetchJson(`${BASE}/produits`),
-      ]);
-      let tauxLive = [];
-      try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
-      backOk = true;
-      return assembler('api', indicesAPI, produitsAPI, tauxLive);
-    } catch { /* pas de back local : on tente la source live puis le snapshot */ }
+    // 1. Back local (développement uniquement). En production, on saute directement à la
+    // source live : l'appel vers localhost ne peut qu'échouer et bruite la console.
+    if (estLocal()) {
+      try {
+        const [indicesAPI, produitsAPI] = await Promise.all([
+          fetchJson(`${BASE}/indices`),
+          fetchJson(`${BASE}/produits`),
+        ]);
+        let tauxLive = [];
+        try { tauxLive = await fetchJson(`${BASE}/taux`); } catch { /* fallback statique */ }
+        backOk = true;
+        return assembler('api', indicesAPI, produitsAPI, tauxLive);
+      } catch { /* pas de back local : on tente la source live puis le snapshot */ }
+    }
 
     // 2. Source live (Cloudflare Worker) — cours du moment
     if (WORKER) {
@@ -295,14 +305,12 @@ const AppAPI = (() => {
   // front (.claude/front-server.js) sert la même logique sur /__cms : sans cette bascule, la
   // carte refléterait le Worker déployé, pas le code courant.
   function cmsUrl() {
-    const h = location.hostname;
-    if (h === 'localhost' || h === '127.0.0.1') return './__cms';
+    if (estLocal()) return './__cms';
     return `${WORKER}?cms=1`;
   }
 
   async function chargerNews() {
-    const h = location.hostname;
-    if (h === 'localhost' || h === '127.0.0.1') return fetchJson(`${BASE}/news`, 12000);
+    if (estLocal()) return fetchJson(`${BASE}/news`, 12000);
     // Le Worker agrège 10 flux RSS (lent au premier appel, puis en cache) : délai large.
     return fetchJson(`${WORKER}?news=1`, 18000);
   }
