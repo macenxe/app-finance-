@@ -169,6 +169,7 @@ const Chart = (() => {
         (etat.inlineId ? '#' + etat.inlineId + ' ' : '') + '.chart-periodes .chart-per',
         data.debut || deduit, etat.periode
       );
+      etat.suffixe = suffixePeriode();
       if (etat.points.length < 2) {
         if (zone) zone.innerHTML = '<div class="chart-loading">Données indisponibles pour cette période.</div>';
         majReadout(null);
@@ -179,6 +180,21 @@ const Chart = (() => {
       if (zone) zone.innerHTML = '<div class="chart-loading">Données indisponibles (' + (e.message || 'erreur') + ').</div>';
       majReadout(null);
     }
+  }
+
+  // Suffixe du pourcentage lu sous la courbe. Quand la série ne remonte pas jusqu'à l'ancre de
+  // la période — fonds plus jeune que 5 ans, historique tronqué —, on nomme la date de départ
+  // réelle plutôt que d'écrire « sur la période », qui laisserait croire à 5 ans pleins. Le
+  // tableau des fonds, lui, laisse la colonne vide dans ce cas (AppAPI.perfPeriode renvoie
+  // null) : les deux disent alors la même chose au lieu de se contredire.
+  function suffixePeriode() {
+    const pts = etat.points || [];
+    if (!pts.length) return ' sur la période';
+    const couvre = (typeof AppAPI !== 'undefined' && AppAPI.perfPeriode)
+      ? AppAPI.perfPeriode(pts, etat.periode) != null
+      : true;
+    return couvre ? ' sur la période'
+      : ' depuis le ' + new Date(pts[0].t * 1000).toLocaleDateString('fr-FR');
   }
 
   function majBoutons() {
@@ -309,12 +325,13 @@ const Chart = (() => {
     if (/^(fred:|hicp:|scrape:)/.test(etat.ticker)) {
       // Taux & indicateurs : variation en points de base + baisse favorable → couleur inversée.
       const pb = Math.round((p.c - base) * 100);
-      varEl.textContent = (pb > 0 ? '+' : '') + pb + ' pb sur la période';
+      varEl.textContent = (pb > 0 ? '+' : '') + pb + ' pb' + (etat.suffixe || ' sur la période');
       varEl.className = 'chart-var tnum ' + (pb === 0 ? 'flat' : pb < 0 ? 'up' : 'down');
     } else {
       const pct = base ? (p.c - base) / base * 100 : 0;
       const up = pct >= 0;
-      varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' % sur la période';
+      varEl.textContent = (up ? '+' : '') + pct.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+        + ' %' + (etat.suffixe || ' sur la période');
       varEl.className = 'chart-var tnum ' + (up ? 'up' : 'down');
     }
   }

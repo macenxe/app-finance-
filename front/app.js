@@ -115,46 +115,71 @@ const App = (() => {
     appliquerCMSLive();
   }
 
-  // Perfs des UC : deux séries par fonds, dont on tire les colonnes du tableau.
-  //  · '1a' est QUOTIDIENNE → performance de l'année en cours et 1 an glissant, à la clôture
-  //    de la veille et cohérentes avec le graphique de la fiche.
-  //  · '5a' est HEBDOMADAIRE (Yahoo ne sert pas de quotidien au-delà d'un an, cf. PERIODES dans
-  //    worker/src/index.js) → 3 ans et 5 ans glissants, arrêtés au dernier jeudi.
+  // Perfs des UC : une seule série par fonds, fusion de deux sources, et un seul calcul —
+  // AppAPI.perfPeriode, celui qui sert aussi au graphique de la fiche. C'est ce partage qui
+  // garantit que la colonne « 5 ans » du tableau et le bouton « 5 ans » du graphique donnent
+  // le même chiffre.
+  //  · PROFONDEUR : résumé hebdomadaire des VL sur 5 ans (front/data/uc-vl-hebdo.json, généré
+  //    par la CI depuis les historiques complets). Indispensable : Yahoo ne remonte pas à 5 ans
+  //    pour une bonne moitié des fonds (rien avant mars 2022 sur Candriam Biotech), et le
+  //    tableau affichait alors 4,4 ans de hausse sous l'étiquette « 5 ans ».
+  //  · FRAÎCHEUR : série QUOTIDIENNE du Worker sur un an, d'où viennent les jours récents et le
+  //    dernier point (la VL du jour, colonne « VL du »).
+  // Une période que la série fusionnée ne couvre pas reste vide (perfPeriode renvoie null)
+  // plutôt que d'être calculée sur une fenêtre plus courte que son étiquette.
   // La performance de l'année précédente ne vient PAS d'ici : c'est la performance calendaire
   // officielle du fichier fonds-meta.json (chargerMetaUC), exacte au 31 décembre.
   async function chargerPerfsUC() {
     if (ucPerfsFetching || typeof AppAPI === 'undefined' || !AppAPI.historyUrl) return;
     if (typeof UC_CATALOGUE === 'undefined') return;
     ucPerfsFetching = true;
-    const debutAnnee = Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000);
-    const debut3a = Math.floor(Date.now() / 1000) - 3 * 365 * 86400;
-    const variation = (a, b) => (a > 0 ? (b - a) / a * 100 : null);
-    const bornes = pts => (pts.length > 1 ? variation(pts[0].c, pts[pts.length - 1].c) : null);
+    await AppAPI.chargerVLHebdo();
     const serie = async (gid, periode) => {
-      const r = await fetch(AppAPI.historyUrl(gid, periode), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
-      if (!r.ok) return { points: [], devise: null };
-      const d = await r.json();
-      return { points: d.points || [], devise: d.devise || null };
+      // Une seconde tentative après un court délai : au chargement, 55 appels partent d'un coup
+      // et le Worker en laisse tomber quelques-uns (démarrage à froid). Sans ce filet, le fonds
+      // concerné retombait sur le résumé hebdomadaire — VL de la veille, donc un chiffre en
+      // désaccord avec son propre graphique.
+      for (let essai = 0; essai < 2; essai++) {
+        try {
+          const r = await fetch(AppAPI.historyUrl(gid, periode), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+          if (r.ok) {
+            const d = await r.json();
+            if ((d.points || []).length) return { points: d.points, devise: d.devise || null };
+          }
+        } catch { /* réseau : on retente une fois */ }
+        if (!essai) await new Promise(r => setTimeout(r, 500));
+      }
+      return { points: [], devise: null };
     };
     await Promise.allSettled(
       UC_CATALOGUE.filter(u => u.graphId).map(async u => {
         try {
-          const [rJour, rSemaine] = await Promise.all([serie(u.graphId, '1a'), serie(u.graphId, '5a')]);
-          const jour = rJour.points, semaine = rSemaine.points;
-          if (jour.length < 2 && semaine.length < 2) return;
-          const dernier = jour[jour.length - 1] || semaine[semaine.length - 1];
+          const rJour = await serie(u.graphId, '1a');
+          const jour = rJour.points;
+          // Profondeur : le résumé des VL en priorité. Les rares fonds qui n'y figurent pas
+          // (export FT en échec pour eux) retombent sur la série hebdomadaire du Worker —
+          // moins profonde, mais c'est la même que celle du graphique dans ce cas, donc les
+          // deux resteront d'accord.
+          let hebdo = AppAPI.serieHebdo(u.graphId);
+          if (hebdo.length < 2) hebdo = (await serie(u.graphId, '5a')).points;
+          if (jour.length < 2 && hebdo.length < 2) return;
+          // Fusion par la fonction du graphique : tout jour servi par le live évince le point
+          // du résumé. C'est ce qui permet au résumé de compléter les jours que Yahoo saute —
+          // le 31 décembre notamment, base de la colonne « depuis le 01/01 ».
+          const pts = AppAPI.fusionnerSeries(hebdo, jour);
+          const dernier = pts[pts.length - 1];
           ucPerfsCache[u.isin] = {
-            ytd: bornes(jour.filter(p => p.t >= debutAnnee)),
-            an:  bornes(jour),
-            a3:  bornes(semaine.filter(p => p.t >= debut3a)),
-            a5:  bornes(semaine),
+            ytd: AppAPI.perfPeriode(pts, 'ytd'),
+            an:  AppAPI.perfPeriode(pts, '1a'),
+            a3:  AppAPI.perfPeriode(pts, '3a'),
+            a5:  AppAPI.perfPeriode(pts, '5a'),
             // Dernière VALEUR LIQUIDATIVE connue du fonds (montant + date de valorisation par la
             // société de gestion, pas date de rafraîchissement du site) : colonne « VL du ».
             // Les VL sont publiées avec un jour ouvré de décalage, d'où une date antérieure à
             // celle des indices boursiers — et souvent identique pour tous les fonds.
             t:   dernier ? dernier.t : null,
             vl:  dernier ? dernier.c : null,
-            devise: rJour.devise || rSemaine.devise,
+            devise: rJour.devise,
           };
         } catch { /* on ignore */ }
       })

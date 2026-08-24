@@ -11,6 +11,7 @@
     "fonds": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/fonds-meta.ts",
     "ucmanagers": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-managers.ts",
     "uc": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-history.ts",
+    "ucvl": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-vl-hebdo.ts",
     "cms": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/cms-history.ts",
     "oat": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/oat-history.ts",
     "build": "tsc",
