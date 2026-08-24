@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-23T20:35:07.627Z",
+ "genere": "2026-08-24T05:49:21.528Z",
  "globales": [
   {
    "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
@@ -94,15 +94,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 21 Aug 2026 15:37:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 21 Aug 2026 15:36:15 GMT",
@@ -139,6 +130,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "BNP PARIBAS : La consolidation peut se poursuivre - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 21 Aug 2026 05:38:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZnhEc1dERkxUZDJrb2lSeUdsSTE3UlR3Q2VWdmNmTVJFNFlSeUpObERGald1bTJkU1k1djM3WmJDYkI3dm04d1dZZjdYWEUyUmtSM0o4X0NRVmZON01Xajg4TzJHWU4xcTM3ZnZQckF4bjg1TTV0cDFENXpaZ0E1Z2ZXMEFaT0l3UnVEQjRWcWxscW9tUFFvejRPOVpBUHlCbjliWXIwLTJnZUZoV0RodHEzck91TmF0RktaSy0zTDBBWnhGZDdDNtIByAFBVV95cUxPZnhEc1dERkxUZDJrb2lSeUdsSTE3UlR3Q2VWdmNmTVJFNFlSeUpObERGald1bTJkU1k1djM3WmJDYkI3dm04d1dZZjdYWEUyUmtSM0o4X0NRVmZON01Xajg4TzJHWU4xcTM3ZnZQckF4bjg1TTV0cDFENXpaZ0E1Z2ZXMEFaT0l3UnVEQjRWcWxscW9tUFFvejRPOVpBUHlCbjliWXIwLTJnZUZoV0RodHEzck91TmF0RktaSy0zTDBBWnhGZDdDNg?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "NEXITY : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 17 Aug 2026 06:51:00 GMT",
@@ -149,6 +149,132 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Derrière la robotisation, un enjeu de souveraineté",
+   "source": "BFM Économie",
+   "date": "Mon, 24 Aug 2026 05:46:19 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/video-derriere-la-robotisation-un-enjeu-de-souverainete_VN-202608240133.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe indécise avant une semaine chargée, focus sur le Moyen-Orient et Nvidia - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 05:43:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQzdXRVI4NTZSNklzQm94emRoZm9UUDVwY195SzRoUFROekJBYnpOSGtJdHdWbmpSWUxCU0dZYldKZDhyS0QySV94TXR1R3BqSWFxdGFfTS1XRWVMeUN4UTEyeDVuUjJUa0ZYb2hndi12OUdFTUp0bUR4SW9wdGRCeHgxcU05eVkzc00xd29WOExIZUJwQUtQZmZSNWlQd3hOS1NicGtVUTRmd01VVHN2cnQtemZQbmp2bGZ2X0VBWldhcmRTaUR0d1p6THF4RDltRnI3aUszY19LSlNteUVSMXV3Mk00cmp1bUtIb0lB0gHzAUFVX3lxTE1kOXFqZmZVN1RsTF9pZEVyS1dFQURjaE5xSFFmNGNHMGZuRDlFNHh6NXpTX1ZQbHNFVl9vdUJQQ2VFYWx2dDZYOUh5VlFEZG9wNVFDUjhjbC10WDJXQkY1QVhocTBybDZUU1Q2eGYtbmdwaVZoNlJ6TWk3dkZQRVN6QWt0d0NZbXNJUGx3ZHl6WGdWZW1lUGFPb1lqVmhnbVNjWVktdndQU185YWd3dzA1ZGxIN3o2b3VSdGxxbUVnTzZORVc2Uld4VzFkQ3VQQlZPR3BqWE5HT3c4UW5XcEJKc1VZTXJBSVZKLWw4NHhtcXk4VQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Kevin Warsh pourrait plaider à Jackson Hole pour une réduction des indications prospectives de la Fed - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 05:39:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbUpGVHhKUm1pbHR0YlZzbjBBLVhQOERiOC1rbmVxSVAtYnR2OFc1WjFfc1B4VDlTNHBtdVY0TG9QbDk5cHhaRmcxd2hBSXFOQmNWcV9ld0RYUnNrY2pIa2pIQUdUaGZpT0tqV05vU2pkTUxWc1hueHRnUDl2bWhfRXVSNUYtcWZJeE9oWVhINVpKTmR5ZVR1MFRMdDBnMGVDV3BHU0pLQ2JTbXFQTWxkV0l2UENCRWptVXFUYk5n?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Kevin Warsh pourrait plaider à Jackson Hole pour une réduction des indications prospectives de la Fed",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 05:39:59 GMT",
+   "lien": "https://www.abcbourse.com/marches/kevin-warsh-pourrait-plaider-a-jackson-hole-pour-une-reduction-des-indications-p_701508",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Shell: Les actifs chimiques américains suscitent l'intérêt d'Exxon et LyondellBasell selon le Financial Times - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 05:35:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQa2FBOEhnbTlmeFZZUDVXbl9SaEVxcUotT0QzU1hCQkFFSDBONGFqOFVNY0tNdXU4dTBfMGh0ajNQR21OaXhUTzc4Q0N0ZW1tUE5XME8zQzlnZ0V0eEhnVWh1QW5HZnMwNGZtcTZqOERiMGJMZmZFNURtUTI4UEdwRDE2d1l6V2VqcHpWNDVoSjRiemRzTl9wSzMyR0pBSXJSaGxkYUd4bEpwWW1QUEE0US10eUlvNVRveTVOWHNjT0pRZnJVYng4LXB2Y0F3RDM2cjZXZzdaZVhaVFp2anExRzdxTnRrNEYwSnItRk84R3lvS2lfaUpuMS1TUzVfU0s3ODJ4OFFwS2RPTzJSUVVfYWRqUjDSAZoCQVVfeXFMTmxVa1BfMUFpMDZ1aGtoOXJ3N19vM25qOUttY3VtR3ZSZFJzY0ZvcVZfeGQ4dWdaQ21uVUg1c19NNXZ1X3A4U1NpeVYtb3hVcEhTYmROU2JrMXRQVmhZVVBoRk5xTy1HUHJpLXJ5U2JjZlc4T1dEaTBjdkQ4NVhhTlR0WHNLVk8wN0FFS3hlRU5jTlk2LUJyLUlGX1B0LXRfMW55MnpUMUU3R3hNdTBKOVpsVHk3SjRhQTN5b2sydUFkQ2hlcTNXdWhtbG9Jcm81d0QxdzlVVWZTUlNWTVVISm9nYUZJdWc4eE1ZYWFQYmhmNjJ0cjBzcG1tV1pFTU1DRWdtVWtzOHVMX0hFSmtleGFqQzdnRU9BdExR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ENGIE : La tendance baissière peut reprendre - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 05:33:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUW11RzNpQ0d3OHhYNzlfMENGWUkzQklSWkZibTZNcGdSQ096TUlWZ252QkhaVHFsXzhHc1daWHBHRmdFb1k1TWpCWUdaNnFha2lwM1E3b0thVER4YUUtTWEwWGF3aVQtX3Vyd3RjYlpnd00ydTFnQTNPY2RCRWgwdFNnUXJySTJuNURlOUNTelc3RFFNYTdjdHQ5bU1jZzFHRFhZbGl3eWYxV0JBczl3b3dVNGlnWUxvTldFVtIBwgFBVV95cUxPbFU1dFpDd0ZpRTQ2dzNsQXQ0Z1hSVzMtQ2RrNFpaaFhuUF9SMlBtWktHakowQXBqQnJKUTltRU95UV9VQlREY3VpNEJzV1dSZGJYS0FzMW4xNDhUdUI4UFd4UjVpNFp4T3R4czBkLWY3TlN3MUtaUEdyYUlGb2xfd09HRy0yZUFrVzE0QVh3WnB1eTU0YlFFQTIybXhCT0daY1p4MGtRRnpzclBONlNXOEZzWHBPQ0lfVUNsYTNSQkJiUQ?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Crédit immobilier : les taux vont-ils atteindre la barre des 4 % en fin d'année ? - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 24 Aug 2026 05:30:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPT2MtS3hBdnJrbU1QUnVHd09VVVlLcnFTRVAzUU0xLTd0QWc1dzlWUTRrT0IxZEdVQnBnSzdWeUFrbVJKRnNfX2hhMHV2R3YwRzRrdVdmYldVcjZhZFVUV1JQQ2pvQ0lYMEV5MHAxVUJrOGhDMmFYX1ppSkg1RkdLdFJBaWJrOVppVFIzdDcySnlwOTdqSnhQbXItamFfYnJ4dmNKb3FwYjNZcFpyampiUEFVbTdkN2t6ZFZMWGx4NmlOZjZlSnRv?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "BNP Paribas déplore les manquements de la justice américaine dans le litige sur son rôle au Soudan - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 05:23:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQUk2aE5mT0x5aFJNMnVtQm5CQWhkN3dpa2lHV2kyaUdZSHJGU3EweHpRQ3BQQTRsLXVORTBqeHFoUl9Tc0UtR2loTF9ZdTVVd2FZLVd1aXB1RC0xSTY4OHNkVzY2c0pFa2RzU183c0RKZG81X2ZRTndEQ1RJS0hWMFNtR1JrT2F5V2VQTVRTN0FYTUxnSXpPSWJZazVyQTUxUHBaYWdORWpEb1hLeTlXVU03NlhzRmxySFl2eg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "BNP Paribas déplore les manquements de la justice américaine dans le litige sur son rôle au Soudan",
+   "source": "ABC Bourse",
+   "date": "Mon, 24 Aug 2026 05:23:20 GMT",
+   "lien": "https://www.abcbourse.com/marches/bnp-paribas-deplore-les-manquements-de-la-justice-americaine-dans-le-litige-sur_701504",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "BNP Paribas confiant dans le dossier soudanais avant la cour d'appel - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 05:08:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSDBaWl9zX2hxSVVzdEhHeUU3TXFwV0xPNWtZR0xZWldSaGgyejhlb20zMENLYVNIZV9ULVhreWF6SlJSbU5aRlIxY2ZfREVUYi1oTzVObC10dHMxaGd1WElGZVlCSVd0QkM0bHE5bHVlMVc2OGRRbUoyS0gtb2hJMjA1WkdPc0pZdFB0M0dSWnVtS2dOSm5qckpoVU9IOV8tQVlEYk5pc3hwaE5IWV9OaDlmdVNhQUVZTWM0R2FzWVNHUkgzcng5QlR2LWpPVUxGY21QdUlKeU5UMGpxRGRJ0gHkAUFVX3lxTE8wSGFadUZ1bGFuVWRTUHVtMV9SYnlBdmVKclJmVG1kWkU5Z1hKV05jbTBpdEI1bnJzSlFyclNvNk9IdmFsTVVRV1N5SnJxS1diVjBwdjhaXzJZdE5xNU9XQ1RXbUtGdmdXVmp0VXU1YmZ2bURsREVWemhJa0dpVEZXeDFOd2JMLUxDVDdXWnZ5cEhDanBJWjZTUnZURjVvRmJuWlJtS2h3YzR0eW5qTzJhYjBSLTdiOTBRbV8xX2F4U3pYN0lnQUgxbXNLVmNoTEpnQ0VKa0ZvalExT0FwbTZIN3l5Yg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Tesla et d'autres constructeurs lancent un rappel record de véhicules en Chine - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 04:54:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOVnNyYmVaN1FKZXNKVlM5MUJzaVVDTXkzMGVlV1RtbUs2YWpWYlJJRGlKdUJYcTd0T0VGczRKTlB0SnM2Qk9wMTU4OUxHTDBfeHJNQ2QtMXpTTkZYektzeDZLMk1YVnNJV2taN3ZLMkJ1Ml9TOTJLY1plSHVFdjFVTmpEOFpMYnVJa1FVX3NWWTF1dm5MQ3U4cjJmZnBkN0xseTRRcVpFd09ZR24zZk9FSmhZYnZ5Y2xOckZtWlpVOS10RWJYMUdibkZZQlowZzBickxBNWJZZnFDN1JTWUZDOGxUdXI2LVVMbUZqcNIB8gFBVV95cUxNRzYxcEtMZFpyc21XSC1CMkpYc05LQkNGYXZRU2pTTHlhcnRMUThXZnlkNVJNQlVCZWJIUm5YUi1sSm5NQWFTRS15U0xaUXBNQ20zM3dhYkFqTlZ5Z1RSanNRNkcya2RaclM2T245Q01LMnlONXowQlpHWEozMVZUNWtVVVBTZDhKcjBnajdhVHZSWVJoYk1oS1RBaXJoVmJRUHFDR083RkFZYUNjWlVFTW84aVVlSTdoWFVIWkcwc3ZwQmtKamNzbHRhMGpfbFY3MjRkNjhqOUxzTWUwdjc2TDlqem9ydFYzRnBER3lmSmVTUQ?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "\"Je lance un appel aux patrons: investissez dans notre jeunesse!\": la ministre de la Formation professionnelle appelle les entreprises à embaucher des apprentis et affirme que \"le chômage des jeunes n'est pas une fatalité\"",
+   "source": "BFM Économie",
+   "date": "Mon, 24 Aug 2026 04:52:25 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/je-lance-un-appel-aux-patrons-investissez-dans-notre-jeunesse-la-ministre-de-la-formation-professionnelle-appelle-les-entreprises-a-embaucher-des-apprentis-et-affirme-que-le-chomage-des-jeunes-n-est-pas-une-fatalite_AD-202608240070.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "\"On n'est plus dans une pâle copie\" des grandes marques: plébiscitées par les consommateurs pendant la crise inflationniste, les marques de distributeurs profitent de leur succès pour monter en gamme",
+   "source": "BFM Économie",
+   "date": "Mon, 24 Aug 2026 04:10:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/consommation/on-n-est-plus-dans-une-pale-copie-des-grandes-marques-plebiscitees-par-les-consommateurs-pendant-la-crise-inflationniste-les-marques-de-distributeurs-profitent-de-leur-succes-pour-monter-en-gamme_AD-202608240034.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les actions hésitent, le pétrole recule dans l'attente des détails américains sur les sanctions contre l'Iran - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 24 Aug 2026 03:00:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPdUtyM1dEQW5zcE15YlV0anMwSHNxc1VJRE1lbnF1c3FqVmdRRFA1M0dMLU5Fa2FPOE1BemtraGZQMWQ3N2FtekpYNW00ZTVnam5leUYxUjlfOVpCM0t2LXI4Qi1fbGFwUkJmVUJ5QmdiTmVPYnQxUVBKUndMUXpCOGp0Mk04NU5GNjZxR19Lc1pDTndhMVd0NVRUYTh4c0Rwd1JIUnBPTVBhOVA3d2dIMC1BVlZlOGE4b3dvYXlPVkQ3WVBocmRIdDAwMkpqQ05xdlU0Skc2OGF0RFM2NlZub0xXb3B2S2RHZzV5RGg5S2xVc2FlXzJMYU1aWkM0cGlZcVNZc1VMNDNRVWZVRDJGd1ZCOFZuOGd6N0HSAZoCQVVfeXFMT3VLcjNXREFuc3BNeWJVdGpzMEhzcXNVSURNZW5xdXNxalZnUURQNTNHTC1ORWthTzhNQXpra2hmUDFkNzdhbXpKWDVtNGU1Z2puZXlGMVI5XzlaQjNLdi1yOEItX2xhcFJCZlVCeUJnYk5lT2J0MVFQSlJ3TFF6QjhqdDJNODVORjY2cUdfS3NaQ053YTFXdDVUVGE4eHNEcHdSSFJwT01QYTlQN3dnSDAtQVZWZThhOG93b2F5T1ZEN1lQaHJkSHQwMDJKakNOcXZVNEpHNjhhdERTNjZWbm9MV29wdktkR2c1eURoOUtsVXNhZV8yTGFNWlpDNHBpWXFTWXNVTDQzUVVmVUQyRndWQjhWbjhnejdB?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
   {
    "titre": "Une étude de la Fed révèle que les investisseurs en cryptomonnaies sont guidés par leurs convictions et facilement influencés par les rendements - TradingView",
    "source": "TradingView",
@@ -168,65 +294,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Droits de douane de Trump",
-   "source": "BFM Économie",
-   "date": "Sun, 23 Aug 2026 08:15:25 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/droits-de-douane-de-trump_DN-202504040609.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "\"Nous avons été attaqués\": le Canada va riposter \"au dollar près\" aux nouveaux droits de douane américains, Donald Trump menace de surenchérir",
-   "source": "BFM Économie",
-   "date": "Sun, 23 Aug 2026 08:15:24 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/nous-avons-ete-attaques-le-canada-va-riposter-au-dollar-pres-aux-nouveaux-droits-de-douane-americains-donald-trump-menace-de-surencherir_AD-202608230117.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Christine Lagarde, présidente de la BCE, \" prête à servir » le WEF, selon un journal suisse - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Sun, 23 Aug 2026 08:11:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWkxpNkpOOUp6LUZ5Y1FmbHRwOTlKVUFsSUZJZVdGbVlzOEprb0J4Yldndk9EUWlsY3BZZ0VJM0ZqZHhqSnptZDBXRk8xendQRmU2RlpscldMYzRpY0dxOE5Sdmt0M0xBeTB5Rk1fYVJDYlZOTVFjd3g4X1NDNWVwcjZUR2JISDJTM1RQbnB2S2F3M3RYYWMzWnRJM00zcHhIbzZxQ216MW9ZbUxBRTlKU1czTnhHVU8yV19ZSnR1RURUVVdHYy04cmxYUE1hbGxWUURHSkJOOFdvM0JXa0k5SGZveW9hUHJJ?oc=5",
    "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le prix de l'eau en bouteille en hausse de 2 à 4% depuis le début de l'été, conséquence de la hausse du prix du pétrole",
-   "source": "BFM Économie",
-   "date": "Sun, 23 Aug 2026 05:39:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/consommation/video-le-prix-de-l-eau-en-bouteille-en-hausse-de-2-a-4-depuis-le-debut-de-l-ete-consequence-de-la-hausse-du-prix-du-petrole_VN-202608230063.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "\"Douche froide\" pour les éleveurs américains: ils dénoncent une \"trahison\" après la baisse des droits de douane sur le boeuf décidée par Donald Trump",
-   "source": "BFM Économie",
-   "date": "Sat, 22 Aug 2026 11:47:25 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/douche-froide-pour-les-eleveurs-americains-ils-denoncent-une-trahison-apres-la-baisse-des-droits-de-douane-sur-le-boeuf-decidee-par-donald-trump_AN-202608220221.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Le gouvernement a donné un premier feu vert: EDF va pouvoir lancer des travaux préparatoires pour les deux réacteurs EPR 2 prévus à la centrale de Gravelines",
-   "source": "BFM Économie",
-   "date": "Sat, 22 Aug 2026 10:35:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/le-gouvernement-a-donne-un-premier-feu-vert-edf-va-pouvoir-lancer-des-travaux-preparatoires-pour-les-deux-reacteurs-epr-2-prevus-a-la-centrale-de-gravelines_AD-202608220198.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Elle était son premier fournisseur jusqu'en 2024: la Colombie va relancer ses exportations de charbon vers Israël",
-   "source": "BFM Économie",
-   "date": "Sat, 22 Aug 2026 09:26:51 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/elle-etait-son-premier-fournisseur-jusqu-en-2024-la-colombie-va-relancer-ses-exportations-de-charbon-vers-israel_AD-202608220172.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -301,24 +373,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "L'Europe progresse, mais les taux longs et le Moyen-Orient restent scrutés",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 09:17:07 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-progresse-mais-les-taux-longs-et-le-moyen-orient-restent-scrutes_701484",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'activité du secteur privé dans la zone euro continue de croître en août",
-   "source": "ABC Bourse",
-   "date": "Fri, 21 Aug 2026 09:00:24 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-activite-du-secteur-prive-dans-la-zone-euro-continue-de-croitre-en-aout_701483",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
