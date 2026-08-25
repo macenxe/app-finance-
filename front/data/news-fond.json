@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-25T18:53:39.544Z",
+ "genere": "2026-08-25T19:40:47.696Z",
  "globales": [
   {
    "titre": "K. Georgieva (FMI) : l'économie mondiale résiste au choc énergétique, mais les finances publiques inquiètent - Zonebourse Suisse",
@@ -150,6 +150,15 @@
  ],
  "eco": [
   {
+   "titre": "La BCE s'apprête à relever ses taux en septembre sans intention de signaler de nouvelles hausses, selon des sources - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 25 Aug 2026 19:20:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTG1kRXE1b0tXZlVORXo2cTFzdmJpeWFaSnNnUE90dl9KdEVDdEhCSEk3LUZLMWtMUU9OLVh3SmdiUXgzaVA1dU5KTXRJSWhjd0ZWeF9nVEx3cGRZOVdHaFVYV1hDVVRXeGEwNTlCdGdqOUVJSzhaN1ZsMl82SzhTN3lLb2FXRVRrUVNncnYxYXRKS2VYR1B6bTh6LV9melJtMEVEa0IzTWI3VVpQaHJZUXA5ZVdoMDEzUVZwaDkySzJYelVJZVhteHVsNVJrS1FXTC0zZFV3Z1ItQ1ljckU3QmdJNXhncHRTdVBieVBxSmg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Réseaux sociaux : Meta face à un procès historique - 25/08",
    "source": "BFM Économie",
    "date": "Tue, 25 Aug 2026 18:36:21 GMT",
@@ -175,15 +184,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Croissance, IA, actions : le consensus des gérants devient très encombré - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 25 Aug 2026 18:26:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdmszSDdoazRtQU5tR0UzelBZOGRMb2dYbnM4WlRZUlNzajJUZHVnZkNpV0lLQ0hOS3luMFgxT0FjbmVrZURURGZkU212NXN4Y0dNUnlfMDY4dGJ1RFJHdVgxa1hBeXJ4b09SWkJXY0V6MWtfb21TdktlQmxVTTZOeVczZTV0OVVuNzRlcEJ0cDRzWnk3MVNRMHFqSHhKQnZzbTRnbXhaM3pBcDFFblNhNmV1ckJkbmJQYW4zdDVMQzJXOE5tTThwT0NhMTY3d3JTRGJJNG5EZnFtaWtud0s00gHkAUFVX3lxTFBGb25mRXlMSVNfa1d2WHYweVNmSnV5c29CcGJla0hTSExtbDFRZGJEcnhuRWpBUzhaVzdTT1pVMGs4ZVFZWVZxRDlUVzhFUkJhVGlOckNaMkduZ0RXRHlPaGYzLUZxTnU3eklEaFlUdnl6RVg4eDF3YUx1ajlhY09IOXcyRzBaS3UwNmotT3VKYVc3bjdzaWYtZVM1OU5wREhSSGxkTXF0dGdqaWNtWlZTOFZoNnUxRjR1VndPTmNMR0tkN09zakMwUFRhNE1NdTZ3MVljdDJMbVBkQmRjQ3p1Mllncw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "Pénurie de RAM : Apple se tourne vers la Chine – 25/08",
@@ -294,15 +294,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Club : Le pétrole retombe sous les 90 dollars – 25/08",
-   "source": "BFM Économie",
-   "date": "Tue, 25 Aug 2026 15:51:54 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/le-club-le-petrole-retombe-sous-les-90-dollars-25-08_EN-202608250598.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris finit en légère baisse malgré la détente des taux et du pétrole",
    "source": "ABC Bourse",
    "date": "Tue, 25 Aug 2026 15:42:15 GMT",
@@ -328,15 +319,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "L'or reflue, l'élan haussier marque une pause avant les données sur l'inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Tue, 25 Aug 2026 13:51:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNS0tyT1hxZ3pOcVZSQVZzemJpcTFIdlE2RzRvNzZZMUdtTWZWWmtoTXhzc0drSFFEX1NrSERSMm1wVWRTVlhNNzRGQy14QnZQZHVQZlN1Y0pmeUc5WjRHMXBxTUlZNlhHbnhhLURSem5nY2ROUEhETmJzTlpaQ2pweG5TODQ5a09ONjNDYUJ5N2Z6YmI4elpWcDNlQmJvUVYtVTVTNlFaT0V3ZU16am5qMnpCcHhZTVhiT0I2cDNlUHl2TFF2d3hybU9Yb3Z3VTZFQ1JCQ1JPRkJfYlZ0M2w2bW00dTY?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "USA: Wall Street ouvre dans le vert, la détente du pétrole s'accentue",
@@ -423,15 +405,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
-   "source": "Instant Gaming News",
-   "date": "Sun, 16 Aug 2026 21:48:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - RFI",
    "source": "RFI",
    "date": "Fri, 14 Aug 2026 07:00:00 GMT",
@@ -450,6 +423,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Video: Pops Magellan on Groove, Gear, and Finding Her Sound - Reverb",
+   "source": "Reverb",
+   "date": "Wed, 12 Aug 2026 17:26:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTDVoTmdzakE3SGw3NV9fZkRhVWlWS2s1WkNfRkkwMVVabGpEMncwMzVLUG1iLUVtNzBBVE82ZkRtR1lOYUt2RzJlY3kzb1g1MXp5T3NGU1RibHQ0MjlMWGpMUHlfTkl1SnFxa3hVQXNlWWFhcHdXSE42UTZwRUNsVTd1YmRYQWpleXhr?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Les performances du titre Carmignac Patrimoine - 10/09 - Orange Actualités",
    "source": "Orange Actualités",
    "date": "Mon, 10 Aug 2026 00:16:25 GMT",
@@ -459,10 +441,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Pluvigner. Le voyage de Magellan en plusieurs langues - MaVille.com",
-   "source": "MaVille.com",
-   "date": "Wed, 05 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQ19XZzBoRmp1dkp6dWFLZ3ZUM2tTTEdOZ3NLSzFreEY4X3NuRm9wTm5PZ3VibGZfMXpubC1POWEwSHZQQVpDRTNDX3phdDRyWVduSURDLWZvYWNHUVBBSmZyLXBmM2N3TzU4Z2E1dkJWb3RBT1paWk5SV2dER2hQenFLX0oxRGM2Mmdob25ZR05zeG5OTFBQTU1SS2lyY0lXT0wzSFh4N2JDWThnaEM2bg?oc=5",
+   "titre": "Magellan Aerospace déclare un dividende trimestriel de 0,05 $ - Investing.com France",
+   "source": "Investing.com France",
+   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZzY5VkYxUEhsU1p2NDdHN01mNVdqMzVmNF9HQm92WjI1UElhOHpZMXlrS2F5NVB3TnFsdkZwUVcyZVJUMVhfOWJuZkJ0RE5hS3lWeHlnR1RMeDlMVVRvNmpwVjBVQmJKQ0kxMURQRTNpNnZMUmpydDI0OE5QdjdyZHVObUFWU0luU0o0T0poaDNYS0g5RTRmZUExR1hSQXNpY3drU2FEMVpUdXZ2QTZ4Yi05NWZhUQ?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
