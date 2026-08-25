@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-25T19:40:47.696Z",
+ "genere": "2026-08-25T20:40:47.201Z",
  "globales": [
   {
    "titre": "K. Georgieva (FMI) : l'économie mondiale résiste au choc énergétique, mais les finances publiques inquiètent - Zonebourse Suisse",
@@ -9,15 +9,6 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Pourquoi le marché obligataire pourrait revoir ses perspectives concernant les USA - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 25 Aug 2026 11:27:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNY2NtTHA4SDVuLVFOUk9MRUtLNEN6NHNyeTE3SW5fWHNjNm5RaF8xMU5wSk5WMUJsTjFtZ0FVelVTZ0d3ODQydEtuMFNrOExZeU1HSEhybWZmS2tlS1draU1NUXc0UW16S3RCSHlHWjRYM05ZVWpNaXFsWkFyMW1WNEtzUklRNDRTZ2NHZkRkTG9rVzFiVTFkZnpfQjRSUGRCNkVIY3g4WTBTaHNoLWw1QkRRR2xRWVgwVHphdlA5dnZnWjlia1hSZTI4WWtBeVUzNjkxWFpYN3AxVWduMERGaEowSWNQTGNaN1htdExqSmtfVWVvbWZn0gH3AUFVX3lxTE1jY21McDhINW4tUU5ST0xFS0s0Q3o0c3J5MTdJbl9Yc2M2blFoXzExTnBKTlYxQmxOMW1nQVV6VVNnR3c4NDJ0S24wU2s4TFl5TUdISHJtZmZLa2VLV2tpTU1RdzRRbXpLdEJIeUdaNFgzTllVak1pcWxaQXIxbVY0S3NSSVE0NFNnY0dmRGRMb2tXMWJVMWRmel9CNFJQZEI2RUhjeDhZMFNoc2gtbDVCRFFHbFFZWDBUemF2UDl2dmdaOWJrWFJlMjhZa0F5VTM2OTFYWlg3cDFVZ24wREZoSjBJY1BMY1o3WG10TGpKa19VZW9tZmc?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "neutre"
   },
   {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
@@ -150,11 +141,56 @@
  ],
  "eco": [
   {
+   "titre": "Royaume-Uni : les anticipations d'inflation repartent à la hausse en août selon l'enquête Citi/YouGov - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 25 Aug 2026 20:33:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcmJva3dOdkg2NjUtdy1NTlRkUnppRGJDNG0tLUNJZ3JlbUdZbjU2czBYVWd1VzV3clp0Yk4tSnUzQnVMaDBJa0dlUXd2VUYxOW0yU1VXR1RrUnFMMTgyQ3lsQzJ2VmdrTU5YUVNPcTNzbGJlOE9KbVIzWEl3LUlyVEdYdkhQc0dzMFotTnRaZ0JYeXhHeUNiTjVjUElvY2RZaGotdG1wYmNMWjVJRTZ6LWFiTG56blp5VTNvNERabnY5X0pIVHBEeDNaV3QtSVRnOUdEY1Q3Ni15clpIaVpCQzhDTE1jQ1B6aHoyaVBIZw?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les anticipations d'inflation au Royaume-Uni remontent en août après avoir baissé récemment, selon une enquête - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 25 Aug 2026 20:32:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNT1hNWGpHa1ctc0hCU1U0ZUozYnY5MC02VGFqaGVPUDc4X0pVY08tRGliNzF0azRDaGNnY3ZyYTMyTEF0MlVtVDhUZXRmb3FNZ3dBcHFzSTUtN0VBd0d4WHRjaVhLRDBiVlVGZ1lDcjZCbWc1U3F3YWhuVzBmVW5iNng0NXJjQ0ZmVGY1RzFabS14QVNMa1RwaEVCQ2d3MjlNSkFreU5CYXVENUVUQk5iWlBoZG5hMFdEU2RqY2lXUjg0TVVxWGVJTDZjZkxsd21YVExCcllULUlzX203MWVrdEktTHdBd3VrUTJRMTJQLUJoZVgwYVVTMTV0aGRPLWJsQkFZbmZBWUFWYXN0bTJGUmZHV3FBOG81Z1RUYV9oQkZCMFNfeHfSAasCQVVfeXFMTzRFTjFIREdCXzVwYWtoN2JhLUVsOWRlbmRhX1NsVXJYM3Z4bFVUQmRIT3kzc3Z5QnlUV015ajc0QlR3LU9xbGNhMTg0bFVlcmlhb2lJdlg0V2NWdV8xMkRqR2VsaVJrd2F3aV9Rajdxb1ZBbFBYNVd4WjYzNzFlRC00RVZjY19SYXVSUkRhTGI2QnlPWGJrRXdmN2dEZXNZdmNFUmZiT1JrZUFVMGRsVTRWd0NIZGJKRFU0VUNwUTZ4aGNUY25qbDE0dkRndXhPUU4tVGVwNWJhcFB2QzJ5NUhUMXNmYXZ6ZldZVHJVT0M3czN3NExTNDQ2ZnVRNjRYNGdZSXhoVGYyVGVHTFdtSTRaVTdYVmoxTVhKRS05NXJ2M1VkZDFIcUlJcTg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Kristalina Georgieva, du FMI, estime que l'économie mondiale résiste au choc énergétique, mais exprime des inq - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 25 Aug 2026 20:27:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVEROM2VHWGx5cldJUUVsWmswSzFZS1diUEpiRktGTmFNZ1pqaTYweUtOaTlvYnJ3NURYUkZQR2ZuOVZ6Vy0tdWdETV9MN3hSaEt5R0JqZWpVS2wyRXk5eWxrVTBNaElsTFpaX2puWDRfblhyTFFWTmQ0OV90ZkJDOWZpUmRNQXBGSGRLZkFRRFRPUGppeXVHOFd3Q281THlwLTZiR0xNNzBQLVhBRHo1dVlSSEh2ZVJ5b1RmZ2ZWOHRmejE4djBUeXVya05WalV5TkdWSy1ZbXZBdDdzU1Jzb1NxbWlmLVBVRmdEQUlhT29RVlRLOHhkanhocFM4QW1veEdMVU9nVXJKdTZNanUxcC1UQ3J4QjVoZjlvLUxsclZmeU5fVHQ2Wlp2bDlLMUE5aFhKejQzYnNEUlZW0gHCAkFVX3lxTFBMWFZQSHEzYjhoY1ZzVm1QdHR6MDExVTNtNnVqTm9GZ3MyT2NMa0RkUHRXZk5mVno5ckJUR2h5TnhlWWV4Q0NsRFBodkM2N09QcXNyOUZkTzkwU0xCazk1Z0tUVXZiTTFBcGM4ZzBWeDh4T2RsLUJaY2ZUV1YtUXE4SnpGTkpjTVJmVnd1ZFdUYXdjVGNobGdTTWhtNzRYUlVmVEJiRUJBdVFUYlZHM3NTc0JId1pJYXQ2VDA1N2xabkpSZU1hcERqQkFCdXl2UUlVbTUtYzJHMmJaYlBjVzhPaG0xTGxLb3FXTnRZcUZTZ2RNeE1ja251NGVZNkRKU3UyOV9tNmY1RGRQeHpMTVZfMFBUeW1LWHdaVFZpX25YOWg0TUNqZnpQanp3bHQ2Wm1hRFZUbnFfTnIyN3hXb19kX3c?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Siemens Energy va céder sa division industrielle afin de se concentrer sur les turbines à gaz et les réseaux é - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 25 Aug 2026 19:57:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOYVdxYjI4emNkSGx2WFNFQzl1bGJxYVBCTHFCMklMZTVHdkRaU09rTHhMSzN3XzdjYzUyOVhVTEdjOEFWVmVIaEFQbXBrQmJ4Q2g4a3l1c3FuVmJJcDNQb3pMZmlOb0RlOGgyX0lWUzViS2pLMlRvZWR6em5pMFlLUHJ6d29tSnQwMFZDRXMxT1d0Y1hQOFhuWVF5SHMwaWttMkFCWUlKdUdNRGxFU2RBYS11d3V0eXVuT3VFYmppNXpkYzM4Y2hqUC1hRFdHb2NkNURWRjc2ZHYwNTVYVG1HT3RDampPWVlHQldyMUwyN1Y0YmRmLURLM1NGTlg3OTJ6Qk9yc2d1WmVPbEtHeWZjeFNHNkQtdUoxRk9yMjNCUl90aWdr0gGqAkFVX3lxTE5wOXIyUnZKeS1Sb0ZKQWl2aHdsZEtjelgwWVFHeEV1WHU3bmdwUTlvTTBHdHZ3VG9HZ2JOVlQtWXJtQVlQdE9XZElpNk1obmI4LXAyeXJac3A4cEZEUlJ5Y051S3dOWTh5OEVmOE5GU3NSSzE5di1JNnB5N2V0RkEzUzVGNXZPSXVKUExiMkl2b2ptWWRnMzdXV1dQUGNQb0daS2JKeHZhbFpZMzVsNFhCallnd1JTNVQ4MEZ6dGxvSHhuVXZmaDl6eDRvRGpCU2VGU21BYzlia1hEMW8ycXFDMmcyY2dMWnVjSlp3YWVjZDNZWnJ3WEYyNTFIUU12U2RsSnZBQjFtVklDSWNDTUwwRGFTY2ZDMG95dEpWd21DeVBzekFaR0toblE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Google étend sa plateforme d'IA d'entreprise Gemini aux cabinets d'avocats et aux avocats - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 25 Aug 2026 19:44:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNdXBuUzZLWjVkWHU4OUwyNTQ2ejh1U0tmU1BvOFFXYjVZVllWQXFNLWhSWUZTX0VQQ2FpVnhxU0szRXRXcWlvbGlSLVpfdFIxQ0pwMjR0cWNpS1VZVVcydWgtVmpMaWJJQlRmanhFWnNvNjllbk5IT19neDlxQkczT3VCanRKQ1VEcF96QjBQRlVwWEtHdnNPNng5TkpVQ0luTXp1elRjQjVLU0pyb09TbXZzVV9tWm5rcXg2dDhFQmdYSUtUamstTDZ1WVQ5NGh0VWNkeUdxdWxCbHpJOUYyNDREZ0hHREFMMEEwTnV0VEw3UGU3bHhVZkdxc9IBgAJBVV95cUxPSE1scU1CWWxFNG9SckpmS29FUjNqV2gweTcwaDBSRXdXZkpKbWY4NXRJajQ5amZiMXhVQTMxWTQwZHlNVTlSWDZTbkY0bF9saDBuNnk0a3c3Z2pmZlFLRU12d2lmVDNsSFRXd1l3RmVQblRPa0J6ODZkb0tQZjdaNmZWbElFX1JtR0FQdHoycWdJXzVqdngzbWlHZ0Y3UUM1OFF0TGNOQjJ4WDNCUlRFMlFpdDNMSW5UWU9Ud01BbEVEcVhCT3Q0eVFuZGtjREVWV2FTdHVCV0wzUV9vSVZfZk1LTndtU0FkbWxuaGU2NjJZQ1JJZ0pVV2ZPM0N3VUFu?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "La BCE s'apprête à relever ses taux en septembre sans intention de signaler de nouvelles hausses, selon des sources - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Tue, 25 Aug 2026 19:20:50 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTG1kRXE1b0tXZlVORXo2cTFzdmJpeWFaSnNnUE90dl9KdEVDdEhCSEk3LUZLMWtMUU9OLVh3SmdiUXgzaVA1dU5KTXRJSWhjd0ZWeF9nVEx3cGRZOVdHaFVYV1hDVVRXeGEwNTlCdGdqOUVJSzhaN1ZsMl82SzhTN3lLb2FXRVRrUVNncnYxYXRKS2VYR1B6bTh6LV9melJtMEVEa0IzTWI3VVpQaHJZUXA5ZVdoMDEzUVZwaDkySzJYelVJZVhteHVsNVJrS1FXTC0zZFV3Z1ItQ1ljckU3QmdJNXhncHRTdVBieVBxSmg?oc=5",
-   "tag": "bourse",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "positive"
   },
@@ -303,15 +339,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Les taux américains devront bientôt augmenter faute de preuves d'une baisse continue de l'inflation, selon Susan Collins (Fed) - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 25 Aug 2026 15:05:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNRjRDTFZrZDFnbnU4LUIwUEJVRWJlOEFaYVRlX0lDRXY1V21ILTF5TGI1enZZOXdIb1JOSmlUbFZDTnlUZjNXZUo1amhFNWRudGxPazJOUkNxQnlsZUJFTXVmUUF2ZEhVOE1WUG9hNVdxZjk3dEsxUFVNRDJQYXAtbnJuYXBXbkhlSmhUVEUtMHE3cEVzeUwtNlRranp1R0w1M2ZQQ0ZZSTVMRDVXdDdPYVJTbi01M3RWT2xCMlJoc1VuMG1nWGk2LUh3dEY3RHlGbUsxWFRSUF9OTE9obTB1QVZxWUdXWG5WUWJFZEUzNEw?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "S&P 500 - Les actions à suivre mardi: Boeing, Dick's, Accenture, Coinbase, Robinhood, Strategy, Intuit",
    "source": "ABC Bourse",
    "date": "Tue, 25 Aug 2026 14:00:58 GMT",
@@ -346,15 +373,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Rapport sur l’inflation des prix des aliments du mois d’août de Loblaw - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 25 Aug 2026 11:02:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOUFSRFpuclBSck1qSVltdzJaaUJCNjBzdGZWQ1MyZmRUY1lieG1OUHFNWnVtenp5LXQ4UDhEN3Q5WEpMR05HN09ncWIzeGkySlR0MTVZdTJYMFRfbklhc3NNM1dSWV80aFlobDR1LWhsai1xZUJEdjdvZ1RLbmRHZkEzUEpzSXJXeTdpQXh3bTBlUVNmak9Ja2otRVExN3RGa2hJSktab0ZwX0xjM2lVRXpkcGtkVWIwN3ZubDBtdmRJRi1kenN2TFZIbHY?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Allemagne : Le PIB progresse de 0,3% et dépasse les attentes au deuxième trimestre",
@@ -405,6 +423,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
+   "source": "Instant Gaming News",
+   "date": "Sun, 16 Aug 2026 21:48:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - RFI",
    "source": "RFI",
    "date": "Fri, 14 Aug 2026 07:00:00 GMT",
@@ -423,15 +450,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Video: Pops Magellan on Groove, Gear, and Finding Her Sound - Reverb",
-   "source": "Reverb",
-   "date": "Wed, 12 Aug 2026 17:26:01 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTDVoTmdzakE3SGw3NV9fZkRhVWlWS2s1WkNfRkkwMVVabGpEMncwMzVLUG1iLUVtNzBBVE82ZkRtR1lOYUt2RzJlY3kzb1g1MXp5T3NGU1RibHQ0MjlMWGpMUHlfTkl1SnFxa3hVQXNlWWFhcHdXSE42UTZwRUNsVTd1YmRYQWpleXhr?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Les performances du titre Carmignac Patrimoine - 10/09 - Orange Actualités",
    "source": "Orange Actualités",
    "date": "Mon, 10 Aug 2026 00:16:25 GMT",
@@ -441,10 +459,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Magellan Aerospace déclare un dividende trimestriel de 0,05 $ - Investing.com France",
-   "source": "Investing.com France",
-   "date": "Fri, 07 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZzY5VkYxUEhsU1p2NDdHN01mNVdqMzVmNF9HQm92WjI1UElhOHpZMXlrS2F5NVB3TnFsdkZwUVcyZVJUMVhfOWJuZkJ0RE5hS3lWeHlnR1RMeDlMVVRvNmpwVjBVQmJKQ0kxMURQRTNpNnZMUmpydDI0OE5QdjdyZHVObUFWU0luU0o0T0poaDNYS0g5RTRmZUExR1hSQXNpY3drU2FEMVpUdXZ2QTZ4Yi05NWZhUQ?oc=5",
+   "titre": "Pluvigner. Le voyage de Magellan en plusieurs langues - MaVille.com",
+   "source": "MaVille.com",
+   "date": "Wed, 05 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQ19XZzBoRmp1dkp6dWFLZ3ZUM2tTTEdOZ3NLSzFreEY4X3NuRm9wTm5PZ3VibGZfMXpubC1POWEwSHZQQVpDRTNDX3phdDRyWVduSURDLWZvYWNHUVBBSmZyLXBmM2N3TzU4Z2E1dkJWb3RBT1paWk5SV2dER2hQenFLX0oxRGM2Mmdob25ZR05zeG5OTFBQTU1SS2lyY0lXT0wzSFh4N2JDWThnaEM2bg?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
