@@ -14,6 +14,7 @@
     "ucvl": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/uc-vl-hebdo.ts",
     "cms": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/cms-history.ts",
     "oat": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/oat-history.ts",
+    "fred": "node --env-file-if-exists=.env node_modules/tsx/dist/cli.mjs src/fred-history.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test src/calc.test.ts",

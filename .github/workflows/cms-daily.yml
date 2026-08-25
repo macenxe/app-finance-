@@ -42,6 +42,15 @@ jobs:
         run: npm run oat
         continue-on-error: true
 
+      # Séries FRED du tableau de bord (Bund, US 10 ans, €STR, inflation) : fichiers d'historique
+      # + entrées HISTO_DERNIER de data.js. Remplace l'ancienne routine mensuelle locale (D21).
+      - name: Actualiser les séries FRED
+        working-directory: back
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: npm run fred
+        continue-on-error: true
+
       - name: Détecter les événements de vie des UC (gérants, frais, note)
         working-directory: back
         run: npm run ucmanagers
@@ -53,7 +62,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add front/data/history/cms.json front/data/history/oat.json front/data/uc-managers.json front/data/uc-actu.json
+          git add front/data/history/cms.json front/data/history/oat.json front/data/uc-managers.json front/data/uc-actu.json \
+                  front/data/history/DGS10.json front/data/history/IRLTLT01DEM156N.json \
+                  front/data/history/ECBESTRVOLWGTTRMDMNRT.json front/data/history/CP0000EZ19M086NEST.json front/data.js
           if git diff --staged --quiet; then
             echo "Aucun changement de données."
           else
