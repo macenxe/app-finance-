@@ -136,18 +136,22 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
         </div>`; }).join('')}
       </div>
 
-      <!-- Actions (sous-jacents des produits Autocall, hors ceux déjà listés dans les indices
-           clés au-dessus — ex. ES Banks / Euro Stoxx Banks, même ticker BNKE.PA) & Actifs :
-           même format de carte pour les deux, toujours sur UNE seule ligne (mobile ET
-           bureau, pas de ligne de cartes en plus -> pas de scroll ajouté). Mobile : titre
-           unique combiné, ordre actions puis actifs (inchangé). Bureau (.bureau-seul) :
-           ordre actifs puis actions, avec 2 libellés "Actifs"/"Actions" positionnés via
-           grid-column pour s'aligner avec le début de chaque groupe — la ligne de libellés
-           réutilise exactement la même grille (classe .grid-mkt, même largeur de conteneur)
-           que la ligne de cartes, donc auto-fit y calcule le même nombre de colonnes. -->
+      <!-- Actifs (Brent/Or/Bitcoin) et Actions sous-jacentes (sous-jacents des produits
+           Autocall hors ceux déjà listés dans les indices clés — ex. ES Banks, même ticker
+           BNKE.PA — plus les actions suivies sans produit, ACTIONS_SUPP) : même format de
+           carte pour les deux. Mobile : deux sections séparées — Actifs sur une ligne de 3,
+           puis Actions sous-jacentes sur 2 colonnes (2 lignes de 2). Bureau (.bureau-seul) :
+           une seule ligne, ordre actifs puis actions, avec 2 libellés "Actifs"/"Actions"
+           positionnés via grid-column pour s'aligner avec le début de chaque groupe — la
+           ligne de libellés réutilise exactement la même grille (classe .grid-mkt, même
+           largeur de conteneur) que la ligne de cartes, donc auto-fit y calcule le même
+           nombre de colonnes. -->
       ${(() => {
         const tickersIndices = new Set(indices.map(i => graphIdPour(i.nom) || i.ticker).filter(Boolean));
-        const actions = sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker));
+        const actions = [
+          ...sousJacentsUniques(produits).filter(a => !tickersIndices.has(a.ticker)),
+          ...(typeof ACTIONS_SUPP !== 'undefined' ? ACTIONS_SUPP : []),
+        ];
         const actionsHtml = actions.map(a => { const live = (typeof ACTIONS_LIVE !== 'undefined' && ACTIONS_LIVE[a.ticker]) || null;
           return `
         <div class="card index-card index-clic${estCmp(a.ticker) ? ' index-card--actif' : ''}" onclick="App.clicActif('${escHtml(a.ticker)}','${escHtml(a.label)}')" data-macro="${escHtml(a.ticker)}" data-macro-unit="€" data-cmp-ticker="${escHtml(a.ticker)}">
@@ -167,10 +171,16 @@ function renderDashboard(indices, produits, taux, cmpSeries) {
         return `
       <div class="mkt-combo-mobile">
         <div class="flex-sb mb-12">
-          <span class="section-label">Actions &amp; Actifs</span>
+          <span class="section-label">Actifs</span>
         </div>
         <div class="grid-3 grid-mkt mb-24">
-          ${actionsHtml}${macroHtml}
+          ${macroHtml}
+        </div>
+        <div class="flex-sb mb-12">
+          <span class="section-label">Actions sous-jacentes</span>
+        </div>
+        <div class="grid-actions-sj grid-mkt mb-24">
+          ${actionsHtml}
         </div>
       </div>
 

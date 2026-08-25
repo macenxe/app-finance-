@@ -49,6 +49,12 @@ const MACRO = [
   { nom:'Bitcoin',       valeur:null, var:null, hausse:null },
 ];
 
+// Actions suivies sur le tableau de bord sans produit Autocall associé : mêmes cartes que les
+// sous-jacents (cours live via majCartesMarche, graphique Yahoo au clic, repli statique eq/).
+const ACTIONS_SUPP = [
+  { ticker: 'RI.PA', label: 'Pernod Ricard' },
+];
+
 // Dernière valeur connue des séries FRED (générée depuis front/data/history/),
 // affichée sur le tableau de bord pour coller au dernier point du graphique.
 const HISTO_DERNIER = {

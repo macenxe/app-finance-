@@ -15,7 +15,7 @@ const SORTIE_DIR = join(process.cwd(), '..', 'front', 'data', 'history', 'eq');
 // CMS10 (scrape:cms, proxy FT) n'a pas d'équivalent Yahoo : pas de repli statique possible.
 const TICKERS = [
   '^FCHI', '^STOXX50E', 'BNKE.PA', '^GSPC', '^IXIC', 'IWDA.AS',
-  'BNP.PA', 'STLAM.MI', 'CAP.PA', 'RHM.DE',
+  'BNP.PA', 'STLAM.MI', 'CAP.PA', 'RHM.DE', 'RI.PA',
   'GC=F', 'BZ=F', 'BTC-USD',
 ];
 
