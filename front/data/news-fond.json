@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-26T19:16:48.155Z",
+ "genere": "2026-08-26T23:24:49.553Z",
  "globales": [
   {
    "titre": "Le CAC 40 reprend des couleurs, les marchés restent prudents avant Nvidia - Boursorama",
@@ -65,8 +65,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le Cac 40 file vers sa pire semaine depuis le mois d'avril sur fond de taux longs élevés - Les Echos",
-   "source": "Les Echos",
+   "titre": "Le Cac 40 file vers sa pire semaine depuis le mois d'avril sur fond de taux longs élevés - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Fri, 21 Aug 2026 07:14:33 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTXd0UmJQNlFjN1Q4aFVac3lWLURxU3pxOGJBQ1NmTDRMYmNWY2hJWTh4dm9XVk4yZTQ4YlppQm9SUG1MUERWLW9KOWhXQWVLVXFHYlpFMHZqUnpIQkVZcksyR1dPbHVfeUk1cVY2TkFKNFExZ3FGYjJUM0lGaVV4YjZXTmNBc1R6V1ZucFV4OFZjaHd0d1RUby1GdGRIUTBrTHJkNDdXNWJkeHpCY19aeGRkU1RqUTFvcWVMUDFjT0lfa2lubGxRSXF4eTdZbDIyVHhJUERDZU9zai1QNDhuMlFhQy1MR01GekVNcl9uMA?oc=5",
    "tag": "Marchés",
@@ -84,6 +84,15 @@
   }
  ],
  "produits": [
+  {
+   "titre": "Le Cac 40 a réduit ses gains en fin de séance pour clôturer en légère hausse de 0,27% - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Wed, 26 Aug 2026 15:58:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNam1uZW1vazdSejZLbGFoc3g5NV9aYnpkX0VVZFFXWFdwZ21QdUhBc1ZBcWRlUW9SUElQM29WTFhuNjRwZmxrSWZsOEU0ZzFWSFBGa1NPb2VoR0loZjd3Ym9ZRnJvSDhDVkNaRHlJa1pKbUJQa0J3YU5YNkoyWWF4VFRYNUJzODY0MGdJU2h2bGJrVkt5YmgxaEkwckpyUl9hY2ZnUW01V1hGY05DTldDQjBjUnNyWTdSNVZhSU1HeUFoZnFjTGxLWm1JcVIxbkhlN3NHQ25CeFBPVUdMSUxNSVI0QUFHcTNaWFE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
   {
    "titre": "Bourse : BNP Paribas aurait des vues au Vietnam, Intuit souffre, GTT engrange - Zonebourse",
    "source": "Zonebourse",
@@ -103,31 +112,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Rebond fragile du Cac 40 en attendant les grands rendez-vous de la semaine, Washington durcit le ton contre Téhéran et ses alliés - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 25 Aug 2026 07:17:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQMWVsSmhpc3BTYncydjR2ZHpmclVRb0MxQlV2MVB0akdzSlpuN08yMFNKX18tUHNGdjRDblFiUWZZMmh5QXQ0MFltSXhfQ2gtMGdBeU10N2M2cUNnVEpYaWViaUZzUXhyOXFHNGI3TkNucHBFakk2b3kzN1VPOFA5XzhfMEUwOVRkZ3hoeFBFSGZWdk9XVUc2c2NTV05ZcXJBMUItRHpGaUZyaVZaMHZ5cWFRcmptNGVPX3ZINktJeDNIbmJva21TaUJYMVdZTGp5N2VleU5NdTRkLUlpakdqMHpmeEtvSTNWdHdLRm9JSjNXNEhBY2JhcGh5eWZSTkFwcWhOLWJSR1MycGN4SUxLSXB5R2NROFhITkJ0VEdBeUVrVVFvcHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Cac 40 finit en légère baisse, la monnaie iranienne au plus bas : il faut quasiment 2 millions de rials pour obtenir un dollar - Les Echos",
-   "source": "Les Echos",
+   "titre": "Le Cac 40 finit en légère baisse, la monnaie iranienne au plus bas : il faut quasiment 2 millions de rials pour obtenir un dollar - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Mon, 24 Aug 2026 15:43:48 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQZjNpeFlIYnBGYU9XZ3FDWGR4dUpUb2RYUUVZWGNlZkktSEtQQndhMkJCRklYN19CWFlyU1Vidmh1cU5fblZ2X1MwXzlMMDdfLTZmUDFEeGxHSjJWSE1Pc2RoNWlHWkQ4dEpfOTNHMUU1WjN3YWsyUmtxaEY4azMzZk8tUWZudzZXYjZPbEJSVjBLOFF6N3I0eDJSVmpUbUFTd1VUYTE2cVA5VGlQUGFBbWZMeUozUjdIYzhxZkE0M1N6dHVNc3V6LWpMdnFSSG1WZTIzNWZNaGNWdmZSUWoxeGl5WGNwaHdWV1hXalUxNDJYdjUtNmNCa3NYZmNKNHlJTVNlaU9VMzJ4ZFN5b0hleURmdFpXbTBWMllIcEtLNGVKYjRpS2lMTWV3?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 24 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
   },
   {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
@@ -139,11 +130,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 24 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "CAC 40",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -159,29 +150,101 @@
  ],
  "eco": [
   {
-   "titre": "La banque centrale du Mexique relève sa prévision de croissance et repousse la convergence de l'inflation - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 26 Aug 2026 19:09:18 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUkdpbk04ZDlXbHhWVk5FYWR0YjBZTGJ6ZzFOY1A5eW1vbWpMZi1SNTRfVHdBUVYxXzZDb0tPakRJVlpmRnV0T1ZJMVo2UjNNd0tycE5MOXFGQjFNOHZTeHExdE8zYkdxeTE2X1BnSVpmdmhqNHNpZk9FTzhmeTNXTDJDdzBhTUlHWGZxelVGSEhNSmhxUlJzaDRlREdFMFIxbnhyalYySFpldkdHc2FrWkZqc1dacGRqdC1iX3JBekVuZ29ud2FUUjloUU9qOVFFcU51S0RpNUxjTVZqX002YXlGOThKajVHRXRhNHI0TmdoQQ?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La banque centrale du Mexique relève ses prévisions de croissance pour 2026 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 26 Aug 2026 18:59:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQVnMxMjBENmVzTFpCMXVWQmcwTEMwSUJqYkVFX3FDRm45R3F1a0hTNEJzd0Zza3BnMnlEcmdEeHRLMDZyM1BaM1JEdkRyb2VXbHl3R1dZb0xfWFR0QVltVDNmcVpORDNJR0VQNVUzZFozZG9QbVp2SkhiejBsR01zNnR0YWR4X3dFZkhaZXFSSmdWUURQaGpsUWx2ckNGY0h5VmxNRkFGYjcxdG03OEpTTjlrZEQ5b3FUTEJRODdfLWFmcGhScU1iSnVwRV81VjdycUE?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Meta accepte de verser 18 milliards de dollars pour régler des poursuites judiciaires aux États-Unis liées à l - Boursorama",
+   "titre": "Staley, ancien cadre de JPMorgan, affirme avoir transmis des informations bancaires confidentielles à Epstein - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 26 Aug 2026 18:53:45 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxPNHFvUnZfZTVPaFNsajE4cldScjA3WmJYMFZ6NDB0d3d4elA2Zl83MGI0SU53OUU4RVprUUU1eXFKWWh6Q2dCQVpHdXBHRDBRaC14T1JxbjdjeDZzSTJ5NlpyRHZuOE1sRENLQ3ozUFlUMFdvbGtfTkdETXM5ZjBwUHZuLXctNGhvQ0pjQnJUUGd1QjNhcWxoN3FkR0FyOHNHWmo4RlA0UFBGZFA0SzBwVGlHWVRyQUZPVGRNVUdhcHVuTzdxWk9RTUkxUTBfOVFzekFCbENoRzF3bVUzNUU3QVRxeGZRVXhlLU9MbDVDcTFDblU4OHJWaloxWmdjbmFSUXA5SjZOYVRGeVJtbEUwc2hTYURfemJ2bUpjSElfTG5BN0JtWUZHc2xrTEQxV3VDdm9IeWQ4UE0tX2pGZFZ4TC1wZjZEUThwYm1iR2lIeG5LZ9IB1wJBVV95cUxQNzZkdnh3UldHVUM0bzQxbmcwVEs5MkhuQUk4REt3enlqZnU2bjNlTHBxLThtNENoQzdnZ1FfRWpDTzZ6anh6dGpiLWtPUlJibEpuTFVMZDJaeEIwNkswR0lkeFFsb3FXWnBtekM1aGZSNWdjMG1VTmdac3pGVG1hUm5mVnp4LTdiZDlLb2VSLWtEeFlHNXk3ZGxpakszNGVhdEQxZ01tcjZHYTBTXzcxMElxb2NTTmFxMnNTZ2t2Szh6dmkwWmdxVW1JZ2huZk1jb24xSlU2eVBBVnJtYU1LN0VzaFhXTXM4LTZZbnVpTE1pR1pMZWRpcy1qLWwzcUZEWFA0UkpzLWtCb2RjbHRTZ2RpaWlVSlBJRktseUdwamkxVVduQWpqRGl1RlIxRWxpYk1kUWlfRm1kS09xSktzOGpKMHJCZWxDekdjb1BidElGZnZFMDVB?oc=5",
+   "date": "Wed, 26 Aug 2026 22:35:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNQmFKUnV0eDF6bkhkVlF5SS1PYThIb0NuQ3ZkNWJhblJWejhSYkZfUHFqbFVzRzVfbWR4MFBJQjNaWDNIZWpCTkxleHVXTjRfRTFqa1EyanYyLWNjei0tZ0ZEWFpUVzJQbkh3NGthbVNWX3ZQNG1ncDJEVmZVRHJtTEMtN0x0dnYtUWJVWFdFYlZ2U2JlR2o1YUdINWNaYjhrRktNVGVMSHhwQ1JIWWpJWGZRNkpHQk9kNEtXQlVUdzNFbERzbEJyRG16RnNfSXJtT2NhbmViQmd1U0RnZkswUkxBSGlrcHEzMC03aThDMWc4aTlVOEgtRkJHS2dkcFhLUEFCTVdrVWN0S3MzM1hqLS1RONIBmAJBVV95cUxNM2tHQWd6bnpJTnBLLUczLUZ4S2hMUkhrTEx0QUlXSndJLTFuQzdtY3lIb1B5elVQTVNmVXo1d193NzJNWXlaOTVzOC1tUVIwejlER1c1eDlDdEFTZFZEQ2FMTmhGc3lzZXpvZmdSdFVGU3Q2WDRIUXVrWENQR1REa2ViZ1ItRFFaT1BfNGxaaHdiYnJIR0dhQ3BIUmtsSXo1X19GRlNZSzUxSG5vSVR0SkVwbnVIZ0Z5bzkxa09IZG85ZTNnQ2lzejFRdThtWEpfbk5DZjUxV3NPeW5FeERna0YzV2IwYlVheUhLWk1hNFc4WVJ4aF9TTFB1RVdkdGdPbjJZNWVOSWtZVk92am5FSnc5eWtsNkNX?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Action Amazon.com, Inc. | Cours AMZN Bourse Nasdaq - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 26 Aug 2026 22:27:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyVFJNNEZKRThtMFhnaGVDU1ZzRXJmR1piQzJqTjAxYWRjV01tMjJpOVNOa09NX3lKbjdwdG1jb0FBZVQyem5zWjJfNS1QeVh2cG5GQjBzbjNHREFXcTd6eTVBNGpqS2I5bktkRkRGOENDUQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Nvidia signe un excellent trimestre et rassure Wall Street avec ses prévisions",
+   "source": "ABC Bourse",
+   "date": "Wed, 26 Aug 2026 21:41:33 GMT",
+   "lien": "https://www.abcbourse.com/marches/nvidia-signe-un-excellent-trimestre-et-rassure-wall-street-avec-ses-previsions_701673",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "JOUR DE BOURSE-L'inflation galopante refroidit le moral - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 26 Aug 2026 21:03:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxONEE2YlhXTE9mb01oNWRBdV9uWTZNbE9jZW9SQlZuTkhsRG9BOTVyZUtfRkRlblNIdmlnSDlXUk00SGJUMW1MaURvblViUFpUUkUzQU1kei10c3U0dXdYNjdiRldQSjVHZmhReTQtOUg0cGhqNVczUm13ajlWNFNaUzBnUGd6eHU0eVJZcW9mS2Y4S3RWenBhbUNCdFhDaTBaWDhNbXN6dzc4VjI3YUVLaHF3Sk1YZjlfaDhkZ2k2YU1QYmRDNm96VTNkU1ZoVzBJbjM00gHTAUFVX3lxTE40QTZiWFdMT2ZvTWg1ZEF1X25ZNk1sT2Nlb1JCVm5OSGxEb0E5NXJlS19GRGVuU0h2aWdIOVdSTTRIYlQxbUxpRG9uVWJQWlRSRTNBTWR6LXRzdTR1d1g2N2JGV1BKNUdmaFF5NC05SDRwaGo1VzNSbXdqOVY0U1pTMGdQZ3p4dTR5Ullxb2ZLZjhLdFZ6cGFtQ0J0WENpMFpYOE1tc3p3NzhWMjdhRUtocXdKTVhmOV9oOGRnaTZhTVBiZEM2b3pVM2RTVmhXMEluMzQ?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SÉANCE BOURSIÈRE - Une inflation persistante pèse sur le sentiment de marché - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 26 Aug 2026 21:03:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMmZRRFhPYjVIVUxkazkzX0x4M292WlduQXp0dDIwbVVsTDFZX1ZPRHlkTTJKczBrdXdzb1lfUV9BSjNaRVFlbC1HbXo2ZGJsWVVkUDNsd016Vk5nM1hiSkhWVk9sSkJ0NjZpTV9KUV9fSzFkbHc4UTNRNzlIY2h0VVdXZUhLdWpFdUVXOHlhSnF1SURlUXZWUGdVNm9wTTQ4RV9ZVG03V2otMGMyc1RzRDA3ODA5SWZQYXpNenZqRkM3T2lwLVA4X3FKVU1mQUE?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Nvidia signe un excellent trimestre mais peine à enthousiasmer Wall Street",
+   "source": "ABC Bourse",
+   "date": "Wed, 26 Aug 2026 20:55:22 GMT",
+   "lien": "https://www.abcbourse.com/marches/nvidia-signe-un-excellent-trimestre-mais-peine-a-enthousiasmer-wall-street_701671",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "S&P 500 - Les actions en vue mercredi: Meta, Intuit, Kohl's, Nvidia, Zoom, Salesforce, Crowdstrike",
+   "source": "ABC Bourse",
+   "date": "Wed, 26 Aug 2026 20:24:11 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-mercredi-meta-intuit-kohl-s-nvidia-zoom-sales_701669",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street : l'inflation refroidit les ardeurs avant Nvidia - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 26 Aug 2026 20:08:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVUtsTGh3Nm9SWWV4OXNiYndBSmFCWUFoQTJlYUg2aldDVkdkZUNKUTF1eVQ2UkdFLU0ySHJWTVZoRXpCaEFUbTZPV3FwMGluNmpGWHJYQlhFVEFoQnlNNHFjWmRKaERYamsyOXJkeDNLQmhPMGh2MFYzZ3ZTZU1mTERvcDRUbWg2NEIwLTctcUliSEtwYzJDWDJUb05KM3JyVWJvZWhqU1l2ekozbjA3ejlIV0NaN3podHNB?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les indices clôturent pratiquement inchangés après la publication de chiffres d'inflation élevés, dans l'atten - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 26 Aug 2026 20:02:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNUDZoUlRra3dzZWVaRm9uMFJnaDA1Sm04bncxTUlVaXE5YlhhWnF1TmgwUi13ZU82cVBuX2hvWXdRYlRtZHhmV1FQTkxKNE5Wb0lGSFpQQXg5ZVdEVXBOZDlMVTd1WWl4VDJXR2lDX0JZSlN5eURWdE1qd1JFUW5MSlFlU0d5dkgzRV9KbDlRcGhXMDJkN1BXbm1OSnNDb2xKYUwwRjRudExTV2lEWE1vM2FwTmRoZDJOeGxpc19wbTRGN0E5bnFqMzYxYnViNGFtcXdhZVM3am1XalNkWWRiLUlPdmxXOUNNYmFhc3NiS1lUMmxobGVKdFFlSkJtSVBQTTNoNHM5bHVqQUZfbGpPMUMyeVpUTDJvNWY5ZzJSX1lMN3RiWUREQV9jWTg0cTIwdDRnT296OUlBNEhrd0HSAb4CQVVfeXFMTVA2aFJUa2t3c2VlWkZvbjBSZ2gwNUptOG53MU1JVWlxOWJYYVpxdU5oMFItd2VPNnFQbl9ob1l3UWJUbWR4ZldRUE5MSjROVm9JRkhaUEF4OWVXRFVwTmQ5TFU3dVlpeFQyV0dpQ19CWUpTeXlEVnRNandSRVFuTEpRZVNHeXZIM0VfSmw5UXBoVzAyZDdQV25tTkpzQ29sSmFMMEY0bnRMU1dpRFhNbzNhcE5kaGQyTnhsaXNfcG00RjdBOW5xajM2MWJ1YjRhbXF3YWVTN2ptV2pTZFlkYi1JT3ZsVzlDTWJhYXNzYktZVDJsaGxlSnRRZUpCbUlQUE0zaDRzOWx1akFGX2xqTzFDMnlaVEwybzVmOWcyUl9ZTDd0YllEREFfY1k4NHEyMHQ0Z09vejlJQTRIa3dB?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Veolia lève 1,15 milliard d’euros avec une émission obligataire senior en deux tranches",
+   "source": "ABC Bourse",
+   "date": "Wed, 26 Aug 2026 19:55:07 GMT",
+   "lien": "https://www.abcbourse.com/marches/veolia-leve-1-15-milliard-deuros-avec-une-emission-obligataire-senior-en-deux-t_701667",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Apple dévoile sa puce M6 taillée pour l'IA",
+   "source": "BFM Économie",
+   "date": "Wed, 26 Aug 2026 19:30:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-apple-devoile-sa-puce-m6-taillee-pour-l-ia_VN-202608260872.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -218,15 +281,6 @@
    "date": "Wed, 26 Aug 2026 18:46:18 GMT",
    "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/apple-devoile-sa-puce-m6-taillee-pour-l-ia-26-08_EN-202608260773.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Meta paye des milliards et bride les adolescents sur ses réseaux sociaux pour clore un procès historique - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 26 Aug 2026 18:18:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPVGhNZVJCa0VQQURMbnFBX0FMN0s1dmp5MmJOYjZjZE43Wm5Nbm52amZOTndCa1lDVjdlRklBdUV3eFgyTzFmRXpPY3FYZi1NMHhYTjhSTWtiLVRjV0dQdFhMYUtPamFJT2xNSjd2THg3eWJXQzN1UGFFaV9fOWhEUEhuNFl3Uk1rdDVXVlNPREgtSk1kNXZ4bm1KZlowaVpUcWxFNkZOYUJaems2NF95blJNTXh3LUZBcWdBS0pfbDhDVzNlSDFLSk4wcTd1a2U1cVdteG9seHVfUjBMdlFpYWVLVVN4OFA3WVBHbzFSMXRkZVlqNWl4bjhvZFNrX0xyb1E5bUhPWEMtLVJsWENz?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -285,24 +339,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les Bourses mondiales sans élan, entre Moyen-Orient et inflation américaine - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Wed, 26 Aug 2026 16:17:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTnFjVXJWMExua1M2Y2pOX3J2YS1wRzNraWxIODdJUmdNZi1OeGNvNnlkckFaOGRTbnB0VWw5NVZFTzkwUHAwNDN0Wk4wVTNrV1Q3ZDhrRGVpTXUxV1Fkd21rcmJTRGhYcUdQVkhJM1ZxTXpmM1VpMy05M0Fjeldfem16VFdEWXl4UmhoSF96SDhzeEk4bFdxMTNFdGQ4N1ZHUC1GRmlWc1FKeXNGTFU4LUdFQnVBVmduNjNoNHlhbWpnaHMtQS1ZUi1VRGQzOVVf?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'inflation aux États-Unis reste élevée alors que les perspectives de croissance du PIB s'améliorent - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 26 Aug 2026 16:14:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNV24yWU1rSnV4MFJCRkNKWmMxS2VRUVRLdFU1azUyYnNWdHRTMXRfeDVmTFV6RllNdnZwVjJOdTNvUU81TVdmYTRqd3U0SVFtSlBETlV2T2x0SUplSVItQmpjRDNBWGpfUy1Ydks3YkZpUzVSYy1KSnNFSnpTVFZHVlU5WDlkbjB0Wmk0RzFEckFkSjBHUmsxaEJCR3J6SmNPRWtHSFZ4TDktc1ZVVXpuR0hCNjlrVzJoRjVvbXZtRmdKZERpSmJTblg0Z01tQllVczY3SWVxZ1dtQU5uZThNTXVJa0had0VJb2plVWJ2YWNPYUMtdnhYQlpGTy1UOG9jWTdZYnZablN4U1k4WkJ30gGPAkFVX3lxTE1XbjJZTWtKdXgwUkJGQ0paYzFLZVFRVEt0VTVrNTJic1Z0dFMxdF94NWZMVXpGWU12dnBWMk51M29RTzVNV2ZhNGp3dTRJUW1KUEROVXZPbHRJSmVJUi1CamNEM0FYal9TLVh2SzdiRmlTNVJjLUpKc0VKelNUVkdWVTlYOWRuMHRaaTRHMURyQWRKMEdSazFoQkJHcnpKY09Fa0dIVnhMOS1zVlVVem5HSEI2OWtXMmhGNW9tdm1GZ0pkRGlKYlNuWDRnTW1CWVVzNjdJZXFnV21BTm5lOE1NdUlrSFp3RUlvamVVYnZhY09hQy12eFhCWkZPLVQ4b2NZN1lidlpuU3hTWThaQnc?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "L'Europe finit sans direction après l'inflation américaine, Nvidia à l'horizon",
    "source": "ABC Bourse",
    "date": "Wed, 26 Aug 2026 16:10:27 GMT",
@@ -348,55 +384,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'inflation américaine reste tenace en juillet ; la croissance du PIB au deuxième trimestre reste inchangée à - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 26 Aug 2026 14:00:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxNSEh2SFhkSGRtVzhYdzg5eVpaMHNRbGpLTUhXNzUzZ05qZ1lHSkxva2ExOWFrcWZEeHFVdGE5emRqLWU2Q0wzV1lmdUNzRVZiOGNRWWdGcERWTmZTdG00YVJyby03WHVwRlVsckJ4eGFoTTlKSnlNcXlZa2h5SC1TSVVQbW1RMXRLYzEzaWxlWU9NUUNyWkhhTFltLUFxQmZ3V25MR2ZLXy1PYlI2alFNNzF5MDAtX1F0elRkd3VuNmQyYV9GaklDSXJOSHRWWk5SYjFIYndtaVdQcEE4RnFPem9GdHpPeWVEazlLcUxGYjZCR3NraF93N1JIbzZFc0syVHFsWm5GODdTZ2dzT0FDZE92TTRNQ19IUm1ZLTNn0gGeAkFVX3lxTE1ISHZIWGRIZG1XOFh3ODl5Wlowc1FsaktNSFc3NTNnTmpnWUdKTG9rYTE5YWtxZkR4cVV0YTl6ZGotZTZDTDNXWWZ1Q3NFVmI4Y1FZZ0ZwRFZOZlN0bTRhUnJvLTdYdXBGVWxyQnh4YWhNOUpKeU1xeVlraHlILVNJVVBtbVExdEtjMTNpbGVZT01RQ3JaSGFMWW0tQXFCZndXbkxHZktfLU9iUjZqUU03MXkwMC1fUXR6VGR3dW42ZDJhX0ZqSUNJck5IdFZaTlJiMUhid21pV1BwQThGcU96b0Z0ek95ZURrOUtxTEZiNkJHc2toX3c3UkhvNkVzSzJUcWxabkY4N1NnZ3NPQUNkT3ZNNE1DX0hSbVktM2c?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "USA: Wall Street peine à s'orienter après un indicateur sans surprise sur l'inflation",
    "source": "ABC Bourse",
    "date": "Wed, 26 Aug 2026 13:54:04 GMT",
    "lien": "https://www.abcbourse.com/marches/usa-wall-street-peine-a-s-orienter-apres-un-indicateur-sans-surprise-sur-l-infl_701642",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Accor Hotels: franchit 46,90 euros et vise 50,30, soutenu par la MM20",
-   "source": "ABC Bourse",
-   "date": "Wed, 26 Aug 2026 13:00:51 GMT",
-   "lien": "https://www.abcbourse.com/marches/accor-hotels-franchit-46-90-euros-et-vise-50-30-soutenu-par-la-mm20_701641",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions en vue mercredi: Intuit, Kohl's, Meta, Nvidia, Zoom Communications",
-   "source": "ABC Bourse",
-   "date": "Wed, 26 Aug 2026 12:57:46 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-mercredi-intuit-kohl-s-meta-nvidia-zoom-commun_701639",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'inflation américaine surprend un peu à la hausse, tous les regards se tournent maintenant vers Nvidia - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 26 Aug 2026 12:56:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOeV9BcWIyY2JVR2JuT0VzekJtWXRnaGg3Z0JKY1Zha3lxTmhmcmpTYjdfMi1QR0paZnVHZW5OR3F4T3htT0h0WVd3bUpmM3kxZ2JXVWx2QkRWSGZOOG4xWi11WHNJQklZQkR2eHlNV01KUEwxQ3J5LTBJNEJ2S1JhTGRjYldvX2dVd2JWTldMd3hDTmpRd2dyNWJPcGNmMC1DUTFpVGtWcXhjaFdtRnB4emNQaXdXVkllQkZKRDZnNkgzRTdQXzIzWFYzU0pMWElfcU1MLUpVSjlPUXNiS011NVAtc1NKSmhrcjBkSHMta1F6YXRHa3FxZDZCUzhJS3J1dWc?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Etats-Unis: l'inflation PCE se stabilise à 3,7% en juillet",
-   "source": "ABC Bourse",
-   "date": "Wed, 26 Aug 2026 12:50:19 GMT",
-   "lien": "https://www.abcbourse.com/marches/etats-unis-l-inflation-pce-se-stabilise-a-3-7-en-juillet_701638",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
