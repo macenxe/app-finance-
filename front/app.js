@@ -365,6 +365,9 @@ const App = (() => {
     sousJacentsUniques(donnees.produits).forEach(s => {
       if (!out.has(s.ticker)) out.set(s.ticker, { ticker: s.ticker, label: s.label });
     });
+    if (typeof ACTIONS_SUPP !== 'undefined') ACTIONS_SUPP.forEach(s => {
+      if (!out.has(s.ticker)) out.set(s.ticker, { ticker: s.ticker, label: s.label });
+    });
     if (typeof MACRO !== 'undefined') MACRO.forEach(m => {
       const t = graphIdPour(m.nom);
       if (t && !out.has(t)) out.set(t, { ticker: t, label: m.nom });
