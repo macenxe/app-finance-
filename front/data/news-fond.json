@@ -1,5 +1,5 @@
 {
- "genere": "2026-08-29T22:37:28.112Z",
+ "genere": "2026-08-30T10:27:00.002Z",
  "globales": [
   {
    "titre": "Le Cac 40 s'est bien ressaisi après son alerte de la veille, à Jackson Hole Kevin Warsh confirme que la lutte contre l'inflation reste la priorité - Investir Les Echos",
@@ -18,15 +18,6 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "POINT HEBDO-Une rentrée chargée et à haut risque pour les marchés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 28 Aug 2026 10:49:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeURaOUYzZUItUy16YnZxUXg2a0EzRWxUdFNycGVVRk9zd0NibjBpNm5yVzBCeFNES0dMMF82NVRhRzMwU3g4NGU2UlR3bTdnNTJuS3lvX3BVamd1QXU1NzQzSGNna3RucHZxQVNRRnhGUlpXVTF1V1dEOTFVOU1HZXlyZ3lXTk9iLVNLOFpSMGpUbndHUjBfUjdMV3p0Y0hpZmcyNFZ4M1FDV1lpU0UtSkkzWW45YWxOQU9GTkw1U3NGWkg5dVh5U0xWdlhIc0tBdi04Um1Nd2FRSVpESUJmUdIB4AFBVV95cUxPeURaOUYzZUItUy16YnZxUXg2a0EzRWxUdFNycGVVRk9zd0NibjBpNm5yVzBCeFNES0dMMF82NVRhRzMwU3g4NGU2UlR3bTdnNTJuS3lvX3BVamd1QXU1NzQzSGNna3RucHZxQVNRRnhGUlpXVTF1V1dEOTFVOU1HZXlyZ3lXTk9iLVNLOFpSMGpUbndHUjBfUjdMV3p0Y0hpZmcyNFZ4M1FDV1lpU0UtSkkzWW45YWxOQU9GTkw1U3NGWkg5dVh5U0xWdlhIc0tBdi04Um1Nd2FRSVpESUJmUQ?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "negative"
   },
   {
    "titre": "Le CAC 40 plombé par les banques sur fond de tensions obligataires - Boursorama",
@@ -54,14 +45,41 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Kristalina Georgieva (FMI) estime que l'économie mondiale résiste au choc énergétique mais s'inquiète de la situation budgétaire - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 25 Aug 2026 18:00:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZDZ1Ui13dmI0YTJBSjRTd2FZRUZYeEdsMExEUFp3c1ZHakt5OGdVdjZOaWpaa3NkcmpkUkF3RXY1eVdmU2FmbDJvSFVpQWwwWUNIZ0h2OS1EYXlxRGNwbUNBX244ckw5Rm13Nmlzd253b0hRTGJVQkh0X2hJV0JIdGtObFBmQmNubW9WXzJHdVpEeEtkSUxLaGwtODlfVUVFTjE0TzVvaHJ3d0VSYWppUS0tRXJWMDEtUFRYSDB6cVBuMUM2VV9UbnMzNndNTXViSXVFV1lPd2NrMUFwQkllUmlQdUFUMnQzNldZ?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
+   "source": "Morningstar",
+   "date": "Mon, 24 Aug 2026 16:37:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRE9naEs5QVE4R0R4MGZyYWc1U0ZZNmhmZFZYNGhrdWJnOUEzeU9Cc21uWmcyLWc2SHNxb3U5d0EwclZTZmwzVkRKRHIxUzJUMVBBeXk1RkNhRXZXNHkzczF6UllqMFRkLUZ0ZEZMRHhCbnh4Qy1wWWE0MXZBY3hDV1pNVzBGa2RQUi1sRmJzclNOTy1YSExfbm1kM1J3c1JPZGlfb2RpQU14bnF3Y2w1UmNWQVh2NExTWm9qNW85QkY0MmRwaXVj?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
   }
  ],
  "produits": [
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 28 Aug 2026 17:07:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 28 Aug 2026 15:35:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 28 Aug 2026 13:03:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -94,15 +112,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Bourse : Pernod Ricard au régime sec, méthode Coué chez Stellantis, la tech américaine se rebiffe - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Thu, 27 Aug 2026 07:03:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPRUxCMGs1V19NeE9JVHRrT2JyWlc2VzlaR001bVNPb3Y3eWlONmZ2SWNBa3ltMGRfR1F3bTBQblhsX2FBdVg5X3hhYW95U3ptNDY3c3JfRkFzVW5XaXFRQzJMQzNHYURiam81Qmg4TW9sTFBUVkNhNHZxUkJWYkFWSklPZ1NBOHRoV09Xd1ZiUXVxZmJNVHlBV1luWlFJdWYxVFVoUUlBN0V3QjMxMG04dWFvOXlPQzgtUS1DMXQzdVhEWjhYR3l6cEFjYVV5MVY3YWRFRlkxQkNRZ2ZNYzJzZk5fLWs2RjFlZ2c?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Le Cac 40 a réduit ses gains en fin de séance pour clôturer en légère hausse de 0,27% - Investir Les Echos",
    "source": "Investir Les Echos",
    "date": "Wed, 26 Aug 2026 15:58:09 GMT",
@@ -112,10 +121,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Bourse : BNP Paribas aurait des vues au Vietnam, Intuit souffre, GTT engrange - Zonebourse",
-   "source": "Zonebourse",
+   "titre": "Bourse : BNP Paribas aurait des vues au Vietnam, Intuit souffre, GTT engrange - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Wed, 26 Aug 2026 06:59:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQ0dBbVdfd1o2MXpUQ21hZnp3ZHc4cEVQVDZVOTVldEhMN243LW5sUjZkeDNhV01jVmxvT3JMaUk0QVItOThPWkQzOXkwNFY3QzV0c0RZS0ppODJuWHpGME1ENGZhdUlJRmVTSl9OMEVxLUNwLWZYY3FTMWJRcFd6cE1LTUVDeGtraS1ORWd1ZXRPUzFuTzNPQzhJVlkzNzZQdS0xbnRfSlNoZ0pHME02YnhJMzBEUF83bEZaemlQXzFyYzVHVEx3SVcwSlRkXzQ?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQd2JwMGk3RUdqOW9jOXlPaFFIeWtIUHpoa1F1MTdYRWlrQ0NpYUVyUTdlbGhzVFdJVGdtNlAwT1ZLX0xiTUg1XzFZd0lEWml3M29aSFVoNVFBbzZ5WFZ4ZFdKZkpuTnNNdlQwRFg5RnVaUkt4UFdaOW1hS1B5SVJEWUVKY2h5X3NUeTBUWEdDZVUtR2pjVElGSGdJSHZHNTBkVUZiTy1RbjVlTGlkc2x2aDJaY1JZcHMxTTAwMVJlNnVrTW5wZGxNNFNLZnRlZw?oc=5",
    "tag": "BNP Paribas",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -132,13 +141,49 @@
  ],
  "eco": [
   {
-   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 29 Aug 2026 22:11:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
+   "titre": "Le consortium mené par FedEx obtient le feu vert des autorités vietnamiennes pour le rachat d'InPost - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 30 Aug 2026 10:15:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZEhacWh0S3ZBZEVSYUZETi1ReUg4N2tUa25Kb2hRbllmek01U2F3dEtwSTB3MXl0bnY0WWl0cVJQcFFtenFuMEd2emNMV19kSU44SGl6M2NxaUYtZDdpQ0ZWVWFuMi1XblNpX2hzNEFpX1hlTWlwUU1felFodWRSTGlQUnZBYlNpZmZnTmIwZm8tc0RkdU5VcE9rTmh3RE02TTJvUTluaTlNTnQyTW5FQkJ1LXItTzlNNFZYQWEzMmlSdWItVVg3U3dNODMwR0VhVDdaZTgxOWZlQmpEbjIyRDJfNnl3dUdubTlFNWxhS2FaUQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Secrétaire au Trésor américain Bessent face au défi diplomatique du G20 entre tarifs douaniers, guerre en Iran et turbulences obligataires - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 30 Aug 2026 10:01:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOTm9XNEpyOHpQQmk0dXVOSEJ3cWhLeGN2MHI2VHVsTm5nT0U2TzJfWnptakdFOFhyRURIaXFROFJJclBKNWxpTHQtMlhQMldUUzVSV29VNXB4R2F0TVd3NmpTWjUxY1FOcDFPcmlPLTRnM0h4NFNMZWVWWFctYkI5SlVQYkphRXl0TzB1ZVRrMGN1Wkh0THNhVnZpbjRwQU0zQmVxeWxOeUozcnUyTzRjWXZaaEh5LTgwd2U1aTk4WXY4R2tGdTRvN2U5aHhJVzFyandCaFNhV0xkZFhxWVp0d1hBSExXT25iSTRlUEtadkM?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Secrétaire au Trésor américain Bessent face au défi diplomatique du G20 entre tarifs douaniers, guerre en Iran et turbulences obligataires - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Sun, 30 Aug 2026 10:01:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMVVIaW1oM0dqVV9zbTB0eldDRU42NUZucmlETktUd1VweDlCc192Z2M5RmR3RVBaeWl5M1NKcG1yZEYtajFjdklNd1p4R21vb28zS3pmc0FIdzFDR285TDFDUC13SFNMeEM0WmxPM2paeFVKdE1YcDIzRTJENVVMbHpPR3pBaWRPM3FkNG1feU4taC01SjJkblAtSFJJQjJlMkVMM1ViWnVsS3lhMW9RMTktT3BreHBDZ3RKS0tVN0JJdE5UMHplakNKc2c5dF9wc3F0aVhOaDNob2dHbndXY29UUmd3dlJscUlzRFgxSXNBdw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carburants: TotalEnergies s'est engagé à maintenir le plafonnement des prix à la pompe jusqu'à la fin du conflit au Moyen-Orient",
+   "source": "BFM Économie",
+   "date": "Sun, 30 Aug 2026 04:49:32 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-carburants-total-energies-s-est-engage-a-maintenir-le-plafonnement-des-prix-a-la-pompe-jusqu-a-la-fin-du-conflit-au-moyen-orient_VN-202608300051.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Pas de hausse d'impôts, des dépenses qui augmenteront moins vite que l’inflation… Sébastien Lecornu dévoile les grandes lignes du budget 2027 - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sat, 29 Aug 2026 16:42:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcG5ibGctYTZqYmFzSmh3Y1FqWFdLZk9YR0ZIRy1mTE5wU2p5YlNfekNxNXdXQUlXNlA5bDZkVENyc2N1alIzTTZ5TFdEbEpvbTFvVUR2VHF6VnBaTDQ5d2J5OHNRTkJfWURla3JDT2t5QTJDWjlkTXM1cjJNaGRUVU05OXhVTTk0cXJ0TlNfQ1lNNzJ5TVVKY1hOaGNCMFR2X2lrN3ZjVWdheXJXY0ZCRFJYYmZYQzBYa0dCMTRrUDF6N1duS3pBbVY5V09WaDZ6WWw1WFd1cEpHR0dVT3VXc0dHblk4QjlHSnpTMU5sQlNMQ0RpTFZVWXR2b0RIb0dJeDFqRjV0am9kTzJBWXh3SWpPWmFhZGs?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "6,4 milliards d'euros en plus pour les Armées, hausse de 800 millions pour l'Éducation nationale, mais des dépenses qui augmenteront moins vite que l'inflation... Sébastien Lecornu promet du \"sur-mesure\" pour le budget 2027",
