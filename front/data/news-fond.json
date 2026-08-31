@@ -1,43 +1,387 @@
 {
- "genere": "2026-08-30T22:41:50.070Z",
- "globales": [],
- "produits": [],
+ "genere": "2026-08-31T11:32:57.548Z",
+ "globales": [
+  {
+   "titre": "CAC 40: Peu de mouvements en Europe - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 31 Aug 2026 09:31:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNV1JMRXVZNFNBbDRWTjRxSU84Z3NMZE1JSTBHX24wVElZS3IwUG5Ndk5lemVueVNzUmFMb19mUXNhZUJmQ3lodDU1d3owUlhHakw3SUtaTDV0YTI2UmZpXzMxcTA1WUY4dDBDRmVEbnNCaUpuVHd2cEhqYVJLWmNBM3ZyYW9hOHR0Q1hYRjJQTU9oUQ?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "IA : Les 4 déclarations clés du président de la Fed à Jackson Hole - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 29 Aug 2026 11:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91eHdkNWg2RUYtN1VsaWpnakdmR1dScmhuSHFFNTc1Q3ZXRXM4UHNxUkpaRUdKNGhzelNaTU5FY1ZYUWItUFlrbkd1UjdLQ3BwRU9IRmxyelBBTktfS0hpbzZmTVRDT294azRrTg?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Cac 40 s'est bien ressaisi après son alerte de la veille, à Jackson Hole Kevin Warsh confirme que la lutte contre l'inflation reste la priorité - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 28 Aug 2026 15:43:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNTFlLS2pmSXJUMXFtOUpybXFRcGN4NlR6aUZiTFBfZ24wODBweXN3NXExV2tla3dlWlA3QzRXUVgyel9lanYxT29oLTh3YjhrT0xUS2RwS1lydDVBWUxsaDVwWGc4VFB4MExSc3UzamU5QWdUWW9kU1RMTV8zU1Z4cEFYeGtqVWprczJuWExlejRGelBsSTFxdDBxRjhGQkc5NHFWaW9UYVppVVBxX1lKdnl1QVJHN0plN1VCME85MU5xUFMwdERBS3E2OWJxb3U5TGt6TEtEcHZod0NlYXRnX2hmWDhXeW4xREFjT1ZyczU5eHVDalFscDVHc001RmU0dHZlaEdNVmlXZkNZakQ0N05sYzNWeF9lcHFCSFFOSEM1bXJUMklHa1VLa01FcUNZcXQ2OHVzV0luMVk?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Kristalina Georgieva, du FMI, estime que l'économie mondiale résiste au choc énergétique, mais exprime des inq - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 25 Aug 2026 20:27:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVEROM2VHWGx5cldJUUVsWmswSzFZS1diUEpiRktGTmFNZ1pqaTYweUtOaTlvYnJ3NURYUkZQR2ZuOVZ6Vy0tdWdETV9MN3hSaEt5R0JqZWpVS2wyRXk5eWxrVTBNaElsTFpaX2puWDRfblhyTFFWTmQ0OV90ZkJDOWZpUmRNQXBGSGRLZkFRRFRPUGppeXVHOFd3Q281THlwLTZiR0xNNzBQLVhBRHo1dVlSSEh2ZVJ5b1RmZ2ZWOHRmejE4djBUeXVya05WalV5TkdWSy1ZbXZBdDdzU1Jzb1NxbWlmLVBVRmdEQUlhT29RVlRLOHhkanhocFM4QW1veEdMVU9nVXJKdTZNanUxcC1UQ3J4QjVoZjlvLUxsclZmeU5fVHQ2Wlp2bDlLMUE5aFhKejQzYnNEUlZW0gHCAkFVX3lxTFBMWFZQSHEzYjhoY1ZzVm1QdHR6MDExVTNtNnVqTm9GZ3MyT2NMa0RkUHRXZk5mVno5ckJUR2h5TnhlWWV4Q0NsRFBodkM2N09QcXNyOUZkTzkwU0xCazk1Z0tUVXZiTTFBcGM4ZzBWeDh4T2RsLUJaY2ZUV1YtUXE4SnpGTkpjTVJmVnd1ZFdUYXdjVGNobGdTTWhtNzRYUlVmVEJiRUJBdVFUYlZHM3NTc0JId1pJYXQ2VDA1N2xabkpSZU1hcERqQkFCdXl2UUlVbTUtYzJHMmJaYlBjVzhPaG0xTGxLb3FXTnRZcUZTZ2RNeE1ja251NGVZNkRKU3UyOV9tNmY1RGRQeHpMTVZfMFBUeW1LWHdaVFZpX25YOWg0TUNqZnpQanp3bHQ2Wm1hRFZUbnFfTnIyN3hXb19kX3c?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Kristalina Georgieva (FMI) estime que l'économie mondiale résiste au choc énergétique mais s'inquiète de la situation budgétaire - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 25 Aug 2026 18:00:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZDZ1Ui13dmI0YTJBSjRTd2FZRUZYeEdsMExEUFp3c1ZHakt5OGdVdjZOaWpaa3NkcmpkUkF3RXY1eVdmU2FmbDJvSFVpQWwwWUNIZ0h2OS1EYXlxRGNwbUNBX244ckw5Rm13Nmlzd253b0hRTGJVQkh0X2hJV0JIdGtObFBmQmNubW9WXzJHdVpEeEtkSUxLaGwtODlfVUVFTjE0TzVvaHJ3d0VSYWppUS0tRXJWMDEtUFRYSDB6cVBuMUM2VV9UbnMzNndNTXViSXVFV1lPd2NrMUFwQkllUmlQdUFUMnQzNldZ?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Cac 40 : Malgré la baisse des prix du pétrole, le CAC 40 marque encore le pas - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 25 Aug 2026 15:52:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeWNxVlJMVWpUMFdidnBTLVB3UXUwcFNpX3NEZGcwQkJtY2ZiUjZDVVdHWDZ6dmRKR3dmNkRITEV5ZjQzR3o1YkxVSDJhcjRqY3dHbWJKSld3VmdZbDJyRXVkSE5DRUVlcDRiYlF3SmRGR1JlR2ZNLS11dVhyRkVKMG1HUUNGS1VMTTBEUTVSaVlnMEJGaWJGQXFpZEVKT3VIMmFMZllGTzE1QWkyS280blNCUDJveWwtUDNMZlF5RlpQSE96anBSMXNMZ3phdkxRWnR2NlJzVTItMUVGNXc?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Bourse : les actions de l’Inde, en retard sur le CAC 40, vont-elles prendre leur revanche ? Comment investir - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Mon, 24 Aug 2026 17:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNVnFPZVZwNnBZclhsaDRxVVBNSGprRzdrSzR2cVFZeHF6X2cwelVWUU96OGpqR1NpS21RTDdnM0lPc1BaeFM1Qmo2aWlDTFpkREFYWkpNSjVKWlU4RGtpaGpqVmY3OXVPbEk1b0otVmNGcExZYUktVmxSVFliS3Zid0NMX0QtR3FRRV9WdzZIRWJYcDJLUldVb3VlbVdfZ0tjTmxrUTFzbG8xaDZEYnZoZURxQlNvbmZObllsd3BYbDM1blFncTRIUktXZ2pSMkFDOERpYWVJX3hzQlVpSGZGZS05R1Fobk0?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les conséquences de cet été caniculaire en Europe sur les marchés boursiers et l’économie - Morningstar",
+   "source": "Morningstar",
+   "date": "Mon, 24 Aug 2026 16:37:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRE9naEs5QVE4R0R4MGZyYWc1U0ZZNmhmZFZYNGhrdWJnOUEzeU9Cc21uWmcyLWc2SHNxb3U5d0EwclZTZmwzVkRKRHIxUzJUMVBBeXk1RkNhRXZXNHkzczF6UllqMFRkLUZ0ZEZMRHhCbnh4Qy1wWWE0MXZBY3hDV1pNVzBGa2RQUi1sRmJzclNOTy1YSExfbm1kM1J3c1JPZGlfb2RpQU14bnF3Y2w1UmNWQVh2NExTWm9qNW85QkY0MmRwaXVj?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  }
+ ],
+ "produits": [
+  {
+   "titre": "SAINT-GOBAIN Cours Action SGO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 08:45:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yelBQSjVyWUQ4akcwX05xdmJGM2RBWlMySTEzRGsxWlQzSEJuOFdRNm5MMDlhZE5GVGZuYWU4OEFGS2Ixa0FCeEJJU2owRTduVlE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 08:21:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 07:57:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Action Capgemini SE | Cours CAP Bourse Euronext Paris - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 28 Aug 2026 15:55:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53SjcycnZvSy1RY1FHQXczRzlwbU4tWlFQby1pclBOWl9YUktsV29ncWFTTHVVSmVPYnNlMTNQX0IycUtxT20wVG82UjR4WHptTnZ6Y2RZQUJFT2N5OGFueHJBOUxPbF9sa2c?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 28 Aug 2026 15:35:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 28 Aug 2026 07:43:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Societe generale : BNP Paribas, Société Générale, Crédit Agricole dérouillent en Bourse à cause des inquiétudes sur la situation budgétaire de la France - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Thu, 27 Aug 2026 10:45:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQdzRkRDhmS2l4NmNIMGlNV2Nuc0RsOGtOWV9QLWdISDVwLWVpRWNFYXFhWDhzS0wwRHlyeTZIZndDLXlSTDgxVUYxc3NYUTVDTElfWEZGQ2RtbEh3aGNUSTczRmlQcDYxVlZhWE5TNkFvUlExRG1jY2FITmZadEdDWTVRQkxsWVA4SGltS2YyYUVsQmxWRExxVkxiRERjelRVRlpnVDlBLXU0cGw4eUhKVU1XSDBtclAzaGRycTY5TC1wOGYxUFNfeWl2dUJtbUxvcGhCZ3RsMVhuV3hsMUZQMzFBaDJfWUtGTGhGcE9HU2pXZ2V3YlN5eEROU1FHVnlGekVBZDVjWWFySUxTUWo3TmFCUnN6SzhWQ0Y4SE1ybXZ2aFpiQkg4LVh1WmtrMlM3UlRPajlSOTc3Zjh4OWpRd1hIbXZuUGNHa1p4TGt3?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "VOLTALIA : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 27 Aug 2026 08:56:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNWXNLR3ZWa1M0cUVGNzMxY3FmeDY3Vk1La3dXR25wMjFvRkRoRFAwUHBPU3JoNzI5NnNUaWwtX09lWDQ3MGtHNDloQzFVUFQ4azNSUXBNRDZYbU5xTkRYX1BsUFJmNDRiQ0pZNHJuWUxlcTRBbU1zenJCWHV2OGZzWFhYdllOVnhOQVFTcWg4TTdFUnNDS3oyeDVXOXYzMkh3MS1NNTc1NFllSXJwRUU3OWJ2SGVUemRJNkdqVk5xb3lyc3pER1dkbDVLeDYzYlNG0gHWAUFVX3lxTFBkQTlHSEF1ZXNNQ3lFOVZhQzJ2MWs0MDF2dl9jMHdfWl9xa0doX3FpWUdkXzl6dzYxY1hUVVdnOFVxTm5rSVlKUFV2ZGxWR0dNZlQ0NThCanRGM1RfZVB5RHNoVEY3MnN4MzB4SmwzMVI2RlNfU284VmdhUHFBV0F4WGNaeGdYQ05aWXdGNWlRWGxfbENQSEhKeHJoTm9vZ1JCQllSLWlNZ0VKMmlTQU5ia21kbjFPZEpjVERzbDhLSE14aUNYTkM2blo3M192QmZmTUNnc1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  }
+ ],
  "eco": [
   {
-   "titre": "\"Nous exploiterons ces zones\": même si l'UE n'est pas d'accord, la Norvège compte bien forer du gaz et du pétrole dans l'Arctique",
-   "source": "BFM Économie",
-   "date": "Sun, 30 Aug 2026 15:59:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/nous-exploiterons-ces-zones-meme-si-l-ue-n-est-pas-d-accord-mais-la-norvege-compte-bien-forer-du-gaz-et-du-petrole-dans-l-arctique_AV-202608300034.html",
-   "tag": "BFM Économie",
+   "titre": "\"Ces aides ne seront pas suspendues\" : le gouvernement promet de poursuivre le soutien sur le carburant - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 11:08:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQTGNrYjZWbTB6V1d4QzI0SjZnZFFnd2RIME5wZmxVM2EzYWRzWGtsOGFoeUl6amliOWdRbVo1aDJ3bzlLNkliU3kzYThyWk9ha3dqWG9tT1dSY0g1OTU1QnlhVlh6V1RVR3I3bzcxYnVPX2N4TXBfeFFQX3R4YThpR21TN1o5OVhhVTNBLWU3UVN3a2VGS29DZjEzT1N5SGFXVDJTVU1wenIwU0EwSHRpOHkzeHNNTko4YTR6bzExTjNQWGFvNFZkZjQ0MDhidXYzTWs2RThLTlZRT0lrUkRTbnNRUTZTanQ5V3F4U2tmUVhDbDFEeFZiX2JlV3RLRnM3SVlfZGEyX2vSAY4CQVVfeXFMTjVhRl81a0lNY2pKX2d1MThKU001T211X0VNMS1yLUVHVW1fNEZlcHlDek1sNEI4S3NsRU1GV0ZVdi1aQmpCS0N3OUFZU0Z1d19CU00xSmd1UU5FVDVZeEtzR1E1TnRzeHBGbVdaUGE0dXBuUE5YblNDUFA4M20tT3hjWWwxWjJkeTU1MDRUeDFMZXc2Y2wwX2EwYmNxd0IwR0VGRmZNdFRVU3NNMFVPOWpNSE0xcGZDci1XZTk2d1ZUN1Y0Z21RUGF1eE1XWVhtbEpxTXVLZEZPcDV0M0xEUTBlVjd6NzBHdlNJSUVCOGtmLTBZNERCSE9TaTlJdHFtREtMcHY0NTRSbzlRcE5n?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Carburants: TotalEnergies s'est engagé à maintenir le plafonnement des prix à la pompe jusqu'à la fin du conflit au Moyen-Orient",
+   "titre": "Eli Lilly va racheter Merida Biosciences dans le cadre d'une opération pouvant atteindre 2,88 milliards de dol - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 11:05:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPYzhCRHNJNnRrZWNldldWQnVzeU9EUDdSUnNWSXphTFYtaGk4SVVIQkhrVVY2alo1MXBwanBtclRDV3EwbzJUb3R1Sm1jcXdkS0Q0SmtzTG1ROXhXSi1lUHlJNVFRWjFKQmdmSjloV19iSWppaHhmWUhjV0wtZUdvZnZwNmg2NU1IS296YUpfNzB4NS10VUI4bDZnVHpwcS1RMDVwdVpKZ3dfdUo3ZjlOQzRiWXlmQ1hNTndtWFYtSnE1LTlBRlBmakNRVHZoeVo2Y19SbjBGVnlPS09kV01uaDg2cE5DWlluVW5LaWltQlNCdGp0YUpHeW51SFpQcG5INWxGeXFfQ3dIcE5KT2dQclhiYlVOb3ZyekgxeNIBogJBVV95cUxNZXIzUHJKcV9JM01obnk3ZE12d0p3MW54aHo0TnBxNGdULWg3M2s1aEIxMDJRYmxhRE9pUzk1TG9ZZHpybGdRYkxJdzE1U1pWb25DTkVXdjJ5UFNLTXZ5MEdGSjhuV1pNYWpWemFxTGcyUWJaTzBlSDhaNEU1R0J4VWMzY2Q5cm91aFdZU1RkamduQXlIa3JLV3R4bXV4SFpzSFdGQW44XzBFeVlnRk5fYUlIZTFTdjlXZk9Ld0FJUjhRbGNZN2Q4WlBwUVJkcW5jSUJVdXZTcXZ0QWV2R05sOFJ3dTVqR29XQUhyVnlOWGQ5SmE3bVN3QnJ2VlRyeUJRVTFCZjVPbjFwNEpLMTVZbW9kdC1jZWc4VHdvQUJxTU5ldw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street attendue en léger repli, les tensions géopolitiques pèsent - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 11:04:53 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQnlQTTFDTXBjeXY1bWRzQzV2eGpQRzNjWUdrenlxd0FiQ2gySzhoU25kRDlFZlVuV0hXbXF4MkNwRzFFa2VhUmE2RF9lcEwwZmFTdlhSZ0FNSFFYcVZrdUxMU1lEekl2YmNGdGt0M1lSRi1VTGJjME9UbGEyZmI2NzAxSWZtUmdaVld0NnYwYXRNZlZOcHF1S3ctZDdwa2dWTFR5V0lmbmhWSGt6d0NESWRaV2s?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street attendue en léger repli, les tensions géopolitiques pèsent",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 11:04:53 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-attendue-en-leger-repli-les-tensions-geopolitiques-pesent_701806",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Eli Lilly va acquérir Merida Biosciences, l'opération pourrait atteindre 2,87 MdsUSD - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 10:53:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQUFV5dmtwR0tNTE56dUNqX1EwRU5rV2dxeVhlTEdhU3VpdVBoVXI5VDl3OEhHcXlUUVNSZ085OW5VN0IwQ3k4R0xqclJrLTZLdC1BeXpXNXMtNURVMW9ZTDFJV05vVHotMFR0TkRaRHR2bWZ0eFc1V0VrbExXQ01KUDlmQ1hQdGpSRnZJSnZHNTByaEFBeHM2UC1hdTNxVDRnVzA2UHFyOEdfQlgtZlRkNlhCdjk0R0pEYXIyb3ZWQTd4SWVMcGQyOGg4WkZZUmFKU2dtSEFmaGF0TFl0MXBOYkRBYkgyckMxTTVjU3ZhVE51bTTSAfgBQVVfeXFMTzJXV25HUjZ6LXNYbVdHZ0hLQl9PUS02UUtFSHNUM0lkbmJhTngtcVlCRTZURjJCUUlTSEZUb0tPakFOSi1ZV0pFMnRUMnBxTngyVFZOU0oyeTI2T00wVk5KOGFTOHpsUVk3T1lQc0ZmaHJINWxWQ0hHTG9FZWZuZkJiWmtHeGVHYWpCOTRRd0dadXlVVXM4TTZONEdhaXd2SlZZbWVnaUNGVUotclp4TUNHWlJwblRPTG5fWWl5NkczMzN6U2tKbS1paEpMT2pCa0YyNkpMMlVqMEIxdGZqRm9OYUhhcFQ4UlVkenRxUDlNaDA2dDVrYzk?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Eli Lilly va racheter Merida Biosciences dans le cadre d'une transaction de 2,88 milliards de dollars - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 10:51:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxObzJjLU9EX0tzaXJPSlJpb3dnQ25qdUhiMjAtenppVkdTbHpHb01fbmoyLXdnMXdtY1FvX3JiLUwyUUNFbkZhOUt4dTF3RTBhZHdYdVVIRVplekNseDg1MkE2cmpqWFIzejVJanA4MmlTT2oya2ZqZi05VFpGNnB3QlEwSTZrUzlxM1hFZ1BjakpmMHdmaUlIeDBrdzNNNlVkam9SY3dTZmpuMGFYVk5pRGJpcDMwekNEYm9ISnR4dTB2WjNjTmMxUFJvRG9EV1l5d2I0a3J2ZkFsZGdHcnA5TGt0YU9OYTd3Ym1FMVpaZjY2NzA3SGdmMUliV1B5Y0dkMklaSE15SUROTlnSAZACQVVfeXFMT0NCSno5NGRzZHYzQnpYenlPUDdRci1LdFU2anVjX1ZkcVJraEozWlRoSHNvN0JrQUltTmlzUlprUkdKWVNWRVhxb1B2OV9nY2Y5UHl3ZGo1c2VycElzVngxZFp1VlVQeEExSG9fQXcwZGR1ZmI3Z0FRN05sZEYwS0JFU2ViejZONXlVc0ppT0o5VFV6R3lUOEIyRTA4ODNiOFJaMmx6VW9hSmZ4eEdLNk14eUxCbk5ZOXpxSVN6WlA3aE0wY19zSkdRQ1N5R29Pb1B5NXF5Ty1FZEd5aktmT3gyM3NveGxkRnJZRG12bVNkNlJoSnVWa1U0OXFVTzYyVzNxUUctcjRqTnFoaUotenY?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Cac 40 : Malgré la reprise des hostilités entre l'Iran et les États-Unis, le CAC 40 garde la tête froide - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 31 Aug 2026 10:49:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwNBVV95cUxPa25RbDZlY08xbkZDYk9zc0htbGFaR3FTNDJOd2czU0lfX3dsS19KUGJoYUxaS3hNRS1qQ1VEbm5fMjgzNENmblNwMEVZWmpUTE5xS3dZSlFFTWxYT2NyQ1lPQzFYb1NGZGlob3RwOHdSSkp3bVNwcUdEUFh6T1B3bWFWak1keXd3eE9fN3I2bHVzSFFLZkRYYXA3cUgyRjZ0Znh0RmlsYzUwMnRhT2NlR3R1OVZqZlZXRVFpUkdHV3U4Zl9QOFNQUTNvb3lzY3hPTDNxRHR4ZzNlNUJkeTRqdWpGdzRudGp4MC1PYWt0S2RtUE8zTlpXb1BPUkdteU9jMmh0U0YtOVYwTXRQS0M0dTlmeFJueWtmckxSSDB4RkJXeVhMX3JvV19HdWZVRE9RR3ByeE1QRktLY05oTERLOUF3VlBqbkRMYVpBN0ZOc3E0U3NUZU14X3ZWVm53YmUwLTJsODNBenJkQmtnSlRSSVRrdFJ1cXBqQ19mOU1EaFQxemdTQUxUSU1remQtQWVNSGl4ZGZkRQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Cac 40 prudent face à la reprise des attaques au Moyen-Orient et au discours offensif de Kevin Warsh, TotalEnergies en hausse dans le sillage du pétrole - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 31 Aug 2026 10:47:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOLXlnT3VZT21CNVVYUUJYQ3lPZ1RLUDU0UldOOWR5M05aZU1lVXI5TU8zSGhRVGM1QkFkREZMUEpWckg4X2txRFd6MDM4WnRZcFJ1UjRDb21SZWE4SnVDQk8yWGxJRDdqdjBfLW1ZS3FRbGtCbDBUSm4tSFNLbzBIWVM4c2w0SFFhT3FUVUU3WEFpVllUQUFoQWtHaUMxT25veHZQa3hmcGVhdzllZ3F2V1prYVdWZzk2ZkpwdWtCclRBSU1BTS1OOE5ndFFoX1kxUmNfSUEzSk9vVlpoaHJTbFp6ZE5zMlBJdkdTYUdsN1ZsWnVkMWRINzR3cER3RmExYnZoS1lFX25fT1Jib1BkM192VmFnTGViN20yVEV2bVFhNXl4OHZUWS1hbFFqSlRBeHRwOGZ6Tlc0YWEyRFE1NEdjeWVNblFn?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Inde: les actions reculent de 0,4% -Cac 40 - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 10:36:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mNWQzMFRDTl8xOHlGVVZqYlByTDVvelNCVzJ1RFdTZURCQnFTbjNDdE1aUU9KcWFtcmdmUnBBUlBIcDVmeTFvT3p5VzZRSGRvLXM4Y3NwZ0k0NDhXMGwwMnpLWGw3bEVjMmxiMjZzQUJxYndBNTlEVzVINW1QQQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "MIDI ÉCO - \"Les comptes ne sont pas bons\": 10 milliards de dépenses en plus, croissance revue à la baisse... Ce que prépare le gouvernement pour le budget 2027",
    "source": "BFM Économie",
-   "date": "Sun, 30 Aug 2026 04:49:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-carburants-total-energies-s-est-engage-a-maintenir-le-plafonnement-des-prix-a-la-pompe-jusqu-a-la-fin-du-conflit-au-moyen-orient_VN-202608300051.html",
+   "date": "Mon, 31 Aug 2026 10:24:45 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-midi-eco-les-comptes-ne-sont-pas-bons-10-milliards-de-depenses-en-plus-croissance-revue-a-la-baisse-ce-que-prepare-le-gouvernement-pour-le-budget-2027_VN-202608310427.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40 : la Bourse résiste malgré la reprise des frappes sur l’Iran et les craintes sur la Fed - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Mon, 31 Aug 2026 09:46:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPRWVtYUE0SlZjbDJDbVR0TV9XVmo0QUdfUjNIQ3MyZ3Ztb0plWE9MTDN1SjZlZHlja1FzNlBFNmRQZmxSaVFwbTl5NDNIUllVT1pHTkRGWmJiNjZnNFVoYUxQU1NSNmppZW9Mc3dMSXZCZThoWHFZN29YTGJpVEJhc0VlY1dqeDVGd3NoaFVabzBjQlRxamotbVM5NndCb2NxLUlvNkxBZ3ByWFRfT1VqZndNSjdTUnA5WVlXaEdBUktDUE1sUjdvQTdLenVYQ1pGQjkxeFNzVlhhZw?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Pour éviter \"d'aller dans le mur\", l'économiste Xavier Jaravel préconise de ralentir les dépenses publiques \"pour qu'elles n'augmentent pas plus vite que le PIB\"",
+   "source": "BFM Économie",
+   "date": "Mon, 31 Aug 2026 09:43:57 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/pour-eviter-d-aller-dans-le-mur-l-economiste-xavier-jaravel-preconise-de-ralentir-les-depenses-publiques-pour-qu-elles-n-augmentent-pas-plus-vite-que-le-pib_AV-202608310397.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "6,4 milliards d'euros en plus pour les Armées, hausse de 800 millions pour l'Éducation nationale, mais des dépenses qui augmenteront moins vite que l'inflation... Sébastien Lecornu promet du \"sur-mesure\" pour le budget 2027",
+   "titre": "Les marchés restent calmes face à la hausse du pétrole et à l'inflation - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 31 Aug 2026 09:24:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQbURoQXBnYXE2ZklqV09NcjlHQV9aeGhkRjkyaWRaX004b2dJa1I5MnVQazdMNGlhNGdpZXNjcUJiSXZySXplLTlXWG9tYktNV0h2YV8yQzlXLUkxXy1hWlZKLWN1RUdFbHZGbmVJaVJia2dKNzJGak0zRkd1T01wblNIWG81Rlc3YXZJUG9uZVZmQ3U1Z2ZjSDZoNzRKSi1hX3VzUjI2MERZcUZhcmZFOFZld0h2N0N6cDFMYnlrV0dsV3EtN2xSajhCM0M?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe se cherche un cap sur fond de regain de tensions au Moyen-Orient",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 09:18:37 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-se-cherche-un-cap-sur-fond-de-regain-de-tensions-au-moyen-orient_701801",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les taux en hausse, le Bund allemand au plus haut depuis 15 ans",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 09:18:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-taux-en-hausse-le-bund-allemand-au-plus-haut-depuis-15-ans_701802",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Japon veut lutter contre les \"nouvelles formes de guerre\" comme l'IA, les drones et les missiles à longue portée: le ministère de la Défense demande un budget record de 48 milliards d'euros",
    "source": "BFM Économie",
-   "date": "Sat, 29 Aug 2026 13:46:13 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/6-4-milliards-d-euros-en-plus-pour-les-armees-hausse-de-800-millions-pour-l-education-nationale-mais-des-depenses-qui-augmenteront-moins-vite-que-l-inflation-sebastien-lecornu-promet-du-sur-mesure-pour-le-budget-2027_AV-202608290245.html",
+   "date": "Mon, 31 Aug 2026 09:16:09 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/defense/le-japon-veut-lutter-contre-les-nouvelles-formes-de-guerre-comme-l-ia-les-drones-et-les-missiles-a-longue-portee-le-ministere-de-la-defense-demande-un-budget-record-de-48-milliards-d-euros_AD-202608310372.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Airbus songe à vendre ses activités spatiales aux États-Unis pour se concentrer en priorité sur la création d'un leader paneuropéen avec Thales et Leonardo (et faire face à Space X et la concurrence chinoise)",
-   "source": "BFM Économie",
-   "date": "Sat, 29 Aug 2026 11:45:41 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/defense/airbus-songe-a-vendre-ses-activites-spatiales-aux-etats-unis-pour-se-concentrer-en-priorite-sur-la-creation-d-un-leader-paneuropeen-avec-thales-et-leonardo-et-faire-face-a-space-x-et-la-concurrence-chinoise_AD-202608290212.html",
-   "tag": "BFM Économie",
+   "titre": "Warsh affirme que la Fed doit agir si l'inflation reste élevée - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 31 Aug 2026 08:51:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbVZiWi1iS0ZSbGItMWF4LVlubVBnVHRjN212Qjk4NE1RR0JzblE5TDIxbGRwbUdwYUU4ckxFQWlNUXo3QjJ6ZTJsdjJYemJCQnpxQ3dYVXkyVTRsZXdFeDh3WU15T3hOM2EtNzhwcy01cTFkUlNYaWN0Q3ZlWEVUWjBYa2dKY1MyTC00SlluNkFSRllfdWhNLWdPbEhqcloyU1o5NFRjYnkzRHRjMWVBNE1iWHYzVmZDQnJlbGdQOA?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe cale face au regain de tensions au Moyen-Orient",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 07:37:53 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-cale-face-au-regain-de-tensions-au-moyen-orient_701796",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris monte, les valeurs pétrolières en soutien",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 07:19:32 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-monte-les-valeurs-petrolieres-en-soutien_701794",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris devrait ouvrir en baisse, lestée par la hausse du pétrole",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 06:35:22 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-devrait-ouvrir-en-baisse-lestee-par-la-hausse-du-pet_701791",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Rentrée économique : l’inflation monte, les grandes banques centrales jouent la montre - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 06:20:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQZzRRS1JrTWNpbEMwM1NmRUhkRzBWMEJ2M1c1Sk1FT1psSElnUlNrRGs2LU9nTllMM0xuRTdqMW84VENUVENKa3VXUzlJUXN2MVFvbWhZZkE1a0Z6cUEzQnUzVDJQbHVncDh5S3p0dDE5WmttNVQ3Q2tkazcxYW9nTnVhWmg5eF95dkpITkQybXdWeHVHc3F0RTROczJQcWpKQnNnSmUxUktNWXB2Zjc0a3BQR1JwRDVqc09RazE0cmk3OENNeHhsTnV0czdHcHB5TkhnZTdaMDQyMjhEUVNDNllwWWRibnpxZFF1cTBfaDY2RlhjS1JUWnRZdXJYeWpSQzFJemVDbV9iMDDSAYsCQVVfeXFMUGc0UUtSa01jaWxDMDNTZkVIZEcwVjBCdjNXNUpNRU9abEhJZ1JTa0RrNi1PZ05ZTDNMbkU3ajFvOFRDVFRDSmt1V1M5SVFzdjFRb21oWWZBNWtGenFBM0J1M1QyUGx1Z3A4eUt6dHQxOVprbTVUN0NrZGs3MWFvZ051YVpoOXhfeXZKSE5EMm13Vnh1R3NxdEU0TnMyUHFqSkJzZ0plMVJLTVlwdmY3NGtwUEdScEQ1anNPUWsxNHJpNzhDTXh4bE51dHM3R3BweU5IZ2U3WjA0MjI4RFFTQzZZcFlkYm56cWRRdXEwX2g2NkZYY0tSVFp0WXVyWHlqUkMxSXplQ21fYjAw?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe attendue en baisse, le pétrole monte avec les tensions au Moyen-Orient",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 06:05:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-attendue-en-baisse-le-petrole-monte-avec-les-tensions-au-moyen-orient_701789",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Airbus envisage de céder ses activités spatiales aux Etats-Unis",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 06:01:55 GMT",
+   "lien": "https://www.abcbourse.com/marches/airbus-envisage-de-ceder-ses-activites-spatiales-aux-etats-unis_701788",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ROI-La communication de la Fed est-elle défaillante ? Warsh peut-il y remédier ? : McGeever - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 06:01:47 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQNjJ6YlRPUFRjc1JFUldHMFp4UkVTOWJxMUhQTnNncGhQa3hxM1V6bnRFb2VQNVFOUHRqcWRZbUtQSzVNRW9rSWpWeFUyZ25LTHdHZV9zT0djRDVqbzRvQ2FVcjItcDJwNVlaOUZBZnR2RXlCZE5pWldoOEJnZEd1X2dJYXJ6bFp0bkZ3ZWlsRUFzU1cyLUhkNjdSYVdQVDJ0WUpRdmhHQUtnWGdaR1YySTF1NkFWbzZnWTB2T0Rwa0FoVVg3WTNXVzZiaWp1V1RRYnQ5dFZoVUpzVHUtU1VReDdBUG90QlI2YUp0ZFZDLWZ1VHZEN0F3eFpQVdIB-wFBVV95cUxQNjJ6YlRPUFRjc1JFUldHMFp4UkVTOWJxMUhQTnNncGhQa3hxM1V6bnRFb2VQNVFOUHRqcWRZbUtQSzVNRW9rSWpWeFUyZ25LTHdHZV9zT0djRDVqbzRvQ2FVcjItcDJwNVlaOUZBZnR2RXlCZE5pWldoOEJnZEd1X2dJYXJ6bFp0bkZ3ZWlsRUFzU1cyLUhkNjdSYVdQVDJ0WUpRdmhHQUtnWGdaR1YySTF1NkFWbzZnWTB2T0Rwa0FoVVg3WTNXVzZiaWp1V1RRYnQ5dFZoVUpzVHUtU1VReDdBUG90QlI2YUp0ZFZDLWZ1VHZEN0F3eFpQVQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les investisseurs sont rassurés par les propos de Warsh sur l'inflation, mais restent dans l'incertitude quant - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 31 Aug 2026 06:01:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPY1I5NGF3TEtaUVpxbVhPbXhGY3RNZ0NWTG1KREp6WW5iNURZWC1SMFNYSVNCeEhLRndtZXl4WDBDb2NpTHpnT21FZHNuYXlUTGlRdWREZV9BYU9mRkxNMC1lb1plWWl3MmN1UjhhUUJhNFZGY1ZnZUNrOTFiM1p0ZVBOU2pha0xlLTBHdEs0dWR0d3lZNHljZmp6UHdfODFJWWNMb29xS3BKOU91S0Y1X3E3SVBmTm5PbXp2cHZGM3RfYnJOVnp6UTlQcEpjYUhLdXNrQTZFYVljZWcyTkxUdEZEcEFHdXVJandWX2FVZzN2SXBJcFRmY0ptMTlQNXZfZ2k2WDM2Mmo0Q0NtVHV2bFZ3dTI4ci03TndIQXlBNG1MdHFvenRqSVA4RXpEbERwNHhIZ2ttNUPSAbgCQVVfeXFMT2NSOTRhd0xLWlFacW1YT214RmN0TWdDVkxtSkRKelluYjVEWVgtUjBTWElTQnhIS0Z3bWV5eFgwQ29jaUx6Z09tRWRzbmF5VExpUXVkRGVfQWFPZkZMTTAtZW9aZVlpdzJjdVI4YVFCYTRWRmNWZ2VDazkxYjNadGVQTlNqYWtMZS0wR3RLNHVkdHd5WTR5Y2ZqelB3XzgxSVljTG9vcUtwSjlPdUtGNV9xN0lQZk5uT216dnB2RjN0X2JyTlZ6elE5UHBKY2FIS3Vza0E2RWFZY2VnMk5MVHRGRHBBR3V1SWp3Vl9hVWczdklwSXBUZmNKbTE5UDV2X2dpNlgzNjJqNENDbVR1dmxWd3UyOHItN053SEF5QTRtTHRxb3p0aklQOEV6RGxEcDR4SGdrbTVD?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Kevin Warsh plaide en faveur d'une hausse des taux et relève le niveau d'exigence pour un statu quo - WSJ",
+   "source": "ABC Bourse",
+   "date": "Mon, 31 Aug 2026 05:08:42 GMT",
+   "lien": "https://www.abcbourse.com/marches/kevin-warsh-plaide-en-faveur-d-une-hausse-des-taux-et-releve-le-niveau-d-exigenc_701783",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "Records annuels: Edenred et Sodexo progressent, Nacon décroche",
@@ -47,89 +391,144 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "S&P 500 - Les actions en vue vendredi: Marvell, Paypal, Nvidia, Gap, Workday, Elastic",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 20:57:39 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-vendredi-marvell-paypal-nvidia-gap-workday-el_701779",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street finit en baisse après le discours restrictif du président de la Fed",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 20:49:05 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-en-baisse-apres-le-discours-restrictif-du-president-de-la_701778",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe finit dans le vert après l'intervention de Kevin Warsh",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 16:27:00 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-finit-dans-le-vert-apres-l-intervention-de-kevin-warsh_701772",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'hypothèse d'une hausse des taux de la Fed se renforce après le discours de Kevin Warsh",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 16:26:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-hypothese-d-une-hausse-des-taux-de-la-fed-se-renforce-apres-le-discours-de-kev_701773",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "A Jackson Hole, Kevin Warsh plaide pour une Fed \"plus discrète\" pour ne pas fausser les signaux du marché",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 15:57:56 GMT",
-   "lien": "https://www.abcbourse.com/marches/a-jackson-hole-kevin-warsh-plaide-pour-une-fed-plus-discrete-pour-ne-pas-faus_701769",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris termine en progression après le discours de Kevin Warsh",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 15:51:43 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-termine-en-progression-apres-le-discours-de-kevin-war_701767",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre vendredi: Marvell, Paypal, Gap, Workday, Elastic",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 13:43:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-vendredi-marvell-paypal-gap-workday-elastic_701764",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre vendredi: Marvell, Paypal, Gap",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 12:33:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-vendredi-marvell-paypal-gap_701761",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe est bien orientée avant le discours de Kevin Warsh",
-   "source": "ABC Bourse",
-   "date": "Fri, 28 Aug 2026 09:27:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-est-bien-orientee-avant-le-discours-de-kevin-warsh_701757",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
- "uc": []
+ "uc": [
+  {
+   "titre": "Magellan Financial chute au second semestre 2026 après les coûts de fusion - Investing.com France",
+   "source": "Investing.com France",
+   "date": "Thu, 27 Aug 2026 01:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUNDalhUUERJRGhKczVJa0Q2SXJORDNYSUh4dExBQjBTOUtxR0YyV01aamRMOEw1QlIwbVVWZktFMUxkSHg1T0lmU1MtV3gzSjdlUWRNWVlUbjRYeXo4RmQzbWdKZ3ZPMmhpSnpXU3pDd2RfMDZhbEtsOEZOOTRZeU5MLVl0TGN5OEE2MW5HckxwRlFfdENPeVg0VTFoNFBVSC1CZHF3YjhhSGNCblRTeEF1SzE3Z05HSHBBQ3lHemcxX0dsQlJSaw?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Magellan Financial Group : baisse du résultat opérationnel et du chiffre d'affaires pour l'exercice 2026 - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 26 Aug 2026 23:59:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNNURVQnpKWmxYSk1NUXdJb3dKNGFIdGxKa21oR2VoRDdoeDhZUVVSbjJCTzRlczRoSmV4ZTFieHRxN2ZJSE1zS2VCU1k1Zy1jQlJkRUlEdVo0bHhwUzdROXh3MEltVkxYdXRrRi1wX1VCTlBFVHBjTmFla1BLR1dpSmVzN3J1bWpsWFFfakJtWjZCWFRPWGE2aWczbVR5dXF4SzYtRjRaZFpwOG5UdThibU9JVFFTSVExSjlBemhSYzVWNDlJMWNnUWVZWWpPV2s2ZUNTV29zVWVuY0JpOFdwMmdlX2NabUtHRjJ2ZW1B?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le fonds Carmignac Patrimoine réduit son exposition aux actions: Jean-François Filliatre - 09/10 - Orange Actualités",
+   "source": "Orange Actualités",
+   "date": "Tue, 18 Aug 2026 17:49:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbWk4eUI5YkI2U1RkQkZCdktBWG9VdkJIdFJMN3JmbTYxZ3E4TUJXZVRHUnJ0d1VNMTkwZGlqc1draXd2MEpwRVdTQzFvTFk4NVlHcnN5QkhGcldkVmJkVGRnWG1mcGhsR1ZVMVF5NFBkMXhwaldNMV9qWUFiNm1ZQ2JjU0JQUFBWc3UwYkV5ZWxzNldwNkJub3FHd2dzVGNOeEVGbEZ2TlVLREgyak1qcVZVeGVSNXBtX2ZldEUtalF0TlVEaVVKenNTc2lTaExiTkc1X0N2ZHlSdmd1Y0RyazJtWTUxWVk?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Annulé, Star Wars: Magellan était un action-RPG AAA dans lequel on pouvait incarner un Jedi ou un Mandalorien - IGN France",
+   "source": "IGN France",
+   "date": "Mon, 17 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZE5FcjVNaVpMZG41cE1KYmM0NWlQNTNtTVRoRnFpd04zT0FqcnY4WnJ3N0ZLODdLQ1Z6OWVURWNlb3VXVlBFWVBZTVBlQ2dHX0NVUEhDemNEdklFZFJSejYxcUgzMHprQXBkcXM1ZHhaRjM2blluaENHTGRyWXdLT0syR1pCSUY2R1kxbDQySk9lNUN3YmZ2ZkRsU1FlSkc5amN1am56Z05IRXNMWWJpMlBlbFhWNmx1YllSTEZiTklLcEdoSkY5ZGxhWDRVWTBnRGRKbE9FVHFxenM?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
+   "source": "Instant Gaming News",
+   "date": "Sun, 16 Aug 2026 21:48:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - RFI",
+   "source": "RFI",
+   "date": "Fri, 14 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOd2N3d3EwT2lQNGNTVDhBR2xzYjI3OFgwNDFZazAtdVBkRVo1a1loMWVtSVVJVi00dkJ0c1N1OW9yNk45Q2ZJbl9fc2t2Ul9OckxnOGRobUJjNlBRLXI3MVBqcUI2SHFqbzJrbzAzNUNyT0ZiRC0yY1hBUmlNWW5rWGNnano5eWJjb0hxM3Utb1Baem1RSlFqZGUzZklOb09iQXdtVjBnMks2WjNxcWlGQmhYWEtMS194UUIxbjhJWkJJbDkwc3g3SzZLYjBpbWFTT1lWYTNQWHVkNFhRcHc4YVlsdw?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Balma. Conférence : Magellan et la fin d’un mythe - ladepeche.fr",
+   "source": "ladepeche.fr",
+   "date": "Thu, 13 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaTdfeGdnSjg2bW9nQmFCV01fTDA2eDBWZUdUZ3pNY0o4azNzTmhqdmJxeTJSczE5czR3RXlKRG9ySERvWmZkR3B0Mk5GS0p5WVJSQUpiR0xnLUtGNzR1Qm9URFRzN3EtcXZkblYyTEp0X01VY3R3RXRjU0tMN0pOSHNETXJJekhKeVdjSnhyb2NXQQ?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 03 Jun 2026 09:13:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9EdXNoZExkZFRqdGxXOWtaYnF1ZjV0ZXhwYjdDVWJrNXBiMlpTQmo3T0FYQnZFTGtJTGl4YkZuZ0NxSU5jZVA4NFlrUlJEeF9OaGpvMUpqYzhIbkx3aUNINU1NSWxlNnFOckdtbHFrb05zdWFoS0pqWXZaRHo?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "DNCA Invest Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "source": "MACSF",
+   "date": "Mon, 18 May 2026 21:01:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
+   "source": "Club Patrimoine",
+   "date": "Wed, 06 May 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "DNCA Finance renforce son équipe Eurose - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Tue, 17 Mar 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVlpManpKMzNFVmFUQzJYczAzRkFZeG14UFhNVjU4RmhxeVlxbDN4MXRET29xeGlJTDA0LVQtNUwzcEZfNFR2N2dnNVprNzZGOFMtdWpURnlkR3IwNlRQbGZkSWN2V01VWXdONGRxMV9mR1pZb1A2UkxvMzlGelRyellEQ1JZd0YzRUZvX1dDVS1rUQ?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
+   "source": "MACSF",
+   "date": "Fri, 17 Jun 2022 01:42:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest SRI Norden Europe - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
+   "tag": "DNCA Invest SRI Norden Europe",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Découvrez le fonds flexible ODDO BHF Sustainable Credit Opportunities - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 03 Nov 2021 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPc1FzcTdDRUw2YkppWDEyY2xGQzRBWWVRMXBQZ0RWcEkyVHQ3dUxDbnd4eVM5Rm41NVFxYVdrVGxNUDhBZ0U1NmtDTG5USlRTdWkyZFo2aU1EZmNlXzhxX1hVMmU3a1hZNmNIQjJYRUllQW9nbmtFclFfdGxPZDMxb3lfcTMxaU8tczNnVERRZ0lqbmNWMHBsbG9pNFc0cDY3VWRIVHZRNnFYS2J3VWV5Tjh6QTdQMWxkdFRaMVktdXU2U1BrZTlhRkhYUXNuU2Fac1VrMTFhNzhaZUI5T25Ed9IB5gFBVV95cUxQT1JRN2p0Wk1vRVZSRmlZaXNJWks3TWVqelhjQkxocEhvcHVBWm5VVUgxZUY2WDg3LVNsSEF0MkJBblhqRDZBYWNqcXh2bUlSelI1c21VaHM2ZjBSbUZMb2RFamNKMTFXcHc5MDlESWNUb3ZvSnR6eWxtYWJFMnA0d2FwbHpvb05xdE9rSVJxZUd2TjZoNXRoa3o2QzlNLXBvSDdVckMwSmNiajRqdm5ZQVViakZ5QzlSLW9CXzV3TXNFSnA5R3NkUWNXMkptdkhmQmNtdzNZUk53NDVaaHM1c0ZQREhSUQ?oc=5",
+   "tag": "ODDO BHF Sustainable Credit Opportunities",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
+   "source": "Profession CGP",
+   "date": "Thu, 24 Sep 2020 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  }
+ ]
 }
