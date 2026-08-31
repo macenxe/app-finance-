@@ -1,43 +1,43 @@
 {
  "isin": "FR0010286013",
  "alloc": {
-  "action": 50.3,
-  "obligation": 40.8,
-  "liquidite": 8,
+  "action": 49.7,
+  "obligation": 42.5,
+  "liquidite": 6.9,
   "autre": 0.9
  },
  "secteurs": [
   {
-   "nom": "Technologie",
-   "pct": 34.2
-  },
-  {
    "nom": "Industrie",
-   "pct": 26.3
+   "pct": 30.3
   },
   {
-   "nom": "Finance",
-   "pct": 16.7
+   "nom": "Technologie",
+   "pct": 27.4
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 12
+   "pct": 15.6
+  },
+  {
+   "nom": "Finance",
+   "pct": 15.3
   },
   {
    "nom": "Communication",
-   "pct": 4.7
-  },
-  {
-   "nom": "Conso. de base",
-   "pct": 2.8
+   "pct": 4.4
   },
   {
    "nom": "Santé",
-   "pct": 2.8
+   "pct": 4.2
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 2.7
   },
   {
    "nom": "Matériaux",
-   "pct": 0.4
+   "pct": 0.2
   },
   {
    "nom": "Énergie",
@@ -55,27 +55,31 @@
  "holdings": [
   {
    "nom": "Microsoft Corp",
-   "pct": 2.2
+   "pct": 2
   },
   {
    "nom": "Amadeus IT Group SA",
-   "pct": 1.8
+   "pct": 2
   },
   {
-   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 1.8
+   "nom": "Edwards Lifesciences Corp",
+   "pct": 1.6
   },
   {
    "nom": "Adobe Inc",
-   "pct": 1.7
-  },
-  {
-   "nom": "NVR Inc",
-   "pct": 1.5
+   "pct": 1.6
   },
   {
    "nom": "VeriSign Inc",
-   "pct": 1.3
+   "pct": 1.5
+  },
+  {
+   "nom": "NVR Inc",
+   "pct": 1.4
+  },
+  {
+   "nom": "Shin Maint Holdings Co Ltd",
+   "pct": 1.2
   }
  ]
 }

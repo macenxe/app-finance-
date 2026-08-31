@@ -1,9 +1,9 @@
 {
  "isin": "LU1120766388",
  "alloc": {
-  "action": 98.7,
+  "action": 98.1,
   "obligation": 0,
-  "liquidite": 1.3,
+  "liquidite": 1.9,
   "autre": 0
  },
  "secteurs": [
@@ -55,43 +55,39 @@
  "holdings": [
   {
    "nom": "Gilead Sciences Inc",
-   "pct": 5.2
+   "pct": 5.7
   },
   {
    "nom": "Vertex Pharmaceuticals Inc",
-   "pct": 5.1
+   "pct": 5.2
   },
   {
    "nom": "Amgen Inc",
-   "pct": 4.2
-  },
-  {
-   "nom": "Alnylam Pharmaceuticals Inc",
-   "pct": 3.6
+   "pct": 5.1
   },
   {
    "nom": "Regeneron Pharmaceuticals Inc",
-   "pct": 3.5
+   "pct": 3.6
+  },
+  {
+   "nom": "Alnylam Pharmaceuticals Inc",
+   "pct": 3.4
   },
   {
    "nom": "Biogen Inc",
-   "pct": 3.2
+   "pct": 3.3
   },
   {
    "nom": "Insmed Inc",
-   "pct": 3
+   "pct": 2.8
   },
   {
    "nom": "Roivant Sciences Ltd Ordinary Shares",
-   "pct": 2.5
+   "pct": 2.7
   },
   {
    "nom": "Ionis Pharmaceuticals Inc",
-   "pct": 2.5
-  },
-  {
-   "nom": "Mirum Pharmaceuticals Inc",
-   "pct": 2.3
+   "pct": 2.4
   }
  ]
 }
