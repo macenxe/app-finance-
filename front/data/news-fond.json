@@ -1,14 +1,23 @@
 {
- "genere": "2026-09-01T18:24:56.690Z",
+ "genere": "2026-09-01T21:43:54.321Z",
  "globales": [
   {
-   "titre": "Bourses européennes: Paris en hausse à contre-courant des autres marchés en Europe - Boursorama",
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 07:13:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNRFRyVXQzT21haVFZT0x5SDEwZHV2MmdjUzZpakZ4OUttQ2tOU3FVOGpvdDdidDhWUU1KUFRLWXR2TmRtOHh3X3JZMHAzZlo0NVNTQ0VFVlR4T1I0NHFGNWFhczQ5MTEwSy12UzlMSjA2TURiX2h5Y012S0NrY0RFRGdjS2tDVk1LaFRjRUtubVpoNUdhUzN6eGZYNThTRjVNUGV4M0Jxa0xwLUt3dEd6VnFDVXNuUnNlN0dkZ3BySmRzTVB6a2xIc2J1VGJXbnJ0QlRSSWY3WFg1RkpUcVZtZ25NVnNSWEZ1aHhUTVFSY0TSAfYBQVVfeXFMTmdUT1ZEMTBYcXNfLW52QThHc2NhZXNKMWFuLUU3ZTIzOWpxdm9JcWpoNnJyQ054eEQza2lfYnZmRFR0OGRwUEQzTjkwZ2ZyM3p2MWtYRGJLeGlNMkxnMksxbzllTjV5dHBzYWlPdnp5dVBFbTZHVU55dXo4VzNBeHpIMlJGbEZuUi10Q2JGaFJMMGJYcVpkLVlwVXh4Qkc0V1pSa2VwYktrSlhLMlhBa1NhckVwQWpDYjd4clk4aWgzTXN2OUZJUlZtM295ejFSRHJ6U1Q4OU9UZGthc1JxNGFYUjNna3Nyc0MxOE11U2kyMUctV2Zn?oc=5",
+   "date": "Tue, 01 Sep 2026 19:47:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
-   "sentiment": "positive"
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les marchés mondiaux sous pression face à la hausse du pétrole et des taux - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 01 Sep 2026 16:05:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9vSWxwb0hRTEJwd3RWWFZNekNtdzlFOXgwTEVfb0g4UkNxcjhGTmRiamppa1B0NGo1Q1Z5S3BrRjF3bnRrYnZoVHRGY0liVEUwdXRlU0VTLVNyRFFKa1Y4MC1n?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
   },
   {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.17% - BFM Bourse",
@@ -16,15 +25,6 @@
    "date": "Tue, 01 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQcUFXRDZQcFBhaXg5WFFxN3VQSVlOeVR6anhPdFFFZWNRMkZFZlFQeGZCTmNsSDBQM0F5VVpaMk9Td192Sl9YMFhnZ2oyQXU0YkpiNENnYTZBNFdMcV8tODh0UXVyTW5ZUWpvR3dpR0dTU1h6LWZmZThaZVdsSGt4S1NHMUV1LTdKSWVIdGo4OXZJanNKa3d4eWVzeDhUdXdLV0MxX29SRk4tSFFENlJlb2lMeHRJeWY1NmJKVGw4bVpEdldKMlVsT3VR?oc=5",
    "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Warsh se montre restrictif, mais y aura-t-il une hausse des taux en septembre ? - Morningstar",
-   "source": "Morningstar",
-   "date": "Mon, 31 Aug 2026 17:19:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQelpEMWhNcWp2S0x5OHBKTUV6bUhZVFdSUk45T0ZKcXdONU5iY0JRbFVSaVgyTHlWX0xrR1pPNXdKcTE4X2ZIbUlFb294R2tRRzVLVnVuMTkzMnJtZjhYaEZ1Wm5xajNvdGwwVTNVQmhEbmFqeF9FZDBpY3NJOEJVWVU3ZFF2S2FrbmVPX3VNSllMZVZpdzVLMWFUVnptc2NQcHEzd0V3ZXU1UkpSOUpQajZXTjIwOVVBVjFEalJR?oc=5",
-   "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "positive"
   },
@@ -54,15 +54,6 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Kristalina Georgieva, du FMI, estime que l'économie mondiale résiste au choc énergétique, mais exprime des inq - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 25 Aug 2026 20:27:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQVEROM2VHWGx5cldJUUVsWmswSzFZS1diUEpiRktGTmFNZ1pqaTYweUtOaTlvYnJ3NURYUkZQR2ZuOVZ6Vy0tdWdETV9MN3hSaEt5R0JqZWpVS2wyRXk5eWxrVTBNaElsTFpaX2puWDRfblhyTFFWTmQ0OV90ZkJDOWZpUmRNQXBGSGRLZkFRRFRPUGppeXVHOFd3Q281THlwLTZiR0xNNzBQLVhBRHo1dVlSSEh2ZVJ5b1RmZ2ZWOHRmejE4djBUeXVya05WalV5TkdWSy1ZbXZBdDdzU1Jzb1NxbWlmLVBVRmdEQUlhT29RVlRLOHhkanhocFM4QW1veEdMVU9nVXJKdTZNanUxcC1UQ3J4QjVoZjlvLUxsclZmeU5fVHQ2Wlp2bDlLMUE5aFhKejQzYnNEUlZW0gHCAkFVX3lxTFBMWFZQSHEzYjhoY1ZzVm1QdHR6MDExVTNtNnVqTm9GZ3MyT2NMa0RkUHRXZk5mVno5ckJUR2h5TnhlWWV4Q0NsRFBodkM2N09QcXNyOUZkTzkwU0xCazk1Z0tUVXZiTTFBcGM4ZzBWeDh4T2RsLUJaY2ZUV1YtUXE4SnpGTkpjTVJmVnd1ZFdUYXdjVGNobGdTTWhtNzRYUlVmVEJiRUJBdVFUYlZHM3NTc0JId1pJYXQ2VDA1N2xabkpSZU1hcERqQkFCdXl2UUlVbTUtYzJHMmJaYlBjVzhPaG0xTGxLb3FXTnRZcUZTZ2RNeE1ja251NGVZNkRKU3UyOV9tNmY1RGRQeHpMTVZfMFBUeW1LWHdaVFZpX25YOWg0TUNqZnpQanp3bHQ2Wm1hRFZUbnFfTnIyN3hXb19kX3c?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "positive"
   }
  ],
  "produits": [
@@ -103,10 +94,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "SOPRA STERIA Cours Action SOP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 31 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaVmRvLXo3eUxhY1lXOXBmNlNUaTJNX2xDemVHQXBmY05sbk1wQ3BtaXlMQURSMDNvSUo3N3pJY1N5WFh6bnRlai0ydG9UdjZ6ZUE?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -141,38 +132,47 @@
  ],
  "eco": [
   {
-   "titre": "S&P Global en hausse après l'annonce selon laquelle la société envisagerait de se séparer de sa plateforme Cap - Boursorama",
+   "titre": "Les États-Unis prônent une approche de non-intervention en matière de réglementation de l'IA lors de la réunio - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 18:10:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOenljYUhEQktBaThIX1NXWFZrSlNNSk5RLWNpS3l6SlZBWGhDMm9NY2FhVVVVMWgxdVJ6U01LZEk1Sm1IMmhrMnJVbVdGYXpuNENJNW41dmEtalRTcmhvZ3FaQzEzYlB0M1dxU0E4T294Q3lsS2xaS0V3RTFDTm1kaWxFNGhXQldrYTZLbDlDMktFQlJRaXg3dURwTlc4dk0yT1RQWXc0YlJGeU4wOHEyQlRDMFpXdngwZ1NZQ3FqTTYzMWxGTXpLRFFtQnM3dmtURVl1eFhGc0NGNUVTNElWYjNwdF8wNlBBY093UmNCS0NQWHlGT2VtRUx6RWlWdVNaN29YRUJDR3ZiSEVqQ2dxdmxOR3U0YmxxTko5alpFbWMxZEZHX3fSAasCQVVfeXFMT0tNQmpEcy1vOGhzYm44eGgweVlaZTF5X2FCekZ0dlp0V3QyaGcwbEc3cTJ2RlctNENzUHJseUNTYllRTWVVOTBzS3o5Sl9FQVVmczFHSHpzOGVMTDBSWTdWR2tTWVoyWmJnRDZpYjJzSXI3ZEd0QzZlcEJXaWYtZ2tNNXUtOGpCSlN2YTVLTUJ3NWthOTdUdndyM3UzMVFtbng2d2ptRmIyV1g2N3JBYktGbjlqazllSGVUSjVsb2xvR2kzeGZSZmdlMy1DeC1XMVZPRWRyTjRTMGk4TF93VVJUQkZkZ1FnZHVzdzBEeHlsRmFPSURtWl80TzE1Umk2dndPQUxYZVRGaXZtT0pXVzkyandEODBJMTAwSmxKWDRUeXZuRTFvUjlPaFU?oc=5",
+   "date": "Tue, 01 Sep 2026 21:36:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNUk9oWkdtZG5LTTNvRjRiYm5KUkFJWWtSTFo3TzNyUEVCeHZockFZNjlERGNPZGQyUzk4N1pTZDZkWlpsemNuTS1jX2JsclY1bVVidW5GQWZORmIweDluQVpyNXZpSmNPUUpjODlZM0VVakdSUmQ3UUFvTjhzeUlzc1JMdkZ1emFTYWM1ZUtFdEwyZ0YwQ1oySGhsSUszMHpKZHd3ZkIwWGQ3LU1wblBLSVdLMVJSOEtrMFZXT2FtVUYzNWZkUkF2Y29BaXdFaWlEX2R6SFRKQ2xoaDlaVHVuaVVmTzNqRUVPSWZfVjNqekZfOWF3QXR5cnhJa3IzaS1IZ2hVa0g1eVFuUXRnOXZqWVdtLWhlb19aQVkxY0JTN3pIelNHdzVERGV2M1dXQlFXc0xTcnpEeGdwaHc4S1HSAcMCQVVfeXFMT0R1c1lpQzBmOXY1V3laTm4xOW1RZVZhVE91aU51UHFaMUNOWldxQjdlT0FiLXNfQ1V3QmdIb25fVGpYX1BfV2Iwa3VEbzN0ZlNFcGVzWWZ6VkZOQW9HaDQ2UXlkd2RWS3pGbFpvSkE1akRrc3ZWVWRzMEN5TjktYUxDaWY0MWlMOVV5eDFINS1OU0s0UzlFbFhkVjh2NWdiRF9BRy1kcHZXRGhlUER2YktldzhPRFBBd2pqeXNxUGNTX1NJMXdkWjJILXdDZjJLbDFuUERkaHBOcTVLbkloNHh2SkFiX2N5YjdWWWQ2S2w3RmJMUm1lOTdQUFQ4VTRLYzNKdTNGR1k2SVF0UjRhU05Kb3BZaW1MTnpTM1M2UnBYb1NWSXU2U0szZ3FjaUF4elBXbkoyY3RvMzBiN20yaUhYalU?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les marchés mal à l'aise, les coûts d'emprunt et de l'énergie bondissent - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 01 Sep 2026 21:08:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQeFFHYmN5WUdWVDlKNG0xakt5b1BhQ28xUUJhWDVOMUFwRWJZUDk4VW0yQTlOSUc2UDh2TUFYVHRRZk84UkVyT3NNRVVtTkJIQmt2ckdLS3QxeVMxWUhnVjFfWEpqaG50MjBfZ2lzSG1ONlZFOHlaSUJ1SzkxTTlFMnhYSlhjWkpBRWJnNnRzbnZ1QndHazIzWFY1OVhyWDdyNGd2bFJhQnQxX2tMZFppTTU3a1lMRkNmbDA3bk1ZeVZDTWtzemJWbDMxVHg?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "CORRIGÉ - CHRONIQUE-Les investisseurs de SmileDirect poursuivent des banques en justice suite à la faillite de - Boursorama",
+   "titre": "Sénégal : accord avec le FMI en vue d'un programme d'aide de plus de 2 milliards de dollars - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 18:07:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxQakIyR2NvTnBpQ3lmZ3pjTTc5T0NVbTdJQkxqMndZQlg1ck0za19QTnV3R3lYZjRES3ljWFA5RmIxZlNmT2V4Mm5aNHMzQzVZRlNFTk4xMHJ1bnVuTlRpOFRiUTdYNFB6NDVYRFluVnBKUlc3d3J6UEpuUmdaLURHRVI3TFdEMWpYTDhKWnM3cEU2am43V0dGZVloOTd4aVZxVGxYUEkyenRfeXZLSnJpMW5VRlVqalRPYWxLME1KUEUtTXJWSE1reXkyRGlIbVJTVlljZFBHNXJLSkFCVGZwTFpUb1hkUGE5bk5nWk1OY3ZyTnZZMzBUZEt6RE1taXVSQ3gtdWtGeGJ2YnRXVmc0dnY5NnpWbXBaOThSUVdxSEpaZTQ2bHVYOGIySUwwUnpIQ1daMWRybUUtXzAzTVhSWkloM0g1WFFjNk9pQ1c1dExxMDQ3TF84RGw0dmtBTWZBcWNDRGpOeElNNmh2Mm0tYUc3d2VxVmRu0gH-AkFVX3lxTE5ZWXM2Z0FqZHE5N3dELUJEMUNIX0FkUF9xZkx6bWttU0pfRS04UHFadEwwdTJZaTR1bnBFUUNKT3gwNkJGbm54Uk9Ub0ZsUFRGQ1pqM0VyNlNuSkhGVVRjQlFQbG9VSHlQZjhLbGJMQjdlaG44M1hsV1N3Q0RKWVI4WktzOHdtajl1S2xENHhwenVnYXpvQVJaMjhmcjE3dEIwOWxXeVE4SHpGb215dGRnVjBsVGYwenBrOU5UeGdibGlOSUJINkVUUzlCSkozODE5VlF1REpGdDByOFczdTBTRDh0bUlXTFdxQjk2dXpmUWIzUGxYZVByeXpDcHlZNVE2aXlyLWZIMGlTZ3Vsc1dyXzJZVVk1eVFoT25NUk4yWHBfRGxFU2Z4bUpITmxyVkZ6V0xNa1Z3NnpKcldQTjVpRmRpV2p1dzMwMnhCRngzLVdpeUcxU1BxcE9QMGFqMFM0c3p3azcyWGNsX1daT2wwTlBmTjd2WkZQN2hyOVE?oc=5",
-   "tag": "bourse",
+   "date": "Tue, 01 Sep 2026 20:58:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQU3R6NVpwOTZOSDFTcGptTzI0SmRzZi1xUXhlLVNKY2YxR0tJeDJ0bEJTUzE3TjdMR0J6OUtQeGhzSnF3SW5FcDZaTE9sU2RTVjNWeThYYjcyTkJ4OFZ3UVM5VDZ0UjA1MGx0a2JTWE9qZko2V25vb24wUnl0Q0FaNlFfcGVZbUFfUWtIS1NSLTJFVmV2blkweW9kdTU3by1JNVBWZXZUWnoyeU93cWZWYXpSVE9HOXBNMFMyRnVfMEdqQldEak8wYnptWVJzcUl4Q2FjU2ZmVVM3dE9Oc1prN2ZZZGRpbXFUV1IwUkRwempfWXdPQjJWaUViQdIBgAJBVV95cUxNY01sbGMzcV81ZUJBMmNoY1JOcDlUWVB0d3F1YlhvNkVfSnp6LVZINGxBNTBMUFZRWjVBVW9RWFdXOHd0Ti16dzhRTDBDMkstT3R4bUR5b0JrSjVVT1ZIQVdnVlh2YTZwcHFBbk4ySmRQb2UtN3pJSHB4eTJjOFlUcUlDVWpxLTRqZU9yZ1huc1g5dFQ0dDR4bmhXbkxSdzVNN1lUWjJfMTZSUnhMb0p4eFFwNmV3aUNuSUp0RGg4RDFaTF90dzB0WlFRNFZwOWtyNDRRNk9JN3BpcXVuYjF6UVc3NTlVUjk5RkpTaVJxZXMwVWRqYWNDTDFGdXZoTGx5?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Wall Street recule, crispée par la situation géopolitique - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 01 Sep 2026 20:50:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNR3h0Wmh1LTJjUTZUbVNUSHh1d21wQUduVWw0eWdoVjRKaHFtWWx2Z2FiSjZfWmlhZUdrN3U4VkJnRHVDdWsybHdJbWtFZ1RBclRvVW1FZUJ2bWdVbUxIbWllYmNGZkdQN0ZGazhpRGtjQ2s3Q3ZkbUpON1d3VWpsaVllRnM5aWI5MnVQOENJYVpEY2JHWHlVaUhhUHZxbjJUeFBFcFViWWZTclIwQ1pzMDNGSW9IQnQySTFadlNqajNLRGlLWG1jaVdHTUZybVHSAdQBQVVfeXFMTUQ1TmIxV25sX2VLaTM1R1BYNzBLLTc3b05uUm4wSkdLSW1kTC16ZW1QSzlBbFpiTEJxZmJWeXNobzhEbUU0b1JkWGktNWVyY09wNmozN2ZfdjdQNHpjZ1dkMklDdHhzRThYeWNpcVRGR0ZEV1VyaDV6dkp1X3EybWpxWHl4WUE3Z3RZZUpvZERBeVNJN2MtYjBWWjNKOTFGbWhwZURpRWhPR0FYajl6c1cyeHY5Nk5nWm1wQ0hwLUxad1ZEOWJfZXNLSGE4Y2g0TkFrNHU?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Nestlé va céder son activité de compléments alimentaires grand public pour 1 milliard de dollars - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 17:34:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQX0NFLVh3T1RfTjJ6MURtcmNfcHc0N1dLTDduN0tXWkdOclBsdXVlWmdTSHlBLWhsR0hubHhoVU0wcWFtMV84aV9fd0xIOGZFSU4tV2s0ZlFIaVp4NWdHRXl2TTRsZ2VYQ0dGYlFyNExjUVhsYkJ0V09sZ1JJbjhyWTNMWXpqOHJEY19pb0wzV01LdWpHMXpRVjlxdEVxV21xTHdFbG53OW50bm1rV3lTa1ZfNmw2d3B1Tk1talBiNWoyWktBUldIdVEwcjR0SjNSU244bEw0dnZZdDJSd1ByQjNfeW1kTGR5M29BRjJnN0tDUVkyTzlfMWd4akZ0WjV3WkFhLdIBigJBVV95cUxPZ1VsOHdBbGlLeGlEZDN2Z2NiNldTSGR4dDdFWnNOUkF6NktaajR5Q0xaeE9OSlk3NEFtLVlZYW1KQnItSms4Wlh5aGZfZWZBNGIzdUFseHhHZDdNNnduaGtJRm82cy1LMjhlLTA1SWx4S3N0eF9HXy1KY3BRV0Jjc2VlMW1HaVdWWWpyYnRFeTk0Skt6RzRDUkNSenFLaEtBV0M3LXRuVG1zWDlOcnpsTHU3NlFuN2FlNDlMZVlZOHlmZGRNc2pWUVpSYnpfR3NrZlVoWFFJQ3B0MHlMYTNNQ1hFZVdVRW9IXzFsbG1LaVlUMEhwNFVyN1czbFE3c0FzVk9NOXp3V3dPdw?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Taux : les signaux d'alerte flashent de partout - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 17:34:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQM1NyUmV4T2Z3d1FlWEppRDdEenB3TGc2aUlzeDY5OEFYdmNMbDZnZlVLM1VTdUhpcEExLVRwa3EwTEd3UHBkaFRWRmRqTGEyUzdERVROOV9ERjl6bjhTZFhzU2lfb01vQW94UEc4QVY2UFhveVRUMVhtUElFdEs5MUh1QlUtZDFEX192ZnpjV19rdlF1clV2SDFpRHZRc29VNDBRemZscm8zTzlLOXNIUDRac0NPcUVBcVp5b2I5MVjSAcYBQVVfeXFMUFpURFBLTFI4TkFfUHN4c0JJaE1jM0llVlYyM0ZIX3J1NVJxQ2J3OXlzQ3hwaVJYOUZpVXFibWdQMkxpbTI4X0UwUnR1MWN1Z2h5aFd3VVhIdmRxcEdRa3puWGw0ZkhuZ3BBdmROVVFGeXB0N191Xy13VUx6ZFJhaXdvaTMwNU10b1JvMzBxRmx1MnZFbEdSdDE5Y2xYdmNKTDcxUzg4cGVZZGlla0hial81VWNTeHcxRUFKZDBkckM0V2R6UzlB?oc=5",
-   "tag": "CAC 40",
+   "titre": "Inflation à 3,3% en zone euro, un plus haut depuis trois ans qui menace les taux de crédit et l’épargne - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Tue, 01 Sep 2026 19:31:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxORmRLVmpMcEhadjVaeS1DUWhyZGREWWZscF9oMktkYVE5NGdBaFg3VVhLOHVjc3RuQVphN3lQMl9rWlJwVVVhRVBjTnptUHBFYldqTG5Kd0pOaGJ2anUxNFBYNlZDdWtfa05CYnhXREdTLUdRYjFwNTg3OVR2Q29MYmVDX1VuVU9hMUkzNWhyMUpMaUtIUzNCb0JNQ0ExMk1EcDZHTmN0NDBKTk1FZDlhNDc4dHBLZ2c2SGxMa3RxeVdFVXhfaDhVVUVfNk1MY3Y0YkgwcGZYN1pMcGlMaDg0aGpsVQ?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
   },
@@ -213,15 +213,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Air Liquide monte avec l'entrée au capital d'Elliott",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 16:15:58 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-air-liquide-monte-avec-l-entree-au-capital-d-elliott_VN-202609010706.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "L'Europe finit en repli, le niveau du pétrole et des taux inquiète - Boursorama",
    "source": "Boursorama",
    "date": "Tue, 01 Sep 2026 16:15:54 GMT",
@@ -240,24 +231,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "On refait la séance : \"Air Liquide sous pression d'un fonds activiste\" – 01/09",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 16:06:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-air-liquide-sous-pression-d-un-fonds-activiste-01-09_EN-202609010692.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "On refait la séance : \"Air Liquide sous pression d'un fonds activiste\" - 01/09",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 16:06:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-air-liquide-sous-pression-d-un-fonds-activiste-01-09_VN-202609010696.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris termine en repli, le pétrole et les taux continuent de peser",
    "source": "ABC Bourse",
    "date": "Tue, 01 Sep 2026 15:49:33 GMT",
@@ -265,24 +238,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Le Club : \"La hausse des taux peut-elle noyer le marché-actions ?\" – 01/09",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 15:43:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/le-club-la-hausse-des-taux-peut-elle-noyer-le-marche-actions-01-09_EN-202609010671.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Club : \"La hausse des taux peut-elle noyer le marché-actions ?\" - 01/09",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 15:42:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-le-club-la-hausse-des-taux-peut-elle-noyer-le-marche-actions-01-09_VN-202609010681.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "L'inflation conforte la perspective d'un tour de vis de la BCE - Boursorama",
@@ -299,15 +254,6 @@
    "date": "Tue, 01 Sep 2026 14:59:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPWjVCV09Wd2QwS0lCbzJTUlF4ZWdmWmduNTdvbGNLWjlFMkdoRlZLOV9PbVpuOVFkMHhzMUN1emcxVXZ4RWpXYk9BVzNLcUM4d3JreXNFbmdvVk50WF9jYVZ5RnNOVHNjaGFfaHlDTnBVOHp1UExCeWN4Mzg4d0FkRVVBVTFRQ3dYaC1US20zTzNrbm9wR1NraHVtcUt5Y0oyanpjTFNIc2lPNnJSbDRNR3dqTDA2ZXd1a01LdjZ2NXpMenUydXdzdTF3dUhkcHExYnJsblVxcVdGVTc3MWs4dWJ5VkNvd25RZGfSAeoBQVVfeXFMT1o1QldPVndkMEtJQm8yU1JReGVnZlpnbjU3b2xjS1o5RTJHaEZWSzlfT21abjlRZDB4czFDdXpnMVV2eEVqV2JPQVczS3FDOHdya3lzRW5nb1ZOdFhfY2FWeUZzTlRzY2hhX2h5Q05wVTh6dVBMQnljeDM4OHdBZEVVQVUxUUN3WGgtVEttM08za25vcEdTa2h1bXFLeWNKMmp6Y0xTSHNpTzZyUmw0TUd3akwwNmV3dWtNS3Y2djV6THp1MnV3c3Uxd3VIZHBxMWJybG5VcXFXRlU3NzFrOHVieVZDb3duUWRn?oc=5",
    "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "\"C'est la parole de la France qui perdrait de sa force\": Jean-Noël Barrot prévient les parlementaires que le pays sera \"affaibli\" s'il ne se dote pas d'un budget",
-   "source": "BFM Économie",
-   "date": "Tue, 01 Sep 2026 14:58:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/c-est-la-parole-de-la-france-qui-perdrait-de-sa-force-jean-noel-barrot-previent-les-parlementaires-que-le-pays-sera-affaibli-s-il-ne-se-dote-pas-d-un-budget_AD-202609010647.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -393,22 +339,13 @@
    "sentiment": "positive"
   },
   {
-   "titre": "L'inflation dans la zone euro bondit à plus de 3% sur un an en août, le fonds activiste Eliott aurait pris une participation au capital d'Air Liquide - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Tue, 01 Sep 2026 10:40:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNNkVMUGlwYUJ1d0VmMG40R0dfbFg5TGxQRC1RMXNWdEpRQi16SlQyS1BDb3ZGNWJMVmhKRWtSamNZNTA2N0wwSFhJZDduay1VSHV2b1BGVVRaZDN5SnNXd3NyRVNQTFZGY1FLZnRXLURBMUhhM0haUE5WMXNUeEhXYy1PX2VHTTRjSHlWNERPZ0JDR1JMZVBlNkFaX01ZM2wyYnR2aU1Mc2M5UG5abVdpYjNhSWhMT2x0VTI4QXVMYTVqdWR6azVmVlk5Zk5IdDZNaE4yV013ZWJBWjFhdUxtbzhCc3FqeHQzakpFalQxN1VMTU5BWnMzSjhwNG5SMlpwMnA5dDhNRGU3Z2dSQmpqaU8tcDRYeHlyQ3JaZUtmZkJ3dXM?oc=5",
+   "titre": "Cac 40 : L'inflation accélère en zone euro, le CAC 40 recule encore - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 01 Sep 2026 10:45:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNc0lUanRqQ1Vvc1dQWkxNLUVXbVpxVG1HMnBMOVkxdnV5STc0VDZzNGQ4ano2OHhZamVBeTJOWkhlaFJCcUp5NTcyaE83bGg2Nkg4M2s5SEF5QnNyeGNQdDRPR0tVYm5MbE5nTkttOXdSOVRvSF9HR0lxOWRIellsMjFtQS1VZDl1cWJyNVltY0xPVGFaM1hwdWZreGRhT0lXOVE3RDIwRnJvRml0U0ZMQTg0NlIwRm9ucUEtU2FOVVlqblRaZW0ta0prekhxUWZr?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Guerre au Moyen-Orient : l'inflation repasse au-dessus de la barre des 3 % dans la zone euro - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 01 Sep 2026 10:26:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMHBsbnM4QWxOSmFZdGg2ZkRsVFVuTVpEZ3NRazljUGZNdWZZM3dTSkpkN0pfVzZISlJadU5KWGRLZzc0VHYxd2t4cFlkNzB6dnVIN0NJc1NlbmJldDdRMVU5dS1FWjc2Uy1wNElqZHR2MjFJajdpZVdnYU1RdnVtQkJGWVZ1UWdJSXREcUtsR3E3eVp3QVFaZ1F6YVVybHpQTmRsZ2JUVEpKUzNuZlE?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   }
  ],
  "fiscal": [],
@@ -486,8 +423,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
+   "source": "clubpatrimoine.com",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -531,8 +468,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le fonds CPR Croissance Réactive à la loupe - lcl.fr",
-   "source": "lcl.fr",
+   "titre": "Le fonds CPR Croissance Réactive à la loupe - LCL",
+   "source": "LCL",
    "date": "Tue, 07 Apr 2020 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRGRoRG80QWg4cU05Q3ZVaDVPd1BWdGMyODNDVjY4cll1eThwYVVFYldFQWNISFFjOTRxUUJUd29xQVRkWllDaVNHS21pTnVIYzZ4c25SMjBBck9meWZDYmFJbEIwY3hBYVBPQkdFbTlEbk53VEpPcFE0MmF1dktpZW92amdKcERvRXRfYUxkVmFGVlE4enROSGdQMjhiRi1zUzVSUVV2Z00?oc=5",
    "tag": "CPR Croissance Réactive",
