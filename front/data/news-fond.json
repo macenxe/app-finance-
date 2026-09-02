@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-02T18:36:58.331Z",
+ "genere": "2026-09-02T21:46:19.375Z",
  "globales": [
   {
    "titre": "Les marchés mondiaux sous pression face à la hausse du pétrole et des taux - Boursorama",
@@ -11,8 +11,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés obligataires et actions sous pression après les déclarations de Michael Barr sur une possible hausse des taux d'intérêt - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Les marchés obligataires et actions sous pression après les déclarations de Michael Barr sur une possible hausse des taux d'intérêt - Les Echos",
+   "source": "Les Echos",
    "date": "Tue, 01 Sep 2026 15:43:58 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOemdMMzZySkdqcEdOQ2JFQ0t4NFNxS19teWZMWGFTRzYyWVB5WmNyYTJicndiVFdtTXRWaGNXcng2cEN4WENrT0VrU2loM0xiTFZXNDhhakd6VTRjNEFsRnI1X0trV0dUSTA3REZmNjRWS3FQTG91WFotZWc0amZ1ZFp1YS1DN21hMWh4ZzBpODdudWlLR3FGR29vdjBIdS0zOGNBQTNkcndCMXJiLV9PbG43ajh3MGtNMDlTZG5qRlRaYmZCVG5pUXk0T25OeXV2SDVkeEZJUzlreGZUWkhhUzUtOE14ZklmR3I4VUhlZnlZdktRV1VpekxaWGx1Sm5FTml3WXdxMURsUzdBX3pSek03TnpVR0hIanNnZndYUEtZSGpabmJteg?oc=5",
    "tag": "Obligataire",
@@ -49,6 +49,15 @@
  ],
  "produits": [
   {
+   "titre": "L'Europe poursuit sa consolidation, les tensions géopolitiques pèsent - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 02 Sep 2026 06:33:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVjB3Qy1HYktpZFZ0dWFIUWppVVJZYjJ1OEdSck1tZTNpZks0LWlvamFWS184OUVQeWJjSm5KY015VkJIWFdMZGZaTTRhUXdWRUhESEl1QVlJUTJTMHB2U1phWTk1ZlFiUC1zdEVzSDVnaHJwb1NaZTh6aE1FU2tmTmE5SGdSWGdxOWtNNlYxUVhTUDd0dXh0MzVLQWtqcmRLcmhnbV9aQnp3aVNOUWtzUVkyUWYxMFRTeWcxWkFPOG1ZVklLc2pQVXRwNVhwUDRzWDk3RzEwYnBULUFzSzF4V19vT0_SAeQBQVVfeXFMTlYwd0MtR2JLaWRWdHVhSFFqaVVSWWIydThHUnJNbWUzaWZLNC1pb2phVktfODlFUHliY0puSmNNeVZCSFhXTGRmWk00YVF3VkVIREhJdUFZSVEyUzBwdlNaYVk5NWZRYlAtc3RFc0g1Z2hycG9TWmU4emhNRVNrZk5hOUhnUlhncTlrTTZWMVFYU1A3dHV4dDM1S0FranJkS3JoZ21fWkJ6d2lTTlFrc1FZMlFmMTBUU3lnMVpBTzhtWVZJS3NqUFV0cDVYcFA0c1g5N0cxMGJwVC1Bc0sxeFdfb09P?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "BNP PARIBAS : La tendance baissière peut reprendre - Boursorama",
    "source": "Boursorama",
    "date": "Wed, 02 Sep 2026 06:17:00 GMT",
@@ -67,29 +76,11 @@
    "sentiment": "negative"
   },
   {
-   "titre": "SAINT-GOBAIN Cours Action SGO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 01 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yelBQSjVyWUQ4akcwX05xdmJGM2RBWlMySTEzRGsxWlQzSEJuOFdRNm5MMDlhZE5GVGZuYWU4OEFGS2Ixa0FCeEJJU2owRTduVlE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Stellantis continue de remanier ses équipes dirigeantes en Europe - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 31 Aug 2026 17:00:18 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWXhpRWF0bGZ5S0w0SGlvWURBTlhLclFtaHB6TzAwcWQ2M3RPc2w2dTlubms2LXlROXoyYXNKQVp4VEhVLUw0TldsNVV6YTFXWjFVU005R2pyREFYVlllbkVUbjlXUWVySnkxdjdDcGhvR2JPTnQ3V2xsanFMT2NGbjNnNFB5c1VoWDB2NHFBRlRmVnV4bi1KbUFEd2ZkdUxWbkhmcUwtVUtWbkloc1MxQTd3OEthS0JqU3FabFAyUjVMUGViYjhaZ043a00taE5CM0M0X2VYZWx3YjlpMVJMcdIB4AFBVV95cUxNWXhpRWF0bGZ5S0w0SGlvWURBTlhLclFtaHB6TzAwcWQ2M3RPc2w2dTlubms2LXlROXoyYXNKQVp4VEhVLUw0TldsNVV6YTFXWjFVU005R2pyREFYVlllbkVUbjlXUWVySnkxdjdDcGhvR2JPTnQ3V2xsanFMT2NGbjNnNFB5c1VoWDB2NHFBRlRmVnV4bi1KbUFEd2ZkdUxWbkhmcUwtVUtWbkloc1MxQTd3OEthS0JqU3FabFAyUjVMUGViYjhaZ043a00taE5CM0M0X2VYZWx3YjlpMVJMcQ?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 31 Aug 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -103,10 +94,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "BNP Paribas-L'appel sur le litige sur le Soudan sera tranché en droit suisse - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 30 Aug 2026 17:13:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPamVkRFM3NlUxYUlvcG1hUWF1bHZMQkpGdW40aWFQcGoyMkQ2cVV3RXpxd01VUEcxUm0wTzZzOEZKeDFrc0pRYjRWbWZfSzAwZndSVDRQOEo1RXFpbnRfclV3cXplT0E4N1hieGRBRnlITXVYTEtGRGswOEN3MzI3OS1Jdkp1T2tSV1hTQW14RWpubXBoWXdpTnk3VkMwV2hSdUdRRWdveEtNc1NmRXpsQ3NIRFBOUkhadzF2ZHVtT3EwZTBtN2l4VldTc3pHRDhtR3dNQlduYllFSFRkZFdTTWlxV1VON1REUFNzZDZLd9IB7wFBVV95cUxPamVkRFM3NlUxYUlvcG1hUWF1bHZMQkpGdW40aWFQcGoyMkQ2cVV3RXpxd01VUEcxUm0wTzZzOEZKeDFrc0pRYjRWbWZfSzAwZndSVDRQOEo1RXFpbnRfclV3cXplT0E4N1hieGRBRnlITXVYTEtGRGswOEN3MzI3OS1Jdkp1T2tSV1hTQW14RWpubXBoWXdpTnk3VkMwV2hSdUdRRWdveEtNc1NmRXpsQ3NIRFBOUkhadzF2ZHVtT3EwZTBtN2l4VldTc3pHRDhtR3dNQlduYllFSFRkZFdTTWlxV1VON1REUFNzZDZLdw?oc=5",
+   "titre": "BNP Paribas dément vouloir prendre une participation dans Techcombank - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 28 Aug 2026 08:33:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNY0NTYWlNdkRFVmhPcXdNSUhucjF2RzdFTmVMcjhZNXU4OHFRN1JBRGVjOG9RWXI3Xy1YdWxDdnlIQW1XSm9LamNmc09FTHhGM2tHd3l4LTdLMlMzWE94c19kaE05S005b3kwNTgzT2pUbHlrUVNWbWMwWmZRN3MtUmowb2FJaEcyWHVIeldRQmdpSzUwQ2RYa05EZWMtb3ZkZ0FqY3NwN2Y0S01vcS1R?oc=5",
    "tag": "BNP Paribas",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -119,15 +110,87 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Bourse : Pernod Ricard au régime sec, méthode Coué chez Stellantis, la tech américaine se rebiffe - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Thu, 27 Aug 2026 07:03:51 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVi1EZzhnRk4wZkU2bGx2bWlpWTVaWGs0RjhRS2MwVjdTTjRKNTE1U0ZkV0dIaFdmNHpITGl3V1VLaF9FWjluN1NIdC1lR0FHNnBoaTBJNnFTMVotTjVLeDFuUjYxbWtQdG14ZjZWbFUyU2Zjd2lLQWZ3dFNFNzZOdVVHMTFZRmVrRGJZcGJGUElxZTJqSEVXX0JPZzVwcjZ4QmFYT2I5WGQ0VGRMWlg2MFdlVnNUSWgyX2g3RHpMeGpESTRxdXExUHcwQ3pHS1lvbWQyME9OZEk3QXR6NnBXRDFXemgtYWR1?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "Google conserve sa plateforme publicitaire, un an après avoir sauvé Chrome - zonebourse.com",
-   "source": "zonebourse.com",
-   "date": "Wed, 02 Sep 2026 18:29:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQOTNsMzB3ajJWaTVEdDBrRHdGek1OaDhPdzhnR2lNQ3ZQUjdHTGRIMWh4aHFfRE02SVFSa25Hbm91T19IT3pFWWtXZER1ZTk5VllIWkJkT0U0M2dYa0NPaWt3b3Jpc0N2WnpSNVd5NzBXMW1ncUp2cEVHeGpMS0RTZXg4T2l1TGtoY0lrRXF0YkZPb0hrNDJiZlpLOHF4VUI5ejYtOWluWnFqdG5FRHVfUmFNSVlLbzZVSUpRTUdpenotdVBZdUNRS0otSVVkMFU?oc=5",
+   "titre": "Les marchés mondiaux restent animés par l'évolution des taux obligataires - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 02 Sep 2026 21:07:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVWhDZDY5UzZsWHNpaW00ODd5ZXViNlFQOXIzLUdSajVJU2VtcjdwcmNES3pjSi1hWnRQcGFNQjVRMFFQdU9hVmYxUHAxbzZTbzVjNWFqSl9PemNKaDNWRVJON0xVYWxXeXJQVm9PcFZmSWIwN0ZYcmFBb0ljNm1VdGczbmZSUEM3ekJmMFl5UnE4TG1rR0pmZnU1X0l2Wm9wRGtlOTRSZ2RucnlrR29LNDIyay1ScVFabHdhRF9raG50Yk01SVkzZmZrOENrcjQ?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Microsoft va dévoiler pour la première fois les revenus trimestriels d'Azure - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 02 Sep 2026 21:06:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObHl6cFlsQzNzbG5QY2k0ejY3bzViRkpQX0dlQ2NWbm1MXzY3N3V6YnlHcDVpd2F6bEZ3UTZWMWltS2M3RzlldVVxdG5BY0R1WGJQeGZ3VkI4VTgzUXBXNjF1Ul9lMTJXTTE2VEFlV3EtWk5HanVBd0lZLURXekNwc3lXeHRBcFNhODhZTEIyZl9yTzZQNGpVTnl4QkVqU1ZhQk1JTExhSjdRMldWemJwRDhaaG8zbkkySk5ZUlFuSDJtMlNxQW9ia0ZEdUU3LUVPYXc?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Broadcom prévoit un chiffre d'affaires trimestriel inférieur aux prévisions, dans un contexte de concurrence c - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 02 Sep 2026 20:57:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxNZUh2THpNX3RwQ1B4bnlpS0dhR2JYSjd0Rks2NThGdE9YbTRoQndNb0NuSjlaNGpfUlhzVGhaanJRUFFROVhRc2xPcm1yUWRRTGtYTG8wZTdxZXZURXdsdDBSaEVJZm1qMkl6cXk3eFJISlJKMENTUFAzeGI3WWlZdTJfcDNEVTRWYXRaWE8zaG9WWUFMX1o2QjJzRFFGamg1c2tQbkVOUDRIZTg1cDRpZzlySFQwX05iWWkxNXVpTlFmSFlfZVZkbGUtdlluQTFMWHl6Vk1CeUVfRVRIYnVHOExOd0xjZEJVLXBfSHpsQVZBanRuaWN5TVdTMWJoczZoZ1RBNU51SWlCS1BEeFJPSi15YWkwenpkT0tGWUdXUWlzMWpXU0RFckpvR2lHM0JXVGEwaXFzVmNpMUFlWTNRT2tmYXh3TWdNdXdObXROSkZ1ZjNqaDln0gHcAkFVX3lxTE5vWl9lX3lVLXp0Y2piLTVjSGNxaGtOT0ZGQmlrQXNRSXZXY1pQR0RhbTlVLWF6ZFJZWGZ4YV9RamFmWUFtREFKLURVRkZjTXpKUElfSmNnczlVM0NvLVgxMl96YXUxQ0U0aEU4cHNYVWhPYTNHTW56VUpGcnRRLUNxNTY3ZmVsRkhla3BqWTNGeWp0ZWt0cm9YdUxWSk9vZ2dXSVhEMGM4S3M5dmM2clVVV1EyV3J3VG1iS3d5Nmdfa2d3UmJ3Y2pvcDh0c2RfWV9lMjAtT25uMVBBRGx4VHhRdmtSdXZoQmVrUG9BT0tMcFpnV3VPVUw5bnhBR0FmT0YwcmtkZy1uMldaNElTYWhBLVBFck14MWVsZGlNSnZIYWFScFZ3S1JLMHVmUjBfczR6YkZ4bU45b3dYOU9CLTl0ZUphNC1aNlo1WkdWdzRjaUswR0lBOC01NlZIVg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La banque centrale de Nouvelle-Zélande estime que les prix du carburant pourraient accentuer l'inflation sous-jacente à court terme - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 02 Sep 2026 20:53:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQdlUzZ29ib1I1SmNGX3I3cFNwY01fZFpXRDBKRWlkM1JqWUFnWXRNQi1sV2JqTjlCQW9HNzBjdWllNy1iMUVaZ0l6QlBadGI0NGNQUGdJSGV5Z0lVZHFKajNrM2szelhkWG8xLTMyVlU1OS1JcV8xN0c3N0ZoSUtFYmcxeDFLTnZJOWdWbUNoUEY0VXl4U3pBSF9kYkRxTkNNOExqQ0ctM21CekJPMlNzZTJQMmRzZEctU0dXVmdSei0teXo4c0lWT2hzVHFfdzF1ZERQdkxRUGJTaEFVSDlvNFNMTkF4bEJNQ21NZjRaNzlTZw?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mercredi: Chevron, Dell, Palo Alto Networks, Broadcom, HPE, Uber, Brown-Forman, Palantir, Pepsico, Omnicom",
+   "source": "ABC Bourse",
+   "date": "Wed, 02 Sep 2026 20:21:44 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-chevron-dell-palo-alto-networks-broa_701969",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street termine en hausse, profitant d'une accalmie sur les taux et le pétrole",
+   "source": "ABC Bourse",
+   "date": "Wed, 02 Sep 2026 20:13:30 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-termine-en-hausse-profitant-d-une-accalmie-sur-les-taux-et-le_701968",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Publicis décroche la gestion des budgets publicitaires de Pepsico au niveau mondial",
+   "source": "ABC Bourse",
+   "date": "Wed, 02 Sep 2026 19:43:05 GMT",
+   "lien": "https://www.abcbourse.com/marches/publicis-decroche-la-gestion-des-budgets-publicitaires-de-pepsico-au-niveau-mond_701967",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les consommateurs américains plus sensibles que jamais aux prix, selon la Fed - TradingView",
+   "source": "TradingView",
+   "date": "Wed, 02 Sep 2026 18:35:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5rM3M5cGxYSzJILVpFR0k3dDlMelhDMGwtUnI3cm01SnZMTGpSMTlLNjN6NUlkdkplNFJtNXNUc0ozVUNqVVdESDRoX0JTVnRvSVpYSEFvdF8yYjl2VElBVUNR?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -146,15 +209,6 @@
    "date": "Wed, 02 Sep 2026 17:53:41 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/elles-peuvent-mettre-la-cle-sous-la-porte-recues-a-matignon-les-petites-entreprises-alertent-le-gouvernement_AV-202609020785.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les Teamsters d'Amazon lancent une grève d'une journée dans un entrepôt en Californie - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 02 Sep 2026 17:50:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQczM3LVluZXZqWUhfN0tpMFkzNG9sUUJFM3V4dXBvd2M4TjVYdU1kNEJJS05HWEp2WlBpSmgwd2NSZm11dU91V3htOFBuSGhSZElSVXh0Rm14eXB1eEVyUk05d3VVZUc0dDVVMHM4c1hMX1Ztb0NnOWx6NkhRZzU5Zy1lWUhIMTlVQ214QzFJQW5aWlByNXlBNmxKYkp5YllmQThWTlZKck5ydW1VV0ZBcEJXT05nMzh5dmtGRDhjbk84bE85VkVZQlFwWVNpaTZaY1Z4WlpGSTdqZ0QyS0E?oc=5",
-   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -189,7 +243,7 @@
    "titre": "Que fait la Fed lors d'une année d'élections de mi-mandat : la réponse de TD Securities - Boursorama",
    "source": "Boursorama",
    "date": "Wed, 02 Sep 2026 16:46:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPV3FLVFNuY2FhLVoteGQ2c21qQWxnSGdoX19hTmV5cjduTHYxTkR5ZlVnMmRVWFh2bEpnTzJWRmh1SjJleFhHdlZDNm9pc0p0YktIQk1CQzNOUGxjb0Jub2tYRmNQTkxlTEFaNmhDMmdhWXBZUDlUZ2UycW8yNVV2RXlHWkpxYWhlQ2pkT0FZNGpNbkVORXZYcEZ6NER6YWxyWS1FVTZmbzNTbjhsb1Q2QjEtbFc4MFNnSGtuVzNVRTZPbndkeVVVaVBFVWVmY2FZeVJNdFZpc1FOeHNkWjV4Y20zM0FjQzFUOXd0dFZKY0RONlZvYWfSAfsBQVVfeXFMUHR6VV9UQ2RITUZnTllmOE9vRk5iNzhoMzRTY21sZG9UVW5uX0pqX1JiVVBQZlJLTTEwcnl2X1gzaElDc3dLd01zTEJnNDBwbDRwa2tIUWtEQWpISUwwQl9YRFRrbWVIYkhkYlJWMy1SZU1JWGZNSFlXR0ZoZ3V0emFQY2JGZlE1MkhhZGIxekhrTmd0M0dSOWpBSW1RSm5VWVI3NXZ3YzNOWVZ0UjRJNGQyQm1Bdnh2VlZEME5iVVRweEl1eFVOcS02NEtpWUdMZ19DOEhYZUxQYnE5NXhVQ3VPT0tlSlM2SVBndjlwVGNoT21EWmMwQ3Fhdjg?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQdHpVX1RDZEhNRmdOWWY4T29GTmI3OGgzNFNjbWxkb1RVbm5fSmpfUmJVUFBmUktNMTByeXZfWDNoSUNzd0t3TXNMQmc0MHBsNHBra0hRa0RBakhJTDBCX1hEVGttZUhiSGRiUlYzLVJlTUlYZk1IWVdHRmhndXR6YVBjYkZmUTUySGFkYjF6SGtOZ3QzR1I5akFJbVFKblVZUjc1dndjM05ZVnRSNEk0ZDJCbUF2eHZWVkQwTmJVVHB4SXV4VU5xLTY0S2lZR0xnX0M4SFhlTFBicTk1eFVDdU9PS2VKUzZJUGd2OXBUY2hPbURaYzBDcWF2ONIB-wFBVV95cUxQdHpVX1RDZEhNRmdOWWY4T29GTmI3OGgzNFNjbWxkb1RVbm5fSmpfUmJVUFBmUktNMTByeXZfWDNoSUNzd0t3TXNMQmc0MHBsNHBra0hRa0RBakhJTDBCX1hEVGttZUhiSGRiUlYzLVJlTUlYZk1IWVdHRmhndXR6YVBjYkZmUTUySGFkYjF6SGtOZ3QzR1I5akFJbVFKblVZUjc1dndjM05ZVnRSNEk0ZDJCbUF2eHZWVkQwTmJVVHB4SXV4VU5xLTY0S2lZR0xnX0M4SFhlTFBicTk1eFVDdU9PS2VKUzZJUGd2OXBUY2hPbURaYzBDcWF2OA?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -200,6 +254,15 @@
    "date": "Wed, 02 Sep 2026 16:45:09 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/aeronautique/un-cout-tres-tres-raisonnable-le-patron-de-l-esa-assure-que-l-europe-pourrait-developper-des-vols-spatiaux-habites-en-augmentant-son-budget-de-seulement-10_AV-202609020711.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Pour la BCE, l'essor de la titrisation dope les dividendes, pas les prêts bancaires - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 02 Sep 2026 16:28:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNN0FHQTJuNFNaT1FJazM3dHFEcDVPOXlrVkszN0xSbjQ2Y2MtcU5Ub0NxLXA2Qmg4cm5ucTJmVzVremt4bEQ2Z2R3NHlIemFTOHFSaGt5UkNaZ05xR2oxdVdBZVRxdWdnMmtZTzBsenFjOHB3U1UxMVpYOUlEVHRDQ2FNZFdVbklZQ1RNZlFiUS1tZlMzVUV6Wi1nemc4V2lrRkNpZEdEWmN0c3FnbTJXU1ZWSjJFWi15SkQzN3JDYW5scm5yTFllNzlEZVZ5ZFBlekRtTFlEZFdNS2pWNkow?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -222,15 +285,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le Club : Le marché-actions résiste au chaos obligataire - 02/09",
-   "source": "BFM Économie",
-   "date": "Wed, 02 Sep 2026 16:11:13 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-le-club-le-marche-actions-resiste-au-chaos-obligataire-02-09_VN-202609020687.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "L'Europe poursuit son repli, lestée par les taux",
    "source": "ABC Bourse",
    "date": "Wed, 02 Sep 2026 16:09:38 GMT",
@@ -240,29 +294,20 @@
    "sentiment": "negative"
   },
   {
-   "titre": "On refait la séance : \"Engie et Nokia, stars en (re)devenir en Bourse\" – 02/09",
-   "source": "BFM Économie",
-   "date": "Wed, 02 Sep 2026 16:08:20 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-engie-et-nokia-stars-en-re-devenir-en-bourse-02-09_EN-202609020671.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "On refait la séance : \"Engie et Nokia, stars en (re)devenir en Bourse\" - 02/09",
-   "source": "BFM Économie",
-   "date": "Wed, 02 Sep 2026 16:06:55 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-engie-et-nokia-stars-en-re-devenir-en-bourse-02-09_VN-202609020682.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris clôture dans le rouge, la géopolitique prend le dessus",
    "source": "ABC Bourse",
    "date": "Wed, 02 Sep 2026 15:48:15 GMT",
    "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-cloture-dans-le-rouge-la-geopolitique-prend-le-dessu_701955",
    "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Fed contre le Trésor - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 02 Sep 2026 15:28:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMV9DanE2dFJDSm9NQWFHTnBsNTFsZDU5UlRTcTFwb3FTVUdCV1BWaHllM2tHTW44N21GWW41UC1td2VFOGxMTmJqN0c5WVhoRk5XNU82V2FPM3hIUXk1MDVTY3EyT3ZQVmhtbl8xV19YZ0RwV005WHVGb1FXYWpuZFEtLU1WRmhuSDZz?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -294,71 +339,17 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Williams (Fed) lie la hausse des rendements obligataires à la vigueur de l'économie, selon CNBC - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 02 Sep 2026 12:41:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNTzVnWS1JTTBabHJZT2dVQ0NZOGFaRHFic0RRWTNNeHEzZnBBY2hIRS1Va09UM3FzVDQ5Uklhd1VqUlFsSFdtcy1nNFYxRlhIM2h6R0MwWWJtTVd2V2xfYlNQQTdSV0UweVFJT1p2NVcwX0ZfX1dCREY4NzQzeTktWUpDOUlWajVqV0xHY1lISXF1eG1mRXZHUE9vQlRoUVBVVHlGemhpTXUxaEJtZFVCejYyNjdJSDc4enhiVFQ2N3lBampaNUR5SzFwRTJ6NFRBZE9RWWdhLXQ3M1ZLVVE1M2RTVkhScFk?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Luxe : LVMH au plus bas depuis 2020",
-   "source": "ABC Bourse",
-   "date": "Wed, 02 Sep 2026 12:22:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/luxe-lvmh-au-plus-bas-depuis-2020_701942",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'or plie alors que les tensions au Moyen-Orient renforcent la perspective d'une hausse des taux",
-   "source": "ABC Bourse",
-   "date": "Wed, 02 Sep 2026 12:04:29 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-or-plie-alors-que-les-tensions-au-moyen-orient-renforcent-la-perspective-d-une_701941",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street s'oriente vers un nouveau repli, sous le poids des taux d'intérêt",
-   "source": "ABC Bourse",
-   "date": "Wed, 02 Sep 2026 11:06:41 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-s-oriente-vers-un-nouveau-repli-sous-le-poids-des-taux-d-inter_701940",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Warsh tient un discours restrictif, mais y aura-t-il une hausse des taux en septembre ? - Morningstar",
-   "source": "Morningstar",
-   "date": "Wed, 02 Sep 2026 09:21:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNb0Y1MkdkVWVNMml1aEsxT3c1MVZkdjkwU1dUWG8tay1oTkNubkZSNFlQaEt2RG5hNU9wMFpqZ0F2bFNhc25KQXo0b1lHTzF4S3FMV05Qblk4dVRiOXIyUjl0TzdteG1WX2ZNY1JRNnhjUW0zMEFpcEhtV1FrVXdNczVVOEFHX000NGdZUlIwc3otLXEwSDR2V2pqNVdZWDljSkJQLWxObzRQTHVXVnZpNmlPVUVzcHl6VWNvTVRuS3FVUEJhanc?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "BCE : une hausse des taux se profile le 10 septembre - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 02 Sep 2026 09:02:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQT1R2MElEd2FJN2ZxUG9mcHBVaS10WDlxcllaQk5XTl8zOXZLTFh5X2NaOElPM3VjTHRfN0IwdURzZ0cwMHJpRTRPYVRhMjlyWWg4bFZSeE5SdEVLQmFxOE5EeWp2TkZaYVV1QkRLcmlKTHczX0ZCazEzemJ1eTE2UDByalZ4c290NEJod2EwSGJDMUNPczRWZTVPdw?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "BCE : une nouvelle hausse des taux est prévue pour le 10 septembre - Le Revenu",
    "source": "Le Revenu",
    "date": "Wed, 02 Sep 2026 08:51:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMDQweGVJcVpuMENzR1FkSlh4VG9BaXVFSVlpQTd1T0NGOEhhcUVybTBEc2ptSWNHR09JcngwRi1RSXZBN1Fqanc1UW1BTG5VS2VWenJQOHFHXzVWb05tRElwYm5kaElfckg1VlpZbDNRZ1lSRkVMZEZNQjNtS18tc2tBNXQ4WTZKNXVnbHZxWFNxakIzWXpwd3ZKWWo2T2x2aEtvNUZRX2R6NFU?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZGVzNkd5dTVuaW14c0Q3NVVXRmoyMzhxTWVQT1VYbkF3eUl1TlhpaUV2UFY2TlRDaGpmOXYtWVgta2NoRHMxSFJ0bkgxRjkxejNXaU11YkRRTERmY2l1M2c0TTNheUxMTWhfc3Frb05PN09ISEJ5Y2lHRHBjb011SlplZE1OT09iN001amZHOVR2aUtBakQzcHUzT0VyRHVhYmFwaU5vYWE2YXNP?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Le pétrole au plus haut depuis juillet et le scénario d'une hausse des taux qui se renforce aux Etats-Unis, la Bourse à nouveau dans le rouge - Investir Les Echos",
-   "source": "Investir Les Echos",
+   "titre": "Le pétrole au plus haut depuis juillet et le scénario d'une hausse des taux qui se renforce aux Etats-Unis, la Bourse à nouveau dans le rouge - Les Echos",
+   "source": "Les Echos",
    "date": "Wed, 02 Sep 2026 07:28:26 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPUWdoVjJ4UmdLUWlFbU5HbWR2eUxKRVRqLXozal9WaFFzdHViWWltRURKWWRwNEpFS1M0SDVNMlBUR2VsMWRpVEZiS1JZWERfNS1MNkVwYjlxc0FsTEh5cGQ4Q3gwSFV2YUFodFJ3RUlaMkRySlZOUXQ0ZWJSaTVXQWRmVmRZZlZhbG5nRUZvT1VmZGg2eU5nUzFWWnJ0LXE1djdlaGJ3Ul85amhiZXVweVZ2OVJ2MlNMZ1ppYkYtSjBmc3dOWWREYVVwMmVBMzIyWHZVdW5PU3JteXppaTBfX0NvVnIxVFl4TDBrTndhWU5jNEZsakxzQ21Xcm8zTWNsOFNVemY2Q25nbjFuX0FmWE9VMzQxOFhFMmctN1JtN0YxTk5mRGZyenpiTTd4cjQwUzJmSw?oc=5",
    "tag": "BCE taux",
@@ -414,8 +405,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - rfi.fr",
-   "source": "rfi.fr",
+   "titre": "La fabrique du monde - Les détroits dans le monde: Magellan, une route maritime qui retrouve de l’importance - RFI",
+   "source": "RFI",
    "date": "Fri, 14 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOd2N3d3EwT2lQNGNTVDhBR2xzYjI3OFgwNDFZazAtdVBkRVo1a1loMWVtSVVJVi00dkJ0c1N1OW9yNk45Q2ZJbl9fc2t2Ul9OckxnOGRobUJjNlBRLXI3MVBqcUI2SHFqbzJrbzAzNUNyT0ZiRC0yY1hBUmlNWW5rWGNnano5eWJjb0hxM3Utb1Baem1RSlFqZGUzZklOb09iQXdtVjBnMks2WjNxcWlGQmhYWEtMS194UUIxbjhJWkJJbDkwc3g3SzZLYjBpbWFTT1lWYTNQWHVkNFhRcHc4YVlsdw?oc=5",
    "tag": "Magellan",
@@ -441,8 +432,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
+   "source": "clubpatrimoine.com",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
