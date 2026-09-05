@@ -1,9 +1,9 @@
 {
- "genere": "2026-09-05T12:37:49.878Z",
+ "genere": "2026-09-05T15:59:57.744Z",
  "globales": [
   {
-   "titre": "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain - Boursorama",
-   "source": "Boursorama",
+   "titre": "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 16:32:22 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNT25hMlBITlJhQTJMNUlhTFMtQW01QW1WeGYwcHRub2o4Nm1IM2RCeTFXQ20zNi01TlFWMG9kN2FzSXpyT3EtOW9oUVdOSmwwZVNCWmxpOG5GN0VJWjd5YkNYUUFfNGU5U3h0Qk12UWtSYjJENjVabUd3RDlKdG9qd204bnF5YXB3a1BiX3JKRTVTeWZGU29tck5valFST2JITnRmUVB2aE4yMEVDQUxUUDdhb0xBb2RxeTJtSlZUNlFiMmJmclZhMU1nOXNZWjFKc0VQV2pwSjZaODhIT1JhbXRDLWQ2ZDNkU05yeFR5SHhrRDZZTHV6ZXdR0gH6AUFVX3lxTE1PbmEyUEhOUmFBMkw1SWFMUy1BbTVBbVZ4ZjBwdG5vajg2bUgzZEJ5MVdDbTM2LTVOUVYwb2Q3YXNJenJPcS05b2hRV05KbDBlU0JabGk4bkY3RUlaN3liQ1hRQV80ZTlTeHRCTXZRa1JiMkQ2NVptR3dEOUp0b2p3bThucXlhcHdrUGJfckpFNVN5ZkZTb21yTm9qUVJPYkhOdGZRUHZoTjIwRUNBTFRQN2FvTEFvZHF5Mm1KVlQ2UWIyYmZyVmExTWc5c1laMUpzRVBXanBKNlo4OEhPUmFtdEMtZDZkM2RTTnJ4VHlIeGtENllMdXpld1E?oc=5",
    "tag": "Inflation",
@@ -18,6 +18,15 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Cac 40 : Après un surprenant bon rapport sur l'emploi américain, le CAC 40 reste coincé sous les 8.300 points - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 04 Sep 2026 15:50:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNeUxkOWlEWEEwajFpdktMaWxkNGVJX1BrMXZkOVJRVlRYd24xWTdXVDh1Qi1XUnlEMGtKTGk5VXBrX0tMSVN1UDFkQmxqY1psYmVXVnUtRkdlaWRQS0pwa0h2ZHluS2tDNnJJdEE3elk2b1p1WU9NeXF1QlByZkRPNlVnXzFNRFJfcy1xRWdiN2xKY19XZHVZNmF6WDdGY1lWYmg4cDZ1X0NXQ0dScUpCZ0hmWTZ1aGVDVkc4VE9ORDQ0MUpsOEdTWndNaXRqaGpLR3lveWFMcFZrbHdERHUxNm1ucUVwQjhXN09LMjV6YVNGLUZYb2paRzFMQV9jZ2FUZXdYVUlsbw?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
   },
   {
    "titre": "AGENDA DU 7 AU VENDREDI 11 SEPTEMBRE: Le marché attend la décision de la BCE et l'inflation américaine - ABC Bourse",
@@ -36,15 +45,6 @@
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.24% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 04 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNY1ZlejdFYUtnZnVMWGFibUZ2NjdyMi10Nm1sbHZMM0VyNGREdzlkUWlKc18zaFQzaHdHcFM3bXRENFh5eGFKcnEzNEszdF9wYm1Wck5Sa1dKWVZIVXhTYVp6ZE9aeXZKLTZKRUtMeDlRZVQzTkVaX01kdmlSYzdlSmNuOU4xeEYyNmh5REgzcG1uYnFLN2VSX253QW14SHFxZU5IeWQ5NmI3eXlVdlJuc09hdFVBUVJLUkM0eTB3M0gxNTQ5WmhjdVVB?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "negative"
   },
   {
    "titre": "Le Cac 40 échappe à une quatrième séance de baisse d'affilée alors que les investisseurs revoient leur scénario sur les taux d'intérêt - Investir Les Echos",
@@ -76,38 +76,38 @@
  ],
  "produits": [
   {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 05 Sep 2026 09:36:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
+   "titre": "CAC 40, BNP Paribas, Airbus, Axa, Air liquide… les actions en Bourse au programme de Momentum - capital.fr",
+   "source": "capital.fr",
+   "date": "Sat, 05 Sep 2026 06:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdWVsVnNxUGk1QVRBSHZHcTlZcXdheUhkV01IU21CZFhvVEh1UjRkVk5SMjlsOFZwb2NiYVEyZmlSTFVReDVyYVota09ndVlRZ1R1eDNPRkh4ZGpYNnpuOXZXT2xOYmRWREs0Mjd3UWFOa2k1VTFNTXgycS13emhXOFAyX0JNX3dsa1BtVEFsZ0RuamtiUlJoRWUwdEJwX09fV0h3R055X0poZzhVRGlROWtTbHVjNWVFSG9KNkNlQkN0NVpTNlZ0LThrZGk4NVNyUkh1anRB?oc=5",
+   "tag": "BNP Paribas",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 05 Sep 2026 09:14:13 GMT",
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - boursorama.com",
+   "source": "boursorama.com",
+   "date": "Fri, 04 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 05 Sep 2026 08:44:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - boursorama.com",
+   "source": "boursorama.com",
+   "date": "Fri, 04 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40, BNP Paribas, Airbus, Axa, Air liquide… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 05 Sep 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdWVsVnNxUGk1QVRBSHZHcTlZcXdheUhkV01IU21CZFhvVEh1UjRkVk5SMjlsOFZwb2NiYVEyZmlSTFVReDVyYVota09ndVlRZ1R1eDNPRkh4ZGpYNnpuOXZXT2xOYmRWREs0Mjd3UWFOa2k1VTFNTXgycS13emhXOFAyX0JNX3dsa1BtVEFsZ0RuamtiUlJoRWUwdEJwX09fV0h3R055X0poZzhVRGlROWtTbHVjNWVFSG9KNkNlQkN0NVpTNlZ0LThrZGk4NVNyUkh1anRB?oc=5",
-   "tag": "BNP Paribas",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - boursorama.com",
+   "source": "boursorama.com",
+   "date": "Thu, 03 Sep 2026 16:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -121,8 +121,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
+   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - boursorama.com",
+   "source": "boursorama.com",
    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
    "tag": "BNP Paribas",
@@ -130,8 +130,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ANALYSE : L'action Palo Alto Networks recule avant la publication de son rapport, la demande en cybersécurité - Boursorama",
-   "source": "Boursorama",
+   "titre": "ANALYSE : L'action Palo Alto Networks recule avant la publication de son rapport, la demande en cybersécurité - boursorama.com",
+   "source": "boursorama.com",
    "date": "Tue, 01 Sep 2026 17:00:54 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNblZ4aGFvQXBCRnk3X2RxUEtEYmtaeFQyUUlSc0hfZ0NjeWdfbkJHRzc3MnJZekhPZFZHeXRScTd3WUpzaHBNUjYxUmVNX25CLUNOaTlBVS0xNHFvaUpJN0NGd2ZmcDdic0w4YTVkQS0wSnlZSFpTSTZiMVVLSENMS01SRmlnRHpSS2k0U3Vrd2R3X3ZXellGSUhmcWZiXzV6c2d3ZjV6MWlyc2JEc3EzaGFWUVRqY2ZIMDJTMjdyeVo4OURZWlJkRXVzdEpFSzNqR1Zjcy1QLS12VzZhV3h3RkF1eHVueVZNNE1NaTh4ZXhteEs2SDczdGJCVVZ4emhfcVE1MnRucTdpOHpfdFF1MmdsS0F5T3JRYmFyeW1xSk5UWUhIeHlQb1lwalpqVV9mY3ozMGlzelJmZXPSAcACQVVfeXFMTm9WM1JGM3RRQU9LVUZTQlpJaWI4bEJzZmtQdUhvUFkzS1p2QlYybk9pb2l2dE5LZTk2b2x0ZElZczFZQ052OUFxWEVyaWhRWS1WaUVvU2NjZG1KZk8ycFRxRGRzYVhYNW42bHRrYlM4Q1VYUklJdzE0YmRCTkNmV1dVRno3bmZqd1pIbWV0WW9YbUt2Smc5UFNtNE1nZmxrWHJzLTdjbVZCWEZkVnlCUlhneWVzUGlqdUlfLUpTZVN3SlRIMklfZVo1aXlvaWxHb1VnM1Blekduc0Rsb2hPT2otcU5MbTl3czFuVlluRWNuYVpWVVhLNllfV0ZDOWZWR1p1RVEwdk1zbWczb0twejJvUmx1ci1heTljb19VNEFlVTh3STV3bjF3Ukd4a0h5d29pQUdzM21icHZrVEk1czI?oc=5",
    "tag": "CAC 40",
@@ -139,8 +139,8 @@
    "sentiment": "negative"
   },
   {
-   "titre": "HERMES INTERNATIONAL : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
-   "source": "Boursorama",
+   "titre": "HERMES INTERNATIONAL : L'analyse ne suggère pas de baisse à moyen terme - boursorama.com",
+   "source": "boursorama.com",
    "date": "Mon, 31 Aug 2026 06:49:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOOVRUVXVYeWgtdkZRRWc0OG8wUFVkbmtZNzE3bUdoVUpOd2tqTktydkFDV1BCVmlJd1JSV2RVZlA2VFhmbHB3RkZKMnVPeVNwTDRRem8tand5WklnTEFLNnAtVlpSSXFIajZFYzROenNtZXRGNnpxemJyamQ5RTNsZ21HN3F5QnBsM1YtckR2ZEdkaUtMb1M0cTdMNV9xNllHMmtKcGVwSlJ5TVNHUEhzVHpDNV9Fc0I5c2h2alZ2eU9CTkZTSmFSZjhueDZzTkFGNkFlZnlzYUs0cTFzMnZTWtIB5gFBVV95cUxPZ3JKQUNyODAyenJSSnZtY0JJVlhwcWt5S0MxRWZ0ajRsaDI3MTkzOVhxTUxsaHZIR2pNdHMtd3oyTU1BbGtNb3g3dlBqZGl6WmRxWnVkRTRHaF9EUjhfNXh3Qlh0RzNoeDZjX3htNVhhV3FkVWtQem9JSGFSWUpISnc0UHQ1aERuWUJUSDhxNUY5bGZGTk1xS1ZibTk5Y0lnc1pSQmpyc3NvZ0lPZkFPVEViX0MxbDRsSktkYkRvQXUzX0xpcjhmb2F1MDFvWVNUbXhXSnhTb3J5SHpsMUpsb3FrSHhtdw?oc=5",
    "tag": "CAC 40",
@@ -149,15 +149,6 @@
   }
  ],
  "eco": [
-  {
-   "titre": "Automobile: le budget mensuel essence trois fois plus cher que la recharge électrique - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 05 Sep 2026 11:51:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOUFUxOWRUMXJmbk9oT21tYzNkWDNWZy1mQnJuM3d1UEdBdkNuTUxlbU9rM0ZUY3lhVkVMREwtTVdzXzJKUEFfOXZNNHZDWFRsZGc4akhkQkFIc2laOVdTaWNsMm03NHpEX0JjT2thSVlGNzFpVGtCSEhjcUlVQmRXYU9mN2JYT1RIM0VCa1lfT3ZUSTFTYkl5ZFdHVFBpQlN4cGVpSDd4dUdQSkRfQ05IVEJRTjAzMmt0T2lSQVRSZVBiYWduX0lhellZaWxxZWNKU01nbTBVMDFTNjFodTRmWnhzRUFYM2VxVmJxWnQwWlBHclFZMFZtZzRYMXpqVU1aYjFBOWFYUdIBjAJBVV95cUxPdFkzU1BJZ1M3bTRPYlF2MjJVSXNoeWlPQV9WZHVRYTlJUjNTaXRTcmdud205cTRKdE1keEU3OFprTE1fV1VjZjN0Qk9SU2VueHdZVTFiNlY1N2dSNEI1WGdGVlpBOU1GSXdYQkVIMDhtRVZaRGFTcVo5Z1BnNGtXQ0psWWh5QndlYXFZelJVRTdPcGxEczd3QmdIWTIwRl9Ua1V2NHFQd2I3dVRJcEFXcFVvNGNOQTgyQWFEUU1WYndyY3dVd2F4THpDRVM1X05MdGhTNE95TUVVVFRPbGNzZnc1VEtxazdhRnNfVDRJVm9jbGVqc3ZpTFZxVC05NVRTVFZQSkxqWTVOV1VW?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
   {
    "titre": "Certains automobilistes attendent deux heures sans réussir à faire le plein: malgré d'immenses réserves de pétrole, les pénuries de carburant liées à la guerre au Moyen-Orient provoquent de longues files d'attente devant les stations-service en Irak",
    "source": "BFM Économie",
@@ -195,8 +186,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les rendements et le dollar progressent, tandis que les actions reculent après la publication d'un rapport sol - Boursorama",
-   "source": "Boursorama",
+   "titre": "Les rendements et le dollar progressent, tandis que les actions reculent après la publication d'un rapport sol - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 23:15:22 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOUkU2VFhBT2l5QmFOM3ZIQWFWVDlvbVo5UU1ZaFF5aFdsdmllQV9DQXdsTDMzNDExUTRjWE9UN3ZSZzZuWDBkVk9oRUR5Y01kNnpYb2UyWEVBaHVjdllVblRhN1BTNVpRNkpYVEFBaE83N0xtMUp1YjdfQ1U4MGhCNkw1a3ZKamduMWZaUU9GYjh6dlpYRTR3bjJmQ0xUVkJ1VDBXZllqd0JMZTdsMTl5SjVUVS1hNjNET0lBajlMMFlMMkJZRU5zZmtMVTc4QzUtTVRyTFB3cHgxajNReXJIUjlXc0Y4RW81ZHVDc1AwMXVCQ3puSFJWeGx3NEpUVE9UTnV2OGktZ2pHZlpoSVR0UHE1bTZwUWVkVFpwVlZQN2ZUakZDV2xiRlFMWmNNN3ZWZXpJZF9Yb1A0VFdyekZKeWpHNWPSAcQCQVVfeXFMTlJFNlRYQU9peUJhTjN2SEFhVlQ5b21aOVFNWWhReWhXbHZpZUFfQ0F3bEwzMzQxMVE0Y1hPVDd2Umc2blgwZFZPaEVEeWNNZDZ6WG9lMlhFQWh1Y3ZZVW5UYTdQUzVaUTZKWFRBQWhPNzdMbTFKdWI3X0NVODBoQjZMNWt2SmpnbjFmWlFPRmI4enZaWEU0d24yZkNMVFZCdVQwV2ZZandCTGU3bDE5eUo1VFUtYTYzRE9JQWo5TDBZTDJCWUVOc2ZrTFU3OEM1LU1UckxQd3B4MWozUXlySFI5V3NGOEVvNWR1Q3NQMDF1QkN6bkhSVnhsdzRKVFRPVE51djhpLWdqR2ZaaElUdFBxNW02cFFlZFRacFZWUDdmVGpGQ1dsYkZRTFpjTTd2VmV6SWRfWG9QNFRXcnpGSnlqRzVj?oc=5",
    "tag": "BCE taux",
@@ -204,8 +195,8 @@
    "sentiment": "negative"
   },
   {
-   "titre": "La semaine à venir à Wall Street-Les investisseurs vont scruter les données sur l'inflation à la recherche d'i - Boursorama",
-   "source": "Boursorama",
+   "titre": "La semaine à venir à Wall Street-Les investisseurs vont scruter les données sur l'inflation à la recherche d'i - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 21:46:07 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxOM2luYUlGWTNuUUIwRVFJRHZfXzJsR3BITGNBSUozM2d3Wjc0N3RxWEpnZkc5VmY0eWY5Z3BoTmlQd2wzNmZfekQ0OFIyVmVNU3pjQXZKa2hJU2FtVEJINk9DUlJETTdOODhTLVUxcFl3dDNtR21wVGlCQXhOazhlOUc3VE13MGZsM0RRZzV0NTI5WVZIMXg1S0RtYmJoX212MEtoLXAxOFQwWkpwZ2hzUXdEUzQ2RHI1VkN6aEtHdU5SekNsYnhwSGxCMmZqRkltNEVvNmJJSEpnY0o1eldZdWNtODhVS0NKNHBIUTNrSEtsdE5xX0ttTmwwcUF1X0dkZXFacnpveV8tTzNtdm5kV202OHNiZWtZR0JQWTBfM2lqcTlqMXE1Q3VVbFFjZndMMzBLc2hCQW91bU9jQzNwOU4xM1dnd0xGNnkzdlFIRnlCVXfSAdMCQVVfeXFMTjNpbmFJRlkzblFCMEVRSUR2X18ybEdwSExjQUlKMzNnd1o3NDd0cVhKZ2ZHOVZmNHlmOWdwaE5pUHdsMzZmX3pENDhSMlZlTVN6Y0F2SmtoSVNhbVRCSDZPQ1JSRE03Tjg4Uy1VMXBZd3QzbUdtcFRpQkF4Tms4ZTlHN1RNdzBmbDNEUWc1dDUyOVlWSDF4NUtEbWJiaF9tdjBLaC1wMThUMFpKcGdoc1F3RFM0NkRyNVZDemhLR3VOUnpDbGJ4cEhsQjJmakZJbTRFbzZiSUhKZ2NKNXpXWXVjbTg4VUtDSjRwSFEza0hLbHROcV9LbU5sMHFBdV9HZGVxWnJ6b3lfLU8zbXZuZFdtNjhzYmVrWUdCUFkwXzNpanE5ajFxNUN1VWxRY2Z3TDMwS3NoQkFvdW1PY0MzcDlOMTNXZ3dMRjZ5M3ZRSEZ5QlV3?oc=5",
    "tag": "inflation zone euro",
@@ -213,8 +204,17 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Wall Street termine en baisse, le rapport sur l'emploi attise les craintes d'une hausse des taux - Boursorama",
-   "source": "Boursorama",
+   "titre": "Les investisseurs vont scruter les données sur l'inflation à la recherche d'indices sur l'évolution des taux d'intérêt - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 04 Sep 2026 21:46:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5GWk1XMXBfbExFeTZ2VGRFX29Qb1VDeHZzamk3anBfVThPcXZoN0EydDE5cGU0UW96SXZaU3B5SU1PbnZCV0JkRWtpTmVWQm5hbUgzOEJwVEZmTkJaT1luSlVKaF9ncDZsaU12bUZmLVk2UE96aXA4?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street termine en baisse, le rapport sur l'emploi attise les craintes d'une hausse des taux - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 20:35:17 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOUDlLR0xNOHY2UUdDcm9uazZySUdvMWNDVHg4cXBVVFljbk5nUHp3ZUNQSjR3TXVmNDhpcWpHWjZkeDhUTmxfeEhNd1FRNk1ySzZySUl4MXlYcVJ6dnkxbE5xekVuY0w5bDhYR1R4X0dqVkg1RGdDZ0ttOXBfU1p0UXNtZGg0UzIyb2ZUZXh0SmROYjNVUVdlN2xNLXpXOWpqdWFNa3pHbG14ZV90MmFjV2lZZDFMUkpCZm1iRGd1b3hmVk0zYzZzNmc4ZXJKczBfbEJzOExLSXdaVHBFVkJjRGQ2U1FWdzdpdHhvOGdlWWItMVhrRTRGTHdKMllfdXd3b2dYZGhISnPSAYgCQVVfeXFMTlA5S0dMTTh2NlFHQ3Jvbms2cklHbzFjQ1R4OHFwVVRZY25OZ1B6d2VDUEo0d011ZjQ4aXFqR1o2ZHg4VE5sX3hITXdRUTZNcks2cklJeDF5WHFSenZ5MWxOcXpFbmNMOWw4WEdUeF9HalZINURnQ2dLbTlwX1NadFFzbWRoNFMyMm9mVGV4dEpkTmIzVVFXZTdsTS16VzlqanVhTWt6R2xteGVfdDJhY1dpWWQxTFJKQmZtYkRndW94ZlZNM2M2czZnOGVySnMwX2xCczhMS0l3WlRwRVZCY0RkNlNRVnc3aXR4bzhnZVliLTFYa0U0Rkx3SjJZX3V3d29nWGRoSEpz?oc=5",
    "tag": "BCE taux",
@@ -231,17 +231,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés : Fed, BCE, vers de grosses turbulences ? – 04/09",
-   "source": "BFM Économie",
-   "date": "Fri, 04 Sep 2026 19:50:15 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/les-marches-fed-bce-vers-de-grosses-turbulences-04-09_EN-202609040922.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe termine en hausse, Wall Street dans le rouge après le rapport sur l'emploi - Boursorama",
-   "source": "Boursorama",
+   "titre": "L'Europe termine en hausse, Wall Street dans le rouge après le rapport sur l'emploi - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 16:38:27 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNYW01QmtqSWZHSkJZVzZrY1puOF8zeGRDbFVYTjJjc1pZWm5ZbFlPOUM2SXVVYzJidlFWUk9TYmQ5LXlrbnRvVzRLaHNQVXJ4OVM4eGQyeWJ6WEZrbTI2dlU1NjVXREZuWWRNZFZrQU1wekpWUGZ1TVBXSVVNRDVWcmlHemVFYllSdjYxMkdpaXlXUDVOcTlBcVpCWXJZT0RFajF5ckhETGRBZFcyQmF5VFhBVWg0YjEwSDYyM1cwX0tqUE5uR3g0Ui1VQVBlMkFxVmhCMllrc1d1YlA0ZkNObmloSlFETEVfeGZybXFWR29yazJueDhR0gH3AUFVX3lxTE1hbTVCa2pJZkdKQllXNmtjWm44XzN4ZENsVVhOMmNzWllabllsWU85QzZJdVVjMmJ2UVZST1NiZDkteWtudG9XNEtoc1BVcng5Uzh4ZDJ5YnpYRmttMjZ2VTU2NVdERm5ZZE1kVmtBTXB6SlZQZnVNUFdJVU1ENVZyaUd6ZUViWVJ2NjEyR2lpeVdQNU5xOUFxWkJZcllPREVqMXlySERMZEFkVzJCYXlUWEFVaDRiMTBINjIzVzBfS2pQTm5HeDRSLVVBUGUyQXFWaEIyWWtzV3ViUDRmQ05uaWhKUURMRV94ZnJtcVZHb3JrMm54OFE?oc=5",
    "tag": "BCE taux",
@@ -267,8 +258,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "L'Europe termine en hausse, Wall Street dans le rouge après le rapport sur l'emploi - Boursorama",
-   "source": "Boursorama",
+   "titre": "L'Europe termine en hausse, Wall Street dans le rouge après le rapport sur l'emploi - boursorama.com",
+   "source": "boursorama.com",
    "date": "Fri, 04 Sep 2026 16:10:05 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOX0JnRG5GdVhNYVVndHdEZGhPcWhDdHJmY0dVamp4NmhmbUhsVzVZQ3dHVzR2ckFqaFFNcWhLaDIyWTFLZlFBZFg2eWE0OVpvVnRmOUdvT0g1UUIxd2hySVBCWTVPclJSY0R3MGFhQjA5bHhVbEhuLWNMUGlSR25YTl9zMWtEaXhlb2ZJTHNQZU9INGRYaFlGZHVpNlNacGE3ZEtCOVBXWlpCZkM4Y2FXUExVWjc5d3A1VmFqSElCYlhxZkF4YmZCTXRkaFlielFxZ0lldjd6QTFjblBudUJMQ2hBbUFITzdDU0U3bEpXSzBQYWFHdXNn0gH3AUFVX3lxTE5fQmdEbkZ1WE1hVWd0d0RkaE9xaEN0cmZjR1Vqang2aGZtSGxXNVlDd0dXNHZyQWpoUU1xaEtoMjJZMUtmUUFkWDZ5YTQ5Wm9WdGY5R29PSDVRQjF3aHJJUEJZNU9yUlJjRHcwYWFCMDlseFVsSG4tY0xQaVJHblhOX3Mxa0RpeGVvZklMc1BlT0g0ZFhoWUZkdWk2U1pwYTdkS0I5UFdaWkJmQzhjYVdQTFVaNzl3cDVWYWpISUJiWHFmQXhiZkJNdGRoWWJ6UXFnSWV2N3pBMWNuUG51QkxDaEFtQUhPN0NTRTdsSldLMFBhYUd1c2c?oc=5",
    "tag": "BCE taux",
@@ -301,15 +292,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street fermé pour Labor Day, la BCE et l'inflation américaine en points forts de la semaine - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Fri, 04 Sep 2026 13:55:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWkswUWUyck92VTcxeWhrQWw2SHdxb2NadldDNXFiamR1VjBEa3diZEpkU3gxWGtLQ1dGTGlRZ1NyQnYwRFBhM0hVNXNUcnh6WjFoNm1saXRSXzNDUUdrVkV1V0M4Y1VDcTZxenZzQU1PR1l1Nk1WRDFDcDJ0ZXBPdGVfa0NUakV4SzdVZ05ILW1od3N2b3dPOWVBSEdmZHhlT3huajJNbE42d0dzN2ExeF9ZMVBzNFZuak9FUEdXZk9QSkY1Y0ZldlhRdHFwemNaTHltaEJYaW95M2M2M21teHl6Z0VENm41SENmSEI0c3hKTWcyd0VEOA?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "AGENDA DU 7 AU VENDREDI 11 SEPTEMBRE: Le marché attend la décision de la BCE et l'inflation américaine",
@@ -360,15 +342,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Magellan Financial chute au second semestre 2026 après les coûts de fusion - Investing.com France",
-   "source": "Investing.com France",
-   "date": "Thu, 27 Aug 2026 01:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUNDalhUUERJRGhKczVJa0Q2SXJORDNYSUh4dExBQjBTOUtxR0YyV01aamRMOEw1QlIwbVVWZktFMUxkSHg1T0lmU1MtV3gzSjdlUWRNWVlUbjRYeXo4RmQzbWdKZ3ZPMmhpSnpXU3pDd2RfMDZhbEtsOEZOOTRZeU5MLVl0TGN5OEE2MW5HckxwRlFfdENPeVg0VTFoNFBVSC1CZHF3YjhhSGNCblRTeEF1SzE3Z05HSHBBQ3lHemcxX0dsQlJSaw?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "negative"
-  },
-  {
    "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - Presse Agence",
    "source": "Presse Agence",
    "date": "Sat, 22 Aug 2026 07:00:00 GMT",
@@ -382,6 +355,15 @@
    "source": "IGN France",
    "date": "Mon, 17 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZE5FcjVNaVpMZG41cE1KYmM0NWlQNTNtTVRoRnFpd04zT0FqcnY4WnJ3N0ZLODdLQ1Z6OWVURWNlb3VXVlBFWVBZTVBlQ2dHX0NVUEhDemNEdklFZFJSejYxcUgzMHprQXBkcXM1ZHhaRjM2blluaENHTGRyWXdLT0syR1pCSUY2R1kxbDQySk9lNUN3YmZ2ZkRsU1FlSkc5amN1am56Z05IRXNMWWJpMlBlbFhWNmx1YllSTEZiTklLcEdoSkY5ZGxhWDRVWTBnRGRKbE9FVHFxenM?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
+   "source": "Instant Gaming News",
+   "date": "Sun, 16 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -459,8 +441,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le fonds CPR Croissance Réactive à la loupe - lcl.fr",
-   "source": "lcl.fr",
+   "titre": "Le fonds CPR Croissance Réactive à la loupe - LCL",
+   "source": "LCL",
    "date": "Tue, 07 Apr 2020 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRGRoRG80QWg4cU05Q3ZVaDVPd1BWdGMyODNDVjY4cll1eThwYVVFYldFQWNISFFjOTRxUUJUd29xQVRkWllDaVNHS21pTnVIYzZ4c25SMjBBck9meWZDYmFJbEIwY3hBYVBPQkdFbTlEbk53VEpPcFE0MmF1dktpZW92amdKcERvRXRfYUxkVmFGVlE4enROSGdQMjhiRi1zUzVSUVV2Z00?oc=5",
    "tag": "CPR Croissance Réactive",
