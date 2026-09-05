@@ -1,6 +1,70 @@
 {
  "evenements": [
   {
+   "date": "2026-09-05",
+   "isin": "LU1819480192",
+   "fonds": "Echiquier Artificial Intelligence B",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Echiquier Artificial Intelligence B : 4/5 → 3/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 4/5 à 3/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "LU1103305709",
+   "fonds": "EdR Fund - US Value",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur EdR Fund - US Value : 4/5 → 5/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 4/5 à 5/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "FR0010479931",
+   "fonds": "EdR India",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur EdR India : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "FR0000292278",
+   "fonds": "Magellan",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Magellan : 2/5 → 1/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 1/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "FR0010298596",
+   "fonds": "Moneta Multi Caps",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Moneta Multi Caps : 4/5 → 5/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 5/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "LU0280435388",
+   "fonds": "Pictet Clean Energy Transition P EUR",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Pictet Clean Energy Transition P EUR : 3/5 → 2/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "LU1752460292",
+   "fonds": "ODDO BHF Sust Credit Opportunities",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur ODDO BHF Sust Credit Opportunities : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-09-05",
+   "isin": "LU2147879543",
+   "fonds": "Tikehau International Cross Assets",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Tikehau International Cross Assets : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
    "date": "2026-08-07",
    "isin": "FR0011253624",
    "fonds": "R-co Valor",

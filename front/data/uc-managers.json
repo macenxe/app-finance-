@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-04",
+ "genere": "2026-09-05",
  "fonds": {
   "LU1120766388": {
    "gerants": [
@@ -226,7 +226,7 @@
    "societe": "La Financière de l'Echiquier",
    "structure": "SICAV",
    "note": 3,
-   "risque": 4
+   "risque": 3
   },
   "FR0010863688": {
    "gerants": [
@@ -302,7 +302,7 @@
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "SICAV",
    "note": 1,
-   "risque": 4
+   "risque": 5
   },
   "FR0010479931": {
    "gerants": [
@@ -318,7 +318,7 @@
    "fraisCourants": 2.31,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "FCP",
-   "note": 3,
+   "note": 2,
    "risque": 3
   },
   "LU0528228074": {
@@ -407,7 +407,7 @@
    "fraisCourants": 2.09,
    "societe": "Comgest SA",
    "structure": "SICAV",
-   "note": 2,
+   "note": 1,
    "risque": 3
   },
   "FR0010298596": {
@@ -420,7 +420,7 @@
    "fraisCourants": 1.49,
    "societe": "Moneta Asset Management",
    "structure": "FCP",
-   "note": 4,
+   "note": 5,
    "risque": 4
   },
   "FR0000989899": {
@@ -560,7 +560,7 @@
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
    "note": 4,
-   "risque": 3
+   "risque": 2
   },
   "LU0366534344": {
    "gerants": [
@@ -693,7 +693,7 @@
    "fraisCourants": 1.12,
    "societe": "ODDO BHF Asset Management SAS",
    "structure": "SICAV",
-   "note": 3,
+   "note": 2,
    "risque": 4
   },
   "FR0010135103": {
@@ -896,7 +896,7 @@
    "fraisCourants": 1.34,
    "societe": "Tikehau Investment Management",
    "structure": "SICAV",
-   "note": 3,
+   "note": 2,
    "risque": 2
   },
   "FR0011461326": {
