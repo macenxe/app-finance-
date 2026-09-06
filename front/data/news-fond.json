@@ -1,6 +1,15 @@
 {
- "genere": "2026-09-06T09:20:58.856Z",
+ "genere": "2026-09-06T13:37:44.411Z",
  "globales": [
+  {
+   "titre": "L'Europe termine en hausse, Wall Street dans le rouge après le rapport sur l'emploi - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 04 Sep 2026 16:38:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNYW01QmtqSWZHSkJZVzZrY1puOF8zeGRDbFVYTjJjc1pZWm5ZbFlPOUM2SXVVYzJidlFWUk9TYmQ5LXlrbnRvVzRLaHNQVXJ4OVM4eGQyeWJ6WEZrbTI2dlU1NjVXREZuWWRNZFZrQU1wekpWUGZ1TVBXSVVNRDVWcmlHemVFYllSdjYxMkdpaXlXUDVOcTlBcVpCWXJZT0RFajF5ckhETGRBZFcyQmF5VFhBVWg0YjEwSDYyM1cwX0tqUE5uR3g0Ui1VQVBlMkFxVmhCMllrc1d1YlA0ZkNObmloSlFETEVfeGZybXFWR29yazJueDhR0gH3AUFVX3lxTE1hbTVCa2pJZkdKQllXNmtjWm44XzN4ZENsVVhOMmNzWllabllsWU85QzZJdVVjMmJ2UVZST1NiZDkteWtudG9XNEtoc1BVcng5Uzh4ZDJ5YnpYRmttMjZ2VTU2NVdERm5ZZE1kVmtBTXB6SlZQZnVNUFdJVU1ENVZyaUd6ZUViWVJ2NjEyR2lpeVdQNU5xOUFxWkJZcllPREVqMXlySERMZEFkVzJCYXlUWEFVaDRiMTBINjIzVzBfS2pQTm5HeDRSLVVBUGUyQXFWaEIyWWtzV3ViUDRmQ05uaWhKUURMRV94ZnJtcVZHb3JrMm54OFE?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
   {
    "titre": "La Bourse de Paris termine en légère baisse après les chiffres de l'emploi américain - Boursorama",
    "source": "Boursorama",
@@ -38,8 +47,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Décision de la BCE sur les taux d’intérêt : à quoi s’attendre jeudi - Morningstar",
-   "source": "Morningstar",
+   "titre": "Décision de la BCE sur les taux d’intérêt : à quoi s’attendre jeudi - global.morningstar.com",
+   "source": "global.morningstar.com",
    "date": "Fri, 04 Sep 2026 09:42:09 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPLXhNMm5pRHV0eVdyR0Yyd1lPeFdxLXU0RjVVNmtBMHN5ZWFjY3l6RVIxZ0E5dUp3em5sZkpwMVo3YlhCUkpJT3ZqWHlwc2FWNjQ0bWd1R2lzMm81MHd1ZzBqQ0hfT2tqclVYeWd6Vl84V0FsbUsya0QyamNfcXZ1UF8tOFNBRVNocHNTWDZNN0Q3aG1PTjZncGRGM21HRW14M3Mw?oc=5",
    "tag": "BCE / Taux",
@@ -65,15 +74,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Warsh se montre restrictif, mais y aura-t-il une hausse des taux en septembre ? - Morningstar",
-   "source": "Morningstar",
-   "date": "Mon, 31 Aug 2026 17:19:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQelpEMWhNcWp2S0x5OHBKTUV6bUhZVFdSUk45T0ZKcXdONU5iY0JRbFVSaVgyTHlWX0xrR1pPNXdKcTE4X2ZIbUlFb294R2tRRzVLVnVuMTkzMnJtZjhYaEZ1Wm5xajNvdGwwVTNVQmhEbmFqeF9FZDBpY3NJOEJVWVU3ZFF2S2FrbmVPX3VNSllMZVZpdzVLMWFUVnptc2NQcHEzd0V3ZXU1UkpSOUpQajZXTjIwOVVBVjFEalJR?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "CAC 40: Peu de mouvements en Europe - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Mon, 31 Aug 2026 09:31:00 GMT",
@@ -85,24 +85,6 @@
  ],
  "produits": [
   {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 06 Sep 2026 06:10:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 06 Sep 2026 02:30:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Action Capgemini SE | Cours CAP Bourse Euronext Paris - Zonebourse",
    "source": "Zonebourse",
    "date": "Fri, 04 Sep 2026 15:55:00 GMT",
@@ -112,20 +94,38 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 04 Sep 2026 15:38:45 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 04 Sep 2026 07:00:00 GMT",
+   "date": "Fri, 04 Sep 2026 15:36:08 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 03 Sep 2026 16:21:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-   "tag": "BNP Paribas",
+   "date": "Fri, 04 Sep 2026 15:36:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 04 Sep 2026 15:36:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -150,11 +150,65 @@
  ],
  "eco": [
   {
-   "titre": "La Chine va injecter 47 milliards de dollars dans les banques et assureurs d'État pour renforcer leurs fonds propres - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 06 Sep 2026 09:10:45 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMUxjV01DSVduVnQ5bkx0SW10Ulh0NVZuZERDZzV4SU9CUHZSUFRGZGszamI3bjBFTmhwdnRBWGoxd3NQMGpEeC1pbktRU210RVpvMC1HY2tiWm9nQVlaOFRrTmF2dFl0cHFRckxBQ1lIckdyd2tTbTVySFBQTVNqbkxtLVZkNDJlVzFCanB1SVFuOFJqQWlKamw1ZTNFWXpWX2xmSm9LYkFBbjNrZzhEVEFDOWR0Ukl0M3NmMDNpOTUxMXJFRTlPdm9peWhzcnd2eG9RazdsaXdUUjlqUE9peTk5ZUNwcW1CekhXQ3d5RjR3dw?oc=5",
+   "titre": "Spatial: l'Europe peut \"aller vite\", dit une start-up allemande après un lancement réussi - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 06 Sep 2026 13:08:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQTzlrZjNIOGhoeTB3WG1vRG5FelZmX21GWEtzLU1UTDdwc2ZOSmE0cEtnVWQ2cG9Jd3NnOGFiclV2WU9aMl9hQjV1MllEenJ1bnZDMVFJTlU1S0VJTFJhcUQ3M1FuQVpxdVFpdU5SWC1QWW1CM0hsaUxJdFN0ei1lOERvWlRjRURjczJYbDRaSzk4RkpuRloyMjQ1M1gzMGktd0tEREZWNFFfcFlpUUFFcmNPaGU2U0VwWjZiQnNGWDQybXFGN0hlVkpibWphNklzTXhYaFhheXNGWVoyMk02MEJmM294MXRVS3BqT2stTXNFYlNtTHfSAfsBQVVfeXFMTUl5bGk3dE1oOFctQ1lpMXdUX0FHNmwtM2ZUTUI5a1lqVkphZUZCTTRYWHFEaDJveDlUNzZkMzEwaVNUWk50N19QaE1hR0tPb3ZnbnZwOVhGejVZT0tDWjNLWGV4S3pWVkR0Q0Q1akwzR2UyZEFsRTlvLTJhUkwzZG1KMWltQ2hEUkoxSDEwQUdlM3dXNV9vTGxxTFhJMFp0VkdhNnhzc3d6Tm1SeTIwY2V1dnF1OTd4a0dTcVFZcTlsZmlFazZLTnpUX0xqUEcwRmhhTmljYkdPVjZFSFFFZWdqQ1Z3VjA2MWtxTms2LVJtNmdiRl9pbnBWeGs?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La semaine à venir à Wall Street-Les investisseurs vont scruter les données sur l'inflation à la recherche d'i - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 06 Sep 2026 13:00:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxPU0UwTHNZSkhGLW5rbGMyNU9JeTFGYU84bXNDYmtSWmhOOC1WUmJ5UTF2S0pyZ29DSHFQZ1JVdEdEMVBudDBoY2VzNDMtclhNWEVIVkFUWnhsN1l3NUpqSWRKdlp2RXRBY3RQWDVIcmVhTS1ING1YV1RJeVFkaE42RjJrTFdaXzI4azVPQWFMUWpTdzZBY2hmeW5jODU3X2pPVl9qVG5kQ0ZaSHdvMmcxWTVRQXBxcUpMakNwTldabUNSX3BiNFJieUJ5NFBmZ0JUcVFoVFUyYjNrVWhlX2RxNllzdjVPZ2NQZ3k3MTFvR09mWV8xbTVtUUQxRURlMkdJNU56dXZJN1p0WFFGR0RTU3Fac1FjdTRmVG9pbVdQd2JkUjlxZlZKVDIxN24weVRXN0paQXlKS2F5OUJkazQwNWVqRk9BMDBKVkdtRjdn0gHTAkFVX3lxTFAwQnh6QWlVN2hMNGsxXzlPemxzNVd4WE5fSTR0cWlzbkdva19PRUpIbWxQZzZUampZM2ZzdzhILV82bHhrNFE5M0hBQ1FKV3JBYXJHb1RtY3N3c2ZGelh2OGQtZ2JNU2xNM1VYakp6TXNtdXU3MjRHTWtHa2F3aExyaWw0S2dzY2VBZ2F1QzhDWno1QXptak91QlFySUxYQ0tmb2RZMmcxeXBjVDdlaVRDY3RPVHhHMThCWFFrSzJBNlpGLXItb0xzeHdGLVNsTlNId1RXTnU2alhGM3VnQktobWJpLW83dGRJUmpDbWU0TkI4Ull6MV9nNko2eUlvSkt1S0l1OXYxaHpYa3RkckRkLVUzb2lEQ3NaQjh4X3RTc2pQdzNMamMyQWRhRUZEZzJDU1ZTVW5MQVZHSzRDUmFOMDA4bDk2X1FqYi1Iak8wMzRXSQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les investisseurs vont scruter les données sur l'inflation à la recherche d'indices sur l'évolution des taux d'intérêt - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 06 Sep 2026 13:00:53 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE50d1JfU1htMnhQR2ZXRDlEMGJhRVdZRUgzZGNkeWhjLWxQa3AwRE5yVlFZNVktbDVBNW56ME8zd2hBcC1KYWMxSU5IVGdxdW96djJhMGFPWlRxRHZFaXhXd05wdnJ1SGNvNklFZ045ZzNtVEJHdTlR?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourses du Moyen-Orient : les marchés du Golfe clôturent en ordre dispersé sur fond de tensions persistantes entre les États-Unis et l'Iran - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 06 Sep 2026 12:55:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZ2dJSkYtNU9iUGF3czNrdnBvNmJyRGY4UGpCdzFFeGptWUdvV0pYNzRSQUVTaU5HQmh0Nmc5anlUcmNXcF9yZ0ZpeUJCcUJuanBNcHdNVkNlQXV3RGZZVVNVcEZmVkNXa2RaZ1lMRWNSN2dSMkNnOTI0VFVUTFpFbVpYUnM0Y1FxUm9DeWlGZmtpVkRfWVR6ZktScnpDSVZmYldOQlJoT1VtOEFncC1SMDJoYWswYWlJX21SekhPbHpSemYwWFpDR2VCYVNVaTE3VFEtVzNGQV94a3FjdkgybjBiZU15Zm5wYlJhVndDaw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les syndicats ont pourtant jugé les annonces \"largement insuffisantes\": la porte-parole du gouvernement défend un plan de soutien \"colossal\" pour les agriculteurs et assure que certains ministères \"devront faire des efforts\" pour le financer",
+   "source": "BFM Économie",
+   "date": "Sun, 06 Sep 2026 12:36:16 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/agriculture/les-syndicats-ont-pourtant-juge-les-annonces-largement-insuffisantes-la-porte-parole-du-gouvernement-defend-un-plan-de-soutien-colossal-pour-les-agriculteurs-et-assure-que-certains-ministeres-devront-faire-des-efforts-pour-le-financer_AD-202609060235.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Cette mesure pourrait rapporter 1 milliard d'euros: alors qu'il prépare le projet de budget pour 2027, le gouvernement envisage de prélever des cotisations sociales sur l'épargne salariale pour réduire le déficit de la Sécurité sociale",
+   "source": "BFM Économie",
+   "date": "Sun, 06 Sep 2026 12:07:18 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/cette-mesure-pourrait-rapporter-1-milliard-d-euros-alors-qu-il-prepare-le-projet-de-budget-pour-2027-le-gouvernement-envisage-de-prelever-des-cotisations-sociales-sur-l-epargne-salariale-pour-reduire-le-deficit-de-la-securite-sociale_AV-202609060225.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Turquie : le vice-président Yilmaz estime que la lutte contre l'inflation a été prolongée par l'impact de la guerre en Iran - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 06 Sep 2026 10:38:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQdFRBRU0yTU41Qi0zQm9mUGNyNEZOR1o3Tlh6clNfbTlIWjJadjdGWDRGaXdfRXpleUJwcVhtRVlxTEJObFFBakFaRk8xbjBFRHlHM2UzclNmTUI3R2ZJUFVtdTlfYy1FdVhIQmhmS29XdGZXME81Z1FEbzFzVWhvZkRnVjBDbXYwTlNvUndzamdJbG5tMno2bTlMa3pnajMwVGJIV0puYUhlaGZaZEcwbHZ4UjBJbWZaN2MxbFJfOTYyaVl5MWVNbVppS2pwcDRnMHpjNng0bkpHWThFQ0xzby16cW5tX3VLbjMxMktJNA?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -163,16 +217,7 @@
    "source": "Zonebourse",
    "date": "Sun, 06 Sep 2026 09:10:33 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTjFWbk94N0dxMWlpeS1jME9EWC1VTHpOdTJnTkhjb0pnbURvTmNnN2FSaW5hYmdnUl9JRUtOSXpPTWdSSmVsU2doNWI2ZlZrUE9sU21DQ1N0b2Rka29JR0hOMG05YVRvc0dsaTUteFRDelZ3TGZTekx2WmxPbG5RZ0xXVkJfekF0dmE2QjZUbndaQ2UyMUlPbjZDRmhHMXMzdzdLQi0zdlo0RDhzUTZMZFNCNXJRT3FFTGdvczFEY1REYW1XTzFxTTNZWmJnLUh6X19wTA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Meta-Apple : on peut être iPhone et Instagram à la fois, mais en Bourse une seule de ces « big techs » américaines est à acheter, l’autre est à vendre - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Sun, 06 Sep 2026 09:01:02 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugJBVV95cUxPOWZDR3JIS0VZM1poMk8xWUhkMUZUMldWaVlnOG9TdWR5bUtXdEx1Y2Y1RS01WERGcUNDZGZubjg0cVU0RVRucWtTcVBHc19JN0xNVTczVjdTWnl4dEdtRzZNbHJCSm14T0xlZGNjQVhVakktQmpabVhfak53Z25xM2t5aHAtWTB6bUFMTXA4ZjNXR1ZlYWl2bndlbzVFUVh1Z0dtVWQxUEhDQy1INzZhTy05aGZCLTdaYnNtb1dfMF9zcEo2U0VtdlpsMjNtbTI4WDVnVkd3ZFV5QWxnT3JSc3dDVC05MEJ4TjJxaE80OGJLQjBpMm9ndElUWVVBUXFiLU96VG9KVnF5cXFMc3JuYjlIMTB2U3ZZRFZWTjA1Vm50LXhHZjBsMTBQeGFrT2YwdVBKVUp0RlprZw?oc=5",
-   "tag": "bourse",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -199,24 +244,6 @@
    "source": "BFM Économie",
    "date": "Sat, 05 Sep 2026 11:36:53 GMT",
    "lien": "https://www.bfmtv.com/economie/international/certains-automobilistes-attendent-deux-heures-sans-reussir-a-faire-le-plein-malgre-d-immenses-reserves-de-petrole-les-penuries-de-carburant-liees-a-la-guerre-au-moyen-orient-provoquent-de-longues-files-d-attente-devant-les-stations-service-en-irak_AD-202609050240.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Inflation: \"Jamais, en France, les producteurs déjà fragiles n'ont connu de telles conditions\", estime Nicolas Chabanne, fondateur de \"C'est qui le Patron ?!\"",
-   "source": "BFM Économie",
-   "date": "Sat, 05 Sep 2026 09:14:58 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-inflation-jamais-en-france-les-producteurs-deja-fragiles-n-ont-connu-de-telles-conditions-estime-nicolas-chabanne-fondateur-de-c-est-qui-le-patron_VN-202609050191.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Sur les marchés, les prix des fruits et légumes augmentent",
-   "source": "BFM Économie",
-   "date": "Sat, 05 Sep 2026 09:07:13 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-sur-les-marches-les-prix-des-fruits-et-legumes-augmentent_VN-202609050187.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -371,7 +398,7 @@
   {
    "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
    "source": "Banque Populaire",
-   "date": "Wed, 03 Jun 2026 09:13:27 GMT",
+   "date": "Tue, 02 Jun 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9EdXNoZExkZFRqdGxXOWtaYnF1ZjV0ZXhwYjdDVWJrNXBiMlpTQmo3T0FYQnZFTGtJTGl4YkZuZ0NxSU5jZVA4NFlrUlJEeF9OaGpvMUpqYzhIbkx3aUNINU1NSWxlNnFOckdtbHFrb05zdWFoS0pqWXZaRHo?oc=5",
    "tag": "Eurose",
    "categorie": "uc",
@@ -387,8 +414,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
+   "source": "clubpatrimoine.com",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -400,6 +427,15 @@
    "source": "L'Agefi",
    "date": "Tue, 17 Mar 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVlpManpKMzNFVmFUQzJYczAzRkFZeG14UFhNVjU4RmhxeVlxbDN4MXRET29xeGlJTDA0LVQtNUwzcEZfNFR2N2dnNVprNzZGOFMtdWpURnlkR3IwNlRQbGZkSWN2V01VWXdONGRxMV9mR1pZb1A2UkxvMzlGelRyellEQ1JZd0YzRUZvX1dDVS1rUQ?oc=5",
+   "tag": "Eurose",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Thu, 25 May 2023 20:49:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
    "tag": "Eurose",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -423,8 +459,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
-   "source": "Profession CGP",
+   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - professioncgp.com",
+   "source": "professioncgp.com",
    "date": "Thu, 24 Sep 2020 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
    "tag": "Eurose",
@@ -439,15 +475,6 @@
    "tag": "CPR Croissance Réactive",
    "categorie": "uc",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Edouard Carmignac se retire de la gestion de Carmignac Patrimoine - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Tue, 22 Jan 2019 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRXUtUXBkTU9SYWV4R05kaFp0RVRNcWdENmJPLWFjdGhqWkhzNnIxdXpvRl9DSlhqVmVwVVd0TXZETjZQdFJHWHJsb044cXQ4MWctdGtRZUdOTGVDaUhJTFNrbU5iQmVjM1FhWXlVNVBuRzRnSHMxeDBXMnFacXBzTUZBdl9kNE1sMTljNDdaTndmdDJNYXVic1NVNWFrbHJ1b21tRnJUYnQ3RUpTZDFhX3RmRHc?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "neutre"
   }
  ]
 }
