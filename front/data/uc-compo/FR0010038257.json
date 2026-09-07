@@ -2,18 +2,18 @@
  "isin": "FR0010038257",
  "alloc": {
   "action": 94.7,
-  "obligation": 1.5,
-  "liquidite": 3.7,
+  "obligation": 1.3,
+  "liquidite": 3.9,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 42.5
+   "pct": 42.3
   },
   {
    "nom": "Finance",
-   "pct": 13.5
+   "pct": 13.4
   },
   {
    "nom": "Conso. cyclique",
@@ -21,23 +21,23 @@
   },
   {
    "nom": "Santé",
-   "pct": 9.4
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 8
+   "pct": 8.8
   },
   {
    "nom": "Conso. de base",
-   "pct": 7.5
+   "pct": 8
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 7.6
   },
   {
    "nom": "Technologie",
-   "pct": 5.6
+   "pct": 6.6
   },
   {
    "nom": "Énergie",
-   "pct": 2.7
+   "pct": 2.5
   },
   {
    "nom": "Immobilier",
@@ -55,39 +55,39 @@
  "holdings": [
   {
    "nom": "Schneider Electric SE",
-   "pct": 8.3
+   "pct": 8.2
   },
   {
    "nom": "Air Liquide SA",
-   "pct": 7.4
+   "pct": 7.1
   },
   {
    "nom": "Safran SA",
-   "pct": 5.7
+   "pct": 6.2
   },
   {
    "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
-   "pct": 5.6
-  },
-  {
-   "nom": "Legrand SA",
-   "pct": 5.3
+   "pct": 5.7
   },
   {
    "nom": "Societe Generale SA",
-   "pct": 5.1
-  },
-  {
-   "nom": "AXA SA",
-   "pct": 4.7
+   "pct": 5.2
   },
   {
    "nom": "L'Oreal SA",
+   "pct": 4.7
+  },
+  {
+   "nom": "Legrand SA",
    "pct": 4.6
   },
   {
-   "nom": "Sanofi SA",
+   "nom": "AXA SA",
    "pct": 4.4
+  },
+  {
+   "nom": "Bureau Veritas SA",
+   "pct": 4.3
   }
  ]
 }

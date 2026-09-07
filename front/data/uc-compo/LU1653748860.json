@@ -1,35 +1,35 @@
 {
  "isin": "LU1653748860",
  "alloc": {
-  "action": 96.8,
-  "obligation": 0.2,
-  "liquidite": 2.9,
+  "action": 98.3,
+  "obligation": 0,
+  "liquidite": 1.7,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 39.3
+   "pct": 39
   },
   {
    "nom": "Industrie",
-   "pct": 27.8
+   "pct": 27.7
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10.5
+   "pct": 11.4
   },
   {
    "nom": "Matériaux",
-   "pct": 9.4
+   "pct": 9.7
   },
   {
    "nom": "Santé",
-   "pct": 7.1
+   "pct": 6.9
   },
   {
    "nom": "Services collectifs",
-   "pct": 4.9
+   "pct": 4.2
   },
   {
    "nom": "Technologie",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "GEA Group AG",
-   "pct": 4.4
-  },
-  {
-   "nom": "Unilever PLC",
-   "pct": 3.4
+   "pct": 4.1
   },
   {
    "nom": "Canadian Pacific Kansas City Ltd",
-   "pct": 3.3
+   "pct": 3.6
+  },
+  {
+   "nom": "Unilever PLC",
+   "pct": 3.5
   },
   {
    "nom": "Kerry Group PLC Class A",
+   "pct": 3.1
+  },
+  {
+   "nom": "Compass Group PLC",
+   "pct": 3
+  },
+  {
+   "nom": "Sysco Corp",
    "pct": 2.9
   },
   {
    "nom": "Danone SA",
-   "pct": 2.9
-  },
-  {
-   "nom": "Koninklijke Ahold Delhaize NV",
-   "pct": 2.8
-  },
-  {
-   "nom": "Sysco Corp",
    "pct": 2.8
   },
   {
    "nom": "The Kroger Co",
-   "pct": 2.7
+   "pct": 2.6
   },
   {
-   "nom": "Pentair PLC",
-   "pct": 2.7
+   "nom": "Mowi ASA",
+   "pct": 2.6
   },
   {
-   "nom": "Sainsbury (J) PLC",
-   "pct": 2.5
+   "nom": "Haleon PLC",
+   "pct": 2.6
   }
  ]
 }

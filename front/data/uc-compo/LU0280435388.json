@@ -1,31 +1,31 @@
 {
  "isin": "LU0280435388",
  "alloc": {
-  "action": 98,
-  "obligation": 0.2,
-  "liquidite": 1.8,
+  "action": 97.8,
+  "obligation": 0.1,
+  "liquidite": 2.1,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 61.2
+   "pct": 62.4
   },
   {
    "nom": "Industrie",
-   "pct": 19.2
+   "pct": 19.1
   },
   {
    "nom": "Services collectifs",
-   "pct": 15
+   "pct": 14.3
   },
   {
    "nom": "Matériaux",
-   "pct": 3.4
+   "pct": 3.1
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 1.2
+   "pct": 1
   },
   {
    "nom": "Immobilier",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Broadcom Inc",
-   "pct": 6.2
-  },
-  {
-   "nom": "Applied Materials Inc",
-   "pct": 5.8
-  },
-  {
-   "nom": "Infineon Technologies AG",
-   "pct": 4.7
-  },
-  {
-   "nom": "Marvell Technology Inc",
-   "pct": 4.1
+   "pct": 7
   },
   {
    "nom": "ASML Holding NV",
-   "pct": 3.8
+   "pct": 4.3
   },
   {
-   "nom": "Builders FirstSource Inc",
-   "pct": 3.6
-  },
-  {
-   "nom": "Xcel Energy Inc",
-   "pct": 3.5
+   "nom": "Infineon Technologies AG",
+   "pct": 3.9
   },
   {
    "nom": "Compagnie de Saint-Gobain SA",
-   "pct": 3.5
+   "pct": 3.9
   },
   {
-   "nom": "NXP Semiconductors NV",
+   "nom": "Applied Materials Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Marvell Technology Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Nextpower Inc Class A",
+   "pct": 3.6
+  },
+  {
+   "nom": "Trane Technologies PLC Class A",
    "pct": 3.4
+  },
+  {
+   "nom": "Delta Electronics Inc",
+   "pct": 3.3
   },
   {
    "nom": "Iberdrola SA",
-   "pct": 3.4
+   "pct": 3.1
   }
  ]
 }

@@ -1,43 +1,43 @@
 {
  "isin": "FR0000978439",
  "alloc": {
-  "action": 95.3,
+  "action": 96.2,
   "obligation": 0.3,
-  "liquidite": 4.3,
+  "liquidite": 3.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 40.7
+   "pct": 42.6
   },
   {
    "nom": "Technologie",
-   "pct": 23.2
+   "pct": 23.3
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 15.5
+   "pct": 14.9
   },
   {
    "nom": "Matériaux",
-   "pct": 8.5
+   "pct": 7.7
   },
   {
    "nom": "Santé",
-   "pct": 4.8
+   "pct": 4.3
   },
   {
    "nom": "Énergie",
-   "pct": 3.8
+   "pct": 3.7
   },
   {
    "nom": "Conso. de base",
-   "pct": 2.9
+   "pct": 2.8
   },
   {
    "nom": "Immobilier",
-   "pct": 0.7
+   "pct": 0.6
   },
   {
    "nom": "Communication",
@@ -59,7 +59,7 @@
   },
   {
    "nom": "Figeac Aero SA",
-   "pct": 6.9
+   "pct": 7.6
   },
   {
    "nom": "ID Logistics",
@@ -67,27 +67,31 @@
   },
   {
    "nom": "Jacquet Metals Ordinary Shares",
-   "pct": 4.9
+   "pct": 4.6
   },
   {
-   "nom": "Virbac SA",
+   "nom": "Aubay",
    "pct": 4.5
   },
   {
    "nom": "Wavestone SA",
-   "pct": 4.5
-  },
-  {
-   "nom": "Delfingen",
-   "pct": 4.4
-  },
-  {
-   "nom": "Aubay",
    "pct": 4.4
   },
   {
    "nom": "Vusion",
+   "pct": 4.3
+  },
+  {
+   "nom": "Virbac SA",
    "pct": 4.1
+  },
+  {
+   "nom": "Mersen SA",
+   "pct": 4
+  },
+  {
+   "nom": "Delfingen",
+   "pct": 4
   }
  ]
 }

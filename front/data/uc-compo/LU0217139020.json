@@ -1,35 +1,35 @@
 {
  "isin": "LU0217139020",
  "alloc": {
-  "action": 98.8,
+  "action": 98.6,
   "obligation": 0.1,
-  "liquidite": 1.1,
+  "liquidite": 1.2,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. cyclique",
-   "pct": 61.5
+   "pct": 62.8
   },
   {
    "nom": "Finance",
-   "pct": 12.7
+   "pct": 11.6
   },
   {
    "nom": "Conso. de base",
-   "pct": 9.9
+   "pct": 10.1
   },
   {
    "nom": "Santé",
-   "pct": 7.4
+   "pct": 7.3
   },
   {
    "nom": "Technologie",
-   "pct": 7.1
+   "pct": 7
   },
   {
    "nom": "Immobilier",
-   "pct": 1.4
+   "pct": 1.2
   },
   {
    "nom": "Matériaux",
@@ -54,23 +54,19 @@
  ],
  "holdings": [
   {
-   "nom": "American Express Co",
-   "pct": 4.7
-  },
-  {
-   "nom": "Visa Inc Class A",
-   "pct": 4.6
+   "nom": "Moncler SpA",
+   "pct": 4.4
   },
   {
    "nom": "Marriott International Inc Class A",
+   "pct": 4.4
+  },
+  {
+   "nom": "American Express Co",
    "pct": 4.3
   },
   {
    "nom": "Hermes International SA",
-   "pct": 4.3
-  },
-  {
-   "nom": "Hilton Worldwide Holdings Inc",
    "pct": 4.2
   },
   {
@@ -78,20 +74,24 @@
    "pct": 4.2
   },
   {
-   "nom": "Moncler SpA",
-   "pct": 4.1
-  },
-  {
-   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "nom": "Hilton Worldwide Holdings Inc",
    "pct": 4.1
   },
   {
    "nom": "Apple Inc",
-   "pct": 3.9
+   "pct": 4
+  },
+  {
+   "nom": "Visa Inc Class A",
+   "pct": 4
   },
   {
    "nom": "InterContinental Hotels Group PLC",
-   "pct": 3.8
+   "pct": 4
+  },
+  {
+   "nom": "adidas AG",
+   "pct": 4
   }
  ]
 }

@@ -1,8 +1,8 @@
 {
  "isin": "LU0512124107",
  "alloc": {
-  "action": 4.1,
-  "obligation": 95.9,
+  "action": 5,
+  "obligation": 95,
   "liquidite": 0,
   "autre": 0
  },
@@ -55,15 +55,15 @@
  "holdings": [
   {
    "nom": "Euro Schatz Future Sept 26",
-   "pct": 5.4
-  },
-  {
-   "nom": "Euro Stoxx 50 Future Sept 26",
-   "pct": 4.7
+   "pct": 5.5
   },
   {
    "nom": "Euro Bobl Future Sept 26",
-   "pct": 4
+   "pct": 4.1
+  },
+  {
+   "nom": "Future On Euro Stoxx 50 Sep26",
+   "pct": 4.1
   }
  ]
 }

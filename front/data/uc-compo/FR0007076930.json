@@ -1,47 +1,47 @@
 {
  "isin": "FR0007076930",
  "alloc": {
-  "action": 99.9,
-  "obligation": 0.1,
-  "liquidite": 0,
+  "action": 99.8,
+  "obligation": 0,
+  "liquidite": 0.2,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 28.7
+   "pct": 28.5
   },
   {
    "nom": "Industrie",
-   "pct": 14.4
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 12.2
+   "pct": 14.6
   },
   {
    "nom": "Énergie",
-   "pct": 11.3
+   "pct": 12.3
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 12.1
   },
   {
    "nom": "Communication",
-   "pct": 11.1
+   "pct": 11
   },
   {
    "nom": "Santé",
-   "pct": 6.3
+   "pct": 5.9
   },
   {
    "nom": "Technologie",
-   "pct": 5.7
+   "pct": 5.5
   },
   {
    "nom": "Conso. de base",
-   "pct": 5.3
+   "pct": 4.7
   },
   {
    "nom": "Matériaux",
-   "pct": 3.2
+   "pct": 3.4
   },
   {
    "nom": "Immobilier",
@@ -55,39 +55,39 @@
  "holdings": [
   {
    "nom": "BNP Paribas Act. Cat.A",
-   "pct": 9.9
+   "pct": 9.8
   },
   {
    "nom": "TotalEnergies SE",
-   "pct": 8.3
-  },
-  {
-   "nom": "Societe Generale SA",
-   "pct": 6.8
+   "pct": 8.9
   },
   {
    "nom": "AXA SA",
-   "pct": 6.8
+   "pct": 6.6
+  },
+  {
+   "nom": "Societe Generale SA",
+   "pct": 6.4
   },
   {
    "nom": "Sanofi SA",
-   "pct": 6.3
+   "pct": 5.9
   },
   {
    "nom": "Compagnie de Saint-Gobain SA",
-   "pct": 4.8
+   "pct": 4.7
   },
   {
    "nom": "Publicis Groupe SA",
-   "pct": 3.8
+   "pct": 3.9
   },
   {
    "nom": "Michelin",
-   "pct": 3.5
+   "pct": 3
   },
   {
    "nom": "Bouygues",
-   "pct": 2.7
+   "pct": 2.6
   },
   {
    "nom": "Dassault Aviation SA",

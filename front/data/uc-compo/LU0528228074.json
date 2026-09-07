@@ -9,39 +9,39 @@
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 31.2
-  },
-  {
-   "nom": "Industrie",
-   "pct": 13.7
+   "pct": 30.1
   },
   {
    "nom": "Santé",
-   "pct": 13
+   "pct": 14.1
   },
   {
-   "nom": "Communication",
-   "pct": 10.7
+   "nom": "Industrie",
+   "pct": 13.9
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10.3
+   "pct": 10.8
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.8
   },
   {
    "nom": "Finance",
-   "pct": 8.1
+   "pct": 8.9
   },
   {
    "nom": "Matériaux",
-   "pct": 4.6
+   "pct": 4.3
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.7
+   "pct": 3.5
   },
   {
    "nom": "Énergie",
-   "pct": 2.3
+   "pct": 2.2
   },
   {
    "nom": "Services collectifs",
@@ -49,49 +49,49 @@
   },
   {
    "nom": "Immobilier",
-   "pct": 1.1
+   "pct": 1.2
   }
  ],
  "holdings": [
   {
-   "nom": "NVIDIA Corp",
-   "pct": 6.8
-  },
-  {
-   "nom": "Alphabet Inc Class A",
-   "pct": 6.5
-  },
-  {
-   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "nom": "Amazon.com Inc",
    "pct": 6.2
   },
   {
-   "nom": "Amazon.com Inc",
-   "pct": 5.4
+   "nom": "Alphabet Inc Class A",
+   "pct": 6.1
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 5.9
+  },
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 5.8
   },
   {
    "nom": "Apple Inc",
-   "pct": 4.9
+   "pct": 5.2
   },
   {
    "nom": "Microsoft Corp",
    "pct": 4
   },
   {
-   "nom": "Keyence Corp",
+   "nom": "Roche Holding AG Ordinary Shares new",
    "pct": 3.1
   },
   {
+   "nom": "Keyence Corp",
+   "pct": 2.9
+  },
+  {
+   "nom": "Westinghouse Air Brake Technologies Corp",
+   "pct": 2.8
+  },
+  {
    "nom": "Compagnie Financiere Richemont SA Class A",
-   "pct": 3
-  },
-  {
-   "nom": "Johnson Controls International PLC Registered Shares",
-   "pct": 2.9
-  },
-  {
-   "nom": "Roche Holding AG Ordinary Shares new",
-   "pct": 2.9
+   "pct": 2.8
   }
  ]
 }

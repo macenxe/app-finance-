@@ -1,35 +1,39 @@
 {
  "isin": "FR0010479931",
  "alloc": {
-  "action": 98.8,
+  "action": 99.5,
   "obligation": 0,
-  "liquidite": 1.2,
+  "liquidite": 0.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 27.1
+   "pct": 26.3
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 19.1
-  },
-  {
-   "nom": "Conso. de base",
-   "pct": 9.9
+   "pct": 20.3
   },
   {
    "nom": "Santé",
-   "pct": 9.7
+   "pct": 11
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 8.2
   },
   {
    "nom": "Communication",
-   "pct": 7.7
+   "pct": 7.6
   },
   {
    "nom": "Énergie",
-   "pct": 6.2
+   "pct": 6.1
+  },
+  {
+   "nom": "Technologie",
+   "pct": 5.9
   },
   {
    "nom": "Matériaux",
@@ -37,15 +41,11 @@
   },
   {
    "nom": "Industrie",
-   "pct": 5.4
-  },
-  {
-   "nom": "Technologie",
-   "pct": 5.2
+   "pct": 5.1
   },
   {
    "nom": "Services collectifs",
-   "pct": 3.1
+   "pct": 2.9
   },
   {
    "nom": "Immobilier",
@@ -55,7 +55,7 @@
  "holdings": [
   {
    "nom": "ICICI Bank Ltd",
-   "pct": 8.3
+   "pct": 8.8
   },
   {
    "nom": "Reliance Industries Ltd",
@@ -63,35 +63,35 @@
   },
   {
    "nom": "Bharti Airtel Ltd",
-   "pct": 5.5
+   "pct": 5.8
   },
   {
    "nom": "HDFC Bank Ltd",
-   "pct": 4.8
-  },
-  {
-   "nom": "Axis Bank Ltd",
-   "pct": 3.4
+   "pct": 4.4
   },
   {
    "nom": "Apollo Hospitals Enterprise Ltd",
    "pct": 3.3
   },
   {
-   "nom": "Varun Beverages Ltd",
-   "pct": 3.1
+   "nom": "Titan Co Ltd",
+   "pct": 3.2
   },
   {
-   "nom": "Tata Steel Ltd",
-   "pct": 3.1
-  },
-  {
-   "nom": "Avenue Supermarts Ltd",
+   "nom": "Axis Bank Ltd",
    "pct": 3
   },
   {
-   "nom": "Titan Co Ltd",
-   "pct": 2.9
+   "nom": "Tata Steel Ltd",
+   "pct": 3
+  },
+  {
+   "nom": "Bajaj Finance Ltd",
+   "pct": 3
+  },
+  {
+   "nom": "Kotak Mahindra Bank Ltd",
+   "pct": 2.8
   }
  ]
 }

@@ -1,51 +1,51 @@
 {
  "isin": "LU1261432659",
  "alloc": {
-  "action": 96.2,
-  "obligation": 0.3,
-  "liquidite": 3.5,
+  "action": 99.6,
+  "obligation": 0.1,
+  "liquidite": 0.3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 30
+   "pct": 27.1
   },
   {
    "nom": "Industrie",
-   "pct": 15.8
+   "pct": 16.2
   },
   {
    "nom": "Finance",
-   "pct": 13.9
-  },
-  {
-   "nom": "Santé",
-   "pct": 10.7
-  },
-  {
-   "nom": "Communication",
-   "pct": 9.8
+   "pct": 15
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 8.9
+   "pct": 10.4
   },
   {
-   "nom": "Services collectifs",
-   "pct": 3.6
+   "nom": "Santé",
+   "pct": 10.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.6
   },
   {
    "nom": "Énergie",
-   "pct": 3.6
+   "pct": 3.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.5
   },
   {
    "nom": "Matériaux",
-   "pct": 2.8
+   "pct": 2.9
   },
   {
    "nom": "Conso. de base",
-   "pct": 0.9
+   "pct": 1
   },
   {
    "nom": "Immobilier",
@@ -59,35 +59,39 @@
   },
   {
    "nom": "Microsoft Corp",
-   "pct": 4
+   "pct": 5
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 4.2
   },
   {
    "nom": "NVIDIA Corp",
    "pct": 3.9
   },
   {
-   "nom": "Amazon.com Inc",
-   "pct": 3.7
-  },
-  {
    "nom": "JPMorgan Chase & Co",
-   "pct": 2.8
+   "pct": 3.1
   },
   {
    "nom": "Meta Platforms Inc Class A",
    "pct": 2.3
   },
   {
-   "nom": "ASML Holding NV",
-   "pct": 2.2
+   "nom": "Apple Inc",
+   "pct": 2
+  },
+  {
+   "nom": "KBC Groupe NV",
+   "pct": 1.9
   },
   {
    "nom": "Marvell Technology Inc",
-   "pct": 2.2
+   "pct": 1.9
   },
   {
-   "nom": "Samsung Electronics Co Ltd",
-   "pct": 2
+   "nom": "ASML Holding NV",
+   "pct": 1.9
   }
  ]
 }

@@ -1,35 +1,35 @@
 {
  "isin": "LU1160365091",
  "alloc": {
-  "action": 97.3,
+  "action": 98.7,
   "obligation": 0,
-  "liquidite": 2.7,
+  "liquidite": 1.3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. cyclique",
-   "pct": 20.9
-  },
-  {
-   "nom": "Technologie",
-   "pct": 19.7
+   "pct": 22.5
   },
   {
    "nom": "Communication",
-   "pct": 19.1
+   "pct": 20.3
   },
   {
    "nom": "Finance",
-   "pct": 15.4
+   "pct": 16.1
+  },
+  {
+   "nom": "Technologie",
+   "pct": 15.3
   },
   {
    "nom": "Santé",
-   "pct": 10.7
+   "pct": 10.1
   },
   {
    "nom": "Conso. de base",
-   "pct": 4.8
+   "pct": 5.8
   },
   {
    "nom": "Industrie",
@@ -37,11 +37,11 @@
   },
   {
    "nom": "Immobilier",
-   "pct": 3.4
+   "pct": 3.6
   },
   {
    "nom": "Matériaux",
-   "pct": 1.6
+   "pct": 2
   },
   {
    "nom": "Services collectifs",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Tencent Holdings Ltd",
-   "pct": 8.7
+   "pct": 9.4
   },
   {
    "nom": "Alibaba Group Holding Ltd ADR",
-   "pct": 7.4
-  },
-  {
-   "nom": "NAURA Technology Group Co Ltd Class A",
-   "pct": 5.2
+   "pct": 9.1
   },
   {
    "nom": "NetEase Inc ADR",
-   "pct": 4.4
+   "pct": 4.3
   },
   {
    "nom": "Ping An Insurance (Group) Co. of China Ltd Class H",
-   "pct": 3.9
+   "pct": 4.2
   },
   {
    "nom": "China Merchants Bank Co Ltd Class H",
-   "pct": 3.6
+   "pct": 3.8
   },
   {
    "nom": "Pop Mart International Group Ltd Ordinary Shares",
    "pct": 3.1
   },
   {
-   "nom": "Contemporary Amperex Technology Co Ltd Class A",
+   "nom": "WuXi Biologics (Cayman) Inc",
    "pct": 3
   },
   {
-   "nom": "WuXi Biologics (Cayman) Inc",
+   "nom": "Contemporary Amperex Technology Co Ltd Class A",
+   "pct": 2.9
+  },
+  {
+   "nom": "Bilibili Inc ADR",
    "pct": 2.9
   },
   {
    "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 2.9
+   "pct": 2.8
   }
  ]
 }

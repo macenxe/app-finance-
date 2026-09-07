@@ -1,10 +1,10 @@
 {
  "isin": "FR0000295230",
  "alloc": {
-  "action": 96.1,
+  "action": 97.5,
   "obligation": 0,
-  "liquidite": 1.9,
-  "autre": 1.9
+  "liquidite": 0.9,
+  "autre": 1.7
  },
  "secteurs": [
   {
@@ -13,31 +13,31 @@
   },
   {
    "nom": "Santé",
-   "pct": 21.1
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 17
+   "pct": 21.5
   },
   {
    "nom": "Technologie",
-   "pct": 15.8
+   "pct": 17.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 17.3
   },
   {
    "nom": "Matériaux",
-   "pct": 9.6
+   "pct": 8.1
   },
   {
    "nom": "Finance",
-   "pct": 8.6
+   "pct": 8
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.8
+   "pct": 3.5
   },
   {
    "nom": "Communication",
-   "pct": 1.7
+   "pct": 1.8
   },
   {
    "nom": "Immobilier",
@@ -55,35 +55,35 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 6
-  },
-  {
-   "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 5
+   "pct": 6.9
   },
   {
    "nom": "Schneider Electric SE",
-   "pct": 4.6
+   "pct": 4.5
   },
   {
-   "nom": "Essilorluxottica",
-   "pct": 4.2
-  },
-  {
-   "nom": "Adyen NV",
-   "pct": 4.2
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 4
   },
   {
    "nom": "Industria De Diseno Textil SA Share From Split",
+   "pct": 4
+  },
+  {
+   "nom": "Sartorius Stedim Biotech SA",
    "pct": 3.9
   },
   {
-   "nom": "London Stock Exchange Group PLC",
+   "nom": "Essilorluxottica",
    "pct": 3.9
   },
   {
-   "nom": "Atlas Copco AB Class A",
-   "pct": 3.8
+   "nom": "SAP SE",
+   "pct": 3.7
+  },
+  {
+   "nom": "Kingspan Group PLC",
+   "pct": 3.7
   }
  ]
 }

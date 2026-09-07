@@ -1,39 +1,39 @@
 {
  "isin": "LU1244893696",
  "alloc": {
-  "action": 96.2,
-  "obligation": 0.2,
-  "liquidite": 3.6,
+  "action": 97.7,
+  "obligation": 0.1,
+  "liquidite": 2.2,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 46.4
+   "pct": 46
   },
   {
    "nom": "Santé",
-   "pct": 18.5
+   "pct": 18.7
   },
   {
    "nom": "Communication",
-   "pct": 13.6
+   "pct": 13.1
   },
   {
    "nom": "Industrie",
-   "pct": 7.5
+   "pct": 7.8
   },
   {
    "nom": "Finance",
-   "pct": 6.7
-  },
-  {
-   "nom": "Énergie",
-   "pct": 3.3
+   "pct": 6.5
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 3
+   "pct": 3.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.4
   },
   {
    "nom": "Immobilier",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Akamai Technologies Inc",
-   "pct": 5
+   "pct": 4.7
   },
   {
    "nom": "Alphabet Inc Class A",
-   "pct": 4.8
+   "pct": 4.4
   },
   {
    "nom": "Veeva Systems Inc Class A",
-   "pct": 4.1
-  },
-  {
-   "nom": "Match Group Inc Ordinary Shares - New",
-   "pct": 4
+   "pct": 4.4
   },
   {
    "nom": "OVH Groupe",
-   "pct": 4
+   "pct": 3.9
   },
   {
-   "nom": "Bruker Corp",
-   "pct": 3.8
+   "nom": "Match Group Inc Ordinary Shares - New",
+   "pct": 3.9
   },
   {
    "nom": "NVIDIA Corp",
+   "pct": 3.7
+  },
+  {
+   "nom": "Bruker Corp",
    "pct": 3.6
   },
   {
-   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "nom": "CCC Intelligent Solutions Holdings Inc",
    "pct": 3.5
   },
   {
    "nom": "Illumina Inc",
-   "pct": 3.4
+   "pct": 3.5
   },
   {
-   "nom": "SLB Ltd",
-   "pct": 3.2
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 3.3
   }
  ]
 }

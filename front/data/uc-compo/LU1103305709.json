@@ -1,51 +1,51 @@
 {
  "isin": "LU1103305709",
  "alloc": {
-  "action": 94,
-  "obligation": 0.9,
-  "liquidite": 5.1,
+  "action": 94.6,
+  "obligation": 0.6,
+  "liquidite": 4.8,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Santé",
-   "pct": 31.4
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 13.9
+   "pct": 30.1
   },
   {
    "nom": "Énergie",
-   "pct": 13.9
+   "pct": 15
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 12.8
   },
   {
    "nom": "Conso. de base",
-   "pct": 9.9
+   "pct": 10.3
+  },
+  {
+   "nom": "Finance",
+   "pct": 7.4
   },
   {
    "nom": "Immobilier",
    "pct": 7.2
   },
   {
-   "nom": "Finance",
-   "pct": 7.1
-  },
-  {
    "nom": "Industrie",
-   "pct": 6.6
+   "pct": 5.9
   },
   {
    "nom": "Communication",
-   "pct": 5.2
+   "pct": 5.6
   },
   {
    "nom": "Matériaux",
-   "pct": 2.8
+   "pct": 3.7
   },
   {
    "nom": "Technologie",
-   "pct": 2.1
+   "pct": 2
   },
   {
    "nom": "Services collectifs",
@@ -55,15 +55,15 @@
  "holdings": [
   {
    "nom": "Weyerhaeuser Co",
-   "pct": 4.9
+   "pct": 5
   },
   {
    "nom": "Dentsply Sirona Inc",
-   "pct": 4.5
+   "pct": 4.7
   },
   {
    "nom": "Bank of America Corp",
-   "pct": 4.2
+   "pct": 4.4
   },
   {
    "nom": "Mohawk Industries Inc",
@@ -71,23 +71,23 @@
   },
   {
    "nom": "Baxter International Inc",
-   "pct": 3.9
+   "pct": 4
   },
   {
    "nom": "PulteGroup Inc",
-   "pct": 3.7
+   "pct": 3.3
   },
   {
    "nom": "SLB Ltd",
-   "pct": 3.2
+   "pct": 3.3
+  },
+  {
+   "nom": "ConocoPhillips",
+   "pct": 3.1
   },
   {
    "nom": "BioMarin Pharmaceutical Inc",
    "pct": 3.1
-  },
-  {
-   "nom": "Perrigo Co PLC",
-   "pct": 3
   }
  ]
 }

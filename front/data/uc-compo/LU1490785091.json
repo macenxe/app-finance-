@@ -8,39 +8,39 @@
  },
  "secteurs": [
   {
-   "nom": "Santé",
-   "pct": 26.9
+   "nom": "Industrie",
+   "pct": 27
   },
   {
-   "nom": "Industrie",
-   "pct": 25.6
+   "nom": "Santé",
+   "pct": 24.5
   },
   {
    "nom": "Technologie",
-   "pct": 19.4
+   "pct": 17.4
   },
   {
    "nom": "Finance",
-   "pct": 11.8
+   "pct": 13
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 9.3
+   "pct": 10.9
   },
   {
    "nom": "Matériaux",
-   "pct": 4.7
+   "pct": 5.3
   },
   {
    "nom": "Conso. de base",
    "pct": 2
   },
   {
-   "nom": "Communication",
-   "pct": 0.3
+   "nom": "Immobilier",
+   "pct": 0
   },
   {
-   "nom": "Immobilier",
+   "nom": "Communication",
    "pct": 0
   },
   {
@@ -55,42 +55,42 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 7.5
-  },
-  {
-   "nom": "NKT AS",
-   "pct": 4.9
+   "pct": 6.6
   },
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 4.7
+   "pct": 5.2
+  },
+  {
+   "nom": "NKT AS",
+   "pct": 4.6
   },
   {
    "nom": "Harvia PLC Ordinary Shares",
+   "pct": 4
+  },
+  {
+   "nom": "Alm Brand AS",
    "pct": 3.8
   },
   {
-   "nom": "Siemens Energy AG Ordinary Shares",
+   "nom": "Rolls-Royce Holdings PLC",
    "pct": 3.7
   },
   {
    "nom": "Galderma Group AG Registered Shares",
-   "pct": 3.7
-  },
-  {
-   "nom": "AstraZeneca PLC",
    "pct": 3.6
   },
   {
-   "nom": "Sartorius Stedim Biotech SA",
-   "pct": 3.5
-  },
-  {
-   "nom": "Lonza Group Ltd",
-   "pct": 3.5
+   "nom": "Compagnie Financiere Richemont SA Class A",
+   "pct": 3.6
   },
   {
    "nom": "Erste Group Bank AG.",
+   "pct": 3.5
+  },
+  {
+   "nom": "Nordea Bank Abp",
    "pct": 3.5
   }
  ]

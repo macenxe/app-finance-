@@ -1,35 +1,35 @@
 {
  "isin": "LU0366534344",
  "alloc": {
-  "action": 100,
+  "action": 99.4,
   "obligation": 0,
-  "liquidite": 0.1,
+  "liquidite": 0.6,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 38.5
+   "pct": 35.6
   },
   {
    "nom": "Matériaux",
-   "pct": 21.1
+   "pct": 23
   },
   {
    "nom": "Industrie",
-   "pct": 18.5
+   "pct": 20.6
   },
   {
    "nom": "Santé",
-   "pct": 16.6
+   "pct": 15.9
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 3.7
+   "pct": 3.3
   },
   {
    "nom": "Technologie",
-   "pct": 1.7
+   "pct": 1.4
   },
   {
    "nom": "Immobilier",
@@ -55,42 +55,42 @@
  "holdings": [
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 7
+   "pct": 6.6
   },
   {
    "nom": "Deere & Co",
-   "pct": 6.4
+   "pct": 6.2
   },
   {
    "nom": "Danone SA",
-   "pct": 5.2
+   "pct": 4.7
   },
   {
    "nom": "Sysco Corp",
-   "pct": 4.5
-  },
-  {
-   "nom": "Mowi ASA",
    "pct": 4.4
   },
   {
    "nom": "Sensient Technologies Corp",
-   "pct": 4.1
+   "pct": 4.3
   },
   {
-   "nom": "Thermo Fisher Scientific Inc",
-   "pct": 4
+   "nom": "Mowi ASA",
+   "pct": 4.3
   },
   {
    "nom": "Agilent Technologies Inc",
-   "pct": 3.7
-  },
-  {
-   "nom": "Darling Ingredients Inc",
-   "pct": 3.6
+   "pct": 4
   },
   {
    "nom": "IDEXX Laboratories Inc",
+   "pct": 3.9
+  },
+  {
+   "nom": "Thermo Fisher Scientific Inc",
+   "pct": 3.6
+  },
+  {
+   "nom": "Darling Ingredients Inc",
    "pct": 3.6
   }
  ]
