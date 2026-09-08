@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-08T18:35:00.860Z",
+ "genere": "2026-09-08T21:48:01.049Z",
  "globales": [
   {
    "titre": "Le pétrole proche de 100 dollars le baril de Brent met une chape de plomb sur les marchés, le Cac 40 stagne - Investir Les Echos",
@@ -7,6 +7,15 @@
    "date": "Tue, 08 Sep 2026 12:54:28 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOYlNXTG51OXg2NklFSExEM3BOWkRmeWhXdTJpVVpXM1h3YS1Pc0VPckl0Y2IyTnFmODcxY1ROREw4YnFnQl9qd0VoSm1uRFZzbEFGRVc4N3NMZTIxbDdFekxvWm1GSUpoa3BzSjRvZjI0WTRPd0xuSEtpV0p4TklreWRqOTFiMFhVZF9LR1pIMDRnazdWbWNYUGJuLVNTeUJfRFd5aUVNa0ZhYmNPcE1zc3hZdHRBaDBfZi1XeEowVVYwZGJZYm5nX1NvT1NDT2s4c2IzTzl4TTJqaFpLZ3AtbFpJODBxOG1sX1ZZMnpXM3VRNTJ6Q1VBMmdKRmFkTXdISG43RkprZzY?oc=5",
    "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street vue dans le désordre, l'Europe prudente face à l'inflation - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 08 Sep 2026 12:31:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSnI0RlVKSy01bE1BOVhmVVpXc1gxbU5MTWFobnpyX1pKYVV6SWM1REotU1NZdHVkOE9EZmI3bElDMzMwVDdtbEFETkpNM0dlNllHeUpqZHlrX2dQVFp5aUN1X0wyaDhJbFpNTkV5d1hxekJ1bnR2SUpyd3ZvUzZJcjFTSUxORE96RUladDUwcDVEdTlzbUVsbTQweFhhSFdvNG9zOXpTakZLVWdSajlUNllZenU0dF9YQVoydldSNVBSRURXSGhXWWJqMHpSc3Y4V0U0US1RanhFNlMwRlVacXdvZDd0Z9IB5gFBVV95cUxPSnI0RlVKSy01bE1BOVhmVVpXc1gxbU5MTWFobnpyX1pKYVV6SWM1REotU1NZdHVkOE9EZmI3bElDMzMwVDdtbEFETkpNM0dlNllHeUpqZHlrX2dQVFp5aUN1X0wyaDhJbFpNTkV5d1hxekJ1bnR2SUpyd3ZvUzZJcjFTSUxORE96RUladDUwcDVEdTlzbUVsbTQweFhhSFdvNG9zOXpTakZLVWdSajlUNllZenU0dF9YQVoydldSNVBSRURXSGhXWWJqMHpSc3Y4V0U0US1RanhFNlMwRlVacXdvZDd0Zw?oc=5",
+   "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -67,6 +76,15 @@
  ],
  "produits": [
   {
+   "titre": "SOITEC Cours Action SOI, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 07 Sep 2026 20:13:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Bb1F0eERTU2FjdlYzeVZySm1sNkJyUW9PdzhwdThleXZXTTdLUVB6RnpTOFM4QnFfbW5VRDBFQ2NIUzIzM0QzTnExYzNETEF5ZXc?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 07 Sep 2026 07:00:00 GMT",
@@ -89,15 +107,6 @@
    "source": "Boursorama",
    "date": "Mon, 07 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaVmRvLXo3eUxhY1lXOXBmNlNUaTJNX2xDemVHQXBmY05sbk1wQ3BtaXlMQURSMDNvSUo3N3pJY1N5WFh6bnRlai0ydG9UdjZ6ZUE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STMICROELECTRONICS Cours Action STMPA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 07 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aEdVR1RKdDMyaW5mbzVJUlVoSWhzU0d2VUZCZHZkRjdjVlVzQkptT0FVdkp4MVFwUzNwSXFMRS1SNThZSXFkTkxtVDRISkV0Tkh3Ng?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -141,20 +150,101 @@
  ],
  "eco": [
   {
-   "titre": "NextEra obtient jusqu'à 1,9 milliard de dollars pour relancer une centrale nucléaire dans l'Iowa - Boursorama",
+   "titre": "M. Gundlach, de Doubleline, estime que le taux des fonds fédéraux devrait être supérieur de 50 points de base - Boursorama",
    "source": "Boursorama",
-   "date": "Tue, 08 Sep 2026 17:49:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNR1BRbldpRjc2eElmUUhqS1E2NlZzRnVSVEs3djVlc3pRUVdKUlBLWlpudXAyYlVyOWR3eHRueVV1RGdBU0N1VE5JR3U1Z0swZ3pGdFlzVVZIQmdCUW52bkpsaU9adXEtQ3FqdUhMbFRvMGdLY3BPbWZKLTBLWTZtU0ZobnliblJ2S0dPRXJZMGNGRUFtVXc5VGF5MUVfWjdjQ25yOGJfSGdTWnB3U2s1b05PMGNJZnNyaXJZV19SWnVCMG1sU2RVVnVFU3AzSEdnN1VOUUdGUEJLSWJFWE51aUJCbXdGNzdDd2lwMDVQMXpGNDl3cU9ibV84WWN3NFlXWW5pZtIBigJBVV95cUxNa0xMUGVxaE0zSFFMWG9RQWg3Um5iLVVTNnZhS2xlc0lvUzJrOGtRQVBDZHd2ZTBraEhHY1dhZE4wTm9hVVFnand2UERyY2NudEFNdDZ1cFJ3ZTJHanEyQlNuUU43WUZ5eFdLQzV0ZFpaUTQyY3F3Y2FnWFE3TkRRS1pIeDJDYW9zRFNNTzFIX1kyQjNTMVFiaHhhc1pfYVByMUJwVnR4X3kyODFKZVVJbjl6dVpocmRXUlNZdE02OEVLU3plWFk4aG5TaUhoT2Y0eHE3Y25GRzdNU19DS2t4MnF6MTBkdkNyeVFnS0JsUXVwdVRHMWxVX3BSRzV5NGhjdTFFbHc3Ql81Zw?oc=5",
+   "date": "Tue, 08 Sep 2026 21:22:58 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNSlU0a25DZXBsaXdqZTR0NVJzdlZNVkplc2s1dGRtR29TdjJaeFJoR3NEYTQxN3p3R2hCUnNnTWFUbl95YVJlRThCZ1MtNjVVSHpkWFRfckV6T3JNTE9mRU9TbjA2RzJKcTd4Zy1ZS3ZvT3ltWEItdnBZbHZwY0czVUdHeFA0U1dweFhNTjBQbGxjOFoyOWNndUtCRkR3UTNVRUVPRkEtanVhSlhaaGliVzYzYnl5a1lLdUgtSURSR0RYSmY4c3dRS0lJd1YxQnJQMGZFLWo2Vlhva1BTRFpkaGRkeHh5UUNkVXZrR0hGWUtDMjN6VVhwNTgyckc5QTlaajZQOGdBVlZHZGVZVDJCQkh5eE5SRmRhMHRnTThZY0NiRHJf0gGqAkFVX3lxTE1iX2lRNDZySTNGRFFzbU8wZUgyYjQ1THJpdi12aTUwUVpnYnJjRXRCWHJDLTZEemdJcGRMTXQ1WHhoMFF0R0ZEbmxEWWkzNkIwVVpEOW04d0NBR08zQ2V0eHB0d3hvZlU0SnExS2hKQXBIUF8xQTYxMVgwbF9tb1N0TU9aWGU5d1E5cGF0bU1zTlFfX3RodW5vVHQ2MFEyU2hqMzR5R1dBRlFlM25Ldm53QUt4UVNqNFhwbF84RmpDZlduVHZTMVlnZDEyWWRJLVBvMzNlUW55NExlUFctYldCanlIRndUZ1hJWFJCMGloTEhGUEdlUXJRVVFmQUYtV0NMeW9OU1JKWlZyeFd6N09KTmZjcTJWRlpXUUxIYmRnbk9KLV9sdjlrcEE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "La banque centrale du Chili maintient son taux directeur à 4,5 % - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 08 Sep 2026 21:08:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRm5Lbjd1Z0o5UEp6amY3X2daXzd3VWxNTmdKdHdoOWhzWE1QamIySzdSUHV1NFNJdnRrWDFmV0pOMHVGaUpyZzcwWWZqd21kRkRhM1dYdWVoemtJYlhPQk5vVXBuMVQ2UkE2dkl3WlhjZTN5bFBRTmdHZy1QaVFiOE4tSlprYzZOWjZrYUpLeDNmWnZ5QVBuRVRrLWRFc3JhMDIyd3FCMnl0a3dKU0FlUGpNVklRZnFFLTRqeDRiQUdSQQ?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street : en repli sur fond de tensions géopolitiques - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 08 Sep 2026 21:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTHZ3cENJZ1RPNVZyNlhISzlUNzJJeDlVMkFLWVl4U3dKWGNkdldzLUtMUmxOUks4dVNFWGVIX05jczhvNnhhUmp5Y3pYZVlmczk4Y0NFcmZEb0lvejczclNvVkxjMGJqdmpnX0V4U093eUdEZzJWZjUxcmYxQkFkM1pWN2lDUDM2YmhCcE1yOThfbi04NjFhRm85NTllRGFJa3g4d013cldCb3Nla0RoUkFKRkZEZmpTX3ZmQ1NhQ18tV2hpNXdIaGNlYnVid9IB0wFBVV95cUxQSWFuTWpnUExGQnBfTk9MZVJhSnJmTC1WX0xNeEllemx3bVd3ODdOX0IxeXJ1YUFYOTJPbzZjQ0o1eW5mVUFnU2hMaVFQTVp5dFlUb0dBeGF0a3p3SmRpUXBSQkRaQ3N1eEhBc2VpMTRHbTN2YTlTUjhpX2p0ZG9TbnV3TXpIX3U5YmxxdWdlbE9jNkxYcUEwWHZmX2pCakVfNHJ0ZHpuaGdlTzFLZ3Y5MGh5d1FRUG8yelc2QXJUbldqSTNMQ3V1aEZoeUFOUE1rVjdV?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La hausse des cours de l'énergie pèse sur les marchés boursiers mondiaux - ch.zonebourse.com",
+   "source": "ch.zonebourse.com",
+   "date": "Tue, 08 Sep 2026 20:56:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZGJldWtEc2dOb0NNaU81ZHJac0hFOTdhRy1DM1BKdFE1dGxLWlpjSkV1X0FhX29YbVpoSllfdTlIMkZjQWNfTzhxSXB0czUzVXR4S3pzUVh3dE83NjRkVThfQkdCWVFnRnlMWWVYZm0zU0VJQ0REdE1RVGhTWjkyVGF5cFBUWkFkT0xxdWNUM0w3R0d0S01hYXlHUjlyS1pvcVdlakFIbjhoZGZRYWRiSlU1NjRFeE1rQ0N4b0V5ZUNiTktpTVZ0cG5tbF8?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La hausse des cours de l'énergie pèse sur les marchés boursiers mondiaux - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 08 Sep 2026 20:52:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA1azNtaTJQamlFVDFoVVZOTktCOWhvZU92NHROZ2xUYnA4bjVkMnJJa3RFXy1COFFJclhJRy1mX0RjYkpmbGprZDFKS191cUlOc1FSM0hJOGNIY0JBeU9YYjl3?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "La France accueille un sommet sur l'espace, veut renforcer le rôle de l'Europe - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 08 Sep 2026 17:47:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNSlYzNXdReGtQT05ZVXZkcndkekUtQUpWWXVhb3Y2VkFnY2tUbjVuNjRFdi1yT0NYejZWOWVOWVVRV294QzM4U1NDdFhBMmZtejhfTDdYOHB0TlIxV2ZBVHdRY0lBVk91TkNLVWJyeS1DcGxDR0hqZXc5YXFCcklqVWN0N3p4TlpLbEZSOTh5NjYtZTJQa18wWHNSZl9GS3JRRmlTTnNCamdlWThFX3VOb3k0VjlGS2E3NnVKZk0wc0dmSmhBbGhCb2RIb18yWk9JR0F1TGNUWC1EVTlZbXhSWlBrUnluV2ZqeGtj0gHwAUFVX3lxTFBqOHVFT21YR1c3aHZ2TjdudG1DZXdOMXJqSlZub05SZ040ME53cXBsX1ZtMTFmQ3BOdmlxUGZpT2paazZsa2xxc0ZzSzBFOEhEdldDMV92aFQtU2RoVHg4SERQNTJCUktDRWszWmZEd281NmM2VVYwMklRSm96TzdRS1dtalc0X0RFX3dmck9leUZuQ2ttLWxpWl9UcWkzbmRDQmswS2h6NU5qQVZPa1pGeVRrdHBZMTBjaHpvaWwxVjVod3JheVk5WmxBM3FscUszd2pmVHJfR0xHLWFGdWJUdjZnZDdJRVpxWDNEQVViNw?oc=5",
-   "tag": "CAC 40",
+   "titre": "Orange lève 4,1 milliards d'euros après une émission d'obligations en quatre tranches",
+   "source": "ABC Bourse",
+   "date": "Tue, 08 Sep 2026 20:34:09 GMT",
+   "lien": "https://www.abcbourse.com/marches/orange-leve-4-1-milliards-d-euros-apres-une-emission-d-obligations-en-quatre-tra_702225",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mardi: Amazon, Qualcomm, Robinhood, secteur pétrolier, GE Aerospace, Amgen, Bloom Energy, Alphabet, D-Wave, Quantinuum, Coreweave",
+   "source": "ABC Bourse",
+   "date": "Tue, 08 Sep 2026 20:22:29 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-amazon-qualcomm-robinhood-secteur-petro_702223",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street termine en baisse, pénalisée par le niveau élevé du pétrole",
+   "source": "ABC Bourse",
+   "date": "Tue, 08 Sep 2026 20:14:59 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-termine-en-baisse-penalisee-par-le-niveau-eleve-du-petrole_702222",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La FNSEA assure que les mesures du gouvernement sont \"très loin des attentes formulées\" après un \"été meurtrier\" pour l'agriculture française: Sébastien Lecornu a donné rendez-vous mi-octobre aux agriculteurs pour faire un bilan des aides annoncées",
+   "source": "BFM Économie",
+   "date": "Tue, 08 Sep 2026 18:08:13 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/agriculture/la-fnsea-assure-que-les-mesures-du-gouvernement-sont-tres-loin-des-attentes-formulees-apres-un-ete-meurtrier-pour-l-agriculture-francaise-sebastien-lecornu-a-donne-rendez-vous-mi-octobre-aux-agriculteurs-pour-faire-un-bilan-des-aides-annoncees_AD-202609080827.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Julie Huguet (Mission French Tech), Guillaume Duval (Club Maison commune), Anthony Morlet-Lavidalie (Rexecode), Eric Baissus (Kalray) et Ulrich Bounat (analyste géopolitique) - 08/09",
+   "source": "BFM Économie",
+   "date": "Tue, 08 Sep 2026 17:43:42 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/le-18h-eco/julie-huguet-mission-french-tech-guillaume-duval-club-maison-commune-anthony-morlet-lavidalie-rexecode-eric-baissus-kalray-et-ulrich-bounat-analyste-geopolitique-08-09_EN-202609080802.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Julie Huguet (Mission French Tech), Guillaume Duval (Club Maison commune), Anthony Morlet-Lavidalie (Rexecode), Eric Baissus (Kalray) et Ulrich Bounat (analyste géopolitique) - 08/09",
+   "source": "BFM Économie",
+   "date": "Tue, 08 Sep 2026 17:39:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/le-18h-eco/video-julie-huguet-mission-french-tech-guillaume-duval-club-maison-commune-anthony-morlet-lavidalie-rexecode-eric-baissus-kalray-et-ulrich-bounat-analyste-geopolitique-08-09_VN-202609080812.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -231,33 +321,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ASML lance son nouveau campus aux Pays-Bas, jusqu'à 20 000 employés attendus",
-   "source": "ABC Bourse",
-   "date": "Tue, 08 Sep 2026 13:21:57 GMT",
-   "lien": "https://www.abcbourse.com/marches/asml-lance-son-nouveau-campus-aux-pays-bas-jusqu-a-20-000-employes-attendus_702196",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mardi: secteur pétrolier, GE Aerospace, Amgen, Bloom Energy, Alphabet, Accenture",
-   "source": "ABC Bourse",
-   "date": "Tue, 08 Sep 2026 12:47:01 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-secteur-petrolier-ge-aerospace-amgen-bl_702194",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Wall Street vue dans le désordre, l'Europe prudente face à l'inflation - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 08 Sep 2026 12:31:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSnI0RlVKSy01bE1BOVhmVVpXc1gxbU5MTWFobnpyX1pKYVV6SWM1REotU1NZdHVkOE9EZmI3bElDMzMwVDdtbEFETkpNM0dlNllHeUpqZHlrX2dQVFp5aUN1X0wyaDhJbFpNTkV5d1hxekJ1bnR2SUpyd3ZvUzZJcjFTSUxORE96RUladDUwcDVEdTlzbUVsbTQweFhhSFdvNG9zOXpTakZLVWdSajlUNllZenU0dF9YQVoydldSNVBSRURXSGhXWWJqMHpSc3Y4V0U0US1RanhFNlMwRlVacXdvZDd0Z9IB5gFBVV95cUxPSnI0RlVKSy01bE1BOVhmVVpXc1gxbU5MTWFobnpyX1pKYVV6SWM1REotU1NZdHVkOE9EZmI3bElDMzMwVDdtbEFETkpNM0dlNllHeUpqZHlrX2dQVFp5aUN1X0wyaDhJbFpNTkV5d1hxekJ1bnR2SUpyd3ZvUzZJcjFTSUxORE96RUladDUwcDVEdTlzbUVsbTQweFhhSFdvNG9zOXpTakZLVWdSajlUNllZenU0dF9YQVoydldSNVBSRURXSGhXWWJqMHpSc3Y4V0U0US1RanhFNlMwRlVacXdvZDd0Zw?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Encore une boulette de la BCE ? - Boursorama",
    "source": "Boursorama",
    "date": "Tue, 08 Sep 2026 12:10:00 GMT",
@@ -276,24 +339,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "USA: Wall Street attendue en baisse, les frappes en Arabie saoudite font flamber le pétrole",
-   "source": "ABC Bourse",
-   "date": "Tue, 08 Sep 2026 11:40:33 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-attendue-en-baisse-les-frappes-en-arabie-saoudite-font-flamber_702191",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Nationalisée mais toujours dépendante des marchés: EDF emprunte au moins 500 millions d’euros (à 5,75%) pour prolonger la durée de vie de ses centrales nucléaires",
-   "source": "BFM Économie",
-   "date": "Tue, 08 Sep 2026 09:59:17 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/nationalisee-mais-toujours-dependant-des-marches-edf-emprunte-au-moins-500-millions-d-euros-a-5-75-pour-prolonger-la-duree-de-vie-de-ses-centrales-nucleaires_AV-202609080447.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Repli quasi général des marchés européens avant la BCE - Boursorama",
    "source": "Boursorama",
    "date": "Tue, 08 Sep 2026 09:56:00 GMT",
@@ -307,6 +352,15 @@
    "source": "Boursorama",
    "date": "Tue, 08 Sep 2026 06:55:09 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPdlFFOFdoMnBsT25lTVVLRFlrMERRTC0wMmU2dWJFN0JEWjN4VGgtNVJEQ0FReF9SeDVFU2tsZnpiV0xkMUNLZkJyX1RJQzM4TTV4azh1a2ZEcjRaZmFpb3pOZHVWQ2lRbHlZVnNEanpWWm5hTC1RU0F0UXNVTFQtSnN3UU51MF9RNHNSWTd6TGJDV1NnTFRFNEhWUVd5SXhBY01vLWdyMTlxRkFRTnFMNTRTNlBsUEhpTmhKUGpCcTIzdVZEcU81cm5LZV91M1lONFZGdjBWcHpUa3ZtQmVzNGwwNUd2eW5nZ2tPb19R0gHuAUFVX3lxTE92UUU4V2gycGxPbmVNVUtEWWswRFFMLTAyZTZ1YkU3QkRaM3hUaC01UkRDQVF4X1J4NUVTa2xmemJXTGQxQ0tmQnJfVElDMzhNNXhrOHVrZkRyNFpmYWlvek5kdVZDaVFseVlWc0RqelZabmFMLVFTQXRRc1VMVC1Kc3dRTnUwX1E0c1JZN3pMYkNXU2dMVEU0SFZRV3lJeEFjTW8tZ3IxOXFGQVFOcUw1NFM2UGxQSGlOaEpQakJxMjN1VkRxTzVybktlX3UzWU40VkZ2MFZwelRrdm1CZXM0bDA1R3Z5bmdna09vX1E?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Baisse en vue en Europe avec la géopolitique et avant la BCE et l'inflation (actualisé) - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 08 Sep 2026 06:55:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQUXgzUndjSWlYODFWWGV4bmROX0R3NEZRbC1fZWZlNjdQSzV3RmdGRWRsR2wxeHk5UWNFNngzWmE2SHp4QTNkR0lRYmNaZTFkMkoyU2JNMFlmTlBSTFdNTkJ0ZDg5c2tsaHd6eV9pVFlmZlZhZ2NVcXdZNU42ZGxjNkRDeHRKRkU2WnloVU0yeUI3Wml1YnhlenZXWDV5Ykc5VkotRE9IMGtjOVVKZDFlQ2M0MXlQZjlxSmF0OTdGV25CM0pDOE9HOHozX3VDMElwM1dGRkJOVzdWUnhiWmxUMHQzcU94anBhTWtMRlV4Sng5aGFoQ2xYS2ZjONIB-wFBVV95cUxQUXgzUndjSWlYODFWWGV4bmROX0R3NEZRbC1fZWZlNjdQSzV3RmdGRWRsR2wxeHk5UWNFNngzWmE2SHp4QTNkR0lRYmNaZTFkMkoyU2JNMFlmTlBSTFdNTkJ0ZDg5c2tsaHd6eV9pVFlmZlZhZ2NVcXdZNU42ZGxjNkRDeHRKRkU2WnloVU0yeUI3Wml1YnhlenZXWDV5Ykc5VkotRE9IMGtjOVVKZDFlQ2M0MXlQZjlxSmF0OTdGV25CM0pDOE9HOHozX3VDMElwM1dGRkJOVzdWUnhiWmxUMHQzcU94anBhTWtMRlV4Sng5aGFoQ2xYS2ZjOA?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
@@ -342,8 +396,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
-   "source": "Instant Gaming News",
+   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - news.instant-gaming.com",
+   "source": "news.instant-gaming.com",
    "date": "Sun, 16 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
    "tag": "Magellan",
@@ -441,11 +495,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "EUROSE-DNCA FR0007051040 - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Fri, 22 Oct 2021 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GTEZOZk44QThIemhiWGhHS3dvQXBhZHl5b1FGbWhJMzNLTmk3UmtNTmxNV2xoYk96NXhrR0NCckw1OXdSSWhWRVVmdnh6MnVuY2U5M3VLS1NGTG9NQ3VHamtjd2NmZnAydWk3eXlxMDBkcjhXeEE?oc=5",
-   "tag": "Eurose",
+   "titre": "Découvrez le fonds flexible ODDO BHF Sustainable Credit Opportunities - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 03 Nov 2021 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPc1FzcTdDRUw2YkppWDEyY2xGQzRBWWVRMXBQZ0RWcEkyVHQ3dUxDbnd4eVM5Rm41NVFxYVdrVGxNUDhBZ0U1NmtDTG5USlRTdWkyZFo2aU1EZmNlXzhxX1hVMmU3a1hZNmNIQjJYRUllQW9nbmtFclFfdGxPZDMxb3lfcTMxaU8tczNnVERRZ0lqbmNWMHBsbG9pNFc0cDY3VWRIVHZRNnFYS2J3VWV5Tjh6QTdQMWxkdFRaMVktdXU2U1BrZTlhRkhYUXNuU2Fac1VrMTFhNzhaZUI5T25Ed9IB5gFBVV95cUxQT1JRN2p0Wk1vRVZSRmlZaXNJWks3TWVqelhjQkxocEhvcHVBWm5VVUgxZUY2WDg3LVNsSEF0MkJBblhqRDZBYWNqcXh2bUlSelI1c21VaHM2ZjBSbUZMb2RFamNKMTFXcHc5MDlESWNUb3ZvSnR6eWxtYWJFMnA0d2FwbHpvb05xdE9rSVJxZUd2TjZoNXRoa3o2QzlNLXBvSDdVckMwSmNiajRqdm5ZQVViakZ5QzlSLW9CXzV3TXNFSnA5R3NkUWNXMkptdkhmQmNtdzNZUk53NDVaaHM1c0ZQREhSUQ?oc=5",
+   "tag": "ODDO BHF Sustainable Credit Opportunities",
    "categorie": "uc",
    "sentiment": "neutre"
   }
