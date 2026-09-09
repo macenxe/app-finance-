@@ -1,6 +1,14 @@
 {
  "evenements": [
   {
+   "date": "2026-09-09",
+   "isin": "FR0010915314",
+   "fonds": "La Française Obligation Carbon Impact",
+   "type": "societe",
+   "titre": "Changement de société de gestion sur La Française Obligation Carbon Impact : Crédit Mutuel Asset Management → Credit Mutuel Asset Management",
+   "detail": "Société de gestion passée de Crédit Mutuel Asset Management à Credit Mutuel Asset Management."
+  },
+  {
    "date": "2026-09-05",
    "isin": "LU1819480192",
    "fonds": "Echiquier Artificial Intelligence B",
