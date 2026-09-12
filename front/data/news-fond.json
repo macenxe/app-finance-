@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-12T09:13:41.298Z",
+ "genere": "2026-09-12T13:33:50.875Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, le marché se tourne vers la Fed - Boursorama",
@@ -83,19 +83,19 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Wall Street vue dans le désordre, l'Europe prudente face à l'inflation - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Tue, 08 Sep 2026 12:36:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWmNvNkN0cVBjcGZLRENBYmdIUTRGLWowZlFUSlBodms2NFJ5OGxSSGF1LUpwMXc2Tk1lQ05VdDlxRG9FSkJPenBKZENMSHJfb1pJN2FMeEZKVXp4UXZYYjNPTzN2MmlSZEtWUFIyU3JNdDREUTFzQWlBcVhOQXVIS1VNUFRhNmdEUWplXzE5emx6ZkxybkN1THdkZ3BIemlkNnctSDltN0xMRDRkVlVIeENvLVNubVZkX2dEUGdEVU8yNlFuM05YSktR?oc=5",
+   "titre": "La flambée du prix du pétrole pèse sur les marchés en Europe - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 09 Sep 2026 07:26:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUm1JMHBlbzFfcHlseFBaakREeC13OGhicUNudW4zcjVxVE1SY2lidXZWZHY0bWU1N0JucDUxSkFpaVM1M2xDU01rQ3dxTGx3MElJY2NmekVQdXpMUTFlYWZ5YzJvSHlNczc3eHRHaGtaZmpiWE9wV09LeWdPS3RyVU5UaU1TRG9qdkIzcHA5Q2xTcTBpd2o5SHUwU0hqMTZpV2tzNHlDcmlBek9CUmVBYVZOVV8wbi1YeEd1VklJQTUtUmdkUFFNbW8wdFk3dw?oc=5",
    "tag": "Inflation",
    "categorie": "globale",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
-   "titre": "Cac 40 : Avec l'appui de Schneider Electric et Totalenergies, le CAC 40 renoue avec les 8.300 points - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 07 Sep 2026 15:48:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPUUFCejJvdUtNUkdFNG1NZUc4MVJHbTJUSmQtNnZBekVGWGVKYmFwVmRIUEhpaXlJQ3Y5SmNfRWpJaVpubDl5S0JXcGI1LXNtaHRfdEprMGdPb0VkTHlHeGlJTGw3bVNKTGp1eVowcVl4cFRhZDNfNk5aQXFWTTlYbjVyTzd6MmEycVF2aXE5RDFNbG5HVG8xbEt4QXFVQXFuaC00UFZTelRBZEtyVTMxWFFvTk5PMkU5alBMMWFUY1dQT1RpOHYxYkZXUzNpYVBJNFVMaVRLaDRHYzRuVjhJdTBlMWN5UngyVFpOclFmOWhwdDl6c1hBT3ludw?oc=5",
+   "titre": "Le Cac 40 avance sans éclat, aidé par STMicroelectronics et TotalEnergies - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 07 Sep 2026 12:59:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVzVKNGtIWDVQSThjbUZIcld2V3o0TDZzaWVfTGJqUTF0UmVxZVg0TFdHS0hpMUg4QnB2SGtGQUlTa3hrVzBKajVnQ0JVRG1feU9HZ0tpOWhpbU1jc0xpamUtUHFiUlg4dWs1Z29ZUFNUaXRLcFlGZXVxMkZ3RXUya1l6TzYwMm56alNpTDZSQjJpOTJ6MHpJY1FBbFo0QUhfWXdFYzR1VVQ5YVFIYXpYTDZaU3EtOW9kZkluUkN6X0xSYUJiX0xJR3FwQzNoeDBqOFdzc195X1N3V3M?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
@@ -105,15 +105,33 @@
   {
    "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 06:39:18 GMT",
+   "date": "Sat, 12 Sep 2026 10:07:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40, Total, Hermès, Capgemini, STMicroelectronics… les actions en Bourse au programme de Momentum - capital.fr",
-   "source": "capital.fr",
+   "titre": "SAINT-GOBAIN Cours Action SGO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 12 Sep 2026 09:07:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yelBQSjVyWUQ4akcwX05xdmJGM2RBWlMySTEzRGsxWlQzSEJuOFdRNm5MMDlhZE5GVGZuYWU4OEFGS2Ixa0FCeEJJU2owRTduVlE?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 12 Sep 2026 08:17:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40, Total, Hermès, Capgemini, STMicroelectronics… les actions en Bourse au programme de Momentum - Capital.fr",
+   "source": "Capital.fr",
    "date": "Sat, 12 Sep 2026 06:30:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxONlBFekh5RmoyU0dPNC1GWjZvM3Z0Mk9Id1Uzc0Rza2lheDJHMHJ1dEFiMnczNE9Na01SbXdDWmNEcVZHTkRjRXQ0VkhyWndsNWl0M0tVTnRYV0NaQmpNaGN3TW5OM3N3LUMyNFA2ZW5qX2ZYdTdjYURsRkpJMW9lbnFtdEtkZ0ljTTRIUnNCV1FRRTBTZk5aREF0dXA3ZlpKeWMwQXdia3ctVjYxOGRJOTVWNXE5TTJIWDFlWEl2bmVCSVpDV19HWkVmc2t5VVU2cEpZMnowVjJUUmZlaENR?oc=5",
    "tag": "Capgemini",
@@ -121,11 +139,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 04:48:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
+   "date": "Thu, 10 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -155,78 +173,15 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Stellantis va concentrer ses investissements sur 4 marques phares-sources - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 07 Sep 2026 07:52:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPNXNQemlEQkt3d2FlYThUQTVpUmdkTUhaRWFCbm1vZndyRXZDek9fVExLOGtnanltTldla1FHNkgtYmFhcC1mMk5pRFZJZ3NzYzlCa2hjSW4zRzZVaXlzeTVoSWF6QWVqRDRUbkd5ajJKb3VJM0pyVllwS2ZCZ3ZOV0NOTXdPNHlyczBHU2hkeEs1UWIzbUlaSzZ5TUFEZTgtMTl0NV9VVEs4ekpYczRwZy15SElIS1hzQzAwNHdlNWZHNmttZmFpaXBLblkxbk84cEdjRDU3cktjcUoxU3prWkhzMGNRUdIB6wFBVV95cUxON2VMZEFXVVpsUFhLcjVPcjJkbXkzYWZHdEhWcHdTTWI2QUdqUjNWOW1oUC1uQzNZQkJJWF84VFNHZjcxRWpoQlNlOFowejZxVzNiT1Z1VGc5SE9xNzJ5WmNGbkUxd0VrRDNfVDhxQ01zRXZlbG95SUZvS3FWeFQwd2NJT2p6UlN1WkFzQk9pdWJZaGxLbVVqbFNlUVpCblJ6U3BleFVZekhXNW9SeElUNWNidWJYemk2Z0lYeVp2OS0xb25JVW9DSkxfWWRDSXpDOWpXZkVuZlJBdGZxWHFlUTYwdC1zdFpRV2Y4?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "MICHELIN Cours Action ML, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 09:11:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9hR2Q5ajlWM0tXT20zbkNzRS1wMzRscGs2OWRHQ1NFS2FZaTd2RDdoTDBZUXdkYlFpVFR2QVI5X0t2TVNYYWZLRVRRZG1VOUFW?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AIRBUS Cours Action AIR, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 09:09:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SlphRllEQkxmMkZGLUlPN01neURBczhoN29RNzBuTDhjVHNzT2N0bTlVUlRsdjJmT213R0RnTks4X3Z0dlNEcVh1VXNxZ0hiWnc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "SAINT-GOBAIN Cours Action SGO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 09:07:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yelBQSjVyWUQ4akcwX05xdmJGM2RBWlMySTEzRGsxWlQzSEJuOFdRNm5MMDlhZE5GVGZuYWU4OEFGS2Ixa0FCeEJJU2owRTduVlE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 08:59:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "EDENRED Cours Action EDEN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 08:45:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1VckxBZWtfRDJhQmU5NG81d1FVZk1mXzVlWHVsTHZiMkE1NElIRG9rU283WTdjSk9nNTNaSEdQWFF0M3diUDJ1c3NhbHY2ZDQyVUhj?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "RENAULT Cours Action RNO, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 08:35:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBhQnhpaFNXNzBFZzZLUHNkdjRKUnJHaTZBQVFOeDhaQTBMd1pFWllJVUgzQkVlNTZXTlNPV2ludU94Z1ZzdVc2Z3oyTEVsNVdMelE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 08:29:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90ZzVod2I0UkczbkNGZnVDSWV4WGhKLURFbVU1dVRSVGNPY3hYZ1Fnb096aG1MZFB0aWFDYXdSRTRKZWRveUU3TnVHdmxVSEpUMDVF?oc=5",
-   "tag": "CAC 40",
+   "titre": "Les Russes sont de plus en plus menaçants là-haut: face à la recrudescence \"d'actions inamicales\" dans l'espace, l'Europe doit vite développer ses systèmes de défense",
+   "source": "BFM Économie",
+   "date": "Sat, 12 Sep 2026 10:01:27 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/defense/les-russes-sont-de-plus-en-plus-menacants-la-haut-face-a-la-recrudescence-d-actions-inamicales-dans-l-espace-l-europe-doit-vite-developper-ses-systemes-de-defense_AV-202609120166.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -267,51 +222,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Dette : l'impact sur l'économie française et mondiale",
-   "source": "BFM Économie",
-   "date": "Fri, 11 Sep 2026 20:00:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/video-dette-l-impact-sur-l-economie-francaise-et-mondiale_VN-202609110883.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les marchés : taux en hausse, Bourse au sommet, qui se trompe ? – 11/09",
-   "source": "BFM Économie",
-   "date": "Fri, 11 Sep 2026 19:59:09 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/les-marches-taux-en-hausse-bourse-au-sommet-qui-se-trompe-11-09_EN-202609110875.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le parti pris de la semaine : Non, il n'y a pas d'inflation – 04/09",
-   "source": "BFM Économie",
-   "date": "Fri, 11 Sep 2026 19:44:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/le-parti-pris-de-la-semaine-non-il-n-y-a-pas-d-inflation-04-09_EN-202609110868.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le parti pris de la semaine : Oui, la BCE se trompe encore une fois – 11/09",
-   "source": "BFM Économie",
-   "date": "Fri, 11 Sep 2026 19:34:38 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/le-parti-pris-de-la-semaine-oui-la-bce-se-trompe-encore-une-fois-11-09_EN-202609110864.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le mot de la semaine : dette – 11/09",
-   "source": "BFM Économie",
-   "date": "Fri, 11 Sep 2026 19:30:30 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/le-mot-de-la-semaine-dette-11-09_EN-202609110862.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Wall Street rebondit alors que les chiffres élevés de l'inflation renforcent les anticipations d'une hausse de - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 11 Sep 2026 18:34:37 GMT",
@@ -348,6 +258,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "La pression monte sur la Fed pour durcir la politique monétaire, le Cac 40 flanche de 1,2 % sur la semaine - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 11 Sep 2026 15:45:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNd0JGWjlkcDl5bEh4ZjcyMkZtTTJIdWphc1pfSG9DMDZCOWNmT2dZbGdpRHBDNzlaVk14Y0hxWDFHSTUwd0pDOUdxSkl4M2l6NWRFeG82dHJYWk9BcFBlVm5aQjV2aFlmLWdPc3JYbG5EQkhzRnNxN3ZDV3l6RTlJb3pZRENIRk1NQWZucnBxZ1BfRjBEME53NHkzSVd1ZGR4QWFWWmdmU2RXcWoxNGhESTZVWGhNUlhKYnNhazk1RXlpWE1UeG1tdzZoYmlkdlNEM2c3RFhOdHpqb1hRTnVTbXBqdUZpN21aVFd4bmVkRTlzelZJbl9mYWVRMUdVXzFhdFNR?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Immobilier : la BCE relève son principal taux directeur, quelles conséquences pour les emprunteurs - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 11 Sep 2026 14:48:07 GMT",
@@ -364,15 +283,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "POINT HEBDO-Face à l'inflation, l'heure de la fermeté pour les banques centrales - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 11 Sep 2026 14:16:53 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQR0ZEcUJ1UEZGYkVLbC1BejZRa21kRFJESmQtX05jQlM3SVdzeTFOSGxETHZOYnhQaXB0UUItWXBEUnRTZzVUQ1RrTmRNN0stTnlZVkNOYTFwTmlzN1NERFVxWENaQjZ6WXZNNnBHYXJyYVBZRjc1NFE0elVJU1FSd09NMzVxRXVkdXJpM3Z0dElDaXZpdWwtS1FiWjh4Q1dBM2kwSFg3bzZBd29TM1Vyanh6c2tEVkJJX1Rlb0NrOXFMSGZxVXFVdUxVZXlEUDRYcXRkUkVPem9DbW9xcE0yRllmSUFzOUNuUFpHTFk4cmR4TFFnRGNzN1psVEI0QUNLYTdHemJB0gGGAkFVX3lxTFBHRkRxQnVQRkZiRUtsLUF6NlFrbWREUkRKZC1fTmNCUzdJV3N5MU5IbERMdk5ieFBpcHRRQi1ZcERSdFNnNVRDVGtOZE03Sy1OeVlWQ05hMXBOaXM3U0REVXFYQ1pCNnpZdk02cEdhcnJhUFlGNzU0UTR6VUlTUVJ3T00zNXFFdWR1cmkzdnR0SUNpdml1bC1LUWJaOHhDV0EzaTBIWDdvNkF3b1MzVXJqeHpza0RWQklfVGVvQ2s5cUxIZnFVcVV1TFVleURQNFhxdGRSRU96b0Ntb3FwTTJGWWZJQXM5Q25QWkdMWThyZHhMUWdEY3M3WmxUQjRBQ0thN0d6YkE?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "AGENDA DU 14 AU 18 SEPTEMBRE: La Fed ouvrira un concert de banques centrales",
@@ -450,8 +360,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - L'Automobile Magazine",
-   "source": "L'Automobile Magazine",
+   "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - automobile-magazine.fr",
+   "source": "automobile-magazine.fr",
    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdkN6RnMtR3dYM3RvLVVCa2hYMVNERHFDMEJiRjIyNy1BaS14VzdGM1pGQlpza0dkRWt3VktRVE9YMzItX2RKcFdMckdKenZ4VFBhNTNjOFhJRDlOWmlrQ0hvRkNtclY1UHc5TExlY3g3Wl94MHRWVXF4R1lRbW9FcFQ1MmZWbUJvbUxnQXVjSmN0VnVVOWZaSVBJcW9ld011Wk12blptTkkxMElzcVN4anBJZzBUd2VlQ0F6SndpdlQxZkZlUGpVd29mcXE0QjE3ZDAzOWNsTHFDbEFjNHotVGVB?oc=5",
    "tag": "Magellan",
