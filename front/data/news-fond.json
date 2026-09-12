@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-12T17:02:20.914Z",
+ "genere": "2026-09-12T19:13:55.442Z",
  "globales": [
   {
    "titre": "L'Europe finit dans le vert, le marché se tourne vers la Fed - Boursorama",
@@ -56,13 +56,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La BCE monte à nouveau ses taux et se prépare à une inflation durable - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 10 Sep 2026 12:25:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMldtOXBlaGh5ajFQVzZDalkzMkJWMktLM2wxS0RXdmM4N043cml3bUxvY2FfcTNJRG1Zd21oYjFtanZxUEo5YU1pWVA5Vnl1anRfMFRpVURYVU9SUVRGanVlSXQ2UEVVZEF1aEYzVUlOaW5XM2lqa2N1NnZEV3ZSeWRRSm9WU2pvc1UxaFZTWWQ4RUZGMW9Fb01rQjYtcC1mWHBPV2tYUXRkdkNFSEdBdmV0VnhKdGUzZlJJQnhiN3REenBTcjBuZ1c2X2lVbEpEaFlQTDFKWQ?oc=5",
+   "titre": "CAC 40 : la Bourse suspendue à la BCE, «Christine Lagarde pourrait-elle surprendre les marchés sur les taux - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Thu, 10 Sep 2026 10:04:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQci1KcVYxbmZzZ2V3OThmZFM1ZDZaSUh4QzFoQlNwTFhHU1FqNjZrajktYTFKeTUzMHNkZ0RKS3lSUFdyYjNsRWVuTnRnRTdSLVlnTmVnWWZCOGk3eTlIOVowQVM0UUNuZ2g5alVhdzVNclo4VlBxeTVaekRPRGMxU2ZWa1J0VGh6M21ZbWZQakVSNE9BT0x3V1dBQzZJRkxKTEp5czJRQ29UaGhVaGhqMGM3cU1EbW84UUhTdDhESWRxVzJnek9CR2w0NEdScFlza3Zod0l2cm5pdVZaRE1WUTJ0U3pjLUFnaHc?oc=5",
    "tag": "BCE / Taux",
    "categorie": "globale",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "L'euro stable avant une probable hausse de taux de la BCE - Zonebourse Suisse",
@@ -102,15 +102,6 @@
   }
  ],
  "produits": [
-  {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 12 Sep 2026 10:07:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
   {
    "titre": "CAC 40, Total, Hermès, Capgemini, STMicroelectronics… les actions en Bourse au programme de Momentum - Capital.fr",
    "source": "Capital.fr",
@@ -157,6 +148,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 10 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "PEUGEOT INVEST : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 07 Sep 2026 09:57:00 GMT",
@@ -176,24 +176,6 @@
   }
  ],
  "eco": [
-  {
-   "titre": "Revolut confirme une violation de données clients sensibles après avoir cédé à de fausses demandes gouvernementales - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Sat, 12 Sep 2026 16:57:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNQTAxd1ZKRTF2UVN2M2Yxc1p6Uk9XZ2JSLXozS1RQb2FrTk9mdW40RGk5aWxkdlpmRWJEbi1IVU9wWG5xcFlaQ0czSFB0SlhKLVV0TzRrS0JrWVJ0OGRldDFDbnNsZVB4MEcwZDJfVVU1akIzWjJscHpwQ1NQMExMTVlZdzBXd2FZWjlIOTVkcENDMTZ5cVQwaE1PemdiM0Vsak5HYUM3YnBQNjJVYTdORzFVYmVZVm94NjB0ZmRQVVdYMDc1QXNNRHJIVDFuSUhqTlloMVZUcVZLSDItRy00bDN4U0F3bm85MGIxTHF3SlVvSHc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Capgemini cède sa filiale CGS, critiquée pour ses activités auprès de l'ICE - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sat, 12 Sep 2026 16:29:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOSWFHalUySTQ1RHB1UktGdjlOblpqVnhZUEtud3VIVGRtY1hxUFREemREZ296S0xGMEx4NFN6STJvcEI4NzFOMk1BemtUVHJHbzFxQ1NMSm9RWnhIZnQzbnFzVHA0WlgzVFFVbXRIOTRPZkVmUlpLVVJtaTc4MnNRNkQ2RjhobDNWdGhUQnBIaktlbGFKb3I4aE5zWFBkWTczVTZwWHYtRDVhZnlZZUNad2dFSlR3TlZkcFZXbnNJNy1LMXVKanFyYVhuczZNS0k?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
   {
    "titre": "«Nous privilégions l’hypothèse d’un resserrement limité des taux de la BCE» - L'Agefi",
    "source": "L'Agefi",
@@ -249,29 +231,29 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Les cours du pétrole refluent, Wall Street rebondit - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 11 Sep 2026 20:18:03 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMVd1SEtRNG5mNG1EQ01OZExrMjlJVGZ0bWxwMjg0dVJBQ3NSWDNhYWdodUp5SzA0S09pMWM5Y21hWTNKTFBZU282bkRGRnVzcmkwbUhfZXlfV0xzeFI5cUt1NlpwVndQaVRoZmVhVmhIMDdHSUdKRWNpWmdpczJObXExMmtzaGswVzhtNlE0ek1RMUViQTNQaUQtR1JIbjhIeHIwaEZwbllseVB2U3pQYmRUcWZ0NThjRXhTOGtBWUVRa0dFVjBrNTROM0HSAcwBQVVfeXFMTjFXdUhLUTRuZjRtRENNTmRMazI5SVRmdG1scDI4NHVSQUNzUlgzYWFnaHVKeUswNEtPaTFjOWNtYVkzSkxQWVNvNm5ERkZ1c3JpMG1IX2V5X1dMc3hSOXFLdTZacFZ3UGlUaGZlYVZoSDA3R0lHSkVjaVpnaXMyTm1xMTJrc2hrMFc4bTZRNHpNUTFFYkEzUGlELUdSSG44SHhyMGhGcG5ZbHlQdlN6UGJkVHFmdDU4Y0V4UzhrQVlFUWtHRVYwazU0TjNB?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Wall Street rebondit avec le reflux du pétrole mais recule sur la semaine - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 11 Sep 2026 20:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPQmc5bFd4QlQzN2piTGJJbnloMmJGUlgzcmtaOWVnQzNTMDhBcklwSkMtNDhmV1NYZXNIMGxKWGtsUUdPTHVlb3FEQ3lvdUxRY1FZc0lIQ2FFMkJ3dllhY010bGdOQ2FfOFVfczJCU19SU01kUlRiV0E2N0lLOFVFTU5EYzVTMVZhYnJvT2J1dFl0bU0zSDVuaDVqdHZDREd4dmNIQzRaeEFmbWtTdmtlVzkxbWJqTzlWSUYycjZpV3FRbXRST2txYUtzLWh2aVpPbXBJelMyNkY3SXlLQUphdUxmRURzNm9lWFpV0gHrAUFVX3lxTE9CZzlsV3hCVDM3amJMYklueWgyYkZSWDNya1o5ZWdDM1MwOEFySXBKQy00OGZXU1hlc0gwbEpYa2xRR09MdWVvcURDeW91TFFjUVlzSUhDYUUyQnd2WWFjTXRsZ05DYV84VV9zMkJTX1JTTWRSVGJXQTY3SUs4VUVNTkRjNVMxVmFicm9PYnV0WXRtTTNINW5oNWp0dkNER3h2Y0hDNFp4QWZta1N2a2VXOTFtYmpPOVZJRjJyNmlXcVFtdFJPa3FhS3MtaHZpWk9tcEl6UzI2RjdJeUtBSmF1TGZFRHM2b2VYWlU?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Le S&P 500 termine en hausse alors que les chiffres élevés de l'inflation renforcent les anticipations de haus - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 11 Sep 2026 20:01:55 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxPNXRGWWEwc0lfdE0wUFFKQ1NwY1kyVnhla0sxQndmZ2lsc3E2T1RkMW1yNVJIV1VfX040NWdlYVpYQkxRaGFrcHp2ZnpnYzg1akU4ZENNbTRLTG9GQVlqdGw1YVNxNHRMcVB4MlhNUy16VUR2TmU1UmNSbXJJNUFjemVISklRQjVnWnhxOG5PaWtLbEtrMWtHLVZvb3RwZG1Fbm1jNlZPcFdPMU9wR0hxTXZ0TEVLdmJERVk5T1ZyUWlmeGRSYXVsY0VfcFBJYXdqVWs3SEtGUzVzQkc4OTQ3VUlPOTl5ZGFwVlV2cUxEWExJTnhtQVV2X2o5b0tHQ0tLWUtsel9BUWFSTGZEem9Wek1CUDBYdXp1UHJ3VDFmUTQ1dW5VbjV2TzVHTdIBqwJBVV95cUxPNXRGWWEwc0lfdE0wUFFKQ1NwY1kyVnhla0sxQndmZ2lsc3E2T1RkMW1yNVJIV1VfX040NWdlYVpYQkxRaGFrcHp2ZnpnYzg1akU4ZENNbTRLTG9GQVlqdGw1YVNxNHRMcVB4MlhNUy16VUR2TmU1UmNSbXJJNUFjemVISklRQjVnWnhxOG5PaWtLbEtrMWtHLVZvb3RwZG1Fbm1jNlZPcFdPMU9wR0hxTXZ0TEVLdmJERVk5T1ZyUWlmeGRSYXVsY0VfcFBJYXdqVWs3SEtGUzVzQkc4OTQ3VUlPOTl5ZGFwVlV2cUxEWExJTnhtQVV2X2o5b0tHQ0tLWUtsel9BUWFSTGZEem9Wek1CUDBYdXp1UHJ3VDFmUTQ1dW5VbjV2TzVHTQ?oc=5",
    "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Wall Street rebondit alors que les chiffres élevés de l'inflation renforcent les anticipations d'une hausse de - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 11 Sep 2026 18:34:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOY1Q3RHhKZVNJYThqVDhOXzllcnBObGM5T2NSa2dZWk4zeC1BbDlQM0Qyb0VMSnd6aERWeldWMjNfenBiTTZSVi1MYnZ2RHRseGxuOGRlc0tzUkJLUVI0bm56Q3JuUG9RQ3Y1NlNweVNUX2tPZ1NiQUpvbHFjejN5eHlkZ2gyT01SVmZ6Sy00dHN1LWZ3VTlRb3lXV2xZSHdIb3dsaWNFbzZ6SWtVQ3FaVW9Qa3ZNdXhmZ1ltczlNeHZzdHVncTIydG5HOVFMV2FfZm05MkcxMkdUYWFteE84QlllVGxOSG9Odm1PSnpfOHpURXd1TDRpWnM1OTV6a2tjQVFvUmJZMlVtUDNjdnJlcFpqUFpwQjZFX2VEYWplMXpTcnRQ0gGkAkFVX3lxTE5jVDdEeEplU0lhOGpUOE5fOWVycE5sYzlPY1JrZ1laTjN4LUFsOVAzRDJvRUxKd3poRFZ6V1YyM196cGJNNlJWLUxidnZEdGx4bG44ZGVzS3NSQktRUjRubnpDcm5Qb1FDdjU2U3B5U1Rfa09nU2JBSm9scWN6M3l4eWRnaDJPTVJWZnpLLTR0c3UtZndVOVFveVdXbFlId0hvd2xpY0VvNnpJa1VDcVpVb1Brdk11eGZnWW1zOU14dnN0dWdxMjJ0bkc5UUxXYV9mbTkyRzEyR1RhYW14TzhCWWVUbE5Ib052bU9Kel84elRFd3VMNGlaczU5NXpra2NBUW9SYlkyVW1QM2N2cmVwWmpQWnBCNkVfZURhamUxelNydFA?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les prix à la consommation aux États-Unis s'accélèrent en août, poussant la Fed à se rapprocher d'une hausse d - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 11 Sep 2026 17:47:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxORi16Umc4MmFkOWpDUUctTXNLWF9vUGh0YlBfeGZWSXNOTXZOOXhFWGFkbHFkQWVXWXNoanBKOFVNVjNranRkTjR1ZDhYaGNqdHhYeHR3RVh4T043Rm1oUVVCM21pbERudDZRSjhpRDJraHhlNkxqTVctWUdMQTAtX1Iza2dHUjhPcmR0SXRmaldUX1lvSFdsejdlVWlhRkY2WE1uQS1qcy16Vm1zNURYQ3NIT2ZPVjhjeHFoTGNlQ3VrNGx0YzZIaERPUjdtTWVGa3BRTUQ2WWROdzhLSlRnVlAyaDliVFVXaE5yQk43SWc2R2ZmbWVZeWVISlBUcmpyX3ZNS0NGcm1fQXdjQUZ4TlNiWm43Mkg3QUFKQmF0Y3dDOV950gGkAkFVX3lxTE5GLXpSZzgyYWQ5akNRRy1Nc0tYX29QaHRiUF94ZlZJc05Ndk45eEVYYWRscWRBZVdZc2hqcEo4VU1WM2tqdGRONHVkOFhoY2p0eFh4dHdFWHhPTjdGbWhRVUIzbWlsRG50NlFKOGlEMmtoeGU2TGpNVy1ZR0xBMC1fUjNrZ0dSOE9yZHRJdGZqV1RfWW9IV2x6N2VVaWFGRjZYTW5BLWpzLXpWbXM1RFhDc0hPZk9WOGN4cWhMY2VDdWs0bHRjNkhoRE9SN21NZUZrcFFNRDZZZE53OEtKVGdWUDJoOWJUVVdoTnJCTjdJZzZHZmZtZVl5ZUhKUFRyanJfdk1LQ0ZybV9Bd2NBRnhOU2JabjcySDdBQUpCYXRjd0M5X3k?oc=5",
-   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
   },
@@ -405,8 +387,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - news.instant-gaming.com",
-   "source": "news.instant-gaming.com",
+   "titre": "Le jeu annulé Star Wars: Magellan se dévoile via plusieurs images - Instant Gaming News",
+   "source": "Instant Gaming News",
    "date": "Sun, 16 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW9jdnNNSzB4ZHhiQ2VjazRtNGhBLVRJWlA4MFRadl9nT3ljVnZEVXVPanB3T3F4ZDdnQ01vRm5nZkRRR09KclJwRUZ2VEU4M1hkdUNZTUxZclU5d1BHbjVXY3NsclRJTTlrT1Ywc2tXRHdvLU9OUzNjSHE2ZS1aOGdWSWVRV1YyU1dwMTFfc1oxYkFyUjdQR21Uc0R0eGJJMEV4NDRlWXBDaHBLZld0NmExbEs?oc=5",
    "tag": "Magellan",
