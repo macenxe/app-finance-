@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-12",
+ "genere": "2026-09-15",
  "fonds": {
   "LU1120766388": {
    "gerants": [
@@ -928,12 +928,16 @@
   "LU1585265066": {
    "gerants": [
     {
-     "nom": "Laurent Calvet",
-     "depuis": "2026-07-31"
-    },
-    {
      "nom": "Benoît Martin",
      "depuis": "2020-04-14"
+    },
+    {
+     "nom": "Jean-Marc Delfieux",
+     "depuis": "2009-11-25"
+    },
+    {
+     "nom": "Laurent Calvet",
+     "depuis": "2026-07-31"
     },
     {
      "nom": "Benjamin Pesquier",
@@ -942,10 +946,6 @@
     {
      "nom": "Pierre Le Jaouen",
      "depuis": "2026-07-31"
-    },
-    {
-     "nom": "Jean-Marc Delfieux",
-     "depuis": "2009-11-25"
     }
    ],
    "fraisCourants": 1.04,
