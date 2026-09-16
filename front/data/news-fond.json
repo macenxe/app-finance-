@@ -1,6 +1,24 @@
 {
- "genere": "2026-09-16T18:51:01.762Z",
+ "genere": "2026-09-16T22:05:03.651Z",
  "globales": [
+  {
+   "titre": "Taux d'intérêt américains: rare tension autour de la décision de la Fed - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 16 Sep 2026 06:09:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQMl85eXE4WG9aT2RyeFE0QWFZZGFJMEdFUTh3cVNYbk0tSFlTSzNCVEF1TzRmVDRxbkdpc1RYU2hSV1NFMjJVU1Y3STA5MXFnSkhQRmhWMnVIRUlzdjJRaTZxUjdCeEh4WWVfYWJCNmRaWkJKR3hxTUVzT2pRRzZiVm1YWFpKVzhhMy1uY3RjR0h6ajlkUGJSZG9UeTdxYlN4QkRaaEV4U3pFTjBSVU5EdXJTaVNqeFpobzA1bm9oQUplRjF0cDM2YkVDb093UVg5MXNGcm5kRVBuZkVKa3NwdWRB0gHnAUFVX3lxTE5RZFUwSmNrMkpPZVNqYlRIQWNZTFktdFFCWVdYSHZvREJUcW5wRUQ0ZGt4TkNUYWhWT3JwaFBHY3ZxWmJOMExYZi1Jd2RnWEVwNEdkbWZ1eXcteEhyQndqSlZocU9US1htVXlOdnhHaWUyQ1Q3WmROYjg0QnBQNXhXUjRXdW9wWnBVU3BTWTJKS3A3b01pb1VoeHpNMndWUFBlQ1lYLVNUejN3Vllob3c1YWVrU2ZvOVg5XzBjU0UyN0J1S3pPMGdTd3Fqa1NVRkZwdDhkck4wS3podzdIUDV6ZVppTlYtSQ?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.41% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Tue, 15 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPc0swd0lONDhVcmdjYldpNzdRWnA5MUN6SWFNaldQLWdqblJEaGgxZjZqMHVHUHNRN0p2V2FTSnRHNElzYWpvaDdYV3F1dDJyZl9nMU9mdDNPU19XdjNXeGhScFF0NTNfSTZ0OHVheUxjUFBDUmpFSmdXX1Etb0s3OWxOejVLUkJ1VTB1UXRMTXNNYmJicERjZi1nVWhWcTV2cGt2VHNXSld4dEwxWjBOaUYzbWpNRW5rNk5RUnhiRWdIRWllem01UEF3?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
   {
    "titre": "JPMorgan s'apprête à lancer son indice de dette en monnaie locale pour les marchés 'frontières' - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
@@ -27,15 +45,6 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Prime de risque au plus haut, CAC 40 en berne… Le coup de semonce des marchés sur les actifs français - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 11 Sep 2026 15:18:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOVkNhWUFHM1A4dWFqSHBPejVzd2hPcUtVbmZqbm11QVkyRzg0S0ZTczRZSlh1UW83bnF4U0ZsY2R6dXdfdGRDQUM5MFpIOEloZElSZ2FmeGRVOVVDaDhNeGxUU0tWcTVXSjMwV2pCa0U1UU1wemhLQU9zaEVHUUMwS1FTOEhpdjNteHVBb1prMmZTZXJvbUVCcDA4WlNZTWtxZ1pGWl8wZkEtQVBxTjVXQUVIZURma0tRN2RmOVAtRmpGYkUwMmpOa1ZUcTJKX3ZhbzVrbG5GNXc4S2VOZ0hyeDJFdG9aUnlLV0RCaU01MFVrYThWbDhPdzZR?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "negative"
   },
   {
    "titre": "Cac 40 : Avant la publication de données cruciales sur l'inflation américaine, le CAC 40 reprend un peu de terrain - BFM Bourse",
@@ -83,19 +92,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La BCE relève à nouveau ses taux d'intérêt, l'inflation persiste - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 10 Sep 2026 14:21:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN2Z3dm5CMFpaNTJQTHBSZFZLTDlKV3NzTGhqQXczRERLOGwzWjlYa2xvY1k5aElCcU5QXzhFUnktR3NadFhtQ0FydkJ3cVMzUlNkUDBZSFdfeG1QeFJ1cTZjdEpsSGMyZUltT05aZ2NBQ3lfZXZ0djlDUFV6enRjSC1RZDRod0s0bGI1Q0FOa3dHV3lXY21NVXF2c2Q1RTNrUzNvY0Uyd2ZUMzBVaWt0Nklmbl9YNkR1X0NBOWdkZkd0MTk0ZUxLVTVTRVZsVDVoaDN4b0ZqQmjSAd4BQVVfeXFMTUNtYmllZmR0cmd4NF9qS1ZrdXlUc1ltQWNUM2RpY0Z2d0VsLVhJejFxV1NPbUhEaDVRM2dmWXNkeDQ1ZnBtOHlZZ0FQRnBHck5HZjV4TmtoZ3d4UzgzVGhoS2VBdE5zeW51MTJFeE1KWkJ4dkZzRkJVVlBmcERUVVkxajdnemhtUUxFbHV6aWFYVEVlcnFwTU9Ud2pIMFh0QklWTTBLcFFNYy13MGRRSGtzTTg5a1NkQzB2ZGU5ZTFOQlBFWkZXUnRjZW52YzYxMmFJT29oZzhyc2dkZTRB?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La BCE monte à nouveau ses taux et se prépare à une inflation durable - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 10 Sep 2026 12:25:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMldtOXBlaGh5ajFQVzZDalkzMkJWMktLM2wxS0RXdmM4N043cml3bUxvY2FfcTNJRG1Zd21oYjFtanZxUEo5YU1pWVA5Vnl1anRfMFRpVURYVU9SUVRGanVlSXQ2UEVVZEF1aEYzVUlOaW5XM2lqa2N1NnZEV3ZSeWRRSm9WU2pvc1UxaFZTWWQ4RUZGMW9Fb01rQjYtcC1mWHBPV2tYUXRkdkNFSEdBdmV0VnhKdGUzZlJJQnhiN3REenBTcjBuZ1c2X2lVbEpEaFlQTDFKWQ?oc=5",
+   "titre": "L'euro stable avant une probable hausse de taux de la BCE - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Thu, 10 Sep 2026 10:04:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQa0Q2QUc2ZWR5V0hwVjVLYjZxRU1Sc3VWTUpqUUFkUndBenN1aXFqZ2RwaU5CMVQydGhuSTBMYUptanpHVS1DczhxWl82cnpWbEtXbWJjNWxUU3lsaVY1Sk5SM3JOV3NMaEVlQ0tURDdrQ1dwdF9wWVpmOG90U1BveXpWTl94VXdjYUlMaWZacVlUbVY3RVl6Ukk0SGQ2S01fMVV0cVVHNjhMSnR3SXlpODNaZ25KdlVT?oc=5",
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "positive"
@@ -112,13 +112,13 @@
  ],
  "produits": [
   {
-   "titre": "Capgemini : pourquoi l’action joue au yoyo en Bourse ? - Le Revenu",
+   "titre": "CAC 40 : rebond avant la Fed, Renault et Stellantis chutent - Le Revenu",
    "source": "Le Revenu",
-   "date": "Wed, 16 Sep 2026 14:59:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOGNsLVFxX05IaXpQank4UkNXdTJHcTRQcElnLXNiSW9hOG5hdW5RX3dUekpPbUtJRWdhQ2dlcXpTUFZWV1VpU29rVmM2SUx0MFg3QzlNbjFHbW1UYTZiVFRzejJwTkM2OVB4ZWdGejk4OTRzRXEtVm50UzNBVF9EVW9VYmZJS3hqZUFKWWJYZm9ZRjItMDctTGlPc1gyQlF5THhUMGJXSQ?oc=5",
-   "tag": "Capgemini",
+   "date": "Wed, 16 Sep 2026 16:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaDBFUF82VFhjUjkzY0FPM1g4bTR5b0NqVmZiWXdoRVV2MVROT3NsNXVsSFVrRlh4SzNpSE81QjNldFZNRkRBcTBLZWFGT1hsUDc4eGNFQm54RjI5dGs4MndoVXQtVmViSFA3RHNtV2w0OWloZ2VUYXpSc2s5elRWNmw2MjJydVZfNVVmN2FSNFMyMDNuMk9raEt0eHp4bzJ4?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "L’Oréal peut-il durablement rester le champion du CAC 40 ? - Boursorama",
@@ -186,29 +186,182 @@
  ],
  "eco": [
   {
-   "titre": "La Fed relève ses taux pour accélérer la baisse de l'inflation et prévoit de nouvelles mesures de resserrement - Boursorama",
+   "titre": "La banque centrale du Brésil procède à une cinquième baisse de taux consécutive et reste évasive sur la suite - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 16 Sep 2026 21:52:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNbzd0R1o4VjNDbWlHdElYajdLM2JXZ2Juc0NOejRxZlpaZTlHeWhWQnBNSjZkcmpqN0F0THZISVhudHM1dmJvbnZzMm95LW5xSnlxZHBZbVU2alI0M3UyWGtraTNUVXB5SFpaelpZNDBfTUdmS2VCS0FPekNXclBzbG5WWmR4VjVZXzI2bGtyRkVaaUd3ODdiY2xxZHJXYWVEYTFEa0prdHM3b0p6UHMzNHpGQ1J3WEs3ODdLV1A2R3dkbnNEbHJ5SWREN3VpaHFKdVJ0TktYcUZjZ0hIUHA4dHc4cWs2SDZMeUY5bnROWWxvZw?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Un juge américain estime que Google devrait nommer un responsable de la conformité antitrust dans l'affaire de - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:28:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPdU52cTV3T1QzbEZvV25pS1JCcUFUYXJhaVhYWkllS3NHbkpGXzdQMjhVWm5IU2ItRlhWU3hyNGt3bGNOcE1IVlNvdE50WEN1WV9VMWRyNFR6cldNVFVzd2IteGFITDg0aVhaWXlhQW5qRWpvV2JidzdsS002NTF6Ny1kYlN2MGJMeVh1dkdickZsZ19GY2NNUF9PTnp6Y25DcHVqY3JuQ3owVnZyalV0Sk0wUDJRcUtRMkpJVzIyS3hIVVA0RVd5OUFObmtfcW9DaGJMNUFZc0loYW05VW95eFNRSHRLLWpqVmFNNzQ3LUphenhSU2FGUFpwdVJ4OEE3RzlEbWFyVmRkUTZia2lpeWMtak5MMDDSAZwCQVVfeXFMUG52Tms4SWd6VTNSejUzcDEtWUhLVV8wV3JmVmkxNWg5UVMyOEhOVy15LXpMSzQxSkdmeEctSjFid1pkM3NXbWd0QThZakhHU2JuakRwczZKRmxwLVdGNjNzNHBMWHNMLXR0WW5NU2NGTjlia01sNnNxN1BVdklqWjYwTkVPdk9KR1lBVGstN2o1TzU2R1dPaml4SWdqRURKMW1jZU5ITm5qcktVQjJtcU1neDRjUGh0ZFVfelFRQzk3UG9mTW9RNDZRMHNDUHFTS282X205QVU1WDJ0MVBlT2NiUXYxOGt3THIwc0p6R3BIRnpkVmluT2pzMHJ2M3FiY1dMNHloSUd1MjVxcWpZMHVvVHFOYy1HanNia3E?oc=5",
-   "tag": "CAC 40",
+   "date": "Wed, 16 Sep 2026 21:48:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQUk1NOUFwV0hHeWhSZnVpRXY2bFhSMlJIaXdEVFpBUVhyTjVabFkyQTVvaHJUUlQ1aDhQaHFsSmw5YTJiZXAyNnFuYkRqMHpxMzE1c2tRdUlXX1k5NDh2SjRTRmZwaDhib2Y3czBaZGNBTWctT21POFJTb2ExX3BuQlQyaEdUSmcxbk5reDdGX2lpUExLd2k4RzdZaU5tZTFnZ2NkYWhSV0F0cHpMWUg3dzFEc3ZnbWVDWUpFRGt1X3FkSEZSZEJhS1lhbEpMR0hBWGtkamNMUVhFY1daVWdtamZ2MG81V0pOS0RyNFBKTTVmVk5wNmJfSHN0aEJGb1RwOVhqRnQ1UEhVZG5ta1V3QjhiVVA1S1JMdmdDYk1qNlhZajUtQzhRb0NmY1YyWU5fOERkREpWdF9RblVM0gHCAkFVX3lxTE5jNTIydGpxRzNxSk5GdEpsZTlYOWJTTnlTY0tUd3QwcC14UGpSSE5BMXNCZHM5ZENmVk9GQUNKZUpEeDIxdlN4NFRLZXdxeENKUVJ5dUdrWVBjRTlvVnZPajJDT0FkQXlSRmp0TV9sTzluVWdrYzJ0UE9lak10NzVpdGxtMFVFNW4xUnctSXl4X0hrb1JkWHVzZVpGNS1JbDFzLXRvN0hCNGxfM3J0dnhRZG9HMUd0SnZTN0I3TFd0eDlxNTgxS0lqQ005TlpvV3gyaFpOSTZ0ZDdZekFwOGlNMkozTjhMbnhaQ2hxUTVFaWhDaFRwZV9vcHluWHBZU055T1NNaUlKMFM2bno5VU96U1JlSWQ3eHJETWpFVTNFd0VJTUc4U0NmSzNIcDVaTHNzSDBwNTROXzZJTjRvMGRNaFE?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "La Fed reprend son cycle de hausse des taux face à une inflation toujours élevée - Boursorama",
+   "titre": "La banque centrale du Brésil réduit ses taux pour la cinquième réunion consécutive - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 16 Sep 2026 21:39:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNbkM0enVEeERMLUNlelFHV2hDX1Y5NHY5SU5nNHhKMmZPZW80d1J1R2xlT1hlLW9UMnBOMl9uT2NRU1Jua1dBRVR6M2JoelJMMEsxckIzdHcwTWsxYWliQ1BoTjZoQ0VPcU1XWHM3U0JMa2lEemNydXV2dHNWRWJ3MkZ4TklOUGtPa3JDUTVJRGNfQmxSSEJOd0lNWGVSd1Jaa2I1OEVGRC1CSF80YW5iZUNIQXFmc0xXdndPaFQ2OTBTWEtnVWJBMXRBSTEtemFUUjlTMl9fNjVLUQ?oc=5",
+   "tag": "banque centrale",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Brésil : la banque centrale abaisse son taux directeur de 14,0% à 13,75% - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Wed, 16 Sep 2026 21:38:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZUtPQVdCNGhFM2RzVWJzRDdxQmlrZjNRRUYyOUlrOGtKZC16eGRGcWk4WWVRalVBYnVfQlJhSlFRTTNjd25DWHhSRmowWHdzZWZLWEdSQzhsSUxkR0xrNkdmTTItVzJ5dXZzQXFiNng0ZUdMSERYX2oxbnJvYmlqQm43WnRrQklscXpGUlJ4VllNczM2bk4wZEtvSTBuSE04WkpObDBqSnBZYngzV2RIN3Vpbk9uQmJWNW5oUW45QTZaUldGSG8xdA?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Records annuels: marchés actions et devises en mouvement",
+   "source": "ABC Bourse",
+   "date": "Wed, 16 Sep 2026 21:37:13 GMT",
+   "lien": "https://www.abcbourse.com/marches/records-annuels-marches-actions-et-devises-en-mouvement_702665",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Goldman Sachs anticipe un léger repli de ses activités FICC et une hausse de ses coûts - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 16 Sep 2026 21:32:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOYTQ5YUZzY1Q4UDhJRTlPRndsdUtuQThNckdDejlmTDMzQk1MTU8yelUzZDdORmludExqNmVJd1ZrUWVRcFNuRVQ5QVFhYjZ5bmJIZ25TWjZpX1hSSzBHeHVRSmxZMTZ6Ry1zbHRZXzVkOGMySnRwUk9OcGVlSU5MS0s5a0Q4cnNBaHlNSmJwOTFYdmdTc2daNVpHS0R4ZGQzVTFWckVTak5yMmtRZGwtdFh3ZmZYTjJobkpmQU1qV01SSmlaT0FnbDRfLWoyNVZGbGE3TjJpU3NPT0VnSGZv?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "FORUM BFMTV - Vie chère: \"Il faut du travail pour relancer l'économie\", préconise Grégoire, commercial",
+   "source": "BFM Économie",
+   "date": "Wed, 16 Sep 2026 21:23:12 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-forum-bfmtv-vie-chere-il-faut-du-travail-pour-relancer-l-economie-preconise-gregoire-commercial_VN-202609160922.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les responsables de la Fed prévoient une nouvelle hausse des taux cette année - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:21:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPSVJEX0lKVkpoLUtsMDhEQU9FRGh5dE9qaDNFV29waXVXN1FHaHd6MWxOaENhdy1EQTM4NmRGZFVmQTlfdjdyakV0UXFBUTZXYUk0MVl2SWNuY2gwNVc5MTFXZG4yOUxWT1o4SDZDblY0c3J5c1J5ZDloUnhNREVObDdCZEE2Y24ydE5uSjRiTHE2Y1N0UkhxdklvOUM5Z0lFVVVjcDMyZjNPb3lNWVpiX1RIVjdJakUzTEVlZnRzWnQ4Sld4WHA3elRkNl80WWpIWDEzUGtSMjVkZkdBRGZHbzA0Zl9iS2VYaGFiUV80c9IB9AFBVV95cUxQUlFJd2VyQXVSalFTM2FYRjdKTXhORG93VUJucFQ5WVVkY1Y1TnhPQTRDZXY4dGVvU1psTWdMOWUxcXAtblY5ZFVGYmJoMl9LQnFOZmNYbTMtYUpPVWY5ZW9sQVpjV1hRak1rN1Q1RFVUZXFCQTRNWjkyaVZfclRleWZnNlFZY2J4dXp3cnZINkpkcmdTaUxlOUwtTjIwZWFzeHU4Z0NnOXF0bVZlZGRDd243cmFHbDFGZkVtcnAxa3g1MDFUREZsZnBNN1JMT2N1YkJBZDhvcmNORXZ6aFZzdERQMUVOelZuUXhqQmRWRkwxNjN1?oc=5",
+   "date": "Wed, 16 Sep 2026 21:12:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQeHRvLWJJZFpYYzZFSEhobnp0UTJGeEFtYWFCbXo3Vmd3SE93MG5jWUpwUmtpVThZdE1KR09QbDZoLXFfd1E0N21ZM2dOUEd2YmdsaU9ITnJfclpBODlLMFR1Q1lYQlpXMjdKazAxQkdjM2FNS1lrUEdlOThNaDVpYk1xazVocGxjMkFWLXFRUnJ1SDVyeDVtSkw2WEJmeFpqcHZtVU1WN2JGSGUyazhmSXdRZ0dmbEwyTzdGVU9ZeFdkMWdqbWVFdzRJS3JJNlVpVzYwRlh4RmxSaVdvRENUU2RVR00tWW1NZ1pEZE1zdUlaTXF5d3FDVjVlb3JEZ9IBgwJBVV95cUxQcnNHM2ZLUGlRTkw1MHJZdEJaSjdrcXRmMnhjMTJUZ3ZWVkpjcjBHU2JQQU1Iajh3RzFTMmlNaWlaTk9pbWJlOTM5cThxSExqajJzZmZKbURYZEN5MEhkUXJ5eWZrQjdaQ1ZadDRsWEplZUlYMGc5al9fakhXWWFLa2NzRVprNFFUdzZGOEJPMHVualVjZWg0ZG9wTjNFVUl0SU5pNzk4VHdKZUhaZ3VyTmRFMlhFblNtME1Yb1BSWV91d2k2LUJqenZTcDZvMGE0R19sWHptc09YOUtJTnZJS1hQamJZdU5PWUhHM3Z5bDY5TzZEMkg3VlJCSE0xRTV5alBr?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "La Fed relève ses taux pour la première fois depuis 3 ans pour freiner l'inflation - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Wed, 16 Sep 2026 18:20:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ3dwLUxBM2tza0ROQU1oRk5IQm5YTU9YVExtdzUzUnFSdENQVy11MlVkY19lbDRGYjYzb0ZDd3VXZGVtLTN1aUZSUUZObnd3VTZ0UkJGWWp1OFpqNGJRTmRvMnpPeDZTR3lZQURMQm0zdnVvNU5yZFJ6RGZzNGx5dzVENjg1SkJjWE12SDN2eUZhR2NXand5LVUzLUFVVzMzNTZQZmlCU0VGMjZFZWl1RHZwa2JZSWFoSDJRVm5R?oc=5",
+   "titre": "Halozyme Therapeutics recule après l'annonce d'un projet d'émission d'obligations convertibles d'un montant de - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 16 Sep 2026 21:11:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPNjdVRGJXOVhvUS1INjktUUZYeGw1VFpOaHBNdVUwajlGZGlCLVMwVFhNWk1qRVcyZW02amxibDBjMTVIRjdDX0pjdXJTeWVxOWo4REI2cVhjYjF4ejZhQzd6U0k2Tl9EUFBndzBfOFZVcnVjdzFhUUJqMEhnYktIOU9kdU0wOW1BVWtnSFNHVEEwVDZrbmJHRGE2eE1sd19kdE5uaFdHbHdWczFtNnF1U1ZoR0pDSlk2TDl3b1pEZGRGR3NNQ01KYjFyWW5QSFd5N1V2TFRXbFZMMFpDWjZMT2JWVnlIMzZGMWt3WUExNUpVZHkzcm5fRUhUNXJYRWJpUlV0YnZoNnRnWTAzQmRGOVFOVk9VZ2Y3RXhVRWVOOEVjWFRtUnEtUUUwRjVfdGZPak1rMHdKQU_SAb4CQVVfeXFMUGIyODk1VGRzNUc4RkVYQ0tfQTFiY0F5Yjgwd1FpTmVuZHRROG5ULWJrb0FIbHd5WU01dGxQS2lEU19na09Fd3JXRHZvUEhvTkxhYW00UGtLZW1wRi1wTFN4MkdMN1haaUNKQ0ZvUU5Gam8yanFpR1E2SWhQTVpJcG9WN2hpRnRlbVY1Wl9YbHlPVkxzVUNKeVdEMkFSM3paZldBdjZuVnhRdUdRYzJtMHdRRkFFY2ppN09YenQyejhQb0FwWmJKQXAzd25pWXk5c1NDM2NMWkxUMnQzN0dwazlLb29LY05NXzFwb1RQcUwtalNWcnFPTUxNZ05UcUtHUDJYcDM3VmRTb0dWWnR0UWtYMzZBOElvZTdQWlU4M1JJX1FNV1k0NnRNSGlPV0pqZ3hqUFZabmJDWUxtNWt3?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Warsh, de la Fed, expose les facteurs à l'origine de la hausse des rendements obligataires - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 16 Sep 2026 21:09:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNWnR5UXhXMWcxYURodVplUzV5TXRWU2ZxNkZ2YmFWVlNjRF9OVWJwa0ZKMUtmNXVibXphcWNjM1pGRjRkSnZleENxTHVSYkkyNk9QY0ZsaEkwaWYwNnRaU0dLQVdmVzBMaE1nOHZLWF8tUDJvZnlRZXlUNkQ2Q0hwbENfMExDOFItdUxtWUMxcHA4cDNqSlhJckJ2X213RW5aR043cWl5RWcwWl91Y1lUbEJxNHUxM3BnRW5XbFc5Sms5T0lLLVVGNXZhaG5lR2VYaVVtdzNHdmZSSzdKbTYxRXJGMHlQaElBbTcwaXFqd01tYm8walBaSWNqdlJTOFhBd3g5YkN6SEg5djNj0gGSAkFVX3lxTFBZU05nMVkzZzNxdDJiQjJqbzFrRVFxekI1NzVBazd6R2pZNEh0SGFyU3FxZ3Q5SEJiMTlBdU5jRlZWN0czZ29KVzhFc1dCU1pDZVlvSkhrWkd0TjQxbGU3S1I3TURwZTZZU3ZUdUF5bUZTZnRXR05SVUp3bXEyTU1mTjd3UUszTXZucUtyR294eFFqblR5cVR5ZjVLQlltMG5uVXJxS2l1T3NlZHBUdHNyUHVFM2hXUlhIVzduNGxuNEVMM0l4aXNDZHZzbnliNUdlcGRKeS1TTTg4VUFvQnlka2xTM0syVDM3bDJxT3lSdGlFZEZ6VnJrZENNYmlGem94ejFOV0dicldRZ3hjVnA1Ync?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "FORUM BFMTV - \"On nous laisse crever\": Jonathan, téléconseiller au chômage, dénonce une facture de 18 euros pour cinq articles dans un supermarché",
+   "source": "BFM Économie",
+   "date": "Wed, 16 Sep 2026 20:59:46 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-forum-bfmtv-on-nous-laisse-crever-jonathan-teleconseiller-au-chomage-denonce-une-facture-de-18-euros-pour-cinq-articles-dans-un-supermarche_VN-202609160912.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Wall Street en baisse après les annonces de la Fed - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 16 Sep 2026 20:41:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbGhsclhrRUZ6RGQ1SEFYOEoyNkREQjNoSHRPX1R6Q2hVejBsMHFnUnFSUGVKWXV2LTBmV0FSc1VFTldENFFQSDB1QWhoZExQTkVBUFl1MjBRR1EtWGd5N1F3WGpRN1BiTTlFSHRxUTBjazRTWmVkZmRfdE5zM2RzbGRFdUJkY0kyOWdrTmtvR1I2Qy0tbXpfc05kLXlLOUxsNzF2YjR4RVk3aHhVcWQ4LVk1S0duR21qczZkMVhKcGk?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street finit dans le rouge après la hausse des taux de la Fed",
+   "source": "ABC Bourse",
+   "date": "Wed, 16 Sep 2026 20:28:04 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-dans-le-rouge-apres-la-hausse-des-taux-de-la-fed_702662",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mercredi: Intel, SK Hynix, AMD, Marvell, Nvidia, J.B. Hunt Transport, Amazon",
+   "source": "ABC Bourse",
+   "date": "Wed, 16 Sep 2026 20:11:53 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-intel-sk-hynix-amd-marvell-nvidia-_702660",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Tech Flash : L'Europe veut aussi lever le pied sur l'IA, par Léa Benaim - 16/09",
+   "source": "BFM Économie",
+   "date": "Wed, 16 Sep 2026 20:01:52 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-l-europe-veut-aussi-lever-le-pied-sur-l-ia-par-lea-benaim-16-09_VN-202609160888.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Fed durcit le ton contre l'inflation et relève ses taux pour la première fois depuis 3 ans",
+   "source": "ABC Bourse",
+   "date": "Wed, 16 Sep 2026 20:00:11 GMT",
+   "lien": "https://www.abcbourse.com/marches/la-fed-durcit-le-ton-contre-l-inflation-et-releve-ses-taux-pour-la-premiere-fois_702659",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA-La Fed relève ses taux et envisage d'autres hausses pour juguler l'inflation - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 16 Sep 2026 18:36:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQOF9Bckk3VmlCenNVQ1BNV0lxRjVkNkl4UU1qVkFFOTJUSkF6QU9CSzFoZkFiaXBsVzEyNFNqRGwzWEF4Nk1BLTMwUE9PWWktOHo3TnA2YXM5dnBBSXNpY2FpVHZ4WXRKWlRiZnpxU2UxWlN0SU9TbGRySVhQTFFzNjZlMktEN2h1RDBHdTg3OXhYbDE3LWg4V0ZQWWlNU3lHZnNGQWx4Ni1hUHNwZ1lWYnl2cmJuMW1qTEVGQVhBMzMwRGFETTY1bW85R1ZkdTRSQnVzZ3pVSHN0MjI5eU40ajBwMzJRbDZqYnkzZ2cyV3B1b1d6OVlsYlBOZkRBTFVxb2V2aWhrONIBhwJBVV95cUxQOF9Bckk3VmlCenNVQ1BNV0lxRjVkNkl4UU1qVkFFOTJUSkF6QU9CSzFoZkFiaXBsVzEyNFNqRGwzWEF4Nk1BLTMwUE9PWWktOHo3TnA2YXM5dnBBSXNpY2FpVHZ4WXRKWlRiZnpxU2UxWlN0SU9TbGRySVhQTFFzNjZlMktEN2h1RDBHdTg3OXhYbDE3LWg4V0ZQWWlNU3lHZnNGQWx4Ni1hUHNwZ1lWYnl2cmJuMW1qTEVGQVhBMzMwRGFETTY1bW85R1ZkdTRSQnVzZ3pVSHN0MjI5eU40ajBwMzJRbDZqYnkzZ2cyV3B1b1d6OVlsYlBOZkRBTFVxb2V2aWhrOA?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA : La Fed relève ses taux et envisage d'autres hausses pour juguler l'inflation - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 16 Sep 2026 18:36:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOR2FVR3BLenc4cjBFS3M4Ykc2X05fYmVIdFljVkpqUnVpUDJSRUUtZjYzZUVVb0FWWEV2akZjb05aMDh1S24xNVN4a2NQemFfSkFoZmZBYmIwMzc1YlFJSjlsbDBxMDhSZ2s5dUtFWmpwVlByUEduZklIbFpyVWVETS1TNGxMb3pPemczRjFqVnlmOVl5VklkYUZBeDNvSmc0UzVRdENKSENCa0hqN3lGV1RETG9QbVJBRjltUmNhLW1QVi1GZ2VvSWlWYWFyM1RxUDNITjBieFBLMy1s?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Réseaux sociaux/mineurs : la riposte de l'Europe - 16/09",
+   "source": "BFM Économie",
+   "date": "Wed, 16 Sep 2026 18:33:42 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-reseaux-sociaux-mineurs-la-riposte-de-l-europe-16-09_VN-202609160846.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Fed relève ses taux pour accélérer la baisse de l'inflation et prévoit de nouvelles mesures de resserrement - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 16 Sep 2026 18:28:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPdU52cTV3T1QzbEZvV25pS1JCcUFUYXJhaVhYWkllS3NHbkpGXzdQMjhVWm5IU2ItRlhWU3hyNGt3bGNOcE1IVlNvdE50WEN1WV9VMWRyNFR6cldNVFVzd2IteGFITDg0aVhaWXlhQW5qRWpvV2JidzdsS002NTF6Ny1kYlN2MGJMeVh1dkdickZsZ19GY2NNUF9PTnp6Y25DcHVqY3JuQ3owVnZyalV0Sk0wUDJRcUtRMkpJVzIyS3hIVVA0RVd5OUFObmtfcW9DaGJMNUFZc0loYW05VW95eFNRSHRLLWpqVmFNNzQ3LUphenhSU2FGUFpwdVJ4OEE3RzlEbWFyVmRkUTZia2lpeWMtak5MMDDSAZwCQVVfeXFMUG52Tms4SWd6VTNSejUzcDEtWUhLVV8wV3JmVmkxNWg5UVMyOEhOVy15LXpMSzQxSkdmeEctSjFid1pkM3NXbWd0QThZakhHU2JuakRwczZKRmxwLVdGNjNzNHBMWHNMLXR0WW5NU2NGTjlia01sNnNxN1BVdklqWjYwTkVPdk9KR1lBVGstN2o1TzU2R1dPaml4SWdqRURKMW1jZU5ITm5qcktVQjJtcU1neDRjUGh0ZFVfelFRQzk3UG9mTW9RNDZRMHNDUHFTS282X205QVU1WDJ0MVBlT2NiUXYxOGt3THIwc0p6R3BIRnpkVmluT2pzMHJ2M3FiY1dMNHloSUd1MjVxcWpZMHVvVHFOYy1HanNia3E?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -222,11 +375,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Wall Street rebondit après la hausse des taux d'intérêt décidée par la Fed pour lutter contre l'inflation - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:19:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNaDYyc2JReDZidHYxd3RjT0ZaUmpQNFV2QzMtMEZJTXZUUmRMTDdNZnFmNTF4VWVLcm1pWEZQWlowblZaZW9KT2J6YjhiOExGTTY3RUdOaUxPMEtmd3NtblVLcEhxZnRvWEpzSGE2R3RoODVxWTQ1UFFfZkhPYmpMakd3bXU5SmxydmFhSEhfVllLNGVrRWwxcFoxR1FtQ1JVcXo5dVFPdzhab1NsM0M5QXF0SlZubURHNTVWbHNBYVM0czQyNE9UdUVmM0tXOV9SMTBOd1g4S25CdkF3TlZ0TUNhaHQyS2xjaWFvVy1kR1c5d2Z6ZFlVRVpOUjJFMFVlRmliSFFNOTltdElGMm5mQtIBlgJBVV95cUxPa0N6QUlrYkNCZzMtakR2WXNndzFTQWcybjRRdkJFX0I2bVRrY04zTy1qWlZTckFmSlhWQ2ZjN1BVQWdvV3FpTXhaTl81eW1lbGZLZWFlZ1hfQWtTZFVMY1hUSVRWUksyNXNoU3dHOEV4Q24xdjJ4UkN1emRkdkxjOEVFYmNYN28yS1dNNHZaN2NoUmd0QXJ0alI2UVdNQzZpT2ZvSlRLZ0lHZ0ZDOTdGU3AyM0RiRlh0ZEY0UUNCckVMLTZmV1BnLWNQRm1fUDAwV29TNkVma0w0UXYwU1lkb0NGWFJBT0haX2VfT3U0REZRb2lvNG5fb3FvOU5Ob3pBSTd6M2pWTE12UThpeVVwQVVzYTcwQQ?oc=5",
-   "tag": "CAC 40",
+   "titre": "Kevin Warsh ne donne pas plus satisfaction à Donald Trump que Jerome Powell: face à l'inflation, la Fed relève ses taux d'intérêts pour la première fois depuis 2023 et envisage une autre hausse d'ici la fin de l'année",
+   "source": "BFM Économie",
+   "date": "Wed, 16 Sep 2026 18:07:45 GMT",
+   "lien": "https://www.bfmtv.com/economie/kevin-warsh-ne-donne-pas-plus-satisfaction-a-donald-trump-que-jerome-powell-la-fed-releve-ses-taux-d-interets-pour-calmer-l-inflation-et-envisage-une-autre-hausse-d-ici-la-fin-de-l-annee_AD-202609160829.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
   },
@@ -235,54 +388,18 @@
    "source": "Boursorama",
    "date": "Wed, 16 Sep 2026 18:06:04 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZHJRUHc2Q1Q2eXFoYU1HWDVtRS1vdEV3c29BN0VWOUlrVHgyZ0cwbTBnakx2VVNxOU1oWHJCcmVmUlhQXzJRckZEUkdubGl3OVQ2dVk0Z1ZFSGRQOGNUU0RXVnJNMGYzYlFEZXU1X0FWTDNuOTRIY2xDdWZrUGpBUEFGUTYxZUptSGNjSnczWHM5WUZmODg4WWNWNE9aTE12Q1drVXgxdVZtNlhNUEE3amQ0anJVOWsyWUhMM0MzeHFqVm5qQ0tDV2oxX1JsNkYxTHlpcDVLOFEyaDg0QVJ1Zkd3?oc=5",
-   "tag": "CAC 40",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "La Fed de Kevin Warsh remonte ses taux et affirme son indépendance face à Trump - Les Echos",
+   "titre": "La Fed relève ses taux directeurs d'un quart de point, une nouvelle hausse possible cette année - Les Echos",
    "source": "Les Echos",
-   "date": "Wed, 16 Sep 2026 18:03:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUXp2YmtibjRzT2dKV2dSdGRtM0pHRWxiaFlWUi1MLWVQdHE5SkJzeXBmT3dibERvbWRMS0MzYU9XOXR1TUZPblFnakRBOFRwTE9OZzdjeUpUUXdBUC1PWDVhNmZseXA4TElMRFRQLXE3T0pWMnNTa1lSWFZIQ2hQVEtkNVc1eXR0cXFmTVNQOE1Jcnl4bVoxN0RvTEg4eTZodVhIT01wSHl4Z1VwdDNRTkZnOGlwdUcxOFRLTVlsVnljMFA0N0tsUWw2OF9RRHRydTR5ZUJrY2pqX20xbVk4?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La Fed relève ses taux directeurs d'un quart de point - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 16 Sep 2026 18:03:22 GMT",
+   "date": "Wed, 16 Sep 2026 18:03:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWE05dUZGcXg2cEFOMjEtVXpJZnhLanhYbDlqZEZqUFl0UHpwN1AtaVRxSW16blFtck5MYUY0QkVCazZhN0NKWmVFWkd5d3h0dEVlbTd6OHJwSVNQMTNtRUhaVzNvUi1aSkZ1Slp1WFZSWlNWNEllUkRtMlZPWnljWXdmc3RONUc5VjMwbDdoRzNqMGx5dHdXZTFwWUdtMTJHSFcyXzUxWnZ1M3NxQ1p3b2wtS0RRaFlQWmdqcmVBSnJrdw?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "La Fed relève ses taux pour la première fois depuis 2023 - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:02:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUkhwcE5id09YUWpqQzNZZ0NNUGktb2liZmJ2TU1kc1RTVVVNZ1dudzVCWnBJcG1FdmhrZVp6V2ZSZ3RFeWEzWXE2cVF0OFZWeHpBZjlNT0xZbzRXN29ISmdkNEhSYkFweFE2dUtEUkZLaHRhNlRFaGY4U0o4YkZXUXpxcHdUdi1oLWdjZGhIdTNTXzRsMDJwNzFqQzVaOGxMOUpBR2FONmdITHRpNy05eFpzZEV1TGV4NGhoeWRYX0pHSTFxV0Q5V0N0dExkWlHSAdQBQVVfeXFMT2ROckJOMHlUemNLbjlTMF95R2xSSlhINVFBNk01eGs2TWhFdUFUZHJ3NWlJY0JlblBNbG1rQlJkZ0JSZjZobW1td0ZYNlJwS3c4OVJBdVNIS3ZOSnd3RGxPUWtqUmV5dXFOR3FfenlyaWllNlh4X1Roall2UlVkNFgyR09TRXM5UEZqSjJmcEFzMFNzNXZWeUN6Z3JSY3FzajgyODJDdEZYOEdsNzlwT0FoNzc4RHhiTWpVdUhCeUdzbEdpcEJLSHRRTnlnZWtkUjNZQXc?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La Fed relève ses taux pour la première fois depuis 2023 - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:02:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOSzBYN1Nmd3k0c3B6cUFXMGhXdV93TGFCcWl4WEg2N1JGX2hGc0t6YnlqTVhJa09JU3NLVEtvbmEzYVNtbUx0UW1Ec3J2bC1qbEp4T1Mwa1lGSVN2WlBCUy1mV0NzZkFvay1lSEx0dGc2clVqOHFsU05BX3pDanctamo4OVVIUjVMTkdodTNJUnpNRF9LQV9rZWVEUmhSTUVDQzMxRXJndDE4a010aW9la3JoYloyQzZEREFZeTRocU9NZVNFRE5sekpSbE9TSElWb3R6dXJwanRBVFhDNThFS1I3RVB5dWM?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "RÉSUMÉ 2-La Fed relève ses taux et envisage de nouveaux resserrements monétaires afin d'accélérer la baisse de - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 18:00:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPZmJIZzY5dk4yYTdVazV3VS04ZTh6N3BPVmRSSTdCcjV2TFF3SElzdEFVT3BtaW5OdDkxQURYRGt0Z09YOVhsWHkyUmFOeEpCM2QwTlhRWFE1ZlNLTXA5LXgwTXp6aWZqSm1VYksydmxJVUpWbHVBRmxReEtuSlNyUTU5TjJPYkhWbDRyV1RBbHVxXzd1MmlYTnQ3b1RXRFNCalVIN1BkVUM5ZGNlQl9MQ0F0NGMycHNBN0FqZUJEcUtZSnM4ZVJKUVdiWFdpbHRvWl8tSHRCY2k4cGR6ZllITTdPel82MzB0blhPaG90cUhkbVlyUGd0bW9nVlhXNkFsMHN6VDdzNWktX3ZPaUgyMnRNdktRNE9nTUFpMGo0bkJBSllIQkow0gGsAkFVX3lxTE9zQjlRcURHdm1hLWlHMFU1S1hxaWtQMTNkMmItakpub0V3aUppX2FWcFdhbzc1RGZxU1IxZjA1N2d3cFd4aTdONFBrVmxFZUFadmFmbUJnZWZSQjM0X0ZTd3JiOEVCS3hpX0hrS0dhRGZUZi1paEF2aGViWE9jRExjMW1WQml3MGpONmtsc3NnWVBwTi12VFgyUFVuVkcxNEhpTjlURXk1bzVmd3ZPZk1ZYnkybHh2Y1Z5Nm1HZXhCVnp1dkhoYUhLQ1ZTWDdtT0pySmJ4NEFWM1c0M1I0cHltS2ZidXRBX21Ucy1tN1F4U1JjR3hWcEVMRUN2eF9jTnJfT25VSi1ibUgwNTVvYVRJWF9COWRCTGVCb1FkZGRyd3pYcDBoZE9OQU5fXw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Experian: 54% des consommateurs prêts à laisser une IA demander un crédit en leur nom",
@@ -294,38 +411,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Crise des carburants: \"J'ai un budget mensuel à quasiment 700 euros\", assure cette infirmière libérale dans la Marne",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 17:10:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-crise-des-carburants-j-ai-un-budget-mensuel-a-quasiment-700-euros-assure-cette-infirmiere-liberale-dans-la-marne_VN-202609160781.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Vinci remporte un contrat de plusieurs années pour la maintenance d'un réseau électrique en Suède",
    "source": "ABC Bourse",
    "date": "Wed, 16 Sep 2026 16:25:08 GMT",
    "lien": "https://www.abcbourse.com/marches/vinci-remporte-un-contrat-de-plusieurs-annees-pour-la-maintenance-d-un-reseau-el_702651",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 16:16:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-16-09_EN-202609160709.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 16:16:12 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-16-09_VN-202609160711.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -339,33 +429,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Mythomètre : \"Quand les taux montent et les actions aussi, c'est le top pour les investisseurs\", FAUX répond Géraldine Métifeux – 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 16:01:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/mythometre-quand-les-taux-montent-et-les-actions-aussi-c-est-le-top-pour-les-investisseurs-faux-repond-geraldine-metifeux-16-09_EN-202609160689.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'Ukraine prévoit un budget de défense record de 97 milliards d'euros en 2027 mais aura quand même besoin de plus de 45 milliards d'euros d'aide financière internationale",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:56:06 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/defense/l-ukraine-prevoit-un-budget-de-defense-record-de-97-milliards-d-euros-en-2027-mais-aura-quand-meme-besoin-de-plus-de-45-milliards-d-euros-d-aide-financiere-internationale_AV-202609160680.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Rebond des marchés européens face au suspense de la Fed - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 15:52:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQbXNtcC1JMHhPVV83WHJFZ3FBdm0zRnJMM2tibnd6LXZyTXJGVi1Ocy15ZFhXRUtoV2Nab0lRWG1ZdVRubDRFMXQtTXA0Ujg3dDZZVmo2NGFIRGJjQnYwZnE0bWtlNjU2T0N3di1NQjhXOWhVdW9hMDBrMVdqWll2MjUtazlEeWk2OXFlRWxzbHNlck93Q3lQUTRWR2FEQy01UW11Q1M0MmR2WWdfNkRsQXVlbDRSODRnV2kyUWwwQnhFcGVtRHlUMXptd1NJd2phNkZV0gHTAUFVX3lxTFBtc21wLUkweE9VXzdYckVncUF2bTNGckwza2Jud3otdnJNckZWLU5zLXlkWFdFS2hXY1pvSVFYbVl1VG5sNEUxdC1NcDRSODd0NllWajY0YUhEYmNCdjBmcTRta2U2NTZPQ3d2LU1COFc5aFV1b2EwMGsxV2paWXYyNS1rOUR5aTY5cWVFbHNsc2VyT3dDeVBRNFZHYURDLTVRbXVDUzQyZHZZZ182RGxBdWVsNFI4NGdXaTJRbDBCeEVwZW1EeVQxem13U0l3amE2RlU?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "CAC 40: la Bourse de Paris termine dans le vert, soulagée par la baisse des prix du pétrole",
    "source": "ABC Bourse",
    "date": "Wed, 16 Sep 2026 15:51:16 GMT",
@@ -375,60 +438,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "La moitié d'entre elles sont en déficit: les cliniques privées réclament 600 millions d'euros supplémentaires dans le prochain budget de la Sécu",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:50:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/social/la-moitie-d-entre-elles-sont-en-deficit-les-cliniques-privees-reclament-600-millions-d-euros-supplementaires-dans-le-prochain-budget-de-la-secu_AD-202609160694.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Le Club : Fed, une hausse de taux très probable ce soir – 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:43:12 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/le-club-fed-une-hausse-de-taux-tres-probable-ce-soir-16-09_EN-202609160671.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Club : Fed, une hausse de taux très probable ce soir - 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:41:33 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-le-club-fed-une-hausse-de-taux-tres-probable-ce-soir-16-09_VN-202609160681.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Cac 40 au rebond, à plus de 8.100 points, avant que la Fed ne relève certainement ses taux pour la première fois depuis 2023 - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 16 Sep 2026 15:41:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNVFgyVXFQcGdzeGw3TFNOMHB1UXdPT1FiWWFud1A1cE13WmlMeEwyT1FJZmlDM2Q4RVlhMkhycHNCQUk3ZXpUaTZXbDloYk56ak5rT0p3ckFOeXdjTVN5RC1uLWpza0lscFVDOWVxcVVRMEoxbjFsbkUxN1VGemVhYTI5T185bUJ6c0Y2S2FrYXZ2TlgzaVNiVmVEdjE3UmJyZWJHUHNZSkN3Q2MySG1xRk10MUJJOFdfbGdmS0I4R2JHOG1SVzdYRklvcDJNUGNCQnV6dGlJYnRDX3JoVnlrX3BIQUxuNUpxNXc2bURJNTk5QzBXakN2ZEhFX2EwSlJJeVc4YnFGbHFhWlA0LUZObXBWeUI1a0ZERExQdG12UHM?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:28:45 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-16-09_VN-202609160663.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 16/09",
-   "source": "BFM Économie",
-   "date": "Wed, 16 Sep 2026 15:28:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-16-09_EN-202609160662.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "PETROLE: Le brut se tasse après les stocks américains alors que le marché attend la Fed",
    "source": "ABC Bourse",
    "date": "Wed, 16 Sep 2026 14:59:49 GMT",
@@ -436,37 +445,10 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street ouvre globalement en hausse avant la Fed, le baril se détend",
-   "source": "ABC Bourse",
-   "date": "Wed, 16 Sep 2026 14:04:33 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-ouvre-globalement-en-hausse-avant-la-fed-le-baril-se-detend_702637",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mercredi: Intel, SK Hynix, AMD, Marvell, Nvidia, J.B. Hunt Transport",
-   "source": "ABC Bourse",
-   "date": "Wed, 16 Sep 2026 14:00:27 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-intel-sk-hynix-amd-marvell-nvidia-_702636",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
  "uc": [
-  {
-   "titre": "CARMIGNAC PATRIMOINE A EUR C - Boursier.com",
-   "source": "Boursier.com",
-   "date": "Tue, 15 Sep 2026 21:44:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNT3l1MW15b05zSDU5b18tZlc1emJYUEVPTVFDejNTN2JxaGxZYzh5Q0x1di1TbkRWelF6RTBlc1BRQjB5TnZPaVFFN0g3cll3LWRoVDlpcHFWU1BqVTZqVVY3MUNFMVphVjBVaXBpMzRUNXhBUHdWS081SERyT3RMZFV4ZEl1Y0FUazVOVHJPUQ?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
   {
    "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - Ouest-France",
    "source": "Ouest-France",
@@ -495,8 +477,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le fonds ibérique de Magellan Value Investors progresse de 2,91 % en août et l'européen remonte de 3,90 %. - democrata.es",
-   "source": "democrata.es",
+   "titre": "Le fonds ibérique de Magellan Value Investors progresse de 2,91 % en août et l'européen remonte de 3,90 %. - Demócrata",
+   "source": "Demócrata",
    "date": "Wed, 02 Sep 2026 12:24:49 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQOUhBQnZXcXF4Rl93bVdKdVhTbVQxT2pROU9qOG1MclE5SDc3R2tHdzIwMVZjZnJoRUdZUlhoMWdxTEdkM2l4eVB6QlRqRkdRZjljanFXTG9Jak5ZSzBmNjhIa1J5elZSdTZ0VDhOVXE4ZlNnUy1pWFdnZzFvMTl4QnBVQ0M2ZnNQSnFNUUVHXzNzZzd6NGlUVjhZQlhFeHlIYkJhbHFlbnpKUGRrOVhxSFh6bnNJMEh6dDJEQ2I0VXZDYlJlbkw5ZUhkVThIdFlLS1B5MWd30gHbAUFVX3lxTE1Wcll0eHU2SzVfMmRNYzdRNUUybXJjUnFpQ1poMWJZU0liVlpFN3hqNEtGdkpWYnlOOUF6YjBXX203amNDaDFzWDlwNDlZZ2JqLWFlUERWSjhzZ2Z0QTBqYjBoX0pQYXhtRGRpbTF2Uk5DS1RFVVROZHFIQk8wM1pQcXNacWZJLU10TmxzU3VXTDI3SHJvaGJlZVk4TDFleE1yVkh3S2tTTHZvUmlMWHREUHVBQUFXN1R3dDduME1MaTBpUDcxT19oTWJpX2RCUW04MEdvWUFhWUhOaw?oc=5",
    "tag": "Magellan",
@@ -504,8 +486,8 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Le Chili prépare une note de protestation à l'Argentine pour les paroles d'un chef militaire sur le détroit de Magellan. - democrata.es",
-   "source": "democrata.es",
+   "titre": "Le Chili prépare une note de protestation à l'Argentine pour les paroles d'un chef militaire sur le détroit de Magellan. - Demócrata",
+   "source": "Demócrata",
    "date": "Tue, 25 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPWERQRlZPWEwtMzlsQmM2NzluRTQ4SWNDdUdtNEZieHQ0Qjlob0tkb19OTjBYaFo4ZDdWejllREw2eXRYZjlCeHJoSTBPY0tmY3BFdnRSaW5ySE85UWZLelN3WUU2czg0MjlmcndzNExxNFJmVlNTODMwQnVWRmtWU0NLX3czeW1CM0otNS1uNzVzWlIyUzEycDlQOTd0OGFUZ0RoTUlROENoYkhYZ0R1OVRVUXl6dldTb2JZOElhcU9LR1dsLUNQN2hjMVRPczZIVjZjTEU4akZZWG5MaUIyQ1hxc18zTVc0TUNRYTB4Yzd3azVy0gH6AUFVX3lxTE1JMVhQeGljb1V3S3NyLUxleG9vQmdsaGF5NmZIOUhUMjNsYUhjdWNpMU1lUWZMVk0yZDZFemsyVTlVU1ZOTWZ2WDNubDBsMktFNnc1YnVpWGpQZGdOWjRtMWFlY0xuOTVhRWVEMjBvSy03Y09Ja1R2VGNFUm0yLWFta2FnZnlUaThBdk5sMk5mVkFKdTQxTkJUU0JyN2pOWTF0alpwMWJQYzMyWERmZjZzSHAxcG1zZWNhQUhHeUZfR2VSejNPQXhSWUkxbmFZY1ZFLUpNdWJxOENFTUNSUXI4N3dhWk5pdGlaMmRySTRYR0M5eFFrOUdkR1E?oc=5",
    "tag": "Magellan",
@@ -592,6 +574,15 @@
    "tag": "CPR Croissance Réactive",
    "categorie": "uc",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Edouard Carmignac se retire de la gestion de Carmignac Patrimoine - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Tue, 22 Jan 2019 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRXUtUXBkTU9SYWV4R05kaFp0RVRNcWdENmJPLWFjdGhqWkhzNnIxdXpvRl9DSlhqVmVwVVd0TXZETjZQdFJHWHJsb044cXQ4MWctdGtRZUdOTGVDaUhJTFNrbU5iQmVjM1FhWXlVNVBuRzRnSHMxeDBXMnFacXBzTUZBdl9kNE1sMTljNDdaTndmdDJNYXVic1NVNWFrbHJ1b21tRnJUYnQ3RUpTZDFhX3RmRHc?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
   }
  ]
 }
