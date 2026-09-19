@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-19T09:25:21.493Z",
+ "genere": "2026-09-19T13:54:03.891Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 14 au 18 septembre - Boursorama",
@@ -11,10 +11,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés mondiaux dans le vert après la hausse des taux de la Fed - TradingView",
-   "source": "TradingView",
-   "date": "Thu, 17 Sep 2026 16:59:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5KVkR0azFTOE00dm83dDhSUTUtdGRlbXpoRmZiSlFxVDZzazJQVXRXaHNmSTZsU1dHUGlvWFZHNm9aMmRKRmt0VGNUSkktV2lVNVF5VjlpeXF6Sm1LUFpGTlh3?oc=5",
+   "titre": "Le Dow bondit de 310 pts alors que l'impact de la hausse des taux de la Fed s'estompe - fr.tradingview.com",
+   "source": "fr.tradingview.com",
+   "date": "Thu, 17 Sep 2026 13:43:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1HQ3I3QmxrNE5BTW5xMTIwVlhmNndldzhsWG9WMS1mNmQ5ODNMMl9tMXhSQmdDb01sSUpqclViamJmcHJhVmRpVi04S3Eya1ZjUUlWTDRLTnB0Q0RoSnZoNlQ3X3otQQ?oc=5",
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "positive"
@@ -27,15 +27,6 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le Cac 40 avance tranquillement après la Fed, la baisse des cours du pétrole en soutien supplémentaire pour les marchés actions - Les Echos",
-   "source": "Les Echos",
-   "date": "Thu, 17 Sep 2026 10:50:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxQTlNRZGdNR2ptSWhPdmYtcEc0VVFoVE52eWk3bUYtWnJ6SGt0VTV2WFg5V2lSQTdQVGpqbk9kbFpPOHBWUlJlY0hRX2FyYXMyX3d1TUhHOXQ3eFJ6aXl6dkhRaVoyckJxcnNpUkhKOUhkRmc1MThKX0NySzVNLWlyaUdLblkyb0oycDdvLTRrWFNXWDJCUUttRmRlSzg3Y2pzN2Zra2VCUlR4S3NqTXpfbGhvZE1reDJ6NzB2VnpIeUl3UXdCV0VtY0FXRDY3YngtY3MybmcxTDc2cG9TWkpEVFhOUTFfZEV1N1E1TDN5MkMtb2JqN1RwOWs3SlZpLVctR01md1FENDkySW5zZjVsMFliU1MtTzBrMWRhdFRWZkZEUTg?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
   },
   {
    "titre": "La Fed relève ses taux pour un recul plus rapide de l'inflation et anticipe de nouveaux resserrements - Boursorama",
@@ -52,6 +43,15 @@
    "date": "Wed, 16 Sep 2026 18:36:26 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOR2FVR3BLenc4cjBFS3M4Ykc2X05fYmVIdFljVkpqUnVpUDJSRUUtZjYzZUVVb0FWWEV2akZjb05aMDh1S24xNVN4a2NQemFfSkFoZmZBYmIwMzc1YlFJSjlsbDBxMDhSZ2s5dUtFWmpwVlByUEduZklIbFpyVWVETS1TNGxMb3pPemczRjFqVnlmOVl5VklkYUZBeDNvSmc0UzVRdENKSENCa0hqN3lGV1RETG9QbVJBRjltUmNhLW1QVi1GZ2VvSWlWYWFyM1RxUDNITjBieFBLMy1s?oc=5",
    "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Rebond du Cac 40 avant un très probable tour de vis de la Fed, mais « la trajectoire vers des taux directeurs durablement plus élevés reste semée d'obstacles - Les Echos",
+   "source": "Les Echos",
+   "date": "Wed, 16 Sep 2026 13:01:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQZ3p4cG1yS2pUTGFMMmtzNFhRamZaakJISWpfXzlUSmptN21VMi1KMHNpck00TXRHNE1mNlFJZ3poaF96cmJXTDAwOVlVaGV3eDIyM2pGaVFBS0NXRlB0MWRBT2V4OVRnQUpOY2hVZzRwVm01bEZnLXBTLV8yRkJkODNIajFYc3JjY3dpOWNjODdvYmx6UnBGQzNiZFpYekFpZHJWT213QTZraVFWM3oyZ1cxSjVjUE5HTGVkdlBrVlMzSlRZUWJXQzVPWlFQUVlpV2dlZ2dEaVUtV2k5aHZNSjgxVGQzUjV3ODJ0Uk1JNDFxdmg4MzRLUUx6d0UweE5NbnYwb1lQUUV2eVltb0dhMkI4WkZFZmRvVjk1cHZyOXdHUE5aUzlKWWxsZGM1QWF2bUZ1M24za29xeGNrRWxFa2VDdmNQOE0?oc=5",
+   "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
   },
@@ -76,19 +76,46 @@
  ],
  "produits": [
   {
-   "titre": "Bourse : Solutions 30 et Boiron souffrent, Stellantis pourrait vendre Aramis - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 18 Sep 2026 07:09:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHRxaXRNRko2aF9lSGdNWUVEYWRGc1gzSnZRSjYwTFZ2a2ZPVWxVbzY4Yzd1ZU9lZGJMamZ4aWNPOUVpVTJVcVk2UGhqejgyZHBzQjBaTHRlam1PejhYODZsVkxQcFAyV2J1NXBvcUZxTUxCVTJIUWM4UlBoZElQUkxWYUF0WFVwQ2JWMHAxa1YxN2pkLTJyYmh5d1EtYlhuYk1ndGswaXJybHNGbGZFcFRBVTBYd1Yxa196MVo1aWRMdnRpbWhwUkZqSmhOTlE?oc=5",
-   "tag": "Stellantis",
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 19 Sep 2026 05:15:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 17 Sep 2026 16:20:00 GMT",
+   "date": "Sat, 19 Sep 2026 04:31:28 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 19 Sep 2026 04:10:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Aramis group : Le spécialiste des véhicules d'occasion Aramis prend 7% en Bourse, propulsé par des spéculations sur une vente de la part de 60% de Stellantis - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 18 Sep 2026 14:12:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxOR0ZVNEFXMG53LTlZbFhJMnlnUElvUzZHeUp5MHVnX0ExTHB3eDlrSW9YbTZqNFFvZGRFa3lVX0NvSjZ6V0c4Z2VDTTlkTVBYT2VvUmJSMFRDeGNmajRnMUVGNWdrR21rcXVjaGJ0eGxYQzBOUEV5VTRaNE9rWVRQR2pLRVhDZXRTMFI3clh5YUhaUERlekQxX3dIUWlmQkdDNzctckl2OVdHWVVqOXdPV0hZNTRKME9iOWQySUhUSjdQYm1wYmIwaVJJVXgzSzNLcVA3alF3akZhODcyM0t2eEVnQXowWVRBRnFRWEhrRVF5cU5SV1lXTElIc3BBMFFFWU9ucEtsR1RtXzR0S2V6N1p5U1lTTGhyVDNxWTR5WFlwMkI2UnU0UGF5UTI0LVVoNTBtenRHbFE5MzRMMVp2VDFJNUFZT1dmejV1M1Vn?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Bourse : Solutions 30 et Boiron souffrent, Stellantis pourrait vendre Aramis - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 18 Sep 2026 07:09:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHRxaXRNRko2aF9lSGdNWUVEYWRGc1gzSnZRSjYwTFZ2a2ZPVWxVbzY4Yzd1ZU9lZGJMamZ4aWNPOUVpVTJVcVk2UGhqejgyZHBzQjBaTHRlam1PejhYODZsVkxQcFAyV2J1NXBvcUZxTUxCVTJIUWM4UlBoZElQUkxWYUF0WFVwQ2JWMHAxa1YxN2pkLTJyYmh5d1EtYlhuYk1ndGswaXJybHNGbGZFcFRBVTBYd1Yxa196MVo1aWRMdnRpbWhwUkZqSmhOTlE?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -119,80 +146,17 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Stmicroelectronics : L'appel du patron d'Anthropic à calmer le jeu sur l'IA provoque une chute en Bourse de STMicro et de Schneider Electric, tandis que Capgemini et Dassault Systèmes grimpent - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 14 Sep 2026 08:51:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihwNBVV95cUxQRE5YSmZmbmE5N1p4R3FrSzNjX1hoWC1zNzVKVk9jbjRBYVJtVGVKdVVvV3dHRlVub056SkV3S1h1US14RnU0Y3JjT1B0bk9pSW95Z2k5VjJRTkJPeVRGU1gzRlREa2dnUnZyS19pS0QwZWtrRGExcFRCR21jdEg2QW5XbWZaYy1fUHBmVU1wVmNTbVlSeFZ4bFFpTHZNWDcwdG1tRXpMQzRyTG9OTlhXdXVhd2ROcVJvcjV4WDBzb2tpblM4bWpNdjJ5ZHVHeWk4V3ZxWjRBeHl3aG9BejFVSlI5VE8zei1yR0V1RFh2amhVa1hBbEpYR3hqSFlvUmc4WkxQc1Vfd1hoOFRWUGJhdWJKWHZBdTNhRVBSczNsd0F6Z2I0SXhwMDg3LXJmdm1hX0gyVzgwZmZoTHhoY2d4UFlLMTRpYktNYUJGQVdoRkhrNWhpOEMzU21fTndOTlctOU5FNFJWc1ZSNlNJblZ1cW0tLTctZkUxWU9LczJaZzlWVG5DZVZr?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "negative"
   }
  ],
  "eco": [
   {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:23:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
-   "tag": "bourse",
+   "titre": "La dette publique de la France va atteindre des niveaux records, à 119,3% du PIB en 2026 et 121,7% en 2027 selon Bercy",
+   "source": "BFM Économie",
+   "date": "Sat, 19 Sep 2026 10:41:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/la-dette-publique-de-la-france-va-atteindre-des-niveaux-records-a-119-3-du-pib-en-2026-et-121-7-en-2027-selon-bercy_AD-202609190195.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:21:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:16:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:16:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STMICROELECTRONICS Cours Action STMPA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:16:49 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aEdVR1RKdDMyaW5mbzVJUlVoSWhzU0d2VUZCZHZkRjdjVlVzQkptT0FVdkp4MVFwUzNwSXFMRS1SNThZSXFkTkxtVDRISkV0Tkh3Ng?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:10:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 19 Sep 2026 09:06:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90ZzVod2I0UkczbkNGZnVDSWV4WGhKLURFbVU1dVRSVGNPY3hYZ1Fnb096aG1MZFB0aWFDYXdSRTRKZWRveUU3TnVHdmxVSEpUMDVF?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "INFO BFMTV. Le gouvernement réfléchit à étendre ou augmenter la prime \"grands rouleurs\"",
@@ -213,6 +177,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "La Fed amadoue les Bonds Vigilantes - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 18 Sep 2026 21:01:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNlZfYUJrLTNqZTBEWnk0NlB2LU8wSkRKb1o1bkctSDg5VmxId2dKQzBJNTVIX042Yy1jNXhtcDRPb1dycHFocGVQbzBOWGxvSDJjcEFwcm1yenc1TTc1d0oyY0oxNlJMUGJlYTJhUWZ3ZGRBd1lOT1gwU1ZqWm55U1NldS1NQ1dwVFV0UFJLLXNySW9JdG9mRHpoVQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "L'éco du monde : BoJ, le yen peine à remonter malgré la hausse de taux - 18/09",
    "source": "BFM Économie",
    "date": "Fri, 18 Sep 2026 20:58:52 GMT",
@@ -231,15 +204,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Les marchés : Fed, pétrole, IA, pourquoi les marchés résistent ? – 18/09",
-   "source": "BFM Économie",
-   "date": "Fri, 18 Sep 2026 20:16:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/les-marches-fed-petrole-ia-pourquoi-les-marches-resistent-18-09_EN-202609180856.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "USA: Wall Street termine de manière contrastée alors que les taux montent de nouveau",
    "source": "ABC Bourse",
    "date": "Fri, 18 Sep 2026 20:10:29 GMT",
@@ -256,15 +220,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le parti pris de la semaine : Non, les banques centrales ne sont pas indépendantes – 18/09",
-   "source": "BFM Économie",
-   "date": "Fri, 18 Sep 2026 20:10:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/le-parti-pris-de-la-semaine-non-les-banques-centrales-ne-sont-pas-independantes-18-09_EN-202609180853.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Les actions à suivre lundi: Amundi, Carrefour, Safran, Société Générale",
@@ -364,22 +319,13 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Banque du Japon : hausse de taux historique et soutien à l'économie - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 18 Sep 2026 13:45:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNX0dtazJEb0M4R1NsWTVXanhIMVNZQ2ZqbUgtbVlfejlhR1pMT3Bvd1g0X2E3MEUzRUlublU4VWxtYnRmcVl0SEp5ZTR4dEo1OGpPcHY0bHVqT1ZyVnB6LXZFOG40VHJXUTdoakp6VkdHZS03akVwWHo3LXF3ZU5VbzF3YjRyNWlHY1U2b2hpY3RWc0JwUlJINmo5cG1IUFFSUTRoR3JLZzNsYjBGMUtDdVVYVkhNbi1jQ2VCVUlQRERoZUM5WXlmRm05em9TekNKOVZZLUFQQ2NaaTgwWEVURNIB4AFBVV95cUxNX0dtazJEb0M4R1NsWTVXanhIMVNZQ2ZqbUgtbVlfejlhR1pMT3Bvd1g0X2E3MEUzRUlublU4VWxtYnRmcVl0SEp5ZTR4dEo1OGpPcHY0bHVqT1ZyVnB6LXZFOG40VHJXUTdoakp6VkdHZS03akVwWHo3LXF3ZU5VbzF3YjRyNWlHY1U2b2hpY3RWc0JwUlJINmo5cG1IUFFSUTRoR3JLZzNsYjBGMUtDdVVYVkhNbi1jQ2VCVUlQRERoZUM5WXlmRm05em9TekNKOVZZLUFQQ2NaaTgwWEVURA?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   }
  ],
  "fiscal": [],
  "uc": [
   {
-   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - Ouest-France",
-   "source": "Ouest-France",
+   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - ouest-france.fr",
+   "source": "ouest-france.fr",
    "date": "Tue, 15 Sep 2026 13:15:41 GMT",
    "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTUxpRUFwRnB1TVpjVU84d2l1WFI1RWg1bEk2elJrci1yc280UzF2bzJBN1FBWlI0OXhXTTNZY0kwbFMtUDRxaUVPdE42OXNib2RUUVZoSG5ZUDZ1Y05ZTHR2U2s4dTdxLWg5eXl1MV8wN3pKOWc3TGFwSUdTZGpQcDhLdmFUclo4N0IzNHVkNGFDejNTWGRnRjNiMjcxaTVSUURNYnRfUVpUWkw4dG1GbG5ZYl9iWExhNDdwaWt3NG1YNVh2bkx4TVlaZzJBZHZoREk2WXJwYU11VlNSRDF3TnVGV2ViaDBCWUM1eURTS3p1bTdNZUlXQ3VNNWJBYWtrdXJR?oc=5",
    "tag": "Magellan",
@@ -387,8 +333,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Nao Victoria, réplique historique du célèbre navire de Magellan, sera en escale à Lorient fin septembre - Le Télégramme",
-   "source": "Le Télégramme",
+   "titre": "La Nao Victoria, réplique historique du célèbre navire de Magellan, sera en escale à Lorient fin septembre - letelegramme.fr",
+   "source": "letelegramme.fr",
    "date": "Mon, 14 Sep 2026 09:20:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNM0pNaXVoWFpHczJoYk0tQzM5VE1pOEY1VUV4WHcyYnFDU2tWT2wwN0E3TGp3UmpCNWVyZnhfUzVOOTROX1NPVElJZEhxaTBKVjFLNm1xbGRfS1FyUzJ3UUx2bEItNWp2V0VWSEtqR1A5dnVFUF83QTJjblhzdzRlRlk1aHplOWFMakVadWJZc0c4RUozRmJkRzNuUl9CUjZNcnE5WXZ0OEdXYVVra0VVVExQYU92WGp2NXlWN2dKc3I1Y29GNHh5M3hFYjZMRzlaUGhsOTlTRjZlNkh6NjRWazdRRVE2eFlaWDBWOXBJUUZ4ZVBfWm1KSVR5MA?oc=5",
    "tag": "Magellan",
@@ -405,17 +351,17 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - L'Automobile Magazine",
-   "source": "L'Automobile Magazine",
-   "date": "Thu, 03 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdkN6RnMtR3dYM3RvLVVCa2hYMVNERHFDMEJiRjIyNy1BaS14VzdGM1pGQlpza0dkRWt3VktRVE9YMzItX2RKcFdMckdKenZ4VFBhNTNjOFhJRDlOWmlrQ0hvRkNtclY1UHc5TExlY3g3Wl94MHRWVXF4R1lRbW9FcFQ1MmZWbUJvbUxnQXVjSmN0VnVVOWZaSVBJcW9ld011Wk12blptTkkxMElzcVN4anBJZzBUd2VlQ0F6SndpdlQxZkZlUGpVd29mcXE0QjE3ZDAzOWNsTHFDbEFjNHotVGVB?oc=5",
+   "titre": "MAGELLAN : L’Odyssée inachevée Troyes : date, horaires, tarifs - jds.fr",
+   "source": "jds.fr",
+   "date": "Tue, 01 Sep 2026 04:22:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWFh3YWx2RkREVE5Ddk91LUJQSlJmZWNSTHpucG8wTHlxUm95aFpaZzY1NVRucUZuZG4zOXU0VWkycklCMjJBM0hiTTd4N0xxM0ZpeThXekN0VXhRYTJYQ2hIRlBWbTFKSlpDLWEzTFJoX3VqV2JMSFNvWFR0TjNPVQ?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Chili prépare une note de protestation à l'Argentine pour les paroles d'un chef militaire sur le détroit de Magellan. - Demócrata",
-   "source": "Demócrata",
+   "titre": "Le Chili prépare une note de protestation à l'Argentine pour les paroles d'un chef militaire sur le détroit de Magellan. - democrata.es",
+   "source": "democrata.es",
    "date": "Tue, 25 Aug 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPWERQRlZPWEwtMzlsQmM2NzluRTQ4SWNDdUdtNEZieHQ0Qjlob0tkb19OTjBYaFo4ZDdWejllREw2eXRYZjlCeHJoSTBPY0tmY3BFdnRSaW5ySE85UWZLelN3WUU2czg0MjlmcndzNExxNFJmVlNTODMwQnVWRmtWU0NLX3czeW1CM0otNS1uNzVzWlIyUzEycDlQOTd0OGFUZ0RoTUlROENoYkhYZ0R1OVRVUXl6dldTb2JZOElhcU9LR1dsLUNQN2hjMVRPczZIVjZjTEU4akZZWG5MaUIyQ1hxc18zTVc0TUNRYTB4Yzd3azVy0gH6AUFVX3lxTE1JMVhQeGljb1V3S3NyLUxleG9vQmdsaGF5NmZIOUhUMjNsYUhjdWNpMU1lUWZMVk0yZDZFemsyVTlVU1ZOTWZ2WDNubDBsMktFNnc1YnVpWGpQZGdOWjRtMWFlY0xuOTVhRWVEMjBvSy03Y09Ja1R2VGNFUm0yLWFta2FnZnlUaThBdk5sMk5mVkFKdTQxTkJUU0JyN2pOWTF0alpwMWJQYzMyWERmZjZzSHAxcG1zZWNhQUhHeUZfR2VSejNPQXhSWUkxbmFZY1ZFLUpNdWJxOENFTUNSUXI4N3dhWk5pdGlaMmRySTRYR0M5eFFrOUdkR1E?oc=5",
    "tag": "Magellan",
@@ -441,8 +387,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - macsf.fr",
-   "source": "macsf.fr",
+   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
+   "source": "MACSF",
    "date": "Mon, 18 May 2026 21:01:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
    "tag": "Eurose",
@@ -468,17 +414,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Thu, 25 May 2023 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
-   "tag": "Eurose",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - macsf.fr",
-   "source": "macsf.fr",
+   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
+   "source": "MACSF",
    "date": "Fri, 17 Jun 2022 01:42:12 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -504,11 +441,20 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
-   "source": "Profession CGP",
-   "date": "Thu, 24 Sep 2020 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
-   "tag": "Eurose",
+   "titre": "Le fonds CPR Croissance Réactive à la loupe - LCL",
+   "source": "LCL",
+   "date": "Tue, 07 Apr 2020 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRGRoRG80QWg4cU05Q3ZVaDVPd1BWdGMyODNDVjY4cll1eThwYVVFYldFQWNISFFjOTRxUUJUd29xQVRkWllDaVNHS21pTnVIYzZ4c25SMjBBck9meWZDYmFJbEIwY3hBYVBPQkdFbTlEbk53VEpPcFE0MmF1dktpZW92amdKcERvRXRfYUxkVmFGVlE4enROSGdQMjhiRi1zUzVSUVV2Z00?oc=5",
+   "tag": "CPR Croissance Réactive",
+   "categorie": "uc",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Edouard Carmignac se retire de la gestion de Carmignac Patrimoine - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Tue, 22 Jan 2019 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRXUtUXBkTU9SYWV4R05kaFp0RVRNcWdENmJPLWFjdGhqWkhzNnIxdXpvRl9DSlhqVmVwVVd0TXZETjZQdFJHWHJsb044cXQ4MWctdGtRZUdOTGVDaUhJTFNrbU5iQmVjM1FhWXlVNVBuRzRnSHMxeDBXMnFacXBzTUZBdl9kNE1sMTljNDdaTndmdDJNYXVic1NVNWFrbHJ1b21tRnJUYnQ3RUpTZDFhX3RmRHc?oc=5",
+   "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
   }
