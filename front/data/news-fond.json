@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-20T09:44:37.438Z",
+ "genere": "2026-09-20T14:09:32.217Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 14 au 18 septembre - Boursorama",
@@ -38,10 +38,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Wall Street clôture en baisse, la Fed adopte un ton plus ferme que prévu - Boursorama",
-   "source": "Boursorama",
+   "titre": "Wall Street clôture en baisse, la Fed adopte un ton plus ferme que prévu - TradingView",
+   "source": "TradingView",
    "date": "Wed, 16 Sep 2026 21:00:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxORElBUUpjOFBaQ2hEX2V0X0s0eS1wTE1oSk5LS0dvNWJrbHQ2NHZuOTJROGRWeGFDU29wUEtXVGFOZFpCejFZVGw2WTF3MHdQUi03WmhnY1B2UEkteVJKUHFBbGNsbmpzTk9hOVlOM0IwdXpvcTZjQUluZWNHTEhNa2wwRUxfdWsxZllzaXZMLVhCbXBzY1VYd2JCNUlLc3JjQWZHUVVHUGFOODN1WU9VZDdFYndKX1I5b1FxX1hyRGdzbmdUazNaNzJVSTM2Q1ZPRnRKMDFHNUxtaTBYTVQ5eFpLUEFTU29O0gHoAUFVX3lxTE5ESUFRSmM4UFpDaERfZXRfSzR5LXBMTWhKTktLR281YmtsdDY0dm45MlE4ZFZ4YUNTb3BQS1dUYU5kWkJ6MVlUbDZZMXcwd1BSLTdaaGdjUHZQSS15UkpQcUFsY2xuanNOT2E5WU4zQjB1em9xNmNBSW5lY0dMSE1rbDBFTF91azFmWXNpdkwtWEJtcHNjVVh3YkI1SUtzcmNBZkdRVUdQYU44M3VZT1VkN0Vid0pfUjlvUXFfWHJEZ3NuZ1RrM1o3MlVJMzZDVk9GdEowMUc1TG1pMFhNVDl4WktQQVNTb04?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSWFJGUU5QblZISjdzY3dnRjIyNmJnMDNEQWVWYXFNUGFLLTdhdVlxbjdOeEJtOU4xR2pZOE51Sk9pb05HUXM2REs2MFlYcDYtU1V3QWRhX3NOcV94RTNTT0h3?oc=5",
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "negative"
@@ -76,29 +76,47 @@
  ],
  "produits": [
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 20 Sep 2026 06:03:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bourse : Solutions 30 et Boiron souffrent, Stellantis pourrait vendre Aramis - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 18 Sep 2026 07:09:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHRxaXRNRko2aF9lSGdNWUVEYWRGc1gzSnZRSjYwTFZ2a2ZPVWxVbzY4Yzd1ZU9lZGJMamZ4aWNPOUVpVTJVcVk2UGhqejgyZHBzQjBaTHRlam1PejhYODZsVkxQcFAyV2J1NXBvcUZxTUxCVTJIUWM4UlBoZElQUkxWYUF0WFVwQ2JWMHAxa1YxN2pkLTJyYmh5d1EtYlhuYk1ndGswaXJybHNGbGZFcFRBVTBYd1Yxa196MVo1aWRMdnRpbWhwUkZqSmhOTlE?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 18 Sep 2026 07:00:00 GMT",
+   "date": "Fri, 18 Sep 2026 16:05:15 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Action Rheinmetall AG | Cours RHM Bourse Xetra - zonebourse.com",
+   "source": "zonebourse.com",
+   "date": "Fri, 18 Sep 2026 15:40:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5oWEVwU0FKaW9rdmRUcVFlWTF2eVpIeHJra1NhSmR3ZE5pUW4tR2pZRWFLQl9INXlKTXd0YVdYUVhzT3hSQ2xBZDFEcEVrSE5FVmtFenR2TVpTajR3UlE3ejloQnAxV3l2Nm55R2ViQQ?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 18 Sep 2026 15:38:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 18 Sep 2026 15:35:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 18 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -112,15 +130,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "L’Oréal peut-il durablement rester le champion du CAC 40 ? - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 16 Sep 2026 12:05:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNWmYxY3dSamJBYzRZYnRvdURqWXBFMFBIM3ZqVWtlNGtLOWNTdkU0V0tUZFVsLWtiSlRNaDJmdnhNSmh0Q294bUFYTDZFdXdIN2xVQUFNRkFQMWtiUklLb0J4bEM2UzUybWhkbFpiaUh6Z3h3TTNmeV9iOW1DelBfU2pTQ3BVZi1SYk1DUnpqM2lhVkNwWS1MaUVORjFJMUlWX2pTZFBIZzU1SHczMTI1THltQkl0ZUgtSDAyc3dYQUk0N1BHMWtkaUZ0YzBOWUotVjZ0VNIB1AFBVV95cUxNWmYxY3dSamJBYzRZYnRvdURqWXBFMFBIM3ZqVWtlNGtLOWNTdkU0V0tUZFVsLWtiSlRNaDJmdnhNSmh0Q294bUFYTDZFdXdIN2xVQUFNRkFQMWtiUklLb0J4bEM2UzUybWhkbFpiaUh6Z3h3TTNmeV9iOW1DelBfU2pTQ3BVZi1SYk1DUnpqM2lhVkNwWS1MaUVORjFJMUlWX2pTZFBIZzU1SHczMTI1THltQkl0ZUgtSDAyc3dYQUk0N1BHMWtkaUZ0YzBOWUotVjZ0VA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "LDC : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 14 Sep 2026 09:01:00 GMT",
@@ -128,18 +137,36 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Stmicroelectronics : L'appel du patron d'Anthropic à calmer le jeu sur l'IA provoque une chute en Bourse de STMicro et de Schneider Electric, tandis que Capgemini et Dassault Systèmes grimpent - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 14 Sep 2026 08:51:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihwNBVV95cUxQRE5YSmZmbmE5N1p4R3FrSzNjX1hoWC1zNzVKVk9jbjRBYVJtVGVKdVVvV3dHRlVub056SkV3S1h1US14RnU0Y3JjT1B0bk9pSW95Z2k5VjJRTkJPeVRGU1gzRlREa2dnUnZyS19pS0QwZWtrRGExcFRCR21jdEg2QW5XbWZaYy1fUHBmVU1wVmNTbVlSeFZ4bFFpTHZNWDcwdG1tRXpMQzRyTG9OTlhXdXVhd2ROcVJvcjV4WDBzb2tpblM4bWpNdjJ5ZHVHeWk4V3ZxWjRBeHl3aG9BejFVSlI5VE8zei1yR0V1RFh2amhVa1hBbEpYR3hqSFlvUmc4WkxQc1Vfd1hoOFRWUGJhdWJKWHZBdTNhRVBSczNsd0F6Z2I0SXhwMDg3LXJmdm1hX0gyVzgwZmZoTHhoY2d4UFlLMTRpYktNYUJGQVdoRkhrNWhpOEMzU21fTndOTlctOU5FNFJWc1ZSNlNJblZ1cW0tLTctZkUxWU9LczJaZzlWVG5DZVZr?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "negative"
   }
  ],
  "eco": [
+  {
+   "titre": "Dette publique : l'histoire d'une crise inévitable - Les Echos",
+   "source": "Les Echos",
+   "date": "Sun, 20 Sep 2026 14:00:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUDBSSEtkVng1YzJISFpobWZmYVZEWTZtdFVoUFFwWVJFeG9RcWxBaU9pWW9OMlZ0eE5IZjR6T1phVjZjZWd2bnl6Umd2VDNxRS1LTWtldzVhd013dUNzQ1EwcmZUdkhRRXA3T3VhSDY0Yk1xSFQ3WjVPWkhWeEZHVDZfYjRrUllva2J2d0IwcG1sYWVfaEQxeFNlTlBEMER6VGNja2pRNnZQUkU?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La semaine à venir à Wall Street-Après la hausse des taux de la Fed, les investisseurs se concentrent sur la t - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 20 Sep 2026 13:01:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxNVHllTm94Qms1cTNtaVp4blFjcGZmcFV3emZzU3h6a0VUT2tReUNpMVZwcDhMWVBkQlVYVkF6NkFuZ2VicHFYUnNYR3hMNXQ4RTNIQk12dm5SVnZJY0sxa01rcFlVaEZNWVZ4YXhXUXJPRzMxNy1mSUdsV092b2RISl9VTUloM3c2UU1WaE8yTE50bUtWRWhlbWlxNTZ6aktiUG9nTUpzS2VncU9zSXczaWN0dFQydDVpd0ZGNkJLWWREaUFURDJUM0czWFcxaTNUR3lsRzA0ZWZ3Z1MzOVFYelhEMzV5QVZ1Rldxb2l3dnVkdlBpa3pUYlYyTVg5ZWxLUlRhX3JOMDlyRjNvZXBKSm9DbHZ4aUtBcmdNLW5FaVNvS2xueXFPTjVXS0hqTk4xRVduNXJMUnVmTm5IYXVvaUlPanFiN0hZRC1FSm90eXpjVzNuUUHSAdsCQVVfeXFMUEU0UFR0OW1SSnk3cktBOEhmQWFyTGtNRVd0dXRlSlN1TmxTRzFhby1sTGxEQ1JQWElFUmxtby1STkxGRHM3X1JNM3VNNm9yVUplbUZFN3BIeC1EU3JYTC1TQmlUYUpEYlhBR0FtUndTT1FJLWs2d0lOTllTZy1HOVB2dlpycUU0aXhuY2VQNEtNRVQtenZ4cFRsbUJPa1V6M2VneVZCcThvdTJuMkJNaGFQMFZSM01iU19Qd2VDOEhEYV9KSEpYSTVzOEp3YzlXRXV0MFE2SkFvQ2R6YVZYeXRvUnZsNjFsSHFZcFlDQ0tjLXkwanQxTkltOVQ2NUlDQmVWOXZlQTFsU01PVV9DRW9GVHJuWS1kZDlWMmNWMW4yTS0tUlhxenJMWWpDN0dWWUg1Qmhwc0ZwbFBfSTY4bVJvVUpWdkFWbW5kek9ZYWY0cXNPTXdqSnVZR0E?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Après la hausse des taux de la Fed, les investisseurs se concentrent sur la trajectoire des taux et le ralentissement de l'IA - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 20 Sep 2026 13:01:03 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5rZ1ZKdHp1OUtPb0E0Qmc5dWp2cmtBeHVDUE5iQXFYYnNHaDZQcjRjbkctV2Q2a29QZ1F4V3FKb1MzSmhaRWNtVF9mSDZaRHltYnVQOWJyZTM1aUJ5cDE5a0kxZGtQVzNKWVhxRzRFVnBOSjJFTWw4?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "«Les projections d’inflation militent pour une action incertaine mais limitée sur les taux Fed» - L'Agefi",
    "source": "L'Agefi",
@@ -297,15 +324,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Construction d'un tunnel sous-marin à Primera Angostura : amélioration de la connectivité dans le détroit de Magellan - Noticias Ambientales",
-   "source": "Noticias Ambientales",
-   "date": "Thu, 03 Sep 2026 21:05:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZjBZWHI2NWs0Sm5jdkU1WXZpTzlwYV95SktGQ0lKM3hUMFJ3TE1BenlUSDdOVzJvdk5paXJ1QzljYXphNEFDRzFGX1BZcFdGZmpJaWtQeHBxWV9HNEt5MlYtd0I4YUpYV3BHZ0RrSE9HbVp1R3REU08wdXJwdTNFdjgxQXFCMGwyVEM4enFTMU5Rc1psVUpCMGE5UEZCOEJhQnBqSlVpU01jUEZjQzk1ckxVU1R3SnBxSm5SdkZoZUlyMkxrR3haVjNvNFNOVkw4dWRIYkNBU21oZGtYMDI1RFlDejhjRXA5UXBOdS0tbw?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - L'Automobile Magazine",
    "source": "L'Automobile Magazine",
    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
@@ -324,6 +342,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Le Chili prépare une note de protestation à l'Argentine pour les paroles d'un chef militaire sur le détroit de Magellan. - Demócrata",
+   "source": "Demócrata",
+   "date": "Tue, 25 Aug 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPWERQRlZPWEwtMzlsQmM2NzluRTQ4SWNDdUdtNEZieHQ0Qjlob0tkb19OTjBYaFo4ZDdWejllREw2eXRYZjlCeHJoSTBPY0tmY3BFdnRSaW5ySE85UWZLelN3WUU2czg0MjlmcndzNExxNFJmVlNTODMwQnVWRmtWU0NLX3czeW1CM0otNS1uNzVzWlIyUzEycDlQOTd0OGFUZ0RoTUlROENoYkhYZ0R1OVRVUXl6dldTb2JZOElhcU9LR1dsLUNQN2hjMVRPczZIVjZjTEU4akZZWG5MaUIyQ1hxc18zTVc0TUNRYTB4Yzd3azVy0gH6AUFVX3lxTE1JMVhQeGljb1V3S3NyLUxleG9vQmdsaGF5NmZIOUhUMjNsYUhjdWNpMU1lUWZMVk0yZDZFemsyVTlVU1ZOTWZ2WDNubDBsMktFNnc1YnVpWGpQZGdOWjRtMWFlY0xuOTVhRWVEMjBvSy03Y09Ja1R2VGNFUm0yLWFta2FnZnlUaThBdk5sMk5mVkFKdTQxTkJUU0JyN2pOWTF0alpwMWJQYzMyWERmZjZzSHAxcG1zZWNhQUhHeUZfR2VSejNPQXhSWUkxbmFZY1ZFLUpNdWJxOENFTUNSUXI4N3dhWk5pdGlaMmRySTRYR0M5eFFrOUdkR1E?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
    "source": "Banque Populaire",
    "date": "Tue, 02 Jun 2026 07:00:00 GMT",
@@ -333,8 +360,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - MACSF",
-   "source": "MACSF",
+   "titre": "DNCA Eurose lu0284394235, Fonds diversifié patrimonial - macsf.fr",
+   "source": "macsf.fr",
    "date": "Mon, 18 May 2026 21:01:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZGdfUkdZeWVNNDNnQk5faUR6MEhfRWc5RE5lMnpSWjNUSlBmaDQwMFdTS1lNY0swSDduR0o2LW5maEVRUnFKTjdic0s1OU85RjVhRWNiR0xiSVZ3WUJPOEt0UjZyQURaWHhOVzBEcEkyZHBLUk56WENMbVZPNXV2N3NTNVFGYTFnb1B1RVVETTRvcndCTm5oTUgzWlpEbk54SjNyUm9vRUt2REJta1FEMURrTVJwLXNrWmZVajBhWVV4T2lIYUZSc09vM29rc2lnRWtwcGQ5ZGM2b1k?oc=5",
    "tag": "Eurose",
@@ -342,8 +369,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
+   "source": "clubpatrimoine.com",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -360,8 +387,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
-   "source": "MACSF",
+   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - macsf.fr",
+   "source": "macsf.fr",
    "date": "Fri, 17 Jun 2022 01:42:12 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -374,15 +401,6 @@
    "date": "Wed, 12 Jan 2022 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
    "tag": "DNCA Invest SRI Norden Europe",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Découvrez le fonds flexible ODDO BHF Sustainable Credit Opportunities - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 03 Nov 2021 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPc1FzcTdDRUw2YkppWDEyY2xGQzRBWWVRMXBQZ0RWcEkyVHQ3dUxDbnd4eVM5Rm41NVFxYVdrVGxNUDhBZ0U1NmtDTG5USlRTdWkyZFo2aU1EZmNlXzhxX1hVMmU3a1hZNmNIQjJYRUllQW9nbmtFclFfdGxPZDMxb3lfcTMxaU8tczNnVERRZ0lqbmNWMHBsbG9pNFc0cDY3VWRIVHZRNnFYS2J3VWV5Tjh6QTdQMWxkdFRaMVktdXU2U1BrZTlhRkhYUXNuU2Fac1VrMTFhNzhaZUI5T25Ed9IB5gFBVV95cUxQT1JRN2p0Wk1vRVZSRmlZaXNJWks3TWVqelhjQkxocEhvcHVBWm5VVUgxZUY2WDg3LVNsSEF0MkJBblhqRDZBYWNqcXh2bUlSelI1c21VaHM2ZjBSbUZMb2RFamNKMTFXcHc5MDlESWNUb3ZvSnR6eWxtYWJFMnA0d2FwbHpvb05xdE9rSVJxZUd2TjZoNXRoa3o2QzlNLXBvSDdVckMwSmNiajRqdm5ZQVViakZ5QzlSLW9CXzV3TXNFSnA5R3NkUWNXMkptdkhmQmNtdzNZUk53NDVaaHM1c0ZQREhSUQ?oc=5",
-   "tag": "ODDO BHF Sustainable Credit Opportunities",
    "categorie": "uc",
    "sentiment": "neutre"
   },
