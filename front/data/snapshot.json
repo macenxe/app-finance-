@@ -1,71 +1,71 @@
 {
-  "genere": "2026-09-14T10:43:34.377Z",
+  "genere": "2026-09-21T10:47:02.608Z",
   "indices": [
     {
       "sousJacent": "^STOXX50E",
-      "dernierCours": 6266.11,
-      "heureCours": "2026-09-14T10:28:30.000Z",
-      "variationPct": -0.9331834,
+      "dernierCours": 6321.63,
+      "heureCours": "2026-09-21T10:32:00.000Z",
+      "variationPct": 1.3700161,
       "nom": "Euro Stoxx 50"
     },
     {
       "sousJacent": "^GSPC",
-      "dernierCours": 7656.98,
-      "heureCours": "2026-09-11T20:46:20.000Z",
-      "variationPct": 0.8598836,
+      "dernierCours": 7650.5,
+      "heureCours": "2026-09-18T21:29:48.000Z",
+      "variationPct": 0.16680591,
       "nom": "S&P 500"
     },
     {
       "sousJacent": "^IXIC",
-      "dernierCours": 26333.035,
-      "heureCours": "2026-09-11T21:15:59.000Z",
-      "variationPct": 0.9636486,
+      "dernierCours": 26522.545,
+      "heureCours": "2026-09-18T21:15:59.000Z",
+      "variationPct": 0.39459065,
       "nom": "Nasdaq"
     },
     {
       "sousJacent": "^FCHI",
-      "dernierCours": 8122.76,
-      "heureCours": "2026-09-14T10:28:30.000Z",
-      "variationPct": -0.69704396,
+      "dernierCours": 8144.36,
+      "heureCours": "2026-09-21T10:32:00.000Z",
+      "variationPct": 0.9837782,
       "nom": "CAC 40"
     },
     {
       "sousJacent": "SX7E.PA",
-      "dernierCours": 318.72,
-      "heureCours": "2026-09-14T10:28:30.000Z",
-      "variationPct": -1.046291409233428,
+      "dernierCours": 318.04,
+      "heureCours": "2026-09-21T10:32:00.000Z",
+      "variationPct": 1.4675855028075622,
       "nom": "Euro Stoxx Banks"
     }
   ],
   "taux": [
     {
       "sousJacent": "^TNX",
-      "dernierCours": 4.975,
-      "heureCours": "2026-09-11T18:59:54.000Z",
-      "variationPct": 0.6270255,
+      "dernierCours": 4.998,
+      "heureCours": "2026-09-18T18:59:55.000Z",
+      "variationPct": 1.0309302,
       "nom": "US 10 ans"
     },
     {
       "sousJacent": "IRLTLT01FRM156N",
-      "dernierCours": 3.68,
-      "heureCours": "2026-06-01T00:00:00.000Z",
-      "variationPct": -1.6042780748663115,
+      "dernierCours": 4,
+      "heureCours": "2026-08-01T00:00:00.000Z",
+      "variationPct": 3.896103896103894,
       "nom": "OAT 10 ans"
     },
     {
       "sousJacent": "IRLTLT01DEM156N",
-      "dernierCours": 2.97,
-      "heureCours": "2026-06-01T00:00:00.000Z",
-      "variationPct": -2.5110782865583388,
+      "dernierCours": 3.18,
+      "heureCours": "2026-08-01T00:00:00.000Z",
+      "variationPct": 3.5683942225996828,
       "nom": "Bund 10 ans"
     },
     {
       "nom": "CMS 10 ans",
       "sousJacent": "CMS10",
       "dernierCours": 3.04,
-      "heureCours": "2026-09-14T10:43:34.377Z",
+      "heureCours": "2026-09-21T10:47:02.608Z",
       "manuel": true,
-      "dateMaj": "14/09/2026"
+      "dateMaj": "21/09/2026"
     }
   ],
   "produits": [
@@ -86,14 +86,14 @@
       "id": 1,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 1,
-        "pctStrike": 148.17294281729428,
+        "pctStrike": 147.8568107856811,
         "zoneAutocall": true
       }
     },
@@ -114,14 +114,14 @@
       "id": 2,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 2,
-        "pctStrike": 148.17294281729428,
+        "pctStrike": 147.8568107856811,
         "zoneAutocall": true
       }
     },
@@ -142,14 +142,14 @@
       "id": 3,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 3,
-        "pctStrike": 148.17294281729428,
+        "pctStrike": 147.8568107856811,
         "zoneAutocall": true
       }
     },
@@ -170,14 +170,14 @@
       "id": 4,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 4,
-        "pctStrike": 130.99338292713,
+        "pctStrike": 130.7139040729933,
         "zoneAutocall": true
       }
     },
@@ -198,14 +198,14 @@
       "id": 5,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 5,
-        "pctStrike": 130.99338292713,
+        "pctStrike": 130.7139040729933,
         "zoneAutocall": true
       }
     },
@@ -226,14 +226,14 @@
       "id": 6,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 6,
-        "pctStrike": 130.99338292713,
+        "pctStrike": 130.7139040729933,
         "zoneAutocall": true
       }
     },
@@ -254,14 +254,14 @@
       "id": 7,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 7,
-        "pctStrike": 116.69168527807273,
+        "pctStrike": 116.44271958408086,
         "zoneAutocall": true
       }
     },
@@ -282,14 +282,14 @@
       "id": 8,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 8,
-        "pctStrike": 116.69168527807273,
+        "pctStrike": 116.44271958408086,
         "zoneAutocall": true
       }
     },
@@ -310,14 +310,14 @@
       "id": 9,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 9,
-        "pctStrike": 116.69168527807273,
+        "pctStrike": 116.44271958408086,
         "zoneAutocall": true
       }
     },
@@ -338,14 +338,14 @@
       "id": 10,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 10,
-        "pctStrike": 123.66909824615861,
+        "pctStrike": 123.40524600341456,
         "zoneAutocall": true
       }
     },
@@ -366,14 +366,14 @@
       "id": 11,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 11,
-        "pctStrike": 123.66909824615861,
+        "pctStrike": 123.40524600341456,
         "zoneAutocall": true
       }
     },
@@ -394,14 +394,14 @@
       "id": 12,
       "cours": {
         "sousJacent": "SX7E.PA",
-        "dernierCours": 318.72,
-        "heureCours": "2026-09-14T10:28:30.000Z",
-        "variationPct": -1.046291409233428,
+        "dernierCours": 318.04,
+        "heureCours": "2026-09-21T10:32:00.000Z",
+        "variationPct": 1.4675855028075622,
         "nom": "Euro Stoxx Banks"
       },
       "indicateurs": {
         "produitId": 12,
-        "pctStrike": 123.66909824615861,
+        "pctStrike": 123.40524600341456,
         "zoneAutocall": true
       }
     },
@@ -423,7 +423,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-09-14T10:43:34.377Z"
+        "heureCours": "2026-09-21T10:47:02.608Z"
       },
       "indicateurs": {
         "produitId": 13,
@@ -449,7 +449,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-09-14T10:43:34.377Z"
+        "heureCours": "2026-09-21T10:47:02.608Z"
       },
       "indicateurs": {
         "produitId": 14,
@@ -475,7 +475,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-09-14T10:43:34.377Z"
+        "heureCours": "2026-09-21T10:47:02.608Z"
       },
       "indicateurs": {
         "produitId": 15,
@@ -501,7 +501,7 @@
       "cours": {
         "sousJacent": "CMS10",
         "dernierCours": 3.04,
-        "heureCours": "2026-09-14T10:43:34.377Z"
+        "heureCours": "2026-09-21T10:47:02.608Z"
       },
       "indicateurs": {
         "produitId": 16,
@@ -526,13 +526,13 @@
       "id": 17,
       "cours": {
         "sousJacent": "BNP.PA",
-        "dernierCours": 102.86,
-        "heureCours": "2026-09-14T10:28:23.000Z",
-        "variationPct": -0.8673877
+        "dernierCours": 101.5,
+        "heureCours": "2026-09-21T10:31:50.000Z",
+        "variationPct": 0.7542697
       },
       "indicateurs": {
         "produitId": 17,
-        "pctStrike": 132.14285714285714,
+        "pctStrike": 130.3956834532374,
         "zoneAutocall": true
       }
     },
@@ -553,13 +553,13 @@
       "id": 18,
       "cours": {
         "sousJacent": "STLAM.MI",
-        "dernierCours": 4.5725,
-        "heureCours": "2026-09-14T10:28:28.000Z",
-        "variationPct": -2.0877912
+        "dernierCours": 4.255,
+        "heureCours": "2026-09-21T10:31:56.000Z",
+        "variationPct": 1.2251772
       },
       "indicateurs": {
         "produitId": 18,
-        "pctStrike": 54.112426035502956,
+        "pctStrike": 50.35502958579882,
         "zoneAutocall": false
       }
     },
@@ -580,13 +580,13 @@
       "id": 19,
       "cours": {
         "sousJacent": "CAP.PA",
-        "dernierCours": 109.1,
-        "heureCours": "2026-09-14T10:28:25.000Z",
-        "variationPct": 6.0252643
+        "dernierCours": 107.55,
+        "heureCours": "2026-09-21T10:31:21.000Z",
+        "variationPct": 3.0666072
       },
       "indicateurs": {
         "produitId": 19,
-        "pctStrike": 102.82752120640906,
+        "pctStrike": 101.36663524976437,
         "zoneAutocall": true
       }
     },
@@ -607,13 +607,13 @@
       "id": 20,
       "cours": {
         "sousJacent": "RHM.DE",
-        "dernierCours": 1002,
-        "heureCours": "2026-09-14T10:28:10.000Z",
-        "variationPct": 1.1508201
+        "dernierCours": 1007.2,
+        "heureCours": "2026-09-21T10:30:53.000Z",
+        "variationPct": -0.4546329
       },
       "indicateurs": {
         "produitId": 20,
-        "pctStrike": 87.11528429838289,
+        "pctStrike": 87.56737958615894,
         "zoneAutocall": false
       }
     }

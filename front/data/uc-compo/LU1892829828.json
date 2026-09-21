@@ -1,10 +1,10 @@
 {
  "isin": "LU1892829828",
  "alloc": {
-  "action": 98.5,
+  "action": 98.3,
   "obligation": 0.1,
   "liquidite": 1.4,
-  "autre": 0
+  "autre": 0.3
  },
  "secteurs": [
   {

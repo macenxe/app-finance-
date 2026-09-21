@@ -1,9 +1,9 @@
 {
- "genere": "2026-09-14",
+ "genere": "2026-09-21",
  "fonds": {
   "LU1120766388": {
    "note": 4,
-   "risque": 3,
+   "risque": 2,
    "societe": "Candriam",
    "annuels": {
     "2016": -17.2,
@@ -426,7 +426,7 @@
    }
   },
   "LU1261432659": {
-   "note": 4,
+   "note": 3,
    "risque": 4,
    "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
@@ -866,7 +866,7 @@
   "FR0010915314": {
    "note": 3,
    "risque": 3,
-   "societe": "Crédit Mutuel Asset Management",
+   "societe": "Credit Mutuel Asset Management",
    "annuels": {
     "1995": 12.4,
     "1996": 8.4,
@@ -1196,7 +1196,7 @@
    }
   },
   "FR0010286013": {
-   "note": 2,
+   "note": 1,
    "risque": 1,
    "societe": "Amiral Gestion",
    "annuels": {
