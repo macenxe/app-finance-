@@ -1,6 +1,15 @@
 {
- "genere": "2026-09-22T18:48:34.837Z",
+ "genere": "2026-09-22T22:01:05.924Z",
  "globales": [
+  {
+   "titre": "CAC 40 : l’indice hésite, l’IA soutient les marchés - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Tue, 22 Sep 2026 07:47:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZEE5UTk0M3RLZWdKOHRIeS1JN3Y4WGxXTy10TFN0ZEpOLTlCOUZXck95NlE2X3RaMVg4ZjQ4NnVaYm8zOUJERXhOWF93NVNwYVV0TlA1enBFMFY0SUJLTnpHdDY0eHZiT1UxMzhzX0w1dmx5U0doSlNHYktEZW81b2pwRXZ4cmJ2bHV0X1lqTGhyOEFuNVdIQzJxMERxbUdSQXRV?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
   {
    "titre": "La semaine à venir à Wall Street-Après la hausse des taux de la Fed, les investisseurs se concentrent sur la t - Boursorama",
    "source": "Boursorama",
@@ -9,15 +18,6 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le \"spread\" entre le Bund et l'OAT à 10 ans atteint 100 pdb pour la première fois depuis 2012 - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 18 Sep 2026 14:41:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPVm50enFNaWJCVWlFWGtIQlBuczdwa0l6bEhkSlZhazlZNzRwWFJBU1V5Um8xMlZyT1Y1SWtYd0FhMUluM2pWd3U0TXNrRDZ6Q1FuWlh1Snd2aHRTVmFtc1hBc0N0X3BsZmwtYTVvYWxaYllpZGtOdGFjM3JiVFFUSktuZTN4MnlOQkNnLTNhRlRGVkxRczNwRDBhNFNGMzV5akx0WkxLQlpnS1hwTnN5dGZWVV9KQXd3WTFlOXFHNDlKbjVvQzlZZjBOTDR5MWFqM181YkNnVDFzMHJpOWJFNXd0Mk5qdzBoVW43Z2JDdlpROUlzZ3ppU2tTS05tOWZ4dldv0gGDAkFVX3lxTE9WbnR6cU1pYkJVaUVYa0hCUG5zN3BrSXpsSGRKVmFrOVk3NHBYUkFTVXlSbzEyVnJPVjVJa1h3QWExSW4zalZ3dTRNc2tENnpDUW5aWHVKd3ZodFNWYW1zWEFzQ3RfcGxmbC1hNW9hbFpiWWlka050YWMzcmJUUVRKS25lM3gyeU5CQ2ctM2FGVEZWTFFzM3BEMGE0U0YzNXlqTHRaTEtCWmdLWHBOc3l0ZlZVX0pBd3dZMWU5cUc0OUpuNW9DOVlmME5MNHkxYWozXzViQ2dUMXMwcmk5YkU1d3QyTmp3MGhVbjdnYkN2WlE5SXNnemlTa1NLTm05Znh2V28?oc=5",
-   "tag": "Obligataire",
-   "categorie": "globale",
-   "sentiment": "neutre"
   },
   {
    "titre": "Le Dow bondit de 310 pts alors que l'impact de la hausse des taux de la Fed s'estompe - TradingView",
@@ -94,17 +94,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Aramis group : Le spécialiste des véhicules d'occasion Aramis prend 7% en Bourse, propulsé par des spéculations sur une vente de la part de 60% de Stellantis - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 18 Sep 2026 14:12:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgJBVV95cUxOR0ZVNEFXMG53LTlZbFhJMnlnUElvUzZHeUp5MHVnX0ExTHB3eDlrSW9YbTZqNFFvZGRFa3lVX0NvSjZ6V0c4Z2VDTTlkTVBYT2VvUmJSMFRDeGNmajRnMUVGNWdrR21rcXVjaGJ0eGxYQzBOUEV5VTRaNE9rWVRQR2pLRVhDZXRTMFI3clh5YUhaUERlekQxX3dIUWlmQkdDNzctckl2OVdHWVVqOXdPV0hZNTRKME9iOWQySUhUSjdQYm1wYmIwaVJJVXgzSzNLcVA3alF3akZhODcyM0t2eEVnQXowWVRBRnFRWEhrRVF5cU5SV1lXTElIc3BBMFFFWU9ucEtsR1RtXzR0S2V6N1p5U1lTTGhyVDNxWTR5WFlwMkI2UnU0UGF5UTI0LVVoNTBtenRHbFE5MzRMMVp2VDFJNUFZT1dmejV1M1Vn?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Bourse : Solutions 30 et Boiron souffrent, Stellantis pourrait vendre Aramis - zonebourse.com",
-   "source": "zonebourse.com",
+   "titre": "Bourse : Solutions 30 et Boiron souffrent, Stellantis pourrait vendre Aramis - Zonebourse",
+   "source": "Zonebourse",
    "date": "Fri, 18 Sep 2026 07:09:56 GMT",
    "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHRxaXRNRko2aF9lSGdNWUVEYWRGc1gzSnZRSjYwTFZ2a2ZPVWxVbzY4Yzd1ZU9lZGJMamZ4aWNPOUVpVTJVcVk2UGhqejgyZHBzQjBaTHRlam1PejhYODZsVkxQcFAyV2J1NXBvcUZxTUxCVTJIUWM4UlBoZElQUkxWYUF0WFVwQ2JWMHAxa1YxN2pkLTJyYmh5d1EtYlhuYk1ndGswaXJybHNGbGZFcFRBVTBYd1Yxa196MVo1aWRMdnRpbWhwUkZqSmhOTlE?oc=5",
    "tag": "Stellantis",
@@ -119,9 +110,99 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40 : rebond avant la Fed, Renault et Stellantis chutent - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Wed, 16 Sep 2026 16:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaDBFUF82VFhjUjkzY0FPM1g4bTR5b0NqVmZiWXdoRVV2MVROT3NsNXVsSFVrRlh4SzNpSE81QjNldFZNRkRBcTBLZWFGT1hsUDc4eGNFQm54RjI5dGs4MndoVXQtVmViSFA3RHNtV2w0OWloZ2VUYXpSc2s5elRWNmw2MjJydVZfNVVmN2FSNFMyMDNuMk9raEt0eHp4bzJ4?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "positive"
   }
  ],
  "eco": [
+  {
+   "titre": "JOUR DE COTATION-Le pétrole recule, le Nasdaq s'envole - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 22 Sep 2026 21:02:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZ1Eyb3pHcWt2TW1nYTVoSWpaVVpBS0FNZ3VubGs2eWhPcmZkWnZZRnVHVlpiNDRyYXN4dTNxcFhHb1hpUmZ0NEtBQzh6cXZZY0dHdnB4RHRlSUdia2RLUHoxN2lxM3JPSFRBN2hWWU5ZVkJWZ1hXMnVnTi1iRVZnbUQwNHpINTlPaG5haGFwUHhObTlPUmZYMGsxellRZXJZSzBycEhoeVNvX3d4VU9sbHlKZ1N1aTF1alNUVlZvcW50dWdDbVB6M1dxMFVMTGl40gHQAUFVX3lxTE5nUTJvekdxa3ZNbWdhNWhJalpVWkFLQU1ndW5sazZ5aE9yZmRadllGdUdWWmI0NHJhc3h1M3FwWEdvWGlSZnQ0S0FDOHpxdlljR0d2cHhEdGVJR2JrZEtQejE3aXEzck9IVEE3aFZZTllWQlZnWFcydWdOLWJFVmdtRDA0ekg1OU9obmFoYXBQeE5tOU9SZlgwazF6WVFlcllLMHJwSGh5U29fd3hVT2xseUpnU3VpMXVqU1RWVm9xbnR1Z0NtUHozV3EwVUxMaXg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Perli (Fed de New York) : la boîte à outils de politique monétaire fonctionne très bien - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 22 Sep 2026 20:26:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQcFB5dlR6UGpseTNvM3E3WXhnLWlvR3hxYWFJdWhSQVhZY0ppSk9Pb0VtZUZsU2JZb2hRRjc5MmVZLVRIamlXd1BlTEtob0pKbFpsVUVSR2JiQUwwS29rNnFaOXBYY3ZaSlYyQ0Mxc19oMFV6RHJkNF9HOUVXRmtKYlFPMFQ4eC12MnpMdHVJMWsxSVB2bXVjV2dfYzRlSTNPWk81RkRDRFJseVJVLXQ5Y29LWXhBeDk3VU5qWnY5cDN4TkMyam5sWFQtSU5veTVXVlFzdGIwTFEzdkk?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mardi: Intel, AMD, Seagate, Adobe, Alibaba, Lennar, Sofi Technologies",
+   "source": "ABC Bourse",
+   "date": "Tue, 22 Sep 2026 20:24:50 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-intel-amd-seagate-adobe-alibaba-lenna_702951",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Le Nasdaq enchaîne les records au terme d'une séance plus contrastée",
+   "source": "ABC Bourse",
+   "date": "Tue, 22 Sep 2026 20:22:02 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-le-nasdaq-enchaine-les-records-au-terme-d-une-seance-plus-contrastee_702950",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'IA socle de la transformation chez ENGIE – 22/09",
+   "source": "BFM Économie",
+   "date": "Tue, 22 Sep 2026 20:15:32 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/01-business/l-ia-socle-de-la-transformation-chez-engie-22-09_EN-202609220899.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'IA socle de la transformation chez ENGIE - 22/09",
+   "source": "BFM Économie",
+   "date": "Tue, 22 Sep 2026 20:14:45 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/01-business/video-l-ia-socle-de-la-transformation-chez-engie-22-09_VN-202609220903.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Inflation: \"Les fruits et légumes sont en hausse\", observe Alexandre Bompard, PDG de Carrefour",
+   "source": "BFM Économie",
+   "date": "Tue, 22 Sep 2026 19:37:32 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-inflation-les-fruits-et-legumes-sont-en-hausse-observe-alexandre-bompard-pdg-de-carrefour_VN-202609220880.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le Tech Flash : Muse propulse Meta en tête de l'App Store, par Léa Benaim - 22/09",
+   "source": "BFM Économie",
+   "date": "Tue, 22 Sep 2026 19:26:03 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-muse-propulse-meta-en-tete-de-l-app-store-par-lea-benaim-22-09_VN-202609220871.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Latecoere affiche une croissance au premier semestre 2026 mais voit sa rentabilité reculer",
+   "source": "ABC Bourse",
+   "date": "Tue, 22 Sep 2026 18:55:06 GMT",
+   "lien": "https://www.abcbourse.com/marches/latecoere-affiche-une-croissance-au-premier-semestre-2026-mais-voit-sa-rentabili_702949",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
   {
    "titre": "La FNSEA demande au gouvernement que l'aide aux agriculteurs pour l'achat de GNR passe de 15 à 30 centimes d'euros par litre, invoquant l'envolée des prix des carburants",
    "source": "BFM Économie",
@@ -130,33 +211,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le Nasdaq atteint un nouveau record intrajournalier, les valeurs liées à l'IA en forte hausse - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 22 Sep 2026 18:28:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOb00zMUt4X2pLRDJlX28wVlV1WFpQYzhoOGVxNFJJc1VHX0tNODlVQU1GUWdCblZVeGl5bllIVXJXcUNwNXYtZmpYdldKSkVjbXBFdXVybURRR3hXWDRGNHZuSlNjZEgxTkNBLVYzYU00N192Tm5Qb2c1NDl0dUZiSmVqRE5adUFRS1dEUjFYUXBLc0V5elJKN1JpbFN1SVU0aFY0WDJuMDhLRERtTXJzUWx6cUxGUV82TFFDemFsQ2syc3hvWnpCLU1XNVNBV3hTbUtYUWZ3XzdIM0pmRVk3NUMxbU9tWWFpVmxDMVBxZ1B3SDZpRWRaT1hwSU9UelHSAYQCQVVfeXFMTXNFeGlKVGdzRDVpdzhOc2lqd1gwSjBnaGhhYmx1R3BjQjFhaU1VUjVsRmJIV2NwQkN4WVNNUy1xWG5TbjNpdm5ZTGVCcHFiZk4wUkZ5QW9pek5CZFpScUxadl9GTnZfNXZMUlBuVkF4eFdPRGR1Vk83RVdGR2FPS2RXbC1MLWpubWRUNzVPdlhOV2pidURNMDBTOUVnRmJzTm1aUkdVZ2NwSFFsc0pnTnhONHRDaGZTc0dzR3M3ZXJuYXZ1SG9aZExQSzNTNWJUZzJXc2hCYW5WNXFqZHZxMnVKZ05DeFdQT2VGRUFYeXhkaDczV3JUQ1FnSGxFYmQ3LXduV3I?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Le Nasdaq touche un record en séance, les valeurs de l’IA s’envolent - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 22 Sep 2026 18:28:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMlA4a1JPUk5pdlloYWxERjZuTVRUdlZxcFZtNHluaGVQVjBsOEVLSFF4TVJRZWhwXzVNNVl3d0ttblk1M0xUTEp6TXpGcXV4YTNQeTNQQlNlYlMta3V3N29nYjVxMUtNSGRKSTlKWHYtVGFUZWx1Z0tvYkl1SHpYNzhrVWItMFotaXBFTjVTeG1FNC11em52YzUwVXBaMnBsZk9WLVd4Zk0teW96MWtXZExBNmktT0VLMkxpRlFmVW5zUzMwaDE0Zg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Meta teste un « concierge humain » pour son nouvel agent IA personnel, Muse - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 22 Sep 2026 18:17:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZWowTlBmelBQRUlHTmYxWldsNGZIOFpnNTN5QmplVk0xb2RUSnRReWR5OFBvRmdHcjVrZG9wdjNRZEktWm11akxWZHdXbHhybnYwd01aUWZxRU84X0JwRktqaVBuZjVrTmNONjRGTS1iQ3hZTzFrZGRTSTdscjZocm1wSzhSUzc4OEc2SXlWZjd1aVdpWDFZMDhCdFE5b3ZYUDFySUREVmdhTUFTZGpsb2xLdURBa2VyLTQzeGhlLVE5QkJGRzcyUHRCRTVfVzRlTURhQnRNRzFSYml5OGlETmVR0gHnAUFVX3lxTE14NVNIeFNqVGNSUHFRVWZTNGYyd2pZR1hqN0lLampsclliaHpsekJYR242dmduRmpod2t6OUhvMEZJR242Z1luSThwOWQxNDlwUEZoc0lyZlFrd1cwM0ppdUd4UG5XQnVrQUtNNWdJck1qOHBnaGk4SWZOMTY0bnl5RTVZRWc1emJUVFk5TEFaQVI3b1lLbDVPdmhTSXlMdEh0azJPT1VINDJCcGRFdGRJb0N2dTlZRW16MHFhY3p4VGQzYW8xc3JCd29iQnhZZXNvMlIzWjhUTHFuMXhCZ2xzNFE3TW1oVQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Microsoft : encore des licenciements chez Xbox - 22/09",
@@ -177,74 +231,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "L'autorité de régulation du Nebraska rejette la plainte déposée contre The Andersons concernant une créance no - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 22 Sep 2026 18:08:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPRkdJSHF0TUZXVWVCRUc1Tk1ycWlGeHJKbXBBVnNzc0YwZG9Qak91VWFfTE03Zjh6UGlGRmgzM0MxbkRjZjZWSTJObGRvWnBoZnBzZ18wUWJ1T1JBUE5QbHJaWnBqN0gwRm1SVW5YRnNyNVNJR0Y3bWszLXBWOFFGY0s5NGl1dXZKX0xpZzEyVTl6dUFMdkZldlBWZmE1MkYxbmM2OU5NSGFkTkljMTdGV1FZWERKOTVQNl9LUG1sU2tudTNiM3lMaWdUQ0dPOVB4cU1mU2tlU2FMMEJ1RGM5VXVxQ3hWVEhKZXpmRHp5b2d4QjBhV2hKMk9qaXJZbElhMGU5RUZ0NmdtZE1NSXdIV2hMQ2FnUDZlZDVKYjBiemlYbjJFZ3dDYl9fTWdZYTdRdXdyX0pnLTbSAb4CQVVfeXFMT2FvUGsxNGhyYk5HZVBvNEQzNk1lNUNCZHZMSGxhUVE0aXhKV3ZSMHFVcnZVY0pKa3hLc3pQUVBIakVBQUJKSUtNRFVVV1Zva1lrTXdKUmVYLW5XT0ZqVEpKeHl4dFlDMEMxUE94RXRNZkk0VUhlSGRmUlpRWWRicDlmQ09NQW91YkxJTGQwdTZ3VkM1OEVaMkNfdGFtYlJGUDVTd0Y1ZFBTNGJRX2dDTjdIczRhUWpSM01LNmdPTzRPWlEzY1FHaE5WR1ZMWVMzd2d6SmlUNnZNdmgyZHBJbUFtLWFucEQ1MzZZR3oyZDdQWUx5T3VCanE4LXRDLS1sWWFIUzJxV3UyMkZXVHdoX1pMbWVOTnRMdG1YX1VaTjhjSHhsQjlzYXZmWDRUb0hrc3NfbDNsTGI3TkJ1U2xB?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "La Fed (Réserve fédérale) : Barkin estime qu’on ne peut pas compter sur les taux d’intérêt de marché pour faire le travail contre l’inflation - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Tue, 22 Sep 2026 17:51:52 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRmtVeDQzZzN3SWROWHVzTFBGMXZTY0xFdEVBTEk4T083UmFuTm51blc4NEF4US05RHkzWmtBX0JZb0pLVWRic3dyQy1ySy1JeHZYaGtkcXVCU0ZncmNnTU1pNVNHbWlZOTJQQUEwWEJfR0JlT1c0ek1fM196X0JnelJ0YVFFYlNsckt6dUlHNld3aHh6V2VQUGZmZ203dUFJTldab0dsSXRWS2x2d0p5VUtwOWZuMEk3dWJXemZuQ3U2bFdFd2pYMkswWk9sX0hLUmtLenZEZjdWMlNSZE1FMGZZLVN5YlM3b2c?oc=5",
    "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Muse propulse Meta en tête de l'App Store – 22/09",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 17:48:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/muse-propulse-meta-en-tete-de-l-app-store-22-09_EN-202609220801.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Muse propulse Meta en tête de l'App Store - 22/09",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 17:45:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-muse-propulse-meta-en-tete-de-l-app-store-22-09_VN-202609220804.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Aides annoncées par le gouvernement: \"Cela reste un plâtre sur une jambe de bois\", juge Ange Natoli, pêcheur et adhérent de l'Organisation de producteurs pêcheurs OP du Sud",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 17:11:28 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-aides-annoncees-par-le-gouvernement-cela-reste-un-platre-sur-une-jambe-de-bois-juge-ange-natoli-pecheur-et-adherent-de-l-organisation-de-producteurs-pecheurs-op-du-sud_VN-202609220773.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Opposants qui tentent de bloquer les travaux, risques environnementaux, arbres arrachés... Le chantier contesté d'une nouvelle autoroute a démarré en Haute-Savoie",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 16:43:19 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/transports/opposants-qui-tentent-de-bloquer-les-travaux-risques-environnementaux-arbres-arraches-le-chantier-conteste-d-une-nouvelle-autoroute-demarre-en-haute-savoie_AN-202609220741.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Quel impact des prix de l'énergie sur la croissance ?",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 16:26:45 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-quel-impact-des-prix-de-l-energie-sur-la-croissance_VN-202609220729.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Jusqu'à 2.035 euros de revenus pour toucher les 100 euros, le plafond de la prime employeur remonté à 1.000 euros... Le gouvernement élargit ses aides au carburant à 5,5 millions de personnes",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 16:21:16 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/france/jusqu-a-2-035-euros-de-revenus-pour-toucher-les-100-euros-le-plafond-de-la-prime-employeur-remonte-a-1-000-euros-le-gouvernement-elargit-ses-aides-au-carburant-a-5-5-millions-de-personnes_AV-202609220717.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -267,29 +258,11 @@
    "sentiment": "positive"
   },
   {
-   "titre": "L'équivalent de 2 années de PIB va changer de mains: les baby-boomers vont léguer 6.200 milliards d’euros, selon les notaires, mais l'État n'en récupèrera que des miettes",
-   "source": "BFM Économie",
-   "date": "Tue, 22 Sep 2026 16:06:04 GMT",
-   "lien": "https://www.bfmtv.com/economie/patrimoine/l-equivalent-de-2-annees-de-pib-va-changer-de-mains-les-baby-boomers-vont-leguer-6-200-milliards-d-euros-en-15-ans-mais-l-etat-n-en-recuperera-qu-une-petite-fraction_AD-202609220699.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "L'Europe finit sans réelle direction après le discours de Trump à l'ONU",
    "source": "ABC Bourse",
    "date": "Tue, 22 Sep 2026 16:05:31 GMT",
    "lien": "https://www.abcbourse.com/marches/l-europe-finit-sans-reelle-direction-apres-le-discours-de-trump-a-l-onu_702940",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bougie rouge sur le MIB ; mise en garde de la BCE sur l’inflation - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 22 Sep 2026 16:04:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMFZSeWdKTTUtRWh6Z3EtdXBFUy1STkIzMWhSUGR1WlVNZmNxNmtKaU1rNXR2a1VoMlUzLVRuUm1wT0pRdmZ0S2p2ZjRrYnhobndtY0dCTXhWMFlZMTNQQldfUUhFM0pvYUZFcjRIa3Q2ZFFvMEUwRGIyOEp3cFVyS3pDS2JhRTBPSXZTX3JSZUd4RGc1Yk9NaFFKdzZlaFZocHJCVndzdHY1eTFSVlJTMmlxekhhMTRIVl9CZ2hvT0NlUQ?oc=5",
-   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -348,13 +321,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La « discount window » de la Fed soutient la liquidité des marchés, selon Jefferson - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 22 Sep 2026 14:24:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdFNLc0RtUHlKVzVhUlJfdlR1a0JjOGNZLXZUU0ZZbGNoZEpMUGUtcFJRejlpajhPelRUMXBZdjBxZ3hCcGxFSHZINzAzZC1VeGFKYTUzdDNqMG1PU201bWhLYzdycGlaQjlwREJfWkJBV3JlVlktZEhwUzN1akRtM3ZvTG4wWDRFTm5pX240QTBwd2MxMF9QNXFFdzgyMjVWM2ZqUTdQM2Q2T1lvdy1mX2ZTNjhZd0RkWHJYaXZEVm9tRHJqZlo1U0dtd2hRNFZHWXR3dA?oc=5",
-   "tag": "Fed taux",
+   "titre": "La BCE et les banques centrales de l'UE proposent de supprimer la règle sur les dépôts en stablecoins - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 22 Sep 2026 13:52:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOMGswOXNUckQzM2pXRy1HQ0g1SE9QQy1kejhDaEdRWTlqQlljMjd5eVpZenJwVHNNWHliNTJXNHFKUXp6ekpxR2xHMzBVYVNJQzdXdEluYmF6bkFYekxKX2lKSGRHNGpuYUtoeklsdWN2a0JvTkg2ZHpFQy1WTkd3bURXSHVnUE1QUlhacTJ6c1RpbUU4VThHSFNWVHM1djNCLVRUd1RwWW4wU3dKb1ZyWGRPajdEVmJFekY0bzVNLVFqbTZ4SnZNQnAzNHFjRTdPc2k2LXVmeWZ0NG40RHV6SUdyaGNIVzZIdGt3dmVKMEs2YWdQSTB4Q2k1Q2xjZUVwb0F4ckJFSDBFQTN3TGFOMW5UekVGdWlzZ3VUMU1EdTc4TUnSAaMCQVVfeXFMTjBrMDlzVHJEMzNqV0ctR0NINUhPUEMtZHo4Q2hHUVk5akJZYzI3eXlaWXpycFRzTVh5YjUyVzRxSlF6enpKcUdsRzMwVWFTSUM3V3RJbmJhem5BWHpMSl9pSkhkRzRqbmFLaHpJbHVjdmtCb05INmR6RUMtVk5Hd21EV0h1Z1BNUFJYWnEyenNUaW1FOFU4R0hTVlRzNXYzQi1UVHdUcFluMFN3Sm9WclhkT2o3RFZiRXpGNG81TS1Ram02eEp2TUJwMzRxY0U3T3NpNi11ZnlmdDRuNER1eklHcmhjSFc2SHRrd3ZlSjBLNmFnUEkweENpNUNsY2VFcG9BeHJCRUgwRUEzd0xhTjFuVHpFRnVpc2d1VDFNRHU3OE1J?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "Susan Collins, de la Fed, met en garde contre des risques d'inflation accrus dans un message publié sur Linked - Boursorama",
@@ -364,40 +337,13 @@
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Après MBDA, Safran prend à son tour une participation dans Akira",
-   "source": "ABC Bourse",
-   "date": "Tue, 22 Sep 2026 13:44:31 GMT",
-   "lien": "https://www.abcbourse.com/marches/apres-mbda-safran-prend-a-son-tour-une-participation-dans-akira_702927",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Orange: rupture des 14,80 euros, RSI dégradé et pression vendeuse accrue",
-   "source": "ABC Bourse",
-   "date": "Tue, 22 Sep 2026 13:00:26 GMT",
-   "lien": "https://www.abcbourse.com/marches/orange-rupture-des-14-80-euros-rsi-degrade-et-pression-vendeuse-accrue_702925",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mardi: Intel, AMD, Seagate, Adobe, Alibaba",
-   "source": "ABC Bourse",
-   "date": "Tue, 22 Sep 2026 12:19:55 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-intel-amd-seagate-adobe-alibaba_702923",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
  "uc": [
   {
-   "titre": "20 septembre 1519 : Magellan lève l'ancre pour un tour du monde dont il ne verra jamais la fin - Le Tribunal du Net",
-   "source": "Le Tribunal du Net",
+   "titre": "20 septembre 1519 : Magellan lève l'ancre pour un tour du monde dont il ne verra jamais la fin - letribunaldunet.fr",
+   "source": "letribunaldunet.fr",
    "date": "Sat, 19 Sep 2026 18:01:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPd1BXdGRDc1IzTm1UMkRQVU1Pc3pnV19GLWtDUUlhaW05X3VVQW5aSUgxZnFsYVhtd2o5QXVBbXlNXzFnLU1WT1dhcGdJNnpZRnQ3cXFTVUJwaUVOSXdjNG5ULW02TEFGUml4ZXZvQ0NjUUhDeGVlcnJteFpQVy1fRUVpbDY5RkJuMVBkX1JQSmtEWWJnUk1oQi1pcDhzYnc?oc=5",
    "tag": "Magellan",
@@ -405,8 +351,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - ouest-france.fr",
-   "source": "ouest-france.fr",
+   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - Ouest-France",
+   "source": "Ouest-France",
    "date": "Tue, 15 Sep 2026 13:15:41 GMT",
    "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTUxpRUFwRnB1TVpjVU84d2l1WFI1RWg1bEk2elJrci1yc280UzF2bzJBN1FBWlI0OXhXTTNZY0kwbFMtUDRxaUVPdE42OXNib2RUUVZoSG5ZUDZ1Y05ZTHR2U2s4dTdxLWg5eXl1MV8wN3pKOWc3TGFwSUdTZGpQcDhLdmFUclo4N0IzNHVkNGFDejNTWGRnRjNiMjcxaTVSUURNYnRfUVpUWkw4dG1GbG5ZYl9iWExhNDdwaWt3NG1YNVh2bkx4TVlaZzJBZHZoREk2WXJwYU11VlNSRDF3TnVGV2ViaDBCWUM1eURTS3p1bTdNZUlXQ3VNNWJBYWtrdXJR?oc=5",
    "tag": "Magellan",
@@ -423,8 +369,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - presseagence.fr",
-   "source": "presseagence.fr",
+   "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - Presse Agence",
+   "source": "Presse Agence",
    "date": "Sun, 06 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYUpUU3BvQ19nZFNLZU0wV25SVlgzVGhPc2FTdm51VG5YdnlKNzM2MHVyU0lNelNBX3FaT0FtdVotTGtCOFpNNGtpRUZjSjQ3RV9DMmZtZk52VzRnYjRlUnlrY2p5SWJOazB5UHJaTS1TV05lZy04M2NkYW42cC1iS3pBT1dSNnZCYUR5ZGd3MXV6ekhLcEdCX1FDbnh4T3ZWRC1YVExpX0czTlBRMHRRRWxrcG8yQ1ppRS0xaXlsNm5vYzQ2Z2RILTdOamdiNzQ?oc=5",
    "tag": "Magellan",
