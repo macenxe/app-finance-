@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-25T15:47:47.290Z",
+ "genere": "2026-09-25T19:59:39.127Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 21 au 25 septembre - Boursorama",
@@ -20,15 +20,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les cycles de relèvement des taux de la Fed ont historiquement pesé sur les actions américaines - zonebourse.com",
-   "source": "zonebourse.com",
-   "date": "Thu, 24 Sep 2026 05:03:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNNi1Va0FvUklKZ3A0b0RHbGFkblpFR2doMElIWExveHM0Q1VPSWIyTXRWUTc4NkdzYmxwRE9LZmNPTTk3SXBaaS1rNUMza1VTbzA5dDNSRTJzOXNsOVJ2X1V6d21Ha29wTFdqZUx5TzZka0hGMXpOX09BUm9uMXFiVTZFZkNXUUpta3A4UzdEVGltVkdRYzl2SHExQWM1WWlVS3Bqc3FDVW9IbWtuS2xodll6ZW5UQmhId3Fsa2JzSzhwczVaem1Rb3M2Q3NXOUdyY1R1cFZOSV85RWNIeHNtR24tRHhJTVpXUTB5SDU5TU9rZmM?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Le Cac 40 cale, la détente des cours du pétrole marque une pause sous les 100 dollars - Les Echos",
    "source": "Les Echos",
    "date": "Wed, 23 Sep 2026 10:37:36 GMT",
@@ -36,6 +27,15 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40 : la Bourse hésite, la BCE «sous pression pour emboîter le pas à la Fed» sur les taux - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Wed, 23 Sep 2026 08:56:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNamwzSUloTDdlS1pUNUNJcG5HZEUzc240UG5RaHJ1UmduZkhCZG1ucXlZRjBqVW0tV2ZvRWFVbFMtMXBHM3F3YzhwS0VYenhwbDZiMHRtVk1kWTJBQjB6c3U2aUxIUFZYSGZWTC1seVdXNVg1aFIwaXNHREUxRkFmRU9sYjE3bWV0SnZMLVJVdGxMYjZjNExPcmF6aG9ZTjR0czNTaWZ4MUhsVmNZSFlMWTUxSU9reG9BQUItdmM3ZTY3TjZZYnJQOW1KRHhLU1k0WlhYVg?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "CAC 40 : l’indice hésite, l’IA soutient les marchés - Le Revenu",
@@ -78,11 +78,20 @@
   {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 24 Sep 2026 12:43:02 GMT",
+   "date": "Thu, 24 Sep 2026 18:44:57 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Les Bourses européennes jouent la prudence avant le sommet Trump-Xi - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 24 Sep 2026 08:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwONIB4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwOA?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
   },
   {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
@@ -103,15 +112,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 23 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 - Capital.fr",
    "source": "Capital.fr",
    "date": "Tue, 22 Sep 2026 17:00:00 GMT",
@@ -121,96 +121,132 @@
    "sentiment": "negative"
   },
   {
-   "titre": "EPC GROUPE : Initiation de la couverture du titre EPC Groupe par le bureau d'analyse financière d'Oddo BHF - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 21 Sep 2026 16:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwJBVV95cUxONWZWdERqYkZoNFVzYV9WZ0NPRkc3VzJtemw4endVczB2bGhoTFdmSkdpaGlMelJ3LUV6UkRkMEdsTFZiRXhzN3BBdDhBMDhSYVRkczdoNDB1X09nTml6WG5vZThteE4xWVJoU3FNTjlzaEZaTmhvUjhVRW93YUZnOTB3cExJdWdRelYybm51bkpmUFFvVUFCaFE2NmxkWE5fUExDY0FiMy1ZMVpsMTdXVl80Q0p3OEFyU1luNlJoT2NJYU54NEtDTjRhYnc5ZHBqbHUtTUpfMWhRTWQ1ZW1pMEdlUHNKTTl6NTJraTBSMFRwaEF0ZDBvU0JSYlhvMDlFQmJCSWg1TlRxN1UyN0gw0gGUAkFVX3lxTE51NmR3WlFuRjdtX08xTlBCMW1lYUhqNUhIejNhMXJzcGFRTXFEWUdxUWFSSk1MR3ktQlE3d3RLbUNaeTJwc0xQUEEzaFJkX1pCNjdtSVJrWUZzcGJDY0lSc3Z6cTdqM2pWaE96b0E4T2pvZVZHcW4yUmpabm56NWtsT3dKdFNxMVN1Z0lSOE5DbGJyWjhza3dsR2hEb3dtbHQwNF8wOVNqT1ZLdmIta3BrUWs2cHNIZnV1eTBRYmZSUk1kLVJtdTA1UGVpeVh3ZFItaWd4RmdPc0M1NmI0bkRJNjBCSTdtaWxya2RScHk2REZxMTVaNko2Y2ZIOGYyRmIxRmZWM1dYanB2dkt6bF9Xemx0cA?oc=5",
-   "tag": "CAC 40",
+   "titre": "Automobile : le long cauchemar des constructeurs européens en Bourse - Les Echos",
+   "source": "Les Echos",
+   "date": "Mon, 21 Sep 2026 16:04:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOQ1pGeGczZlpOdFFfV0VSbmRCUDN2ckcyRl9yWXJBRXpRR2thUFZtT3Nwdjh5UkVlMXhNaG5id2ExQno4QllvN095OHdrZVp3ck8zY2lTNGR1MXdlSzVnOWI2TUZoMnJnZHRsQWVjeUM0ZFY3d2Zoa2xsdy1HMnUtenEyVUlob3ZCa2tsR0ZZeThIVndxd2pJd2RNWkJsN1k2ejhlYk80LVU3M3hvM1JwS3NCS1I4Ui1ocUxQZ0gwUXB1N0hlUlNj?oc=5",
+   "tag": "Sous-jacents",
    "categorie": "produits",
    "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "La Tech commence à concentrer les indices obligataires 🔍💻",
+   "titre": "On achète ou on vend ? : Virbac, Danone et UCB - 25/09",
    "source": "BFM Économie",
-   "date": "Fri, 25 Sep 2026 15:34:07 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-la-tech-commence-a-concentrer-les-indices-obligataires_VN-202609250642.html",
+   "date": "Fri, 25 Sep 2026 19:38:03 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/video-on-achete-ou-on-vend-virbac-danone-et-ucb-25-09_VN-202609250781.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Tech Stocks : Grâce à Muse, Meta approche les 2 000 milliards de dollars de capitalisation – 25/09",
+   "titre": "On achète ou on vend ? : Virbac, Danone et UCB – 25/09",
    "source": "BFM Économie",
-   "date": "Fri, 25 Sep 2026 15:22:40 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/tech-stocks-grace-a-muse-meta-approche-les-2-000-milliards-de-dollars-de-capitalisation-25-09_EN-202609250635.html",
+   "date": "Fri, 25 Sep 2026 19:34:22 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/on-achete-ou-on-vend-virbac-danone-et-ucb-25-09_EN-202609250780.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "ADARx Pharmaceuticals devrait ouvrir en hausse lors de son entrée au Nasdaq - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 25 Sep 2026 15:19:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxQVG94cG40THBTSVprN3o0UlZjb1BfaFNsOHVJNnZtdjhoYWVBb0pfLVZkQVFTdDNHd3ZhbFlLQ2VBNHpzcFJRdnF3dm15dWpSQkJEa0FHaTlRVTlucmx3MVljM2t3Qlg1Wi15dVlXZ21mZXcwTEROTFJYWF9rNkpJNk4tZUVfWGNrUi0yNUtqSVJySUlpeGdoaDl3ai1TMWpydGJPaVZjRFF6TVc2aWdGRjFIaUNEQlFQM25pSFRVWkNTQ09XREYyTWotTllZemUtMGNKU0E0eGZPTk5JdHBDZjhnLWd6RUluRzRvRTNyQ3kxZFZSWGhrRkFFSl9Qb2V5MFBFMlExUkozaUZBLTFhYzFXMWpZQ2RyYVJuTzhUNVdmeVpwV2c1cjN6dnZXcFhWRFdsRmlLSUtXTTBpbmVXVDVjWV9RM1gtLUpwTURpTlpBM0V6ME95cjBFcVVNQWVUeWJEbXhIc25fcXh2X3fSAfMCQVVfeXFMUExjY1gzOGNoZkpkYWpxZmVybnh4TVpsVWhzWDlFYVFoZXpIalJxOHRSMDk3OWFFbExwWmwwQWU1WjRXemZ5aWMwdm5wME11VDA3VWNRZkk3MU9CbUZxVURVR3ZPOUtEOHlkZkx4VUtXaFB5Ujk3cjU1bjdfcXc2cW1ZQTY3MUE2cFJySlpnaEFPdXEweHotNTQ1cUU2WnNCQU5lek5uWEVrR0hVUHpwTXRSd2tWNTJmeWx4V21pQUZkNFdNZUFWSmpvdURndU51dnZUQ0FkbTZTLVdfcG5STUw5MmczZFJIZG1QdWUyeUJvZXpwRHpTM1psajdUSEJOdlJSYVJPS05PX1ktOXIwaXJCNW5PVXVXU2g1SjVOUDkwWFVQZUMxNmRqM245SmM4N0hjOXA2bmVQbU1KZF9MZ3pkM3NLaVcyQTZQMEZINWh5NGZaTmhHSHJ0M3dKQ3E1b3V3OUVkbTFDeGxQdU5lcmRKeEE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "ADARx Pharmaceuticals devrait ouvrir en hausse lors de son entrée au Nasdaq - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 25 Sep 2026 15:19:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSFZyOU41c3F0OTN5R2FQREdYeHNESkcxS2M0UWxhaGpYcGtnQVVtS09faV9LN1NOZmF0M0NJbHlibm4yYzhnRXlTV2lqQkZYSDBJamRVNzVGVkRoX2s2R2tRWGxPQXotMmwwSk9QLVA0cm5XSzFTTXc1R0dFVy13dF9JY0pzd25zYU1qWTB2QlpfT0hhR09kdWdGTzRtQWNkX2hBZWNIQ2hMOUNjc0VDWWlsT3EzeHlPRkhRWFh1d29sV3RJOUpydUhhV0xuR0hzYThqVkhQODFJcXlHQlM3NUwwSEpmVC1i0gHuAUFVX3lxTFAzWjdHdVFUM2pQVDUyRm9xbVpwdHhRc0Nvdy05YmVOVnJ4T0hPMjB3QUkzV1M4SEcwNWhxUnZSeVplRFMzU2JxMmowU3J2dXhPQjFOWkJoY1NNTEVYRGcxMTZqQ0ljVVA2V1YxVXBwTEYwQVliSXRRcmNuUEZoZWdYRUpYWlpub1oxYjgyX3FDUjdvRDNWckdhNU9BOW5UMU1qamk4TEc0Q0tZdzJhWV9QWW1zNDQxNDU5VU1iTm1vZWlkMWE1bFoxWmh1S3A1WmxtSE56YkJuRlFTZk82aTFFUWIyOGE5d3FWNFA4eFE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Grâce à Muse, Meta approche les 2 000 milliards de dollars de capitalisation - 25/09",
-   "source": "BFM Économie",
-   "date": "Fri, 25 Sep 2026 15:18:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-grace-a-muse-meta-approche-les-2-000-milliards-de-dollars-de-capitalisation-25-09_VN-202609250638.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Aramis Group : +22% en six séances, Stellantis relance la spéculation - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 25 Sep 2026 15:05:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMGQwLS1zUXBjY0RGTGwweGxzQWVSSk5rMkt4OUNpZFh0ZHdHdktIbHBfSjdwSldyNFAtTmx5ckpwZXFGRkJ3OG5uQlBXMkR2R09wMFIxZEJ4NjEtN1h3SDJpTEh4VjFjTGJlWmsyUHducDF5SXNFeE45c1N0VlpCb3Q5WnBnX0l1OEsxS2xjenBXdEh0Z0xuenk2SFdEcVJubTdqbFd5OUxJeFU1UEpKdkx1Q2NGUzBNOHpnQV9yaFQ5b20xOVpITUZzUnM2VlRzc241TmF3ME9VZ9IB3wFBVV95cUxQRWZSV0Y0cklOSG51ZTRUa0tFUG93UDhYODAzOXVVVjhEM3FPOXdwbHYtQ21ZLVowdUgzNE9mTWpOcnM4X2lNb05ER251RmxfSU5FbG51LWNwMmZfS3FxUDkxMVlFU3VEWHdDTEt2dnAwUUdaZTJNU1BzM1BEX2pUaXczUkE3WlNQSzFGRkZ2TjRhOURFVHlrelp4UkdEN2FKSlpOMXdONUJXWk1palJRMmdXQUcxeC02Ml9yRThOb1NySEhHZ2RSem42ZEdnRnhOT3lVNG5VTVlYZTdQOHQ0?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AMF: 1,5 million d'euros d'amendes requis contre Auris Gestion et deux dirigeants - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 25 Sep 2026 15:00:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOYU5QQlhDRUNLYmJhQXM1dmE2RTlXYmkxYzA5ZW5jSm82Q0FQb0RrVkVVVXJKMXFST3NVTFlPaHBmY3pvTXF6Mmg1TFVUYy1ZT0NXR0I4TkM5QUVYZWNZSDJOM0xlX2g0ZEFPMFJUSm5LTkZ5TDJFT2E2RTB6M3JPblR2UnUyS09kLVZUR3NCcU5RY2JMR1RIY3Rpb0gzQ3lTUFdfOG1JWGtpWnV3RnB6Q0Nnc2dDRUROT1BEeUNxUlpndC1zbnpUSjJBcDdoeHZmWXN6Z3JGNXJFZzBndDFlZk1LellZX3VrV2t6N0d1VdIB9AFBVV95cUxPQmxVNmI4aHZfMFlhaGdHUU5CYUhRUDVyNFQ3bTd6YUl3dlpUSjFWeEh2RWQxajU2LTZYVlpoR2t4TC1sbmxNX1pzY0tjamNVODE1QUlUV2V4R1Qydl95SmhQVEU1SnFVNlpzZ2FrRnZxNEhrWEF4NTcwU3ZiNjhOT29iZkFCak1xcERGUmFCWGVCeDl2N19lbzhfc241NEJad2dQWnNIaXFDSWZ6aGRmQ1dKMmtma2puTjg2UUpDZHpMc0NubGI2V1hTVjNzSU9CM3AxMXZXYnhhQW8tR0VUdnFINW5OMGMxVV9tMWh2VTg1VU9j?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "AGENDA DU 28 SEPTEMBRE AU 2 OCTOBRE : Le pétrole, l'inflation et l'emploi US seront au centre de l'attention - Zonebourse Suisse",
+   "titre": "Le vice-président de la BCE, Vujcic, met en garde contre l’impact du diesel sur l’inflation - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Fri, 25 Sep 2026 14:52:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOVGZPeWltZXVPWTRBYmtqN1VNZEtTTmRJOWxoemt2YW1zY0ZraThPTFIwemJLYU03MVlnbVVVb3RKR3RTWUdzTmJXU2REYXZ1bHpNWktKRXJUd3RacGxWSF9namtPMElqZEp5YVZhQkJndnZsQ19IY01NcV9EUTBYdEFtUkdJd1A0RkdNU1MtQlFHOUZQRFV4N25nN3l6dG9TV2Yyanplb2phSUVWNVgwUlFjN1N6aU5KZ2lVcjdOc0NxRG9xQmcyZ0FLdlRvSzNuNzBrLWJJU1pCd3h3c2xBMmhvb0JQQV9paC1oNDZn?oc=5",
-   "tag": "inflation zone euro",
+   "date": "Fri, 25 Sep 2026 18:22:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNX051YXZ1OVdMTXczTTg2dGw0dEhfMnJSR0FVWXBuaHMxYXExeVd2ZkxvbzQ1ZGltVGFjUVp0YTZzcmZRQzNtY3gwSVpIcDlVZFY2Zks1cW9RRWtwSXE5Rk9nUUE2WFJsTUJoTjBDWlFmQ3F3RkRlOXZuUEpYdzllZDgzNkZweE9FN01PZ3NUa0lYZTNHRXV2OG9oSDRKdnJPTlBJZ2lXaFBtckZkWmo5TFdkLU01VmlhVXRaRGR3UlJJSjBpYV9lMFJZNTNIMlZtSHQ3emxDbVFwU3RkQzNuU1Bld1lTQQ?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
-   "titre": "AGENDA DU 28 SEPTEMBRE AU 2 OCTOBRE: Le pétrole, l'inflation et l'emploi US seront au centre de l'attention - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 25 Sep 2026 14:51:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeE1XYV9XVzNjWDhIRTROOWc2ckluMkVPZi1kMm9zSHVUV3JFYXN4bWtFSEJlc3B5dy1raDVwd2NmX1N3UXdmYjUxQ0ZGWnJQdG44T0duTHU1eGtGaTNIZkNfOVRZdTY2V01aRnU5VGdyMUtjdGRHOE5PR2JTWkdfVDYwYlUwdFJEcUxJZzFkRF81WlZPaFlMQnNZNTZab0I5QXlrU0Z1a25BTnpVVlVrMWVRczJGMlhibk84?oc=5",
-   "tag": "inflation zone euro",
+   "titre": "Bertrand Martinot (Institut Montaigne) et Ulrich Bounat (analyste géopolitique) – 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 17:15:20 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/le-18h-eco/bertrand-martinot-institut-montaigne-et-ulrich-bounat-analyste-geopolitique-25-09_EN-202609250723.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bertrand Martinot (Institut Montaigne) et Ulrich Bounat (analyste géopolitique) - 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 17:12:55 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/le-18h-eco/video-bertrand-martinot-institut-montaigne-et-ulrich-bounat-analyste-geopolitique-25-09_VN-202609250737.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "140 postes sur 577 supprimés: BforBank, filiale du Crédit Agricole, annonce une rupture conventionnelle collective",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 17:01:20 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/140-postes-sur-577-supprimes-bfor-bank-filiale-du-credit-agricole-annonce-une-rupture-conventionnelle-collective_AD-202609250704.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe a progressé sans conviction, le détroit d'Ormuz en toile de fond",
+   "source": "ABC Bourse",
+   "date": "Fri, 25 Sep 2026 16:38:45 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-a-progresse-sans-conviction-le-detroit-d-ormuz-en-toile-de-fond_703191",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "On refait la séance : \"TotalEnergies : les enjeux de sa Journée Investisseurs prévue lundi\" – 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 16:07:30 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-total-energies-les-enjeux-de-sa-journee-investisseurs-prevue-lundi-25-09_EN-202609250664.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "On refait la séance : \"TotalEnergies : les enjeux de sa Journée Investisseurs prévue lundi\" - 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 16:02:44 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-total-energies-les-enjeux-de-sa-journee-investisseurs-prevue-lundi-25-09_VN-202609250665.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 15:52:39 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-25-09_EN-202609250652.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 15:52:33 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-25-09_VN-202609250654.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Club : \"Après avoir concentré les indices actions, la Tech commence à concentrer les indices obligataires\" – 25/09",
+   "source": "BFM Économie",
+   "date": "Fri, 25 Sep 2026 15:47:50 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/le-club-apres-avoir-concentre-les-indices-actions-la-tech-commence-a-concentrer-les-indices-obligataires-25-09_EN-202609250648.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris finit de manière étale, les yeux toujours rivés vers le Moyen-Orient",
+   "source": "ABC Bourse",
+   "date": "Fri, 25 Sep 2026 15:45:40 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-de-maniere-etale-les-yeux-toujours-rives-vers_703184",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "AGENDA DU 28 SEPTEMBRE AU 2 OCTOBRE: Le pétrole, l'inflation et l'emploi US seront au centre de l'attention",
@@ -222,22 +258,13 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Valeur ajoutée : Ils apprécient S&P Global – 25/09",
-   "source": "BFM Économie",
-   "date": "Fri, 25 Sep 2026 14:33:51 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/valeur-ajoutee-ils-apprecient-s-p-global-25-09_EN-202609250602.html",
-   "tag": "BFM Économie",
+   "titre": "« Jusqu'où les marchés peuvent-ils absorber les hausses de taux de la Fed ? » - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 25 Sep 2026 14:35:57 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZ2FXcmdKYXdnb1QzTlNZWTN1QVBLQkhMQldFdTlZai1jdU5xNC1xRFl3WWN0TnA1dENDaXlBelUwM0ZkbWcxa3YxVi01ZmIxU0o4azJKUVBSRGUxZkc2Z1Y1YngxT19ET3E4dmczZmpscW9HQk1PLWZqbks4MW9EU3FfRXFJU0V2R2tpZ2FkbjVBNHhJZ2xaMGVaUmg5dEhuNjg0aThwMGZwZ29rMEx2VVFtRDRwNzFYSEd0WTdfYw?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Valeur ajoutée : Ils apprécient S&P Global - 25/09",
-   "source": "BFM Économie",
-   "date": "Fri, 25 Sep 2026 14:30:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-valeur-ajoutee-ils-apprecient-s-p-global-25-09_VN-202609250601.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "TotalEnergies relevé de \"conserver\" à \"acheter\" par HSBC",
@@ -321,15 +348,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Airbus a décelé des problèmes de qualité sur ses A321neo, le titre se replie",
-   "source": "ABC Bourse",
-   "date": "Fri, 25 Sep 2026 10:31:00 GMT",
-   "lien": "https://www.abcbourse.com/marches/airbus-a-decele-des-problemes-de-qualite-sur-ses-a321neo-le-titre-se-replie_703166",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "CAC 40 : la Bourse hésite, la Fed et la BCE pensent qu'elles peuvent monter les taux sans casser la croissance - Capital.fr",
    "source": "Capital.fr",
    "date": "Fri, 25 Sep 2026 09:58:42 GMT",
@@ -337,15 +355,6 @@
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "L'Europe se reprend grâce au repli du pétrole",
-   "source": "ABC Bourse",
-   "date": "Fri, 25 Sep 2026 09:25:50 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-se-reprend-grace-au-repli-du-petrole_703165",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "BlackRock: l’inflation atteint son pic et va baisser. Voici pourquoi - Morningstar",
