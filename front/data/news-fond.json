@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-27T15:37:31.130Z",
+ "genere": "2026-09-27T19:43:46.514Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 21 au 25 septembre - Boursorama",
@@ -11,8 +11,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Pourquoi la hausse des taux de la Fed est une mauvaise nouvelle pour les sorties des fonds de capital-investissement - global.morningstar.com",
-   "source": "global.morningstar.com",
+   "titre": "Pourquoi la hausse des taux de la Fed est une mauvaise nouvelle pour les sorties des fonds de capital-investissement - Morningstar",
+   "source": "Morningstar",
    "date": "Thu, 24 Sep 2026 09:03:51 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNcFJjRXBNVE1Ec1h3MXhDWTFWWmZhWW1YRmYzYTN5bVBPdzJSR2dHRDZaU3dzOS1yRmZQcWVBWUdPTHNaWW8yNGlVLWh5bFgtdWpJLWd0U0tKdFQxWl9rSnVvcTg1ZlA3enRfQkVmLVBsYXFfZkJBOXR2MFBaZ1JpT2JZMGFFZC05eE9NdjZPcGYtcGxrVVRLTDBVbFhOcXZvc3dWU1U1NDc0Sk13ekN5OW0xWXZEeV93bFFFVmhqai1KcG5STlRNRzNNYjUxNWZXTnpETWdUc2ZWcjFoRkFENXV1Wk1nSjFJOVVYbDVkcw?oc=5",
    "tag": "Fed / Taux",
@@ -67,20 +67,20 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 25 Sep 2026 15:36:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 25 Sep 2026 15:35:14 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
    "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 25 Sep 2026 15:35:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -103,6 +103,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 25 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Les Bourses européennes jouent la prudence avant le sommet Trump-Xi - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 24 Sep 2026 08:24:00 GMT",
@@ -110,15 +119,6 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 24 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "neutre"
   },
   {
    "titre": "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 - Capital.fr",
@@ -132,11 +132,11 @@
  ],
  "eco": [
   {
-   "titre": "Présidentielle au Brésil, grève dans le public, inflation… Les rendez-vous à ne pas manquer la semaine du 28 septembre - Les Echos",
-   "source": "Les Echos",
-   "date": "Sun, 27 Sep 2026 12:35:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNek4tdHNPRzJWWmpEakNpYVFYUzJQNExtSlRCdnphQ0FLWG92Z29rYWxPZkp2SmlIbHNULTUwQkx1cngzVkxmb1BVdC1SbmNpdGRLcjVJX2t4R1RPYWlnbV9mUjlkMFJMajBNZER4N0tjNzN2ZTJrV1hsWTdLTHppcVJaZEdQdDdUN3ZDVTZpWlozMVN5MF9weE1PVjBIX1FLcDZnTEx5WGZJM2Z5MXczVi1ESDZVU1N4Tzc5UjBDYkdxSks5Nm5GeE8yeEtSMkM0WE9UNXhheVpkOFZ0aHY2U2RVNnFrMUd2Q3lFNG8wREpHU3o4eTFKQ3VpMHNpV1Y3TTZRS1lIZWp3cDA?oc=5",
-   "tag": "inflation zone euro",
+   "titre": "«La correction sur les taux nous paraît excessive» - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Sun, 27 Sep 2026 15:57:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWGNQWDB2dGhfanhKWVA3WVFwMXRfLXYyTUo5STV1N2JhdldScmdRclNVVG9QS251NG0yWi1lc0RHQzEtalBSU2lXaDRSWWtnQ0VUQkNjdEZlMEZEWmFib1BnUGprTlVYZUlJcENuV3J2b2lad2h6Y3pranNUaUtHY2UwM1Fvd2lVZnRfeE5jbnFqOFVZU2c?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
@@ -163,6 +163,15 @@
    "source": "Le Revenu",
    "date": "Sun, 27 Sep 2026 10:30:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOEVHODhNU0FfaDNYZW9MNjJBQXBOUUJ3ZWplcGdBWXppb1EyMVBaZGJXMEJsUmItQlgwS0E5ZGozeDdYbXNfOG1SNndBb3RoX3lZTWVvOHBOUmlpX0xVQ2s1aXVTcW1kc3FPUi1od1hUcjdjUjdyclJqMjRoZ05KRUNvNjRFQm80Qi1TYnpiU3NYVXlrcHppUURWU0VWTFR2Njdzc0hSak5EbFRTTEdPelBIVWc?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Crédit immobilier : ce que la hausse des taux de la BCE va changer - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Sun, 27 Sep 2026 10:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNndDSG9OdjBQM3JlMW5pVUJVWi11NV92Wk1FR25wVDVxTG82WldsQmhHZEpLd0VYUkluN2lJWF9aMWdpWEJfU2ZCbjBfYTVrX2JybzlXQTlWVXRMRC1mTnN4Sk9BRmpOQm1KcUVvT1YzajlvdW1oYzhYaUJBY1V1V1REX3FwVURCdGViYzNJY28wSm5QVWY0aE15Q0hOZmFZYlc4V3ZLZTJvaUpwcnROUlczbw?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "positive"
@@ -342,8 +351,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest Eurose - banquepopulaire.fr",
-   "source": "banquepopulaire.fr",
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
    "date": "Tue, 02 Jun 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9EdXNoZExkZFRqdGxXOWtaYnF1ZjV0ZXhwYjdDVWJrNXBiMlpTQmo3T0FYQnZFTGtJTGl4YkZuZ0NxSU5jZVA4NFlrUlJEeF9OaGpvMUpqYzhIbkx3aUNINU1NSWxlNnFOckdtbHFrb05zdWFoS0pqWXZaRHo?oc=5",
    "tag": "Eurose",
@@ -378,8 +387,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest Eurose - banquepopulaire.fr",
-   "source": "banquepopulaire.fr",
+   "titre": "Fonds DNCA Invest Eurose - Banque Populaire",
+   "source": "Banque Populaire",
    "date": "Thu, 25 May 2023 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNU0lhSWpBYUEtQmtYdHNnam1GalJkREVKcnhEdnh1ZEFrRGlVZW5wcE5aQTUyaGhDdDMtQUZNaFdKWFZSNDduZDQ4aFlMaGhZRlhTWENNbkhrdk4tWnJOamRlXzZjcjhGTVg2S3Q3TTFqNWFyUFRSQ3NLZ3JpaVl0ZUJOWVhRV1FtcnpTRW9nQlFZajRa?oc=5",
    "tag": "Eurose",
@@ -396,8 +405,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest SRI Norden Europe - banquepopulaire.fr",
-   "source": "banquepopulaire.fr",
+   "titre": "Fonds DNCA Invest SRI Norden Europe - Banque Populaire",
+   "source": "Banque Populaire",
    "date": "Wed, 12 Jan 2022 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
    "tag": "DNCA Invest SRI Norden Europe",
