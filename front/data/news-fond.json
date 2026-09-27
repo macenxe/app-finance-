@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-27T19:43:46.514Z",
+ "genere": "2026-09-27T22:58:50.799Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 21 au 25 septembre - Boursorama",
@@ -38,15 +38,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40 : la Bourse hésite, la BCE «sous pression pour emboîter le pas à la Fed» sur les taux - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 23 Sep 2026 08:56:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNamwzSUloTDdlS1pUNUNJcG5HZEUzc240UG5RaHJ1UmduZkhCZG1ucXlZRjBqVW0tV2ZvRWFVbFMtMXBHM3F3YzhwS0VYenhwbDZiMHRtVk1kWTJBQjB6c3U2aUxIUFZYSGZWTC1seVdXNVg1aFIwaXNHREUxRkFmRU9sYjE3bWV0SnZMLVJVdGxMYjZjNExPcmF6aG9ZTjR0czNTaWZ4MUhsVmNZSFlMWTUxSU9reG9BQUItdmM3ZTY3TjZZYnJQOW1KRHhLU1k0WlhYVg?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
-  {
    "titre": "CAC 40 : l’indice hésite, l’IA soutient les marchés - Le Revenu",
    "source": "Le Revenu",
    "date": "Tue, 22 Sep 2026 07:47:00 GMT",
@@ -63,6 +54,15 @@
    "date": "Fri, 25 Sep 2026 15:55:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53SjcycnZvSy1RY1FHQXczRzlwbU4tWlFQby1pclBOWl9YUktsV29ncWFTTHVVSmVPYnNlMTNQX0IycUtxT20wVG82UjR4WHptTnZ6Y2RZQUJFT2N5OGFueHJBOUxPbF9sa2c?oc=5",
    "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 25 Sep 2026 15:36:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -112,15 +112,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les Bourses européennes jouent la prudence avant le sommet Trump-Xi - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 24 Sep 2026 08:24:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwONIB4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwOA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 - Capital.fr",
    "source": "Capital.fr",
    "date": "Tue, 22 Sep 2026 17:00:00 GMT",
@@ -136,6 +127,15 @@
    "source": "L'Agefi",
    "date": "Sun, 27 Sep 2026 15:57:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWGNQWDB2dGhfanhKWVA3WVFwMXRfLXYyTUo5STV1N2JhdldScmdRclNVVG9QS251NG0yWi1lc0RHQzEtalBSU2lXaDRSWWtnQ0VUQkNjdEZlMEZEWmFib1BnUGprTlVYZUlJcENuV3J2b2lad2h6Y3pranNUaUtHY2UwM1Fvd2lVZnRfeE5jbnFqOFVZU2c?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Présidentielle au Brésil, budget, grève dans le public… Les rendez-vous à ne pas manquer la semaine du 28 septembre - Les Echos",
+   "source": "Les Echos",
+   "date": "Sun, 27 Sep 2026 12:35:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNek4tdHNPRzJWWmpEakNpYVFYUzJQNExtSlRCdnphQ0FLWG92Z29rYWxPZkp2SmlIbHNULTUwQkx1cngzVkxmb1BVdC1SbmNpdGRLcjVJX2t4R1RPYWlnbV9mUjlkMFJMajBNZER4N0tjNzN2ZTJrV1hsWTdLTHppcVJaZEdQdDdUN3ZDVTZpWlozMVN5MF9weE1PVjBIX1FLcDZnTEx5WGZJM2Z5MXczVi1ESDZVU1N4Tzc5UjBDYkdxSks5Nm5GeE8yeEtSMkM0WE9UNXhheVpkOFZ0aHY2U2RVNnFrMUd2Q3lFNG8wREpHU3o4eTFKQ3VpMHNpV1Y3TTZRS1lIZWp3cDA?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
@@ -333,19 +333,19 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - Presse Agence",
-   "source": "Presse Agence",
-   "date": "Sun, 06 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYUpUU3BvQ19nZFNLZU0wV25SVlgzVGhPc2FTdm51VG5YdnlKNzM2MHVyU0lNelNBX3FaT0FtdVotTGtCOFpNNGtpRUZjSjQ3RV9DMmZtZk52VzRnYjRlUnlrY2p5SWJOazB5UHJaTS1TV05lZy04M2NkYW42cC1iS3pBT1dSNnZCYUR5ZGd3MXV6ekhLcEdCX1FDbnh4T3ZWRC1YVExpX0czTlBRMHRRRWxrcG8yQ1ppRS0xaXlsNm5vYzQ2Z2RILTdOamdiNzQ?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - L'Automobile Magazine",
    "source": "L'Automobile Magazine",
    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdkN6RnMtR3dYM3RvLVVCa2hYMVNERHFDMEJiRjIyNy1BaS14VzdGM1pGQlpza0dkRWt3VktRVE9YMzItX2RKcFdMckdKenZ4VFBhNTNjOFhJRDlOWmlrQ0hvRkNtclY1UHc5TExlY3g3Wl94MHRWVXF4R1lRbW9FcFQ1MmZWbUJvbUxnQXVjSmN0VnVVOWZaSVBJcW9ld011Wk12blptTkkxMElzcVN4anBJZzBUd2VlQ0F6SndpdlQxZkZlUGpVd29mcXE0QjE3ZDAzOWNsTHFDbEFjNHotVGVB?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "MAGELLAN : L’Odyssée inachevée Troyes : date, horaires, tarifs - jds.fr",
+   "source": "jds.fr",
+   "date": "Tue, 01 Sep 2026 04:22:13 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWFh3YWx2RkREVE5Ddk91LUJQSlJmZWNSTHpucG8wTHlxUm95aFpaZzY1NVRucUZuZG4zOXU0VWkycklCMjJBM0hiTTd4N0xxM0ZpeThXekN0VXhRYTJYQ2hIRlBWbTFKSlpDLWEzTFJoX3VqV2JMSFNvWFR0TjNPVQ?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -369,8 +369,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
+   "source": "clubpatrimoine.com",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
