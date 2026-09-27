@@ -1,5 +1,5 @@
 {
- "genere": "2026-09-26T21:56:33.927Z",
+ "genere": "2026-09-27T10:30:51.566Z",
  "globales": [
   {
    "titre": "Une semaine sur les marchés : le recap du 21 au 25 septembre - Boursorama",
@@ -11,8 +11,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Pourquoi la hausse des taux de la Fed est une mauvaise nouvelle pour les sorties des fonds de capital-investissement - global.morningstar.com",
-   "source": "global.morningstar.com",
+   "titre": "Pourquoi la hausse des taux de la Fed est une mauvaise nouvelle pour les sorties des fonds de capital-investissement - Morningstar",
+   "source": "Morningstar",
    "date": "Thu, 24 Sep 2026 09:03:51 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNcFJjRXBNVE1Ec1h3MXhDWTFWWmZhWW1YRmYzYTN5bVBPdzJSR2dHRDZaU3dzOS1yRmZQcWVBWUdPTHNaWW8yNGlVLWh5bFgtdWpJLWd0U0tKdFQxWl9rSnVvcTg1ZlA3enRfQkVmLVBsYXFfZkJBOXR2MFBaZ1JpT2JZMGFFZC05eE9NdjZPcGYtcGxrVVRLTDBVbFhOcXZvc3dWU1U1NDc0Sk13ekN5OW0xWXZEeV93bFFFVmhqai1KcG5STlRNRzNNYjUxNWZXTnpETWdUc2ZWcjFoRkFENXV1Wk1nSjFJOVVYbDVkcw?oc=5",
    "tag": "Fed / Taux",
@@ -29,8 +29,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "CAC 40 : la Bourse hésite, la BCE «sous pression pour emboîter le pas à la Fed» sur les taux - Capital.fr",
-   "source": "Capital.fr",
+   "titre": "CAC 40 : la Bourse hésite, la BCE «sous pression pour emboîter le pas à la Fed» sur les taux - capital.fr",
+   "source": "capital.fr",
    "date": "Wed, 23 Sep 2026 08:56:11 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNamwzSUloTDdlS1pUNUNJcG5HZEUzc240UG5RaHJ1UmduZkhCZG1ucXlZRjBqVW0tV2ZvRWFVbFMtMXBHM3F3YzhwS0VYenhwbDZiMHRtVk1kWTJBQjB6c3U2aUxIUFZYSGZWTC1seVdXNVg1aFIwaXNHREUxRkFmRU9sYjE3bWV0SnZMLVJVdGxMYjZjNExPcmF6aG9ZTjR0czNTaWZ4MUhsVmNZSFlMWTUxSU9reG9BQUItdmM3ZTY3TjZZYnJQOW1KRHhLU1k0WlhYVg?oc=5",
    "tag": "Fed / Taux",
@@ -58,11 +58,11 @@
  ],
  "produits": [
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 25 Sep 2026 18:18:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
-   "tag": "CAC 40",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 25 Sep 2026 15:35:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -85,6 +85,24 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 25 Sep 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les Bourses européennes jouent la prudence avant le sommet Trump-Xi - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 24 Sep 2026 08:24:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwONIB4wFBVV95cUxNMUJHZXRPeFFTV2ozZmlYOHhlNzJLbkwtQ0dfLW83U09NRmJ1Wm9ndEVXblgyc0ttc183QjR4QmxXazl6VUNSVVVFbXNBSUNzYW0xc3NyY09wVHhkNXpQeG4yNVotYVp5VXlqdHV1b0hVMWFBWlRvMVU0djJFZUNMYnlGMjhWTk50T0tCQV9BR2pueTl3dXlyU19mOTN3OTREeUJlLXZWX2VseWFjYjhZeHlyb0NPanhQZVVYS19OaTk1aU5FQUJRc3BBamh0STJZeXpTRnM3TXZaM3ZlS3JaVjUwOA?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "negative"
+  },
+  {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 24 Sep 2026 07:00:00 GMT",
@@ -103,51 +121,24 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 - Capital.fr",
-   "source": "Capital.fr",
+   "titre": "Renault et Stellantis ébranlés, quel potentiel en Bourse après le plongeon des actions de l’auto du CAC 40 - capital.fr",
+   "source": "capital.fr",
    "date": "Tue, 22 Sep 2026 17:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZFhEVHZVVDROU0g4d214UUZyaGJRcVZZUG9hakgyWVNDZmNxdzFRazhlckpnbG9IUW02TEdsd2tWd0tQSzg0LS12OXI1c3lGTzJBY3pjT281MTZ1S0FNa0pQN3Z6T3o0elpEbktwUkxJb2ZHUXBEOXNPRDdXZk11cEZHMFJOc1E4ZDY3X2tIYnQ0eW5MSFlUOW1oWlNJNjV0UkJyTUJNbjZoUVAzdE9DZ0loamhLM3c5ZTdYeERJcmlzck1aUFVsLUhSWDJfR2ZqUDh6bGNqMGdWWVJZbjRCVTc2OTI4YjNzMnFB?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Automobile : le long cauchemar des constructeurs européens en Bourse - Les Echos",
-   "source": "Les Echos",
-   "date": "Mon, 21 Sep 2026 16:04:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOQ1pGeGczZlpOdFFfV0VSbmRCUDN2ckcyRl9yWXJBRXpRR2thUFZtT3Nwdjh5UkVlMXhNaG5id2ExQno4QllvN095OHdrZVp3ck8zY2lTNGR1MXdlSzVnOWI2TUZoMnJnZHRsQWVjeUM0ZFY3d2Zoa2xsdy1HMnUtenEyVUlob3ZCa2tsR0ZZeThIVndxd2pJd2RNWkJsN1k2ejhlYk80LVU3M3hvM1JwS3NCS1I4Ui1ocUxQZ0gwUXB1N0hlUlNj?oc=5",
-   "tag": "Sous-jacents",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "EPC GROUPE : Initiation de la couverture du titre EPC Groupe par le bureau d'analyse financière d'Oddo BHF - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 21 Sep 2026 16:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwJBVV95cUxONWZWdERqYkZoNFVzYV9WZ0NPRkc3VzJtemw4endVczB2bGhoTFdmSkdpaGlMelJ3LUV6UkRkMEdsTFZiRXhzN3BBdDhBMDhSYVRkczdoNDB1X09nTml6WG5vZThteE4xWVJoU3FNTjlzaEZaTmhvUjhVRW93YUZnOTB3cExJdWdRelYybm51bkpmUFFvVUFCaFE2NmxkWE5fUExDY0FiMy1ZMVpsMTdXVl80Q0p3OEFyU1luNlJoT2NJYU54NEtDTjRhYnc5ZHBqbHUtTUpfMWhRTWQ1ZW1pMEdlUHNKTTl6NTJraTBSMFRwaEF0ZDBvU0JSYlhvMDlFQmJCSWg1TlRxN1UyN0gw0gGUAkFVX3lxTE51NmR3WlFuRjdtX08xTlBCMW1lYUhqNUhIejNhMXJzcGFRTXFEWUdxUWFSSk1MR3ktQlE3d3RLbUNaeTJwc0xQUEEzaFJkX1pCNjdtSVJrWUZzcGJDY0lSc3Z6cTdqM2pWaE96b0E4T2pvZVZHcW4yUmpabm56NWtsT3dKdFNxMVN1Z0lSOE5DbGJyWjhza3dsR2hEb3dtbHQwNF8wOVNqT1ZLdmIta3BrUWs2cHNIZnV1eTBRYmZSUk1kLVJtdTA1UGVpeVh3ZFItaWd4RmdPc0M1NmI0bkRJNjBCSTdtaWxya2RScHk2REZxMTVaNko2Y2ZIOGYyRmIxRmZWM1dYanB2dkt6bF9Xemx0cA?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "Volley-Les Bleus battus en finale de l'Euro par la Pologne - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 26 Sep 2026 21:18:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWkpIcnJUZ09NbHN0Mjl5clRxa010YzFLZmxzM3B3T3l2ejg5d0M5UFMzTTgyc2xpQ1d0SkNLZjlIeVpXZ0lsYnN0cHBVSTRZZElvSHZQLVhMT2dGaXh4LTg1OUh5bGNPb1BSeUdSNTgtMHZqVEZqOVVKakE3ZjlyTGRPWWFPTWpJbTdLRUxubFdPc0JqUWNmdFNmOXI3SmFuRmcyN1FfWmgtR3pONjlNa0s5cU1ld2VnZVBnNUtyUnU0eTBFek00SGVFN3FQMnIyVnk1QzFJLW1lTnpWeTNuWm15VTnSAeoBQVVfeXFMTUo1al9LWUY2OXpZcEZtMVE2R0JYRDdZNy1Gc3hmZTNveklJLTk2TXBRdTlXRnE4VVJzQ0I2TWZHQ3dZYU5qSE9nNXhyZDZLdTVrMG9WSW1NNWZYa1RuRTBDWEdTWUx1ZjhRODZqWjFJT1R1YWJsZjJSbEtBdnBQdk1IUDI3R1JFVWh0VUFBRHlEaThac2k3LU5JODE2Q0hDWVY2bjNiRmtSRHhYQUotQW1FMHFXaWEzVU5qMkdxMkVkdTlPcUlJbEI2M2lqLUo0UjhCZVh5TkNWVjg0S2RDT1FxcXpqaUpkQnBB?oc=5",
-   "tag": "CAC 40",
+   "titre": "Plus de supermarchés Auchan, des parts de marché qui plongent et 700 millions d’euros menacés en Russie: l'enseigne nordiste encore dans la tourmente",
+   "source": "BFM Économie",
+   "date": "Sun, 27 Sep 2026 08:22:05 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/plus-de-supermarches-auchan-des-parts-de-marche-qui-plongent-et-700-millions-d-euros-menaces-en-russie-l-enseigne-nordiste-encore-dans-la-tourmente_AV-202609270125.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Ligue des nations: l'Espagne, souveraine, réussit sa reprise en Angleterre - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 26 Sep 2026 21:06:39 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQSFZDcGNyc0NyX1pYYnZhWlZ3V20yYzJycjFsQzdZazdTV1VNRDU3WnNXSGhPU3V3Nk5lajZiU1NfN1dwUFBwcHlpWDh0X3I5aGthdlZ4SkU0eElIWG0wby1CT203ckpYZGlQZEtxVzZFeFZETjJpLXl2aGNNdmhtN3d6WXBQR1hjb1ZnSXFDTEtobVBESFhaVjNMTHlDejlKREpkWnJUQUtDRzVlbjl1UnVmWlM0VV9yZzloOC0zQ0lFMElnRXk2TUx6N2Nua2hDWlNLYmpUQ0Q5TGRqYzhfQ0xRNThnZEF0LWVBWGVOekpQZWxsU2fSAfsBQVVfeXFMTkRFS3JhR3dOWllHY1djNVZzSEJfaFZOQjFTY3NKZG9ISUlHdFkzc2xNX0VPTjQ2NTBycWxUYzRDWW9EZmVUa21MNnJmRlBnR3g0YzVLRUlLMnI5NUFmblVDYkpaeXBWeUlZQUgtMm1iY3VWOHdxTWkxWVgzVzZrQVlLVVBkb1ByOGlNM2ZsV3kwekhSYTBuMjNFQXNzbU1QeFcwRG8yX1FIX0lFUHo0Q0t0RWtUc09LeVBCbTV0WEpha2tHbEhySTUwcUFvYVRfenI2eTR4WFhIeEN3RDUzRTBqVm4zNTRyXzI5R204WWRfbE51aU1nZWhZOHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "negative"
   },
   {
    "titre": "Avant de lancer ses trains à grande vitesse dans le tunnel sous la Manche, Richard Branson (Virgin) rêvait plutôt de relancer le Concorde mais il s'est brisé les ailes",
@@ -173,42 +164,6 @@
    "date": "Sat, 26 Sep 2026 11:50:04 GMT",
    "lien": "https://www.abcbourse.com/marches/totalenergies-lance-le-developpement-complet-du-champ-gazier-absheron-avec-socar_703198",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le président de la Banque nationale suisse, Martin Schlegel, surveille l’impact des fortes chaleurs sur l’inflation alimentaire - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sat, 26 Sep 2026 10:03:02 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQclZtbFBsODZLVENWY3VDRnNzM0w2RjdzX1RQLWo5OXA3QkdDT2FId3BfMi10SVdIdmRSdUx1VVpGMmpuQUdQN0hXaHlnOUR4OTVBWndJcG1CVDRFM05TaWhEZHYxbVBZUHEyTXUzQW5tOWJldG1DZnk0UjFjLUp5RUZyZnZ4d08yVGd1TldzeWk0YTVfd2tzaFhCZjM3bGd4S1BvYkc3TF8tcnNTX2dfc0R2c2tISGR0X2lObXZkcEcwOU9hWnhjcV9lMjZzXzYyUWlqaGV2REdTX2JOUWcwc2Qxdk1XU2U3cjFVY0JR?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Face à une dette \"critique\" de presque 1 milliard d'euros, la Martinique boucle un plan d'urgence de redressement",
-   "source": "BFM Économie",
-   "date": "Sat, 26 Sep 2026 07:47:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/face-a-une-dette-critique-de-presque-1-milliard-d-euros-la-martinique-boucle-un-plan-d-urgence-de-redressement_AD-202609260136.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40, Air France-KLM, Carrefour, FDJ, ADP… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 26 Sep 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPcXZCWUlmUmpwVzVfZmlodzUyaTNQSERPR3N3VkpQdlliY0VMWFNxRXpzRkFwSEhZN2xJU1BkbVBNVUV5UWFyMDM0M3RkZnNjdFRmaWJNenJfY2NoemJIMHVQNmhwVC1jR3ZmMGE2a1hKeXhGQ29BUklqS0N0OURSOW5PYlhnNm0wdTIxXzVDRk55ZFRGbjFpUWNTZWNEZHVaNVB6dEp2d3daU1ZCY0RwdTQ2aGVlTEk0aTd2YzU2Y3J6WHM3OWlONnI4SFI2TzdTb1N3?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Agenda Economique Zonebourse : l'inflation et l'emploi US au centre du jeu - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sat, 26 Sep 2026 04:45:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWnZJZmhvUEV4djBmUmRxSjlLbGNTdXk1dDB5U0w4dDlOMThjSFp1VzVHcVpKQ1dkcEdQWUVUM0JVWkFmY0d3U2htRTg1SFptUU43bjBDdE9QTXZKT1hzdWlSUEdFdWJlR1J3TzZRMGZySzVJMk1iTnExSHJ6dTUyNlh6VEs1SGxWc3lPUndBR042TzBJMld6OC02bUVXMk9PUDB5T09CTGNYcGp0MFNBMWNXalFNUmJCNXZ1am1tVjJZZTJZX1NMQVlwbVBsYXZCRC1OM1I1aGo2NGx4YXFPY0gxWEZLVDhXS0hnZFAyYw?oc=5",
-   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -297,17 +252,26 @@
  "fiscal": [],
  "uc": [
   {
-   "titre": "Qui veut monter à bord du bateau de Magellan amarré à Lorient ? - lorient.maville.com",
-   "source": "lorient.maville.com",
-   "date": "Thu, 24 Sep 2026 13:52:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUXhBZkVGTTNvejV3VkFFeTFkSGVRRC1SdW4zTDl5eHhNLXYtUTJtOW42THRLQ2JUN0lfV1BxaVJLOTRXZHR3cnFITklFVzY4c3dKMUs3dUxpQVVJXzJSYnRfMEg4bmk3QW5OTXcwWnJYaVFCdnJqV3FnaFJyV240c1JiVmlFVTVQRlZLZG1sVTB1YS1ocmw3cUhyTl96dWxfd01mVFRiajVSbU1xejhCSFNlcUwyRmczZkxXVm1B?oc=5",
+   "titre": "Lorient accueille le Nao Victoria : visite du célèbre bateau de Magellan - France 24",
+   "source": "France 24",
+   "date": "Sun, 27 Sep 2026 10:04:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLVh2cm0xcE8zYlRVSEIwUUZMNWVGTDFmN0x2RFp1bVV1b2N0d1g5UDMwd3dBN0lUWGZBZk5YanY1Mko2cEtPMUlEOG02bUtsZHZZUjE0eTlNcU1KOXJMejE1Zk4tamF4LWUyTnI1ZDViTVE0UHZ3Q2RnVHctZUY3Mk5HR2EwSjNkeWQ3d1hfQTRnbnlpc1FsQWQ3TGZ5SGNxY0l2azd2V3RqdDh2NWN3X19aalV3dXdoeUlEUF9qNGpWLTNGbTBn?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Qui veut monter à bord du bateau de Magellan amarré à Lorient ? - ouest-france.fr",
+   "source": "ouest-france.fr",
+   "date": "Thu, 24 Sep 2026 13:52:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQakljMlpDejB3LVNWNWtwbVAxMzFrTWstejhaTVZBN2E4c3JQV2tCeGVmQVFRN0loX3NJUVBDNVpiekg3QngtdUxIQm5lLS0td2MyR0pvSWpIZEpRVEtWcEtzX1ZWckhRSDBCY1JPUTdJT3Jrb1ROblR6RXlYZjlyZjI5Y3c0YTZieTB5YXo2RURQU25YWGluUEZseXhNdFBiTnpNcTJpX3FwWmpxXy1xWjZwVFY2T2tkbi1OVUp5N2Itb0VqUVduWkFQR2NuOHprQmp0SmVhN3ItVUFRRy1jV3lqdw?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "positive"
   },
   {
-   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - Ouest-France",
-   "source": "Ouest-France",
+   "titre": "Réplique du navire de Magellan, le Nao Victoria attendu la semaine prochaine à Lorient - ouest-france.fr",
+   "source": "ouest-france.fr",
    "date": "Tue, 15 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOTUxpRUFwRnB1TVpjVU84d2l1WFI1RWg1bEk2elJrci1yc280UzF2bzJBN1FBWlI0OXhXTTNZY0kwbFMtUDRxaUVPdE42OXNib2RUUVZoSG5ZUDZ1Y05ZTHR2U2s4dTdxLWg5eXl1MV8wN3pKOWc3TGFwSUdTZGpQcDhLdmFUclo4N0IzNHVkNGFDejNTWGRnRjNiMjcxaTVSUURNYnRfUVpUWkw4dG1GbG5ZYl9iWExhNDdwaWt3NG1YNVh2bkx4TVlaZzJBZHZoREk2WXJwYU11VlNSRDF3TnVGV2ViaDBCWUM1eURTS3p1bTdNZUlXQ3VNNWJBYWtrdXJR?oc=5",
    "tag": "Magellan",
@@ -315,8 +279,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Nao Victoria, réplique historique du célèbre navire de Magellan, sera en escale à Lorient fin septembre - Le Télégramme",
-   "source": "Le Télégramme",
+   "titre": "La Nao Victoria, réplique historique du célèbre navire de Magellan, sera en escale à Lorient fin septembre - letelegramme.fr",
+   "source": "letelegramme.fr",
    "date": "Mon, 14 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNM0pNaXVoWFpHczJoYk0tQzM5VE1pOEY1VUV4WHcyYnFDU2tWT2wwN0E3TGp3UmpCNWVyZnhfUzVOOTROX1NPVElJZEhxaTBKVjFLNm1xbGRfS1FyUzJ3UUx2bEItNWp2V0VWSEtqR1A5dnVFUF83QTJjblhzdzRlRlk1aHplOWFMakVadWJZc0c4RUozRmJkRzNuUl9CUjZNcnE5WXZ0OEdXYVVra0VVVExQYU92WGp2NXlWN2dKc3I1Y29GNHh5M3hFYjZMRzlaUGhsOTlTRjZlNkh6NjRWazdRRVE2eFlaWDBWOXBJUUZ4ZVBfWm1KSVR5MA?oc=5",
    "tag": "Magellan",
@@ -333,19 +297,10 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - L'Automobile Magazine",
-   "source": "L'Automobile Magazine",
+   "titre": "Campérêve Magellan 745 : le van aménagé de conception française cache une nouveauté inédite - automobile-magazine.fr",
+   "source": "automobile-magazine.fr",
    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdkN6RnMtR3dYM3RvLVVCa2hYMVNERHFDMEJiRjIyNy1BaS14VzdGM1pGQlpza0dkRWt3VktRVE9YMzItX2RKcFdMckdKenZ4VFBhNTNjOFhJRDlOWmlrQ0hvRkNtclY1UHc5TExlY3g3Wl94MHRWVXF4R1lRbW9FcFQ1MmZWbUJvbUxnQXVjSmN0VnVVOWZaSVBJcW9ld011Wk12blptTkkxMElzcVN4anBJZzBUd2VlQ0F6SndpdlQxZkZlUGpVd29mcXE0QjE3ZDAzOWNsTHFDbEFjNHotVGVB?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "MAGELLAN : L’Odyssée inachevée Troyes : date, horaires, tarifs - jds.fr",
-   "source": "jds.fr",
-   "date": "Tue, 01 Sep 2026 04:22:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWFh3YWx2RkREVE5Ddk91LUJQSlJmZWNSTHpucG8wTHlxUm95aFpaZzY1NVRucUZuZG4zOXU0VWkycklCMjJBM0hiTTd4N0xxM0ZpeThXekN0VXhRYTJYQ2hIRlBWbTFKSlpDLWEzTFJoX3VqV2JMSFNvWFR0TjNPVQ?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -414,8 +369,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - professioncgp.com",
-   "source": "professioncgp.com",
+   "titre": "Nolwenn Le Roux (ex-Ostrum) rejoint l’équipe d’Eurose chez DNCA - Profession CGP",
+   "source": "Profession CGP",
    "date": "Thu, 24 Sep 2020 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa09SRkpQU0J3Ti1xRmNOa0pFX0hkaFhNcEFWTzRlaFNOQk1TcTVSRlRZRWRPTFlOajI3YnNYOFlzelB0TGYxYS0yMlZhTlVEWl9XdHlGcF8yQkN4eFVNcU1TYXFnbTBVWjlpc2xuRnM1WEdLRldmUHExd2hFQ3laSTBhS2hfZlVlLWlUc2VSOUQtVU1QdzctSDEzTC0zVmdqRlg4MDFFUElaZTFXOVdSbTJieDF2ZnNwZlR4dHE1SW5yWWlt?oc=5",
    "tag": "Eurose",
@@ -423,8 +378,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le fonds CPR Croissance Réactive à la loupe - lcl.fr",
-   "source": "lcl.fr",
+   "titre": "Le fonds CPR Croissance Réactive à la loupe - LCL",
+   "source": "LCL",
    "date": "Tue, 07 Apr 2020 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRGRoRG80QWg4cU05Q3ZVaDVPd1BWdGMyODNDVjY4cll1eThwYVVFYldFQWNISFFjOTRxUUJUd29xQVRkWllDaVNHS21pTnVIYzZ4c25SMjBBck9meWZDYmFJbEIwY3hBYVBPQkdFbTlEbk53VEpPcFE0MmF1dktpZW92amdKcERvRXRfYUxkVmFGVlE4enROSGdQMjhiRi1zUzVSUVV2Z00?oc=5",
    "tag": "CPR Croissance Réactive",
