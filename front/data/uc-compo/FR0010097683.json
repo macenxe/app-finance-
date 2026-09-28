@@ -2,7 +2,7 @@
  "isin": "FR0010097683",
  "alloc": {
   "action": 41.9,
-  "obligation": 39.3,
+  "obligation": 39.4,
   "liquidite": 16.5,
   "autre": 2.3
  },
@@ -21,7 +21,7 @@
   },
   {
    "nom": "Industrie",
-   "pct": 10.4
+   "pct": 10.3
   },
   {
    "nom": "Matériaux",

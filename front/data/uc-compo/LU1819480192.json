@@ -1,15 +1,15 @@
 {
  "isin": "LU1819480192",
  "alloc": {
-  "action": 100,
+  "action": 97.1,
   "obligation": 0,
-  "liquidite": 0,
+  "liquidite": 2.9,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 68.5
+   "pct": 68.7
   },
   {
    "nom": "Conso. cyclique",
@@ -32,10 +32,6 @@
    "pct": 1.1
   },
   {
-   "nom": "Finance",
-   "pct": 0.1
-  },
-  {
    "nom": "Immobilier",
    "pct": 0
   },
@@ -45,6 +41,10 @@
   },
   {
    "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
    "pct": 0
   },
   {

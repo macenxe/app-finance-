@@ -1,9 +1,9 @@
 {
  "isin": "FR0000989899",
  "alloc": {
-  "action": 94.1,
-  "obligation": 1.2,
-  "liquidite": 4.6,
+  "action": 92.7,
+  "obligation": 1.7,
+  "liquidite": 5.6,
   "autre": 0
  },
  "secteurs": [
@@ -13,31 +13,31 @@
   },
   {
    "nom": "Santé",
-   "pct": 26.4
+   "pct": 26
   },
   {
    "nom": "Technologie",
-   "pct": 22.2
+   "pct": 21.4
   },
   {
    "nom": "Communication",
-   "pct": 6.3
+   "pct": 6.4
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 4.3
+   "pct": 4.5
   },
   {
    "nom": "Finance",
-   "pct": 3.8
+   "pct": 4
   },
   {
    "nom": "Énergie",
-   "pct": 2.4
+   "pct": 2.6
   },
   {
    "nom": "Matériaux",
-   "pct": 1.6
+   "pct": 2
   },
   {
    "nom": "Immobilier",
@@ -55,42 +55,38 @@
  "holdings": [
   {
    "nom": "Publicis Groupe SA",
-   "pct": 6
+   "pct": 5.9
   },
   {
    "nom": "Virbac SA",
-   "pct": 5.6
-  },
-  {
-   "nom": "Ipsen SA",
    "pct": 5.3
   },
   {
-   "nom": "MTU Aero Engines AG",
+   "nom": "Ipsen SA",
    "pct": 5.2
   },
   {
-   "nom": "Safran SA",
-   "pct": 4.4
+   "nom": "MTU Aero Engines AG",
+   "pct": 4.6
   },
   {
-   "nom": "Rexel SA",
-   "pct": 4.2
+   "nom": "Safran SA",
+   "pct": 3.9
   },
   {
    "nom": "Exosens SA",
-   "pct": 3.8
-  },
-  {
-   "nom": "Sopra Steria Group SA",
-   "pct": 3.6
-  },
-  {
-   "nom": "Edenred SE",
-   "pct": 3.6
+   "pct": 3.9
   },
   {
    "nom": "BioMerieux SA",
+   "pct": 3.8
+  },
+  {
+   "nom": "Edenred SE",
+   "pct": 3.7
+  },
+  {
+   "nom": "Sopra Steria Group SA",
    "pct": 3.5
   }
  ]
