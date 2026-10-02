@@ -95,11 +95,14 @@ type Compo = {
 
 const brut = (v: any) => (v && typeof v === 'object' && 'raw' in v ? v.raw : v);
 
-// Compositions SUPPRIMÉES à la demande de l'utilisateur (données de reporting trop anciennes
-// chez toutes les sources — la fiche affiche « données indisponibles ») : la génération ne
-// doit pas les recréer avec les mêmes données périmées. Eurose (FR0007051040) n'est pas dans
-// FONDS ; Carmignac Patrimoine et Conservateur Immo-Or y sont, d'où cette garde.
-const COMPO_MANUELLES = new Set(['FR0007051040', 'FR0010135103', 'FR0011199314']);
+// Compositions hors génération, à la demande de l'utilisateur : la génération ne doit pas les
+// recréer avec les données périmées de Yahoo.
+//  - SUPPRIMÉES (reporting trop ancien chez toutes les sources — la fiche affiche « données
+//    indisponibles ») : Eurose (FR0007051040, absent de FONDS), Carmignac Patrimoine, Immo-Or.
+//  - SAISIES À LA MAIN depuis le reporting officiel : Conservateur Diversifié (FR0010564336),
+//    portefeuille Morningstar figé au 31/12/2023 et sans classe « or » (ses ETC or y comptent
+//    en obligations).
+const COMPO_MANUELLES = new Set(['FR0007051040', 'FR0010135103', 'FR0011199314', 'FR0010564336']);
 
 // Libellés français des secteurs Yahoo (mêmes intitulés que les fichiers uc-compo historiques).
 const SECTEURS_FR: Record<string, string> = {

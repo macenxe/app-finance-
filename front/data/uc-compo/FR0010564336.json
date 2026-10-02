@@ -1,10 +1,13 @@
 {
  "isin": "FR0010564336",
+ "date": "2026-08-31",
+ "source": "Répartition : Conservateur Gestion Valor au 31/08/2026 (obligations d'État ; liquidités et monétaire court terme ; or via ETC). Secteurs et principales lignes : Morningstar, portefeuille au 31/12/2023.",
  "alloc": {
-  "action": 13,
-  "obligation": 78.1,
-  "liquidite": 7.1,
-  "autre": 1.8
+  "action": 25.31,
+  "obligation": 25.32,
+  "liquidite": 25.33,
+  "or": 24.05,
+  "autre": 0
  },
  "secteurs": [
   {

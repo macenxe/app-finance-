@@ -407,10 +407,10 @@ const Chart = (() => {
       }
     }
     const a = d.alloc || {};
-    const v = { action: Math.max(0, a.action || 0), obligation: Math.max(0, a.obligation || 0), liquidite: Math.max(0, a.liquidite || 0), autre: Math.max(0, a.autre || 0) };
-    const tot = v.action + v.obligation + v.liquidite + v.autre || 1;
-    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', autre: '#b5ab95' };
-    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', autre: 'Autres' };
+    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', or: '#9c7a26', autre: '#b5ab95' };
+    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', or: 'Or', autre: 'Autres' };
+    const v = Object.fromEntries(Object.keys(LAB).map(k => [k, Math.max(0, a[k] || 0)]));
+    const tot = Object.values(v).reduce((s, x) => s + x, 0) || 1;
     const seg = Object.keys(v).filter(k => v[k] > 0.4)
       .map(k => `<div class="compo-seg" style="width:${(v[k] / tot * 100).toFixed(1)}%;background:${COLS[k]}"></div>`).join('');
     const leg = Object.keys(v).filter(k => v[k] > 0.4)
@@ -752,16 +752,16 @@ const Chart = (() => {
     if (!el) return;
     el.innerHTML = '<div class="chart-loading" style="padding:8px 0">Composition…</div>';
     const esc = (s) => (window.escHtml ? escHtml(String(s)) : String(s));
-    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', autre: '#b5ab95' };
-    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', autre: 'Autres' };
+    const COLS = { action: '#16304f', obligation: '#5b6b80', liquidite: '#c9a96a', or: '#9c7a26', autre: '#b5ab95' };
+    const LAB = { action: 'Actions', obligation: 'Obligations', liquidite: 'Liquidités', or: 'Or', autre: 'Autres' };
     const cartes = await Promise.all((items || []).map(async (it) => {
       try {
         const r = await fetchCompo(it.isin);
         if (!r.ok) throw 0;
         const d = await r.json();
         const a = d.alloc || {};
-        const v = { action: Math.max(0, a.action || 0), obligation: Math.max(0, a.obligation || 0), liquidite: Math.max(0, a.liquidite || 0), autre: Math.max(0, a.autre || 0) };
-        const tot = v.action + v.obligation + v.liquidite + v.autre || 1;
+        const v = Object.fromEntries(Object.keys(LAB).map(k => [k, Math.max(0, a[k] || 0)]));
+        const tot = Object.values(v).reduce((s, x) => s + x, 0) || 1;
         const seg = Object.keys(v).filter(k => v[k] > 0.4)
           .map(k => `<div class="compo-seg" style="width:${(v[k] / tot * 100).toFixed(1)}%;background:${COLS[k]}"></div>`).join('');
         const leg = Object.keys(v).filter(k => v[k] > 0.4)
