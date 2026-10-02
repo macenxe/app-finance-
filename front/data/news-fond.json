@@ -1,6 +1,15 @@
 {
- "genere": "2026-10-02T11:02:53.752Z",
+ "genere": "2026-10-02T16:36:28.009Z",
  "globales": [
+  {
+   "titre": "Cac 40 : Alors que la France inquiète encore le marché (l'écart sur le taux de dette à 10 ans avec l'Allemagne a dépassé 1,5 point de pourcentage), le CAC 40 résiste - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Thu, 01 Oct 2026 15:48:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwJBVV95cUxNWWVCZGRVb1ZVeDg5dEhLZTkyRXpibU9WY1hQUUlsLW0wdkdpNUlBS01TdnM3RXpQVWM0d3ZBYi04Z1BoMmVKMm1lWkF3RDMtaFhrUURScFpkZVFwQnYxUlNzSXVYdDVxa0gtLV9VLWhlMnVQYWgxR016dHNmN21iWGhZZHEyanFaX3JqenBJSExsbkNOUlB1bmtyU2pwZndiZ0FxUk5fVjRnZUtBVVVaYVlRbUtmMVc5MjhoaEozZGhBdGNYbXFraUxOTlYzM1B5N1lJa1lZRG8wT0xlRThKLWJEU1I0dDE5LWRHbUVEZV9aRjRkZUdYQVBtZXNRd1NrdUhzbV9BRkxDNW1JNTg5dDBJdjhOb3FoanFNRFZ3ODdFRVJmN19ONnhoUGd5NWdkZTFSWklPdGRBd09Bc05wZ213bWJrNXNhZXN2cUg1cw?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
   {
    "titre": "Les marchés obligataires fonctionnent de manière ordonnée, selon le FMI - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
@@ -11,29 +20,20 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Agenda mensuel économique international du vendredi 2 octobre 2026 au dimanche 1er novembre 2026 - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 01 Oct 2026 14:27:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1YQ3JuZE95WXpCa0FVSlN1RzdBY3lDS0hCN05CRzhSTWxoSU1XT1FDUWNpa2huU1NyT0lJZjRzYmtkaGpQTXdSaFFNUGU0TjdHSmJNd01tUzRmbmpLN2dKRjhn?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "TAUX-Les rendements obligataires se tendent, l'OAT à un sommet de 18 ans (actualisé) - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 01 Oct 2026 10:55:32 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPblFQaUVQdF83M2g5Mng0alM2QXBXRGgtNktNOHYxTWlaaVp4bExyN1IzaW1oWUl4QVdZZmN2Y2ZyVS01TkZjNFVtbVBTNzhzZ21TZFQ3MGk5MnpWSEZmUGFINnFQdVB5M01iS3Z0ZVU1ZGt0UGNlVmZLdVJaZ2ppTndyOEhOd0JPNzFNUjMxdGVyeGd3cVl1YWJqbHFYR2lwUnZCdVZPZTdYTGR5QTU2VGZDTjFjMG03ZjFOTHc3bTEzcmthWlZiZW41Q0VuNi1xU0oxN2VYbmRiblVHbzJIMHQ3TFJYaXprZWVVNllvQ3YtNFVqb0HSAfYBQVVfeXFMT25RUGlFUHRfNzNoOTJ4NGpTNkFwV0RoLTZLTTh2MU1pWmlaeGxMcjdSM2ltaFlJeEFXWWZjdmNmclUtNU5GYzRVbW1QUzc4c2dtU2RUNzBpOTJ6VkhGZlBhSDZxUHVQeTNNYkt2dGVVNWRrdFBjZVZmS3VSWmdqaU53cjhITndCTzcxTVIzMXRlcnhnd3FZdWFiamxxWEdpcFJ2QnVWT2U3WExkeUE1NlRmQ04xYzBtN2YxTkx3N20xM3JrYVpWYmVuNUNFbjYtcVNKMTdlWG5kYm5VR28ySDB0N0xSWGl6a2VlVTZZb0N2LTRVam9B?oc=5",
    "tag": "Obligataire",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "En réalité, c’est l’IA qui fait grimper les taux d’intérêt, et non l’inflation - Morningstar",
-   "source": "Morningstar",
-   "date": "Thu, 01 Oct 2026 10:07:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQlM5WWgzVmh3RmRsYzFMNWcwOW5MOFEycVFaUmhucU1GQXI5a2RGS0pIdGxtMkh2QUZxeG1lTHhQVmR4aUZHTW9SVE1iMll0NkRqQm9JaURqMDFHQkctcGZWTnFMeG02NjNSYjNsRTJkX01kaEJ1Q3U0aElYNm5mVG5CZ1R3WUNuTVZxZm1wSTJmZDdJV1RKbk93N2ZuUnJhak9JSnJITHRWZmtxYUx3WUFDMTI?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : Alors que Legrand séduit le marché avec ses nouvelles perspectives, le CAC 40 marque le pas - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Tue, 29 Sep 2026 15:50:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOR2VOenFtYjR5Z3I2NDFSS3ZsZWtmV3FoTkMtVTBVQ0JlRVk3Z2NKem5WQ2dpdnhFRGxsT1hzR0R5YnNvSTQ3ZmRCOWh6MDJZbHZrenNmcE43bGM2YWhDVE5BdTF3VG84dUxCZXFPV0V2QmpZbDh1WGFCVTNvRG9SNzdWUlZtQkRTX2J1cVpfbGJQS0hPVWtYNGE5Q3c3TTNFVXNka3ljd1J2NEQ3YjliS3hpUmJyTzBLeVk4d1JmRW01UWF4ekdUWFhCcjlrTjRsckxKMmxiSGFHSmRWak81VjZueTZKSENDeERpYU1sNElSUzdENWxmUF8tNFI?oc=5",
-   "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -67,20 +67,11 @@
    "sentiment": "negative"
   },
   {
-   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 08:12:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 07:17:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
+   "date": "Thu, 01 Oct 2026 13:16:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -103,13 +94,22 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Gazole : nouveau record du prix moyen à la pompe dans l'UE - Boursorama",
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 01 Oct 2026 09:57:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOZU0teTIySlRMckxxSlpzNm84ZlktUG9yM0JsUXNWVmthdF9KR1pqYmtxQXFKYVdlMWltb1R5NTd6S2NXbVBmb3pTOThIUTdTVWZGanA5dTU5Mlh6Yk0wSW1rZWRPMmJSSWFUV21QdUozY1A5WTI2VkZtak1pSE51YTk3QzZuSW9TUXJHR0FxdHZXckZQRUtsSW5MUlY0SlA2V3dITndNdTNoUWE2eXhLMFZqZnFlS1dFN3loM3FVdmVIZjlFV1ZZNndJT1Rqb3Z4YUdxUWJmSlZHYkxJNkw5cGJxSzByZVdHcTExQTJTb2lmRUZkQVh4QnZDR05BTkV0a3BMbFN5dHE5VllENDNzbtIBlgJBVV95cUxNaXMydXZiZFlqUGtIdDZEUGNpc1NyMGNpMVM0RG9kcUd0TW4ybE9uRWlMT2EzZFNhTmtoZm1ueUdPbjNZb0hfZGcxSTQ1cThCSHJuaXlaQnpWMVFycjVfc2xMakdoTkpCbnNaLW45c2oxYXdSc2lUZENmdEZnbFM5SGtKYWgxSjVyVFRHeGE2RzY0Skx5OE51a2lvRUlpMmd4cjRnYkJVMkFVQmp0ZXI5dGhQcWhHLUdRSnBpT2FvRHhnYVlzUm9rbjlaVkFkY2xIenllcVhJVGQzWUN4cmc1ZzQ1MUctdkxiTTNqc203QzUzUVZJdFl0bVhBcUk4UmphSzZaVWw1SmRpdXNUNGFJbUVNTmhCZw?oc=5",
-   "tag": "CAC 40",
+   "date": "Thu, 01 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 01 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
+   "tag": "BNP Paribas",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "Le Zepbound d'Eli Lilly plus efficace que Wegovy, selon une analyse - Boursorama",
@@ -132,101 +132,254 @@
  ],
  "eco": [
   {
-   "titre": "Marchés mondiaux: les Bourses tentent un rebond, détente sur la dette - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 02 Oct 2026 10:56:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPemdXeWRaa1RXbTM3dEVxSVhDbE9sUzM5cG05TU85SFJhbHQ0Y20teHZmdEZLT2lQVFZveDUwRXptaHUtUmU1YUswSlF3YUpPWW5sWEpOZi1LUnI5MGhhVWplS1lJeFdLc1BOZlFNd25BUUNnT29PQ3ZWRC1obW52bllXSzI0ODBHU213Z0pMS0Yxc01ubWp1SUZqRkd3cXZfNy1EVWFsQkU3SUJjaDJScEIyakxiWXlUb1R1VXRfbFFaVWVKTmJv?oc=5",
+   "titre": "Eurofins Scientific: Analytical Bioventures acquiert des actions sur trois séances fin septembre",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 16:30:09 GMT",
+   "lien": "https://www.abcbourse.com/marches/eurofins-scientific-analytical-bioventures-acquiert-des-actions-sur-trois-seanc_703654",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe finit dans le vert, le risque d'un resserrement monétaire recule - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 16:19:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSzVDcUNOTFBjRmZBZGdpekFUSWNJbDdlT1BzOUhLXzIyU3AxOGhYUmVEQnlOQ3Z5aVlaWW0xb09qbUpJay1MN0l0UWgxanA1ckZoaUF0RW05eE9nVHplMWZrU0doZ0dsM0lrSmFfRjlLSzRfRUkyeGFSWVRPRURRLW5jcG54UnQ0aXNWLWptd1ZCWHkwUTlZTEp1N18zcEdNd2hxUHZDaFRxcE5oNC1WNlVFcWwtY2xwSzJrWGx4ZFBYVEhIR05ka25xYjhIMW5HQjh3MUVicC1LUjN2TkpPUENtby3SAeoBQVVfeXFMT2JSVmRfOENCN1l1YmRQZm83dmhYbldNQl9QUzlVWFk0UzhHbkVXSFpuVk9PYmlFbnpzMHN0ek55cUlaTy03b01kSV9SdkQ4MlhyamdzVV8walQ3bkFzMEppN2FpcG1pNzJ3NmpLRU1WaDBPM0RFcFI5YkhJUVlhYmxnY3VCcUh2eFNPMEZ0R2ZhWmlhenZ0X0g3RkIwelh1Z0ZhTTd6eUhyZlFqdGM0SlhTbzQ2WG9vNHNoT29UM0IyaVhIREw5MDBSa0Z5azJRSlhtelZHakt1ZlFZa1BveTNKVzJzZjk4LTFR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les pays du G7 vont libérer jusqu'à 100 millions de barils de diesel et pétrole brut, \"ça va alléger la facture à la pompe\", salue Anne Genetet, députée \"Ensemble\"",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 16:16:55 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-les-pays-du-g7-vont-liberer-jusqu-a-100-millions-de-barils-de-diesel-et-petrole-brut-ca-va-alleger-la-facture-a-la-pompe-salue-anne-genetet-deputee-ensemble_VN-202610020712.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carburants: les pays du G7 vont libérer jusqu'à 100 millions de barils de diesel et pétrole brut, \"une bonne nouvelle\", estime Philippe Balard, député RN",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 16:13:18 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-carburants-les-pays-du-g7-vont-liberer-jusqu-a-100-millions-de-barils-de-diesel-et-petrole-brut-une-bonne-nouvelle-estime-philippe-balard-depute-rn_VN-202610020704.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les images des lycées qui brûlent contribuent-elles à tendre les taux français ? 🤔",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 16:10:29 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-les-images-des-lycees-qui-brulent-contribuent-elles-a-tendre-les-taux-francais_VN-202610020702.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "MaPrimeRénov' : le budget de l'Anah en baisse de 200 millions d'euros - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 16:09:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVDlZblo4SE4tcGRyYllwWnJobzZTN2lYaXoxTnNwVk1rNmNpdnlIdHQ1U3UwckIyODRtcnR2VVRLdEtWUFpvZUJRYzBUclRDaVJqTS0yYU05bzRIN2VWelpYa0RLRm5FVGlHZUJwcHc5c2ZPYV9US19YQkQ5bnluOTZhV1VuR3lfYWt1Zi1WUXpsWUZZeEhkSldablZLRUtXTzhNcV81QkFGMXFpVGJaOU1NWHVSMkU2WXZKTGlZcURhUjM2amNVU19RWHROTHEzU0xsUnBtRl94dWo5NmpRM3hB?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "L'Europe s'offre un rebond grâce au pétrole et à l'emploi US",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 16:07:37 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-s-offre-un-rebond-grace-au-petrole-et-a-l-emploi-us_703650",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "On refait la séance : Air Liquide organise lundi sa Journée Investisseurs, sur fond de pressions du fonds Elliott - 02/10",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 16:07:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-air-liquide-organise-lundi-sa-journee-investisseurs-sur-fond-de-pressions-du-fonds-elliott-02-10_VN-202610020705.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "On refait la séance : Air Liquide organise lundi sa Journée Investisseurs, sur fond de pressions du fonds Elliott – 02/10",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 16:07:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/on-refait-la-seance-air-liquide-organise-lundi-sa-journee-investisseurs-sur-fond-de-pressions-du-fonds-elliott-02-10_EN-202610020694.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Hausse de la TVA : Canal+ va augmenter le prix des abonnements si le gouvernement maintient sa mesure pour 202 - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 16:05:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPTVJlX3NBUk1ncE9NajYxN0dfY0FIUmJqZmRMYkpQNkk3LWE2Y0d5UjhVQ1Z4V3dUdjdUQW96RFZLZ2Y5Sm1ZTHFwTWtGSEplb0h4ZENLMm1uVTMyQ2VQU21HMDdsc1hjN3BWaXNpYTEwWUh3THl6VnNFdUpHUVA2eWMyY01mRnpRVUF4blJ0d1UwejhGcDJvazZySV9qTFQ1UG5rTVBvMl9CTEl2ZC1KOGdoWkI3eVNVcXFqeUJITW8wQndUV1J6eGNSTkZ6YVl5TWdsaVVzakpjSjdkZk12bkRoem5INHJneVREYUFmQk5oM2hueWhtYVRpTDVKZEthMXZ3VDlSaUVhUFVZSzRiS3k5X3l0NURSM19nUHMxMzJKRVg0MS1J0gGsAkFVX3lxTFB4ZzlTNDZpVXB0VXN2RTZxTEdrLWhyLTNaaExydTZWcjdEWGNLa1NMajVQcThaOEdCQnlkN19yVTRHRm0ybzhYT1R3blNkdEFVTkpiZnZWM1RCQnd3bkQ1UzJyNENFVHBoX240eExSMXhHdjZ4MjVlLV9ic1FVVHpiS1c3OVc1QmNmSVFWVkhud1JGX1F0MURUTXlRVlBIMEdqS2pzRVIyczI1c01RcmVwcmpNRkVDMllSM1d3cGg5bWFvb3c4NVFwSkx4U1o1WXVFS180SlBnU2NGVG1uSmV1TE5YSU4tY0FnV205RUVRU3pmTzNQTFJaRVBKeTZQM1E5UkFFQjlSMTVBRm44SGZjN0xVY3dJcXZ6VTY3U2E1VVVoVnlSSzNqWG93Ng?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "ROCHE BOBOIS : INFORMATION MENSUELLE RELATIVE AUX DROITS DE VOTE - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 16:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSm1mSnJaeXR2Uk9xNWN0cWQtWjdobExKX0I1dnNCOXNHUnZ6SmtTczRqS2FiS21TdWpJZjFONzhiYWNzRG4wRklHc2NMbmh5UXN6dHB2LXJzODR4NHB6OEZOd3hRWUZNTDRURUhIOTZsbG03VXhIM2E4QnVQWWVfSFFXZXdzRWJMalpPVFhoYUJYWXl6TTN0Tk4wN25WSC0xdlItbEQzSW9sbnNEM196LVZtSW9hbkNTX1lJX2lxcEctUjVvV3d6TGFlWFFKM1BmTldNZkZib9IB3AFBVV95cUxPOE02TTdtU0NOLTZIOVlsbUpiVGw5VVV4aWVieEVDNkZmeGFRZTVybUtZWmFTZFhEUUlhWnNxRWhrRVc4dkt3aERRMmg5VWpjVFBVZnFHQTAwSHQzRVFrSU8tZ2w1Z0NGNmRIMlFGVUZUUXZKbTIxdzBpLUpOSXFGU1RTR0p0d0tZUEl1a25sX25xV2NwQW5MUmZfNHhoNXMtUWt0S2hELXJ0WDRTMDRzQkYzdEltN3NSODhUek5lZFU4eEVNMTJuYm56UnJOZ1hfbVhfWVFiNENTT24x?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Metavisio - Thomson Computing prolonge de six mois sa restructuration de dette",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 15:55:06 GMT",
+   "lien": "https://www.abcbourse.com/marches/metavisio--thomson-computing-prolonge-de-six-mois-sa-restructuration-de-dette_703647",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 02/10",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 15:53:02 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-02-10_EN-202610020677.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 02/10",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 15:52:34 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-02-10_VN-202610020679.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "AGENDA DU 5 OCTOBRE AU 9 OCTOBRE: Les 'minutes' de la Fed et les PMI au programme",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 15:50:53 GMT",
+   "lien": "https://www.abcbourse.com/marches/agenda-du-5-octobre-au-9-octobre-les-minutes-de-la-fed-et-les-pmi-au-programm_703644",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40 : La Bourse de Paris se reprend grâce au pétrole et à l'emploi américain - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 02 Oct 2026 15:50:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRE5BanJRXy15RnVPTHZjT1VWMWRGSVZKcjNCMmlPNGFjeEdrWTRTMTk2eUY0LW1Ra1VxZjB1Y252aFBVaTMwWlNheE9iQVVXUlRzVEdaX2ttS0poblhWbGU1dm5LYnE5R0xUMjZ5c2VEQkNHVVhlT3NtNTNNcHZYbDhYczBzaUVlU1J5emd2a1l1OHQ0N2JHWWs3QmpXQTFYZGtUYUdROGs5U01tVHMxTlpfNmk5eUZuX2hOeFpSVWczZWtkekRCMlZRYS1JNzZlUmlF?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:50:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les tensions obligataires laisseront des traces au Cac 40 cette semaine, l'emploi américain en dernier rendez-vous - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Fri, 02 Oct 2026 10:47:52 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQZmdqcTVhVTVjX1JlV2o1b2xlUzhQR3ZhVXRRUVBTVWtuZUxBMG44a3NmcGxIU3VkVHB2d2lMMzVDRjk5YUlLdEJEaV9wa1JzSzBuOVFUMFhib3k1Umw4U3E2eHM3OUFPck8yenlLRzNoanBwVndwMWZRRTNQdEY5b2NEbzdsaERBUDBrekF4U0R4WmpoOXg0TGJRRUI3QXZybmstV2pyWmZ1cHJtZ1gxY0M4b2VNS1ppMlIxenF1TmU1MUE5RFc2Z3NNMW1UN2tDQ2FSaHBfZkp0aWZvdWNjeE1Rd3BnMHBCQV81T0UtZFptTHZMUDNsSGxRekFKR2k4ZFNEMDhnU2pwTmRmelA3RA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Lâché par Tesla, STIF s'effondre de près de 60 % en Bourse - ABC Bourse",
+   "titre": "CAC 40: La Bourse de Paris se reprend grâce au pétrole et à l'emploi américain",
    "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 10:44:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObDE1ZXR5NVZLM0V3eUMyUDY4UEo0dkU3Ump2d3REdVA1dS0xWkhxcGdBbHJXTXlqVmQtQmRKa1ZlMW5pVjF1VWdIMWstZldLRUJNRENVc1BUWnl4WmJRNm8zTDRGcnlTMFpvcERFUVljbXk3MVprOHg4WVBIUVNWMnN2bVhnQnFwbGx3bl9QNnJ5WTVmZHJ5RmNEY0c?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Lâché par Tesla, STIF s'effondre de près de 60 % en Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 10:44:07 GMT",
-   "lien": "https://www.abcbourse.com/marches/lache-par-tesla-stif-s-effondre-de-pres-de-60-en-bourse_703621",
+   "date": "Fri, 02 Oct 2026 15:50:06 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-se-reprend-grace-au-petrole-et-a-l-emploi-americain_703645",
    "tag": "ABC Bourse",
    "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Moody's s'inquiète, Barclays n'y croit absolument pas… À peine présenté, le budget 2027 et ses prévisions sont jugées irréalistes, le déficit serait même pire qu'en 2026",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 15:46:07 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-s-inquiete-barclays-n-y-croit-absolument-pas-a-peine-presente-le-budget-2027-et-ses-previsions-sont-jugees-irrealistes-le-deficit-serait-meme-pire-qu-en-2026_AV-202610020673.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:32:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90ZzVod2I0UkczbkNGZnVDSWV4WGhKLURFbVU1dVRSVGNPY3hYZ1Fnb096aG1MZFB0aWFDYXdSRTRKZWRveUU3TnVHdmxVSEpUMDVF?oc=5",
-   "tag": "CAC 40",
+   "titre": "Air Liquide : un plan stratégique sous pression 🏋️",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 15:40:40 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-air-liquide-un-plan-strategique-sous-pression_VN-202610020672.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Episode #1 – Souveraineté numérique : comment libérer les entreprises des GAFAM ?",
+   "source": "BFM Économie",
+   "date": "Fri, 02 Oct 2026 15:34:06 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/urgence-souverainete-numerique/video-episode-1-souverainete-numerique-comment-liberer-les-entreprises-des-gafam_VN-202610020685.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "KLM réceptionne son premier Airbus A350-900 pour ses vols long-courriers",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 15:15:07 GMT",
+   "lien": "https://www.abcbourse.com/marches/klm-receptionne-son-premier-airbus-a350-900-pour-ses-vols-long-courriers_703641",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "BOUYGUES Cours Action EN, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:32:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FRnRQY2lqUkxRT3htOEdjOEJvZDUzVk11MnVaWG4xQVU1aHczaFBQcXIyMFZyNF81T0YxYWtLSzZDVVZ2UC00bmVLOV9tUXlp?oc=5",
-   "tag": "CAC 40",
+   "titre": "Airbus doit réaliser un T4 record s'il veut atteindre sa cible annuelle de livraisons d'avions",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 14:22:33 GMT",
+   "lien": "https://www.abcbourse.com/marches/airbus-doit-realiser-un-t4-record-s-il-veut-atteindre-sa-cible-annuelle-de-livra_703640",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le taux français à 10 ans dépasse les 5%",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 13:53:21 GMT",
+   "lien": "https://www.abcbourse.com/marches/le-taux-francais-a-10-ans-depasse-les-5_703637",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les ventes de Tesla dépassent de nouveau les attentes, l'action grimpe",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 13:51:25 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-ventes-de-tesla-depassent-de-nouveau-les-attentes-l-action-grimpe_703635",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Les fonds d'actions mondiaux enregistrent des entrées de capitaux pour la deuxième semaine consécutive, portés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:24:33 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugJBVV95cUxOcnhva3hPXzRITlR4RkhNNzFaOTU2eUxQdXl5Q2doR0JWb3hPRVR2T2hYUDd3MzdHN2Q1UUNuU2JEN01NWm9sZWU0cC1WV1BBNWY3OFVoMWFVX1pyVW5IZDJqakZIYmZBNURGSDB2ekZDdTRpdUp6a1ZJWmhmcmZmSldRRHJNckJMbWtrUTNMd2pteFh2VDEtWlpQM2hUU2RHZmY4a2F5d0lGZ0U3YnlMb3hTZXdscGVaVkJXVzFzNGdqdm03dVUzYWQwLVo3bkRSNTFTWnkybHluTlNMSzBBZWNiNk5DVlF6cHFKQnlfM0Z6WnRxTTAyVmhibEhMTHN0YnE2MzhQT1VzNkJBblNCdVdmRTYwV2t4WDhlUnd5ajJqRmQzalFiT2hySUl6Y1hCUGVOUGI0eXptUdIBvwJBVV95cUxPTnBRQXhLOFVyaVhlRGozNXR6dlM3Ui1FdFNmcXUzS2YwRUFxUzlVOVkxNWoyYWdDdzBOVFl4S3JSRFFmTkJUT2Zac2w3QkpUQjBJckpqc2NNeWhLdFNuU2lxV2NKWks3NDl4bFFDMzRkVDZPeDBPdnpWTzFja2N2RlZ3cHREdkxQRjVYZVdnaE0xN3c3UmR2QUFYWWU1UG8tYmNMY1BkdXpDVE9hUW16RWdKM0R1QmxwZkJkdUpFa0FuZEJCemtWUDdzUTJzdmRKdVhPV2lXNHU3SGZlUFlyZm96Y1ZCTjJubDVqU1pOSEpOMExPTllEUzkzbmpFcjdscEhiSEdhcUhkSWJkRF9sY3l3RS1PZThDRnZIdTcyZVJmM3ZUb3FCdy1SSTk4NEwzNEd6bG53Z21qQ1pUMWtr?oc=5",
-   "tag": "CAC 40",
+   "titre": "Accord Financial prolonge sa ligne de crédit au 30 novembre 2026 et réduit son engagement à 65 millions de dollars",
+   "source": "ABC Bourse",
+   "date": "Fri, 02 Oct 2026 13:35:05 GMT",
+   "lien": "https://www.abcbourse.com/marches/accord-financial-prolonge-sa-ligne-de-credit-au-30-novembre-2026-et-reduit-son-e_703633",
+   "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
-   "titre": "Les actions européennes rebondissent après la chute des obligations ; l'inflation alimente les craintes concer - Boursorama",
+   "titre": "Des économistes tempèrent après l'inflation plus élevée que prévu - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:21:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswJBVV95cUxNSDRTazhlVTE0UHA5ZExGTW9DSEg4bS1XWlpXZjNsRTNUVWtQcmItOEFESEVhTG9KNjVrZmRNT2FHZVVid3RNdEFma1RLMFhKVGxXWDBLUkRFUklkOXVvaHlzdmplMjFyUnlKX0I1ZFRYRDM3dWlYLTd2dHQ1T1YyMVhLR3NYQWNyTEJyNU5LWE9CLW11bHpKZS1Oc0JFRGVGTTlpS0pTM3pBX29hbnNrQi1BSlRTaFEtYXlpbDNKOWFMdGUtWERJNTdhd0hCUTVPN1N1S2RTbngtMjhWbm1HYWRySmd2QTVuRDJaaF83QjdTQVU1NWxMTXAtYkpLS3doLW9pTFh5aWVNRGl2WlBXdk82aDhldlNNWEFEdF83ZWUwaDhKZ1ZWSkQ1djVqWlZocThR0gG4AkFVX3lxTFA5b0d5ZDFvenJDTVlfWnRBdnY5eW9lVkk4UWIwcEFCZ1lVZ0R6YThYRE15R1l4NXRsWWZaUnhzb19NX21BR014bE1oVHdzNnpKMTkyQ3lUSGxWajlDSHk0TWZnWXhlWnVPRHIyS21pZlg5ckFVUTluRDM1TG5iME5oa0x1OWNudjlIbzk5NkNWTWI3SHJwMFk1MUJ3YjZyWmRFajBRa1pMWE5JZDM1aDI4ME1yRFBuZ2lhSjRZUHlUT0dJQkVWX1hjaC1pODFrdFpOQlNoSjZFUUlxbEd6cFVkdFFWdGJ0QThWbnE5bHE5X1M3S0c0SDhpQXZrcEo4aklHNnVWaTZHRVVXRVBrUG9DbWZycllKMk1vZUVfdlctU0dUS2FMa2tabU53TUxkUnlHcVlrT0Z4dg?oc=5",
+   "date": "Fri, 02 Oct 2026 12:34:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWUFLdmZTeWFqeVEwellpOTlJLTZqbkJwbGxXUkdHVEpkX3NUZU1VTUZWRHF5Z1FRRXoxbnpTdFJYMnp3Wm5qLTJXbGpNc0N1UHlnbmFfcThVTUNzY2FJRVJOQ1pXNTN0M0pTWmU2eVNNUGl1R1VndjJnaDdDOFlkcHR3QVdpUFNVcWxYLWxnSm5PeVIxakMzTkdLWmVmVU9IQ2tnNGtWOTN6TmU5alZBYks4RlloWkY1RVJsejBtNHdicG15ZnpIRGh4am9zUHRvR3Q3YjhsUHZWX2g1cEZyZtIB4AFBVV95cUxQWUFLdmZTeWFqeVEwellpOTlJLTZqbkJwbGxXUkdHVEpkX3NUZU1VTUZWRHF5Z1FRRXoxbnpTdFJYMnp3Wm5qLTJXbGpNc0N1UHlnbmFfcThVTUNzY2FJRVJOQ1pXNTN0M0pTWmU2eVNNUGl1R1VndjJnaDdDOFlkcHR3QVdpUFNVcWxYLWxnSm5PeVIxakMzTkdLWmVmVU9IQ2tnNGtWOTN6TmU5alZBYks4RlloWkY1RVJsejBtNHdicG15ZnpIRGh4am9zUHRvR3Q3YjhsUHZWX2g1cEZyZg?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:15:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le conseil d'administration du fonds turc fait avancer les modifications de la loi sur les marchés financiers - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 02 Oct 2026 10:14:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgJBVV95cUxPcWN1MUZYZGxKQkVaNTBfbHRiZ1lpYXliYjBVMGo1dW50a2lCTVlyQnp2LURtemh1Vlc4Q2tNXzduU2EyUjlSaTI4T0tIaHdMYUdpZlhIRXJQQi13VXdUdVJzeUxyVU9MMF9BcHZaVVdFVGIyZEVDX3F4a1M2Y2stUnRrbTczUDc1X3JJTVRmdVMwTW05Rm9rT1VZemRfa1RjWTdERFNDMEZrQ3hyYWpnbUNTQWpuMTFlaDh0UkRoUDg2T0VzNGd0d25paGRTR05GVldjMGVWcXdBWXFMZU4yMHlJVVZ6dXBzMVhvYWJrb2ZRcERqbmk4WnB3anBDUF9tS3hDYjVnUWdzRGgwdlVSOGQ0Z2ppZDMxUjZBOGZvMVJhbndCMldIV1hURmpZbVZtbFdPQjBINTRpQ0VsQmdqQm44ODdvQdIBywJBVV95cUxQWjB6a0dwdnVyRmtWVnNvYXlxc3gxUjY5Z29DM3ZwUTYwbXZIMW81V2llOVFXcnZiWkZ6VEwzaVVac3BuTVVmaVhzUEVqTGx4N0hKTjMxMTVnaVpxcXJpSDJfdnQ1NnJTTDJDclpyQ28wYUw4WmozcUtFNTBKTFNNdkFoU0xsOUlMQkJDY0NvOVpYVm5xakxLX1AzT3I1czNjcEhHWHd4WHJGRmV4ZzdvNTNDcWp0TmtGbWoyYXRuTzJELWIwVWdWQlI3djJOYnZYZ01ody1QZWFVQnBTM3FIRHVBUXFmeEtjRjg5ZjNveTBZejBlZFdrUnl0MmtoX2w5cGgzZWlVWl9yODdWcDZPSzJpWVA3VVpleWxtX3EwbWdlbGFTdGVjYTVzcFZOV19EZTF5Q09pMmQzWVNqelhWb01HbGMxRHFfNzVB?oc=5",
-   "tag": "marchés financiers",
+   "titre": "Énergie / Inflation : la BCE plus proche que jamais du scénario « défavorable » - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Fri, 02 Oct 2026 12:15:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbER0c0Y3YXlLeUxGQlo5TE1JVnlwNHEtazl1VUN3ek5yemlfVnVMc1hWRGhFTUZ3bWZvU191TGY1NnFkUGdsbDFpYTdKZzhwZklaTU9hRktUbmkwWHJDUEFXeGgyeG5OSXZoV3QzeTJrMWFfajg0NnA1R1d4Y0VHMWRGb0E4aXBGOFpvS0QtcXdHMzZKTnpVTnJKWjdmaTlvbjdSRUJ3bDFXbFIx?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L’inflation dans la zone euro atteint 3,8 % et accentue la pression sur la BCE pour qu’elle relève à nouveau ses taux - Morningstar",
+   "source": "Morningstar",
+   "date": "Fri, 02 Oct 2026 11:02:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSGZNbTFDOUYySUNuVWh4emp2cnZmdzdvcG1aYXpISndrRThHT3RaSF9YVWlfcmpEZlJVN25NSE5BM0J5cV9JdFNEOWpKczNkdFBwNm1raGtCSVZUeTNqSWItSzFZVXBMcDJ2a21aOEpzMW9rdHE1Rnh1UzZjOHU3clV0ZG1vSXc2N0ZOQ3QzSm1Jbm1oYXNQRWVDODZkOWhtdFBWelFoRnNfMGxXMWVFbldKZk9PYWsxRng5Q2NTdkY4NGVkcmxWQTdnSDRSbXQxTjRzYXgxWVhSWXZ0MGYwNHhFSUpBUzg?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -234,170 +387,17 @@
    "titre": "Zone euro: L'inflation s'accélère à +3,8% sur un an en septembre - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 02 Oct 2026 10:07:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQOTZHQ0VlZlR6bmxUcnlfSU81NUNxc3pxbGNvbzdDdm9ObW55RmhmOVVBM0taZDV6a0ZZZWE4cGZyeTh3dXpMdnhGc044RkY5WkhhYXd6c0l3Tll2NTc4T1VuUXc4M0xwVThJX3JWWFRTOWg3NWplVGs5YTdEb1hMTWF2NHdzeHlzYzZXVlJpZDk3UE5Vc3FPVGg3SEFDX1BVcFUyVXpENGcxaFAxM0d2eS1YU3Z3Y2NpLUpvODZTd1FCWE55UUJKTWRtZlE2UHllRGozcGlORzR0UVdmYnJhOHVhZWlQdTZV0gHuAUFVX3lxTE01TmZfRHY2T204d3NTdlFzWEd6OE5mZEYtd3NGSVNsYkxidmxnYUVvaDEteHpkbXRXMTJxeHNFNmdqWXJDVXpwQVdVTU1icTV1QVh3QzVXRHNXQ3JWTWcxQ0dOYkx4YVFtSTdtVUVqVUF0VjN0TzFhR0E2LV9pbUVVRlV1YnN6ZzFWcnRqaWpnMlBkU09HYWxpNFBrdURsRU9ubVd4d0NkUFljX2M0eWF6dy0wR1FJZ2pDTGh6aWdoQi1hRVdhbXNIZTBtZGhvTVlLOFBSaWYxVUMzUDNkdzdxQV94bnZXYTdhUlltSUE?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNNU5mX0R2Nk9tOHdzU3ZRc1hHejhOZmRGLXdzRklTbGJMYnZsZ2FFb2gxLXh6ZG10VzEycXhzRTZnallyQ1V6cEFXVU1NYnE1dUFYd0M1V0RzV0NyVk1nMUNHTmJMeGFRbUk3bVVFalVBdFYzdE8xYUdBNi1faW1FVUZVdWJzemcxVnJ0amlqZzJQZFNPR2FsaTRQa3VEbEVPbm1XeHdDZFBZY19jNHlhenctMEdRSWdqQ0xoemlnaEItYUVXYW1zSGUwbWRob01ZSzhQUmlmMVVDM1AzZHc3cUFfeG52V2E3YVJZbUlB0gHuAUFVX3lxTE01TmZfRHY2T204d3NTdlFzWEd6OE5mZEYtd3NGSVNsYkxidmxnYUVvaDEteHpkbXRXMTJxeHNFNmdqWXJDVXpwQVdVTU1icTV1QVh3QzVXRHNXQ3JWTWcxQ0dOYkx4YVFtSTdtVUVqVUF0VjN0TzFhR0E2LV9pbUVVRlV1YnN6ZzFWcnRqaWpnMlBkU09HYWxpNFBrdURsRU9ubVd4d0NkUFljX2M0eWF6dy0wR1FJZ2pDTGh6aWdoQi1hRVdhbXNIZTBtZGhvTVlLOFBSaWYxVUMzUDNkdzdxQV94bnZXYTdhUlltSUE?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Bourse de Milan, Stellantis rebondit après ses plus bas, le marché se tourne vers les données d’immatriculations - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 02 Oct 2026 10:05:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOMEdOWXo4ZW45OEtYUmdPM1JSX2FSUFpYTWlZTDJ5QWNkN1hOcFVjUWhoNk1ObVc2c1dlVHpSbHFpd3lRSnpHMG9RVTRSTy1ldTZhYkR5ejdKaWp4ejROdE5SVmRoTDZ4ZHktMVNjVkdRa09ncjZEQ01jdjJIUTFvRTFsUzEwN1pvYTlBem42bXU4UjJwQi1BVkpwc012WFBPNEQ0TkFqblFXR3p4UWVDd3hkenV3UkVWTVlLYXRhR2c4UmUyeW9xZGxDWXBtTm0zVE9ObFRSM084ZFk2SFppX3RvUGd6d2had0loZUVn?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les Experts de l'immo : Budget, la location meublée dans le viseur de l'État - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 10:00:13 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts-de-l-immo/les-experts-de-l-immo-budget-la-location-meublee-dans-le-viseur-de-l-etat-02-10_EN-202610020417.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les Experts de l'immo : Budget, la location meublée dans le viseur de l'État - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:47:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts-de-l-immo/video-les-experts-de-l-immo-budget-la-location-meublee-dans-le-viseur-de-l-etat-02-10_VN-202610020410.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Impôts sur le revenu 2027 : avec le nouveau barème indexé sur l'inflation, allez-vous changer de tranche d'imposition - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 02 Oct 2026 09:46:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZ2tCN0MyRXBiME1wdkNNeGtxUktpeS0tRXNoWHBTRmtILTRKeXhCRkc1NUlKQ1pKUEt0RkxKbmxfZUxvc3ozbm01aGxXeHlQTmlnblFKZFBwYUJGVGNWMS1RME9tdHJjbVFnazBwR1psT2xEazhGa3RoWHhuS3hjVkU2MG0xUDF0ejB5d2l0bWV6NGJLcHk0d2djdlFIemdtME1UbXVlWldoSndzN0Vzc2FBT0NzcFgwS3BGNFE0YkVMMllCWVVPdjVkSEF2RE9ValNxQWUtMjEycjZIdFRJUFNHUlExekZFZ2RYNzFhbVc5NzNu?oc=5",
+   "titre": "L'incertitude autour des prévisions d’inflation prédit-elle leur précision ? - Banque de France",
+   "source": "Banque de France",
+   "date": "Fri, 02 Oct 2026 07:33:51 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQbW56WHhnUTFfWkNxUFN0VnhGOWx1SEZ1bVpuU0t5bExYaWItckFUYlZ6T2JCTXRnNksxaG0zd0lTR052d3N1azI4SFA2RlhUZHZBWjhrQkZrT2hjTmZNVVQxNUQ3N1gwQmdMb3hRaDV4aDZ2YjZDUG9Mbktza0pEUTRYdDRZSHJwcWUyajU4aG5TWU83dXBCOWdWOEF1NE5veDczNk1EbVNFODVwZW05WTVCWnhBWUNlXzZNVElKejg2MmRwUV9EQzRHamMtcnhrTjFuVXFGTml3VHZLSXBF?oc=5",
    "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La note de la France bientôt dégradée? L'agence Moody's ne croit pas vraiment à un compromis sur le budget 2027 et estime que le prochain président \"sera confronté à la même difficulté\"",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:44:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/l-agence-de-notation-moody-s-ne-croit-pas-vraiment-a-un-compromis-sur-le-budget-2027-et-estime-que-le-prochain-president-sera-confronte-a-la-meme-difficulte_AV-202610020398.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Thales va fournir cinq radars de surveillance aérienne à l'Irlande",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 09:42:58 GMT",
-   "lien": "https://www.abcbourse.com/marches/thales-va-fournir-cinq-radars-de-surveillance-aerienne-a-l-irlande_703620",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "C'est presque le double de l'objectif de la BCE: l'inflation dans la zone euro accélère à 3,8%, son plus haut niveau depuis trois ans",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:41:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/c-est-presque-le-double-de-l-objectif-de-la-bce-l-inflation-dans-la-zone-euro-accelere-a-3-8-son-plus-haut-niveau-depuis-trois-ans_AV-202610020394.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les taux longs se détendent en Europe avec le repli du pétrole",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 09:35:07 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-taux-longs-se-detendent-en-europe-avec-le-repli-du-petrole_703618",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Les Experts : Dette française, quel rôle pour la BCE ? - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:25:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/les-experts-dette-francaise-quel-role-pour-la-bce-02-10_EN-202610020380.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les Experts : Dette française, quel rôle pour la BCE ? - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:22:14 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/video-les-experts-dette-francaise-quel-role-pour-la-bce-02-10_VN-202610020386.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe profite de la baisse du pétrole en attendant l'emploi américain",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 09:20:33 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-profite-de-la-baisse-du-petrole-en-attendant-l-emploi-americain_703617",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Zone euro: l'inflation se renforce plus que prévu en septembre, à 3,8% sur un an",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 09:17:24 GMT",
-   "lien": "https://www.abcbourse.com/marches/zone-euro-l-inflation-se-renforce-plus-que-prevu-en-septembre-a-3-8-sur-un-an_703616",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les Experts : Budget 2027, l'ardoise fiscale s'alourdit - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:16:55 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/les-experts-budget-2027-l-ardoise-fiscale-s-alourdit-02-10_EN-202610020373.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L’inflation en zone euro s’envole, accentuant la pression sur la BCE pour relever ses taux - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 02 Oct 2026 09:04:11 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNVzJ1MUd4S1VzZWR5b1NTcGpOWDlkQWd4bEt5UTQxX3czLU5UZzhmbjgyb1kzOEpyd0x1OFgxeVdwU1NpMl9mYml6cktzeXhvbGEzYnRNQjlXQ2dxWGc2TGRlcG02aEo3ekN0aDRDRHhmdTU5NWFPcF8tVFlfQjVVOFNnSnI4OVoxczUzUkp2Q1ZLZGxuVll5bEF5LXJucm04cDR4RkpJN3dqc2QycjdlMVljWXMyM3lZTjJqQ2VOVFlaYW42eVI5Rk5BZXFvQ1Y0WVFTLW15WGRlLWFNSTc4dGQ1NlBNZw?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Les Experts : Budget 2027, l'ardoise fiscale s'alourdit - 02/10",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 09:03:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/video-les-experts-budget-2027-l-ardoise-fiscale-s-alourdit-02-10_VN-202610020370.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "JPMorgan place Danone sur sa liste \"positive catalyst watch\"",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 08:45:03 GMT",
-   "lien": "https://www.abcbourse.com/marches/jpmorgan-place-danone-sur-sa-liste-positive-catalyst-watch_703614",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "\"Il nous envoie à 200km/heure dans le mur de la récession\", \"déséquilibré\", \"manque cruel de vision\"... Les syndicats étrillent le projet de budget du gouvernement",
-   "source": "BFM Économie",
-   "date": "Fri, 02 Oct 2026 08:38:26 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/social/il-nous-envoie-a-200km-heure-dans-le-mur-de-la-recession-desequilibre-manque-cruel-de-vision-les-syndicats-etrillent-le-projet-de-budget-du-gouvernement_AD-202610020340.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Sanofi: rupture des 71,70 euros, -3,83%, le passage sous la MM20 alourdit le biais",
-   "source": "ABC Bourse",
-   "date": "Fri, 02 Oct 2026 08:00:43 GMT",
-   "lien": "https://www.abcbourse.com/marches/sanofi-rupture-des-71-70-euros--3-83-le-passage-sous-la-mm20-alourdit-le-bia_703611",
-   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
   }
@@ -477,8 +477,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - clubpatrimoine.com",
-   "source": "clubpatrimoine.com",
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
+   "source": "Club Patrimoine",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
    "tag": "Carmignac Patrimoine",
@@ -495,8 +495,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Matinale avec Eliezer Ben Zimra - Carmignac Patrimoine. Convictio... - PATRIMOINE24",
-   "source": "PATRIMOINE24",
+   "titre": "La Matinale avec Eliezer Ben Zimra - Carmignac Patrimoine. Convictio... - patrimoine24.com",
+   "source": "patrimoine24.com",
    "date": "Thu, 27 Nov 2025 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdldQemhXSmF2UGd1bWFfRUJCcTc2dmYyQ1ZxdzBVa2ZPV25kUi1nTkdmdGxFSmZYTl9jQUtXMWVmaW5iUU5kcEp5RHdDeDB2eFlzOWt0Y1hxTno0RkNCbFBNSmVJZ2RXUlJUSVBxZ3ZYLVJya09PYWZsaWV5OU1lWGhYYzBaU0RHbE0zTkJwWUFFQTJzbjBrWldvbHl6VlBZNkwwRFozN2tEYmRRcm9PaXZ1amM0RjVQQ3lVdkpvVVl3TzBC?oc=5",
    "tag": "Carmignac Patrimoine",
