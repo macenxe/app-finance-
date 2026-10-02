@@ -434,7 +434,7 @@ const Chart = (() => {
       <div class="chart-compo-note">${d.source ? esc(d.source) : 'Répartition géographique non disponible en source gratuite. Source : Yahoo Finance / Morningstar, dernier reporting connu.'}</div>`;
   }
 
-  // Fiche sans graphique (fonds absent des sources de cours, ex. Eurose C) : la composition
+  // Fiche sans graphique (fonds absent des sources de cours) : la composition
   // s'affiche seule, avec une note à la place de la courbe. Réutilise le conteneur #chart-compo
   // de renderCompo, et vide etat.points pour que la date d'arrêté soit toujours affichée.
   function ouvrirCompoSeule(containerId, isin) {

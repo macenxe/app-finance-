@@ -79,6 +79,7 @@ const FONDS: [string, string, string][] = [
   ["FR0011175652", "0P00015XU2", "Conservateur Reverso"],
   ["FR0010097683", "0P00000CGO", "CPR Croissance Réactive"],
   ["LU0512124107", "0P0000P3DN", "DNCA Invest - Convertibles"],
+  ["LU0284394235", "0P0000CNTB", "DNCA Invest - Eurose"],
   ["FR0011253624", "0P00017T6E", "R-co Valor C EUR"],
   ["FR0010286013", "0P00000EUQ", "Sextant Grand Large"],
   ["LU2147879543", "0P0001L9PD", "Tikehau International Cross Assets"],

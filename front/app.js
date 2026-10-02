@@ -446,7 +446,7 @@ const App = (() => {
     // Conteneurs propres à ce panneau : la feuille mobile et le panneau de page coexistent dans
     // le DOM (celui-ci reste rendu, juste masqué), donc ils ne peuvent pas partager leurs ids.
     const chartId = panneau.getAttribute('data-chart-id') || 'uc-chart-inline';
-    // Fonds sans source de cours (graphId null, ex. Eurose C) : la fiche s'ouvre quand même,
+    // Fonds sans source de cours (graphId null) : la fiche s'ouvre quand même,
     // la composition remplace le graphique.
     if (!gid) { if (Chart.ouvrirCompoSeule && isin) Chart.ouvrirCompoSeule(chartId, isin); return; }
     const compoId = panneau.getAttribute('data-compo-id') || 'uc-compo-cmp';

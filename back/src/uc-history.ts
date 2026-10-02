@@ -63,6 +63,7 @@ const FONDS: { isin: string; graphId: string; xidRepli: string }[] = [
   { isin: "FR0011175652", graphId: "0P00015XU2.F", xidRepli: "" },
   { isin: "FR0010097683", graphId: "0P00000CGO.F", xidRepli: "535672644" },
   { isin: "LU0512124107", graphId: "0P0000P3DN.F", xidRepli: "535690001" },
+  { isin: "LU0284394235", graphId: "0P0000CNTB.F", xidRepli: "28845884" },
   { isin: "FR0011253624", graphId: "0P00017T6E.F", xidRepli: "519283609" },
   { isin: "FR0010286013", graphId: "0P00000EUQ.F", xidRepli: "535679011" },
   { isin: "LU2147879543", graphId: "0P0001L9PD.F", xidRepli: "637716559" },

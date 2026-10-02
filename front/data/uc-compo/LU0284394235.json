@@ -1,0 +1,65 @@
+{
+ "isin": "LU0284394235",
+ "alloc": {
+  "action": 21.3,
+  "obligation": 78.7,
+  "liquidite": 0,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 26.7
+  },
+  {
+   "nom": "Finance",
+   "pct": 25.1
+  },
+  {
+   "nom": "Technologie",
+   "pct": 16
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.8
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 6.1
+  },
+  {
+   "nom": "Santé",
+   "pct": 5.4
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 4.3
+  },
+  {
+   "nom": "Communication",
+   "pct": 3.9
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 3.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 2.5
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0.2
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Euro Bobl Future Sept 26",
+   "pct": 16.2
+  },
+  {
+   "nom": "ASML Holding NV",
+   "pct": 1.7
+  }
+ ]
+}

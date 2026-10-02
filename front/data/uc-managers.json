@@ -848,6 +848,39 @@
    "note": 4,
    "risque": 5
   },
+  "LU0284394235": {
+   "gerants": [
+    {
+     "nom": "Jean-Charles Mériaux",
+     "depuis": "2002-10-01"
+    },
+    {
+     "nom": "Damien Lanternier",
+     "depuis": "2017-10-01"
+    },
+    {
+     "nom": "Adrien Le Clainche",
+     "depuis": "2010-10-11"
+    },
+    {
+     "nom": "Romain Grandis",
+     "depuis": "2016-05-02"
+    },
+    {
+     "nom": "Baptiste Planchard",
+     "depuis": "2014-07-01"
+    },
+    {
+     "nom": "Emilie BRUNET-MANARDO",
+     "depuis": "2022-12-30"
+    }
+   ],
+   "fraisCourants": 1.46,
+   "societe": "DNCA Finance",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 3
+  },
   "FR0011253624": {
    "gerants": [
     {
