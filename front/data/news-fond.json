@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-04T11:04:12.940Z",
+ "genere": "2026-10-04T15:46:35.764Z",
  "globales": [
   {
    "titre": "Des économistes tempèrent après l'inflation plus élevée que prévu - Boursorama",
@@ -11,6 +11,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Cac 40 : Alors que la France inquiète encore le marché (l'écart sur le taux de dette à 10 ans avec l'Allemagne a dépassé 1,5 point de pourcentage), le CAC 40 résiste - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 02 Oct 2026 11:25:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizwJBVV95cUxNWWVCZGRVb1ZVeDg5dEhLZTkyRXpibU9WY1hQUUlsLW0wdkdpNUlBS01TdnM3RXpQVWM0d3ZBYi04Z1BoMmVKMm1lWkF3RDMtaFhrUURScFpkZVFwQnYxUlNzSXVYdDVxa0gtLV9VLWhlMnVQYWgxR016dHNmN21iWGhZZHEyanFaX3JqenBJSExsbkNOUlB1bmtyU2pwZndiZ0FxUk5fVjRnZUtBVVVaYVlRbUtmMVc5MjhoaEozZGhBdGNYbXFraUxOTlYzM1B5N1lJa1lZRG8wT0xlRThKLWJEU1I0dDE5LWRHbUVEZV9aRjRkZUdYQVBtZXNRd1NrdUhzbV9BRkxDNW1JNTg5dDBJdjhOb3FoanFNRFZ3ODdFRVJmN19ONnhoUGd5NWdkZTFSWklPdGRBd09Bc05wZ213bWJrNXNhZXN2cUg1cw?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "positive"
+  },
+  {
    "titre": "L’inflation dans la zone euro atteint 3,8 % et accentue la pression sur la BCE pour qu’elle relève à nouveau ses taux - Morningstar",
    "source": "Morningstar",
    "date": "Fri, 02 Oct 2026 11:02:42 GMT",
@@ -20,8 +29,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés obligataires fonctionnent de manière ordonnée, selon le FMI - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
+   "titre": "Les marchés obligataires fonctionnent de manière ordonnée, selon le FMI - ch.zonebourse.com",
+   "source": "ch.zonebourse.com",
    "date": "Thu, 01 Oct 2026 15:04:54 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQclVXS2RpSkZ1bGNjUENOaEF5bms2Q2pJaXRia3Y0MzFhSjVETk5iOXVKR3BZVE9jM285ZW9HYTc2V0YtdGdCa3dweE92OVJpWkNUY1BQMTNUb0JrTXdhdFBNbGRIeEZTUUR1TUdvYkFoQ3lTazdZR0tKVVA5VFJIRExHU3pjd0xuWHoycFJfTnJ4SDF2THNGLUp5M2I3a2ZLTDctN1JGZHU3aEZCT21FNDhLUDFGQXFBV0x4Q3cyUTRZYWk2QkpTLWZ3?oc=5",
    "tag": "International",
@@ -47,17 +56,8 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Cac 40 : Alors que Legrand séduit le marché avec ses nouvelles perspectives, le CAC 40 marque le pas - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Tue, 29 Sep 2026 15:50:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOR2VOenFtYjR5Z3I2NDFSS3ZsZWtmV3FoTkMtVTBVQ0JlRVk3Z2NKem5WQ2dpdnhFRGxsT1hzR0R5YnNvSTQ3ZmRCOWh6MDJZbHZrenNmcE43bGM2YWhDVE5BdTF3VG84dUxCZXFPV0V2QmpZbDh1WGFCVTNvRG9SNzdWUlZtQkRTX2J1cVpfbGJQS0hPVWtYNGE5Q3c3TTNFVXNka3ljd1J2NEQ3YjliS3hpUmJyTzBLeVk4d1JmRW01UWF4ekdUWFhCcjlrTjRsckxKMmxiSGFHSmRWak81VjZueTZKSENDeERpYU1sNElSUzdENWxmUF8tNFI?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Un peu d'air sur les marchés du pétrole et des taux, une baisse qui ne profite pas au Cac 40 - Les Echos",
-   "source": "Les Echos",
+   "titre": "Un peu d'air sur les marchés du pétrole et des taux, une baisse qui ne profite pas au Cac 40 - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Tue, 29 Sep 2026 12:49:42 GMT",
    "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQMl9BZmxzVmJkYVJUcDNfN3NHV2dabXNQWmJCRm5IOWdTcGFGZ1Y5RTZyMHZxNTVvdk5FdFNrX3gybWxWbDhOMXl6aUpuWU1vWGlxZGtYb0w3MGRDY0RCUUFiMTBEVVBaZ2xFTkJuQklaVXJZNnFMTTdpV3Q5aFJ0MkdBUkp3MFRXTm1kb3VxSE9PM1dHX0R0ZVRMV0xyT0xaRXVaQnpLd3BVYW4xYjdFaGtwRXR4R1A4RGVGQm91RExpQTUzcWdybDRjd2I1eGZ5SWNQYnhrZVEzYWRwQllhSEJWc2oxV0NFcVlSc2d1RWxuMVRlckFFaE9RalQ5UlYxYnZKMk9n?oc=5",
    "tag": "Marchés",
@@ -75,6 +75,15 @@
   }
  ],
  "produits": [
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 16:19:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
@@ -103,13 +112,22 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Stellantis porté en Bourse par ses chiffres de ventes américaines - Les Echos",
-   "source": "Les Echos",
+   "titre": "Stellantis porté en Bourse par ses chiffres de ventes américaines - Investir Les Echos",
+   "source": "Investir Les Echos",
    "date": "Fri, 02 Oct 2026 09:49:21 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSXc2UVFPeXN5dlVIOTBUU0thd1FLTC1MamZmeVNNMW5lMzE3T0tOdVFiOWhQVE9OczJfM0EtRHVVWEhZZVd5SHhMbE9VUzJoOXRYU1dqODRBYXJlTFdIZVE0T0l6cVB5OG9nWFIwQmd6VXc0eXdZRUI1VVU2VmN1T2RVQldEa3R0UXR3UHRUNGxYUTRseVU0eThCY2hsX3F3Wk9GVktMY2lEY1BtQmFIVnV4Z05kczJNYWxic2xPeDFJb3RuSTI1Nm9LOGY0VGxHNFoyTWlxLU9xUQ?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "negative"
+  },
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 02 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "Capgemini : Catapulté par les résultats de son grand rival Accenture (+17% à Wall Street), Capgemini bondit de 10% et prend la tête du CAC 40 - BFM Bourse",
@@ -119,24 +137,6 @@
    "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Bourse : BNP Paribas, SG, Crédit agricole… Les banques du CAC 40 portées par une hausse continue des profits - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 30 Sep 2026 17:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOcjgwaVZRRW9Dc0ROTXEtVVZkQ3VPQ184WE9FYVZnT0V1eDRURnFiZEpnaktsZXV5SVZPN2I5TUhnaS16SVRQM0F0clVtNl9YajVnYVdmZEI0QUNNc21yelZPY01TX05USW1mdGliencxWTVVWV8xN0E2OUJKYlMydnVLLUFuWHNLbUdDLTJ3MzZzYWhQTVpsLW50QWc5cGVGRThLS1lDVy1fT1l0dEUwYWRMS1RuR2ptbVM4dmhGeEtqMldkVGxnU0RsVzBKcWR3NlphSG9QRzVTdl9MUEhyQ0dZMFVpV09LdHc?oc=5",
-   "tag": "BNP Paribas",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "ATEME : INITIATION DE LA COUVERTURE DU TITRE ATEME PAR LE BUREAU D'ANALYSE FINANCIERE D'EUROLAND CORPORATE - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 29 Sep 2026 06:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOa25LS0xzZklYajRxakh0MW8yLXV2NmdEWDlMaHNIbmQtUmRYVFU2STVPSkNLVjMxZUI4ekU4NUExQnEta1d6RHdLVmhYMVJuSFBFSWgtemJraHNkR0dzcjhGLWpKWG84NzgzX0FGTENmN0gzVUU2NWZWTzdraTZzN0tRYlQ1ak5mckZqTWYyN01PaG9mcE9QX29iVkQ5dEd1cnRIQkVwejFMbDlVMFFZd3ZVTVhnS1J4X0xneWNPYmhPeHlpWFpxNHRBS2hHUFNkeDlweGpXcTVkWHlXTDhuOVRDcFYwWm10TktHWVpDQnZZZDZVMEJKMGpnQXBBZUNvWGdfVGZ4c3RKdGp5Q1JV0gGUAkFVX3lxTE9BcEFiRnNiWnhXZUplWjBrR01rb3F5MXpwV1A5bTliamNla0VUcXFId2R0RElSc2lXTzNqMFE3X3NYRGRzcG5BS3RKWk9UWXJOSGlFZWtzTEwtM1gwMzZxQkFLOWVkaGtIek4yZ1hYV0J5ajMtdWlJYVlBeU9KMVViVXJqTlN6RGUtUWd2eHhpWTVzM3ZqV1FGVk1BdG1aLW0yZHZ5U3ZVMHhpS1JYUDI1U0tTMGE0cFZOUHdfXzRqWVRkQzlDdlMtOEZCcEpSdGp5QVJfOXQ0VEJIbkZTUmotbkZ5YjRyOEplTFRvSWtDY282U0VBYVNxcjhyVWFyMGNodXAwYU94SDNpc2hJMXBObjZMMQ?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "negative"
   },
   {
    "titre": "SAFRAN : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
@@ -150,13 +150,13 @@
  ],
  "eco": [
   {
-   "titre": "Pétrole : l'Opep+ n'augmentera pas la cadence de sa production - Les Echos",
-   "source": "Les Echos",
-   "date": "Sun, 04 Oct 2026 10:35:04 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPakxwX2NDX1Z6MENsZ3hoc203SVYwSjV0emhRQlhub0paUVVIUWxXTGp0aEdjR1BkbUwyUnc5MlJ6allkLV9JX0s5NXhiM3ZYMF9yV1lpRllNNGhlejdCUXJQOE1JTGR5T2xfQTRKazloTUtCQ3ZaOURhaGVReTRLSTZnMlBzeUVaRVZpTlh0Y2gzMUtta1dveTBLWVB6bWFwd0VublNCMW1yaFVVMmNkSkNua3B3T1JnUXlESm5TSW5rUQ?oc=5",
-   "tag": "bourse",
+   "titre": "Fed, inflation, croissance : Un mois crucial pour le Bitcoin - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 04 Oct 2026 12:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SbXZILVlMbV9XeHZRLWtkdFoyUTY0Z041b1RhN2UzX19JZ0s1VnVaZmNmZ0tnNGRJbHNweDdyVWE4WWV1cE56MDVPbUFEYVQxM2tBQWFxeDdCc2pmZmtQNXNyN2J0OXBfTjUxRw?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "\"J'ai des projets pour la croissance, je peux \"alimenter\" les candidats\" à la présidentielle, assure Michel-Édouard Leclerc, président du comité stratégique des centres E.Leclerc",
@@ -258,24 +258,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "L’inflation mensuelle au Venezuela ralentit à 8,4 % en septembre, selon la banque centrale - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Sat, 03 Oct 2026 14:25:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOREdNc242Sl8zZWRpTFRkSDVENUtGRi1yNWN2VDZwejJxcVVWaGREazZUMGZMekNIdl9vdHJFRWFwRmdJOGYwZnhJRVVuRFFGN1FHOUFWV3FEZFZFZWxIOGN1R1pBZHIxUlZFVEJsQnVUdzZsVnIxUEJXbEY2NS1vUjhOdkRNMldYTndmd2ZxM1FoN2Q3eXdnY2s3d0FtNDMzMllTTEp6Y2tqa2k1QzhkQWI5LUpSR3BmYzB1UGUwZGNNd09OTkVnMlJLUDRZY3E1cklGU2gybk02X3drUXUxSmt6VQ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L’inflation japonaise s’emballe et renforce les anticipations de hausse de taux - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Sat, 03 Oct 2026 11:30:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTkliNGlRMGVzNl9PUDVNb2xrSUNaWU1NWkRPYVRnUzF4cHFScTB6bGxBTEQ5dU1iRkc1bFNXOEptOU9SaFRkSjlsNlhhSUFrQlhvTjJJdm9BZzJZNnRLZ0ZuR0owRFNTd2lqM2RzVThpSWd1ZW1KYUIwYVhNM0RGTXJDZ002RUZSZ0FtaHM5MUkzYnlBYjRhVTBFaGdfeGRybElpSlBGeHBkTFp1TmtBSXNjb0Fpd2xveE5MRQ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "S&P 500 - Les actions en vue vendredi: Nike, Tesla, Seagate, Western Mattel, Synaptics, Disney",
    "source": "ABC Bourse",
    "date": "Fri, 02 Oct 2026 21:41:33 GMT",
@@ -369,6 +351,15 @@
  "fiscal": [],
  "uc": [
   {
+   "titre": "Le pont entre l’Atlantique et le Pacifique : de Magellan au Panama et le retour de la connectivité multimodale - Atalayar",
+   "source": "Atalayar",
+   "date": "Sun, 04 Oct 2026 14:50:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQV1ZxRUd4c2lGOUlHbEhhTGhYakd4M3V6UzRYQnhKRVhoMWk0ZHd3OXFqd0lpc3pybFFxSUJBaGFKX2xXME1QSzY0dW4tcnVfSGd5WE1QQ1hHVjg3cm9QSU11WmtuMUJsaU1oLXpTMTlUYTVVeUUza2JNaUc3dk5WTDFOSUpvdzVMaGxXV1U3MTNCTjFEVjZWNzkxcUdhUE5HQXZGTkdDdERfQWl2dWJwc1FKM1FETWNyTWIwUUhZWjY1WkNOU2JTMzJtMmRUd1Z1eVlqY0lhOVFGVDFfM19qUU5sMUFfZ1YzajZsUDRQdi1tZWVleXBZMXNKcThXZHQtbjVwNg?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "La Rochelle accueille le Nao Victoria, réplique du navire de Magellan - Charente Libre",
    "source": "Charente Libre",
    "date": "Sat, 03 Oct 2026 05:30:00 GMT",
@@ -418,15 +409,6 @@
    "source": "Le Télégramme",
    "date": "Mon, 14 Sep 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNM0pNaXVoWFpHczJoYk0tQzM5VE1pOEY1VUV4WHcyYnFDU2tWT2wwN0E3TGp3UmpCNWVyZnhfUzVOOTROX1NPVElJZEhxaTBKVjFLNm1xbGRfS1FyUzJ3UUx2bEItNWp2V0VWSEtqR1A5dnVFUF83QTJjblhzdzRlRlk1aHplOWFMakVadWJZc0c4RUozRmJkRzNuUl9CUjZNcnE5WXZ0OEdXYVVra0VVVExQYU92WGp2NXlWN2dKc3I1Y29GNHh5M3hFYjZMRzlaUGhsOTlTRjZlNkh6NjRWazdRRVE2eFlaWDBWOXBJUUZ4ZVBfWm1KSVR5MA?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Spectacle Magellan d'après Stefan Zweig à Paris, Théâtre Douze : billets, réservations, dates - jds.fr",
-   "source": "jds.fr",
-   "date": "Sat, 05 Sep 2026 18:12:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUzg2X0p2YzJWUlJkYmdFUGRfLUdaSmJLSERrM3RBNkIyWEwxb1JYQktSOW0yREQ2TW1pcE13UWhrdHlWM3BraTNlak1MMHYza2k4NlZ4Z3pLYURlSGowcTd0bWVhdEVKWm1ad1NkWW5HY2draVhHVXk3SFZCb04zRVh3cnZBS0NobW80?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
