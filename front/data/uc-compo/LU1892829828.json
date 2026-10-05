@@ -1,27 +1,27 @@
 {
  "isin": "LU1892829828",
  "alloc": {
-  "action": 98.3,
-  "obligation": 0.1,
-  "liquidite": 1.4,
+  "action": 99.7,
+  "obligation": 0,
+  "liquidite": 0,
   "autre": 0.3
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 66.6
+   "pct": 66.3
   },
   {
    "nom": "Services collectifs",
    "pct": 18.5
   },
   {
-   "nom": "Conso. cyclique",
-   "pct": 4.5
+   "nom": "Matériaux",
+   "pct": 4.9
   },
   {
-   "nom": "Matériaux",
-   "pct": 4.5
+   "nom": "Conso. cyclique",
+   "pct": 4.4
   },
   {
    "nom": "Santé",
@@ -29,7 +29,7 @@
   },
   {
    "nom": "Technologie",
-   "pct": 2.4
+   "pct": 2.5
   },
   {
    "nom": "Immobilier",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Severn Trent PLC",
-   "pct": 5.5
+   "pct": 5.9
   },
   {
    "nom": "Tetra Tech Inc",
-   "pct": 4.7
+   "pct": 4.8
+  },
+  {
+   "nom": "Veralto Corp",
+   "pct": 4.4
   },
   {
    "nom": "Ball Corp",
    "pct": 4.4
   },
   {
-   "nom": "Aalberts NV",
-   "pct": 4.3
-  },
-  {
-   "nom": "Veralto Corp",
-   "pct": 4.2
-  },
-  {
    "nom": "Veolia Environnement SA",
-   "pct": 3.9
-  },
-  {
-   "nom": "Companhia De Saneamento Basico Do Estado De Sao Paulo",
-   "pct": 3.7
-  },
-  {
-   "nom": "Steris PLC",
-   "pct": 3.4
-  },
-  {
-   "nom": "Ferguson Enterprises Inc",
-   "pct": 3.4
+   "pct": 3.8
   },
   {
    "nom": "Interpump Group SpA",
-   "pct": 3.2
+   "pct": 3.5
+  },
+  {
+   "nom": "Steris PLC",
+   "pct": 3.5
+  },
+  {
+   "nom": "Companhia De Saneamento Basico Do Estado De Sao Paulo",
+   "pct": 3.3
+  },
+  {
+   "nom": "Aalberts NV",
+   "pct": 3.3
+  },
+  {
+   "nom": "Ferguson Enterprises Inc",
+   "pct": 3.3
   }
  ]
 }

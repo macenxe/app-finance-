@@ -1,39 +1,39 @@
 {
  "isin": "LU0870553020",
  "alloc": {
-  "action": 99.7,
+  "action": 99.6,
   "obligation": 0,
-  "liquidite": 0.3,
+  "liquidite": 0.4,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 30.8
+   "pct": 31.4
   },
   {
    "nom": "Santé",
-   "pct": 19.3
+   "pct": 18.1
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 14.9
+   "pct": 14.5
   },
   {
    "nom": "Technologie",
-   "pct": 13.2
+   "pct": 13.4
   },
   {
    "nom": "Matériaux",
-   "pct": 9.7
+   "pct": 10.1
   },
   {
    "nom": "Conso. de base",
-   "pct": 5.3
+   "pct": 5.4
   },
   {
    "nom": "Énergie",
-   "pct": 3.3
+   "pct": 3.5
   },
   {
    "nom": "Finance",
@@ -59,14 +59,18 @@
   },
   {
    "nom": "Air Liquide SA",
-   "pct": 5.1
+   "pct": 5
+  },
+  {
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 5
   },
   {
    "nom": "Safran SA",
    "pct": 4.8
   },
   {
-   "nom": "Novonesis (Novozymes) B Class B",
+   "nom": "Lottomatica Group SpA",
    "pct": 4.6
   },
   {
@@ -75,23 +79,19 @@
   },
   {
    "nom": "Galderma Group AG Registered Shares",
-   "pct": 4.3
-  },
-  {
-   "nom": "Lottomatica Group SpA",
-   "pct": 4.3
+   "pct": 4.1
   },
   {
    "nom": "Schneider Electric SE",
-   "pct": 3.9
+   "pct": 4
+  },
+  {
+   "nom": "Gaztransport et technigaz SA",
+   "pct": 3.5
   },
   {
    "nom": "Lonza Group Ltd",
    "pct": 3.5
-  },
-  {
-   "nom": "L'Oreal SA",
-   "pct": 3.4
   }
  ]
 }

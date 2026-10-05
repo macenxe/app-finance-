@@ -1,47 +1,43 @@
 {
  "isin": "FR0010286013",
  "alloc": {
-  "action": 49.7,
-  "obligation": 42.5,
-  "liquidite": 6.9,
-  "autre": 0.9
+  "action": 35.5,
+  "obligation": 40.9,
+  "liquidite": 22.6,
+  "autre": 1
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 30.3
+   "pct": 28.6
   },
   {
    "nom": "Technologie",
-   "pct": 27.4
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 15.6
+   "pct": 27.6
   },
   {
    "nom": "Finance",
-   "pct": 15.3
+   "pct": 17.1
   },
   {
-   "nom": "Communication",
-   "pct": 4.4
-  },
-  {
-   "nom": "Santé",
-   "pct": 4.2
+   "nom": "Conso. cyclique",
+   "pct": 16.5
   },
   {
    "nom": "Conso. de base",
-   "pct": 2.7
+   "pct": 5.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 3.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 0.8
   },
   {
    "nom": "Matériaux",
    "pct": 0.2
-  },
-  {
-   "nom": "Énergie",
-   "pct": 0.1
   },
   {
    "nom": "Immobilier",
@@ -50,23 +46,31 @@
   {
    "nom": "Services collectifs",
    "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
   }
  ],
  "holdings": [
+  {
+   "nom": "CAC 40 Index Future Apr 26",
+   "pct": 2.6
+  },
+  {
+   "nom": "Euro Stoxx 50 Future June 26",
+   "pct": 2.5
+  },
   {
    "nom": "Microsoft Corp",
    "pct": 2
   },
   {
    "nom": "Amadeus IT Group SA",
-   "pct": 2
+   "pct": 1.7
   },
   {
-   "nom": "Edwards Lifesciences Corp",
-   "pct": 1.6
-  },
-  {
-   "nom": "Adobe Inc",
+   "nom": "Compagnie Financiere Richemont SA Class A",
    "pct": 1.6
   },
   {
@@ -74,11 +78,11 @@
    "pct": 1.5
   },
   {
-   "nom": "NVR Inc",
-   "pct": 1.4
+   "nom": "Euro Bund Future June 26",
+   "pct": 1.5
   },
   {
-   "nom": "Shin Maint Holdings Co Ltd",
+   "nom": "Adobe Inc",
    "pct": 1.2
   }
  ]

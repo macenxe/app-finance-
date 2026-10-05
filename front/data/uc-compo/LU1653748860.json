@@ -1,31 +1,31 @@
 {
  "isin": "LU1653748860",
  "alloc": {
-  "action": 98.3,
+  "action": 97.9,
   "obligation": 0,
-  "liquidite": 1.7,
+  "liquidite": 2.1,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 39
+   "pct": 38.8
   },
   {
    "nom": "Industrie",
-   "pct": 27.7
+   "pct": 27.4
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 11.4
+   "pct": 11.9
   },
   {
    "nom": "Matériaux",
-   "pct": 9.7
+   "pct": 9.6
   },
   {
    "nom": "Santé",
-   "pct": 6.9
+   "pct": 7
   },
   {
    "nom": "Services collectifs",
@@ -55,18 +55,22 @@
  "holdings": [
   {
    "nom": "GEA Group AG",
-   "pct": 4.1
-  },
-  {
-   "nom": "Canadian Pacific Kansas City Ltd",
-   "pct": 3.6
+   "pct": 4.3
   },
   {
    "nom": "Unilever PLC",
-   "pct": 3.5
+   "pct": 3.7
   },
   {
    "nom": "Kerry Group PLC Class A",
+   "pct": 3.3
+  },
+  {
+   "nom": "Danone SA",
+   "pct": 3.2
+  },
+  {
+   "nom": "Canadian Pacific Kansas City Ltd",
    "pct": 3.1
   },
   {
@@ -74,24 +78,20 @@
    "pct": 3
   },
   {
-   "nom": "Sysco Corp",
-   "pct": 2.9
+   "nom": "Pentair PLC",
+   "pct": 2.7
   },
   {
-   "nom": "Danone SA",
-   "pct": 2.8
-  },
-  {
-   "nom": "The Kroger Co",
-   "pct": 2.6
-  },
-  {
-   "nom": "Mowi ASA",
-   "pct": 2.6
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 2.7
   },
   {
    "nom": "Haleon PLC",
    "pct": 2.6
+  },
+  {
+   "nom": "Sainsbury (J) PLC",
+   "pct": 2.5
   }
  ]
 }

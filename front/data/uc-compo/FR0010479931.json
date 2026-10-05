@@ -1,35 +1,35 @@
 {
  "isin": "FR0010479931",
  "alloc": {
-  "action": 99.5,
+  "action": 99.6,
   "obligation": 0,
-  "liquidite": 0.5,
+  "liquidite": 0.4,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 26.3
+   "pct": 26.5
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 20.3
+   "pct": 20.2
   },
   {
    "nom": "Santé",
-   "pct": 11
+   "pct": 11.8
   },
   {
    "nom": "Conso. de base",
-   "pct": 8.2
+   "pct": 7.8
   },
   {
    "nom": "Communication",
-   "pct": 7.6
+   "pct": 7.1
   },
   {
    "nom": "Énergie",
-   "pct": 6.1
+   "pct": 6
   },
   {
    "nom": "Technologie",
@@ -37,15 +37,15 @@
   },
   {
    "nom": "Matériaux",
-   "pct": 5.5
+   "pct": 5.4
   },
   {
    "nom": "Industrie",
-   "pct": 5.1
+   "pct": 5.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 2.9
+   "pct": 2.8
   },
   {
    "nom": "Immobilier",
@@ -55,30 +55,34 @@
  "holdings": [
   {
    "nom": "ICICI Bank Ltd",
-   "pct": 8.8
+   "pct": 8.9
   },
   {
    "nom": "Reliance Industries Ltd",
-   "pct": 6.1
+   "pct": 6
   },
   {
    "nom": "Bharti Airtel Ltd",
-   "pct": 5.8
+   "pct": 5.3
   },
   {
    "nom": "HDFC Bank Ltd",
-   "pct": 4.4
+   "pct": 4.2
+  },
+  {
+   "nom": "Titan Co Ltd",
+   "pct": 3.3
   },
   {
    "nom": "Apollo Hospitals Enterprise Ltd",
    "pct": 3.3
   },
   {
-   "nom": "Titan Co Ltd",
+   "nom": "Axis Bank Ltd",
    "pct": 3.2
   },
   {
-   "nom": "Axis Bank Ltd",
+   "nom": "Kotak Mahindra Bank Ltd",
    "pct": 3
   },
   {
@@ -87,10 +91,6 @@
   },
   {
    "nom": "Bajaj Finance Ltd",
-   "pct": 3
-  },
-  {
-   "nom": "Kotak Mahindra Bank Ltd",
    "pct": 2.8
   }
  ]

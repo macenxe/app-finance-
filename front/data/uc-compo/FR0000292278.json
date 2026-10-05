@@ -1,19 +1,19 @@
 {
  "isin": "FR0000292278",
  "alloc": {
-  "action": 97.8,
+  "action": 99.2,
   "obligation": 0,
-  "liquidite": 2.2,
+  "liquidite": 0.8,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 46.9
+   "pct": 45.4
   },
   {
    "nom": "Finance",
-   "pct": 21.9
+   "pct": 23.3
   },
   {
    "nom": "Industrie",
@@ -21,11 +21,11 @@
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 9.8
+   "pct": 9.9
   },
   {
    "nom": "Communication",
-   "pct": 7.1
+   "pct": 7.4
   },
   {
    "nom": "Conso. de base",
@@ -33,7 +33,7 @@
   },
   {
    "nom": "Santé",
-   "pct": 1.1
+   "pct": 1
   },
   {
    "nom": "Immobilier",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "SK Hynix Inc",
-   "pct": 9.5
-  },
-  {
-   "nom": "Delta Electronics Inc",
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
    "pct": 9.2
   },
   {
-   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 8.9
+   "nom": "SK Hynix Inc",
+   "pct": 9
   },
   {
    "nom": "Samsung Electronics Co Ltd",
-   "pct": 8.5
+   "pct": 9
+  },
+  {
+   "nom": "Delta Electronics Inc",
+   "pct": 7.9
   },
   {
    "nom": "Aspeed Technology Inc",
-   "pct": 4.9
+   "pct": 4.3
   },
   {
    "nom": "Tencent Holdings Ltd",
-   "pct": 4
+   "pct": 4.1
   },
   {
    "nom": "Contemporary Amperex Technology Co Ltd Class A",
-   "pct": 3.9
+   "pct": 3.7
   },
   {
    "nom": "Discovery Ltd",
-   "pct": 3.8
-  },
-  {
-   "nom": "B3 SA - Brasil Bolsa Balcao",
-   "pct": 3.4
+   "pct": 3.7
   },
   {
    "nom": "Capitec Bank Holdings Ltd",
-   "pct": 3.1
+   "pct": 3.4
+  },
+  {
+   "nom": "Chroma Ate Inc",
+   "pct": 3
   }
  ]
 }

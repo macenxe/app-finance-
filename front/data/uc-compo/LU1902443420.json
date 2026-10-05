@@ -1,51 +1,51 @@
 {
  "isin": "LU1902443420",
  "alloc": {
-  "action": 97.6,
+  "action": 97.3,
   "obligation": 0,
-  "liquidite": 2.4,
+  "liquidite": 2.7,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 38.1
-  },
-  {
-   "nom": "Finance",
-   "pct": 15
+   "pct": 37
   },
   {
    "nom": "Industrie",
-   "pct": 15
+   "pct": 14.8
   },
   {
-   "nom": "Communication",
-   "pct": 7.7
+   "nom": "Finance",
+   "pct": 14.6
   },
   {
    "nom": "Santé",
-   "pct": 6.3
+   "pct": 7.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 7.1
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 4.8
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 4.5
+   "pct": 5
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.8
+   "pct": 4.4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 3.3
+   "pct": 4
   },
   {
    "nom": "Immobilier",
-   "pct": 1.5
+   "pct": 1.4
   },
   {
    "nom": "Énergie",
@@ -55,39 +55,39 @@
  "holdings": [
   {
    "nom": "NVIDIA Corp",
-   "pct": 5.1
-  },
-  {
-   "nom": "Microsoft Corp",
-   "pct": 4.2
+   "pct": 4.9
   },
   {
    "nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
-   "pct": 3.9
+   "pct": 4.4
   },
   {
-   "nom": "Apple Inc",
-   "pct": 3.8
+   "nom": "Samsung Electronics Co Ltd",
+   "pct": 3.7
   },
   {
    "nom": "Alphabet Inc Class A",
    "pct": 3.7
   },
   {
-   "nom": "Samsung Electronics Co Ltd",
+   "nom": "Microsoft Corp",
+   "pct": 3.6
+  },
+  {
+   "nom": "Apple Inc",
    "pct": 3.6
   },
   {
    "nom": "Broadcom Inc",
-   "pct": 3.2
-  },
-  {
-   "nom": "TJX Companies Inc",
-   "pct": 2.2
+   "pct": 2.5
   },
   {
    "nom": "Advanced Micro Devices Inc",
    "pct": 2.2
+  },
+  {
+   "nom": "TJX Companies Inc",
+   "pct": 1.9
   }
  ]
 }

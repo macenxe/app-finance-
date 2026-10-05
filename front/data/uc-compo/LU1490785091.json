@@ -1,39 +1,39 @@
 {
  "isin": "LU1490785091",
  "alloc": {
-  "action": 99.4,
+  "action": 100,
   "obligation": 0,
-  "liquidite": 0.6,
+  "liquidite": 0,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 27
+   "pct": 27.9
   },
   {
    "nom": "Santé",
-   "pct": 24.5
+   "pct": 23.2
   },
   {
    "nom": "Technologie",
-   "pct": 17.4
+   "pct": 18.1
   },
   {
    "nom": "Finance",
-   "pct": 13
+   "pct": 12.5
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10.9
+   "pct": 10.6
   },
   {
    "nom": "Matériaux",
-   "pct": 5.3
+   "pct": 5.6
   },
   {
    "nom": "Conso. de base",
-   "pct": 2
+   "pct": 2.2
   },
   {
    "nom": "Immobilier",
@@ -55,19 +55,19 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 6.6
+   "pct": 6.5
   },
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 5.2
+   "pct": 5.6
   },
   {
    "nom": "NKT AS",
-   "pct": 4.6
+   "pct": 4.7
   },
   {
    "nom": "Harvia PLC Ordinary Shares",
-   "pct": 4
+   "pct": 4.3
   },
   {
    "nom": "Alm Brand AS",
@@ -75,22 +75,22 @@
   },
   {
    "nom": "Rolls-Royce Holdings PLC",
-   "pct": 3.7
-  },
-  {
-   "nom": "Galderma Group AG Registered Shares",
-   "pct": 3.6
-  },
-  {
-   "nom": "Compagnie Financiere Richemont SA Class A",
-   "pct": 3.6
+   "pct": 3.8
   },
   {
    "nom": "Erste Group Bank AG.",
+   "pct": 3.6
+  },
+  {
+   "nom": "Kongsberg Gruppen ASA",
    "pct": 3.5
   },
   {
-   "nom": "Nordea Bank Abp",
+   "nom": "Compagnie Financiere Richemont SA Class A",
+   "pct": 3.5
+  },
+  {
+   "nom": "Vaisala Oyj Class A",
    "pct": 3.5
   }
  ]

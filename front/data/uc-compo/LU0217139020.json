@@ -1,23 +1,23 @@
 {
  "isin": "LU0217139020",
  "alloc": {
-  "action": 98.6,
+  "action": 99.2,
   "obligation": 0.1,
-  "liquidite": 1.2,
+  "liquidite": 0.8,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. cyclique",
-   "pct": 62.8
+   "pct": 62.6
   },
   {
    "nom": "Finance",
-   "pct": 11.6
+   "pct": 12.3
   },
   {
    "nom": "Conso. de base",
-   "pct": 10.1
+   "pct": 10.7
   },
   {
    "nom": "Santé",
@@ -25,11 +25,11 @@
   },
   {
    "nom": "Technologie",
-   "pct": 7
+   "pct": 5.9
   },
   {
    "nom": "Immobilier",
-   "pct": 1.2
+   "pct": 1
   },
   {
    "nom": "Matériaux",
@@ -54,35 +54,31 @@
  ],
  "holdings": [
   {
-   "nom": "Moncler SpA",
-   "pct": 4.4
-  },
-  {
-   "nom": "Marriott International Inc Class A",
-   "pct": 4.4
-  },
-  {
    "nom": "American Express Co",
-   "pct": 4.3
-  },
-  {
-   "nom": "Hermes International SA",
-   "pct": 4.2
+   "pct": 4.6
   },
   {
    "nom": "Galderma Group AG Registered Shares",
+   "pct": 4.4
+  },
+  {
+   "nom": "Hermes International SA",
+   "pct": 4.3
+  },
+  {
+   "nom": "Compagnie Financiere Richemont SA Class A",
    "pct": 4.2
   },
   {
-   "nom": "Hilton Worldwide Holdings Inc",
+   "nom": "adidas AG",
    "pct": 4.1
   },
   {
-   "nom": "Apple Inc",
-   "pct": 4
+   "nom": "Visa Inc Class A",
+   "pct": 4.1
   },
   {
-   "nom": "Visa Inc Class A",
+   "nom": "Marriott International Inc Class A",
    "pct": 4
   },
   {
@@ -90,8 +86,12 @@
    "pct": 4
   },
   {
-   "nom": "adidas AG",
-   "pct": 4
+   "nom": "Moncler SpA",
+   "pct": 3.9
+  },
+  {
+   "nom": "Hilton Worldwide Holdings Inc",
+   "pct": 3.8
   }
  ]
 }

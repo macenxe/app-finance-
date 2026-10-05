@@ -1,35 +1,35 @@
 {
  "isin": "LU0366534344",
  "alloc": {
-  "action": 99.4,
+  "action": 98.6,
   "obligation": 0,
-  "liquidite": 0.6,
+  "liquidite": 1.4,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 35.6
+   "pct": 35.4
   },
   {
    "nom": "Matériaux",
-   "pct": 23
+   "pct": 24
   },
   {
    "nom": "Industrie",
-   "pct": 20.6
+   "pct": 20.8
   },
   {
    "nom": "Santé",
-   "pct": 15.9
+   "pct": 15
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 3.3
+   "pct": 3.2
   },
   {
    "nom": "Technologie",
-   "pct": 1.4
+   "pct": 1.6
   },
   {
    "nom": "Immobilier",
@@ -54,43 +54,43 @@
  ],
  "holdings": [
   {
-   "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 6.6
+   "nom": "Deere & Co",
+   "pct": 6.9
   },
   {
-   "nom": "Deere & Co",
-   "pct": 6.2
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 6.5
   },
   {
    "nom": "Danone SA",
-   "pct": 4.7
+   "pct": 5.1
   },
   {
    "nom": "Sysco Corp",
-   "pct": 4.4
+   "pct": 4.1
   },
   {
-   "nom": "Sensient Technologies Corp",
-   "pct": 4.3
-  },
-  {
-   "nom": "Mowi ASA",
-   "pct": 4.3
+   "nom": "Ecolab Inc",
+   "pct": 4.1
   },
   {
    "nom": "Agilent Technologies Inc",
-   "pct": 4
+   "pct": 3.7
   },
   {
-   "nom": "IDEXX Laboratories Inc",
-   "pct": 3.9
+   "nom": "Sensient Technologies Corp",
+   "pct": 3.7
+  },
+  {
+   "nom": "Glanbia PLC",
+   "pct": 3.6
   },
   {
    "nom": "Thermo Fisher Scientific Inc",
    "pct": 3.6
   },
   {
-   "nom": "Darling Ingredients Inc",
+   "nom": "IDEXX Laboratories Inc",
    "pct": 3.6
   }
  ]

@@ -1,8 +1,8 @@
 {
  "isin": "LU0512124107",
  "alloc": {
-  "action": 5,
-  "obligation": 95,
+  "action": 5.2,
+  "obligation": 94.8,
   "liquidite": 0,
   "autre": 0
  },
@@ -58,12 +58,12 @@
    "pct": 5.5
   },
   {
-   "nom": "Euro Bobl Future Sept 26",
+   "nom": "Euro Stoxx 50 Future Sept 26",
    "pct": 4.1
   },
   {
-   "nom": "Future On Euro Stoxx 50 Sep26",
-   "pct": 4.1
+   "nom": "Euro Bobl Future Sept 26",
+   "pct": 4
   }
  ]
 }

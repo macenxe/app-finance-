@@ -1,61 +1,65 @@
 {
  "isin": "LU2147879543",
  "alloc": {
-  "action": 42.9,
-  "obligation": 57,
+  "action": 43,
+  "obligation": 56.9,
   "liquidite": 0,
   "autre": 0.1
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 22.3
+   "pct": 19.3
   },
   {
    "nom": "Industrie",
-   "pct": 17.3
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 13.8
+   "pct": 18.9
   },
   {
    "nom": "Finance",
-   "pct": 11.5
+   "pct": 13.9
   },
   {
-   "nom": "Communication",
-   "pct": 10.7
+   "nom": "Conso. cyclique",
+   "pct": 13.1
   },
   {
    "nom": "Santé",
    "pct": 9.8
   },
   {
+   "nom": "Communication",
+   "pct": 9.1
+  },
+  {
    "nom": "Conso. de base",
-   "pct": 6.5
+   "pct": 6.8
   },
   {
    "nom": "Immobilier",
-   "pct": 2.8
-  },
-  {
-   "nom": "Énergie",
-   "pct": 2
+   "pct": 2.7
   },
   {
    "nom": "Services collectifs",
-   "pct": 1.9
+   "pct": 2.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.3
   },
   {
    "nom": "Matériaux",
-   "pct": 1.5
+   "pct": 1.8
   }
  ],
  "holdings": [
   {
-   "nom": "Euro Stoxx Banks Future June 26",
-   "pct": 2.4
+   "nom": "Euro Stoxx 50 Future Sept 26",
+   "pct": 5.3
+  },
+  {
+   "nom": "Euro Stoxx Banks Future Sept 26",
+   "pct": 3.2
   },
   {
    "nom": "Alphabet Inc Class A",
@@ -63,7 +67,7 @@
   },
   {
    "nom": "NVIDIA Corp",
-   "pct": 1.9
+   "pct": 1.8
   },
   {
    "nom": "Amazon.com Inc",
@@ -71,6 +75,10 @@
   },
   {
    "nom": "Visa Inc Class A",
+   "pct": 1.5
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
    "pct": 1.4
   }
  ]

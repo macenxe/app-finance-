@@ -1,43 +1,43 @@
 {
  "isin": "FR0000978439",
  "alloc": {
-  "action": 96.2,
-  "obligation": 0.3,
-  "liquidite": 3.5,
+  "action": 97.3,
+  "obligation": 0.4,
+  "liquidite": 2.3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 42.6
+   "pct": 43.6
   },
   {
    "nom": "Technologie",
-   "pct": 23.3
+   "pct": 22.6
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 14.9
+   "pct": 15.6
   },
   {
    "nom": "Matériaux",
-   "pct": 7.7
+   "pct": 7.2
   },
   {
    "nom": "Santé",
-   "pct": 4.3
+   "pct": 4.2
   },
   {
    "nom": "Énergie",
-   "pct": 3.7
+   "pct": 3.9
   },
   {
    "nom": "Conso. de base",
-   "pct": 2.8
+   "pct": 3
   },
   {
    "nom": "Immobilier",
-   "pct": 0.6
+   "pct": 0
   },
   {
    "nom": "Communication",
@@ -54,27 +54,27 @@
  ],
  "holdings": [
   {
-   "nom": "GL Events",
+   "nom": "Figeac Aero SA",
    "pct": 8.3
   },
   {
-   "nom": "Figeac Aero SA",
-   "pct": 7.6
+   "nom": "GL Events",
+   "pct": 8.2
   },
   {
    "nom": "ID Logistics",
-   "pct": 6.2
-  },
-  {
-   "nom": "Jacquet Metals Ordinary Shares",
-   "pct": 4.6
+   "pct": 5.8
   },
   {
    "nom": "Aubay",
-   "pct": 4.5
+   "pct": 4.8
   },
   {
-   "nom": "Wavestone SA",
+   "nom": "Jacquet Metals Ordinary Shares",
+   "pct": 4.4
+  },
+  {
+   "nom": "Delfingen",
    "pct": 4.4
   },
   {
@@ -83,15 +83,15 @@
   },
   {
    "nom": "Virbac SA",
-   "pct": 4.1
+   "pct": 4
+  },
+  {
+   "nom": "Lectra",
+   "pct": 3.9
   },
   {
    "nom": "Mersen SA",
-   "pct": 4
-  },
-  {
-   "nom": "Delfingen",
-   "pct": 4
+   "pct": 3.8
   }
  ]
 }

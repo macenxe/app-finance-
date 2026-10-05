@@ -1,27 +1,27 @@
 {
  "isin": "FR0010649079",
  "alloc": {
-  "action": 98,
+  "action": 98.6,
   "obligation": 0,
-  "liquidite": 2,
+  "liquidite": 1.4,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 39
+   "pct": 39.7
   },
   {
    "nom": "Technologie",
-   "pct": 26.8
+   "pct": 25
   },
   {
    "nom": "Services collectifs",
-   "pct": 12.7
+   "pct": 12.3
   },
   {
    "nom": "Santé",
-   "pct": 8.2
+   "pct": 8.3
   },
   {
    "nom": "Matériaux",
@@ -29,15 +29,15 @@
   },
   {
    "nom": "Énergie",
-   "pct": 4.3
+   "pct": 4
   },
   {
    "nom": "Conso. de base",
-   "pct": 1.4
+   "pct": 2.8
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 1.3
+   "pct": 1.6
   },
   {
    "nom": "Immobilier",
@@ -55,26 +55,22 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 6.8
+   "pct": 7
   },
   {
    "nom": "Prysmian SpA",
-   "pct": 3.8
+   "pct": 3.5
   },
   {
-   "nom": "Infineon Technologies AG",
-   "pct": 3.2
+   "nom": "Siemens AG",
+   "pct": 3.1
   },
   {
    "nom": "STMicroelectronics NV",
-   "pct": 3.2
+   "pct": 2.9
   },
   {
-   "nom": "BE Semiconductor Industries NV",
-   "pct": 3
-  },
-  {
-   "nom": "Grenergy Renovables SA",
+   "nom": "Iberdrola SA",
    "pct": 2.8
   },
   {
@@ -82,15 +78,19 @@
    "pct": 2.7
   },
   {
-   "nom": "ASM International NV",
+   "nom": "Infineon Technologies AG",
+   "pct": 2.7
+  },
+  {
+   "nom": "Grenergy Renovables SA",
+   "pct": 2.7
+  },
+  {
+   "nom": "Novartis AG Registered Shares",
    "pct": 2.6
   },
   {
-   "nom": "Siemens AG",
-   "pct": 2.6
-  },
-  {
-   "nom": "Iberdrola SA",
+   "nom": "BE Semiconductor Industries NV",
    "pct": 2.6
   }
  ]
