@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-06",
+ "genere": "2026-10-07",
  "fonds": {
   "LU1120766388": {
    "gerants": [
@@ -90,7 +90,7 @@
    "fraisCourants": 2.06,
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
-   "note": 3,
+   "note": 4,
    "risque": 4
   },
   "FR0010038257": {
@@ -208,7 +208,7 @@
    "fraisCourants": 1.91,
    "societe": "DNCA Finance",
    "structure": "SICAV",
-   "note": 1,
+   "note": 2,
    "risque": 4
   },
   "LU1819480192": {
@@ -263,7 +263,7 @@
    "fraisCourants": 2.16,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "SICAV",
-   "note": 3,
+   "note": 2,
    "risque": 1
   },
   "LU1160365091": {
@@ -390,7 +390,7 @@
    "fraisCourants": 2.01,
    "societe": "Credit Mutuel Asset Management",
    "structure": "SICAV",
-   "note": 4,
+   "note": 5,
    "risque": 3
   },
   "FR0000292278": {
@@ -521,7 +521,7 @@
    "fraisCourants": 1.89,
    "societe": "Palatine Asset Management",
    "structure": "FCP",
-   "note": 2,
+   "note": 3,
    "risque": 4
   },
   "FR0010649079": {
@@ -560,7 +560,7 @@
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
    "note": 4,
-   "risque": 2
+   "risque": 3
   },
   "LU0366534344": {
    "gerants": [
@@ -732,7 +732,7 @@
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
    "note": 4,
-   "risque": 3
+   "risque": 4
   },
   "FR001400UAZ4": {
    "gerants": [
@@ -824,7 +824,7 @@
    "fraisCourants": 1.61,
    "societe": "CPR Asset Management",
    "structure": "FCP",
-   "note": 2,
+   "note": 3,
    "risque": 3
   },
   "LU0512124107": {
@@ -845,7 +845,7 @@
    "fraisCourants": 1.9,
    "societe": "DNCA Finance",
    "structure": "SICAV",
-   "note": 4,
+   "note": 3,
    "risque": 5
   },
   "LU0284394235": {

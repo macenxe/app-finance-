@@ -1,6 +1,78 @@
 {
  "evenements": [
   {
+   "date": "2026-10-07",
+   "isin": "FR0010564229",
+   "fonds": "Conservateur Actions Monde C",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Conservateur Actions Monde C : 3/5 → 4/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "LU1490785091",
+   "fonds": "DNCA Invest SRI Norden Europe",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur DNCA Invest SRI Norden Europe : 1/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 1/5 à 2/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "LU1244893696",
+   "fonds": "EdR Fund Big Data A EUR",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur EdR Fund Big Data A EUR : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "LU1744646933",
+   "fonds": "La Francaise IP Carbon Impact Glb",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur La Francaise IP Carbon Impact Glb : 4/5 → 5/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 5/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "FR0000978439",
+   "fonds": "Palatine France Small Cap",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Palatine France Small Cap : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "LU0280435388",
+   "fonds": "Pictet Clean Energy Transition P EUR",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Pictet Clean Energy Transition P EUR : 2/5 → 3/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "FR0007439666",
+   "fonds": "Congrégation Investissement",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Congrégation Investissement : 3/5 → 4/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "FR0010097683",
+   "fonds": "CPR Croissance Réactive",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur CPR Croissance Réactive : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-10-07",
+   "isin": "LU0512124107",
+   "fonds": "DNCA Invest - Convertibles",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur DNCA Invest - Convertibles : 4/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 3/5."
+  },
+  {
    "date": "2026-09-09",
    "isin": "FR0010915314",
    "fonds": "La Française Obligation Carbon Impact",
