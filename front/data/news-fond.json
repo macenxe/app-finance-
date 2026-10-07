@@ -1,6 +1,15 @@
 {
- "genere": "2026-10-07T18:52:40.394Z",
+ "genere": "2026-10-07T23:33:05.430Z",
  "globales": [
+  {
+   "titre": "Cac 40 : Rattrapé par les tensions sur le marché obligataire et la progression des cours du pétrole, le CAC 40 abandonne plus de 1,2% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Wed, 07 Oct 2026 15:45:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOTDVFMG0xcXlieW5RTC1LRERQVVBQUDBqTEdJV0NMXzZvdFVMWUZyb0dXOUFRYkRyeVRXRDhva1NlZENBVFB5MHdMR0FHMmtUQmROdGRmZFJCQkhYNWhHMEdaU0lPZkhZeEtBeHA0WXF2czZJNGQzTmpabXYwXzZqYlBMSHpRY255cDhmQkRUU1Z0a3FPdUd4U2xIWHNOUlFRR0VUV05ZMWdpSUVhWHZpcV85M1psNmVyN1FEaUItQ0w4bUJoN3VOclRNRVNnRkJrVjR6WkI1ckN5YmZsR0hZdVBsYU9mVWh3MjdaY0lRcTVPZ3NTV3dvWjBsWmlaSXJMQTlNdktLZFFUeENKYXItZmphc3F0SEpicmNMa242WlVEY0FLbkE?oc=5",
+   "tag": "Obligataire",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Crédit immobilier : les taux «peuvent augmenter», alerte le gouverneur de la Banque de France - Capital.fr",
    "source": "Capital.fr",
@@ -25,15 +34,6 @@
    "date": "Wed, 07 Oct 2026 06:04:21 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObXNmdkF3Z2Yyd0wxSVVpTkNhMFVPOTJvMFhTcUEtSEtfOFFCY3JOQVFTdjBRd0M2Y0JnV0FTNFkwb0E3dlhfWGxhLUlVdkpBeldZVHA5a1BENFdyRndwTmlVbHpIQTJBbHNOSGxnYkhXTXZRYUVnampLQlJCQVJiWWxOZUR1YWVtb2ZmNVRzS2paa18xbE5ieHFOb181WGdqNHlfSjJzcklLZV9MUmxBWFhwUFJOOVdONjBXLVNwbVB2cWtuemdUeVM3OFFFSEtHUC1TcUpQeUYxOTVlbUw2RDM2My1ZZ3VXS1pZWGZENA?oc=5",
    "tag": "International",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : Rattrapé par les tensions sur le marché obligataire et la progression des cours du pétrole, le CAC 40 abandonne plus de 1,2% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Tue, 06 Oct 2026 16:11:43 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOTDVFMG0xcXlieW5RTC1LRERQVVBQUDBqTEdJV0NMXzZvdFVMWUZyb0dXOUFRYkRyeVRXRDhva1NlZENBVFB5MHdMR0FHMmtUQmROdGRmZFJCQkhYNWhHMEdaU0lPZkhZeEtBeHA0WXF2czZJNGQzTmpabXYwXzZqYlBMSHpRY255cDhmQkRUU1Z0a3FPdUd4U2xIWHNOUlFRR0VUV05ZMWdpSUVhWHZpcV85M1psNmVyN1FEaUItQ0w4bUJoN3VOclRNRVNnRkJrVjR6WkI1ckN5YmZsR0hZdVBsYU9mVWh3MjdaY0lRcTVPZ3NTV3dvWjBsWmlaSXJMQTlNdktLZFFUeENKYXItZmphc3F0SEpicmNMa242WlVEY0FLbkE?oc=5",
-   "tag": "Obligataire",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -150,20 +150,65 @@
  ],
  "eco": [
   {
-   "titre": "Le S&P 500 et le Nasdaq reculent après avoir atteint des records, tandis que les rendements des Treasuries progressent - Zonebourse Suisse",
+   "titre": "Les craintes d'une hausse des taux pèsent sur le marché immobilier britannique, selon la RICS - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Wed, 07 Oct 2026 18:28:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQa0ZMc2dUcm1nd0RpUERkZWNqVDVNVUduZjdTR0ZlMG5BenhlQW1mOHNtd0ZnTlBMYVhWODI2Z25YLTAySzBfZENvaUdpMGd0QWZNNmQySHlZTk1oQ2FsOFlTMnFnbGV3enFNS0xZZHl1dDRUQ29aODJWSDh2N01aSTJucE1qRjU1dkt1M0N1WVZfcWR6V0ZVWWxBZWk5Y1lMSWxLNWZNXzljSFU4M3JFSkZaY3BmZlUzQnJkTWN2UndzMjAxaWNWb3owMUtMcTl4UkhyQmVPOUVRcG5CTGpDcXJVQi1ZVEVkR2JxRHFKMWs?oc=5",
+   "date": "Wed, 07 Oct 2026 23:02:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQVllvMGQ2Z1k4OWpxc1F1TWYzY21IdXZ0ZFZoR24xZVJ5bTVUb0l4YzhkZ1pTWUZqaFVTWG56VGFReW5nVHhnaEp3R0tGbnY5bDQ1Rl9HUThyeXVYcTJaMGtTZ2xhbVdBVEpJZ3A4YVpIQzc1c1lnYkU2eHN2R0FZY1pid2FqMTAyV2YyclotU0g5aDF2S1dfQnRlN2pndWZ0X3VXYlpvYzdmYmozVjFuTE5oSVlaZVhmMHpBejVxMldpUUZTNTk2NWJRd3lrOWNGdGxZcFM2M3RNMjlZdHF1aDYxRQ?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street finit en baisse mais les taux américains se stabilisent",
+   "source": "ABC Bourse",
+   "date": "Wed, 07 Oct 2026 20:46:30 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-en-baisse-mais-les-taux-americains-se-stabilisent_703864",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le compte rendu de la Fed montre que certains responsables veulent se préparer aux tensions sur les marchés - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 07 Oct 2026 20:09:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZmg3SVUyZDY3dmZWZ3RQY2p2ZUVUYl9VUDRtRUZEaWN0VkR3aGNQemlRQUNYZEpIUUE5LTJkbWVDbDh5V1NfZl9VRWZRTkttYjdiVmg3SHBJMjVBWTBZWGVsSkdUUGZ5V214UWtHMHNPZWlNRFR6anFTa1N4U1prTkFhNGw4X3JpRHI0UXlpVzZmMDhlWVhwYnNfX01WTFdudjlFZGVuTVNOa0hxR3dIejlIOGx3eVlYM2xaQ09ZV3Mya1VRVkY5NW1pUUtPUDd4ZVE1STlwNU5TNEttY2tjNHdLMW1mSkk3bHVMWFVJYjY?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Xavier Perret (Microsoft) : Hollywood, l'apocalypse IA bien au-delà de Terminator - 07/10",
+   "source": "BFM Économie",
+   "date": "Wed, 07 Oct 2026 19:32:51 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-xavier-perret-microsoft-hollywood-l-apocalypse-ia-bien-au-dela-de-terminator-07-10_VN-202610070883.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le S&P 500 et le Nasdaq reculent après avoir atteint des sommets historiques, alors que les rendements des bon - Boursorama",
+   "titre": "La Fed envisage une nouvelle hausse des taux d'ici décembre, sans se presser - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 07 Oct 2026 18:27:45 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQNFRGVUIxaUNMaDhlVFM3MnVseXVMU2d4XzVFckJjbTVUcU1OR0hqdFNROVhUcnQ3eWMtdHBPcWlidnQtQ0hTX3NBRVdCWjdVM1JDNFdxcXlBMmktVFJVYTRqbVFLVkxWX0pnQjd1U0hfa1lGdkwxYkZSYU1JdmVBakJTdUY0OXpNVURTaXBPQ2J5WG1JN0VoZGdsN08zZnZhVHF0VVRiWnBoemVTVlJDM1JlS2dMWjE3cnQ2OFF5RUhSa3dudkJNZHhCQ2NScmNCLUhxYUFhNjk3T2RxSXpmNW9HaU1zTm13LTJfd1JWeUo1bzhjZl8wSDJMUU9wanRzU01JcnRLZms2VkRWa3pHUW9fcHBVVDVmdnJvQXUzbGMxRjM5aHBsV1hGeGlCY0w2OWfSAbcCQVVfeXFMUHVkZldMVUgxenRINDJOcWxMam1tS2RZZXUtY2JON3F0VGszZzNTVHBtc05LeGZROGdQdmZpVFZIaUhrOVQ0aDZMWjZzdmVqaXlqUnlNdzU0aGI2d2dhQ0l0WnJCNFdDRDY4THQxaHdacVQxYlJXRUNoTWFGWVlpQUtfYTNkbmxFZUQzNlVyUUxwS0tJSFZjd3FxeEZ1NkNlNVptdlRSQ3Fla1JVZWtyS2RodTk0eTJMQURrS01WOUVyYThYeENVSGlsT2dMMHd0UGRCckVnekljTDN6UmZQM2g4RmRlbk9aTk9mcmJvd01CVHlTZnEwOW5WNV84R0s5bHdnT0hFMW1nRWpxVUNDN0Y4TEF3aENzSHlVVGlEUG85LXk3cjk1dl9xX2hoWDBTQWZUU1o4a1U?oc=5",
-   "tag": "CAC 40",
+   "date": "Wed, 07 Oct 2026 19:15:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQaTBxYmNRSmU3TmZ3bXV6a09ISE5fYnhQR2t3LTlHS2RCR3FvVmtwbVpLVENPYXhRRlBZb2dmU2N6OFViU2pEZlhZMEgyNU03Nk5OaE9ER0hfcEtCRXFxQ1I0REw1eHpINWxNNkJzSjNCYy1RSHNwSEFJMENjUGtFZTFheGhHVGJld2tQZ0pBSkQtSGp2SzB2UGR6RzVWMmxCQVBHa1VWdlh3aUJnY1lFR25aU2ZfdTdHMlQ0M3o1d2RWTnFzWWZaQlQ0ejVlWll1N2F1X3oyS1FpMjc4UU1fQVl0TFdJYnJuOEtzVmFn0gHuAUFVX3lxTFBpMHFiY1FKZTdOZndtdXprT0hITl9ieFBHa3ctOUdLZEJHcW9Wa3BtWktUQ09heFFGUFlvZ2ZTY3o4VWJTakRmWFkwSDI1TTc2Tk5oT0RHSF9wS0JFcXFDUjRETDV4ekg1bE02QnNKM0JjLVFIc3BIQUkwQ2NQa0VlMWF4aEdUYmV3a1BnSkFKRC1IanZLMHZQZHpHNVYybEJBUEdrVVZ2WHdpQmdjWUVHblpTZl91N0cyVDQzejV3ZFZOcXNZZlpCVDR6NWVaWXU3YXVfejJLUWkyNzhRTV9BWXRMV0licm44S3NWYWc?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le compte rendu de la Fed fait état d’une unité derrière la hausse des taux de septembre - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Wed, 07 Oct 2026 19:00:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcnR5aEgtUU1VZmVvTzhOelBkRTV2Mm92R2lZeEc4MFloSmxtbDAxQ3VQVmpVZkY2djM5cE9vQU1NblRGQVItSi1UanVLVkNBQ2ZUc2VBbWZtYml3Sm1Xb1RvNUtFQWl3bnRISkVkUFBEYktUMERQVnZpSlhuZENBdDIwaWUwbUZsX1p1cDJYYnpFWkFLdGhDLU5QWmNUZTJVRksxakdfMUJZN1ZIODdvV2FuNW9taVZETVRpMXlXYU8yLVBlUkxSb0JnVEdScUZUNmxXQXh5N2g1eklBMmtGdlJJZw?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le bitcoin se replie face aux tensions sur les taux",
+   "source": "ABC Bourse",
+   "date": "Wed, 07 Oct 2026 18:54:42 GMT",
+   "lien": "https://www.abcbourse.com/marches/le-bitcoin-se-replie-face-aux-tensions-sur-les-taux_703861",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
@@ -171,55 +216,19 @@
    "titre": "USA-Les responsables de la Fed divisés sur la justification de la hausse des taux-\"minutes\" - Boursorama",
    "source": "Boursorama",
    "date": "Wed, 07 Oct 2026 18:25:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPTUtSMUNFWWZSSDZFWUpESlpjcXJpcFJSZzFMLUdvaFNoZ192bXZJOHhMajROaGNQd2IxbXBjUEgyektTSm9QekMta0cxWGdBcGhWOEc5WXc5a1Q2ZjBzUG5yaTh5d0dWV1dabDdiTmd4b0EwZEZUcEJwZElOVmVmMnFzZXhrbFAxTEtrR20zN1g3Y200bll6RTZEVGVOQlRmTkxENUZ6RDBZeDZOdEE4eDRFS2w2eE9DWlVLSW5rRUs3bHlMTDIzZTg5Wl9zb09iT0E2WFktQmZmZmNudVlOQWw5VVBldmJEdHp0Z3o2MmN6NmlNWTRxNWFsMFNSMWo2ZEFZV0VaQ1ZWOGxqeUHSAZMCQVVfeXFMTUxTYk5ObGlaQ00yWVlIZHBFemlvV0JwY1hFYzBjNmt4N21FUERYOUxpeEZmbXNYRUFrYWU5eWV0MS1TSTlWYndNUDZpVWdwa0w0MkZmcktQZk9zTFd5TU41a2c2Y2xQN1hqaVRHMExpYnUwWVp0M21ZQ2ZUR3VQMlB6dVE1TDV6WEJ1X2J0T2FWUk1INmZGTV9udmxDcmZ0THJnNGlLTEY4cklmV2JpczB2dFotYkZRemhOY2hjSVdOSHFsUnZzUnZCVDdGZEpGNS1IUjV4UmNPQ1M1Tk9yNkhvRm4tOVJjZlRMNHR3N0txaVcyS3NZaUR1TG52VTc0NGFUZGMzRkJxUzhHMW5CZUNYZ28?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "La Bourse de Paris en net repli sous les 7.800 points sur fond de tensions géopolitiques et obligataires - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Wed, 07 Oct 2026 18:24:58 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNaEZ4RGVUSFpQQU1TdkVYZTBsc2NEakk5ZDhuM1oyUE5mQ1BydmtRaVdvaWtOQnAwcGJqSzlCSEJfTTNpOFlkSm5OeURic2JITVVyT2lpbjhzUk9SaWZCcndaX3ZzR1lZRWUzVG5pTnJnS0ZFMDUySlI5alZyZWZja0VvM0IyZVVzR01lVkpPZl9vZ0lLYi1WRnNmSEN0TlFYS2EyR0FlSEJtVXdVUTJwWWlMdnFEeWhQbllRVm1wSm9NUnNRR2NHU0FzcVJfYU01eVNaaFg0YXI2RkliUmxCNFdIT3AzNFlhTFNwQVBzRU9DVlNHdkZNZS1OSUZMQVlKbC1xOA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Microsoft renforce la présence de l'IA sur les PC pour concurrencer Apple - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 07 Oct 2026 18:03:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQMFpPaS1NSmd3MzRJalp3OW01dnFmT3NHUzA1dDdTXzcyaHRnRjFYdXVPVGlqajFGRGRZYllIUEpjVlpISnp0dWt2Q3NOWS1UdWdUbkdEUjB6UWt0UWtYUFptRS02OGdBMGl2aWFqbmhwamJXQjNNelI4VDFzN0lvUWdXMjNMcmU5aUNneXA3RlpsTlVfSTlyd1IyMWwtRkM5ZGRPRjlsbW5tckZJWVVwWlkzdmFFenVQaExzZHR6bC1OeVZ5eFVtNExZU05vTzRqVlc0YWJDaV9lc1FmNWs5MlJ3YmJzd9IB6wFBVV95cUxPTy04dWZqYkdGaWw2VTJDV0dpaEdFUU9JUkRZX01GSnhHOFpnY1duT0FJMXJJVUNhQ0tjWEplbzExZTIxdW14cW1XUmlOZ09TbDdTWmVxSnI2cTBFUk11TE40T3Nrd1hDVFF1cHlFYmpWNDNlc3ZGdi10Q01SeG5EbV9INFNhQzNkeFlNV3kyYV9tNnNzeWZYRmc3S1M2WndVVWlKeERTamUzTm5SM0Ria3hCMm1lREtXOFpDeTVBMmwtdVo0UDY4aXZYRXp4d3V3dmhwRWFsZ2F5RmVUSncxT0x2Mk1kSTlHYmFj?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les responsables de la Fed divisés sur la justification d'une hausse des taux en septembre, selon le compte-re - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 07 Oct 2026 18:00:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPbzlxQUlfaG5VTVlmTlFzLU0xXzlzdmt6RnZ4U2czWVlHc3gxLUZtekg3YWZCY2JVTVZVQXFnSE0tU2QtU1F2b2xEVkFubjVUSng2NDhpdTNrWU85eUMzYkF5eHhqa29wTDZ1Ukp4bnQ3XzRtUV9OalI2RElsd0daQm9pOFYxUUh6LVI3RkktSU1hZ3VzaVNnTl9IWGFFUm9VVWlmNTRhTHFkN2VBWWltX2hhOVViRmRsV0FiMU9nMDNUbndnZFZDbjloYXFSQktUeGl3VjBldEpUQWltZEwxTjU2T3k1UjRDUlN3LVJ6eWgxVXBiMzR0RkNNc3NVd0FvYjZ3cU9fX0l2aHpBTlFmM3k4ZjNOV0h3Ni1XWFVlVnRwa3FvLXJwRklPNG55dDd3RlgxYkprcnFTRVhhWjJn0gHEAkFVX3lxTFBDTFd4ZXBRbUFicVVGNzdwS3hWZDFGNnA0SVpROGxzejRPZDdWTmNtOHpKVjA5OGFpelc1UHdNNDY5cjUtOGw1dm9xOVc4TmluUGJSYkpXRzh0bTIybXpmUnRiNjl2akp5VDNWSU16U3haWVlCdXh5ZTFvSmhVWFdnWUhZSUN4aHlZVXduNHlIYmtndTBqVHZWQ3hHVVhrMHhCTU5fd1BHZWFNOUFoN2MtTkFjRHpMb1NiMjJYazRSN2FLek1jQ1pudk1RRmxVQ0xNMVQ2VXE1V3pmdEFCaXkzcld1MWlZMUNqdVdKLUhEWWdueDlJd0laY0laZFl6YXBZajV4ejFBMXhIUUlxTHp0eldMcVhYSjZGVlc4cW5oS25qc05XcmJWdUxFWmV6V0FCZ3YxMEpYd2Z5cGpfejR5bFdLUw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les responsables de la Fed divisés sur la justification d'une hausse des taux en septembre, selon le compte-rendu de la réunion - TradingView",
-   "source": "TradingView",
-   "date": "Wed, 07 Oct 2026 18:00:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SOW84Mk5OeGEtZkJpS2hqaEVCcnJVZlkzMVdSYVV1WkhKcVEweWFET09HWW1RYlVPOXFQOFVHUUpnbEduZ1c5aEhIbGhUUHBRanRDaElPaE5mMi1RWUNMZHBlOTBsVkdLN2NIckFSbXZjTllQeXJZ?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNTFNiTk5saVpDTTJZWUhkcEV6aW9XQnBjWEVjMGM2a3g3bUVQRFg5TGl4RmZtc1hFQWthZTl5ZXQxLVNJOVZid01QNmlVZ3BrTDQyRmZyS1BmT3NMV3lNTjVrZzZjbFA3WGppVEcwTGlidTBZWnQzbVlDZlRHdVAyUHp1UTVMNXpYQnVfYnRPYVZSTUg2ZkZNX252bENyZnRMcmc0aUtMRjhySWZXYmlzMHZ0Wi1iRlF6aE5jaGNJV05IcWxSdnNSdkJUN0ZkSkY1LUhSNXhSY09DUzVOT3I2SG9Gbi05UmNmVEw0dHc3S3FpVzJLc1lpRHVMbnZVNzQ0YVRkYzNGQnFTOEcxbkJlQ1hnb9IBkwJBVV95cUxNTFNiTk5saVpDTTJZWUhkcEV6aW9XQnBjWEVjMGM2a3g3bUVQRFg5TGl4RmZtc1hFQWthZTl5ZXQxLVNJOVZid01QNmlVZ3BrTDQyRmZyS1BmT3NMV3lNTjVrZzZjbFA3WGppVEcwTGlidTBZWnQzbVlDZlRHdVAyUHp1UTVMNXpYQnVfYnRPYVZSTUg2ZkZNX252bENyZnRMcmc0aUtMRjhySWZXYmlzMHZ0Wi1iRlF6aE5jaGNJV05IcWxSdnNSdkJUN0ZkSkY1LUhSNXhSY09DUzVOT3I2SG9Gbi05UmNmVEw0dHc3S3FpVzJLc1lpRHVMbnZVNzQ0YVRkYzNGQnFTOEcxbkJlQ1hnbw?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "FireFly Robotics prépare une cotation directe au Nasdaq - Boursorama",
+   "titre": "Les responsables de la Fed divisés sur la justification d'une hausse des taux en septembre, selon le compte-re - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 07 Oct 2026 17:54:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPY3h6bXNrRDB5T1RqQlduSEVWM3cyWEROclhnR3h4MThfVnRraUpza0pGdHh0YUdmV05TTTh3OTlFdG0xUEMzQ2t5aGNhZkk5cVB4c3d5TWhQTDhKSmw2N0hSNWNKQmo5RnhoZklSeUVlMHJLbkVKQWJoUGlOLXBMdE5yckZzODhqdEp1NU5mc29ydUNDaHJWeXg1ZnVjaWJJUTdoWno2OE1ybWxKN3Q1dS1vLU8yUWlzd0JWdUxVa2tFTFhsVlpSZzZXTE50Z9IB0wFBVV95cUxPRGVhTm5Dby1iOWNCTzlSMEU1Rkt1b0N5YjZkcTFuYmZhOVFQTDQ4ck1FRU1qZHgxQzdfM1BlbWVfNG1EMnRMb2V4TzdXOXgxSkNVVzdpR1FrM3ppZmdOb3pjWFg5N1ZFVmwxTTQyV3V0LTB1V016Y0V2X005YmFHV1owWmRzMmxKRDllMjYyQWJZTnhoTEd0dXV5dHNOc0NYeXU1d0Frd2RpTk1YcHhZZGNmbktwRDhpekJOQ01CX0dUZXJvNDJCS3EzSmNBa3lPNjFB?oc=5",
-   "tag": "bourse",
+   "date": "Wed, 07 Oct 2026 18:00:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixAJBVV95cUxQQ0xXeGVwUW1BYnFVRjc3cEt4VmQxRjZwNElaUThsc3o0T2Q3Vk5jbTh6SlYwOThhaXpXNVB3TTQ2OXI1LThsNXZvcTlXOE5pblBiUmJKV0c4dG0yMm16ZlJ0YjY5dmpKeVQzVklNelN4WllZQnV4eWUxb0poVVhXZ1lIWUlDeGh5WVV3bjR5SGJrZ3UwalR2VkN4R1VYazB4Qk1OX3dQR2VhTTlBaDdjLU5BY0R6TG9TYjIyWGs0UjdhS3pNY0NabnZNUUZsVUNMTTFUNlVxNVd6ZnRBQml5M3JXdTFpWTFDanVXSi1IRFlnbng5SXdJWmNJWmRZemFwWWo1eHoxQTF4SFFJcUx6dHpXTHFYWEo2RlZXOHFuaEtuanNOV3JiVnVMRVpleldBQmd2MTBKWHdmeXBqX3o0eWxXS1PSAcQCQVVfeXFMUENMV3hlcFFtQWJxVUY3N3BLeFZkMUY2cDRJWlE4bHN6NE9kN1ZOY204ekpWMDk4YWl6VzVQd000NjlyNS04bDV2b3E5VzhOaW5QYlJiSldHOHRtMjJtemZSdGI2OXZqSnlUM1ZJTXpTeFpZWUJ1eHllMW9KaFVYV2dZSFlJQ3hoeVlVd240eUhia2d1MGpUdlZDeEdVWGsweEJNTl93UEdlYU05QWg3Yy1OQWNEekxvU2IyMlhrNFI3YUt6TWNDWm52TVFGbFVDTE0xVDZVcTVXemZ0QUJpeTNyV3UxaVkxQ2p1V0otSERZZ254OUl3SVpjSVpkWXphcFlqNXh6MUExeEhRSXFMenR6V0xxWFhKNkZWVzhxbmhLbmpzTldyYlZ1TEVaZXpXQUJndjEwSlh3Znlwal96NHlsV0tT?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "\"Notre engagement est de ramener le déficit public à 5% en 2027, pas davantage\": Sébastien Lecornu exhorte les députés à adopter le budget 2027 avant l'élection présidentielle",
@@ -321,33 +330,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Nvidia caresse les 6 000 milliards de dollars de capitalisation",
-   "source": "BFM Économie",
-   "date": "Wed, 07 Oct 2026 16:00:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-nvidia-caresse-les-6-000-milliards-de-dollars-de-capitalisation_VN-202610070824.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 07/10",
-   "source": "BFM Économie",
-   "date": "Wed, 07 Oct 2026 15:49:10 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-07-10_EN-202610070673.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 07/10",
-   "source": "BFM Économie",
-   "date": "Wed, 07 Oct 2026 15:48:34 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-07-10_VN-202610070675.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris a reculé, plombée par la remontée des taux longs",
    "source": "ABC Bourse",
    "date": "Wed, 07 Oct 2026 15:46:18 GMT",
@@ -355,33 +337,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Le Club : \"Nvidia caresse les 6 000 milliards de dollars de capitalisation\" – 07/10",
-   "source": "BFM Économie",
-   "date": "Wed, 07 Oct 2026 15:38:51 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/le-club-nvidia-caresse-les-6-000-milliards-de-dollars-de-capitalisation-07-10_EN-202610070660.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les anticipations médianes d’inflation aux États-Unis augmentent à court et moyen terme en septembre, selon l’enquête de la Fed de New York - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 07 Oct 2026 15:36:57 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNLVlkWXFyQkJFU1JiT1p3d293UjUyb05VWDhKcVpwTHNnZVJHZm1EWEg0Y1J5ZUdCWUk2MFpvOFhmZnAyVnQwZUxaR3gxMWQ0ZlFiS3c2T2VSLXRuR0lUdnlTc3hPUnJLaHVsaDd3WFo5aEZCd1FxQ0pJSkI2QWlEb244dVZ0Z2lPVzlLbW4xY3FVeWNYbTF0b0poNjN4a1dFRHUtUDNDb2hpNzl5TDkyQ2dWdFE5YzVFS1B3bVBTaEFaNFdLVzhUNVBzekVUYjloREpTbjl0MThLbkpYUmVlbllqQkR2ekF0d0RuRWY4ejc?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les anticipations médianes d’inflation aux États-Unis à un an en septembre à 3,9 %, contre 3,6 % précédemment, selon la Fed de New York - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Wed, 07 Oct 2026 15:04:25 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNX2JxcEx0X3hwWndJTDdnTFVSY08zS1daTG1ESm5kVEdFc2JhaFN1OVFlaXNLTlY0MFRPaHFDMU9jTlUwSlRSdHFjcUdubUJNeS01d2I2aDZ1elhRR1RId2tiUkplOWk0WHY0S3B4S18wWjhlNGtqVjBDNEtXZFptWkxWWi03S1dQc3JoMFU3TlFLRFhDaHc1OE1EMHJvdEl1YlJFU0ZvSDVXTzBESUR1akYwRXIxVF9nSnEyT2VFMTQ5OEVxc3dBNFNhVzgzRl9Ic0IxazN2Q0Y0bXg2SFJBM0ZqS0V5b2d1eVE?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Rémy Cointreau soutenu par des attentes de croissance plus forte au 2e trimestre",
@@ -407,15 +362,6 @@
    "date": "Wed, 07 Oct 2026 13:55:20 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNSDY4NUpoSmNraEUzUnZrcnFMdjNzbWdKQUgwV0Rsbjd5d2tuYXRQTHByNHhVY0xXRDI0SUNNYXY3bS03V1dFaC1VUEl3VlJYWkkxRWVFaG1CY3VVWElRQTVkNHdCTUk5NW8zWlZuVHAwY2FZV1NWSG9XdWswdXZsSGpRcEEtemViUkNOWVlJVFQ0cUlpSlY0NzVRTmFhYTlZenZNQ2dSYU1kYWtnc3RmczRwOXE2UktlcHBFcUFyMjVkbHltYjc0c2RYd1V4clVnckh2LTdfZi1DYnhUQ1J5LW0yRQ?oc=5",
    "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street s'écarte de ses records sous la pression des taux d'intérêt",
-   "source": "ABC Bourse",
-   "date": "Wed, 07 Oct 2026 13:54:32 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-s-ecarte-de-ses-records-sous-la-pression-des-taux-d-interet_703831",
-   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   }
