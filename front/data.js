@@ -58,11 +58,11 @@ const ACTIONS_SUPP = [
 // Dernière valeur connue des séries FRED (générée depuis front/data/history/),
 // affichée sur le tableau de bord pour coller au dernier point du graphique.
 const HISTO_DERNIER = {
-  'fred:DGS10':                 { valeur:'5,31 %', var:'+3 pb', hausse:true, date:'au 05/10' },
+  'fred:DGS10':                 { valeur:'5,27 %', var:'-4 pb', hausse:false, date:'au 06/10' },
   // OAT 10 ans : plus d'entrée ici — la carte est servie en live par majOAT (app.js), qui lit
   // le dernier point de front/data/history/oat.json (append quotidien par Actions).
   'fred:IRLTLT01DEM156N':       { valeur:'3,18 %', var:'+11 pb', hausse:true, date:'août 2026' },
-  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,44 %', var:'', hausse:null, date:'au 06/10' },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,44 %', var:'', hausse:null, date:'au 07/10' },
   'hicp:CP0000EZ19M086NEST':    { valeur:'3,2 %', var:'+0,3 pt', hausse:true, date:'août 2026' },
 };
 
