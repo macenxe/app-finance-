@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-11T11:21:35.544Z",
+ "genere": "2026-10-11T17:39:37.628Z",
  "globales": [
   {
    "titre": "Regain de tensions de toutes parts sur les marchés - Les Echos",
@@ -103,29 +103,20 @@
  ],
  "produits": [
   {
-   "titre": "CAC 40, Capgemini, Airbus, Safran, Michelin, Legrand… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 10 Oct 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSTJYWGV2eEdMWExIbmxnbHlfN3VGbVM2NEVVQVhvRVB0S1dRQmlLdmx0eDZPWGRQS0ZhY0x6QmRUT1Vwa0dwcU9oRjRlS1ZuWWRNbktqMTFWcTVKc1FKMVFqNDdPOEdpdG1NWGJETHFyNWNvVzZHYWRqckRKNWNmN3lPcDBoMzJFSHIzUXBzNUlGMVNvVDlfWWNHTDVKQ19rTjIzaUtRcVVGRGlnaGJoOThNWF9yR2RHY1ZZeW5MRXBZbUdlUjFWeWdORE84MHNNRy1uRGpLeHk1RWQyVWc?oc=5",
-   "tag": "Capgemini",
+   "titre": "Societe generale : BNP Paribas, Société Générale et Crédit Agricole SA sont plombées par le risque politique tricolore en Bourse, faut-il vraiment s'en inquiéter? - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sun, 11 Oct 2026 10:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxOakJKMmRqTjdHZncwVWxiNTBhQl85ZnZEUWsxbDA2V2FRZVFadVBPS1ozMXFvQUdIUTIwZ1dKNFZPR0NQNHRFcFNpOGVPVjVKQ1p1MUZZNmRvUnFCMlNUMTdSaU9HU2FhV3BaMXJkMldJcThnM0pualJTUW1nN0hkaFpMcGpYeXpuRVJKaG4zX3ZHZzVmZVMzbkhMWE1GTUwzc0dxZnMwUWpZTE1YalQ1VjhsaklkQVRPUENaZW9qRjIwc19RSk1KVWVXYnRwNDVwcV9YLTdTVU1nYlhENTRtMTlPU18xXzJzMEZqTkRPaU1JelotNWJiSXItU3N1UnVKMzJNbHlGNFpiWlJBOVJoUEM3Y01ZV2R6SFg5ZTBUY21pNTdoN21pMExRWEpKOGFhY2VnU0J5QW5NTGlHLU9lQk5GQ0tBTmpVX2RtWWZWQ1JUZlJQUDZpZjln?oc=5",
+   "tag": "BNP Paribas",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 09 Oct 2026 17:45:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Action Capgemini SE | Cours CAP Bourse Euronext Paris - Zonebourse",
+   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
    "source": "Zonebourse",
-   "date": "Fri, 09 Oct 2026 15:55:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53SjcycnZvSy1RY1FHQXczRzlwbU4tWlFQby1pclBOWl9YUktsV29ncWFTTHVVSmVPYnNlMTNQX0IycUtxT20wVG82UjR4WHptTnZ6Y2RZQUJFT2N5OGFueHJBOUxPbF9sa2c?oc=5",
-   "tag": "Capgemini",
+   "date": "Fri, 09 Oct 2026 15:39:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
+   "tag": "Rheinmetall",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -148,6 +139,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 09 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Analyse du marché : Microsoft s'apprête à prolonger sa remontée - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 08 Oct 2026 10:01:24 GMT",
@@ -157,10 +157,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "« Le passeport et la composition sectorielle dictent les performances » en Bourse, explique Ostrum AM - Les Echos",
-   "source": "Les Echos",
-   "date": "Wed, 07 Oct 2026 09:37:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxPRzRnRUFCaWdCN21fNXhtODBhY204anc4RWoxd1JLTjJjMElnQnBXY1U3b2g5WUMtYTJqZk4zYmZ0Y1h5TnhmaU5fbWU1bkp5R09PX1ZZZHo4QlQ2clFrdmxHTHcyWmhKREpudG05V096bk1TcDNIZ3ZTdWVfM3BCZ3B1VXNGSjZreE1lQVNmZU5uRzIxQ1FLSnR5WmVuei1qYWoyRElCdWFfRWVObGJWLWVZVW5RUEQtLWxGa1h6cEU4TTdhclVGWEQ5Vks3TTlndHhPTHotN3lYeHZiUFE1aDRMRWd4XzNuSkZRS2dIeEtvTXp0ejRkektrWjRGbHZTenU4SVdBZ0xaRGtRRUJvZHlaQW4yQS1FZm5EdHFB?oc=5",
+   "titre": "ANALYSE: L'euro fait les frais des turbulences sur la dette souveraine française - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 06 Oct 2026 10:52:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVmxad2pHSWRqZ3ZjazBoNWRjRERBU245c2VZQXpBNFNGZ1Z0QzlRMVJhVkd3THNodXNuWUh3NzAtbUZYYURKTlIwQndlc05USl9wQXM5bEg5TWNsS1pIeGxTSGN1YnY5YlowWWV5RDZQYTIwaDNZOWR5dDFweElnaUhURFNmWmthWm14MUFyX0dtTmlDN3UwOGZJX285a1FiOU1NX2hsWjl6aGdmLXUyakYwampuNE5mV1ctc3ZCQXNPV0JYYUd6RVhrdDVuWjZubHQ5SXFGdXcwWXIzR3lva2FfUlB5QUs3dW1hNzNn0gHzAUFVX3lxTE5iQjVEOFhMakNXbGM3Y2d3QTlMWmRRQ0M3Z2hSYjdhZi1qZ0Y4cHFjcXpicWF2eHVoOVFJMER0aEN5TVlTQXU3ODV4eDV3eFVqQ0xkel93a3UxZWppbTR4WXQ1QkNKcktJTVBibEliU3hTVjhlNGlaRVBvQ2NNTk5BRFUwRlhCRy1Ja05QQksxdTV2cE9ybUx1RmltTUFtbG54SjNRa2hlR0xqWFBWU2dDbHBzclJHWGpkYkdRVTFUMmZMSThiRU5lTWpUMGNYNDVLczk2ZnBCQXd5cENsbkRLank2am1CVkdVMnZWa09HVTZ3QQ?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -177,6 +177,51 @@
  ],
  "eco": [
   {
+   "titre": "Stellantis mise sur les petits véhicules électriques abordables pour son retour sur le marché européen - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 11 Oct 2026 17:00:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNdHhGc01PODRXRHhuX2ZzUVljVU5ESjBxVGJ4Q21RbzFWTGQxd2g4NlphSDctTEVNUVVlS2JXS3pKTldxSDd1VXB0dmJqSk12aW9aV3JGaGdaQnFPbDlLQkNkVS1Oc2k0WGhpVE5qSlRDTktCQURqSzJVbjdIM1JQSFBPZFo5MzFPelhLWFY2d2R3Z1R2T3lnYUx0c2dMdC1WQ3cwY2k0cFh4Z1NzLTRVaHpUZVdreWVCbkNvanlpX3F4X0EyeXFhMl9rLW44S3VXbldjNHRqY0N5LTY5NERzRGFScTFKbndHb0ZHYjVDR3p6dE1LZnBHNVVZYmhEMFJENEFDcFNhQUYzYi1E0gGSAkFVX3lxTE1ZSFI2X29FTG04YzlBUGdtREItQTNJSnhVYXFRWDdhbm5jWEhEMlJ1YkVMQkJKRG55aXlmX19XaUlGajQwV3pmTjlUUlFZTHdyYm9BQkotWUZ6d3BMMWUwWWEtR29KOC1BejdKMGlzRHBPdnk5dDc3c2dROTQ4RG1yUHJyQTFJSXdUY1BfLVp3YkRORnNIU05yTVBrSVByY1ZpYk1CX1g3ejRzRTVhSUdmX0VieFVjME9uYnZGWmtRblFqQnQ5dTlBV3g4c2ZDc3hOV21iV1RFMm5vcm1KTm1Zbk5tLTdMcGJ6Z1VJV3NnV2xoRlhVTEFEd2FjS1g0ZFZSbjJYWjkyVzUwNjJ5c0dCa1E?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse : BNP Paribas, Crédit agricole et SG plombés par l’envol des taux, opportunité d’investissement ou risque réel - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sun, 11 Oct 2026 17:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY2FVQ3N5WlZiRmw5SWl5UzJwTkNzMkZNZlZTLWFhRTVWWnRoWF91a0FLdkJrLVYzOUVzcDBJWlpKZG5aZUVqSkFSMEdKWVRCdThnZVBBdkJwRkE3WXVzNWVKTFJIVzV4Z253eHIwbUdlVHpFR2oxVjF6dnlISXBEVTVOd0FmVXBrSzNEMEFmRDlqQ2VZWWVTWl9EdzEyOHMzMGpuYUgySTZybVNieFlmeEFYc3BRTUtGWUlIMFRMbXdueVZBbjlfR3ZVQ0JSdlpkRTZPaGFGdXNjMzg0eFZMNmI0RmcyYXdIWjZKZkZiNW9JSTI1?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La Chine exporte 55 millions de véhicules par an quand l'Europe n'en produit que 12 millions: Emmanuel Macron assume la préférence européenne sur les véhicules à la veille du Mondial de l'Auto",
+   "source": "BFM Économie",
+   "date": "Sun, 11 Oct 2026 15:07:25 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/la-chine-exporte-55-millions-de-vehicules-par-an-quand-l-europe-n-en-produit-que-12-millions-emmanuel-macron-assume-la-preference-europeenne-sur-les-vehicules-a-la-veille-du-mondial-de-l-auto_AD-202610110279.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La semaine à venir à Wall Street-Les résultats bancaires et l'IPC dominent l'actualité des marchés cette semai - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 11 Oct 2026 13:00:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNTWxsaGlpYVZDYW5fOHRQd2RmYXp3X1hhN05mUlczTXVBZk5CdVhiblRGWl84U2V6Y0dYN2p0THJ3ZzZSQWs4SGZqTzcySXhUeTBVampzUW10M3QzZ202N01QX3lRVjdDQms5ZGJiOUstRjZhbnlZbERiZlVRUmtJYTJNQ0hLVldRaFBKTzByWTV0bThPNjNONWFKbFNISjZzX3Q1bEw2YlZuUzJUSjA0Z09wUlFyeGF2VndGRzFiUXFmTVFSd0xGUlNGV2lfSHVidmdVN3NBOXRxcVhTV1Y5RTdtZGdIaDJHd2RNY3pqcnBLYlZEdlVtc3ZWLXlKbGQzRVBrZVNsVjBMcUxWS0hDd052ZDZUVkVvbkljdUJ2SUhvdVN5M20wWUc3NmVqZE9zT1NWRmp6UXR4RThpOTNRbzNSQVMwUTJ5M3VqTG9OREwtM24wbXdqOW5valVGbGc5OXhoSEtxbWFGWExHSEF6WXJlWWliZ9IB9gJBVV95cUxNTWxsaGlpYVZDYW5fOHRQd2RmYXp3X1hhN05mUlczTXVBZk5CdVhiblRGWl84U2V6Y0dYN2p0THJ3ZzZSQWs4SGZqTzcySXhUeTBVampzUW10M3QzZ202N01QX3lRVjdDQms5ZGJiOUstRjZhbnlZbERiZlVRUmtJYTJNQ0hLVldRaFBKTzByWTV0bThPNjNONWFKbFNISjZzX3Q1bEw2YlZuUzJUSjA0Z09wUlFyeGF2VndGRzFiUXFmTVFSd0xGUlNGV2lfSHVidmdVN3NBOXRxcVhTV1Y5RTdtZGdIaDJHd2RNY3pqcnBLYlZEdlVtc3ZWLXlKbGQzRVBrZVNsVjBMcUxWS0hDd052ZDZUVkVvbkljdUJ2SUhvdVN5M20wWUc3NmVqZE9zT1NWRmp6UXR4RThpOTNRbzNSQVMwUTJ5M3VqTG9OREwtM24wbXdqOW5valVGbGc5OXhoSEtxbWFGWExHSEF6WXJlWWliZw?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L’inflation sous-jacente de l’Égypte ralentit à 14,1 % sur un an en septembre - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 11 Oct 2026 12:11:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSDduRUVLRmpqNkdjaXhnRTZYU1ZfYjd0d3JTZnRRNE9DV2ZxR3RJb0xFYlB3dmdZVDhKOFBtcE1iYUhVUmFLSmpDSzk3d3dzWXdEQ0FvQU5iUVRsNDZlNFdzWFVISUlCY0V5ak15SVo4WG4tNTQ1akxEcXNGWmx0QjJSbmhFelFRc2dTVTVkS3F1bWZ6LVFPal8yMUhndmdSRWh6T0E5bnRIcEFZWll3Wjl5MURKNDVfTFYxZDVWaW90dzNpeXg3azBDV1ItOXVhSlRB?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "\"Nous ne sommes pas encore au plus bas\": la troisième fortune de Russie assure que l'économie du pays peut encore chuter (le Kremlin ne prévoit que 0,6% de croissance)",
    "source": "BFM Économie",
    "date": "Sun, 11 Oct 2026 10:59:33 GMT",
@@ -190,7 +235,7 @@
    "source": "L'Agefi",
    "date": "Sun, 11 Oct 2026 10:30:04 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUkxIb2Yza1pwR0tVbXcwLXE5dDgtcklvWF9qeFItNzMzVk11NjVwVlp6RWtKQVdDc1lfZG1CYjVfM2g5QmkycW5oLWdHQjhwVW1jeE94d3VkNXZYcTFmSnRjSnEzRlkwNGRMaUMxbkhSdXdHbGNkREplcjNIWU92emtQLXZrWGU4Z3pYU0pVa0JlbXRDMUtjQzN0NEkzRmlBalE?oc=5",
-   "tag": "CAC 40",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -220,24 +265,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "\"Vous n’allez jamais voir cet argent!\": facturé 1.000 dollars pour une simple entorse, il lance une révolte sur TikTok contre les hôpitaux américains, les impayés bondissent de 16%",
-   "source": "BFM Économie",
-   "date": "Sat, 10 Oct 2026 12:38:08 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/vous-allez-etre-plus-intelligentes-qu-eux-aux-etats-unis-les-influenceurs-incitent-les-americains-a-ne-pas-payer-leurs-frais-medicaux-les-impayes-ont-augmente-de-16-en-un-an_AV-202610100229.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "«Les anticipations de hausses de taux sur les marchés nous semblent encore excessives» - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Sat, 10 Oct 2026 12:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPblR2blNUUGs4LVhQQlRxT21IM050T2E3VEFjb1RxTkwtWjVrbXB0SGpaQUJRbjI1Sm0zT3JPeHZOUHU1bURXSjVwQmkzT0tyWlg0cHlta2lUeGUxSHJ1S2dIdFkwTjhmbl9qaEJlVU9PNVBycHRKbGdmRDRTeTFTa3N0X05uU05NVnl3VmFfcXRVQ2xNVHpaSkdEeUE0ZnE4MUhBblRzczRUYnFzTlRjSnVYdTRHZEU3Z0dXY1docHN4TEp6bHc?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "S&P 500 - Les actions en vue vendredi: SpaceX, AT&T, Verizon, Delta Air Lines, Apple, Humana",
