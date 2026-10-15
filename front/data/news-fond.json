@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-15T19:04:06.281Z",
+ "genere": "2026-10-15T22:11:45.374Z",
  "globales": [
   {
    "titre": "Exoé : \"Une Bourse qui résiste n'est pas le signe d'une économie qui va bien\" - Boursorama",
@@ -103,6 +103,24 @@
  ],
  "produits": [
   {
+   "titre": "WENDEL Cours Action MF, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 15 Oct 2026 19:15:43 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9rbVkzTVgtLUhHelpBWWFhZ25kUWxpVDFiN21tVTRSUlNBQ1dhRzlnNUVBaGtYRzJUMWE1VzlfTEx4dHBqZGRuNUp2T1ZsU0hS?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 15 Oct 2026 18:54:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Crédit agricole, BNP Paribas, SG… En Bourse, les banques profitent-elles de la hausse des taux à long terme - Capital.fr",
    "source": "Capital.fr",
    "date": "Thu, 15 Oct 2026 17:00:00 GMT",
@@ -139,15 +157,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 13 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Tue, 13 Oct 2026 07:00:00 GMT",
@@ -155,78 +164,87 @@
    "tag": "BNP Paribas",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "SOPRA STERIA Cours Action SOP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 13 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaVmRvLXo3eUxhY1lXOXBmNlNUaTJNX2xDemVHQXBmY05sbk1wQ3BtaXlMQURSMDNvSUo3N3pJY1N5WFh6bnRlai0ydG9UdjZ6ZUE?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
+   "titre": "ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 15 Oct 2026 22:04:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90ZzVod2I0UkczbkNGZnVDSWV4WGhKLURFbVU1dVRSVGNPY3hYZ1Fnb096aG1MZFB0aWFDYXdSRTRKZWRveUU3TnVHdmxVSEpUMDVF?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "PUBLICIS GROUPE Cours Action PUB, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:48:26 GMT",
+   "date": "Thu, 15 Oct 2026 21:50:37 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KV1FrZlU2RWM2V2VxOWQyT2N5d2cyNnMxTlk4WC13aGh4X0xpZ2xGNEtkUGI4OHZOUXh6YmxqRWdrVXdaVlMzWU9jTXFqN1RqTHc?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Amaero en hausse lors de ses débuts au Nasdaq après une introduction en bourse de 20 millions de dollars améri - Boursorama",
+   "titre": "TESLA Cours Action TSLA, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:47:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxOdWRlenJHV3Q1SmlDSmJFWi1sUjRkMlo1VnVDU1Q5c2lvMk00a2l2LS00dTk4eVp1cHpXUjdiY1dJS215b05mcEdKTVdZclFSbzZvZHdOSUtjQnBHUTdUTUR4QlNzVmdzYXRYbHdXaEZWcUZGZTlremdueG96WFVGb2tqcjlXUDdWQWh6X1ljNkJ0THQ1Y1lYRGYxSTQzM3RFRnhIQUtHUFlFcExhM1loR2pSU3dydzdJOC0tR1VweEVEd196RW0tZUl1NUZMUTd3NkxUYkRLOTNOUTZDRkN4R0xRRW0tX2RvenlTU1pEdHZJWkNQNjVIS01SeEJfMmhTZENWZVF3WVpibWVhWWktVklVUDVXWUVTNlBYaWlB0gGjAkFVX3lxTE9oaHExYjZMdGhyYVlpbUVHY3NhdEkyNThudllCWkV3V2RQbDhuZlBHdWtlQkpOVVZtVTdhQWpLY24wQWtBUzN1WEdxcDB5NFkxUlR5V2tWaUxzYUpaNGxMb0xVYmJJNEhZN1h6OHF3eXRZYXcxczNscTAxRF9vaE9LWG5tUmRWa2RmZ0NJTDVUbWM3YWgxQmJ0OEk5X2pNWFVOVWF5TEQ3QkZhNzMtV0p2bGNEbk9MQjJZWTAzRXQ0OWFaS1J2Nnc1S2d6YzdFektfUHRyRGt2MlZ1WVgxNmhpblV2czg0SEQ1Y0x2X05ERkc4UkI5cE56TTJKUWlEaFRLN2FpVXZyb0FVc0pCN1VxTGJ1emRMbnMxUVZFeUVfR2RmZw?oc=5",
+   "date": "Thu, 15 Oct 2026 21:40:33 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kTGgwYk5pRXFadTRrWE55LXFBNVNmQUp2N2JxcTJJWnhpN2tteGg2NnVkT1gxWjBhVDRPNGFEbVJIdWxtVUFfZ3BUQmZtOEk?oc=5",
    "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le bitcoin repasse au-dessus des 82.000 dollars grâce à la baisse des taux - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Thu, 15 Oct 2026 21:16:14 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYVRPbC1oVXludnNYNUNYS2h6Vm5ROV9CVmNYLUF1S1pVVG82VkJEVWVnMWVWLWZHUnpKVzBGY3hPOTVKVmxacUg0TTlXdzFtaHJ4cXVtVVZYTWNZRDBZWnh6SUZ2N200NGpybVBJdW1kNnFIOERrUVFYSENzY1FXdnMyUzlkZ1RFV2JySGJPaEJIdVBlVlUyallzWG1JZDYzSHpCOTk3ZF9RcS1qQjltZVVwWG4?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le bitcoin repasse au-dessus des 82.000 dollars grâce à la baisse des taux",
+   "source": "ABC Bourse",
+   "date": "Thu, 15 Oct 2026 21:16:14 GMT",
+   "lien": "https://www.abcbourse.com/marches/le-bitcoin-repasse-au-dessus-des-82000-dollars-grace-a-la-baisse-des-taux_704318",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street se reprend et le Nasdaq se stabilise grâce à la détente des taux d'emprunt",
+   "source": "ABC Bourse",
+   "date": "Thu, 15 Oct 2026 20:44:06 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-se-reprend-et-le-nasdaq-se-stabilise-grace-a-la-detente-des-tau_704317",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "TESLA Cours Action TSLA, Cotation Bourse NASDAQ - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:42:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kTGgwYk5pRXFadTRrWE55LXFBNVNmQUp2N2JxcTJJWnhpN2tteGg2NnVkT1gxWjBhVDRPNGFEbVJIdWxtVUFfZ3BUQmZtOEk?oc=5",
-   "tag": "CAC 40",
+   "titre": "Les actions à suivre vendredi: Alstom, Kering, Mercialys, Schneider Electric, ADP",
+   "source": "ABC Bourse",
+   "date": "Thu, 15 Oct 2026 20:04:50 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-vendredi-alstom-kering-mercialys-schneider-electric-ad_704315",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam - Boursorama",
+   "titre": "UniCredit obtient l'aval de la BCE pour prendre le contrôle de Commerzbank - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:36:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-   "tag": "bourse",
+   "date": "Thu, 15 Oct 2026 20:02:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOaG9YNjlBMXJxYWZLaUZEaWtHMHRFdjB0N1lseHRMYnB6VlVETk14emwtWjB4UzRFNVhfUGF5cWk4amh3cDBzY1BVa0dZYlJhOWwwcWZVcUJfcGMydEp5VXJVdkQzV1M0M3NvVUJnLU4wN3gwY1B2eml6bDROa29hQjNzQjJ5Q0VUV203cUc4MGd3LVBXYW1odURSZmk1bkxBcW9TaXhqLW1XZVFWcGNxV1M2azhWTW5tdGVVdkV6a3F1X3U2YnRSaTc5T0IzMXFNWThMT0xPbGRWRzAxSzZtNHcteW0zamg2RWRZS9IB7AFBVV95cUxOaG9YNjlBMXJxYWZLaUZEaWtHMHRFdjB0N1lseHRMYnB6VlVETk14emwtWjB4UzRFNVhfUGF5cWk4amh3cDBzY1BVa0dZYlJhOWwwcWZVcUJfcGMydEp5VXJVdkQzV1M0M3NvVUJnLU4wN3gwY1B2eml6bDROa29hQjNzQjJ5Q0VUV203cUc4MGd3LVBXYW1odURSZmk1bkxBcW9TaXhqLW1XZVFWcGNxV1M2azhWTW5tdGVVdkV6a3F1X3U2YnRSaTc5T0IzMXFNWThMT0xPbGRWRzAxSzZtNHcteW0zamg2RWRZSw?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Iambic Therapeutics, soutenue par Nvidia, s'envole dès son entrée en bourse après une introduction en bourse d - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:32:01 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxOSzFnN21QN2ZGRGdsdVJoMlQtUUNWM0h5RFFVR3kyQjFZZ2daR0lGOGpOS1dqTFhoOFhTd0Z5aUFGMm9qdU5pQXo4U25VWVhjcGY2cmtfdDhudHlMLXo0NHVnVE9QeU1vVUoySXA3QWNYWFpGR1FhcFh2X044YWU4QVJkSzlHZmdPWHpyc2J6bFEyYV8tQ3JKRUN3ZHFlbF9LVDI1ZmhwSXZzY0Z2bm9WcEFNcXR4WXd5TGJJb0hkS25KTFcxMno2ak5RaG04VmpkOTBVVlJ5eXVWMFNqQVdtaUdKSzdhVXlnQ1dFY2thcFdnSTlCVS1fY2FzNDhCOFZRWnhsNkVrU2lGdURHaXREdXdTUVY3azhRVzN0R2k3MnFsZHRMS0ZFMkwtdnpvN1J6c3lFc1Nn0gG7AkFVX3lxTE1UczdtMDN1cXJUX1ViQlpJSjY0ck9YVDlfNFlVelY3T3dkYnBHbjRDbjhWOERBanNwdi1fcjBrNy0tY3lwQjhoTnhNTXM0Y2pNNC1XYXRqRmQ1S2h4TXA1TlVWajRMeEo3bXYyaVUxVzZsSTdqRmxZNTUyTll2MXZGdDdUaV9jT2pOZURXa1F4NXNiaVhLWUVkeTJMeGs2LTlKYVMwck9relFZZ2tFbllLTHRFemZrbWdfU1pPbXo1cV84WnJfYnJoc1ZKeGNMcm5vb0FHblNvZmpHV0hCcGVpZzh6NnJqeVZmam15c2U5MXdLd05wMEk1LVJMSGljcWJWTmRac1pzRDE4MUJSS2JxcE8xQlEtdnN1dWN3TnkwX3lyNTZtMVBUeGJaREFfcHEzN0V0dVVpaDJ1OA?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le Nasdaq a résolu la perturbation du réseau à l'origine de lacunes dans les données, selon une source - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:25:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQSU9YMmhqU0VhMW1UdGd2ZUdVOWhOUEVYOWFwRkdZWHFlMm83WURNOWxpRzM3X0c5aWd2dFFWa3BJeVotMnpmQnhWeWRlbXVUOTZrX09JVlN4cV9iLUs0TDFUNlpUeU1NTkdvOHhSd1VWa3RZcjZFbjRZUjI5X0JuaWU3ZXU5WndtTm4wM2lZTHJMejl3YlFYT212SzlQaUFZQjZZYVZGOVo1WGYwQ014cTlKeERBQUh6SXBwOFAwcDFmZlVXbUs2UFh5WktPYnh0MFdTbEYwRGtaVG5NRGdnUEFWVXhOUzVTdENXaVJRRmVJbDI0Qzg1RTdkT3lEdkxlUVQtOXlhVWJ6OTDSAZACQVVfeXFMTkxkQng1aWVQYXZZbXRhTGVTWGhFcWJnVHltMEtLTk5oaGpsb0RaSVQxWVpQVFdjZm5jODZ3RXA2QURzZFpnUGp2bGJET0dtck5PMWI5WmRWV0xtNzNCZkdqYkdCRUJRXzZ0VGJvVXVxV0YzX083RWZ3QWVjOHNtVENLLV9TLTVTcy15c1NNVWhsVU9vZTlmWFNnTjJsSGFma3V5M3ZvLUVQNHRqRno1bWhrNmdTXzVBR2lvVFIzeGJOdEdPX0FGdDMzQ0xoVmY2MWw2RldJRWIzMlctVERLai1MSVdNZGZpQUpycGg4NlVqVzRReUhkLVl3V2JIaWo4al9pOWY3cEtWNnNrY1NKeFg?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le crédit privé est confronté à des contraintes de déploiement alors que les levées de fonds atteignent des ni - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 18:22:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNZkdRRUJaVWdqSGRTR2tCNTJvSDRRTk56RFJmeHFka01RUzg5RlRkZmwtQXJ6Q29OTnZVeWx6TUkzLWpmRXVOWTE0VjgxelZoYjJlMkRjaTFkbnZCZWJpcDBpbFNVcm9yMmVJaVdrQ1l6ZG9pN2JYVVRWLTRVT2ZiVzRiWllPUEZUc3V4WF9Hd1QySUFJQ1M2elR6LUVkb1JYbUJjeHMxTTJnU0ctNmhCNHFuZ0E3RjM5eVBTVFRCUXlaS2cwMHpzQS03bE1LM3dMUkdtVjAzYVBaNWJESFBTdzZUamoxb2xPV3FsbFVPbDdmTndfNUZheGh1RmZLcjhQSUNkeTNCcGJ4Mzl4dTN5TC1zRGtLWU40dW03VGpfR08wSm5YVkM2ZtIBrgJBVV95cUxQaUp2SnYya1Q4RTcxajVvZWplVjFqeS0zU18xbGFqRHkwU2d0aGtNbndfSVF2bnE3d2pCN09yaGdGaTA5SWE1ckpnSTloZFBZbkhIaEpWUVhwaGV5TnJNSGhGUk5Fcm9aTmJwcE1vOE1TOWxyXzAyek83cENVamp6RjVybE0wWFBnQ21EbnhlejZoUWQ2WXh5SHFVaDgtcDIwMXAzcU10Vlk0ZVNjOTFZTnpoX3l3dW1YTEtxbndodF95VFB4Mk9DM0lYUU9FQ3IxajE1SW8zOWtYRjdvLWx5SnRIWnNHbGJGQVJ5NHR1Z0w0dzZpdHAzdERNUHRTNEY2a0JsWUtpci10RFhwRFQzaVpwWU9vY2l3NDhJbTdMbExrcldhc1VCMjNVMzE0dw?oc=5",
-   "tag": "CAC 40",
+   "titre": "Pierre-Yves Berger (STMicroelectronics) : STMicroelectronics, les puces au cœur de l’auto - 15/10",
+   "source": "BFM Économie",
+   "date": "Thu, 15 Oct 2026 19:53:21 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-pierre-yves-berger-st-microelectronics-st-microelectronics-les-puces-au-c-ur-de-l-auto-15-10_VN-202610150931.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -265,24 +283,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs – 15/10",
-   "source": "BFM Économie",
-   "date": "Thu, 15 Oct 2026 16:00:01 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-15-10_EN-202610150731.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les seuils techniques incontournables sur les marchés et les valeurs - 15/10",
-   "source": "BFM Économie",
-   "date": "Thu, 15 Oct 2026 15:59:05 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-les-seuils-techniques-incontournables-sur-les-marches-et-les-valeurs-15-10_VN-202610150733.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "CAC 40: La Bourse de Paris a progressé sur fond de repli des taux souverains",
@@ -330,40 +330,13 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Le chômage repart à la hausse aux États-Unis avec 199 000 inscriptions",
-   "source": "ABC Bourse",
-   "date": "Thu, 15 Oct 2026 13:11:30 GMT",
-   "lien": "https://www.abcbourse.com/marches/le-chomage-repart-a-la-hausse-aux-etats-unis-avec-199-000-inscriptions_704280",
-   "tag": "ABC Bourse",
+   "titre": "USA : l'indice de la Fed de New York dépasse nettement les attentes - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 15 Oct 2026 12:41:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNQ3VPdlM3RGhrdTBnb05WZm9kTllnS0ZUMHB0ZTBJZ3JnLVV0cFc3VTJQckwwdjR1VVBUWXJmY3pnSkpjS1VjUUdFa283WUFFMnVNUXphVG1CQ01fbDItUUhSakYyX0pZc0ZsaTFqUFRWR1NIS3N3OFNKUWxRdzZEM3NUZ0xHazFIX01XZ0VJM2xKNXNibFU5Z2Exc2xLSnFtWVpkNFNkT1VPelVIYXg5NXYtNFYyRDMxTkRfNEVWNUxxbmhTMUtpWTdJVnhMTGtydlg1THFDUGZOZ2J5a25zY9IB4AFBVV95cUxNQ3VPdlM3RGhrdTBnb05WZm9kTllnS0ZUMHB0ZTBJZ3JnLVV0cFc3VTJQckwwdjR1VVBUWXJmY3pnSkpjS1VjUUdFa283WUFFMnVNUXphVG1CQ01fbDItUUhSakYyX0pZc0ZsaTFqUFRWR1NIS3N3OFNKUWxRdzZEM3NUZ0xHazFIX01XZ0VJM2xKNXNibFU5Z2Exc2xLSnFtWVpkNFNkT1VPelVIYXg5NXYtNFYyRDMxTkRfNEVWNUxxbmhTMUtpWTdJVnhMTGtydlg1THFDUGZOZ2J5a25zYw?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Stmicroelectronics: cassure des 42,40 euros, momentum sous pression sectorielle",
-   "source": "ABC Bourse",
-   "date": "Thu, 15 Oct 2026 13:00:50 GMT",
-   "lien": "https://www.abcbourse.com/marches/stmicroelectronics-cassure-des-42-40-euros-momentum-sous-pression-sectorielle_704279",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "USA-L'indice \"Philly Fed\" chute plus que prévu en octobre - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 12:53:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNc3g5UFlHdS10SE14S1lKN0tUd1VycVpTbnVPbHlzdi1xU2J4SXhoa09fYlpRUTM5VU9vbGgyTHY0NDh1V0F0dS00ZGlfaHJYTlVDRENMOXduZ1lNVG5iV2lBUlBsRE1xbXM1TDA5b09ST2pCX0xCbjdid1pYQVE5bE82eW5iazIyekVjZGdsTXhhRDA4SDVLWTBxUDFzYzN4RVFlX3NjQkJBMmttZEItYnZVZmlvcE1peGVKNTVHS1hvT0hlMEZ5U3dlNW5RelRwSXNz0gHTAUFVX3lxTE1zeDlQWUd1LXRITXhLWUo3S1R3VXJxWlNudU9seXN2LXFTYnhJeGhrT19iWlFRMzlVT29saDJMdjQ0OHVXQXR1LTRkaV9oclhOVUNEQ0w5d25nWU1UbmJXaUFSUGxETXFtczVMMDlvT1JPakJfTEJuN2J3WlhBUTlsTzZ5bmJrMjJ6RWNkZ2xNeGFEMDhINUtZMHFQMXNjM3hFUWVfc2NCQkEya21kQi1idlVmaW9wTWl4ZUo1NUdLWG9PSGUwRnlTd2U1blF6VHBJc3M?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "USA : l'indice manufacturier de la Fed de Philadelphie inférieur aux prévisions - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 12:36:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdDdXa214UmxYQnFRX3pLeDEzM0M1V3BrZmZTTlZJZy03a3NKYVMxWEhZenRmN0dtSlY2WjNFS1Nmdm9LQld6Q3g3cVAyX21PV0E5YXRLY1VXc2E2RHU0UzFuQk5qTk1ORWlTZ0tkVEM2YmhDV0Q3ZUo1MmdaekN4UzJ6MzhvT04xVFFqX3NOMzJzbHkyRFljenpmZGNKNGhrWEhKU3ZrSWQ2WGlnRFZBalk3SmJ2TUNmcFA2SkpOREJ2elYzaW1OdVBSQUFCTGllbEs3cHMtOS14V0l6cWxCRGdjNG9VVXo2WVhHNHBPMW7SAfABQVVfeXFMT3Q3V2tteFJsWEJxUV96S3gxMzNDNVdwa2ZmU05WSWctN2tzSmFTMVhIWXp0ZjdHbUpWNlozRUtTZnZvS0JXekN4N3FQMl9tT1dBOWF0S2NVV3NhNkR1NFMxbkJOak5NTkVpU2dLZFRDNmJoQ1dEN2VKNTJnWnpDeFMyejM4b09OMVRRal9zTjMyc2x5MkRZY3p6ZmRjSjRoa1hISlN2a0lkNlhpZ0RWQWpZN0pidk1DZnBQNkpKTkRCdnpWM2ltTnVQUkFBQkxpZWxLN3BzLTkteFdJenFsQkRnYzRvVVV6NllYRzRwTzFu?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Zone euro: L'inflation énergétique ne s'étend pas sur le reste des prix, selon Pereira (BCE) - Boursorama",
