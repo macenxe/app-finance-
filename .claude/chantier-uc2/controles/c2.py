@@ -1,5 +1,7 @@
 # Contrôle du lot 2 — référentiel des 10 fonds à ajouter.
-# Usage : python3 .claude/chantier-uc2/controles/c2.py   (depuis la racine du dépôt ; réseau requis)
+# Usage : python3 .claude/chantier-uc2/controles/c2.py [<borne>]   (depuis la racine du dépôt ; réseau requis)
+#   <borne> : news.ts est lu à ce commit (unicité des noms mesurée entre les bornes du lot, D12) ;
+#   sans argument, arbre de travail (valable seulement avant le lot 3, qui ajoute ces noms).
 # Mesure : .claude/chantier-uc2/referentiel.json ; back/src/news.ts (FLUX_UC_FONDS, unicité des noms) ;
 #   FT chartapi (historique par XID) ; Yahoo chart (graphId renseignés).
 # Exigences : 10 entrées complètes, SRI 1-7 sourcé, catégorie d'affichage valide, stratégie 150-900
@@ -32,7 +34,10 @@ except Exception as e:
     print('ÉCART referentiel.json illisible ou absent :', e); print('NON CONFORME'); sys.exit(1)
 
 if sorted(f.get('isin') for f in ref) != sorted(ISINS): ecarts.append(f'ISIN du référentiel ≠ les 10 attendus')
-flux = set(re.findall(r"'([^']+)'", re.search(r'const FLUX_UC_FONDS = \[([\s\S]*?)\];', open('back/src/news.ts', encoding='utf-8').read()).group(1)))
+import subprocess
+news = subprocess.run(['git', 'show', f'{sys.argv[1]}:back/src/news.ts'], capture_output=True, text=True).stdout if len(sys.argv) > 1 \
+    else open('back/src/news.ts', encoding='utf-8').read()
+flux = set(re.findall(r"'([^']+)'", re.search(r'const FLUX_UC_FONDS = \[([\s\S]*?)\];', news).group(1)))
 vus = set()
 for f in ref:
     i = f.get('isin', '?')
