@@ -1,0 +1,97 @@
+{
+ "isin": "LU1833929729",
+ "alloc": {
+  "action": 99.9,
+  "obligation": 0,
+  "liquidite": 0.1,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 39.4
+  },
+  {
+   "nom": "Finance",
+   "pct": 12.1
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.2
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 9
+  },
+  {
+   "nom": "Santé",
+   "pct": 8.7
+  },
+  {
+   "nom": "Industrie",
+   "pct": 8.1
+  },
+  {
+   "nom": "Énergie",
+   "pct": 5.3
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3.2
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 2.9
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 1.1
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0.9
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "NVIDIA Corp",
+   "pct": 8.5
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 6.8
+  },
+  {
+   "nom": "Microsoft Corp",
+   "pct": 4.8
+  },
+  {
+   "nom": "Alphabet Inc Class A",
+   "pct": 3.3
+  },
+  {
+   "nom": "Amazon.com Inc",
+   "pct": 3.1
+  },
+  {
+   "nom": "Micron Technology Inc",
+   "pct": 2.7
+  },
+  {
+   "nom": "Alphabet Inc Class C",
+   "pct": 2.5
+  },
+  {
+   "nom": "Broadcom Inc",
+   "pct": 2.4
+  },
+  {
+   "nom": "JPMorgan Chase & Co",
+   "pct": 2.4
+  },
+  {
+   "nom": "Bank of New York Mellon Corp",
+   "pct": 2.3
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "isin": "IE000S1JLOI7",
+ "alloc": {
+  "action": 99.4,
+  "obligation": 0,
+  "liquidite": 0.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Finance",
+   "pct": 22
+  },
+  {
+   "nom": "Industrie",
+   "pct": 21
+  },
+  {
+   "nom": "Technologie",
+   "pct": 18.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 7.5
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 7.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 5
+  },
+  {
+   "nom": "Santé",
+   "pct": 4.8
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.2
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 2.1
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Mitsubishi UFJ Financial Group Inc",
+   "pct": 5.3
+  },
+  {
+   "nom": "Sumitomo Mitsui Financial Group Inc",
+   "pct": 5.3
+  },
+  {
+   "nom": "Recruit Holdings Co Ltd",
+   "pct": 5.2
+  },
+  {
+   "nom": "Mizuho Financial Group Inc",
+   "pct": 4.6
+  },
+  {
+   "nom": "Tokyo Electron Ltd",
+   "pct": 4.6
+  },
+  {
+   "nom": "TDK Corp",
+   "pct": 3.9
+  },
+  {
+   "nom": "Tokio Marine Holdings Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Disco Corp",
+   "pct": 3.6
+  },
+  {
+   "nom": "Shin-Etsu Chemical Co Ltd",
+   "pct": 3.5
+  },
+  {
+   "nom": "Komatsu Ltd",
+   "pct": 3.2
+  }
+ ]
+}

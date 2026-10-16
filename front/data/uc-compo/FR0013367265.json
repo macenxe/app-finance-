@@ -1,0 +1,81 @@
+{
+ "isin": "FR0013367265",
+ "alloc": {
+  "action": 40.8,
+  "obligation": 50.3,
+  "liquidite": 8.8,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Matériaux",
+   "pct": 18.9
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 17.6
+  },
+  {
+   "nom": "Santé",
+   "pct": 13.6
+  },
+  {
+   "nom": "Technologie",
+   "pct": 13.3
+  },
+  {
+   "nom": "Communication",
+   "pct": 12.1
+  },
+  {
+   "nom": "Industrie",
+   "pct": 10.9
+  },
+  {
+   "nom": "Finance",
+   "pct": 10.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 1.7
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0.7
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.4
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Thermo Fisher Scientific Inc",
+   "pct": 1.5
+  },
+  {
+   "nom": "Freeport-McMoRan Inc",
+   "pct": 1.5
+  },
+  {
+   "nom": "Alibaba Group Holding Ltd Ordinary Shares",
+   "pct": 1.4
+  },
+  {
+   "nom": "MercadoLibre Inc",
+   "pct": 1.4
+  },
+  {
+   "nom": "Newmont Corp",
+   "pct": 1.4
+  },
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 1.3
+  }
+ ]
+}

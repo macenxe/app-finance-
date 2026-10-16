@@ -1,0 +1,97 @@
+{
+ "isin": "FR0014014FK3",
+ "alloc": {
+  "action": 99.7,
+  "obligation": 0,
+  "liquidite": 0.3,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 42.8
+  },
+  {
+   "nom": "Technologie",
+   "pct": 19.7
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 8.7
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 7.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 5.7
+  },
+  {
+   "nom": "Finance",
+   "pct": 4.4
+  },
+  {
+   "nom": "Communication",
+   "pct": 4
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "ASML Holding NV",
+   "pct": 6.1
+  },
+  {
+   "nom": "TotalEnergies SE",
+   "pct": 3.9
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 3.2
+  },
+  {
+   "nom": "AstraZeneca PLC",
+   "pct": 2.8
+  },
+  {
+   "nom": "Deutsche Boerse AG",
+   "pct": 2.7
+  },
+  {
+   "nom": "Air Liquide SA",
+   "pct": 2.5
+  },
+  {
+   "nom": "Gaztransport et technigaz SA",
+   "pct": 2.5
+  },
+  {
+   "nom": "Leonardo SpA Az nom Post raggruppamento",
+   "pct": 2.4
+  },
+  {
+   "nom": "BAE Systems PLC",
+   "pct": 2.4
+  },
+  {
+   "nom": "E.ON SE",
+   "pct": 2.3
+  }
+ ]
+}

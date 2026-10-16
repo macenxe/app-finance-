@@ -1,0 +1,97 @@
+{
+ "isin": "LU0104884860",
+ "alloc": {
+  "action": 98.5,
+  "obligation": 0.2,
+  "liquidite": 1.3,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 73.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 14.7
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 6.6
+  },
+  {
+   "nom": "Santé",
+   "pct": 3.4
+  },
+  {
+   "nom": "Technologie",
+   "pct": 1.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Companhia De Saneamento Basico Do Estado De Sao Paulo",
+   "pct": 4.7
+  },
+  {
+   "nom": "Vertiv Holdings Co Class A",
+   "pct": 4.3
+  },
+  {
+   "nom": "Parker Hannifin Corp",
+   "pct": 4.2
+  },
+  {
+   "nom": "Ferguson Enterprises Inc",
+   "pct": 3.7
+  },
+  {
+   "nom": "Fortune Brands Innovations Inc",
+   "pct": 3.5
+  },
+  {
+   "nom": "APi Group Corp",
+   "pct": 3.4
+  },
+  {
+   "nom": "Agilent Technologies Inc",
+   "pct": 3.3
+  },
+  {
+   "nom": "Ecolab Inc",
+   "pct": 3.3
+  },
+  {
+   "nom": "Veolia Environnement SA",
+   "pct": 3.3
+  },
+  {
+   "nom": "Xylem Inc",
+   "pct": 3.2
+  }
+ ]
+}

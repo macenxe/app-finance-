@@ -1,0 +1,97 @@
+{
+ "isin": "LU0270904781",
+ "alloc": {
+  "action": 98.3,
+  "obligation": 0,
+  "liquidite": 1.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 79.5
+  },
+  {
+   "nom": "Industrie",
+   "pct": 11.7
+  },
+  {
+   "nom": "Santé",
+   "pct": 5.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 1.9
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  },
+  {
+   "nom": "Finance",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  },
+  {
+   "nom": "Énergie",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "KLA Corp",
+   "pct": 7.4
+  },
+  {
+   "nom": "Broadcom Inc",
+   "pct": 6.7
+  },
+  {
+   "nom": "Cisco Systems Inc",
+   "pct": 5.7
+  },
+  {
+   "nom": "Arista Networks Inc",
+   "pct": 5.4
+  },
+  {
+   "nom": "Palo Alto Networks Inc",
+   "pct": 4.4
+  },
+  {
+   "nom": "CrowdStrike Holdings Inc Class A",
+   "pct": 4.3
+  },
+  {
+   "nom": "Cloudflare Inc",
+   "pct": 4.2
+  },
+  {
+   "nom": "Zscaler Inc",
+   "pct": 3.9
+  },
+  {
+   "nom": "Okta Inc Class A",
+   "pct": 3.7
+  },
+  {
+   "nom": "Onto Innovation Inc",
+   "pct": 3.7
+  }
+ ]
+}

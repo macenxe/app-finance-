@@ -1,0 +1,73 @@
+{
+ "isin": "FR0010871830",
+ "alloc": {
+  "action": 40.6,
+  "obligation": 0,
+  "liquidite": 59.4,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Industrie",
+   "pct": 32.5
+  },
+  {
+   "nom": "Santé",
+   "pct": 21.3
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 14.9
+  },
+  {
+   "nom": "Technologie",
+   "pct": 10.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.4
+  },
+  {
+   "nom": "Finance",
+   "pct": 6.3
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 4.6
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 3.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Communication",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Rheinmetall AG",
+   "pct": 3.1
+  },
+  {
+   "nom": "UCB SA",
+   "pct": 2.5
+  },
+  {
+   "nom": "SAP SE",
+   "pct": 2.5
+  },
+  {
+   "nom": "DSV AS",
+   "pct": 2.4
+  }
+ ]
+}

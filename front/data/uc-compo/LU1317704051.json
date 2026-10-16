@@ -1,0 +1,69 @@
+{
+ "isin": "LU1317704051",
+ "alloc": {
+  "action": 20.7,
+  "obligation": 30,
+  "liquidite": 49.2,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 24.8
+  },
+  {
+   "nom": "Finance",
+   "pct": 18.8
+  },
+  {
+   "nom": "Industrie",
+   "pct": 17.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 8.3
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.3
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 6.1
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 4.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 4.6
+  },
+  {
+   "nom": "Énergie",
+   "pct": 4
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 2.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.9
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "SAP SE",
+   "pct": 7
+  },
+  {
+   "nom": "Adyen NV",
+   "pct": 6.6
+  },
+  {
+   "nom": "Fresenius SE & Co KGaA Registered Shares",
+   "pct": 6.6
+  }
+ ]
+}

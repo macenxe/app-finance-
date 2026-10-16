@@ -1,0 +1,93 @@
+{
+ "isin": "FR0010380675",
+ "alloc": {
+  "action": 95.4,
+  "obligation": 0,
+  "liquidite": 4.6,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 29.4
+  },
+  {
+   "nom": "Finance",
+   "pct": 25.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 9.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 9.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 6.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 4.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 4.4
+  },
+  {
+   "nom": "Santé",
+   "pct": 4.1
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 3.6
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 1.8
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 5.6
+  },
+  {
+   "nom": "SK hynix Inc",
+   "pct": 4.1
+  },
+  {
+   "nom": "Lenovo Group Ltd",
+   "pct": 2.9
+  },
+  {
+   "nom": "Wiwynn Corp Ordinary Shares",
+   "pct": 2.9
+  },
+  {
+   "nom": "MediaTek Inc",
+   "pct": 2.3
+  },
+  {
+   "nom": "China Construction Bank Corp Class H",
+   "pct": 2.2
+  },
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 2.1
+  },
+  {
+   "nom": "Shinhan Financial Group Co Ltd",
+   "pct": 2
+  },
+  {
+   "nom": "NetEase Inc Ordinary Shares",
+   "pct": 2
+  }
+ ]
+}

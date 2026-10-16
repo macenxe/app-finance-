@@ -67,6 +67,16 @@ const FONDS: { isin: string; graphId: string; xidRepli: string }[] = [
   { isin: "FR0013287315", graphId: "0P0001CB5C.F", xidRepli: "535659321" },
   { isin: "LU1585265066", graphId: "0P0001KJDD.F", xidRepli: "617134022" },
   { isin: "LU3129990134", graphId: "0P0001XMI9.F", xidRepli: "1005092847" },
+  { isin: "FR0013367265", graphId: "0P0001F34F.F", xidRepli: "121857176" },
+  { isin: "FR0010871830", graphId: "0P0000NIH8.F", xidRepli: "29450684" },
+  { isin: "IE000S1JLOI7", graphId: "0P0001S03R.F", xidRepli: "849261014" },
+  { isin: "FR0014014FK3", graphId: "0P0001YHXX.F", xidRepli: "1037626606" },
+  { isin: "LU1317704051", graphId: "0P000171LG.F", xidRepli: "535667332" },
+  { isin: "LU1833929729", graphId: "0P0001E1MW.F", xidRepli: "119089241" },
+  { isin: "LU0255976994", graphId: "0P00007W6Q.F", xidRepli: "6716562" },
+  { isin: "LU0270904781", graphId: "0P00006SZ0.F", xidRepli: "7034890" },
+  { isin: "LU0104884860", graphId: "0P00000BJZ.F", xidRepli: "4899" },
+  { isin: "FR0010380675", graphId: "0P00007ZHT.F", xidRepli: "29331624" },
 ];
 
 // Résout le XID FT depuis la tearsheet (champ xid du data-mod-config, servi en HTML échappé).

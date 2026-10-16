@@ -944,6 +944,184 @@
    "structure": "SICAV",
    "note": null,
    "risque": null
+  },
+  "FR0013367265": {
+   "gerants": [
+    {
+     "nom": "Yoann Ignatiew",
+     "depuis": "2018-10-24"
+    },
+    {
+     "nom": "Emmanuel Petit",
+     "depuis": "2018-10-24"
+    },
+    {
+     "nom": "Philippe Lomne",
+     "depuis": "2023-01-01"
+    }
+   ],
+   "fraisCourants": 1.42,
+   "societe": "Rothschild & Co Asset Management",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 2
+  },
+  "FR0010871830": {
+   "gerants": [
+    {
+     "nom": "Grégoire Uettwiller",
+     "depuis": "2020-12-11"
+    }
+   ],
+   "fraisCourants": 2,
+   "societe": "Moneta Asset Management",
+   "structure": "FCP",
+   "note": 4,
+   "risque": 3
+  },
+  "IE000S1JLOI7": {
+   "gerants": [
+    {
+     "nom": "Matthew Bills",
+     "depuis": "2023-04-01"
+    },
+    {
+     "nom": "June-Yon Kim",
+     "depuis": "2019-08-01"
+    },
+    {
+     "nom": "Scott Anderson",
+     "depuis": "2016-11-01"
+    },
+    {
+     "nom": "Guy de Tonquedec",
+     "depuis": "2025-06-16"
+    }
+   ],
+   "fraisCourants": null,
+   "societe": "Lazard Fund Managers (Ireland) Ltd",
+   "structure": "Open Ended Investment Company",
+   "note": null,
+   "risque": null
+  },
+  "FR0014014FK3": {
+   "gerants": [
+    {
+     "nom": "Thomas Brenier",
+     "depuis": "2025-08-01"
+    }
+   ],
+   "fraisCourants": null,
+   "societe": "Lazard Frères Gestion",
+   "structure": "SICAV",
+   "note": null,
+   "risque": null
+  },
+  "LU1317704051": {
+   "gerants": [
+    {
+     "nom": "Malte Heininger",
+     "depuis": "2016-01-01"
+    }
+   ],
+   "fraisCourants": 1.79,
+   "societe": "Carmignac Gestion Luxembourg S.A.",
+   "structure": "SICAV",
+   "note": 5,
+   "risque": 4
+  },
+  "LU1833929729": {
+   "gerants": [
+    {
+     "nom": "Stefan Braun",
+     "depuis": "2018-07-16"
+    },
+    {
+     "nom": "Karsten Seier",
+     "depuis": "2018-07-16"
+    },
+    {
+     "nom": "Fuchs Steffen",
+     "depuis": "2018-07-16"
+    }
+   ],
+   "fraisCourants": 1.32,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "SICAV",
+   "note": 5,
+   "risque": 4
+  },
+  "LU0255976994": {
+   "gerants": [
+    {
+     "nom": "James Kenney",
+     "depuis": "2016-11-01"
+    },
+    {
+     "nom": "Chi Ho Wong",
+     "depuis": "2025-06-01"
+    }
+   ],
+   "fraisCourants": 1.75,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 3,
+   "risque": 4
+  },
+  "LU0270904781": {
+   "gerants": [
+    {
+     "nom": "Alexandre Mouthon",
+     "depuis": "2018-09-01"
+    },
+    {
+     "nom": "Savironi Chet",
+     "depuis": "2025-09-30"
+    }
+   ],
+   "fraisCourants": 1.99,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 4,
+   "risque": 5
+  },
+  "LU0104884860": {
+   "gerants": [
+    {
+     "nom": "Louis Veilleux",
+     "depuis": "2018-09-01"
+    },
+    {
+     "nom": "David Dufour",
+     "depuis": "2026-06-01"
+    },
+    {
+     "nom": "Ola Obanubi",
+     "depuis": "2022-01-01"
+    },
+    {
+     "nom": "Charlie Carnegie",
+     "depuis": "2023-01-01"
+    }
+   ],
+   "fraisCourants": 1.99,
+   "societe": "Pictet Asset Management (Europe) SA",
+   "structure": "SICAV",
+   "note": 1,
+   "risque": 3
+  },
+  "FR0010380675": {
+   "gerants": [
+    {
+     "nom": "James Donald",
+     "depuis": "2006-12-08"
+    }
+   ],
+   "fraisCourants": 2.24,
+   "societe": "Lazard Frères Gestion",
+   "structure": "FCP",
+   "note": 5,
+   "risque": 1
   }
  }
 }

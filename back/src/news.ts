@@ -234,6 +234,9 @@ const FLUX_UC_FONDS = [
   'Eurose', 'R-co Valor', 'Sextant Grand Large', 'Tikehau International Cross Assets',
   'Conservateur Obligations Court Terme', 'Palatine Monétaire Court Terme', 'Tikehau Short Duration',
   'ODDO BHF Global Target 2031',
+  'R-co Valor Balanced', 'Moneta Long Short', 'Lazard Japanese Strategic Equity', 'Lazard Sovereignty Europe',
+  'Carmignac Long-Short European Equities', 'ODDO BHF US Equity Trend', 'Pictet Asian Equities Ex Japan', 'Pictet Security',
+  'Pictet Water', 'Lazard Actions Emergentes',
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
 // pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.

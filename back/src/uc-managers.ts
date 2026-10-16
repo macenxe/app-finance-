@@ -83,6 +83,16 @@ const FONDS: [string, string, string][] = [
   ["FR0013287315", "0P0001CB5C", "Palatine Monétaire Court Terme R"],
   ["LU1585265066", "0P0001KJDD", "TF - Tikehau Short Duration"],
   ["LU3129990134", "0P0001XMI9", "ODDO BHF Global Target 2031"],
+  ["FR0013367265", "0P0001F34F", "R-co Valor Balanced"],
+  ["FR0010871830", "0P0000NIH8", "Moneta Long Short"],
+  ["IE000S1JLOI7", "0P0001S03R", "Lazard Japanese Strategic Equity"],
+  ["FR0014014FK3", "0P0001YHXX", "Lazard Sovereignty Europe"],
+  ["LU1317704051", "0P000171LG", "Carmignac Portfolio Long-Short European Equities"],
+  ["LU1833929729", "0P0001E1MW", "ODDO BHF US Equity Trend"],
+  ["LU0255976994", "0P00007W6Q", "Pictet - Asian Equities Ex Japan"],
+  ["LU0270904781", "0P00006SZ0", "Pictet - Security"],
+  ["LU0104884860", "0P00000BJZ", "Pictet - Water"],
+  ["FR0010380675", "0P00007ZHT", "Lazard Actions Emergentes"],
 ];
 
 type Gerant = { nom: string; depuis: string };

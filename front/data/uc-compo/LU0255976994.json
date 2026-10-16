@@ -1,0 +1,97 @@
+{
+ "isin": "LU0255976994",
+ "alloc": {
+  "action": 98.2,
+  "obligation": 0,
+  "liquidite": 1.8,
+  "autre": 0
+ },
+ "secteurs": [
+  {
+   "nom": "Technologie",
+   "pct": 49.8
+  },
+  {
+   "nom": "Finance",
+   "pct": 18.9
+  },
+  {
+   "nom": "Industrie",
+   "pct": 11.8
+  },
+  {
+   "nom": "Communication",
+   "pct": 5.9
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 4.5
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.2
+  },
+  {
+   "nom": "Santé",
+   "pct": 2.1
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 0.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 0
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 0
+  }
+ ],
+ "holdings": [
+  {
+   "nom": "SK Hynix Inc",
+   "pct": 9.2
+  },
+  {
+   "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
+   "pct": 9.1
+  },
+  {
+   "nom": "Samsung Electronics Co Ltd",
+   "pct": 8.5
+  },
+  {
+   "nom": "Tencent Holdings Ltd",
+   "pct": 3.7
+  },
+  {
+   "nom": "ICICI Bank Ltd",
+   "pct": 2.9
+  },
+  {
+   "nom": "SK Square",
+   "pct": 2.5
+  },
+  {
+   "nom": "MediaTek Inc",
+   "pct": 2.4
+  },
+  {
+   "nom": "China Construction Bank Corp Class H",
+   "pct": 2.4
+  },
+  {
+   "nom": "DBS Group Holdings Ltd",
+   "pct": 2.2
+  },
+  {
+   "nom": "Alibaba Group Holding Ltd Ordinary Shares",
+   "pct": 2.2
+  }
+ ]
+}
