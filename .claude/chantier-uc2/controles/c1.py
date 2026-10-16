@@ -1,5 +1,7 @@
 # Contrôle du lot 1 — retrait des 4 UC (D2 : retrait complet).
-# Usage : python3 .claude/chantier-uc2/controles/c1.py <borne>   (depuis la racine du dépôt)
+# Usage : python3 .claude/chantier-uc2/controles/c1.py <borne> [<fin>]   (depuis la racine du dépôt)
+#   <fin> absent : mesure l'arbre de travail ; <fin> = commit du lot : mesure ce commit (périmètre entre les
+#   bornes du lot, D7) — c'est la forme à relancer au bilan, les lots suivants ajoutant des UC.
 # Mesure :
 #   front/data.js (UC_CATALOGUE, drapeaux mut/fin), back/src/{fonds-meta,uc-history,uc-managers,news}.ts,
 #   front/data/{fonds-meta,uc-managers,uc-vl-hebdo}.json, front/data/uc-compo/<ISIN>.json,
@@ -19,7 +21,11 @@ ATTENDU = {'uc': 53, 'mut': 51, 'fin': 28}
 
 ecarts = []
 borne = sys.argv[1] if len(sys.argv) > 1 else sys.exit('borne manquante')
-lire = lambda f: open(f, encoding='utf-8').read()
+fin = sys.argv[2] if len(sys.argv) > 2 else None
+lire = (lambda f: subprocess.run(['git', 'show', f'{fin}:{f}'], capture_output=True, text=True).stdout) if fin \
+    else (lambda f: open(f, encoding='utf-8').read())
+existe = (lambda f: subprocess.run(['git', 'cat-file', '-e', f'{fin}:{f}'], capture_output=True).returncode == 0) if fin \
+    else (lambda f: subprocess.run(['test', '-e', f]).returncode == 0)
 def a_la_borne(f):
     r = subprocess.run(['git', 'show', f'{borne}:{f}'], capture_output=True, text=True)
     return r.stdout if r.returncode == 0 else None
@@ -32,9 +38,7 @@ for f in SOURCES + list(JSONS):
             if motif in s: ecarts.append(f'{f} contient encore {motif!r}')
 for isin, (gid, _) in RETRAITS.items():
     for f in (f'front/data/uc-compo/{isin}.json', f'front/data/history/uc/{gid}.F.json'):
-        if subprocess.run(['git', 'ls-files', '--error-unmatch', f], capture_output=True).returncode == 0 \
-           or subprocess.run(['test', '-e', f]).returncode == 0:
-            ecarts.append(f'{f} existe encore')
+        if existe(f): ecarts.append(f'{f} existe encore')
 
 # 2. Décomptes du catalogue.
 cat = re.search(r'const UC_CATALOGUE = \[([\s\S]*?)\n\];', lire('front/data.js')).group(1)
@@ -66,9 +70,10 @@ for f, cle in JSONS.items():
         b['fonds'].pop(isin if cle == 'isin' else f'{gid}.F', None)
     if b != c: ecarts.append(f'{f} : diffère de la borne au-delà des 4 retraits')
 
-# 5. Validité du code.
-if subprocess.run(['node', '--check', 'front/data.js'], capture_output=True).returncode: ecarts.append('node --check front/data.js échoue')
-if subprocess.run(['node_modules/.bin/tsc', '--noEmit'], cwd='back', capture_output=True).returncode: ecarts.append('tsc --noEmit échoue')
+# 5. Validité du code (arbre de travail seulement).
+if not fin:
+  if subprocess.run(['node', '--check', 'front/data.js'], capture_output=True).returncode: ecarts.append('node --check front/data.js échoue')
+  if subprocess.run(['node_modules/.bin/tsc', '--noEmit'], cwd='back', capture_output=True).returncode: ecarts.append('tsc --noEmit échoue')
 
 print(f'c1 — mesure {mesure}')
 for e in ecarts: print('ÉCART', e)

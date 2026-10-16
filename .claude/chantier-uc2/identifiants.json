@@ -1,0 +1,102 @@
+{
+ "FR0013367265": {
+  "ms_nom": "R-co Valor Balanced C EUR",
+  "msId": "0P0001F34F",
+  "xid": "121857176",
+  "yahoo": {
+   "graphId": "0P0001F34F.F",
+   "points_1an": 244,
+   "nom_yahoo": "R-co Valor Balanced C EUR"
+  }
+ },
+ "FR0010871830": {
+  "ms_nom": "Moneta Long Short R",
+  "msId": "0P0000NIH8",
+  "xid": "29450684",
+  "yahoo": {
+   "graphId": "0P0000NIH8.F",
+   "points_1an": 232,
+   "nom_yahoo": "Moneta Long Short R"
+  }
+ },
+ "IE000S1JLOI7": {
+  "ms_nom": "Lazard Japanese Strategic Eq B Acc EUR H",
+  "msId": "0P0001S03R",
+  "xid": "849261014",
+  "yahoo": {
+   "graphId": "0P0001S03R.F",
+   "points_1an": 252,
+   "nom_yahoo": "Lazard Japanese Strategic Eq B Acc EUR H"
+  }
+ },
+ "FR0014014FK3": {
+  "ms_nom": "Lazard Sovereignty Europe RC EUR",
+  "msId": "0P0001YHXX",
+  "xid": "1037626606",
+  "yahoo": {
+   "graphId": "0P0001YHXX.F",
+   "points_1an": 203,
+   "nom_yahoo": "Lazard Sovereignty Europe RC EUR"
+  }
+ },
+ "LU1317704051": {
+  "ms_nom": "Carmignac Pf L-S Eurp Eqs A EUR Acc",
+  "msId": "0P000171LG",
+  "xid": "535667332",
+  "yahoo": {
+   "graphId": "0P000171LG.F",
+   "points_1an": 240,
+   "nom_yahoo": "Carmignac Pf L-S Eurp Eqs A EUR Acc"
+  }
+ },
+ "LU1833929729": {
+  "ms_nom": "ODDO BHF US Equity Trend CR EUR",
+  "msId": "0P0001E1MW",
+  "xid": "119089241",
+  "yahoo": {
+   "graphId": "0P0001E1MW.F",
+   "points_1an": 241,
+   "nom_yahoo": "ODDO BHF US Equity Trend CR EUR"
+  }
+ },
+ "LU0255976994": {
+  "ms_nom": "Pictet-Asian Equities Ex Japan P EUR",
+  "msId": "0P00007W6Q",
+  "xid": "6716562",
+  "yahoo": {
+   "graphId": "0P00007W6Q.F",
+   "points_1an": 238,
+   "nom_yahoo": "Pictet-Asian Equities Ex Japan P EUR"
+  }
+ },
+ "LU0270904781": {
+  "ms_nom": "Pictet-Security P EUR",
+  "msId": "0P00006SZ0",
+  "xid": "7034890",
+  "yahoo": {
+   "graphId": "0P00006SZ0.F",
+   "points_1an": 241,
+   "nom_yahoo": "Pictet-Security P EUR"
+  }
+ },
+ "LU0104884860": {
+  "ms_nom": "Pictet-Water P EUR",
+  "msId": "0P00000BJZ",
+  "xid": "4899",
+  "yahoo": {
+   "graphId": "0P00000BJZ.F",
+   "points_1an": 232,
+   "nom_yahoo": "Pictet-Water P EUR"
+  }
+ },
+ "FR0010380675": {
+  "ms_nom": "Lazard Actions Emergentes R",
+  "msId": "0P00007ZHT",
+  "xid": "29331624",
+  "yahoo": {
+   "graphId": "0P00007ZHT.F",
+   "points_1an": 237,
+   "nom_yahoo": "Lazard Actions Emergentes R"
+  }
+ }
+}

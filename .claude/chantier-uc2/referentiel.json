@@ -1,0 +1,243 @@
+[
+ {
+  "isin": "FR0013367265",
+  "nom": "R-co Valor Balanced (C EUR)",
+  "nom_officiel": "R-co Valor Balanced C EUR",
+  "societe": "Rothschild & Co Asset Management",
+  "categorie": "Mixte / Flexible",
+  "categorie_justification": "Le DIC décrit une gestion discrétionnaire « en s'exposant aux marchés actions et taux avec un profil équilibré », avec 0 à 55 % en actions et 45 à 100 % en produits de taux.",
+  "srri": 3,
+  "srri_source": {
+   "url": "https://am.eu.rothschildandco.com/docs/DIPR_e89eafc7-10cb-e811-80fd-005056927794_FR_FR.pdf",
+   "date_dic": "2026-02-20",
+   "citation": "Nous avons classé ce produit dans la classe de risque 3 sur 7, qui est une classe de risque entre basse et moyenne"
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment recherche une croissance du capital, sur une durée de placement recommandée de 3 à 5 ans, en s'exposant aux marchés actions et taux avec un profil équilibré. Gestion active et discrétionnaire, sans référence à un indice, répartie entre les stratégies « Valor » (anticipation des marchés actions et taux, sélection de titres) et « Euro Crédit » de Rothschild & Co Asset Management. Bornes d'allocation : 0 à 55 % en actions de toutes capitalisations (10 % maximum en petites capitalisations ; exposition visée à 50 % maximum), 45 à 100 % en produits de taux (obligations convertibles jusqu'à 15 %, subordonnées jusqu'à 50 % dont 20 % d'obligations contingentes convertibles, haut rendement à 15 % maximum), 0 à 10 % en OPC. Risque de change hors zone euro limité à 55 %, dettes hors OCDE à 10 %. Dérivés autorisés, exposition globale limitée à 200 % de l'actif net.",
+  "strategie_source": {
+   "url": "https://am.eu.rothschildandco.com/docs/DIPR_e89eafc7-10cb-e811-80fd-005056927794_FR_FR.pdf"
+  },
+  "nom_flux": "R-co Valor Balanced",
+  "gerant": "R·co",
+  "graphId": "0P0001F34F.F",
+  "msId": "0P0001F34F",
+  "xid": "121857176"
+ },
+ {
+  "isin": "FR0010871830",
+  "nom": "Moneta Long Short (R)",
+  "nom_officiel": "Moneta Long Short R",
+  "societe": "Moneta Asset Management",
+  "categorie": "Mixte / Flexible",
+  "categorie_justification": "Le DIC décrit une gestion long/short (« positions acheteuses et vendeuses ») dont « l'exposition nette du fonds sera comprise entre -20% et 100% de l'actif net ».",
+  "srri": 3,
+  "srri_source": {
+   "url": "https://www.moneta.fr/documents/DIC_MLS_part_R_FR_fr_2026_04_03.pdf",
+   "date_dic": "2026-04-03",
+   "citation": "Nous avons classé ce produit dans la classe de risque 3 sur 7, qui est une classe de risque entre basse et moyenne."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le fonds vise une performance nette de frais supérieure à l'indice composite 40 % Stoxx Europe 600 Net Return + 60 % €STR, peu corrélée à celle des actions sur le long terme et avec une volatilité inférieure à celle du Stoxx Europe 600 NR, sur la durée recommandée de 5 ans. Gestion long/short par sélection de valeurs fondée sur l'analyse financière : positions acheteuses sur des sociétés jugées sous-évaluées, vendeuses sur des sociétés jugées surévaluées, notamment via des contrats financiers. Exposé aux actions européennes de toutes capitalisations, principalement supérieures à 500 M€ (petites et moyennes capitalisations : pas plus de 20 % de l'actif net). Exposition brute maximale de 200 %, exposition nette comprise entre -20 % et 100 % de l'actif net (30 à 50 % en moyenne historiquement).",
+  "strategie_source": {
+   "url": "https://www.moneta.fr/documents/DIC_MLS_part_R_FR_fr_2026_04_03.pdf"
+  },
+  "nom_flux": "Moneta Long Short",
+  "gerant": "Mon",
+  "graphId": "0P0000NIH8.F",
+  "msId": "0P0000NIH8",
+  "xid": "29450684"
+ },
+ {
+  "isin": "IE000S1JLOI7",
+  "nom": "Lazard Japanese Strategic Equity (B Acc EUR Hedged)",
+  "nom_officiel": "Lazard Japanese Strategic Equity Fund B Acc EUR Hedged",
+  "societe": "Lazard Fund Managers (Ireland) Limited",
+  "categorie": "Actions",
+  "categorie_justification": "Le DIC indique que le compartiment investit principalement dans des actions et instruments liés à des actions de sociétés cotées ou négociées sur des marchés réglementés au Japon (aucune vente à découvert ni allocation flexible mentionnée).",
+  "srri": 5,
+  "srri_source": {
+   "url": "https://www.lazardassetmanagement.com/content/dam/lazard-asset-management/lmap-documents/214419/333655.pdf",
+   "date_dic": "2026-09-21",
+   "citation": "We have classified this product as 5 out of 7, which is a medium-high risk class",
+   "note": "D10 : KID anglais du 21/09/2026 retenu, plus récent que le DIC français du 05/12/2025 (4/7)"
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment recherche l'appréciation du capital à long terme par une gestion active, en investissant principalement en actions et instruments liés à des actions (ordinaires, préférentielles, warrants, droits) de sociétés cotées ou négociées sur des marchés réglementés au Japon. Il investit généralement dans des sociétés japonaises de toutes capitalisations, issues des secteurs que le gérant juge les plus porteurs de croissance à un moment donné du cycle économique, sans focalisation sectorielle ; il peut aussi détenir des J-REIT et recourir aux dérivés pour optimiser la gestion du portefeuille. Le Topix Net Total Return est l'indice de référence que le fonds cherche à dépasser, sans y être contraint. Capitalisation des revenus ; fonds promouvant des caractéristiques environnementales et/ou sociales (article 8 SFDR).",
+  "strategie_source": {
+   "url": "https://www.lazardassetmanagement.com/docs/237145/LazardJapaneseStrategicEquityFundBAccEURHedged_PRIIPsKID_IE000S1JLOI7.pdf"
+  },
+  "nom_flux": "Lazard Japanese Strategic Equity",
+  "gerant": "Laz",
+  "graphId": "0P0001S03R.F",
+  "msId": "0P0001S03R",
+  "xid": "849261014"
+ },
+ {
+  "isin": "FR0014014FK3",
+  "nom": "Lazard Sovereignty Europe (RC EUR)",
+  "nom_officiel": "Lazard Sovereignty Europe - Action RC EUR, compartiment de LAZARD FUNDS",
+  "societe": "Lazard Frères Gestion",
+  "categorie": "Actions",
+  "categorie_justification": "Le DIC précise que le portefeuille est investi à hauteur de 90% minimum de l'actif net en actions (30 à 60 valeurs européennes), sans mécanisme d'allocation flexible ni vente à découvert.",
+  "srri": 4,
+  "srri_source": {
+   "url": "https://www.lazardfreresgestion.com/content/dam/lazard-asset-management/lmap-documents/306109/317081.pdf",
+   "date_dic": "2026-10-08",
+   "citation": "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment vise, sur 5 ans, une performance nette de frais supérieure à celle du Stoxx Europe 600 (en EUR, dividendes nets réinvestis). Sélection de 30 à 60 valeurs de l'Union européenne, de Norvège, du Royaume-Uni et de Suisse, parmi les sociétés assimilées à la souveraineté européenne, articulées autour de cinq thèmes : défense et aéronautique, capacités industrielles, technologies stratégiques, infrastructures critiques/besoins essentiels/financement, énergie et ressources naturelles (plus de 15 % du chiffre d'affaires dans le secteur du thème). Exposition d'au moins 90 % à ces secteurs, d'au moins 5 % de l'actif net par thème (20 % pour défense et aéronautique). Au moins 90 % de l'actif net en actions, les capitalisations inférieures à 1 Md€ étant limitées à 10 %.",
+  "strategie_source": {
+   "url": "https://www.lazardfreresgestion.com/content/dam/lazard-asset-management/lmap-documents/306109/317081.pdf"
+  },
+  "nom_flux": "Lazard Sovereignty Europe",
+  "gerant": "Laz",
+  "graphId": "0P0001YHXX.F",
+  "msId": "0P0001YHXX",
+  "xid": "1037626606"
+ },
+ {
+  "isin": "LU1317704051",
+  "nom": "Carmignac Portfolio Long-Short European Equities (A EUR Acc)",
+  "nom_officiel": "Carmignac Portfolio Long-Short European Equities A EUR Acc",
+  "societe": "Carmignac Gestion Luxembourg",
+  "categorie": "Mixte / Flexible",
+  "categorie_justification": "Le DIC décrit une « stratégie actions long/short » avec une exposition nette aux actions qui « peut varier de -20% à +50% de l'actif net du compartiment ».",
+  "srri": 3,
+  "srri_source": {
+   "url": "https://www.carmignac.com/assets/yoda/KID_PEP_LU1317704051_FR_fr/KID_Carmignac-Portfolio-Long-Short-European-Equities-A-EUR-Acc_LU1317704051_FR_fr.pdf",
+   "date_dic": "2026-04-16",
+   "citation": "La classe de risque 3 sur 7 est une classe de risque entre basse et moyenne."
+  },
+  "duree_recommandee": "3 ans",
+  "strategie": "Le compartiment vise une performance nette positive sur l'horizon recommandé de trois ans, sans indicateur de référence. Stratégie actions long/short axée sur les fondamentaux : au moins 50 % de l'actif net en actions de petites, moyennes et grandes capitalisations de l'Espace économique européen, le solde pouvant être investi en actions d'émetteurs hors de cet espace. Positions vendeuses possibles (valeur relative, ou titres jugés surévalués) : l'exposition nette aux actions varie de -20 % à +50 % de l'actif net. Jusqu'à 25 % de l'actif net exposé au change (devises hors UE, Islande, Norvège) ; 50 % maximum en titres de créance ou instruments monétaires ; 10 % maximum de titres inférieurs à « investment grade » ; CoCos et OPC jusqu'à 10 % chacun. Dérivés de couverture, d'arbitrage ou d'exposition (matières premières jusqu'à 20 % de l'actif).",
+  "strategie_source": {
+   "url": "https://www.carmignac.com/assets/yoda/KID_PEP_LU1317704051_FR_fr/KID_Carmignac-Portfolio-Long-Short-European-Equities-A-EUR-Acc_LU1317704051_FR_fr.pdf"
+  },
+  "nom_flux": "Carmignac Long-Short European Equities",
+  "gerant": "Carm",
+  "graphId": "0P000171LG.F",
+  "msId": "0P000171LG",
+  "xid": "535667332"
+ },
+ {
+  "isin": "LU1833929729",
+  "nom": "ODDO BHF US Equity Trend (CR-EUR)",
+  "nom_officiel": "ODDO BHF US Equity Trend CR-EUR",
+  "societe": "ODDO BHF Asset Management SAS",
+  "categorie": "Actions",
+  "categorie_justification": "Le DIC indique que le compartiment « investira au moins 70 % de ses actifs nets dans des actions figurant dans l'indice S&P 500 NR » et qu'il est « toujours presque entièrement investi dans des actions ».",
+  "srri": 4,
+  "srri_source": {
+   "url": "https://am.oddo-bhf.com/fr-fr/download-document/14068",
+   "date_dic": "2026-07-13",
+   "citation": "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment cherche à générer un rendement durable à partir des revenus et de la croissance des investissements, tout en maintenant un faible risque financier. Gestion active en référence au S&P 500 NR (Net Return) en EUR, dividendes réinvestis : l'indice n'est pas répliqué, le compartiment vise à le surperformer et peut s'en écarter fortement. Au moins 70 % de l'actif net en actions du S&P 500 NR, sélectionnées par un modèle de suivi de tendances calculant les signaux d'achat et de vente sur un vaste historique de données ; exclusions sectorielles strictes (tabac, armes non conventionnelles, développement charbonnier). Jusqu'à 30 % en actions hors États-Unis (10 % hors OCDE) et jusqu'à 30 % en obligations en euros « investment grade ». Presque toujours entièrement investi en actions ; exposition totale limitée à 100 % de l'actif net ; risque de change.",
+  "strategie_source": {
+   "url": "https://am.oddo-bhf.com/fr-fr/download-document/14068"
+  },
+  "nom_flux": "ODDO BHF US Equity Trend",
+  "gerant": "ODDO",
+  "graphId": "0P0001E1MW.F",
+  "msId": "0P0001E1MW",
+  "xid": "119089241"
+ },
+ {
+  "isin": "LU0255976994",
+  "nom": "Pictet - Asian Equities Ex Japan (P EUR)",
+  "nom_officiel": "Pictet - Asian Equities Ex Japan - P EUR",
+  "societe": "Pictet Asset Management (Europe) S.A.",
+  "categorie": "Actions",
+  "categorie_justification": "« Le Fonds investit au moins deux tiers de son actif net dans des actions d'entreprises domiciliées en Asie à l'exclusion du Japon, ou qui y exercent la majeure partie de leurs activités » ; dérivés limités à la couverture et à des positions longues couvertes par la trésorerie, donc actions long only.",
+  "srri": 4,
+  "srri_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F00000027P&documenttype=299&market=1432&investmenttype=1&format=PDF&frame=0",
+   "date_dic": "2026-08-24",
+   "citation": "Nous avons classé ce Fonds dans la classe de risque 4 sur 7, qui est une classe de risque moyen."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment vise à accroître la valeur de l'investissement. Gestion active : il investit au moins deux tiers de son actif net en actions d'entreprises domiciliées en Asie hors Japon ou y exerçant l'essentiel de leur activité, marchés émergents et Chine continentale compris. Sélection de titres par analyse de marché et fondamentale (croissance favorable à un prix raisonnable), critères ESG centraux (poids accru des titres à faible risque de durabilité, réduit pour ceux à risque élevé ; article 8 SFDR). Dérivés possibles pour la couverture et en positions longues, dans la limite des équivalents de trésorerie. Le MSCI AC Asia ex Japan 10/40 sert à la composition du portefeuille, au suivi du risque, à l'objectif et à la mesure de performance, mais le gérant s'en écarte largement : la performance sera probablement sensiblement différente. Horizon conseillé : 5 ans ou plus.",
+  "strategie_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F00000027P&documenttype=299&market=1432&investmenttype=1&format=PDF&frame=0"
+  },
+  "nom_flux": "Pictet Asian Equities Ex Japan",
+  "gerant": "Pct",
+  "graphId": "0P00007W6Q.F",
+  "msId": "0P00007W6Q",
+  "xid": "6716562"
+ },
+ {
+  "isin": "LU0270904781",
+  "nom": "Pictet - Security (P EUR)",
+  "nom_officiel": "Pictet - Security - P EUR",
+  "societe": "Pictet Asset Management (Europe) S.A.",
+  "categorie": "Actions",
+  "categorie_justification": "« Le Fonds investit principalement en actions d'entreprises qui fournissent des produits de sûreté et de sécurité pour les systèmes, les personnes ou les organisations » ; dérivés limités à la couverture et à la gestion efficace, donc actions long only.",
+  "srri": 5,
+  "srri_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F0000000LF&documenttype=299&market=1443&investmenttype=1&format=PDF&frame=0",
+   "date_dic": "2026-09-17",
+   "citation": "Nous avons classé ce Fonds dans la classe de risque 5 sur 7, qui est une classe de risque entre moyen et élevé."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment vise à accroître la valeur de l'investissement tout en recherchant un impact social positif. Gestion active : il investit principalement en actions d'entreprises proposant des produits de sûreté et de sécurité pour les systèmes, les personnes ou les organisations (sécurité physique et numérique, réseaux informatiques, solutions d'identification, protection des personnes, véhicules et bâtiments), dans le monde entier (marchés émergents et Chine continentale compris). Sélection de titres par analyse de marché et analyse fondamentale (croissance favorable à un prix raisonnable), critères ESG au cœur de la stratégie (article 8 SFDR). Dérivés possibles pour la couverture et la gestion efficace. Le MSCI AC World (USD) sert au suivi du risque, à l'objectif et à la mesure de performance, sans contrainte de composition. Horizon conseillé : 5 ans ou plus.",
+  "strategie_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F0000000LF&documenttype=299&market=1443&investmenttype=1&format=PDF&frame=0"
+  },
+  "nom_flux": "Pictet Security",
+  "gerant": "Pct",
+  "graphId": "0P00006SZ0.F",
+  "msId": "0P00006SZ0",
+  "xid": "7034890"
+ },
+ {
+  "isin": "LU0104884860",
+  "nom": "Pictet - Water (P EUR)",
+  "nom_officiel": "Pictet - Water - P EUR",
+  "societe": "Pictet Asset Management (Europe) S.A.",
+  "categorie": "Actions",
+  "categorie_justification": "« Le Fonds investit au moins deux tiers de son actif net dans des actions d'entreprises qui fournissent des services d'approvisionnement en eau ou de traitement de l'eau, des technologies de traitement d'eau ou des services environnementaux » ; dérivés limités à la couverture et à la gestion efficace, donc actions long only.",
+  "srri": 4,
+  "srri_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F0GBR04BC7&documenttype=299&market=1443&investmenttype=1&format=PDF&frame=0",
+   "date_dic": "2026-06-19",
+   "citation": "Nous avons classé ce Fonds dans la classe de risque 4 sur 7, qui est une classe de risque moyen."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le compartiment vise à accroître la valeur de l'investissement tout en recherchant un impact environnemental et/ou social positif. Gestion active : il investit au moins deux tiers de son actif net en actions d'entreprises fournissant des services d'approvisionnement ou de traitement de l'eau, des technologies de l'eau ou des services environnementaux, dans le monde entier (marchés émergents et Chine continentale compris). Sélection de titres par analyse de marché et analyse fondamentale (perspectives de croissance favorables à un prix raisonnable), critères ESG au cœur de la stratégie (article 9 SFDR). Dérivés possibles pour la couverture et la gestion efficace du portefeuille. Le MSCI AC World (EUR) sert au suivi du risque, à l'objectif et à la mesure de performance, sans contrainte de composition. Horizon conseillé : 5 ans ou plus.",
+  "strategie_source": {
+   "url": "https://www.finect.com/doclegal?language=454&investmentid=F0GBR04BC7&documenttype=299&market=1443&investmenttype=1&format=PDF&frame=0"
+  },
+  "nom_flux": "Pictet Water",
+  "gerant": "Pct",
+  "graphId": "0P00000BJZ.F",
+  "msId": "0P00000BJZ",
+  "xid": "4899"
+ },
+ {
+  "isin": "FR0010380675",
+  "nom": "Lazard Actions Emergentes (R)",
+  "nom_officiel": "Lazard Actions Emergentes - Part RC EUR",
+  "societe": "Lazard Frères Gestion",
+  "categorie": "Actions",
+  "categorie_justification": "Le DIC indique que le FCP est investi en actions des pays émergents à hauteur de 90% minimum de l'actif net et/ou en ETF exposés sur les actions des pays émergents.",
+  "srri": 4,
+  "srri_source": {
+   "url": "https://www.lazardfreresgestion.com/content/dam/lazard-asset-management/lmap-documents/306039/306039.pdf",
+   "date_dic": "2026-03-23",
+   "citation": "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+  },
+  "duree_recommandee": "5 ans",
+  "strategie": "Le fonds vise, sur 5 ans, une performance nette de frais supérieure à celle du MSCI Emerging Markets (en EUR, dividendes nets réinvestis). Gestion déléguée à Lazard Asset Management LLC (New York) : investissement d'au moins 90 % de l'actif net en actions de sociétés domiciliées ou majoritairement actives dans les pays émergents (et/ou ETF exposés à ces actions), en retenant celles à la meilleure performance économique sur longue période dont la valorisation boursière la sous-estime. Trésorerie (10 % maximum) en OPC monétaires ou titres de créances négociables, titres intégrant des dérivés limités à 10 %, exposition au risque de change jusqu'à 100 % de l'actif net.",
+  "strategie_source": {
+   "url": "https://www.lazardfreresgestion.com/content/dam/lazard-asset-management/lmap-documents/306039/306039.pdf"
+  },
+  "nom_flux": "Lazard Actions Emergentes",
+  "gerant": "Laz",
+  "graphId": "0P00007ZHT.F",
+  "msId": "0P00007ZHT",
+  "xid": "29331624"
+ }
+]
