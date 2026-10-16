@@ -61,7 +61,7 @@ export async function recupererTaux(): Promise<CoursMarche[]> {
 
 // Tickers sous-jacents des produits (actions + indices)
 export const TICKERS_PRODUITS = [
-  '^FCHI', 'SX7E.PA', 'BNP.PA', 'STLAM.MI', 'CAP.PA',
+  '^FCHI', 'SX7E.PA', 'STLAM.MI', 'CAP.PA',
 ];
 
 // Récupère les cours Yahoo Finance pour une liste de tickers

@@ -671,7 +671,7 @@ const NEWS_CAT_DEFAUT = '#7a6840';
 const RSS_TAG_CAT = {
   'BCE / Taux':'TAUX', 'Fed / Taux':'TAUX', 'Obligataire':'TAUX', 'Inflation':'INFLATION',
   'Marchés':'MARCHÉS', 'CAC 40':'MARCHÉS', 'Régulation':'RÉGULATION', 'International':'INTERNATIONAL',
-  'BNP Paribas':'MARCHÉS', 'Stellantis':'MARCHÉS', 'Capgemini':'MARCHÉS',
+  'Stellantis':'MARCHÉS', 'Capgemini':'MARCHÉS',
   'Rheinmetall':'MARCHÉS', 'ES Banks':'MARCHÉS',
   // Tags du canal éco (requêtes Google News et flux de place, cf. FLUX_ECO côté Worker).
   'bourse':'MARCHÉS', 'marchés financiers':'MARCHÉS', 'ABC Bourse':'MARCHÉS',

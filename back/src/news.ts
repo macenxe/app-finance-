@@ -45,7 +45,7 @@ const MOTS_IMPACT = [
   'hausse','baisse','chute','rebond','record','correction','volatilité','spread',
   'obligation','dette','souverain','swap','irs','liquidité','crédit',
   'secteur bancaire','banques','énergie','défense','technologie',
-  'capgemini','bnp','stellantis','rheinmetall',
+  'capgemini','stellantis','rheinmetall',
   // Régulation & produits structurés
   'régulation','réglementation','amf','esma','mifid','directive','prospectus',
   'produit structuré','produits structurés','structuré','structurés','autocall','commercialisation',
@@ -142,8 +142,8 @@ const fluxGlobaux = (max: number): Flux[] => FLUX_GLOBAUX_DEFS.map(({ q, tag, ta
 
 // Flux par sous-jacent — requêtes orientées bourse et résultats
 const FLUX_PRODUITS_DEFS: { q: string; tag: string; tagParMot?: Record<string, string> }[] = [
-  { q: '"BNP Paribas" OR Stellantis OR Capgemini OR Rheinmetall bourse', tag: 'Sous-jacents',
-    tagParMot: { 'bnp paribas': 'BNP Paribas', stellantis: 'Stellantis',
+  { q: 'Stellantis OR Capgemini OR Rheinmetall bourse', tag: 'Sous-jacents',
+    tagParMot: { stellantis: 'Stellantis',
                  capgemini: 'Capgemini', rheinmetall: 'Rheinmetall' } },
   { q: '"CAC 40" OR "Stoxx Banks" analyse', tag: 'CAC 40',
     tagParMot: { 'stoxx banks': 'ES Banks', 'secteur bancaire': 'ES Banks' } },
