@@ -1,10 +1,10 @@
 {
  "isin": "FR0000989915",
  "alloc": {
-  "action": 97.5,
+  "action": 95.1,
   "obligation": 0,
-  "liquidite": 1.6,
-  "autre": 0.8
+  "liquidite": 4,
+  "autre": 0.9
  },
  "secteurs": [
   {
@@ -62,36 +62,36 @@
    "pct": 9.7
   },
   {
-   "nom": "Merlin Properties SOCIMI SA",
-   "pct": 9
-  },
-  {
    "nom": "Vonovia SE",
-   "pct": 8.8
+   "pct": 8.5
   },
   {
    "nom": "Aedifica SA",
-   "pct": 5
+   "pct": 5.8
+  },
+  {
+   "nom": "Merlin Properties SOCIMI SA",
+   "pct": 5.6
+  },
+  {
+   "nom": "Covivio SA",
+   "pct": 4.9
   },
   {
    "nom": "TAG Immobilien AG",
    "pct": 4.8
   },
   {
-   "nom": "Covivio SA",
-   "pct": 4.8
-  },
-  {
    "nom": "Warehouses De Pauw SA",
-   "pct": 4.8
+   "pct": 4.7
   },
   {
    "nom": "Gecina Nom",
-   "pct": 4.4
+   "pct": 4.5
   },
   {
    "nom": "LEG Immobilien SE",
-   "pct": 3.9
+   "pct": 4
   }
  ]
 }

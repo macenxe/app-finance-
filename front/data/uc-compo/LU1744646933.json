@@ -1,46 +1,46 @@
 {
  "isin": "LU1744646933",
  "alloc": {
-  "action": 96.7,
-  "obligation": 0.5,
-  "liquidite": 2.6,
-  "autre": 0.2
+  "action": 97.2,
+  "obligation": 0.3,
+  "liquidite": 2.3,
+  "autre": 0.1
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 34.6
+   "pct": 33.1
   },
   {
    "nom": "Industrie",
-   "pct": 32.9
+   "pct": 33
   },
   {
    "nom": "Services collectifs",
-   "pct": 9.9
+   "pct": 10
   },
   {
    "nom": "Finance",
-   "pct": 6.4
+   "pct": 7.3
   },
   {
    "nom": "Santé",
-   "pct": 6.2
+   "pct": 7.3
   },
   {
    "nom": "Immobilier",
-   "pct": 3.1
-  },
-  {
-   "nom": "Communication",
-   "pct": 2.6
-  },
-  {
-   "nom": "Énergie",
-   "pct": 1.6
+   "pct": 2.9
   },
   {
    "nom": "Matériaux",
+   "pct": 2.2
+  },
+  {
+   "nom": "Communication",
+   "pct": 1.6
+  },
+  {
+   "nom": "Énergie",
    "pct": 1.5
   },
   {
@@ -59,34 +59,34 @@
   },
   {
    "nom": "NVIDIA Corp",
-   "pct": 5.2
+   "pct": 4.8
   },
   {
    "nom": "Microsoft Corp",
-   "pct": 4.6
+   "pct": 3.8
   },
   {
    "nom": "Siemens Energy AG Ordinary Shares",
-   "pct": 3.5
-  },
-  {
-   "nom": "Schneider Electric SE",
-   "pct": 2.8
-  },
-  {
-   "nom": "Infineon Technologies AG",
-   "pct": 2.6
-  },
-  {
-   "nom": "Contemporary Amperex Technology Co Ltd Ordinary Shares - Class H",
-   "pct": 2.6
-  },
-  {
-   "nom": "Broadcom Inc",
-   "pct": 2.5
+   "pct": 3.6
   },
   {
    "nom": "ASML Holding NV",
+   "pct": 2.9
+  },
+  {
+   "nom": "Schneider Electric SE",
+   "pct": 2.5
+  },
+  {
+   "nom": "Contemporary Amperex Technology Co Ltd Ordinary Shares - Class H",
+   "pct": 2.4
+  },
+  {
+   "nom": "Elia Group SA/NV",
+   "pct": 2.4
+  },
+  {
+   "nom": "Palo Alto Networks Inc",
    "pct": 2.4
   }
  ]

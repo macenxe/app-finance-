@@ -1,47 +1,47 @@
 {
  "isin": "FR0000983819",
  "alloc": {
-  "action": 100,
-  "obligation": 0,
-  "liquidite": 0,
+  "action": 99.3,
+  "obligation": 0.1,
+  "liquidite": 0.6,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 26.7
+   "pct": 24.7
   },
   {
    "nom": "Industrie",
-   "pct": 21.1
+   "pct": 21.6
   },
   {
    "nom": "Technologie",
-   "pct": 17.5
+   "pct": 19.8
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10.5
+   "pct": 10
   },
   {
    "nom": "Santé",
-   "pct": 5.6
+   "pct": 5.9
   },
   {
    "nom": "Conso. de base",
-   "pct": 5.4
+   "pct": 5.1
   },
   {
    "nom": "Services collectifs",
-   "pct": 4.9
+   "pct": 4.7
   },
   {
    "nom": "Matériaux",
-   "pct": 4.3
+   "pct": 4
   },
   {
    "nom": "Communication",
-   "pct": 2.1
+   "pct": 2.2
   },
   {
    "nom": "Énergie",
@@ -58,28 +58,28 @@
    "pct": 8.8
   },
   {
-   "nom": "Banco Santander SA",
-   "pct": 3.8
+   "nom": "Siemens AG",
+   "pct": 3.4
   },
   {
-   "nom": "Schneider Electric SE",
-   "pct": 3.2
+   "nom": "Banco Santander SA",
+   "pct": 3.3
   },
   {
    "nom": "Allianz SE",
-   "pct": 3
-  },
-  {
-   "nom": "Siemens AG",
-   "pct": 3
+   "pct": 3.1
   },
   {
    "nom": "SAP SE",
+   "pct": 3
+  },
+  {
+   "nom": "Schneider Electric SE",
    "pct": 2.9
   },
   {
    "nom": "Intesa Sanpaolo",
-   "pct": 2.7
+   "pct": 2.8
   },
   {
    "nom": "Banco Bilbao Vizcaya Argentaria SA",

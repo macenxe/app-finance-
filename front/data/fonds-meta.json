@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-12",
+ "genere": "2026-10-16",
  "fonds": {
   "LU1120766388": {
    "note": 4,
@@ -285,7 +285,7 @@
    }
   },
   "LU1244893696": {
-   "note": 3,
+   "note": 2,
    "risque": 1,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "annuels": {
@@ -356,7 +356,7 @@
    }
   },
   "LU1892829828": {
-   "note": 2,
+   "note": 1,
    "risque": 2,
    "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
@@ -370,7 +370,7 @@
    }
   },
   "LU1261432659": {
-   "note": 3,
+   "note": 4,
    "risque": 4,
    "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
@@ -471,7 +471,7 @@
    }
   },
   "FR0000989899": {
-   "note": 3,
+   "note": 4,
    "risque": 2,
    "societe": "ODDO BHF Asset Management SAS",
    "annuels": {
@@ -687,7 +687,7 @@
   },
   "LU0280435388": {
    "note": 4,
-   "risque": 2,
+   "risque": 3,
    "societe": "Pictet Asset Management (Europe) SA",
    "annuels": {
     "2008": -54.9,
@@ -808,7 +808,7 @@
    }
   },
   "FR0010915314": {
-   "note": 3,
+   "note": 4,
    "risque": 3,
    "societe": "Credit Mutuel Asset Management",
    "annuels": {
@@ -889,7 +889,7 @@
    }
   },
   "FR0007439666": {
-   "note": 4,
+   "note": 5,
    "risque": 3,
    "societe": "Conservateur Gestion Valor",
    "annuels": {
@@ -1029,7 +1029,7 @@
    }
   },
   "FR0010097683": {
-   "note": 2,
+   "note": 3,
    "risque": 3,
    "societe": "CPR Asset Management",
    "annuels": {

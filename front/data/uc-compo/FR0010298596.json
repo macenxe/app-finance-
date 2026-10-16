@@ -1,47 +1,47 @@
 {
  "isin": "FR0010298596",
  "alloc": {
-  "action": 93.2,
+  "action": 94.2,
   "obligation": 0,
-  "liquidite": 6,
-  "autre": 0.9
+  "liquidite": 5.1,
+  "autre": 0.8
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 34.5
+   "pct": 33.7
   },
   {
    "nom": "Finance",
-   "pct": 18.7
-  },
-  {
-   "nom": "Santé",
-   "pct": 10.9
-  },
-  {
-   "nom": "Énergie",
-   "pct": 10.3
+   "pct": 18
   },
   {
    "nom": "Technologie",
-   "pct": 9.8
+   "pct": 11.5
+  },
+  {
+   "nom": "Santé",
+   "pct": 10.5
+  },
+  {
+   "nom": "Énergie",
+   "pct": 10.4
   },
   {
    "nom": "Services collectifs",
-   "pct": 4.4
+   "pct": 5.3
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.3
-  },
-  {
-   "nom": "Communication",
-   "pct": 2.6
+   "pct": 3.1
   },
   {
    "nom": "Matériaux",
    "pct": 2.3
+  },
+  {
+   "nom": "Communication",
+   "pct": 2.1
   },
   {
    "nom": "Immobilier",
@@ -49,13 +49,17 @@
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 1.4
+   "pct": 1.3
   }
  ],
  "holdings": [
   {
    "nom": "Airbus SE",
-   "pct": 4
+   "pct": 3.9
+  },
+  {
+   "nom": "DSV AS",
+   "pct": 3.7
   },
   {
    "nom": "UCB SA",
@@ -66,20 +70,16 @@
    "pct": 3.6
   },
   {
-   "nom": "DSV AS",
-   "pct": 3.6
-  },
-  {
    "nom": "Totalenergies Se",
    "pct": 3.5
   },
   {
-   "nom": "Societe Generale SA",
-   "pct": 3.1
-  },
-  {
    "nom": "Safran SA",
    "pct": 2.9
+  },
+  {
+   "nom": "Societe Generale SA",
+   "pct": 2.8
   }
  ]
 }

@@ -1,19 +1,19 @@
 {
  "isin": "FR0010097683",
  "alloc": {
-  "action": 42.9,
-  "obligation": 38.5,
-  "liquidite": 17.3,
-  "autre": 1.3
+  "action": 41.4,
+  "obligation": 39.1,
+  "liquidite": 16.7,
+  "autre": 2.9
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 27.4
+   "pct": 27.3
   },
   {
    "nom": "Finance",
-   "pct": 17.8
+   "pct": 18.5
   },
   {
    "nom": "Communication",
@@ -21,23 +21,23 @@
   },
   {
    "nom": "Matériaux",
-   "pct": 9.2
+   "pct": 9.1
   },
   {
    "nom": "Industrie",
-   "pct": 9.2
-  },
-  {
-   "nom": "Conso. cyclique",
    "pct": 9
   },
   {
+   "nom": "Conso. cyclique",
+   "pct": 8.6
+  },
+  {
    "nom": "Santé",
-   "pct": 5.6
+   "pct": 5.5
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.8
+   "pct": 3.9
   },
   {
    "nom": "Services collectifs",
@@ -45,7 +45,7 @@
   },
   {
    "nom": "Énergie",
-   "pct": 2.4
+   "pct": 2.5
   },
   {
    "nom": "Immobilier",
