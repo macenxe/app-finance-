@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-16T18:45:41.263Z",
+ "genere": "2026-10-16T22:02:19.074Z",
  "globales": [
   {
    "titre": "RÉSUMÉ 1-La directrice générale du FMI appelle à la coopération en matière d'IA et de risques liés à la guerre - Boursorama",
@@ -105,16 +105,25 @@
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 16:05:33 GMT",
+   "date": "Fri, 16 Oct 2026 19:09:13 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
+   "titre": "Semaine positive pour le Cac 40, Wall Street reste plus prudent, Tesla fait le buzz avec sa voiture volante - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Fri, 16 Oct 2026 13:02:59 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNMXJsbUhad0pHaTV6TW9lM3JacDRuZUp2Q19Qa0hYaVRFQnY1X3BhQVVHTGR3S0lZMi04UjNPZUR2MnNQcmxtRm13Z2h2ZkFYdFhBQUc5VlloWUlqMkRVRVhadkhoOVJwcnNnS0kwc3REMEZaYWZTdTRCaTVfeU5xaFhsUTZDNUdyaXhqc2ZuYVp4NVkwbHBuaXFTaGYtRnQzTzNjb3dER0tad1F6TzI2WW1ZcE8xdUplODQ0elB1QzdUalVmTFFjaDNCUlM0MzVtNGZHWEVwS29iTkRQTEJIM3QzZVFJeS05YWZpNTZiTzZpdVJKTW5OdlBBRXVzVHN5ZXhpVDIyNA?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 14:23:14 GMT",
+   "date": "Thu, 15 Oct 2026 20:23:58 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
@@ -126,15 +135,6 @@
    "date": "Thu, 15 Oct 2026 07:10:43 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTVVtZlNsckRrUk8wVVdENUsyLVFFcjhnOWttSzhrNXZnc3prU1BNMGp2QUtIZzI4TjN0aFhOS1VGWEU2czEyWTI1N21aZGdPcFJyVUxRY2MyUU1uSHptUjl6SXFMNFdUMDBfX2ROTnhaQlNfX0JPWE14UzM2bm84XzRrbGcwaG9RY3dMaXlmd1llRzZpeGVBNW92MmplZmlRUkUyMGxXZml6VjM1WUJaZUYwME43cVJLLVk0dXRUckEyNWRKalRIaA?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 15 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -168,56 +168,65 @@
  ],
  "eco": [
   {
-   "titre": "+12% par rapport à l'an dernier: le déficit public des États-Unis se creuse, la faute aux intérêts de la dette et au remboursement des droits de douane",
-   "source": "BFM Économie",
-   "date": "Fri, 16 Oct 2026 18:41:10 GMT",
-   "lien": "https://www.bfmtv.com/economie/international/12-par-rapport-a-l-an-dernier-le-deficit-public-des-etats-unis-se-creuse-la-faute-aux-interets-de-la-dette-et-au-remboursement-des-droits-de-douane_AD-202610160793.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'Europe promet d'aider l'Ukraine pour détecter les tirs de missiles russes mais le continent \"dépend encore\" des États-Unis dans le domaine",
-   "source": "BFM Économie",
-   "date": "Fri, 16 Oct 2026 18:33:55 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/defense/l-europe-promet-d-aider-l-ukraine-pour-detecter-les-tirs-de-missiles-russes-mais-le-continent-depend-encore-des-etats-unis-dans-le-domaine_AN-202610160790.html",
-   "tag": "BFM Économie",
+   "titre": "S&P 500 - Les actions en vue vendredi : Apple, CoreWeave, Alphabet, Alcoa, Netflix, J.B. Hunt, Travelers - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 16 Oct 2026 21:23:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOUVFTc2xGU1VfVWtrYVVXak5NZkx6SHpxZjl4eEhfdTI3U24tcGZFWFBZMjJWbkxjNE1PT0NFOGZRLWZZeWJLbjBmR2tMTkswTVo3NTlqSVBrRUJ3Z2UtdmxjNUsyUENlbG9FTTJ2OFloOTd3V2hWOGJjV01LSTNINV9OZ1ZKLWt4c0t5Q3BQOXVaUzJaS1NKSEM4NmJpUXlKZ2pZclhPZWhjN1RaZEI2bHhtUGdkckFlVVRCNGYyWklpOEtGU3FiSTBWdUJMVV9CbllzZlUzUW93MVdWamFSNlQ0bw?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "L'Europe travaille pour aider l'Ukraine sur les \"images satellitaires\" (Macron) - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 18:28:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOZ3hMWG5yaDlHN2xEeTB1b1lHN2tfMVdmeG9UVDl6YUhmNEZuSDVoZ0pOUDltaVBwR0hFcVNXeWtyV2VFdDVqdXhmWHZCWnJTaDEyNjJjTkFQTUZCclZMeVBqZmwtWHpONllQRnJUR1BvLUYwdjYxbzRqX0VzSVVOOGRoWGVhVjBvUDVhS3ozNUFlUngxczZFaDNjd05nU2VCcFR3ZkZBSHE1UGFOejJlSVVxTDBlRjRxUXZpdTNHbWVzQWY2LUpiYjRtbEpXREE3YmlRRERfb1N3NHg5bmxRQ0pKSDU5c1RY0gHuAUFVX3lxTE9UMTBUMTdxZE5sN0hZMWZKU1dhU2FiMWw1TTN0T0JES2JEek43cFZyczVvYmd6amJBVjJCOW9sdjY0cmZnVENxeWtfX3BuRGwyNlNROXFnN3RyUjZhd291dnFJUE5DTVVMNTl0bTZ5cjh3LW5ocTlfUEZ3WnVzNlNMakRNQzQ5dHBQdzlnd21qVnZaSlN2alc5Q2ZXZV90Zmk4a1RnRERsVXgtR0VDQi1vLTFrSVlOM2taMUpvblVJREJacWJsRE5hNWVRWnJzaFZTQ1JkNW5lM05ERWM3dnNwZG53WlJzSjRHYmV0alE?oc=5",
-   "tag": "CAC 40",
+   "titre": "S&P 500 - Les actions en vue vendredi: Apple, CoreWeave, Alphabet, Alcoa, Netflix, J.B. Hunt, Travelers - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 16 Oct 2026 21:22:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaVQwb1N4UkJiRk1zWm9Hc19RcXBzY096NTdSUkJVNUVVSUVMZlFCZEpnOFNfOVVSSkh6NTZpTzNESzVxc3kzYy1QYm9WSVNSM2NsaUM1VTdsQUMtNHpsZE9STW5hU0NYZUtPcDQ5UVo3TDdGejI4NDhjSF93Ty1BZzBaZGZpTjZZWjVSS1FJTW9GbUU3ellLUzZ4ZFlwWEsyd1dQQm1JSi1UUm5SSzYxTWtpa0M?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions en vue vendredi: Apple, CoreWeave, Alphabet, Alcoa, Netflix, J.B. Hunt, Travelers",
+   "source": "ABC Bourse",
+   "date": "Fri, 16 Oct 2026 21:22:55 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-en-vue-vendredi-apple-coreweave-alphabet-alcoa-netfli_704379",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
    "titre": "TESLA Cours Action TSLA, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 18:17:36 GMT",
+   "date": "Fri, 16 Oct 2026 21:14:43 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kTGgwYk5pRXFadTRrWE55LXFBNVNmQUp2N2JxcTJJWnhpN2tteGg2NnVkT1gxWjBhVDRPNGFEbVJIdWxtVUFfZ3BUQmZtOEk?oc=5",
-   "tag": "CAC 40",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "DANONE Cours Action BN, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "La semaine à venir à Wall Street-Alors que la hausse liée à l'IA vacille, l'attention des marchés boursiers se - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 18:13:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1oMFc5d0lZMmZIRGlUcE12WENWbi1WQkpSZlZIWVlYR3VKc0hxQmpDWS1fanlJamFPcEhmcFpvRFJUZXdlUHYtYVBQV0JRckdx?oc=5",
-   "tag": "CAC 40",
+   "date": "Fri, 16 Oct 2026 21:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwJBVV95cUxOLXBOOWFJY3I5T09tLTRWNUdORkJpQkY5VDRkaEQ5Q2E0N18zNnZuekcwTWlzTDhnMUZkUENXVUdFTGFkaEF2bU9KZkxGVE5LY09XenNtQUF0NUNOT3lqYTVDU29ycXlfc2VUcThEUGRoMElIaGtHcUZIcE5oSkxwREd4d3Z3MDdHTVduN3dKLUFpaEU1aHpYbzRkemdEd1o3cEFaU0hOVlpPTmhBdmhmNzlaYlF4cGRJa3ZJM2xORnFfcmE2a3pFMDNPd19KUGlPcHpyU2lEZDRmWTJaUkxUSWRnZHJmaWs1ME4wdmJBMXlyVV83OUgxNkxNT21McWpVZVdRd29sODRuT2RuSFNLR18yVHVLM0RNYlRyTEtSaFZseHEwaXFqdzRrZXI1U2k0OWI5UExhMUxHeUxtTXMzM2pzTGZHNlHSAcwCQVVfeXFMTWpEQzdLVUJpNE1MOWhNTjc0cEo0SUM4U19GNDlvaG5iWXJEQWhXb1ppZDdXY2k4ZVhkcU1nc0dnT2I3M2xyYldyNTJFdEtRYmtJVDd0d2s4aUVfUmpGVWJtZUlSWTN3TGE0WDBiU1pralNoNURwQk5JdTVoWnIxc3JHajBJZzhDbWdjdmVSWFFYZWF1TnlDQW53R0FRTU03blpFNWpNNVV5WExUSEpGTmdPLTBPaGoxaktOSnJoNl8zMDdnVnEzc1RQOHRKNzlya3VLSlFUcXktczVwLTE2YmJpcVhnNU1LYWNZWUVnOFcyNklnS01kYUlqVHJ1ZnJSVEVER1NPaUI5Vndlc2hZVjhUU01IanJxWTNOa3NKTjVIODRPVV9iaEprQnJCaVBiOXNMYlN5X3dEWEZhU1VLZWRWWDZVMWtOQldXb3Y?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "De Quoi J'me Mail : Apple dévoile ses nouveaux produits pour la maison (1/2) - 16/10",
-   "source": "BFM Économie",
-   "date": "Fri, 16 Oct 2026 18:06:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/de-quoi-jme-mail/video-de-quoi-j-me-mail-apple-devoile-ses-nouveaux-produits-pour-la-maison-1-2-16-10_VN-202610160784.html",
-   "tag": "BFM Économie",
+   "titre": "Le Nasdaq recule et met fin à une série de quatre semaines de hausse, sur fond de ventes dans la technologie - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 16 Oct 2026 21:10:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNallaY3phZTVwaERVeG4welZLYTItb2dGRldNQWx4Zno5TGpibFNPNDdEb0s5WWtjemJFaWJHR1pJUUxrZDhMaTY1cXdYcWc2d2NEWnN0M0QyUkQxZzRPQ2huOGE1T19FQW83bE1wVXZHTW9VN0Q1NDM4RFM5RENWMUo5bmNBNFhTZ3hObUtlcHQ0RC1iRmdldXhsMmNHMmFWNEpWYXJ3dkdZTHVodEcwZFdacmgwMXNYQjgwUXV0d2ExaXo0QWRCaV9uTm1KWWhLaWNSSXNPVGNqZXg4TjBUc1o1Q3JMMHBxVHJEc0dkbDQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "USA: Wall Street finit dans le rouge, la \"tech\" souffre et le pétrole flambe",
+   "source": "ABC Bourse",
+   "date": "Fri, 16 Oct 2026 21:00:54 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-dans-le-rouge-la-tech-souffre-et-le-petrole-flambe_704378",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -226,36 +235,9 @@
    "source": "TradingView",
    "date": "Fri, 16 Oct 2026 18:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9KRG83UUQyaEVzaWZUR0VQZ29WcWdNVmt5SktzNTZiX3FyaEcycUx0bHpvS2VCZ3N4ZXdvV2xvQXJDQ0xOMUN1a0JFbEhDUG1xajlLTWppQnBEQUdxOXJKU3BrUHRqcmgtQkFYSQ?oc=5",
-   "tag": "bourse",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 17:55:05 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "PUBLICIS GROUPE Cours Action PUB, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 17:53:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KV1FrZlU2RWM2V2VxOWQyT2N5d2cyNnMxTlk4WC13aGh4X0xpZ2xGNEtkUGI4OHZOUXh6YmxqRWdrVXdaVlMzWU9jTXFqN1RqTHc?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les valeurs énergétiques américaines progressent alors que le prix du pétrole dépasse les 100 dollars en raiso - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 17:46:57 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQUjlNSFRfcFp5cnpWRHpjWkRaUnYxZ2pURmFrbWhsa0dlS0dxaS1BMlB2azRNN2c1U1pHMEVGYmZzTXNOcFBibWlqaXk2ZW05aDVIVFNGOUl1VlF4UlNvYXo5aVNEcUw0T2R4WVhwNnZxaFpULW5IQ2txSExXT3lmQ1lBOFZCU2JTYVFpcnNHYmFqSlA1eU1TV2dpLWREaFRaOVBibzJ4MXVJd1VscGk2YTR4Y1JyQm56ZzZqLTlXXzdOZEdCQ04wQmQxODBZeFpjc05ERi0ycHlUa3BvUmdHWXRBX2cxOGJZMTNvaUg1OEY5WTc4NjIxdlRSNC1kb3lLTVZEZUhTbHF1MXJCaEdNdFQ5Q2wxX3BidU45VWRrRHNyNE8tRUJhdWRJYkVmeHAtTmZDRHpGYWZQZjhnUE800gHEAkFVX3lxTE5vRGUxcXZkd2hXQXFsZmY4QlI0amoyMDhJTHpxdVdtQXVOVTVtUDRMdk1ySEtPUUFiRlVodWNieWR0TGs5RndyQVJyNGpCWVRvR2V2MDFad0F3QzQ2dFhoSlFCb01mWFE2NG9IM1BpbDRBSldLS3k4WEFKRGpvc3BqVTFFeUNnVnJUZWR6N3BqZWlQNnRGUGNWUnVXNzhpNkwyNldMVDI0Uzc3SFRVSGtkQ2tNN0stbnYwYnN3bG9uVm1FLTZ3ejdkRGlFSHVvdkoyN0VkSUxJSlBWa19hUTQ0cXZrNkFLSFItSmxQR3pEZUczQldWNWtPWDlfQVMtLW5YQnZnd01fWXo1Qzd0WXZMeGFXSmJXT085cFFRcl95QjFrWEZIQk9DLXc0eGwwSUNBVHNkVUQ2dVlQMDhITGVDT0JUNg?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "L'Europe finit en hausse, se distinguant de Wall Street",
@@ -280,15 +262,6 @@
    "source": "BFM Économie",
    "date": "Fri, 16 Oct 2026 16:06:44 GMT",
    "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-schneider-electric-le-marche-sur-sa-faim-apres-ses-resultats-16-10_VN-202610160676.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Tesla, premières images de sa voiture volante",
-   "source": "BFM Économie",
-   "date": "Fri, 16 Oct 2026 16:00:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-tesla-premieres-images-de-sa-voiture-volante_VN-202610160787.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -343,6 +316,42 @@
    "source": "BFM Économie",
    "date": "Fri, 16 Oct 2026 15:12:22 GMT",
    "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/tech-stocks-tesla-premieres-images-de-sa-voiture-volante-16-10_EN-202610160620.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Tech Stocks : Tesla, premières images de sa voiture volante - 16/10",
+   "source": "BFM Économie",
+   "date": "Fri, 16 Oct 2026 15:09:55 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-tech-stocks-tesla-premieres-images-de-sa-voiture-volante-16-10_VN-202610160625.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Alors que le taux de pauvreté est au plus haut depuis 30 ans, des associations demandent au gouvernement de protéger les plus modestes de ses mesures budgétaires",
+   "source": "BFM Économie",
+   "date": "Fri, 16 Oct 2026 14:59:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/alors-que-le-taux-de-pauvrete-est-au-plus-haut-depuis-30-ans-des-associations-demandent-au-gouvernement-de-proteger-les-plus-modestes-de-ses-mesures-budgetaires_AD-202610160605.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'éco du monde : Kevin Warsh reste discret sur les prochaines décisions de la FED – 16/10",
+   "source": "BFM Économie",
+   "date": "Fri, 16 Oct 2026 14:48:24 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/l-eco-du-monde-kevin-warsh-reste-discret-sur-les-prochaines-decisions-de-la-fed-16-10_EN-202610160596.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'éco du monde : Kevin Warsh reste discret sur les prochaines décisions de la FED - 16/10",
+   "source": "BFM Économie",
+   "date": "Fri, 16 Oct 2026 14:44:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-l-eco-du-monde-kevin-warsh-reste-discret-sur-les-prochaines-decisions-de-la-fed-16-10_VN-202610160595.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -427,15 +436,6 @@
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Entre inflation et IA, le président de la Fed salue \"la résilience\" de l'économie mondiale - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 16 Oct 2026 09:33:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOdG1ta0JhUnBOX0dzT0dQSDhOb2FGUjhwSGdIbnZOOHFBdElURWZtcm40SDFrWUxWMy1nM0VmNEtKY29NY1Nxei11LUFjdS1QNEdNU2M3WEthUHotZ2E5djZLd0RIZ1YydDB2NjNkSWdpYjNfSHVXYnZmSHFiM0RRUEFsQnJoaFNMVTdJR2FzRDY2SjhCOXhKak5aWW9zRkU0aWdOb2xqaGNzdGQxbFh2NDVSYU53bGR1VElfMFhsWXQwQnpTeVdHLXNDWDFUbDRzRG1IQ0hWZVhkMFd5NVlQUUV4Sk1qS0FENDNRYjNqU2xGa3FQb0VOdkRRZmhXZGpGM2hlX1NwNlRSS2RzT1RmN9IBkAJBVV95cUxOdG1ta0JhUnBOX0dzT0dQSDhOb2FGUjhwSGdIbnZOOHFBdElURWZtcm40SDFrWUxWMy1nM0VmNEtKY29NY1Nxei11LUFjdS1QNEdNU2M3WEthUHotZ2E5djZLd0RIZ1YydDB2NjNkSWdpYjNfSHVXYnZmSHFiM0RRUEFsQnJoaFNMVTdJR2FzRDY2SjhCOXhKak5aWW9zRkU0aWdOb2xqaGNzdGQxbFh2NDVSYU53bGR1VElfMFhsWXQwQnpTeVdHLXNDWDFUbDRzRG1IQ0hWZVhkMFd5NVlQUUV4Sk1qS0FENDNRYjNqU2xGa3FQb0VOdkRRZmhXZGpGM2hlX1NwNlRSS2RzT1RmNw?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   }
  ],
  "fiscal": [],
