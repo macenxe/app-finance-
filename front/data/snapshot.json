@@ -70,90 +70,6 @@
   ],
   "produits": [
     {
-      "isin": "FRF0000001M7",
-      "nom": "CAP 40 Août 2030",
-      "sousJacent": "SX7E.PA",
-      "sousJacentLabel": "ES Banks",
-      "typeProduit": "equity",
-      "strike": 215.1,
-      "barriereAutocall": 100,
-      "barriereCoupon": 80,
-      "protection": "-40 %",
-      "emission": "2025-07-29",
-      "echeance": "2030-08-13",
-      "constat": "29/07/2026",
-      "coupon": 7,
-      "id": 1,
-      "cours": {
-        "sousJacent": "SX7E.PA",
-        "dernierCours": 293.67,
-        "heureCours": "2026-10-12T12:58:00.000Z",
-        "variationPct": 1.0216718266253966,
-        "nom": "Euro Stoxx Banks"
-      },
-      "indicateurs": {
-        "produitId": 1,
-        "pctStrike": 136.52719665271968,
-        "zoneAutocall": true
-      }
-    },
-    {
-      "isin": "FRF0000001K1",
-      "nom": "CAP 50 Août 2030",
-      "sousJacent": "SX7E.PA",
-      "sousJacentLabel": "ES Banks",
-      "typeProduit": "equity",
-      "strike": 215.1,
-      "barriereAutocall": 100,
-      "barriereCoupon": 80,
-      "protection": "-50 %",
-      "emission": "2025-07-29",
-      "echeance": "2030-08-13",
-      "constat": "29/07/2026",
-      "coupon": 6,
-      "id": 2,
-      "cours": {
-        "sousJacent": "SX7E.PA",
-        "dernierCours": 293.67,
-        "heureCours": "2026-10-12T12:58:00.000Z",
-        "variationPct": 1.0216718266253966,
-        "nom": "Euro Stoxx Banks"
-      },
-      "indicateurs": {
-        "produitId": 2,
-        "pctStrike": 136.52719665271968,
-        "zoneAutocall": true
-      }
-    },
-    {
-      "isin": "FRF0000001L9",
-      "nom": "CAP 60 Août 2030",
-      "sousJacent": "SX7E.PA",
-      "sousJacentLabel": "ES Banks",
-      "typeProduit": "equity",
-      "strike": 215.1,
-      "barriereAutocall": 100,
-      "barriereCoupon": 80,
-      "protection": "-60 %",
-      "emission": "2025-07-29",
-      "echeance": "2030-08-13",
-      "constat": "29/07/2026",
-      "coupon": 5,
-      "id": 3,
-      "cours": {
-        "sousJacent": "SX7E.PA",
-        "dernierCours": 293.67,
-        "heureCours": "2026-10-12T12:58:00.000Z",
-        "variationPct": 1.0216718266253966,
-        "nom": "Euro Stoxx Banks"
-      },
-      "indicateurs": {
-        "produitId": 3,
-        "pctStrike": 136.52719665271968,
-        "zoneAutocall": true
-      }
-    },
-    {
       "isin": "FR0014011HA6",
       "nom": "CAP 40 Décembre 2030",
       "sousJacent": "SX7E.PA",
@@ -507,33 +423,6 @@
         "produitId": 16,
         "pctStrike": null,
         "zoneAutocall": false
-      }
-    },
-    {
-      "isin": "FRF0000001C8",
-      "nom": "LC Athena BNP Juillet 2030",
-      "sousJacent": "BNP.PA",
-      "sousJacentLabel": "BNP Paribas",
-      "typeProduit": "equity",
-      "strike": 77.84,
-      "barriereAutocall": 100,
-      "barriereCoupon": null,
-      "protection": "-70 %",
-      "emission": "2025-07-20",
-      "echeance": "2030-07-31",
-      "constat": "20/07/2026",
-      "coupon": 10,
-      "id": 17,
-      "cours": {
-        "sousJacent": "BNP.PA",
-        "dernierCours": 90.13,
-        "heureCours": "2026-10-12T12:57:37.000Z",
-        "variationPct": 0.20011152
-      },
-      "indicateurs": {
-        "produitId": 17,
-        "pctStrike": 115.78879753340183,
-        "zoneAutocall": true
       }
     },
     {
