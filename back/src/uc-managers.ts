@@ -86,6 +86,7 @@ const FONDS: [string, string, string][] = [
   ["FR0011461326", "0P0000ZL7Q", "Conservateur Obligations Court Terme C"],
   ["FR0013287315", "0P0001CB5C", "Palatine Monétaire Court Terme R"],
   ["LU1585265066", "0P0001KJDD", "TF - Tikehau Short Duration"],
+  ["LU3129990134", "0P0001XMI9", "ODDO BHF Global Target 2031"],
 ];
 
 type Gerant = { nom: string; depuis: string };

@@ -986,6 +986,31 @@
    "structure": "SICAV",
    "note": 3,
    "risque": 2
+  },
+  "LU3129990134": {
+   "gerants": [
+    {
+     "nom": "Janis Heck",
+     "depuis": "2025-08-04"
+    },
+    {
+     "nom": "Haiyan Ding",
+     "depuis": "2025-08-04"
+    },
+    {
+     "nom": "Daniel Hagemann",
+     "depuis": "2025-08-04"
+    },
+    {
+     "nom": "Alexis Renault",
+     "depuis": "2025-08-04"
+    }
+   ],
+   "fraisCourants": null,
+   "societe": "ODDO BHF Asset Management SAS",
+   "structure": "SICAV",
+   "note": null,
+   "risque": null
   }
  }
 }

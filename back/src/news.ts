@@ -233,6 +233,7 @@ const FLUX_UC_FONDS = [
   'Conservateur Rendement Flexible', 'Conservateur Reverso', 'CPR Croissance Réactive', 'DNCA Invest Convertibles',
   'Eurose', 'R-co Valor', 'Sextant Grand Large', 'Tikehau International Cross Assets',
   'Conservateur Obligations Court Terme', 'Palatine Monétaire Court Terme', 'Tikehau Short Duration',
+  'ODDO BHF Global Target 2031',
 ];
 // Volume faible attendu (presse spécialisée peu couverte en fetch direct — mesuré au lot 1) :
 // pas de liste blanche de sources ici, seul le titre doit mentionner le fonds.

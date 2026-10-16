@@ -79,6 +79,7 @@ const FONDS: [string, string][] = [
   ["FR0011461326", "0P0000ZL7Q.F"],
   ["FR0013287315", "0P0001CB5C.F"],
   ["LU1585265066", "0P0001KJDD.F"],
+  ["LU3129990134", "0P0001XMI9.F"],
 ];
 
 type Meta = {

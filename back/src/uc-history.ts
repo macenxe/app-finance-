@@ -70,6 +70,7 @@ const FONDS: { isin: string; graphId: string; xidRepli: string }[] = [
   { isin: "FR0011461326", graphId: "0P0000ZL7Q.F", xidRepli: "535673498" },
   { isin: "FR0013287315", graphId: "0P0001CB5C.F", xidRepli: "535659321" },
   { isin: "LU1585265066", graphId: "0P0001KJDD.F", xidRepli: "617134022" },
+  { isin: "LU3129990134", graphId: "0P0001XMI9.F", xidRepli: "1005092847" },
 ];
 
 // Résout le XID FT depuis la tearsheet (champ xid du data-mod-config, servi en HTML échappé).
