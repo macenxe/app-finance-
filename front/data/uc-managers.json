@@ -106,14 +106,6 @@
    "note": 2,
    "risque": 4
   },
-  "FR001400U512": {
-   "gerants": [],
-   "fraisCourants": null,
-   "societe": "Conservateur Gestion Valor",
-   "structure": "FCP",
-   "note": null,
-   "risque": null
-  },
   "FR0012844140": {
    "gerants": [
     {
@@ -284,40 +276,6 @@
    "fraisCourants": 2.39,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "SICAV",
-   "note": 2,
-   "risque": 3
-  },
-  "LU1103305709": {
-   "gerants": [
-    {
-     "nom": "Christophe Foliot",
-     "depuis": "2003-09-01"
-    },
-    {
-     "nom": "Adeline Salat-Baroux",
-     "depuis": "2007-09-01"
-    }
-   ],
-   "fraisCourants": 2.84,
-   "societe": "Edmond de Rothschild Asset Management (France)",
-   "structure": "SICAV",
-   "note": 1,
-   "risque": 5
-  },
-  "FR0010479931": {
-   "gerants": [
-    {
-     "nom": "Patricia Urbano",
-     "depuis": "2014-02-21"
-    },
-    {
-     "nom": "Bing YUAN",
-     "depuis": "2025-07-18"
-    }
-   ],
-   "fraisCourants": 2.31,
-   "societe": "Edmond de Rothschild Asset Management (France)",
-   "structure": "FCP",
    "note": 2,
    "risque": 3
   },
@@ -670,31 +628,6 @@
    "structure": "SICAV",
    "note": 4,
    "risque": 3
-  },
-  "LU1752460292": {
-   "gerants": [
-    {
-     "nom": "Bastian Gries",
-     "depuis": "2018-09-07"
-    },
-    {
-     "nom": "Matthias Lackmann",
-     "depuis": "2018-09-07"
-    },
-    {
-     "nom": "Haiyan Ding",
-     "depuis": "2018-09-07"
-    },
-    {
-     "nom": "Philippe Vantrimpont",
-     "depuis": "2024-01-01"
-    }
-   ],
-   "fraisCourants": 1.12,
-   "societe": "ODDO BHF Asset Management SAS",
-   "structure": "SICAV",
-   "note": 2,
-   "risque": 4
   },
   "FR0010135103": {
    "gerants": [

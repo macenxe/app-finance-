@@ -220,15 +220,15 @@ const FLUX_ECO: Flux[] = [
 // même fonds partagent un nom unique (ex. Congrégation Investissement C/R).
 const FLUX_UC_FONDS = [
   'Candriam Equities L Biotech', 'Centifolia', 'Comgest Renaissance Europe', 'Conservateur Actions Euro',
-  'Conservateur Actions Flexibles', 'Conservateur Actions Monde', 'Conservateur Emploi Durable', 'Conservateur Investissement Proximité',
+  'Conservateur Actions Flexibles', 'Conservateur Actions Monde', 'Conservateur Emploi Durable',
   'CPR Global Silver Age', 'CPR Invest Food For Generations', 'CPR Invest Climate Action', 'DNCA Invest SRI Europe Growth',
   'DNCA Invest SRI Norden Europe', 'Echiquier Artificial Intelligence', 'Echiquier Positive Impact Europe', 'EdR Fund Big Data',
-  'EdR Fund China', 'EdR Fund US Value', 'EdR India', 'Fidelity Global Demographics',
+  'EdR Fund China', 'Fidelity Global Demographics',
   'Fidelity Sustainable Water & Waste', 'Fidelity World Fund', 'La Française Carbon Impact Global', 'Magellan',
   'Moneta Multi Caps', 'ODDO BHF Avenir', 'ODDO BHF Avenir Europe', 'ODDO BHF Immobilier',
   'OFI RS Croissance Durable et Solidaire', 'Palatine France Small Cap', 'Palatine Planète', 'Pictet Clean Energy Transition',
   'Pictet Nutrition', 'Pictet-Premium Brands', 'Conservateur Horizon 2031', 'Conservateur Obligations Moyen Terme',
-  'DNCA Invest Flex Inflation', 'La Française Obligation Carbon Impact', 'ODDO BHF Sustainable Credit Opportunities', 'Carmignac Patrimoine',
+  'DNCA Invest Flex Inflation', 'La Française Obligation Carbon Impact', 'Carmignac Patrimoine',
   'Congrégation Investissement', 'Conservateur Diversifié', 'Conservateur Diversifié Réactif', 'Conservateur Immo-Or',
   'Conservateur Rendement Flexible', 'Conservateur Reverso', 'CPR Croissance Réactive', 'DNCA Invest Convertibles',
   'Eurose', 'R-co Valor', 'Sextant Grand Large', 'Tikehau International Cross Assets',
