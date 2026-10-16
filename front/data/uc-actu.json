@@ -1,6 +1,14 @@
 {
  "evenements": [
   {
+   "date": "2026-10-16",
+   "isin": "LU1892829828",
+   "fonds": "FF - Sustainable W & W Fund",
+   "type": "frais",
+   "titre": "Frais courants modifiés sur FF - Sustainable W & W Fund : 1.9 % → 1.91 %",
+   "detail": "Frais courants passés de 1.9 % à 1.91 %."
+  },
+  {
    "date": "2026-10-07",
    "isin": "FR0010564229",
    "fonds": "Conservateur Actions Monde C",
