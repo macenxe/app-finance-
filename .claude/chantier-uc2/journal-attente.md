@@ -2,9 +2,9 @@
 
 Incohérences relevées et décisions remontées. Une entrée arbitrée se clôt en citant son numéro au journal des décisions.
 
-- **A1** (décision remontée, 16/10/2026) — FR001400U512 (Conservateur Investissement Proximité) et LU1752460292 (ODDO BHF Sust Credit Opportunities) sont en Mut ET en Fin. Appliqué provisoirement : retrait complet (D2). Autre option : les garder au catalogue en Fin seulement (`mut:false, fin:true`).
+- **A1** (décision remontée, 16/10/2026) — FR001400U512 (Conservateur Investissement Proximité) et LU1752460292 (ODDO BHF Sust Credit Opportunities) sont en Mut ET en Fin. Appliqué provisoirement : retrait complet (D2). Autre option : les garder au catalogue en Fin seulement (`mut:false, fin:true`). → **CLOS** (D13).
 - **A2** (incohérence, 16/10/2026) — La trame du chantier veut la session principale en Fable ; cette session tourne en Opus 5.5. Le chantier continue ainsi.
-- **A3** (incohérence, 16/10/2026) — IE000S1JLOI7 : SRI 4 dans le DIC français (05/12/2025), 5 dans le KID anglais (21/09/2026). Appliqué : 5 (D10).
+- **A3** (incohérence, 16/10/2026) — IE000S1JLOI7 : SRI 4 dans le DIC français (05/12/2025), 5 dans le KID anglais (21/09/2026). Appliqué : 5 (D10). → **CLOS** (D14).
 - **A4** (incohérence, 16/10/2026) — R-co Valor Balanced (DIC du 20/02/2026) : objectif « 3 à 5 ans », période de détention recommandée 5 ans. La stratégie reprend « 3 à 5 ans » ; aucune action.
 - **A5** (incohérence, 16/10/2026) — ODDO BHF US Equity Trend : le DIC du 13/07/2026 cite encore l'ancien nom « ODDO BHF Algo Trend US » ; le flux d'actualités cherche le nom actuel seulement.
-- **A6** (incohérence, 16/10/2026) — Erreur de la session : les commits eb267dd (lot 1) et 0b90634 (lot 3) ont embarqué 73 doublons non suivis « … 2.json » / « oat-history 2.ts » (≈ 3,9 Mo) via des `git add` de dossiers. Corrigé par 78d0392 (retirés de l'index, laissés sur disque). L'historique local les contient encore : la réécriture avant push (filter-branch sur 39a21e2..HEAD) a été refusée par le garde-fou de permissions. À arbitrer : réécrire avant push (autorisation requise) ou pousser tel quel.
+- **A6** (incohérence, 16/10/2026) — Erreur de la session : deux commits (lots 1 et 3) avaient embarqué 73 doublons non suivis « … 2.json » / « oat-history 2.ts » (≈ 3,9 Mo) via des `git add` de dossiers. → **CLOS** (D15) : historique local réécrit avant push, doublons laissés sur disque, non suivis.
