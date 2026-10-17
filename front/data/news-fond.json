@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-17T13:39:58.154Z",
+ "genere": "2026-10-17T17:04:09.047Z",
  "globales": [
   {
    "titre": "Fed : La probabilité d’une hausse des taux chute à 13 %, le Bitcoin souffle - TradingView",
@@ -112,19 +112,19 @@
  ],
  "produits": [
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 17 Oct 2026 09:15:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 16 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 16 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -177,20 +177,38 @@
  ],
  "eco": [
   {
+   "titre": "Des Palestiniens et des diplomates occidentaux attaqués par des colons en Cisjordanie occupée - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 17 Oct 2026 16:26:50 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNUzlzdU52cVNHdmpKT0YwUEdtVnQyekk0TVlRVVVBd0NUb3RacU1WY2NIYlJrQ1pEMWhVZTM4ajU1V28xWUJBbHNyRE1OeUZabXV1TUFHVnhGWno0SDBWTl85OE44YUhmX21yczk0bzZFaWhTMGdBdjg2Rl9NMG5PT1QyWkJOa2Z5bU5HcDMxblZGWnlMWmRrZGo3LTE4Slkzbkg1amFIdnZHQ1RVSE9fMXhZWXAyWFp1N01JdzVGdDBhMGl2QnlZWWpxaEQzbWduS2x3dGVDWTh1UmxBWnEza2xfRjRuaml2Wi1wRkU3dWIybGFGY3R2TU0zbklad19nTnhLMWNGeFFPNWlrSFMwUHhjb9IBmAJBVV95cUxQMFFaZF81TWNRNmt1YmVFNmdyZ3oyMW1IWmFfYTM2VnVmb0ltWllvMU53OU9PVVpNMmZCNzI3cTdxZnpDYWJBcnptN3VoTEdSRnhHT3VyMkZzeUZqZExvVWtPR0pjOUxuVkNKWWpNNHBlY1dLTk9veThHTGdnS1h1WnEyaE5FYUY0a3lQV3BXcU5iUmFMeHJFM2hGRjItS2hOMnBBSFdvTmpYM3BmZmVUUWcxOHhsQWpWU1BIa2tBMWppdm1OdEppcjV3ZUhGNEctY2RKMDRGSDdNWG1IRk5FeE52YmYtSXlFNmJ3TmhzdHFlZDZGWDdqYUttd3FGWUxid01XM1NtemxCZG5Kd3BWcHZfSDJ0TS0y?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "«La BCE semble vouloir réagir plus rapidement qu’en 2022 sur les taux» - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Sat, 17 Oct 2026 14:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeVdCZ3FkNkNiNndPdWZsaFMyaFlyeWFDWXI0MnpSU1gtbWEwYWlaLTJ0MUJkcDZzVkg5NjFFUU5ObVZvNmIzdnRNZF84XzFuVGJuT0YxNFNXUWFRcVloeWRhVUhpRWpxZTQwMXV4eFU2cFpubGRSOE9McUk2NTRRVlF0ZnZseW1EaDRxUDN2T1BSTlhIN29VOHFTZG9fYVQtVklNa243QWhCLVNBX0Rv?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Banque du Canada prévoit une nette hausse de ses perspectives d’inflation avec la flambée des cours du pétrole, selon Macklem - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sat, 17 Oct 2026 13:58:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNSDZSRDlrNjQxdThSM0l2V1RnaVRGOTRpNF9GUnZiWEwzcGZwVVA1TDM0dDZSUzI4WV9WN1M0X1l6ZkExS2hEXzluNGNxUWE0Q2UyR29sb0Z2V2hXajMxakN5aVdSeWZZLUZVWk1Sb0dNdFBOSmhvNlZFSXQ0QUdubmVEVGI0OWpvWGcxMGVLcV9PQWtuOGhBbUxxSEpQQ1hCUEo0aWJENXEtUS1FTEdzZ0E4aXNaM2t4b2F2bU0tX0lKdkpqM3JLbDlqZDJvcU9SZFdCanJ3X3lTT3FrbnliOGQ0YXVLNHJaTXRoOUw1blM?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "\"Nous ne pouvons pas normaliser nos relations avec la Russie\": un ministre russe boycotté au FMI par des délégués européens",
    "source": "BFM Économie",
    "date": "Sat, 17 Oct 2026 13:33:43 GMT",
    "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/nous-ne-pouvons-pas-normaliser-nos-relations-avec-la-russie-un-ministre-russe-boycotte-au-fmi-par-des-delegues-europeens_AN-202610170233.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le gouverneur de la banque centrale chinoise soutient un renforcement de la surveillance du FMI sur les risques budgétaires - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sat, 17 Oct 2026 13:07:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOVWxRajVIcjREVmF0bmhxNTZ4ZUNVaVRkS3RscWJzQzM2ZmtsNjctd3Z1ckJuSExiOTAtWEdtOEZUZXRDTUc5U3Q0SndVWGFsZThCWUUtOG5wN1BFZXdCWXE0U29KZ3Jjb1JfamtTekVjTVdYNHFYeVREZjRnNWotSW1KMmZwZ1ZEM2cya0gtUzNETERYbG9PLWNuOGRQOHVzNUt1dEVvTjVyOGxMbHI4VXdybTJLNFh2ei1UYkRINDNnWVV0MWx3RTE4OTdPSEtNMUdtdHZUbFozNTREaGl0WjdMYWhjX0xKcEhHMW1XTkI?oc=5",
-   "tag": "banque centrale",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -238,15 +256,6 @@
    "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "CAC 40, L’Oréal, Orange, Engie, Renault, Kering… les actions en Bourse au programme de Momentum - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 17 Oct 2026 06:30:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTGhOOUxQWFZKT2NqcjY2dC1uU0hLd0JTaGdEMzcwMnUyOC1TamVmbWt2clZvcUlIQzhFS3JIb3lfb3kyTTNXb2Q4WkR0UnJQYmVJMXFWQ0NORW42WDRkVTBRS3hydXI5UW4xYlJvWV9LZzRDakxLOGhXbVhKQXN4RFhxcENOajVoU0Y5S1BTZV9YWXpMOTlSd3h0c1QwLUxFYmNtYlktWXJ2a05hcGdMSjNYM3plZFVEX2F3QUtJX3R0SG5wNm14ZXFZaFg3b0tLXzZ3MGNn?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "Olli Rehn, de la Banque centrale européenne (BCE), appelle à rester vigilant face au risque d’effets de second tour de l’inflation - Zonebourse Suisse",
@@ -326,15 +335,6 @@
    "date": "Fri, 16 Oct 2026 15:47:54 GMT",
    "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-la-semaine-sur-une-note-positive_704367",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : Kevin Warsh entretient le flou sur les taux de la Fed, le CAC 40 grimpe ce vendredi, gagnant près de 2% sur la semaine - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 16 Oct 2026 15:45:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxNTDhBY2t4aTktdW5iX1FaOGNicE5nWW5rMHRoNWhrRWZhS1dDVW9qNERsQ1FuSExzZUpKMTdlUjduZklveDlscEtFTVBaX3RtRENZRUVuVzBMYldlVWlVUi1tQ2dSN2JUZENfYzIySGJOODhmSHUxTTRqN0k2Z3RhVUJDSzZ6YnFIaHUtay1HaXFYRHpyUXFoR1Bqb0l3aU4yZGQ2czdNZ0k0S1cxSUVEWC1tRzBtNkJBeUtpQmV2TXVxUGpZUXFBRzZNZUtFd3pMOWowZm9kaVpsUU1hMHVibmlVRkNQV2F6YzI5R2I0LWFuU01NUjY2bHpXbUl4cHZJbHkzN3h1cU8tMVdndkowWFdDVWpOcmxwck1MaFdR?oc=5",
-   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -423,6 +423,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Le pont entre l’Atlantique et le Pacifique : de Magellan au Panama et le retour de la connectivité multimodale - Atalayar",
+   "source": "Atalayar",
+   "date": "Sun, 04 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNclZueGkyRjJfVlJucDR4YVZfRlVDdUpIaWQ1VE4xeGNGbUhrX1IwUkZmU1U0WlIxdzlrekNRS2VEWlp5VWN4UFBfY2FrTGJJWDhuaFpwY0NxT2ZIUTI2Y20tYmx0dGtPcG1PYWRaeDhwNU9DN0pZSlJ5TmxpNWJSQU4tM2FEb3g3N3ZFWm9RbzRJQjd2aWFwMlBoekJyTlRwVk1Ec0JnWnpzYkFFY0NlSHVnMFg0ZE9zb2tlTi1PajZpSDJWRmVYMklsVS1TMm5ZZlBzeHJDQTVGcTh3NEsxY1RsaUNKR0V0LVZ2Y05iSHhXYkdQQlVLa2pyX25fSFl5VkZwbUVHT1ZzUQ?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Le drone Magellan de Couach se démarque lors de l’exercice antidrone de la Marine nationale - Le marin",
    "source": "Le marin",
    "date": "Sat, 03 Oct 2026 07:00:00 GMT",
@@ -457,15 +466,6 @@
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "positive"
-  },
-  {
-   "titre": "20 septembre 1519 : Magellan lève l'ancre pour un tour du monde dont il ne verra jamais la fin - Le Tribunal du Net",
-   "source": "Le Tribunal du Net",
-   "date": "Sat, 19 Sep 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPd1BXdGRDc1IzTm1UMkRQVU1Pc3pnV19GLWtDUUlhaW05X3VVQW5aSUgxZnFsYVhtd2o5QXVBbXlNXzFnLU1WT1dhcGdJNnpZRnQ3cXFTVUJwaUVOSXdjNG5ULW02TEFGUml4ZXZvQ0NjUUhDeGVlcnJteFpQVy1fRUVpbDY5RkJuMVBkX1JQSmtEWWJnUk1oQi1pcDhzYnc?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
   },
   {
    "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
