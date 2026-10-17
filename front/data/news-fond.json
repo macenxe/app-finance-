@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-17T17:04:09.047Z",
+ "genere": "2026-10-17T19:19:03.643Z",
  "globales": [
   {
    "titre": "Fed : La probabilité d’une hausse des taux chute à 13 %, le Bitcoin souffle - TradingView",
@@ -92,6 +92,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Le FMI signale des risques pour l’économie mondiale liés à une correction du marché de l’IA, aux guerres et à la dette - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 13 Oct 2026 10:11:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOMnpERUpscmNoem8wN1F3VmoxWW9QVXJId3FxUjdiUGhtUUE2T0ZuQUp0Q2lDdVZxbTMxdHIydzU3WVJzYkFtU3pmWGoyYm1jQ2FuanJfNk5wcjFBbzl6bFRGVFRTYldEYUhlZW12QjJDOF80NlBGN2ZwQ1VPSUFkSHUyOEwxYzJaYTZ6ZzRycHhOV0oyLTd0OEstcDJrZkhFd0xsYmFhR3VTVmZVdzl2QkhVRDZfSW9PVFB2Y2JTZG5OaWVIWlNtdVE3ZDA2YXZoS0FBTGhia0lqQmRXRWlrUVJOZzBNdy0zdEsxdXhfcw?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Malgré les vents contraires, l'économie mondiale devrait continuer à croître de plus de 3% - L'Agefi",
    "source": "L'Agefi",
    "date": "Tue, 13 Oct 2026 08:12:25 GMT",
@@ -99,15 +108,6 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "La croissance économique mondiale affiche une surprenante résistance malgré des chocs à répétition - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 13 Oct 2026 05:45:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNeEpLS25pdXk4S3drMXVibFRTWjBLRVBRRWpVVHhaZDhfWlp1WDUwenFrQTV1VWcyYWMyZUhRdV9aQ2NzMmZhdXhEcTNDNGhIUHdDNDNGd1dXd1pvMl9yaXJWTFFEbU9tY3ZGQmVEbU90dFVZOUZmZHlKUGowT0xzOWp0dTJzMWlzSGEyZE82V1JKckNPNzJzYlN2Q2FzT0NLam1OeVRXajVrSjh6N3R3bUVpa1UwQ0lRZEdoeklBR1BxbUEwcDVFTTZwZkQzb3FJS0FoeHZVaFBvbi1rRm9xNE5semN4bFdNaGEzS2xDQQ?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "positive"
   }
  ],
  "produits": [
@@ -176,15 +176,6 @@
   }
  ],
  "eco": [
-  {
-   "titre": "Des Palestiniens et des diplomates occidentaux attaqués par des colons en Cisjordanie occupée - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 17 Oct 2026 16:26:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNUzlzdU52cVNHdmpKT0YwUEdtVnQyekk0TVlRVVVBd0NUb3RacU1WY2NIYlJrQ1pEMWhVZTM4ajU1V28xWUJBbHNyRE1OeUZabXV1TUFHVnhGWno0SDBWTl85OE44YUhmX21yczk0bzZFaWhTMGdBdjg2Rl9NMG5PT1QyWkJOa2Z5bU5HcDMxblZGWnlMWmRrZGo3LTE4Slkzbkg1amFIdnZHQ1RVSE9fMXhZWXAyWFp1N01JdzVGdDBhMGl2QnlZWWpxaEQzbWduS2x3dGVDWTh1UmxBWnEza2xfRjRuaml2Wi1wRkU3dWIybGFGY3R2TU0zbklad19nTnhLMWNGeFFPNWlrSFMwUHhjb9IBmAJBVV95cUxQMFFaZF81TWNRNmt1YmVFNmdyZ3oyMW1IWmFfYTM2VnVmb0ltWllvMU53OU9PVVpNMmZCNzI3cTdxZnpDYWJBcnptN3VoTEdSRnhHT3VyMkZzeUZqZExvVWtPR0pjOUxuVkNKWWpNNHBlY1dLTk9veThHTGdnS1h1WnEyaE5FYUY0a3lQV3BXcU5iUmFMeHJFM2hGRjItS2hOMnBBSFdvTmpYM3BmZmVUUWcxOHhsQWpWU1BIa2tBMWppdm1OdEppcjV3ZUhGNEctY2RKMDRGSDdNWG1IRk5FeE52YmYtSXlFNmJ3TmhzdHFlZDZGWDdqYUttd3FGWUxid01XM1NtemxCZG5Kd3BWcHZfSDJ0TS0y?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
   {
    "titre": "«La BCE semble vouloir réagir plus rapidement qu’en 2022 sur les taux» - L'Agefi",
    "source": "L'Agefi",
@@ -405,10 +396,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Théâtre de poche : \"PIGAFETTA - LA MÉMOIRE DE MAGELLAN” - jds.fr",
-   "source": "jds.fr",
-   "date": "Thu, 15 Oct 2026 07:17:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRWxNRUlaU0pmN2Y4cGFrdzZrdFFGdExsaVBpbFR4UmRUMy1NLW1oeERwZ1Q3NG4tNjFFa1NFQkNpRzJCRG80eGN6QjkzUmNiZ01QbzhENnczeEFWQ2lIcWpBTDRESXhQUWJEMm9MdmhtWVdpb2JwczZ5X1FtbmNwaGtMVEVTNGdwNTVFUHM4MnM5R1p2MlZLODJSbldpQzhrN3BlYk56WHhLREp5RlpqTWdJSUQ?oc=5",
+   "titre": "« Magellan » : le navigateur portugais revisité par le cinéaste philippin Lav Diaz - Portugal.fr",
+   "source": "Portugal.fr",
+   "date": "Wed, 14 Oct 2026 03:09:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeVhqb3lKYmNwY0dDSjlSNkgyS2R6TFI4NjY0R0djQV84cW55WndOOVk4U1Yyb1BJam1zN0hRTWR4T2FYVDh0bXY1MFhGOWdQRExYY0pqSnloaG9uVVpmd2tWSkpHanRDSDM1WW1Sd1ZfWU1ubXdQNTZvWHBJRzBMcGgtN0tiS0dndXcxUTJuRVFidmhMT2FuT0c0ZTJHMENlLS00Z1RaeWE?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
