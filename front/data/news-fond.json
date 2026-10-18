@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-18T17:17:03.251Z",
+ "genere": "2026-10-18T20:34:05.376Z",
  "globales": [
   {
    "titre": "Fed : La probabilité d’une hausse des taux chute à 13 %, le Bitcoin souffle - TradingView",
@@ -148,6 +148,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 16 Oct 2026 15:35:07 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 16 Oct 2026 07:00:00 GMT",
@@ -173,27 +182,9 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Stellantis-Baisse de 1% sur un an des livraisons au T3 - Les Echos",
-   "source": "Les Echos",
-   "date": "Tue, 13 Oct 2026 06:05:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNT3NUNWFGb0xFcWR5REs3SlY1c0lpVzhmbG44bHJGS01oanZsT3dzbHNvVXF2ZXlOb1BVMXRSOWVjdWlwczhOOGJpS0s5N3A1YlNjdDZSclZwOG1zb2t1Y05tTGRaTm5vbHEzMVBvdUxzQmI4Sy1NQVJDMUZ1bkdCYU5HdHhUNFlfOEl3cVBqelRObE1iZmk5OUcxMmlSMzI4Z1lTNFp6c2sydHowXy1uSlVuVDdrcmpDT0g5dFhMeXFlZ1Bo?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "negative"
   }
  ],
  "eco": [
-  {
-   "titre": "Violences du 17 octobre : le gouvernement sous pression, Macron très attendu - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 18 Oct 2026 16:49:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNeXNGT0ZCRU5iakFRLWV3ZUpaaS1UcVgwTXRLY3N5WDVnaV9icVVBRVBZdDdneGh2MUtQMDBEVTA0WVlXSDFsdTRVTlBqRjRiUldzVGEydW1CQTdqWlhiRzNCM0szalN5a2xYSFVlODhPY1QxVmtOLTM1Y3RKamdkdkYyb09yUVZqX0FKc2ZlRldRWVVtSkEwZzVYUTFpYVlwSF9NYXJtZm1BS1ZOb1R3VFN4YVhJVXlJMldIN0twdlBkdFM5S2Z2bnVxX293VERmS3JadHFMWWtURVZ5dXBRWWdDTk9aQdIB6wFBVV95cUxOM3ZBQkxqVFJ5M3otMHY2UFpkOVhqcXMyY3JUTnR6b0p3cnlSR08tczhaN0RSODlKZXZNdWpJVnNjMVU0bk0zX2oxTHpMVGFLRU5CSTZqUFAyUGltLXFMMkpQQUVMWVI3MzZ2Z1Q3Z2Zoamplc0xPODhVaXRnUDZ6Y2I3UmtBbGhRVVJibVBHUWFlM0xFT2hTRW5uUloycEw2Z05FWGdtaGgteWhpa0MwVmFYMjlUdUdLVjJlRUgxcFlHLWZleXJLVmdDMnJnV2VnNlZySF9PYkR0c29BeWhVNUkxQ2VnTU9pR2NV?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
   {
    "titre": "Critiqué pour son opacité et jusqu'ici dirigé par un ancien jihadiste, le Fonds souverain de la Syrie se dote enfin d'un président",
    "source": "BFM Économie",
@@ -238,15 +229,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Bitcoin : Entre inflation et taux élevés, le rendement sous pression - TradingView",
-   "source": "TradingView",
-   "date": "Sat, 17 Oct 2026 19:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tZWJoRWhqeXN4cGtWSFhaZjBxcHdmZVU2YjI0OERpTkY1QmpXRl9uY29MejVMSkFPTjktMFVSQzREQktxbzc1aUp1Qm9fTDhxaXdZU0J6SF8tZWxiM2RUMFZlNklpbjFfblRsOA?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "S&P 500 - Les actions en vue vendredi: Apple, CoreWeave, Alphabet, Alcoa, Netflix, J.B. Hunt, Travelers",
@@ -441,10 +423,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Point sur... Echiquier Artificial Intelligence - Février 2023 - La Financière de l'Echiquier",
+   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Mai 2025 - La Financière de l'Echiquier",
    "source": "La Financière de l'Echiquier",
-   "date": "Thu, 16 Feb 2023 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
+   "date": "Fri, 23 May 2025 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRER2d2xjNml6RF8xWGdMT19ZM2xtcUtaRG5WZWtjWUNnOEF5M21QS21wZU9rTEZKVTh4eUI3R2o0UklWZnJjTV9HY0dPd3pmbHFmVENQekZ1VDNaZGlwTnRadFdJVDUwZEZJUm92cmFFbXFXX1JQMkNXc055TVNaWnB1d0tSdE1uaUJxNmdTQXdxWThnUlJHMUpQOGxSV09hckl6cUlidUo?oc=5",
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
