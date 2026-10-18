@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-18T13:57:05.161Z",
+ "genere": "2026-10-18T17:17:03.251Z",
  "globales": [
   {
    "titre": "Fed : La probabilité d’une hausse des taux chute à 13 %, le Bitcoin souffle - TradingView",
@@ -186,6 +186,24 @@
  ],
  "eco": [
   {
+   "titre": "Violences du 17 octobre : le gouvernement sous pression, Macron très attendu - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 18 Oct 2026 16:49:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNeXNGT0ZCRU5iakFRLWV3ZUpaaS1UcVgwTXRLY3N5WDVnaV9icVVBRVBZdDdneGh2MUtQMDBEVTA0WVlXSDFsdTRVTlBqRjRiUldzVGEydW1CQTdqWlhiRzNCM0szalN5a2xYSFVlODhPY1QxVmtOLTM1Y3RKamdkdkYyb09yUVZqX0FKc2ZlRldRWVVtSkEwZzVYUTFpYVlwSF9NYXJtZm1BS1ZOb1R3VFN4YVhJVXlJMldIN0twdlBkdFM5S2Z2bnVxX293VERmS3JadHFMWWtURVZ5dXBRWWdDTk9aQdIB6wFBVV95cUxOM3ZBQkxqVFJ5M3otMHY2UFpkOVhqcXMyY3JUTnR6b0p3cnlSR08tczhaN0RSODlKZXZNdWpJVnNjMVU0bk0zX2oxTHpMVGFLRU5CSTZqUFAyUGltLXFMMkpQQUVMWVI3MzZ2Z1Q3Z2Zoamplc0xPODhVaXRnUDZ6Y2I3UmtBbGhRVVJibVBHUWFlM0xFT2hTRW5uUloycEw2Z05FWGdtaGgteWhpa0MwVmFYMjlUdUdLVjJlRUgxcFlHLWZleXJLVmdDMnJnV2VnNlZySF9PYkR0c29BeWhVNUkxQ2VnTU9pR2NV?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Critiqué pour son opacité et jusqu'ici dirigé par un ancien jihadiste, le Fonds souverain de la Syrie se dote enfin d'un président",
+   "source": "BFM Économie",
+   "date": "Sun, 18 Oct 2026 14:39:58 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/critique-pour-son-opacite-et-jusqu-ici-dirige-par-un-ancien-jihadiste-le-fonds-souverain-de-la-syrie-se-dote-enfin-d-un-president_AD-202610180255.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Alexandre Bompard, PDG de Carrefour, dresse le bilan des dégradations commises le 17 octobre",
    "source": "BFM Économie",
    "date": "Sun, 18 Oct 2026 13:50:50 GMT",
@@ -229,33 +247,6 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "«La BCE semble vouloir réagir plus rapidement qu’en 2022 sur les taux» - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Sat, 17 Oct 2026 14:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeVdCZ3FkNkNiNndPdWZsaFMyaFlyeWFDWXI0MnpSU1gtbWEwYWlaLTJ0MUJkcDZzVkg5NjFFUU5ObVZvNmIzdnRNZF84XzFuVGJuT0YxNFNXUWFRcVloeWRhVUhpRWpxZTQwMXV4eFU2cFpubGRSOE9McUk2NTRRVlF0ZnZseW1EaDRxUDN2T1BSTlhIN29VOHFTZG9fYVQtVklNa243QWhCLVNBX0Rv?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La Banque du Canada prévoit une nette hausse de ses perspectives d’inflation avec la flambée des cours du pétrole, selon Macklem - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sat, 17 Oct 2026 13:58:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNSDZSRDlrNjQxdThSM0l2V1RnaVRGOTRpNF9GUnZiWEwzcGZwVVA1TDM0dDZSUzI4WV9WN1M0X1l6ZkExS2hEXzluNGNxUWE0Q2UyR29sb0Z2V2hXajMxakN5aVdSeWZZLUZVWk1Sb0dNdFBOSmhvNlZFSXQ0QUdubmVEVGI0OWpvWGcxMGVLcV9PQWtuOGhBbUxxSEpQQ1hCUEo0aWJENXEtUS1FTEdzZ0E4aXNaM2t4b2F2bU0tX0lKdkpqM3JLbDlqZDJvcU9SZFdCanJ3X3lTT3FrbnliOGQ0YXVLNHJaTXRoOUw1blM?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "\"Nous ne pouvons pas normaliser nos relations avec la Russie\": un ministre russe boycotté au FMI par des délégués européens",
-   "source": "BFM Économie",
-   "date": "Sat, 17 Oct 2026 13:33:43 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/nous-ne-pouvons-pas-normaliser-nos-relations-avec-la-russie-un-ministre-russe-boycotte-au-fmi-par-des-delegues-europeens_AN-202610170233.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "S&P 500 - Les actions en vue vendredi: Apple, CoreWeave, Alphabet, Alcoa, Netflix, J.B. Hunt, Travelers",
@@ -450,10 +441,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Mai 2025 - La Financière de l'Echiquier",
+   "titre": "Point sur... Echiquier Artificial Intelligence - Février 2023 - La Financière de l'Echiquier",
    "source": "La Financière de l'Echiquier",
-   "date": "Fri, 23 May 2025 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRER2d2xjNml6RF8xWGdMT19ZM2xtcUtaRG5WZWtjWUNnOEF5M21QS21wZU9rTEZKVTh4eUI3R2o0UklWZnJjTV9HY0dPd3pmbHFmVENQekZ1VDNaZGlwTnRadFdJVDUwZEZJUm92cmFFbXFXX1JQMkNXc055TVNaWnB1d0tSdE1uaUJxNmdTQXdxWThnUlJHMUpQOGxSV09hckl6cUlidUo?oc=5",
+   "date": "Thu, 16 Feb 2023 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
