@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-22T20:00:23.384Z",
+ "genere": "2026-10-22T23:16:33.820Z",
  "globales": [
   {
    "titre": "Agenda mensuel économique international du vendredi 23 octobre 2026 au dimanche 22 novembre 2026 - TradingView",
@@ -29,15 +29,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Wall Street devrait ouvrir en hausse, les résultats de SpaceX et Super Micro ravivant l'engouement pour l'IA - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 21 Oct 2026 13:08:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPMFRvZDNIZnVMNlFtbV9VdmdBN2hXT1pBOG5ZWEF6U3daRDBKSTNSTlNzYnBnMG8xcXRORVNVclNtWkQ1a2stc0JpYlU0bXFFbzlvRGs1bld4ajFNTnFUSTdpa0E0Z3IxNEZOTU5Gd0hNd0Y4cVd5UC1GQnBSbE5jQnB0SWJRckczd0NGeGRhUS14VmZLNjRkMS1sb0tYM2ZKU3BuV2UxWlEzQVd5VDRFNUpxX2lLU2Z1T3JIQjJRN1psMHFfZ2RxOE1FdzVIbzdjNFBQUW5aUGgzbU9Bc3Z1d1E4TktJQkNBS0JJUHhqYTYyaU9fOWpIY2p5ZjB5cjFmMmNNcVM1d2d6RUFuQWhaZDJmMDQ4aWxf0gGYAkFVX3lxTE8wVG9kM0hmdUw2UW1tX1V2Z0E3aFdPWkE4bllYQXpTd1pEMEpJM1JOU3NicGcwbzFxdE5FU1VyU21aRDVray1zQmliVTRtcUVvOW9EazVuV3hqMU1OcVRJN2lrQTRncjE0Rk5NTkZ3SE13RjhxV3lQLUZCcFJsTmNCcHRJYlFyRzN3Q0Z4ZGFRLXhWZks2NGQxLWxvS1gzZkpTcG5XZTFaUTNBV3lUNEU1SnFfaUtTZnVPckhCMlE3WmwwcV9nZHE4TUV3NUhvN2M0UFBRblpQaDNtT0FzdnV3UThOS0lCQ0FLQklQeGphNjJpT185akhjanlmMHlyMWYyY01xUzV3Z3pFQW5BaFpkMmYwNDhpbF8?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "L'Europe vue en légère hausse avant une pluie de résultats, optimisme sur la tech (actualisé) - Boursorama",
    "source": "Boursorama",
    "date": "Wed, 21 Oct 2026 06:54:28 GMT",
@@ -54,6 +45,15 @@
    "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "La surprise de Trump sur la Russie fait baisser le pétrole — pourquoi l'or frôle $4,200 ? - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 18 Oct 2026 22:06:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kc2tuVWc2WTJ3a19GMGxsbWtnbEJEYkRkeVpRb0pOakJrd1VnRlZLZE1oNU1idndsTGZFZlIwMEdlMjVCR0lMUlZLbTFXd1NVczg2cmQ5QV8xNlVWZENjMVJHemFsZw?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "Fed : La probabilité d’une hausse des taux chute à 13 %, le Bitcoin souffle - TradingView",
@@ -112,10 +112,10 @@
  ],
  "produits": [
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "titre": "Median Technologies présentera les services d’imagerie centralisée et d’analyse d’images par IA d’iCRO pour le - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 22 Oct 2026 17:51:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "date": "Wed, 21 Oct 2026 15:45:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxOWkY2SGxFN2tHWkxubVA1Qkxvem13NlBXVWI5MjVqWTJmRi1iamU4VmljekNMdE9NM0hmbW81d0hVbXA3VnhRYm9KYUdRbnJKd19CeUJ4OG4ybUV2bHh6RjB4cjZOVi1HWkpOM2tLX2puZjVZUndTMl9GaUdKRWVvbXBMRTRuem1LaGs0Z0hSRVJDb0dNRXhoWUxhVzNRaHRWVnY5S2NTVzMyTlFyZE5haGt6Z1g1Q2xBSC1DaURQYkRBSHFLa2VFR0owY05HNVRmc0pFbVNHSUhFS1poczhVMXV0NzFNX3Jib0RURWNuZFA2TkVtNThhWTlMU0hTYkdSaDJqdmRoWkVtcDIwVGlkWVlGdnotcGRGbFlJeTNrQ0pJOGRGMjk1TEhCRVdCbURlZ2NrbVl5aWtETmxTcGdZaS1zdFJlTEtZVTcwRTFzWEPSAdYCQVVfeXFMTWRWMEZINUhaNGZtQnF1N24zTnJLekJ1Uk4wdmpSeG1zbGNRVXJTbzBUWDYzbHRtLTJ3dUdfcV82V1RXcnV6TDNoMEU2MlBpU0l3UDBmTGdZcU9XaUVTbGhjTzFJOUVhYlZ3QW9OY2I3UlFZeTdGWlVxLUgxNXlrbXp5VjVfTDRaZXBuV2ppUFZHa3ZpdXB3eVBCdW1mRVZTTTRCQzRNZkI1OE5rY3ZIcko2ZWVldnVoajR0R1c5REh4OXBzYW5YNEgtNmt2NmxGa1RRWjJ3ZTRuSURtU19pRkVhbjhneVBVanNIaWFKTndlNjFWYjdFdXladjBhVHlVVHcxN283djZvcnVnY21XTHItbFJzajJMakduTHBLMWoyb3UyUUI2MkJRVnN1bjVFSUR3TGpoRTFzcEFiUDFSTWFaSTljNEVFRkg3Z2FuOFFueW9ldjdR?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -144,15 +144,6 @@
    "date": "Wed, 21 Oct 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
    "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 20 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -186,13 +177,76 @@
  ],
  "eco": [
   {
-   "titre": "Selon certaines sources, les banques américaines bloqueraient l'accès des agents d'IA tiers aux comptes de leu - Boursorama",
+   "titre": "VINCI Cours Action DG, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 22 Oct 2026 19:41:57 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNMDF2T0pLSEpDcExCWWNTejlqTDJ3OGdyMWFxYlNxTWJkdUVsNG5IVjk5RldDTE4waVdibW1qNDRFZjBHcmcxVGJ1NWNmNVNsUEJrR3JVWmpDclJTaGVYaVE3Q3AwSDlfb0xwc01POFZkWU5TZThOMkZ3RU82NHVwQ09NNHh6WWdaZXhqM0NDNl9PcTFqcU5WTTA4ejZ0bHh4UlZWZHhvckxaaDVTQWlTSkRvd2Rhc3lRM0Q2cXVVR2w1Rnl3VUFXZkRJQk5hZVJTVm1rY0Rab0VsU05pSEU4ak9VMVNSSWFlTFZfMnpWb3dnVzVlcTZUOFppMmVuYmUxWW5SSER2S1UwNWUyNDVkNWlndk0weXpfaGlmd2pQRG5Sc03SAagCQVVfeXFMUC04SVRLLU9EcGoxbGNOQjJVN0F0dnVYaVNGbXppdmFaS21OOXFJSFlxUjdpZ2RXUHlpMlVBT1hGN19QWllwV0ppZlBlRUxzenB3NG9hQW5lNExadHBOcHo4VUc4UmgxRS1iemxLdEhPZFBWUFIyQUFYcDNucE9mUUFhSXo5aVFQN3RPNC1RTWJLWEYxR2VuVmtwU3pTWjBpcnp2Y3lUQWxVd3NMeEg1RzBUbHhjejN0ZDFkN3pXcTZPYmhIOVhfdHBPaGxSRVpHSzYybzY2OU1SanRFMWdEVGZxNkRzeWMyc2JpM3BuZVMtQ1BqZU9KZ3QzMXJMYlpiTUV3eEpiOGc1MVlnOUpOWHoweGtzdmlwUC1IMWhlRWI0eTA0WFJmNjQ?oc=5",
-   "tag": "CAC 40",
+   "date": "Thu, 22 Oct 2026 23:08:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oX1NuMnp3Q1Ezd2xRVlIzdFlYNm1xSS1JYVB4YWhHSlBKSUpGZ0stcTF3MEhfWnpVTW52TjhLSlpfYWsxRVdIUzFZSlFIa2Jz?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 22 Oct 2026 23:02:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 22 Oct 2026 22:56:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "THALES Cours Action HO, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 22 Oct 2026 22:52:25 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 22 Oct 2026 22:45:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 22 Oct 2026 22:44:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Records annuels: TotalEnergies et Euronext tirent la cote",
+   "source": "ABC Bourse",
+   "date": "Thu, 22 Oct 2026 21:37:00 GMT",
+   "lien": "https://www.abcbourse.com/marches/records-annuels-totalenergies-et-euronext-tirent-la-cote_704764",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "USA: Wall Street finit dans le rouge, les technologiques décrochent et le pétrole flambe",
+   "source": "ABC Bourse",
+   "date": "Thu, 22 Oct 2026 20:31:21 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-dans-le-rouge-les-technologiques-decrochent-et-le-petrol_704761",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
   },
   {
    "titre": "Bitcoin : L’inflation américaine menace le seuil des 80 000 $ - TradingView",
@@ -218,6 +272,15 @@
    "date": "Thu, 22 Oct 2026 18:17:06 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWnluS3RmY0VyU1FRX1VCYzUwWEh6S2xUS2t2cUVKS3pWZjBmWVdVZkJRU0d6eWo3MTZac01mcTllR0puM2dDb0xtMU1iVmdkTnFkeXpXdkNPaFk4ekRSUWRWSmJNUm9HUnl2dm1FNjZyTEw0V3BXeXN2U2kxX0Y0aURoU3FQNWNMbnBFUmgxcXR4cW1oSnJ4QmhMdjNfTURlbEdTYkFLVkN0M0hOeng2MVlkYXY4M21YU3ZZdUpucElqalJLTllaNE9xeHlZMks2SXdMdFlBRDhVa3BYaEstZE55QkVjcmhPN3Exdw?oc=5",
    "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Gold falls to more than two-month low as oil-fuelled inflation fears weigh - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 22 Oct 2026 18:16:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxObkpVSk5GRXROTWtLU1FYUDZzZWo4NlMzTHplV3BxYklKVzZjR2NiMmZXYXFXSzJJREJhTlFJVGNEdG1ZNnRGUVUwQVlrZTlMejlNNjNyWkhfMWZEeE1xWnFRTzVDQlBmT2FDSTI2VlYyc0VqU3RKdG9mMzA2Znc0aGhKalJGNU5NZVF0VUswUlAwbVQxZ0liclItTVZDb3FiRUFJSVNNbmpwaTBZdi1VOTR4ZGVyY3JKLUJCNHJyS0I2V1BZY3M1V2FqamVZTGU4dVVLY0ZReGo2Zmc?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -375,42 +438,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "On refait la séance : L'Oréal publie ce soir, mais Galderma lui vole la vedette en Bourse - 22/10",
-   "source": "BFM Économie",
-   "date": "Thu, 22 Oct 2026 16:06:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-on-refait-la-seance-l-oreal-publie-ce-soir-mais-galderma-lui-vole-la-vedette-en-bourse-22-10_VN-202610220757.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris finit en baisse, Hermès déçoit et la dette française inquiète",
-   "source": "ABC Bourse",
-   "date": "Thu, 22 Oct 2026 16:04:16 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-en-baisse-hermes-decoit-et-la-dette-francaise_704733",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Accor relève ses objectifs financiers pour 2026 après un 3e trimestre dopé par Céline Dion et le pape",
-   "source": "ABC Bourse",
-   "date": "Thu, 22 Oct 2026 16:03:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/accor-releve-ses-objectifs-financiers-pour-2026-apres-un-3e-trimestre-dope-par-c_704729",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Gold falls to more than two-month low as oil-fuelled inflation fears weigh - TradingView",
-   "source": "TradingView",
-   "date": "Thu, 22 Oct 2026 13:25:46 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQZkdHZDZYR2Y3UDN3MVJqV0VGREk1bVVnMHhRR3BWaVFrS1JaLWFIQlJyOU1tWFhZYVVJTkVZRWkyY1hyelI4YThkTmFROGNCVHVnbkRSX3JyVGJyNVQyNmJ5MDNzV2pWallqYjE3clhSa1hEc0QyNWxDNVVmUVNZVVNzald2MXdnN3UwMnFVVldfWTRfUGJjd1lxVHMwTTJGUVJxcllvWDNRclcwRnBBZ0Iza3N4dW1mYXJtbFZXWGpoTi1TbV91VkUtREZfb3MwY3VuWlpHOWMzZlU?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Turquie: la banque centrale abaisse son taux directeur d'un point, à 36 % - TradingView",
    "source": "TradingView",
    "date": "Thu, 22 Oct 2026 13:22:33 GMT",
@@ -423,10 +450,10 @@
  "fiscal": [],
  "uc": [
   {
-   "titre": "Carmignac Patrimoine : les moteurs du renouveau - investir.ch",
-   "source": "investir.ch",
-   "date": "Thu, 22 Oct 2026 06:00:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOVAxbHhRN2dUS1ZoNFR6ZUY2NUJ0VDhpdTJLUU1FT19mbXQ2VVRZUmNsYUExX05raFV6WlhCa0F2WEtLbURTUzEzVThjbnFVc3Zqa0Z0RFpPSjRKMUFBbC1nMUpSMldtRG9wMEdUdEJBMDFOSkNtdUJORkJfZGVEYnRoTDQ?oc=5",
+   "titre": "Carmignac Patrimoine : les moteurs du renouveau - PATRIMOINE24",
+   "source": "PATRIMOINE24",
+   "date": "Thu, 22 Oct 2026 04:06:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPelFxdmtVcUlRenFmZzgyRTlYRnV5V24zMzg0MUplQVBaRzVaWThOdHFNLWJpZ2o5aFlDcms2cEdtTEp1Wl9kUmhtU1BmV3hJOGNLbklwR1lOcFQxakc2blQzeDBiMWNKd0xXNUR6QUN2djZ2akZjTXV1d1B0ZFJxN2N1Yi1LaXBEdXZpRklvalNVQmlJRkRXQTV3?oc=5",
    "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
