@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-24T13:58:30.262Z",
+ "genere": "2026-10-24T17:22:48.024Z",
  "globales": [
   {
    "titre": "Stabilité financière mondiale: l’IA soutient la croissance, mais les risques «demeurent élevés», selon le FMI - Boursorama",
@@ -13,7 +13,7 @@
   {
    "titre": "Pourquoi la France ratera la nouvelle « mondialisation heureuse » - Les Echos",
    "source": "Les Echos",
-   "date": "Fri, 23 Oct 2026 12:53:51 GMT",
+   "date": "Fri, 23 Oct 2026 12:53:44 GMT",
    "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVFU3ejI2ZXBlN2NvYy1zQ0oxaWlzcEZrNlZjaHdEeW1jVkk2S014YnpaS0t1ZkNzSWRwN2xzV3BZUmpINE1YVmZCQ21EMk9BX1poamYwb2NQZmtPbXhyWTBIcERsV2V3T1BpcG5xVTg1QUQ2WUxQNWdtUGtlY0FjemRPUVdJX0poNjVibDVOaHJDQ21hMXV2NXNMNmx2VEpWQXVPRmpzaGVaUklwbVEwY1Zfbkd3ellJRmp3WmFQcw?oc=5",
    "tag": "International",
    "categorie": "globale",
@@ -141,6 +141,15 @@
  ],
  "eco": [
   {
+   "titre": "Moody’s épargne la France, mais Roland Lescure met en garde ceux qui veulent \"voter un budget en dérive\"",
+   "source": "BFM Économie",
+   "date": "Sat, 24 Oct 2026 13:59:49 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Le Japon dépend à 95% des États-Unis pour ses importations militaires mais commence à se tourner vers l'Europe (le français Thales est le premier à poser le pied sur l'archipel)",
    "source": "BFM Économie",
    "date": "Sat, 24 Oct 2026 09:32:00 GMT",
@@ -177,11 +186,20 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés : les bourses mondiales dans le doute – 23/10",
-   "source": "BFM Économie",
-   "date": "Fri, 23 Oct 2026 20:31:09 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/les-marches-les-bourses-mondiales-dans-le-doute-23-10_EN-202610230859.html",
-   "tag": "BFM Économie",
+   "titre": "Une avalanche de résultats financiers et la réunion de la Fed mettront à l'épreuve la reprise fragile du marché de l'IA - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 23 Oct 2026 21:13:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBkZ01mY0ppMl9fN0oxNXY2bUJOcFQ3b2xaLThpVEFjbTdidnRaTW8tNlcteElFbngyZ0JRMEVwYzFLUkl2NFJDTGMwNE8talUtTFFGMGpYMXFmcC12MjNhZTlRRVF0TE5tanJEUGlkM0pBMm9BUnV3?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Earnings flood, Fed meeting will test rickety AI market rally - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 23 Oct 2026 21:12:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZGNEWVRleTdIalQ1SHdkNVk5Rm1kRGYzZlM1eElBSVQyMGowaE5VWlZVVGxMbHFFTGVYTzJJRXhod3FMV19JUk15Q0pCMXpOUVR0Vkl5eXpkeU5BM2ZSdTlEajFXdlhoeVRtQ2pGdWlLX3FPU05KZWRkemV3eF9lZWJSN1VUOFVvUDdCRGs1b1VFR3RfQzF2ZXF1LTJ4Y0lLNjJnSS1HQXhUc2dnTXZiU2k3dWtPenFYeUlmczVPcjlsQmFwSzdEUw?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -204,13 +222,13 @@
    "sentiment": "positive"
   },
   {
-   "titre": "A suivre la semaine prochaine: Fed et BCE disputeront la vedette aux résultats d'entreprises - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Fri, 23 Oct 2026 16:59:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPY1hsclpyaGEwSVpmRG5wd3JGSkhOODVTdXFHSVF1emcyeGxwcWEyclZpOUxGcVlNRjhNMm95VU1vU005VGwtTVdGMjVQNDQ2Sk9FXzhmX29tVEt2dy0xUGN1eHVUd3B2SjFxbHV0RXAwaXJGY2JvZWhXSTVueUR3dzhkSnlQZ3RTY21JdDQxS2N3Y2RiX2tOWEFNODRlT2NWaVdnNk15UWJ1UERqWEJ2Ulg1ODFidVdkcV9SMQ?oc=5",
-   "tag": "BCE taux",
+   "titre": "SHREECEM: Volume growth lifted EBITDA, while fuel inflation pressured per-ton profitability - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 23 Oct 2026 18:02:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNb24zQlRIaTVCZFB0MG9NcURFMWRUbkVYZGxyR3R2aEZVUmlMaXVWbFlXT1dvS3JiZktyTjFuc2tZOU1hWjBYejl6NXFZZi10OENaNUNvbHdiWlc3clZENVhJb1QzQXA2cm9TTFE4MGRYblNDeWg2eEdlSXNRSmpudFpwVGpQYkRjbzBSWV9VNVpJejJBWFlxc3dPNVk3ZkVaN2dxamVDZHlSMHJMYVU3cGxBLURwS0xXbTVyYmZ1LUd2S3BvVHNXNWpvWDk3NzJHMTRINFJTZjduYi00NmIwZjlfQjFhRVY2ZDZiVWo3clNHc2UtNWt2dnlCOU9PRVBxa3J5dVh3?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "A suivre la semaine prochaine: Fed et BCE disputeront la vedette aux résultats d'entreprises",
@@ -240,15 +258,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "J. Safra Sarasin n'anticipe plus que deux hausses de taux de la BCE - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 23 Oct 2026 15:47:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQeWtaQVpOM25FZlNQLUxYOVI0Wlk2NmZoY2NheG1LS01reHVRb0lXZUNXS0k1RU5rSzFvckxULXY2bEhpQ2ZRX3ZoOGl5VzR0RlZHTXJyaENtN0pxSGxXd0lHdnR2YlFmYkVpazVUUDh2Ym9saEk1aXlHVG9DZUJCbWVvUnYybml0TmNIbHRaTXNSem5ZY2RyLXZwTHYyZkhlNTJRM0NvdkwydXhFWUI0a1plMXQzd0FHbUNMU01mMEM1WTlRUFRlSVhLRjk4NVgyN1l3RFZvT1pFN3BOUF9hcXJ30gHiAUFVX3lxTFB5a1pBWk4zbkVmU1AtTFg5UjRaWTY2ZmhjY2F4bUtLTWt4dVFvSVdlQ1dLSTVFTmtLMW9yTFQtdjZsSGlDZlFfdmg4aXlXNHRGVkdNcnJoQ203SnFIbFd3SUd2dHZiUWZiRWlrNVRQOHZib2xoSTVpeUdUb0NlQkJtZW9SdjJuaXROY0hsdFpNc1J6blljZHItdnBMdjJmSGU1MlEzQ292TDJ1eEVZQjRrWmUxdDN3QUdtQ0xTTWYwQzVZOVFQVGVJWEtGOTg1WDI3WXdEVm9PWkU3cE5QX2Fxcnc?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "CAC 40: La Bourse de Paris s'est repliée, le marché retient son souffle avant la décision de Moody's",
    "source": "ABC Bourse",
    "date": "Fri, 23 Oct 2026 15:46:37 GMT",
@@ -265,15 +274,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Bitcoin résiste, la Fed garde la main - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 23 Oct 2026 14:18:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMGx4RVF1NVkzQmdJLTZOS05abmpQWUs0bXFhTldyS0NoNHBQdEhDVXFTWV9hN3Z6ajRxbkxGaEhnemZEdkhNZW9tQmRhc2sxSWF0dDFHRk9lTThBQzBYTktFN0F4U2dVSWxYY3M4VWthb0dfZkF3SFFya2dzNUtLU1htbUtzMTIxTFZHWkxtNmhBT002Wlg1dEY5d2V3REh6SWt4eWlSLTNHcDlITGRmcDlCRXJQQWZ4OEHSAboBQVVfeXFMTTBseEVRdTVZM0JnSS02TktOWm5qUFlLNG1xYU5XcktDaDRwUHRIQ1VxU1lfYTd2emo0cW5MRmhIZ3pmRHZITWVvbUJkYXNrMUlhdHQxR0ZPZU04QUMwWE5LRTdBeFNnVUlsWGNzOFVrYW9HX2ZBd0hRcmtnczVLS1NYbW1LczEyMUxWR1pMbTZoQU9NNlpYNXRGOXdld0RIeklreHlpUi0zR3A5SExkZnA5QkVyUEFmeDhB?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "S&P 500 - Les actions à suivre vendredi: AT&T, Verizon, SpaceX, Crown Castle, Microsoft, Tesla, SK Hynix, Moderna, American Express",
