@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-25T09:44:56.678Z",
+ "genere": "2026-10-25T14:18:31.739Z",
  "globales": [
   {
    "titre": "Stabilité financière mondiale: l’IA soutient la croissance, mais les risques «demeurent élevés», selon le FMI - Boursorama",
@@ -9,15 +9,6 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Pourquoi la France ratera la nouvelle « mondialisation heureuse » - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 23 Oct 2026 12:53:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVFU3ejI2ZXBlN2NvYy1zQ0oxaWlzcEZrNlZjaHdEeW1jVkk2S014YnpaS0t1ZkNzSWRwN2xzV3BZUmpINE1YVmZCQ21EMk9BX1poamYwb2NQZmtPbXhyWTBIcERsV2V3T1BpcG5xVTg1QUQ2WUxQNWdtUGtlY0FjemRPUVdJX0poNjVibDVOaHJDQ21hMXV2NXNMNmx2VEpWQXVPRmpzaGVaUklwbVEwY1Zfbkd3ellJRmp3WmFQcw?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "negative"
   },
   {
    "titre": "Bourses européennes : le CAC 40 prudent avant Moody’s - Le Revenu",
@@ -67,6 +58,24 @@
  ],
  "produits": [
   {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 23 Oct 2026 17:50:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 23 Oct 2026 15:37:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 23 Oct 2026 15:36:45 GMT",
@@ -81,15 +90,6 @@
    "date": "Fri, 23 Oct 2026 15:35:25 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Median Technologies présentera les services d’imagerie centralisée et d’analyse d’images par IA d’iCRO pour le - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 21 Oct 2026 15:45:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxOWkY2SGxFN2tHWkxubVA1Qkxvem13NlBXVWI5MjVqWTJmRi1iamU4VmljekNMdE9NM0hmbW81d0hVbXA3VnhRYm9KYUdRbnJKd19CeUJ4OG4ybUV2bHh6RjB4cjZOVi1HWkpOM2tLX2puZjVZUndTMl9GaUdKRWVvbXBMRTRuem1LaGs0Z0hSRVJDb0dNRXhoWUxhVzNRaHRWVnY5S2NTVzMyTlFyZE5haGt6Z1g1Q2xBSC1DaURQYkRBSHFLa2VFR0owY05HNVRmc0pFbVNHSUhFS1poczhVMXV0NzFNX3Jib0RURWNuZFA2TkVtNThhWTlMU0hTYkdSaDJqdmRoWkVtcDIwVGlkWVlGdnotcGRGbFlJeTNrQ0pJOGRGMjk1TEhCRVdCbURlZ2NrbVl5aWtETmxTcGdZaS1zdFJlTEtZVTcwRTFzWEPSAdYCQVVfeXFMTWRWMEZINUhaNGZtQnF1N24zTnJLekJ1Uk4wdmpSeG1zbGNRVXJTbzBUWDYzbHRtLTJ3dUdfcV82V1RXcnV6TDNoMEU2MlBpU0l3UDBmTGdZcU9XaUVTbGhjTzFJOUVhYlZ3QW9OY2I3UlFZeTdGWlVxLUgxNXlrbXp5VjVfTDRaZXBuV2ppUFZHa3ZpdXB3eVBCdW1mRVZTTTRCQzRNZkI1OE5rY3ZIcko2ZWVldnVoajR0R1c5REh4OXBzYW5YNEgtNmt2NmxGa1RRWjJ3ZTRuSURtU19pRkVhbjhneVBVanNIaWFKTndlNjFWYjdFdXladjBhVHlVVHcxN283djZvcnVnY21XTHItbFJzajJMakduTHBLMWoyb3UyUUI2MkJRVnN1bjVFSUR3TGpoRTFzcEFiUDFSTWFaSTljNEVFRkg3Z2FuOFFueW9ldjdR?oc=5",
-   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -112,15 +112,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Stellantis plonge encore de près de 6 % ce lundi, l'action a perdu 60 % en 2026 - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 19 Oct 2026 13:31:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMm1kT2hESS1GS0VXUGQxTl9zcVJ2eHc2eEQ4QTNJSEpWOVdXaDlGcjVDcFZsR0VnVXVVR2lXWnI0ZFFIZS1MOElFQzB4Q2hqUGhNZHlibDBDNlRwSjhvdF9kS2U1eTV0Z1NuamFFb2dvVXpncDd5Um44RUFMc05sYVl6NlhLNkswMEc3bDFtbkItRzdicHdHYnB5RWw4ckJaUnlwYXBsM2hDVjBNZDJBN2o3LXhhUQ?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Societe generale : «Il y a un 'côté panique'»… Stellantis, Carrefour, URW, Société Générale, Airbus, LVMH, ces actions dans le viseur de la Bourse après le week-end de violences en France - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Mon, 19 Oct 2026 11:04:05 GMT",
@@ -141,6 +132,33 @@
  ],
  "eco": [
   {
+   "titre": "Immobilier en Israël : les prix baissent, l'inflation ralentit - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Sun, 25 Oct 2026 13:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMjVRS2pPNlg4RGZjaXFoQ3h0RkZ3azQ1WWtvRW5JT3VSSUM4WlFPd3JaOFo3WmpOcXJHTThRT1RzZ3czMmNWaXlRT3pVTGdJMFVpN0NtVHBFaDRlTElVRW9peUxKeXl6ZFhPbEM3eXE2cFZ6N1NGWEYzRmZmWGpxNmZuNzhEU0pNUTRUVFdaZGMta21qZDRGOW1DZHp6NDVpSlE5ME5PZjBLQnJWMFNyRFdiSFk?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Négociations sociales, élections en Israël, taux, Ballon d'Or… Les rendez-vous à ne pas manquer la semaine du 26 octobre - Les Echos",
+   "source": "Les Echos",
+   "date": "Sun, 25 Oct 2026 11:58:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQZ3FVbURxRlFGNVQ4ZlIwcUpzU281VXJUZHZUSk5RcUZZZ3VwdzJsTzNDYm9tZllyelFxdjRnWXhzWnJ3ZmJiRFlTeGJaUFRFeE5sTFRtSERISlQxck1DSnEzUk9qMWNzeWYwQnhYcjZqN0k1dGxwS2cwalRDZjcwbV9nWEpqZXJaNzFDQ0JQczhpRW5TenNOazVERm0xNXRrWVM4Q1h0NWJ3cXY3ZVZHV2lsblE2eXhHbWFoY1E2Z1J6MWotUFBfbkRmWDlLTU5ILVJlcGs2dnRTUFdraE5QSnV6ZEprcS00Wm9rZHdlQXEtUks5TVl4N1M4RmtMdkJJWFJlMWdUNnlMQkk?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Malgré un taux de chômage au plus haut, \"44% des entreprises ont des difficultés de recrutement\", constate le directeur général de France Travail",
+   "source": "BFM Économie",
+   "date": "Sun, 25 Oct 2026 09:56:29 GMT",
+   "lien": "https://www.bfmtv.com/economie/emploi/malgre-un-taux-de-chomage-au-plus-haut-44-des-entreprises-ont-des-difficultes-de-recrutement-constate-le-directeur-general-de-france-travail_AV-202610250140.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Des taux d'intérêt à plus de 400%, 82% des ménages endettés... Au Brésil, la dette pèse de tout son poids sur le duel présidentiel entre Lula et Bolsonaro",
    "source": "BFM Économie",
    "date": "Sun, 25 Oct 2026 05:59:00 GMT",
@@ -148,6 +166,15 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Taux d'intérêt : la Fed tentée par une pause malgré l'inflation - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 24 Oct 2026 22:01:08 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ET1RlRFJSOHFfMFo0LUFWY1p3RkkzUHhaVndtaWR2Q3gwNjBvb3FLTzZxbXVxVzc2WFB6N2tqU2oxWGZMdXJRT0FOSjJjcHB4TU9veWl5aVBLalVDdjNwNWFn?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Moody’s épargne la France, mais Roland Lescure met en garde ceux qui veulent \"voter un budget en dérive\"",
