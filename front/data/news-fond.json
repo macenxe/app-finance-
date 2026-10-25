@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-25T14:18:31.739Z",
+ "genere": "2026-10-25T18:21:44.672Z",
  "globales": [
   {
    "titre": "Stabilité financière mondiale: l’IA soutient la croissance, mais les risques «demeurent élevés», selon le FMI - Boursorama",
@@ -9,6 +9,15 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Pourquoi la France ratera la nouvelle « mondialisation heureuse » - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 23 Oct 2026 12:53:44 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVFU3ejI2ZXBlN2NvYy1zQ0oxaWlzcEZrNlZjaHdEeW1jVkk2S014YnpaS0t1ZkNzSWRwN2xzV3BZUmpINE1YVmZCQ21EMk9BX1poamYwb2NQZmtPbXhyWTBIcERsV2V3T1BpcG5xVTg1QUQ2WUxQNWdtUGtlY0FjemRPUVdJX0poNjVibDVOaHJDQ21hMXV2NXNMNmx2VEpWQXVPRmpzaGVaUklwbVEwY1Zfbkd3ellJRmp3WmFQcw?oc=5",
+   "tag": "International",
+   "categorie": "globale",
+   "sentiment": "negative"
   },
   {
    "titre": "Bourses européennes : le CAC 40 prudent avant Moody’s - Le Revenu",
@@ -131,6 +140,15 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Le japonais SoftBank prévoit de participer à un investissement de 50 milliards de dollars dans l’intelligence artificielle en Malaisie, rapporte Nikkei - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 25 Oct 2026 17:34:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPMEpHMzFrRTRMV3NiaWNuWDdwV2NMRll5SnJsLWJvOWxMd0ZvdGJqX0pKV3k1TTZtWXo4NVBfenhES1J5QmJoR2FEbjJJaWdrQ25yTmoxNGUxdkFfZmFZRm9md2trVzFfekpZUi1HYmpGaDlZbmt5dVNvaUdZeDhiVXhadm1wOEt0Z0tzTk1jQkNHcGtCc1RELXhWWFB5bUxUMTFEVFJjcTdxempTY3JKM205bnBwSW9hNF91R0RtajRJQjZkbU16ZmdNSGhEOVRXblh2b3BqZW1RQnBpd3RBN2g4RXNsUjdRVWUxY05Pd2w?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Immobilier en Israël : les prix baissent, l'inflation ralentit - Le Revenu",
    "source": "Le Revenu",
