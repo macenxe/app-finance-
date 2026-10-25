@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-25T18:21:44.672Z",
+ "genere": "2026-10-25T21:41:43.165Z",
  "globales": [
   {
    "titre": "Stabilité financière mondiale: l’IA soutient la croissance, mais les risques «demeurent élevés», selon le FMI - Boursorama",
@@ -47,10 +47,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Cac 40 : Faisant fi de la défiance du marché envers la dette tricolore, le CAC 40, avec l'aide précieuse d'Essilorluxottica, gagne plus de 1% - BFM Bourse",
+   "titre": "Marché : La défiance est historique, pour la première fois depuis 2002, le taux d'emprunt à 10 ans de la France franchit le cap symbolique des 5% - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Wed, 21 Oct 2026 15:49:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOaTZQRU5NelhYbFhJdl93Tk1Uamt2T1JUeHhUaWFVeGxPM3F0aTBZWVFycWxhNkphc3JkRWxGMFlsNjJOSjlHMDFIRjZHMTJxTXZUOUdhVWMxNThPYm5nbGVKb0tVeHdIVVVmUExXWlNGUHFYNHdUcFBWaWhIaWdiRW1PbGFmS3JfQ0NkQ0pRU2o5eGJ5ZU5VdWxvMTJqblB2SW1qZHZJUS1yQXNkc2hXbjI4ZGIxSXFVWnJDQURPWWN6SnYtejRibW5Pa0JuVTJpMDZqOUNRek9hTHNzaE1fRnAxWElGY3hzV0NmSGRaelVBb2lRYzhWNENFVG9XNU5YWXhqdTZXVlRSTEdFR0xXOElRUHFTd21nLXJ0OGxlUk5LQ2hUblg5WU95QVlZWms?oc=5",
+   "date": "Wed, 21 Oct 2026 09:07:05 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxPeTNVZlh6cENqM2U2SUtSM0FYZmRZYU83SFZ4WWt3RzAzZ1FoMm9jVnlBbVZMZE4zRjdIRHYyUGtxM1lyVkxKSjdpOTdYRXRweTZXZGFiZkZqT0cxQ01EWkplWDZYWEozSy02X01EX05waFNXUzVWd0ZwT0szSW82dFBCUS1jUVVHRG81RFRoY3NSMUNHNkpaMDF1MjdBMmRBZjBYTjJIaGtTNVFwRlE4Zmdxd3BrU3Z0cmEzd3dvU3JKZm1aUlVXWFhUdXFZaDJ1ZlhlcHV4OEdSaXRjLUp2QXA0UXlQb2lRaWtublRsN2VCR284ekJDQmRYTHlncnU5Q2d0Q1hwRi1iZWRJb3JyOTdhQzNiUmdCNVdVN2g2SXoyV3pRZ1hvNm1YYw?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
@@ -67,24 +67,6 @@
  ],
  "produits": [
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 23 Oct 2026 17:50:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 23 Oct 2026 15:37:44 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 23 Oct 2026 15:36:45 GMT",
@@ -99,6 +81,24 @@
    "date": "Fri, 23 Oct 2026 15:35:25 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Action Rheinmetall AG | Cours RHM Bourse Xetra - Zonebourse Suisse - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 23 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5lcUp4TGUtRk9naGdVa2FGMFFWZ3ZqTlFMMFU2TFV3cUdSTGh0LUE2RnU4ZXdZRVlKYWxCME9FbmFEbFBfT3RxMXVoa1Zuekc5TXNzWGpuWFZnNFpZU1kyTWVDWlNKQnJzZVRNZzJR?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 23 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -141,11 +141,20 @@
  ],
  "eco": [
   {
-   "titre": "Le japonais SoftBank prévoit de participer à un investissement de 50 milliards de dollars dans l’intelligence artificielle en Malaisie, rapporte Nikkei - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 25 Oct 2026 17:34:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPMEpHMzFrRTRMV3NiaWNuWDdwV2NMRll5SnJsLWJvOWxMd0ZvdGJqX0pKV3k1TTZtWXo4NVBfenhES1J5QmJoR2FEbjJJaWdrQ25yTmoxNGUxdkFfZmFZRm9md2trVzFfekpZUi1HYmpGaDlZbmt5dVNvaUdZeDhiVXhadm1wOEt0Z0tzTk1jQkNHcGtCc1RELXhWWFB5bUxUMTFEVFJjcTdxempTY3JKM205bnBwSW9hNF91R0RtajRJQjZkbU16ZmdNSGhEOVRXblh2b3BqZW1RQnBpd3RBN2g4RXNsUjdRVWUxY05Pd2w?oc=5",
-   "tag": "bourse",
+   "titre": "La BCE se dirige vers un statu quo sur fond d’envolée des spreads - L'Agefi",
+   "source": "L'Agefi",
+   "date": "Sun, 25 Oct 2026 18:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPLS16RFAzb0hUemJXQS1mdGZhaUVxVC12aWUyZjBZQktQbzJ3Z3FGU0ZlcVFGNHlZYmEyWkVUazlVd01xUjJaNmZyU1FGdlpReDRXV3hiakRyZ0E2bm1TQ1JCamRLWVRqMjdVVnlXVFo0MzhEdGJ3TTl3ZGw2cFN4YW1UV21ncTdGZFZaSDQwOGtubzR4NTUxVU16eWl3SjczWXQ2ZXdfZTVPQVE?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Un responsable de la BCE considère l’euro numérique comme essentiel à la protection de la « souveraineté » de l’UE - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 25 Oct 2026 15:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5WZjBGNGpEbGFCbEFOOGJGY1kwY1puVHd3ai1rUkZONHRybHZjN0x2YXNhbkczVWxpMG00NXRSclFicnFPbHJSNzd4STNZbFdnblJUdVVrNTI5Y1d0d0U2Zm1vZFZKbTBIdmJjQWNjMA?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -155,15 +164,6 @@
    "date": "Sun, 25 Oct 2026 13:30:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMjVRS2pPNlg4RGZjaXFoQ3h0RkZ3azQ1WWtvRW5JT3VSSUM4WlFPd3JaOFo3WmpOcXJHTThRT1RzZ3czMmNWaXlRT3pVTGdJMFVpN0NtVHBFaDRlTElVRW9peUxKeXl6ZFhPbEM3eXE2cFZ6N1NGWEYzRmZmWGpxNmZuNzhEU0pNUTRUVFdaZGMta21qZDRGOW1DZHp6NDVpSlE5ME5PZjBLQnJWMFNyRFdiSFk?oc=5",
    "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Négociations sociales, élections en Israël, taux, Ballon d'Or… Les rendez-vous à ne pas manquer la semaine du 26 octobre - Les Echos",
-   "source": "Les Echos",
-   "date": "Sun, 25 Oct 2026 11:58:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQZ3FVbURxRlFGNVQ4ZlIwcUpzU281VXJUZHZUSk5RcUZZZ3VwdzJsTzNDYm9tZllyelFxdjRnWXhzWnJ3ZmJiRFlTeGJaUFRFeE5sTFRtSERISlQxck1DSnEzUk9qMWNzeWYwQnhYcjZqN0k1dGxwS2cwalRDZjcwbV9nWEpqZXJaNzFDQ0JQczhpRW5TenNOazVERm0xNXRrWVM4Q1h0NWJ3cXY3ZVZHV2lsblE2eXhHbWFoY1E2Z1J6MWotUFBfbkRmWDlLTU5ILVJlcGs2dnRTUFdraE5QSnV6ZEprcS00Wm9rZHdlQXEtUks5TVl4N1M4RmtMdkJJWFJlMWdUNnlMQkk?oc=5",
-   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
