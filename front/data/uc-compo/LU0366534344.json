@@ -1,31 +1,31 @@
 {
  "isin": "LU0366534344",
  "alloc": {
-  "action": 98.6,
-  "obligation": 0,
-  "liquidite": 1.4,
+  "action": 97.3,
+  "obligation": 0.2,
+  "liquidite": 2.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 35.4
+   "pct": 38.3
   },
   {
    "nom": "Matériaux",
-   "pct": 24
+   "pct": 20.1
   },
   {
    "nom": "Industrie",
-   "pct": 20.8
+   "pct": 18.6
   },
   {
    "nom": "Santé",
-   "pct": 15
+   "pct": 17.2
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 3.2
+   "pct": 4.3
   },
   {
    "nom": "Technologie",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "Deere & Co",
-   "pct": 6.9
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 7
   },
   {
-   "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 6.5
+   "nom": "Deere & Co",
+   "pct": 5.9
   },
   {
    "nom": "Danone SA",
-   "pct": 5.1
+   "pct": 5
   },
   {
    "nom": "Sysco Corp",
-   "pct": 4.1
+   "pct": 4.4
   },
   {
-   "nom": "Ecolab Inc",
+   "nom": "Mowi ASA",
+   "pct": 4.4
+  },
+  {
+   "nom": "Thermo Fisher Scientific Inc",
    "pct": 4.1
   },
   {
    "nom": "Agilent Technologies Inc",
-   "pct": 3.7
-  },
-  {
-   "nom": "Sensient Technologies Corp",
-   "pct": 3.7
-  },
-  {
-   "nom": "Glanbia PLC",
-   "pct": 3.6
-  },
-  {
-   "nom": "Thermo Fisher Scientific Inc",
-   "pct": 3.6
+   "pct": 3.5
   },
   {
    "nom": "IDEXX Laboratories Inc",
-   "pct": 3.6
+   "pct": 3.5
+  },
+  {
+   "nom": "Zoetis Inc Class A",
+   "pct": 3.3
+  },
+  {
+   "nom": "Kerry Group PLC Class A",
+   "pct": 3.2
   }
  ]
 }

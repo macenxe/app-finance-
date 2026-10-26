@@ -1,38 +1,38 @@
 {
  "isin": "LU0104884860",
  "alloc": {
-  "action": 98.5,
+  "action": 99.1,
   "obligation": 0.2,
-  "liquidite": 1.3,
+  "liquidite": 0.8,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 73.9
+   "pct": 72.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 14.7
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 6.6
+   "pct": 15.8
   },
   {
    "nom": "Santé",
-   "pct": 3.4
+   "pct": 5.3
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 4.8
   },
   {
    "nom": "Technologie",
-   "pct": 1.4
-  },
-  {
-   "nom": "Immobilier",
-   "pct": 0
+   "pct": 1.2
   },
   {
    "nom": "Conso. cyclique",
+   "pct": 0.4
+  },
+  {
+   "nom": "Immobilier",
    "pct": 0
   },
   {
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Companhia De Saneamento Basico Do Estado De Sao Paulo",
-   "pct": 4.7
-  },
-  {
-   "nom": "Vertiv Holdings Co Class A",
-   "pct": 4.3
-  },
-  {
-   "nom": "Parker Hannifin Corp",
-   "pct": 4.2
+   "pct": 5.4
   },
   {
    "nom": "Ferguson Enterprises Inc",
-   "pct": 3.7
+   "pct": 4.8
   },
   {
-   "nom": "Fortune Brands Innovations Inc",
-   "pct": 3.5
-  },
-  {
-   "nom": "APi Group Corp",
-   "pct": 3.4
-  },
-  {
-   "nom": "Agilent Technologies Inc",
-   "pct": 3.3
-  },
-  {
-   "nom": "Ecolab Inc",
-   "pct": 3.3
+   "nom": "Parker Hannifin Corp",
+   "pct": 4.7
   },
   {
    "nom": "Veolia Environnement SA",
-   "pct": 3.3
+   "pct": 4.3
+  },
+  {
+   "nom": "Thermo Fisher Scientific Inc",
+   "pct": 3.7
   },
   {
    "nom": "Xylem Inc",
+   "pct": 3.6
+  },
+  {
+   "nom": "Pentair PLC",
+   "pct": 3.5
+  },
+  {
+   "nom": "Core & Main Inc Class A",
+   "pct": 3.3
+  },
+  {
+   "nom": "Advanced Drainage Systems Inc",
    "pct": 3.2
+  },
+  {
+   "nom": "Clean Harbors Inc",
+   "pct": 3.1
   }
  ]
 }

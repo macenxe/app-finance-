@@ -1,35 +1,35 @@
 {
  "isin": "LU0217139020",
  "alloc": {
-  "action": 99.2,
-  "obligation": 0.1,
-  "liquidite": 0.8,
+  "action": 97.7,
+  "obligation": 0.3,
+  "liquidite": 2.1,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. cyclique",
-   "pct": 62.6
+   "pct": 59.4
   },
   {
    "nom": "Finance",
-   "pct": 12.3
+   "pct": 12.7
   },
   {
    "nom": "Conso. de base",
-   "pct": 10.7
+   "pct": 11.3
   },
   {
    "nom": "Santé",
-   "pct": 7.3
+   "pct": 8
   },
   {
    "nom": "Technologie",
-   "pct": 5.9
+   "pct": 7.3
   },
   {
    "nom": "Immobilier",
-   "pct": 1
+   "pct": 1.4
   },
   {
    "nom": "Matériaux",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "American Express Co",
+   "nom": "Visa Inc Class A",
    "pct": 4.6
   },
   {
-   "nom": "Galderma Group AG Registered Shares",
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
+   "pct": 4.5
+  },
+  {
+   "nom": "American Express Co",
    "pct": 4.4
   },
   {
-   "nom": "Hermes International SA",
-   "pct": 4.3
-  },
-  {
-   "nom": "Compagnie Financiere Richemont SA Class A",
+   "nom": "Marriott International Inc Class A",
    "pct": 4.2
   },
   {
-   "nom": "adidas AG",
-   "pct": 4.1
-  },
-  {
-   "nom": "Visa Inc Class A",
-   "pct": 4.1
-  },
-  {
-   "nom": "Marriott International Inc Class A",
-   "pct": 4
-  },
-  {
-   "nom": "InterContinental Hotels Group PLC",
-   "pct": 4
-  },
-  {
-   "nom": "Moncler SpA",
-   "pct": 3.9
+   "nom": "Galderma Group AG Registered Shares",
+   "pct": 4.2
   },
   {
    "nom": "Hilton Worldwide Holdings Inc",
-   "pct": 3.8
+   "pct": 4.1
+  },
+  {
+   "nom": "L'Oreal SA",
+   "pct": 3.9
+  },
+  {
+   "nom": "Hermes International SA",
+   "pct": 3.9
+  },
+  {
+   "nom": "Apple Inc",
+   "pct": 3.6
+  },
+  {
+   "nom": "Essilorluxottica",
+   "pct": 3.6
   }
  ]
 }

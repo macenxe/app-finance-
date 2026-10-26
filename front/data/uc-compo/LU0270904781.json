@@ -1,35 +1,39 @@
 {
  "isin": "LU0270904781",
  "alloc": {
-  "action": 98.3,
+  "action": 99.8,
   "obligation": 0,
-  "liquidite": 1.6,
+  "liquidite": 0.1,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 79.5
+   "pct": 65.9
   },
   {
    "nom": "Industrie",
-   "pct": 11.7
+   "pct": 15.1
   },
   {
    "nom": "Santé",
-   "pct": 5.8
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 1.9
-  },
-  {
-   "nom": "Immobilier",
-   "pct": 1.1
+   "pct": 8.1
   },
   {
    "nom": "Matériaux",
-   "pct": 0
+   "pct": 3.8
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 2.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 2.6
+  },
+  {
+   "nom": "Finance",
+   "pct": 1.7
   },
   {
    "nom": "Conso. de base",
@@ -37,10 +41,6 @@
   },
   {
    "nom": "Communication",
-   "pct": 0
-  },
-  {
-   "nom": "Finance",
    "pct": 0
   },
   {
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
+   "nom": "Palo Alto Networks Inc",
+   "pct": 6.9
+  },
+  {
    "nom": "KLA Corp",
-   "pct": 7.4
+   "pct": 6.8
   },
   {
    "nom": "Broadcom Inc",
-   "pct": 6.7
-  },
-  {
-   "nom": "Cisco Systems Inc",
-   "pct": 5.7
-  },
-  {
-   "nom": "Arista Networks Inc",
-   "pct": 5.4
-  },
-  {
-   "nom": "Palo Alto Networks Inc",
-   "pct": 4.4
+   "pct": 6.4
   },
   {
    "nom": "CrowdStrike Holdings Inc Class A",
-   "pct": 4.3
+   "pct": 5.8
   },
   {
-   "nom": "Cloudflare Inc",
-   "pct": 4.2
+   "nom": "Arista Networks Inc",
+   "pct": 5.6
   },
   {
    "nom": "Zscaler Inc",
-   "pct": 3.9
+   "pct": 4.6
   },
   {
-   "nom": "Okta Inc Class A",
+   "nom": "Thermo Fisher Scientific Inc",
+   "pct": 4.5
+  },
+  {
+   "nom": "Fortinet Inc",
+   "pct": 4.3
+  },
+  {
+   "nom": "Ecolab Inc",
    "pct": 3.7
   },
   {
-   "nom": "Onto Innovation Inc",
-   "pct": 3.7
+   "nom": "Cintas Corp",
+   "pct": 3.6
   }
  ]
 }
