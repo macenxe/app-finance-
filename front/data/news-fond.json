@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-31T16:01:49.590Z",
+ "genere": "2026-10-31T19:54:37.323Z",
  "globales": [
   {
    "titre": "Octobre gagnant sur le fil pour le Cac 40 - Les Echos",
@@ -13,7 +13,7 @@
   {
    "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Fri, 30 Oct 2026 12:07:25 GMT",
+   "date": "Fri, 30 Oct 2026 15:08:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
@@ -103,24 +103,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 30 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 30 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Actualités santé : selon une analyse, la hausse des taux de cancer du côlon aux États-Unis ne se limite pas au - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 29 Oct 2026 20:32:17 GMT",
@@ -128,6 +110,24 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Les Bourses européennes confiantes à l'approche de la BCE - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 29 Oct 2026 11:10:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQUUQzczNid1N6WHNvRGsxSTg1ZlU3aTVvUGpzVXlhbm1jemhIdkYxaWhqcERZbXZVRkw2LVZ2UkE0RkFmY2NrRGdNd2tFbG9fSkdzOTl1NTZYNWlwdEpfRGFrZGdJQTVCOUx1QU5zbmFQQzB6R0dqRjJyRXFWVUZHRklhdXFfb0trNGVTXzNUZ0w2YVM2SThFenp3aEZ2R3kzX3pqamJ4SzF4VFRqRnhhX1Jwd1dMRjN0WU1udEFyLXF6a3M1cEVrVFRNOTNSdUNBLVVDdjRn0gHWAUFVX3lxTFBRRDNzM2J3U3pYc29EazFJODVmVTdpNW9QanNVeWFubWN6aEh2RjFpaGpwRFltdlVGTDYtVnZSQTRGQWZjY2tEZ013a0Vsb19KR3M5OXU1Nlg1aXB0Sl9EYWtkZ0lBNUI5THVBTnNuYVBDMHpHR2pGMnJFcVZVRkdGSWF1cV9vS2s0ZVNfM1RnTDZhUzZJOEV6endoRnZHeTNfempqYnhLMXhUVGpGeGFfUnB3V0xGM3RZTW50QXItcXprczVwRWtUVE05M1J1Q0EtVUN2NGc?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 28 Oct 2026 20:54:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "Stellantis : Grâce à ses efforts sur les coûts et à des commentaites rassurants, Stellantis s'envole de 14% en Bourse… Mais le groupe a encore tout à prouver (et son action reste en baisse de 58% sur 2026) - BFM Bourse",
@@ -149,6 +149,15 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Des milliers de personnes regagnent une place de Lisbonne et pressent le gouvernement d’abandonner son projet de loi sur les loyers - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sat, 31 Oct 2026 19:40:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNRVdEcTJqTS1lVjZ3M3NaY3RFaVJrbFVJcGQzUmtXTi1LT3BRRnM0WkRXVWo2aVp2QTdjZ3N3SGJJWG5ja2RWTmNOSEJNV3pPM0xmODNYRHdlcmJvdjNaaTRFZXN6Y1NsMkpIbm1HS0Y3SHM4bDM3ZFgwYXd3MlhCZnN0a2NNRWZreXBIRDAyaHQya0szRzNYOERLQXRJMi1vTjhIckxJdVVoUENxR2haYmpmUC1CaUVUR3VMMElyUGZYbGpud2JpYXRNQXBvZUpONmFqTWZCamQ2SlpPQWxFNEtaS0FOWGNSMGpNVmRCczQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Une quarantaine de restaurants sont concernés à Paris, Bayonne ou Dijon: rattrapé par sa dette, l’un des principaux franchisés de KFC en France a été placé en procédure de sauvegarde",
    "source": "BFM Économie",
@@ -186,6 +195,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Gold sinks to one-year low, silver slips below $50 on inflation concerns, tech selloff - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 30 Oct 2026 21:58:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUEY1cFphblFsakJfVTU4dFRlTzVyZGZpRlNERF8xQTZVM2RRVzVUYTZMZFhyZ0MxdjBlbUhzdVllT2JaOUhxS0dXVEJTd20xWWhRc2psaFpyM1NVZ1JhR2o1T3U5S01qb1U5c09LM1dDZUJPNi1HQ1pnUWRDNnM1OTFTU2pWZmc2eTRjTlpvVlhRY0c1T1d5dnlVUHg4V19DS2RqcVZSV0FnWWFYWnRWLXk2c1lZc2dwcmtqMzhEaGVfLWt1elROcjV4dDY1TjZnTzRTbi02T3BNSjlFN2c?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "S&P 500 - Les actions en vue vendredi: Amazon, Intel, Chevron, Exxon Mobil, Strategy, Circle, Coinbase, Colgate-Palmolive",
    "source": "ABC Bourse",
    "date": "Fri, 30 Oct 2026 21:25:26 GMT",
@@ -193,6 +211,24 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Inflation Hurts Mass-mkt Liquor Portfolio: USL CEO - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 30 Oct 2026 21:13:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORnh5SkVlLXVlNWNPaGdmRmpiQ3lZeWIwX2FXYXBwR2w1NTBCNmFkLU1iV1ktV2J1SVRhVlF2dVFfVURtUUxLY3l4SWV5dk8wZEpQd2pxZ3dLQ1JDWFJ1dktCQWdORGJ0a1JEUGhESGJCMEdHQ3ZqWnlhcjRjb1NveXMzQ2VlSmNiTmt3X2lqZXo2LUdmRHBZZWVsQVJmelhEVkxVNjVUb1E?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "TITRES DU TRÉSOR-Les obligations américaines rebondissent, entraînant la plus forte baisse mensuelle des taux - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 30 Oct 2026 20:25:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxONmo5MFM1T2VmY09nbzE4NTljMlA3RmFVaVY5d3ozS1VncU1rQ1JKS0toMjB5REkwWFEyQmxDcmRLQ3ZzNjF5QlctSjFBdDBkNmcxWV9aZjR6Y0Z3OGdaQnptWEtnaEJiVEJ3ODF2aGNVZXphNy1Ud1ctZi1UNlBUb3RJcEg4ZHJ6TVBCTW01c1Y3NDZMOFNqR1AzZlFqeTN3UFNjeTVNX3BmMDl5RTBBRDkxV2gxdFRQS2dULXg1LUkyMDBaY1NqbEhnRVFQOVJ6dmJuNzJKbk55QlB0Ymw1VnNWeEpZNVhnRENHMVFmejd5bFZHd3FVdFh4NWhWN2ZIUUhodF9iN1FQZDFVU01KZHBSTVduVFJKLTZ2ZDBuLVE1TzE5WGtmaS130gGqAkFVX3lxTE42ajkwUzVPZWZjT2dvMTg1OWMyUDdGYVVpVjl3ejNLVWdxTWtDUkpLS2gyMHlESTBYUTJCbENyZEtDdnM2MXlCVy1KMUF0MGQ2ZzFZX1pmNHpjRnc4Z1pCem1YS2doQmJUQnc4MXZoY1VlemE3LVR3Vy1mLVQ2UFRvdElwSDhkcnpNUEJNbTVzVjc0Nkw4U2pHUDNmUWp5M3dQU2N5NU1fcGYwOXlFMEFEOTFXaDF0VFBLZ1QteDUtSTIwMFpjU2psSGdFUVA5Unp2Ym43MkpuTnlCUHRibDVWc1Z4Slk1WGdEQ0cxUWZ6N3lsVkd3cVV0WHg1aFY3ZkhRSGh0X2I3UVBkMVVTTUpkcFJNV25UUkotNnZkMG4tUTVPMTlYa2ZpLXc?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "Fed officials make case for rate hikes amid ongoing inflation concerns - TradingView",
@@ -204,15 +240,6 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Mary Daly, de la Réserve fédérale américaine (Fed) : l’intelligence artificielle compte pour la politique monétaire à moyen et à court terme - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 30 Oct 2026 18:34:54 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNdXVuVVdyV0lFRnljRmN5YkFuaDJsRTJTTUQ1VHI0T0dYNzQwNE1XZ1FtMUNGdXFtam05TXRJWjV0c2Rlcl9LdWpoWUx0X1p1N2s5aC1obHpxRGpLWVNWOTNBUl9udVEtUUVyOUF3cUs4UkNOTWlseHh6c0E2VW42ZXdMOE5tejd0YmltRno2SHVNaU8waU5WLUkwZkRBeXNVQy15MWhibUZNRlFlNi1xVGdfWVNHdDMycVRCWTd1X3VpUERuWmc2VUxfcnVtNHNZM3FDS05RQWhnN0NZWWtCMEtBVGsyVUM0a0E?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Winamp Group affiche 1,033 M€ de chiffre d’affaires au S1 2026 et réduit sa dette financière à 7,1 M€",
    "source": "ABC Bourse",
    "date": "Fri, 30 Oct 2026 17:40:08 GMT",
@@ -220,24 +247,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Musalem, de la Fed, estime qu'il est essentiel d'empêcher une propagation plus large des pressions inflationni - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 30 Oct 2026 17:21:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQd1d0M1V3VzFlMy1vSXAxWXlGWjY3ck1tQjRocDNTWV9FcGVXekU5NTRqWC1YcnFQeWNTcUhaY2FLYmFVQlZtaEtGaHNZb1hTVnJqcTZUQ0RoZnpJVXRNSUI3REpsejBOT1RWOGdTSDNwNGNSQk5ES1hxT2lfSHFrV2xCamZocHVMYmtDYVFFbHN0N1AxY1U3Q19TWG9VMHFJWEYtMUpUc1NGVGttZExMWGN5UHYtdkJYdnJMS3QtMko4clgwZ1hSZmZwZng5ZFAtc1hyU0t2d1Z4NGtmVVlyczJJVUpHSGltT3NfdzJRdHQ5bFQwU0ppb2hyOWdhV0pudks3eFR0ajdlUEZhVnctQmg1aVVEbGFTNjJRb3c5VjA2a05mOE5tZEJMSUMyOHRUYkHSAbICQVVfeXFMUHdXdDNVd1cxZTMtb0lwMVl5Rlo2N3JNbUI0aHAzU1lfRXBlV3pFOTU0algtWHJxUHljU3FIWmNhS2JhVUJWbWhLRmhzWW9YU1ZyanE2VENEaGZ6SVV0TUlCN0RKbHowTk9UVjhnU0gzcDRjUkJOREtYcU9pX0hxa1dsQmpmaHB1TGJrQ2FRRWxzdDdQMWNVN0NfU1hvVTBxSVhGLTFKVHNTRlRrbWRMTFhjeVB2LXZCWHZyTEt0LTJKOHJYMGdYUmZmcGZ4OWRQLXNYclNLdndWeDRrZlVZcnMySVVKR0hpbU9zX3cyUXR0OWxUMFNKaW9ocjlnYVdKbnZLN3hUdGo3ZVBGYVZ3LUJoNWlVRGxhUzYyUW93OVYwNmtOZjhObWRCTElDMjh0VGJB?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Musalem, de la Fed, estime qu'il est essentiel d'empêcher une propagation plus large des pressions inflationnistes - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 30 Oct 2026 17:21:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9ZdFVaQk5zRVJDbzdKV3lEeWJBdDNOaDNUNUhsOXVQaUxaWmFNbGR5VjBNWk41TldsQ2pkeTRGQy1wbUg3Ni0xeE1BcERFdE9vUFlNSS1ZRXE1dHhTYjdZSmdYZko1VDNnX1JuOVkyUDdqZDdfTnhZ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
   },
   {
    "titre": "L'Europe a reculé, la tech américaine pèse",
@@ -258,24 +267,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Toutes les retraites indexées sur l’inflation ? «Bien sûr», promet le Rassemblement national - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Fri, 30 Oct 2026 16:42:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYy1KQVZiSHZiX1ZoMC0zR0hTNEIyazB2S2RQV3EtcE5jZmNrbFhpbXdya21ROXpCb0Y4cnVTcGxyOVlvUW94dS15QmhyTWVSY1hCRUtWYWo3ejlSZE5IRUVnLU5jNUlTV190RWdQUTcwMnhsanpEcGJwYllnMWRxeGxGdWZCeFB0bjlFWW1DbXZLR2k2TWZuLV9kN3FhZzgxa3VELXd6bTNONnZ1OFl4dXdPSDl0Q3FRS3JVTnJsbWdqdnJfTjlYTFMtdGo?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Chronique : Fed restrictive, tech fragile et risque de déception sur les résultats - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 30 Oct 2026 16:25:59 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1NG9HWm5MN2FFYVNYbG9LcmFYbURiRExvcm93V0tCYksxRWFsRndoX0NkUlhEenNKX0Z0WUc2dERRblVzT2dpc195N0dLclloYnVwenhXcW53Vlhjc09vT3NhczFxQQ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "ECB President Lagarde to step down on 7 February 2027",
    "source": "BCE",
    "date": "Thu, 29 Oct 2026 11:00:00 +0100",
@@ -288,19 +279,19 @@
  "fiscal": [],
  "uc": [
   {
+   "titre": "Mauguio : le restaurant Le R devient Magellan, son chef reprend les commandes - Echo des Tribunes",
+   "source": "Echo des Tribunes",
+   "date": "Sat, 31 Oct 2026 14:46:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTE8tbXZLdUZQSUVraTV4SF81SXdvaW4yUVpzU0JaajNyQmNmeVFjQy0zUXgwZEZBMW1EemVlMWlPU0NmYldQQmFjMlZJdGIzM050eHJzd282YzJrOGktNUNlV2c5bGpQS3RHQlliTHlVMFBTNUlqd0N3X0JCNzF3VnBfbmZOZl9PWmk5WTJuRURlX3hCaDNZYVdKdWtoMjdsMlZrNllSMDd1WHU0S2VCNDRhejdYdE1oeGtwMEVoQUtybzFpRXRkZg?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "positive"
+  },
+  {
    "titre": "Route du rhum : Tabarly qui «osait tout», Kersauson «viril et explosif», Magellan «le plus grand de tous», Arthaud «la tornade»… Thomas Coville raconte les légendes des mers - Le Figaro",
    "source": "Le Figaro",
    "date": "Thu, 29 Oct 2026 06:15:04 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQdUQweE8tdDNJQndTZHNMT0Q4X21IaXBYSjFJM0w3M1YxSFJNX2FuaWp6M1BOZ2NlWEI0RVNsemdRX1pmNnZqdjk3NTlPa2xmVE5XUXpMaklHZmd6YjV5bTdFNGJKdkYxQVNsZ0pRU2VYd0ZXY3pxeW1vdHY5NF9SSmFWN0s3SW5pcW0wT0dqRUtpT24wMGw2QjNkazJCUjVzRzEwajZZbWhGTkxINHhZczBtbUdLMzhOY0x3VFhjeGt1V3psSTdUYTU5eF9hVG91STBYb28zaFpIaGVjVHlpTl8tdVdRRGlk?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Hendaye. « Jamais il n’a été question que Magellan accomplisse le premier tour du monde en bateau » : Beñat Zintzo-Garmendia propose une relecture historique de la célèbre expédition maritime - Sud Ouest",
-   "source": "Sud Ouest",
-   "date": "Tue, 27 Oct 2026 05:39:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxOUVE2emxuU2JCaWhwSjMtckwwdXp2WjlxNk1LNXVIUWF5MEhrOXdWR3RwQl9Mc09LQkhrTWVsRXNtLWhZczVMT1lOOGhKMGphblIzaktCeHVwQnpaZFJ2UHFEYVlDTGR3eWhlVWFqU25yR0VmMUMyUlN1OEJHaVhpb1BPeUpiRjloQndwQnRJZEN2MktPMlNfZmdJTGMyQ1hnWEdNRkRwSXJMaUlrZ2NVelJvNmVWTFYzNnRzdHVRME9wRUdNVm9pVk5pb3Y5dTViVlJyUGRXdi12d2F0aUc4eWpCUVNnR0l2OWROSjV4ZkpyQXlaMGdBNklRWUJoaTRhb05HWUtLZ1FrV3RhSnllNm5PVllXMk94ekxramZZcGVRRHg0TFNXbEJQUWJyLXd6czRVYXFFeURZR1lLMW5JRy1RM2puV2VaYVdHMXdiQk9lQVp3aV8tcjlQN2llMTFDeTNpd0NkUURqS2hVQjFaV2FndVRPV1doZWc?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -338,6 +329,15 @@
    "date": "Mon, 19 Oct 2026 12:27:31 GMT",
    "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQVU3bFNCajVjd0xVbnUyZ0FVRFlHdXpPQkZ4aFM1dDBYdVBwTEVfZnNqdmxYN1p3NHhIcXYwc09SYWoxTE9PUVc5WXRUMmlQM0pZMVNJVWY1MTM0UzV4STJ6dXk1ajBBaWhMNklaSW9CU3RORTFrb2MzcUZELWxRalUxQUtOX2FVUDlWSF9lTTJKV0hqV3VmYWI5MFdMQ0U1ZVNyNURneTZrTXhpY1dQSA?oc=5",
    "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Caroline Reyl (Pictet Premium Brands) : Quelle stratégie d'allocation pour Pictet Premium Brands ? - 24/07 - Orange Actualités",
+   "source": "Orange Actualités",
+   "date": "Fri, 16 Oct 2026 15:00:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNelBMYm5RODFydWJ4czZaell3RjZOMnJpT2NnY3RiZkhjWUtTWXN2MG9lejJSRjZPV3ctZmswbmhDTDhjVDh0S0dOZ255T3lPMmJKU1RPVXJiMGtkWXVvQzBlSDZNUlc4ZTNQdzdaVWNHckVYM2hRZFFlc0N5eEpRajd1SVNuSlctTzVURmRVYjBDLWVqZVZSeVpYVXJKOHk1M2VuWUFaT3NPLVpjRWpXTTJBSUxmUmR2Nkc0eExFRnNuVE51YzdRQS05UG1iRmlYWHdaMktFS2d3Sy1yYkJ1MzdrR1lLRGpIUjVxdHR3?oc=5",
+   "tag": "Pictet-Premium Brands",
    "categorie": "uc",
    "sentiment": "neutre"
   },
@@ -396,10 +396,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le point sur Echiquier Artificial Intelligence - Zoom Invest",
-   "source": "Zoom Invest",
-   "date": "Tue, 27 May 2025 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONWJGeXJMV1Q0bGhRSXZISng0Y2MzZmJGejRYbUlvS3YwTmNRMnVWa2pYbWh3bnJkZmlZVU9aNURoT3hPRW93MzlOZ2FuVzBTcmdqVmRKV09sNkVpWk9LckU0WXVEZHZMcHhKaHZLc1d2cmtMbElWV0hWXzZHclFoZTRDUmpXMTdHYXRScHRvV2hJblNJTXN1dTR0UXpTTXA3eXhhZi1XWXhDUFV5N0Z3?oc=5",
+   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Mai 2025 - La Financière de l'Echiquier",
+   "source": "La Financière de l'Echiquier",
+   "date": "Fri, 23 May 2025 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRER2d2xjNml6RF8xWGdMT19ZM2xtcUtaRG5WZWtjWUNnOEF5M21QS21wZU9rTEZKVTh4eUI3R2o0UklWZnJjTV9HY0dPd3pmbHFmVENQekZ1VDNaZGlwTnRadFdJVDUwZEZJUm92cmFFbXFXX1JQMkNXc055TVNaWnB1d0tSdE1uaUJxNmdTQXdxWThnUlJHMUpQOGxSV09hckl6cUlidUo?oc=5",
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -410,15 +410,6 @@
    "date": "Thu, 16 Feb 2023 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
    "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
-   "source": "MACSF",
-   "date": "Fri, 17 Jun 2022 01:42:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
-   "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
   }
