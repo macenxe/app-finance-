@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-01T11:47:06.014Z",
+ "genere": "2026-11-01T17:54:06.426Z",
  "globales": [
   {
    "titre": "Octobre gagnant sur le fil pour le Cac 40 - Les Echos",
@@ -38,6 +38,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Prévision du prix de l'argent : la Fed, le PCE et le PIB américains en ligne de mire - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 29 Oct 2026 08:01:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1qd3ZtMlRfMXUyREwxVEtxMTZHQVZ3T2xEcF9SbmJVSXJMamYzY3VkU194cUg5MHFGQUxFYXRSMXo2d2pORDhydldmYTVZa1VHSG1CdGVhRlIzWFg1TDVYMWdPdWtzUQ?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Cac 40 : En attendant la Fed et les résultats de Microsoft et d'Alphabet, le CAC 40 termine à l'équilibre parfait - BFM Bourse",
    "source": "BFM Bourse",
    "date": "Wed, 28 Oct 2026 16:47:09 GMT",
@@ -56,15 +65,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La pause attendue de la Fed masque de gros enjeux de communication - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Mon, 26 Oct 2026 18:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbjVHWDdOXzNxMGpBOTZIbVY5WlVDRkNkaGx0ODJFdE0zU0ktZTYtS0NoUnItazVsb0lIOWp5Y3B0ZVd0eWFKOGtnSUQ4cjczbGJOV0x2am80YW9GcEtnV1JLc2U0X09jNDVJTVVFWEZTM0Iwbk5BaU45OUw2amVSdnpXMy0xUW9hTFdKalFENlZSdzE2MFIxNTh1VG9wWWdLcy1GaGgzclBwRTN5Tmc?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Décision de la BCE sur les taux d’intérêt: à quoi s’attendre jeudi? - Morningstar",
    "source": "Morningstar",
    "date": "Mon, 26 Oct 2026 10:36:34 GMT",
@@ -76,20 +76,20 @@
  ],
  "produits": [
   {
-   "titre": "Action Capgemini SE | Cours CAP Bourse Euronext Paris - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 30 Oct 2026 16:55:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiakFVX3lxTE53SjcycnZvSy1RY1FHQXczRzlwbU4tWlFQby1pclBOWl9YUktsV29ncWFTTHVVSmVPYnNlMTNQX0IycUtxT20wVG82UjR4WHptTnZ6Y2RZQUJFT2N5OGFueHJBOUxPbF9sa2c?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 30 Oct 2026 16:39:57 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 30 Oct 2026 16:38:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -150,31 +150,31 @@
  ],
  "eco": [
   {
-   "titre": "Pétrole-L'OPep+ devrait maintenir ses objectifs de production-sources - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 01 Nov 2026 11:39:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOeFQtSEI2VVlORzA1OWlGZklJbVBvcU1fcDJIUGtqSjZ6MWh4dkVKTjliNEpHMnVVTHhQazM0YUF0dGJsV0hUTVZSY0hjSEgzSlFiWWlTQ2E4dzFLZTd1SnVvZ245Qlg1YkVsaS1NRVVMWGJYRjFkOXpYM1c1WEF6Uk5XSVB4QVlOajRwWHMta0xkOUpWU0hLRDBxV2xkeEJSU29DUjN5dElQSkNXLXVHazFzWGhYdGFCYy1ieU0zMmYwaERhc1FN?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BYD prolonge sa série de croissance des ventes grâce à la vigueur de ses exportations - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 01 Nov 2026 11:37:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQZjdZOUFrOHhtT25FT1dGZDRoQnJmUWhkdC0wOExSdDdCVWtQZFgwNFV2RTQ3UFNiMXVOTUh5enkxVFdBenB5Z1N6MW9udlB1V0ltV09jS1JhZWIyMUYtdXhTQTFMY0Z2MkhtMVY2b0VqNWlEb3lUeDAwSjdVbGV0MW8wS3VVOWY4YmxQVk1TamhsSnMyX1RqRzRQNkF5TThNSVN5aVZfZHQ2X0ZfWmwyZFN1elhpLTNUT0lXV1Nsbkt1WVgxMFlzQUZRUkQtcHZuZV9sTW4xbG5LSmhvNFE?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Une victoire démocrate réorienterait le débat commercial au Congrès, sans toutefois entraîner un retrait des droits de douane américains - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Sun, 01 Nov 2026 11:02:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQbG5IbHNoZUxHWXRRakxZT0pueS02dzBkbWtXbGllTnRocTlzYUNTS2g0TWtnMEIyaTB5VmZkMTdmb0hUQklETVl1VWY4cmtxdTUxWlpPTnRPX2h6SVZlVFdFUENaMHBmUk03SEh3RFVDVDhmUGdzaFJjR1RGeVF2Z2hZTURLUm9RM1FSLTk5eGl3WkQtQklxZ2d4U1JwVDgzQWx0YmhVaUtob0d3OHRzc1M4X0tsSmk5VGNScnZrS0p6STdjSnhfWmljdmhNa0dJdU1sM2ZlOHl0YzhHOHpfaWRDNnJYN3VRSzFEYlBsWDc?oc=5",
-   "tag": "bourse",
+   "titre": "Les prix du gazole vont-ils vraiment baisser dans toutes les stations? Le gouvernement va réunir mardi les distributeurs de carburants à Bercy pour s’assurer que le déblocage des stocks stratégiques se répercute bien à la pompe",
+   "source": "BFM Économie",
+   "date": "Sun, 01 Nov 2026 15:48:42 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/les-prix-du-gazole-vont-ils-vraiment-baisser-dans-toutes-les-stations-le-gouvernement-va-reunir-mardi-les-distributeurs-de-carburants-a-bercy-pour-s-assurer-que-le-deblocage-des-stocks-strategiques-se-repercute-bien-a-la-pompe_AD-202611010317.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "negative"
+  },
+  {
+   "titre": "Vos courses vont augmenter, Dominique Schelcher, patron des Super U, prévoit «plusieurs points d’inflation - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sun, 01 Nov 2026 14:57:03 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcWhpbUhNVmxtb3pPakNUbzJhQUJ3V1ZVX0lfTEpoMVU1VW5BX1RvUWlHeUZBdVB0OHgyREltMlRhcVpsNl90b21wSFhWajVyTi1kblhpLXFuWTV2b29KbXgwejRNSENjSWhHMXQyWlgwdlk0N1h5NDFyNGtQRDVMZjZqZWF0MTFJcjhpRnpHVTY2QlB5Z2JUYndZZWJ6ZkdVcUFDMVJLVzNhYmN5cnc1RC1zUzBuZ1Q0R05fbWJRemhSZy1OSExLMWNiU1ZXaUQ4OUJjdw?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Tesla bondit de 35%: les ventes de voitures neuves augmentent encore en France en octobre, tirées par les véhicules électriques qui représentent désormais 41% du marché",
+   "source": "BFM Économie",
+   "date": "Sun, 01 Nov 2026 14:09:39 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/industries/tesla-bondit-de-35-les-ventes-de-voitures-neuves-augmentent-encore-en-france-en-octobre-tirees-par-les-vehicules-electriques-qui-representent-desormais-41-du-marche_AD-202611010287.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "Une croissance revue à la hausse, un chômage qui baisse et un déficit qui se résorbe... Contrairement à la France, le Royaume-Uni étonne par la résistance de son économie et reçoit les félicitations du FMI",
@@ -186,28 +186,19 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Hausse du Smic avant janvier et coup de pouce en plus ? Le gouvernement se donne trois semaines pour trancher - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Sat, 31 Oct 2026 18:44:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPYlRJeU9tYmI5NzNwQmdrRkdsT3RqOHlLcGxPOVBSdVNyYUVuMFY2V2xyUG9iRTFxR045UEJuYVp0bnAwVlBSaDNOd2NOeHVzNEMwSFhXdTcwZFQtMVdYbVhoVWhSampoaUM5U1lnUHlLUVJ0eUhqTVFQMWlzbTIySHpoZHlFaGlfR3gydEthOGs5ZThqX3liNFZqYnhJck13YU8ydlVnWXIzQ2NyVk5pbE9haGE5dmhFUmZTZmJJZ2k4cWdYbE13RExWZF9YWGRLbXZkLU4xYnhYYWdVaERkbldpN2FGMFdW?oc=5",
-   "tag": "BCE taux",
+   "titre": "Prix du platine : que prévoir de la réunion de la Fed et des PCE américains - TradingView",
+   "source": "TradingView",
+   "date": "Sun, 01 Nov 2026 07:52:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBKWHdGNk82ei1pOWZtb1ZCb09sMVRCNThBdzVPVXhUSkl3a21icTFZY3h1VkdFUjg5b1I4QnE0UTRRQzRUREl5NWM3R1pjSHV1UXlmX2FTMnpjV0liOEVsenB0RmFTQQ?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "Une quarantaine de restaurants sont concernés à Paris, Bayonne ou Dijon: rattrapé par sa dette, l’un des principaux franchisés de KFC en France a été placé en procédure de sauvegarde",
    "source": "BFM Économie",
    "date": "Sat, 31 Oct 2026 15:46:10 GMT",
    "lien": "https://www.bfmtv.com/economie/entreprises/une-quarantaine-de-restaurants-sont-concernes-a-paris-bayonne-ou-dijon-rattrape-par-sa-dette-l-un-des-principaux-franchises-de-kfc-en-france-a-ete-place-en-procedure-de-sauvegarde_AD-202610310296.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "\"On ne peut pas assurer la sécurité sociale sans sécurité nationale\": le gouvernement britannique veut porter les dépenses de défense à 3% du PIB mais reste flou sur les coupes budgétaires qu'il fera",
-   "source": "BFM Économie",
-   "date": "Sat, 31 Oct 2026 12:24:01 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/defense/on-ne-peut-pas-assurer-la-securite-sociale-sans-securite-nationale-le-gouvernement-britannique-veut-porter-les-depenses-de-defense-a-3-du-pib-mais-reste-flou-sur-les-coupes-budgetaires-qu-il-fera_AV-202610310242.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -369,10 +360,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Mai 2025 - La Financière de l'Echiquier",
-   "source": "La Financière de l'Echiquier",
-   "date": "Fri, 23 May 2025 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRER2d2xjNml6RF8xWGdMT19ZM2xtcUtaRG5WZWtjWUNnOEF5M21QS21wZU9rTEZKVTh4eUI3R2o0UklWZnJjTV9HY0dPd3pmbHFmVENQekZ1VDNaZGlwTnRadFdJVDUwZEZJUm92cmFFbXFXX1JQMkNXc055TVNaWnB1d0tSdE1uaUJxNmdTQXdxWThnUlJHMUpQOGxSV09hckl6cUlidUo?oc=5",
+   "titre": "Le point sur Echiquier Artificial Intelligence - Zoom Invest",
+   "source": "Zoom Invest",
+   "date": "Tue, 27 May 2025 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONWJGeXJMV1Q0bGhRSXZISng0Y2MzZmJGejRYbUlvS3YwTmNRMnVWa2pYbWh3bnJkZmlZVU9aNURoT3hPRW93MzlOZ2FuVzBTcmdqVmRKV09sNkVpWk9LckU0WXVEZHZMcHhKaHZLc1d2cmtMbElWV0hWXzZHclFoZTRDUmpXMTdHYXRScHRvV2hJblNJTXN1dTR0UXpTTXA3eXhhZi1XWXhDUFV5N0Z3?oc=5",
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -396,11 +387,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
+   "titre": "Fonds CPR Global Silver Age - Banque Populaire",
    "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY1c5VExOVUs0YWxXVmpCUjdMV0xnaGhQU21WM2JFcndZMm9qTVRMMy1HT19MajJUMXUzVTF5TGtmRmpiSHN3QlNMTzA2S1lKaWR3dEZnYkI2OVFZdkRXNldmWmdjbFVxcUxYMmsyTlZWWFd3NFhNUjNKazVnNzVJWWo0aThRb1FRTnNV?oc=5",
-   "tag": "DNCA Invest SRI Europe Growth",
+   "date": "Fri, 11 Feb 2022 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQXy01M0NVUTVPaVF3NFFraC1OazB2VUVlU3Y1TUhGWm1nc1E2RGdYdy1yaTBRdHVISVowVGFBZkpFY2RIZk0tREZYVnk1djIwOVRsU21sUk1ZX2NvOGhvS2tkeFBOZERPOUJ6VnB1elplQnRweU5LQkpBTHprTXAzOW8zNlYxYVd6VDQ5QWloUFg1WGFJOVkzTEQ4ZUM?oc=5",
+   "tag": "CPR Global Silver Age",
    "categorie": "uc",
    "sentiment": "neutre"
   }
