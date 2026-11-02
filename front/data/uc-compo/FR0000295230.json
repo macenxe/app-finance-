@@ -1,43 +1,43 @@
 {
  "isin": "FR0000295230",
  "alloc": {
-  "action": 97.1,
+  "action": 96.5,
   "obligation": 0,
-  "liquidite": 2.9,
+  "liquidite": 3.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Santé",
-   "pct": 22.8
+   "pct": 26
   },
   {
    "nom": "Industrie",
-   "pct": 22.2
+   "pct": 20
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 18
+   "pct": 16.9
   },
   {
    "nom": "Technologie",
-   "pct": 17.6
+   "pct": 15
   },
   {
    "nom": "Matériaux",
-   "pct": 8.8
+   "pct": 9.4
   },
   {
    "nom": "Finance",
-   "pct": 6.5
-  },
-  {
-   "nom": "Conso. de base",
-   "pct": 2.3
+   "pct": 7.8
   },
   {
    "nom": "Communication",
-   "pct": 1.7
+   "pct": 3.8
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 1.1
   },
   {
    "nom": "Immobilier",
@@ -55,35 +55,35 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 8.7
+   "pct": 5.6
   },
   {
    "nom": "Schneider Electric SE",
-   "pct": 4.7
+   "pct": 5
   },
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 4.5
-  },
-  {
-   "nom": "Essilorluxottica",
-   "pct": 4.2
-  },
-  {
-   "nom": "Sartorius Stedim Biotech SA",
-   "pct": 4
+   "pct": 4.8
   },
   {
    "nom": "Aon PLC Class A",
-   "pct": 3.8
+   "pct": 4.6
+  },
+  {
+   "nom": "Essilorluxottica",
+   "pct": 4.6
+  },
+  {
+   "nom": "Sartorius Stedim Biotech SA",
+   "pct": 3.9
   },
   {
    "nom": "Industria De Diseno Textil SA Share From Split",
-   "pct": 3.6
+   "pct": 3.4
   },
   {
    "nom": "Air Liquide SA",
-   "pct": 3.2
+   "pct": 3.3
   }
  ]
 }

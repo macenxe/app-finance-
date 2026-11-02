@@ -9,15 +9,15 @@
  "secteurs": [
   {
    "nom": "Conso. cyclique",
-   "pct": 20.8
+   "pct": 19.1
   },
   {
    "nom": "Communication",
-   "pct": 19.4
+   "pct": 18.5
   },
   {
    "nom": "Technologie",
-   "pct": 17.1
+   "pct": 18.1
   },
   {
    "nom": "Finance",
@@ -25,23 +25,23 @@
   },
   {
    "nom": "Santé",
-   "pct": 10.3
+   "pct": 12.3
   },
   {
    "nom": "Conso. de base",
-   "pct": 5.7
-  },
-  {
-   "nom": "Industrie",
-   "pct": 4.1
+   "pct": 4.5
   },
   {
    "nom": "Immobilier",
-   "pct": 3.5
+   "pct": 4
+  },
+  {
+   "nom": "Industrie",
+   "pct": 3.8
   },
   {
    "nom": "Matériaux",
-   "pct": 2.8
+   "pct": 3.7
   },
   {
    "nom": "Services collectifs",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "Tencent Holdings Ltd",
-   "pct": 9.2
+   "pct": 9.6
   },
   {
    "nom": "Alibaba Group Holding Ltd ADR",
-   "pct": 8.7
+   "pct": 9.1
+  },
+  {
+   "nom": "China Merchants Bank Co Ltd Class H",
+   "pct": 4.4
   },
   {
    "nom": "Ping An Insurance (Group) Co. of China Ltd Class H",
-   "pct": 4.1
+   "pct": 4.2
+  },
+  {
+   "nom": "WuXi Biologics (Cayman) Inc",
+   "pct": 4.2
   },
   {
    "nom": "NetEase Inc ADR",
    "pct": 4
   },
   {
-   "nom": "China Merchants Bank Co Ltd Class H",
-   "pct": 4
-  },
-  {
-   "nom": "WuXi Biologics (Cayman) Inc",
-   "pct": 3.6
-  },
-  {
    "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 2.9
+   "pct": 3.3
   },
   {
    "nom": "NAURA Technology Group Co Ltd Class A",
-   "pct": 2.9
-  },
-  {
-   "nom": "Contemporary Amperex Technology Co Ltd Class A",
-   "pct": 2.8
+   "pct": 3.1
   },
   {
    "nom": "Bilibili Inc ADR",
-   "pct": 2.7
+   "pct": 2.8
+  },
+  {
+   "nom": "Jiangsu Hengrui Pharmaceuticals Co Ltd Class A",
+   "pct": 2.8
   }
  ]
 }

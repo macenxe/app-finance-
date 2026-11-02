@@ -1,47 +1,47 @@
 {
  "isin": "LU0255976994",
  "alloc": {
-  "action": 98.2,
+  "action": 100,
   "obligation": 0,
-  "liquidite": 1.8,
+  "liquidite": 0,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 49.8
+   "pct": 40.5
   },
   {
    "nom": "Finance",
-   "pct": 18.9
+   "pct": 22
   },
   {
    "nom": "Industrie",
-   "pct": 11.8
-  },
-  {
-   "nom": "Communication",
-   "pct": 5.9
+   "pct": 11.3
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 4.5
+   "pct": 7.9
+  },
+  {
+   "nom": "Communication",
+   "pct": 7.5
   },
   {
    "nom": "Matériaux",
-   "pct": 4
-  },
-  {
-   "nom": "Énergie",
-   "pct": 2.2
+   "pct": 4.3
   },
   {
    "nom": "Santé",
-   "pct": 2.1
+   "pct": 2.9
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.3
   },
   {
    "nom": "Immobilier",
-   "pct": 0.8
+   "pct": 1.1
   },
   {
    "nom": "Conso. de base",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "SK Hynix Inc",
-   "pct": 9.2
-  },
-  {
    "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 9.1
+   "pct": 9.5
   },
   {
    "nom": "Samsung Electronics Co Ltd",
-   "pct": 8.5
+   "pct": 7.7
+  },
+  {
+   "nom": "SK hynix Inc",
+   "pct": 6.9
   },
   {
    "nom": "Tencent Holdings Ltd",
-   "pct": 3.7
-  },
-  {
-   "nom": "ICICI Bank Ltd",
-   "pct": 2.9
-  },
-  {
-   "nom": "SK Square",
-   "pct": 2.5
-  },
-  {
-   "nom": "MediaTek Inc",
-   "pct": 2.4
-  },
-  {
-   "nom": "China Construction Bank Corp Class H",
-   "pct": 2.4
-  },
-  {
-   "nom": "DBS Group Holdings Ltd",
-   "pct": 2.2
+   "pct": 5.3
   },
   {
    "nom": "Alibaba Group Holding Ltd Ordinary Shares",
-   "pct": 2.2
+   "pct": 4.1
+  },
+  {
+   "nom": "ICICI Bank Ltd",
+   "pct": 3.4
+  },
+  {
+   "nom": "DBS Group Holdings Ltd",
+   "pct": 2.9
+  },
+  {
+   "nom": "China Construction Bank Corp Class H",
+   "pct": 2.9
+  },
+  {
+   "nom": "MediaTek Inc",
+   "pct": 2.6
+  },
+  {
+   "nom": "KB Financial Group Inc",
+   "pct": 2.1
   }
  ]
 }

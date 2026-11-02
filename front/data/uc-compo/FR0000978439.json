@@ -1,35 +1,35 @@
 {
  "isin": "FR0000978439",
  "alloc": {
-  "action": 97.3,
-  "obligation": 0.4,
-  "liquidite": 2.3,
+  "action": 98.4,
+  "obligation": 0.1,
+  "liquidite": 1.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 43.6
+   "pct": 41.5
   },
   {
    "nom": "Technologie",
-   "pct": 22.6
+   "pct": 23.4
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 15.6
+   "pct": 14.7
   },
   {
    "nom": "Matériaux",
-   "pct": 7.2
+   "pct": 7.8
   },
   {
    "nom": "Santé",
-   "pct": 4.2
+   "pct": 4.1
   },
   {
    "nom": "Énergie",
-   "pct": 3.9
+   "pct": 3.8
   },
   {
    "nom": "Conso. de base",
@@ -37,7 +37,7 @@
   },
   {
    "nom": "Immobilier",
-   "pct": 0
+   "pct": 1.6
   },
   {
    "nom": "Communication",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "Figeac Aero SA",
-   "pct": 8.3
+   "nom": "GL Events",
+   "pct": 7.8
   },
   {
-   "nom": "GL Events",
-   "pct": 8.2
+   "nom": "Figeac Aero SA",
+   "pct": 7.5
   },
   {
    "nom": "ID Logistics",
-   "pct": 5.8
+   "pct": 6.1
   },
   {
    "nom": "Aubay",
    "pct": 4.8
   },
   {
+   "nom": "Lectra",
+   "pct": 4.7
+  },
+  {
    "nom": "Jacquet Metals Ordinary Shares",
+   "pct": 4.6
+  },
+  {
+   "nom": "Vusion",
    "pct": 4.4
   },
   {
    "nom": "Delfingen",
-   "pct": 4.4
-  },
-  {
-   "nom": "Vusion",
-   "pct": 4.3
+   "pct": 4.2
   },
   {
    "nom": "Virbac SA",
-   "pct": 4
-  },
-  {
-   "nom": "Lectra",
-   "pct": 3.9
+   "pct": 4.1
   },
   {
    "nom": "Mersen SA",
-   "pct": 3.8
+   "pct": 3.4
   }
  ]
 }

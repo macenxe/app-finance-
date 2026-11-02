@@ -1,35 +1,35 @@
 {
  "isin": "LU1653748860",
  "alloc": {
-  "action": 97.9,
+  "action": 100,
   "obligation": 0,
-  "liquidite": 2.1,
+  "liquidite": 0,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 38.8
+   "pct": 38
   },
   {
    "nom": "Industrie",
-   "pct": 27.4
+   "pct": 26.1
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 11.9
+   "pct": 13.3
   },
   {
    "nom": "Matériaux",
-   "pct": 9.6
+   "pct": 10.1
   },
   {
    "nom": "Santé",
-   "pct": 7
+   "pct": 7.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 4.2
+   "pct": 4.3
   },
   {
    "nom": "Technologie",
@@ -59,38 +59,38 @@
   },
   {
    "nom": "Unilever PLC",
-   "pct": 3.7
+   "pct": 3.9
   },
   {
    "nom": "Kerry Group PLC Class A",
-   "pct": 3.3
+   "pct": 3.4
   },
   {
    "nom": "Danone SA",
-   "pct": 3.2
-  },
-  {
-   "nom": "Canadian Pacific Kansas City Ltd",
-   "pct": 3.1
-  },
-  {
-   "nom": "Compass Group PLC",
    "pct": 3
   },
   {
-   "nom": "Pentair PLC",
-   "pct": 2.7
+   "nom": "Canadian Pacific Kansas City Ltd",
+   "pct": 3
+  },
+  {
+   "nom": "Compass Group PLC",
+   "pct": 2.9
   },
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 2.7
+   "pct": 2.8
   },
   {
    "nom": "Haleon PLC",
-   "pct": 2.6
+   "pct": 2.8
   },
   {
    "nom": "Sainsbury (J) PLC",
+   "pct": 2.7
+  },
+  {
+   "nom": "SGS AG",
    "pct": 2.5
   }
  ]

@@ -1,47 +1,47 @@
 {
  "isin": "FR0010038257",
  "alloc": {
-  "action": 95.9,
+  "action": 96.1,
   "obligation": 0.9,
-  "liquidite": 3.1,
+  "liquidite": 3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 40.4
+   "pct": 41.8
   },
   {
    "nom": "Finance",
-   "pct": 13.3
+   "pct": 14.1
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10.5
+   "pct": 10.4
   },
   {
    "nom": "Conso. de base",
-   "pct": 9.8
-  },
-  {
-   "nom": "Santé",
-   "pct": 8.3
+   "pct": 8.5
   },
   {
    "nom": "Matériaux",
-   "pct": 7.7
+   "pct": 7.8
+  },
+  {
+   "nom": "Santé",
+   "pct": 7.1
   },
   {
    "nom": "Technologie",
-   "pct": 6.5
+   "pct": 6.2
   },
   {
    "nom": "Énergie",
-   "pct": 2.3
+   "pct": 2.8
   },
   {
    "nom": "Communication",
-   "pct": 1.1
+   "pct": 1.2
   },
   {
    "nom": "Immobilier",
@@ -55,7 +55,7 @@
  "holdings": [
   {
    "nom": "Schneider Electric SE",
-   "pct": 8.1
+   "pct": 8.4
   },
   {
    "nom": "Air Liquide SA",
@@ -67,31 +67,31 @@
   },
   {
    "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
-   "pct": 6
+   "pct": 5.9
   },
   {
    "nom": "L'Oreal SA",
-   "pct": 5
+   "pct": 5.1
   },
   {
    "nom": "Societe Generale SA",
-   "pct": 4.7
+   "pct": 5.1
   },
   {
    "nom": "AXA SA",
-   "pct": 4.7
-  },
-  {
-   "nom": "Danone SA",
-   "pct": 4.3
-  },
-  {
-   "nom": "STMicroelectronics NV",
-   "pct": 4.1
+   "pct": 4.9
   },
   {
    "nom": "Airbus SE",
-   "pct": 4
+   "pct": 4.2
+  },
+  {
+   "nom": "Essilorluxottica",
+   "pct": 3.7
+  },
+  {
+   "nom": "Hermes International SA",
+   "pct": 3.7
   }
  ]
 }

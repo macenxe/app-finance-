@@ -1,73 +1,69 @@
 {
  "isin": "FR0010097683",
  "alloc": {
-  "action": 41.4,
-  "obligation": 39.1,
-  "liquidite": 16.7,
-  "autre": 2.9
+  "action": 35.9,
+  "obligation": 39.6,
+  "liquidite": 22.3,
+  "autre": 2.3
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 27.3
+   "pct": 26
   },
   {
    "nom": "Finance",
-   "pct": 18.5
+   "pct": 22.4
   },
   {
    "nom": "Communication",
-   "pct": 10.8
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 9.1
+   "pct": 10.6
   },
   {
    "nom": "Industrie",
-   "pct": 9
+   "pct": 8.9
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 8.6
+   "pct": 8.5
   },
   {
    "nom": "Santé",
-   "pct": 5.5
+   "pct": 5.9
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 5.6
   },
   {
    "nom": "Conso. de base",
-   "pct": 3.9
+   "pct": 4.1
   },
   {
    "nom": "Services collectifs",
-   "pct": 3.1
+   "pct": 3.5
   },
   {
    "nom": "Énergie",
-   "pct": 2.5
+   "pct": 2.8
   },
   {
    "nom": "Immobilier",
-   "pct": 1.7
+   "pct": 1.6
   }
  ],
  "holdings": [
   {
-   "nom": "Amundi MSCI World ESGBrdTrnstnETFAcc",
-   "pct": 7.3
-  },
-  {
    "nom": "Amundi MSCI World Screened ETF",
-   "pct": 5.3
+   "pct": 5.5
   },
   {
    "nom": "Amundi EUR Corporate Bd 1-5Y ESG ETF Acc",
-   "pct": 5.1
+   "pct": 4.9
   },
   {
-   "nom": "Amundi IS MSCI Em Latin America ETF-C €",
-   "pct": 3.9
+   "nom": "Amundi MSCI World ESGBrdTrnstnETFAcc",
+   "pct": 4.8
   }
  ]
 }

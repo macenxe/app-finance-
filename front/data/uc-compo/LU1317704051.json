@@ -1,51 +1,51 @@
 {
  "isin": "LU1317704051",
  "alloc": {
-  "action": 20.7,
-  "obligation": 30,
-  "liquidite": 49.2,
+  "action": 33.2,
+  "obligation": 26.6,
+  "liquidite": 40.2,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 24.8
+   "pct": 22.6
   },
   {
    "nom": "Finance",
-   "pct": 18.8
+   "pct": 17.7
   },
   {
    "nom": "Industrie",
-   "pct": 17.9
-  },
-  {
-   "nom": "Services collectifs",
-   "pct": 8.3
+   "pct": 16.6
   },
   {
    "nom": "Santé",
-   "pct": 7.3
+   "pct": 14
   },
   {
-   "nom": "Conso. de base",
-   "pct": 6.1
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 4.9
+   "nom": "Services collectifs",
+   "pct": 8.5
   },
   {
    "nom": "Communication",
-   "pct": 4.6
+   "pct": 5.4
   },
   {
-   "nom": "Énergie",
+   "nom": "Conso. cyclique",
+   "pct": 4.1
+  },
+  {
+   "nom": "Conso. de base",
    "pct": 4
   },
   {
+   "nom": "Énergie",
+   "pct": 3.9
+  },
+  {
    "nom": "Matériaux",
-   "pct": 2.4
+   "pct": 2.2
   },
   {
    "nom": "Immobilier",
@@ -55,15 +55,15 @@
  "holdings": [
   {
    "nom": "SAP SE",
-   "pct": 7
+   "pct": 8.2
   },
   {
    "nom": "Adyen NV",
-   "pct": 6.6
+   "pct": 7.6
   },
   {
    "nom": "Fresenius SE & Co KGaA Registered Shares",
-   "pct": 6.6
+   "pct": 6.2
   }
  ]
 }

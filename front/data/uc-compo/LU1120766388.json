@@ -1,9 +1,9 @@
 {
  "isin": "LU1120766388",
  "alloc": {
-  "action": 98.8,
+  "action": 97.5,
   "obligation": 0,
-  "liquidite": 1.2,
+  "liquidite": 2.5,
   "autre": 0
  },
  "secteurs": [
@@ -54,43 +54,43 @@
  ],
  "holdings": [
   {
-   "nom": "Gilead Sciences Inc",
-   "pct": 4.7
-  },
-  {
    "nom": "Vertex Pharmaceuticals Inc",
-   "pct": 4.3
+   "pct": 4
   },
   {
-   "nom": "Amgen Inc",
-   "pct": 4.1
-  },
-  {
-   "nom": "Regeneron Pharmaceuticals Inc",
+   "nom": "Gilead Sciences Inc",
    "pct": 3.9
   },
   {
    "nom": "Alnylam Pharmaceuticals Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Amgen Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Regeneron Pharmaceuticals Inc",
    "pct": 3.5
   },
   {
-   "nom": "Insmed Inc",
-   "pct": 3.3
+   "nom": "Biogen Inc",
+   "pct": 3.4
   },
   {
-   "nom": "Biogen Inc",
-   "pct": 3.2
+   "nom": "Insmed Inc",
+   "pct": 3
+  },
+  {
+   "nom": "Revolution Medicines Inc Ordinary Shares",
+   "pct": 2.9
   },
   {
    "nom": "Roivant Sciences Ltd Ordinary Shares",
-   "pct": 2.7
+   "pct": 2.8
   },
   {
-   "nom": "Madrigal Pharmaceuticals Inc",
-   "pct": 2.5
-  },
-  {
-   "nom": "Ascendis Pharma AS ADR",
+   "nom": "Ascendis Pharma AS",
    "pct": 2.3
   }
  ]

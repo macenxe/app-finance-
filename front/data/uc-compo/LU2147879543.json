@@ -1,39 +1,43 @@
 {
  "isin": "LU2147879543",
  "alloc": {
-  "action": 43,
-  "obligation": 56.9,
+  "action": 42.8,
+  "obligation": 57.1,
   "liquidite": 0,
-  "autre": 0.1
+  "autre": 0
  },
  "secteurs": [
   {
-   "nom": "Technologie",
-   "pct": 19.3
+   "nom": "Industrie",
+   "pct": 20.9
   },
   {
-   "nom": "Industrie",
-   "pct": 18.9
+   "nom": "Technologie",
+   "pct": 18.5
   },
   {
    "nom": "Finance",
-   "pct": 13.9
+   "pct": 14.7
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 13.1
+   "pct": 12.4
   },
   {
    "nom": "Santé",
-   "pct": 9.8
+   "pct": 9.9
   },
   {
    "nom": "Communication",
-   "pct": 9.1
+   "pct": 7.3
   },
   {
    "nom": "Conso. de base",
-   "pct": 6.8
+   "pct": 7.2
+  },
+  {
+   "nom": "Énergie",
+   "pct": 2.8
   },
   {
    "nom": "Immobilier",
@@ -41,29 +45,21 @@
   },
   {
    "nom": "Services collectifs",
-   "pct": 2.3
-  },
-  {
-   "nom": "Énergie",
-   "pct": 2.3
+   "pct": 1.9
   },
   {
    "nom": "Matériaux",
-   "pct": 1.8
+   "pct": 1.7
   }
  ],
  "holdings": [
   {
    "nom": "Euro Stoxx 50 Future Sept 26",
-   "pct": 5.3
+   "pct": 5.4
   },
   {
    "nom": "Euro Stoxx Banks Future Sept 26",
-   "pct": 3.2
-  },
-  {
-   "nom": "Alphabet Inc Class A",
-   "pct": 2.1
+   "pct": 3.6
   },
   {
    "nom": "NVIDIA Corp",
@@ -74,12 +70,12 @@
    "pct": 1.7
   },
   {
-   "nom": "Visa Inc Class A",
-   "pct": 1.5
+   "nom": "Alphabet Inc Class A",
+   "pct": 1.7
   },
   {
-   "nom": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
-   "pct": 1.4
+   "nom": "Visa Inc Class A",
+   "pct": 1.6
   }
  ]
 }

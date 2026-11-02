@@ -1,39 +1,39 @@
 {
  "isin": "IE000S1JLOI7",
  "alloc": {
-  "action": 99.4,
+  "action": 99.8,
   "obligation": 0,
-  "liquidite": 0.6,
+  "liquidite": 0.2,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 22
+   "pct": 21.9
   },
   {
    "nom": "Industrie",
-   "pct": 21
+   "pct": 21.9
   },
   {
    "nom": "Technologie",
-   "pct": 18.4
+   "pct": 17.4
   },
   {
    "nom": "Communication",
-   "pct": 7.5
+   "pct": 8
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 7.1
+   "pct": 7.2
   },
   {
    "nom": "Matériaux",
-   "pct": 7
+   "pct": 6.2
   },
   {
    "nom": "Conso. de base",
-   "pct": 5
+   "pct": 5.1
   },
   {
    "nom": "Santé",
@@ -45,53 +45,53 @@
   },
   {
    "nom": "Énergie",
-   "pct": 2.2
+   "pct": 2.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 2.1
+   "pct": 2.2
   }
  ],
  "holdings": [
   {
+   "nom": "Recruit Holdings Co Ltd",
+   "pct": 5.6
+  },
+  {
    "nom": "Mitsubishi UFJ Financial Group Inc",
-   "pct": 5.3
+   "pct": 5
   },
   {
    "nom": "Sumitomo Mitsui Financial Group Inc",
-   "pct": 5.3
-  },
-  {
-   "nom": "Recruit Holdings Co Ltd",
-   "pct": 5.2
+   "pct": 4.9
   },
   {
    "nom": "Mizuho Financial Group Inc",
-   "pct": 4.6
-  },
-  {
-   "nom": "Tokyo Electron Ltd",
-   "pct": 4.6
-  },
-  {
-   "nom": "TDK Corp",
-   "pct": 3.9
+   "pct": 4.8
   },
   {
    "nom": "Tokio Marine Holdings Inc",
-   "pct": 3.8
-  },
-  {
-   "nom": "Disco Corp",
-   "pct": 3.6
-  },
-  {
-   "nom": "Shin-Etsu Chemical Co Ltd",
-   "pct": 3.5
+   "pct": 4.2
   },
   {
    "nom": "Komatsu Ltd",
+   "pct": 3.6
+  },
+  {
+   "nom": "Tokyo Electron Ltd",
    "pct": 3.2
+  },
+  {
+   "nom": "TDK Corp",
+   "pct": 3.2
+  },
+  {
+   "nom": "Suzuki Motor Corp",
+   "pct": 3.2
+  },
+  {
+   "nom": "Hitachi Ltd",
+   "pct": 3.1
   }
  ]
 }

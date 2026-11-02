@@ -1,35 +1,35 @@
 {
  "isin": "LU0366534344",
  "alloc": {
-  "action": 97.3,
-  "obligation": 0.2,
-  "liquidite": 2.5,
+  "action": 99.7,
+  "obligation": 0,
+  "liquidite": 0.3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Conso. de base",
-   "pct": 38.3
+   "pct": 35.9
   },
   {
    "nom": "Matériaux",
-   "pct": 20.1
+   "pct": 22.9
   },
   {
    "nom": "Industrie",
-   "pct": 18.6
+   "pct": 21.1
   },
   {
    "nom": "Santé",
-   "pct": 17.2
+   "pct": 15.3
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 4.3
+   "pct": 3.1
   },
   {
    "nom": "Technologie",
-   "pct": 1.6
+   "pct": 1.7
   },
   {
    "nom": "Immobilier",
@@ -54,44 +54,44 @@
  ],
  "holdings": [
   {
-   "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 7
+   "nom": "Deere & Co",
+   "pct": 6.5
   },
   {
-   "nom": "Deere & Co",
-   "pct": 5.9
+   "nom": "Novonesis (Novozymes) B Class B",
+   "pct": 5.6
   },
   {
    "nom": "Danone SA",
-   "pct": 5
+   "pct": 4.7
   },
   {
-   "nom": "Sysco Corp",
-   "pct": 4.4
-  },
-  {
-   "nom": "Mowi ASA",
-   "pct": 4.4
+   "nom": "Sensient Technologies Corp",
+   "pct": 4.3
   },
   {
    "nom": "Thermo Fisher Scientific Inc",
    "pct": 4.1
   },
   {
-   "nom": "Agilent Technologies Inc",
-   "pct": 3.5
+   "nom": "Ecolab Inc",
+   "pct": 4.1
+  },
+  {
+   "nom": "Mowi ASA",
+   "pct": 3.9
   },
   {
    "nom": "IDEXX Laboratories Inc",
+   "pct": 3.8
+  },
+  {
+   "nom": "Darling Ingredients Inc",
+   "pct": 3.7
+  },
+  {
+   "nom": "Agilent Technologies Inc",
    "pct": 3.5
-  },
-  {
-   "nom": "Zoetis Inc Class A",
-   "pct": 3.3
-  },
-  {
-   "nom": "Kerry Group PLC Class A",
-   "pct": 3.2
   }
  ]
 }

@@ -1,43 +1,43 @@
 {
  "isin": "FR0010649079",
  "alloc": {
-  "action": 98.6,
+  "action": 97.5,
   "obligation": 0,
-  "liquidite": 1.4,
+  "liquidite": 2.5,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 39.7
+   "pct": 40.4
   },
   {
    "nom": "Technologie",
-   "pct": 25
+   "pct": 22.4
   },
   {
    "nom": "Services collectifs",
-   "pct": 12.3
+   "pct": 12.2
   },
   {
    "nom": "Santé",
-   "pct": 8.3
+   "pct": 8.9
   },
   {
    "nom": "Matériaux",
-   "pct": 6.3
+   "pct": 7
   },
   {
    "nom": "Énergie",
-   "pct": 4
+   "pct": 4.4
   },
   {
    "nom": "Conso. de base",
-   "pct": 2.8
+   "pct": 2.7
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 1.6
+   "pct": 2
   },
   {
    "nom": "Immobilier",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 7
-  },
-  {
-   "nom": "Prysmian SpA",
-   "pct": 3.5
+   "pct": 6.3
   },
   {
    "nom": "Siemens AG",
-   "pct": 3.1
+   "pct": 3.4
   },
   {
-   "nom": "STMicroelectronics NV",
-   "pct": 2.9
+   "nom": "Prysmian SpA",
+   "pct": 3.2
   },
   {
    "nom": "Iberdrola SA",
+   "pct": 2.9
+  },
+  {
+   "nom": "Novartis AG Registered Shares",
+   "pct": 2.8
+  },
+  {
+   "nom": "Schneider Electric SE",
    "pct": 2.8
   },
   {
    "nom": "SPIE SA",
-   "pct": 2.7
-  },
-  {
-   "nom": "Infineon Technologies AG",
-   "pct": 2.7
+   "pct": 2.8
   },
   {
    "nom": "Grenergy Renovables SA",
-   "pct": 2.7
+   "pct": 2.5
   },
   {
-   "nom": "Novartis AG Registered Shares",
-   "pct": 2.6
+   "nom": "Gaztransport et technigaz SA",
+   "pct": 2.5
   },
   {
-   "nom": "BE Semiconductor Industries NV",
-   "pct": 2.6
+   "nom": "STMicroelectronics NV",
+   "pct": 2.5
   }
  ]
 }
