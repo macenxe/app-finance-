@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-05",
+ "genere": "2026-11-06",
  "fonds": {
   "LU1120766388": {
    "gerants": [
@@ -62,7 +62,7 @@
    "societe": "Comgest SA",
    "structure": "SICAV",
    "note": 1,
-   "risque": 3
+   "risque": 4
   },
   "FR0014008EI2": {
    "gerants": [],
@@ -90,7 +90,7 @@
    "fraisCourants": 2.06,
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
-   "note": 4,
+   "note": 5,
    "risque": 4
   },
   "FR0010038257": {
@@ -124,7 +124,7 @@
    "fraisCourants": 2.4,
    "societe": "CPR Asset Management",
    "structure": "FCP",
-   "note": 3,
+   "note": 2,
    "risque": 1
   },
   "LU1653748860": {
@@ -218,7 +218,7 @@
    "societe": "La Financière de l'Echiquier",
    "structure": "SICAV",
    "note": 3,
-   "risque": 3
+   "risque": 4
   },
   "FR0010863688": {
    "gerants": [
@@ -255,7 +255,7 @@
    "fraisCourants": 2.16,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "structure": "SICAV",
-   "note": 2,
+   "note": 3,
    "risque": 1
   },
   "LU1160365091": {
@@ -399,7 +399,7 @@
    "fraisCourants": 1.82,
    "societe": "ODDO BHF Asset Management SAS",
    "structure": "FCP",
-   "note": 3,
+   "note": 2,
    "risque": 1
   },
   "FR0000974149": {
@@ -424,8 +424,8 @@
    "fraisCourants": 2.17,
    "societe": "ODDO BHF Asset Management SAS",
    "structure": "FCP",
-   "note": 2,
-   "risque": 3
+   "note": 3,
+   "risque": 4
   },
   "FR0000989915": {
    "gerants": [
@@ -534,7 +534,7 @@
    "fraisCourants": 2.01,
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
-   "note": 2,
+   "note": 3,
    "risque": 3
   },
   "LU0217139020": {
@@ -661,7 +661,7 @@
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
    "note": 4,
-   "risque": 4
+   "risque": 3
   },
   "FR001400UAZ4": {
    "gerants": [
@@ -690,8 +690,8 @@
    "fraisCourants": 1.58,
    "societe": "Conservateur Gestion Valor",
    "structure": "FCP",
-   "note": 4,
-   "risque": 3
+   "note": 3,
+   "risque": 4
   },
   "FR0010489542": {
    "gerants": [
@@ -753,7 +753,7 @@
    "fraisCourants": 1.61,
    "societe": "CPR Asset Management",
    "structure": "FCP",
-   "note": 3,
+   "note": 2,
    "risque": 3
   },
   "LU0512124107": {
@@ -972,7 +972,7 @@
    "fraisCourants": 2,
    "societe": "Moneta Asset Management",
    "structure": "FCP",
-   "note": 4,
+   "note": 5,
    "risque": 3
   },
   "IE000S1JLOI7": {
@@ -1023,7 +1023,7 @@
    "fraisCourants": 1.79,
    "societe": "Carmignac Gestion Luxembourg S.A.",
    "structure": "SICAV",
-   "note": 5,
+   "note": 4,
    "risque": 4
   },
   "LU1833929729": {
@@ -1078,7 +1078,7 @@
    "fraisCourants": 1.99,
    "societe": "Pictet Asset Management (Europe) SA",
    "structure": "SICAV",
-   "note": 4,
+   "note": 3,
    "risque": 5
   },
   "LU0104884860": {
@@ -1117,7 +1117,7 @@
    "societe": "Lazard Frères Gestion",
    "structure": "FCP",
    "note": 5,
-   "risque": 1
+   "risque": 2
   }
  }
 }

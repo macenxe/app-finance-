@@ -1,6 +1,142 @@
 {
  "evenements": [
   {
+   "date": "2026-11-06",
+   "isin": "FR0000295230",
+   "fonds": "Comgest Renaissance Europe C",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Comgest Renaissance Europe C : 3/5 → 4/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010564229",
+   "fonds": "Conservateur Actions Monde C",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Conservateur Actions Monde C : 4/5 → 5/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 5/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0012844140",
+   "fonds": "CPR Global Silver Age",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur CPR Global Silver Age : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "LU1819480192",
+   "fonds": "Echiquier Artificial Intelligence B",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Echiquier Artificial Intelligence B : 3/5 → 4/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "LU1244893696",
+   "fonds": "EdR Fund Big Data A EUR",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur EdR Fund Big Data A EUR : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0000989899",
+   "fonds": "ODDO BHF Avenir",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur ODDO BHF Avenir : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0000974149",
+   "fonds": "ODDO BHF Avenir Europe",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur ODDO BHF Avenir Europe : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0000974149",
+   "fonds": "ODDO BHF Avenir Europe",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur ODDO BHF Avenir Europe : 3/5 → 4/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "LU0366534344",
+   "fonds": "Pictet - Nutrition",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Pictet - Nutrition : 2/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 2/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0007439666",
+   "fonds": "Congrégation Investissement",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Congrégation Investissement : 4/5 → 3/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 4/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010564336",
+   "fonds": "Conservateur Diversifié C",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Conservateur Diversifié C : 4/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010564336",
+   "fonds": "Conservateur Diversifié C",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Conservateur Diversifié C : 3/5 → 4/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 3/5 à 4/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010097683",
+   "fonds": "CPR Croissance Réactive",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur CPR Croissance Réactive : 3/5 → 2/5",
+   "detail": "Note Morningstar (3 ans) passée de 3/5 à 2/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010871830",
+   "fonds": "Moneta Long Short",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Moneta Long Short : 4/5 → 5/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 5/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "LU1317704051",
+   "fonds": "Carmignac Portfolio Long-Short European Equities",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Carmignac Portfolio Long-Short European Equities : 5/5 → 4/5",
+   "detail": "Note Morningstar (3 ans) passée de 5/5 à 4/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "LU0270904781",
+   "fonds": "Pictet - Security",
+   "type": "note",
+   "titre": "Note Morningstar modifiée sur Pictet - Security : 4/5 → 3/5",
+   "detail": "Note Morningstar (3 ans) passée de 4/5 à 3/5."
+  },
+  {
+   "date": "2026-11-06",
+   "isin": "FR0010380675",
+   "fonds": "Lazard Actions Emergentes",
+   "type": "risque",
+   "titre": "Risque Morningstar modifié sur Lazard Actions Emergentes : 1/5 → 2/5",
+   "detail": "Note de risque Morningstar (3 ans) passée de 1/5 à 2/5."
+  },
+  {
    "date": "2026-11-03",
    "isin": "LU1892829828",
    "fonds": "FF - Sustainable W & W Fund",
