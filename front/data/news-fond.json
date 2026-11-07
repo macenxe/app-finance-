@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-07T17:42:57.921Z",
+ "genere": "2026-11-07T21:43:44.514Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -96,7 +96,7 @@
   {
    "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
    "source": "BFM Bourse",
-   "date": "Fri, 06 Nov 2026 14:52:30 GMT",
+   "date": "Fri, 06 Nov 2026 20:32:48 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
@@ -112,15 +112,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "USA/MIDTERMS-ANALYSE-Même sans le Congrès, Trump pourrait agir à sa guise sur la scène mondiale - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 05 Nov 2026 23:08:36 GMT",
@@ -128,6 +119,15 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Rheinmetall dévisse de plus de 16 % en Bourse, ces retards qui font dérailler ses prévisions pour 2026 - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Thu, 05 Nov 2026 13:45:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxON0t1OTBGX3c4QVI1aFZIZHJHSFZVX3dPX3VScWJvdkF4VDB4d3UtdEYwenhwMTlJMmxOYk1lNHR3V0JTamlmSS1BSG5LWXJJTUFYeHdmOUw3NlFlZFNJMVNmUWF0UXNPbURrbHUxLS14VUpzODBLNEhZRHJ3UU1sTXNmNzNzd1g4bU9MeU9VbDdPc0Y0WnYxYl9ScXZWd3I1eHg3WjVxbTRZeVBxSFRhcWNwd2FmTEc2bFE?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "negative"
   },
   {
    "titre": "Défense : le géant allemand Rheinmetall décroche en Bourse après avoir révisé ses prévisions - Les Echos",
@@ -148,16 +148,25 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
+   "titre": "Point recommandations des analystes : Vusion, Capgemini, Sanofi - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 02 Nov 2026 08:08:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVkloR3Z4bVVWalMtYy1od0ZYeXZPai1meVpTT1Vqa3YyZ0ZBRl9ZcVRtMTg3c0dPTFA2TVUzRTRPcFhGeDc3M25ENWxfcUV0cHpZTWZLenBGb20tNXhncGt5UnQtM1VETExoZ1JPWDZfUXRMMU5XcGRKajlWa3JROTlTRUVNV3FSLWJMN2RlWm1sbDd4dU0wT2FJUUZid1RMQng2eDlfNlprdERlS3dxOUtQb0xNdERYalE3QXYzWW4?oc=5",
+   "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   }
  ],
  "eco": [
+  {
+   "titre": "Un Trump pugnace veut Dana White, patron de fédération de MMA, comme porte-parole de la Maison Blanche - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 07 Nov 2026 20:54:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPQWU2d3o5TmVGNXlneDk4QVUtNFRIRGZqeGk3bEF2Skh1Z0xQaU96am9RYXRyXzIzOXBZVklOcy1xT3poSVpIa19uU2RGVUd2bUFyLU1tcll5Q0lIdzRRMXlxQ1pyT1BPTmhDcXAyNTNmQXFYZEI4OHFoRUZ0ZGl1VS1hT29DZnRKcVBqcTBvT1VHekh6NG50NG5HVmV6VEt6bGV6OGNQWFVlU2kycTlRNVU0UWQ5di1LejVFTnBQaXp0VzU4N1YyTW1aeGhKQmtCenRCMUxKUWp1WlV6OWI2a0dXVXdxYlpEdFJNTE1SaVVvWWo5NG1pTExIaDZnQ2NiN1ZFOHE5OUNXZ9IBjwJBVV95cUxOSVdyc2pEMjR0NVUzbnBYblVuRkluRkNzMFlzcTU4Tjc0akdCbFI1amhnTklHNTJsTXhMcWRrOTQ4UUJyV3BQWTZ4Q1JHb19OR2ZsUk1neVpBQ3Ezb3V2RkIwRWZJcUtCcTlyTnB5NXBSTEdpOWF2YWppbUhHSEFpN3BOQUJkYlBCajJQWUhQWGkwM3pJaTFuZ21hT1RHTXg3d0ZEYjZjSFVxWWoxMHc5aVA5UXI2Wlc3Rl94YksxY3RKOGtoOXNIR3NPTDZHMTYzLWh4UERZaDdJcGJ5VmJTODhXX2E5YWhhNndrSmZ2SlEwTDdTeWNTaTBpemQzc3B4dXlpNWhja0dIaHJUYjVN?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Bulle de l'IA : \"on est au début d'un krach\" 📉🫧",
    "source": "BFM Économie",
@@ -220,33 +229,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
-  },
-  {
-   "titre": "RÉSUMÉ 1-Les responsables de la Fed envisagent une hausse des taux après la publication d'un rapport sur l'emp - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 20:56:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixAJBVV95cUxQZ0RBTVlzOFU4eV9KQU5GZHQzQS1Ia01LVHZOcGVBQ0pFVGRJQlV6VmxjNWVFa0JvMUNyUFR1T0luS0VOS21PcHVYTThYUkR3X1N4RG94bWR6UDZfV0lWYWlBcjV1NG1leV9nR2R5SGJ3dVEwLUtTdHhnSlVuYWZWMDZIaWNHWGdBNVhTQy16SWpWek9LY1k2djhBX1BkXzNReU5DU1BFZ05DOXVvSTVYNjFLY2wzLW9Yc0xtem1qZGRMMGF0UlRrUExVQWp3aTNHLXRrMDU2enBOd3o2cTZVX1g2SVJCUlY0bkY1MWtXLUpqU1lMdG9TUmhzNmNkbXE4blNBdWQxbWJrZllSS29rOU1LRkR0Q0x4djdMZDAzSVZ4c3JxNEVRZVF6NWVyMW92bGJKa3lhSzM0cW55WDNhZGNldlnSAcQCQVVfeXFMUGdEQU1ZczhVOHlfSkFORmR0M0EtSGtNS1R2TnBlQUNKRVRkSUJVelZsYzVlRWtCbzFDclBUdU9JbktFTkttT3B1WE04WFJEd19TeERveG1kelA2X1dJVmFpQXI1dTRtZXlfZ0dkeUhid3VRMC1LU3R4Z0pVbmFmVjA2SGljR1hnQTVYU0MteklqVnpPS2NZNnY4QV9QZF8zUXlOQ1NQRWdOQzl1b0k1WDYxS2NsMy1vWHNMbXptamRkTDBhdFJUa1BMVUFqd2kzRy10azA1NnpwTnd6NnE2VV9YNklSQlJWNG5GNTFrVy1KalNZTHRvU1JoczZjZG1xOG5TQXVkMW1ia2ZZUktvazlNS0ZEdENMeHY3TGQwM0lWeHNycTRFUWVRejVlcjFvdmxiSmt5YUszNHFueVgzYWRjZXZZ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "RBC Capital maintains BCE at Outperform, raises price target to $35 from $34 - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 06 Nov 2026 19:43:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVllGeXZ5ZjF6QnBmbWFEY1V0dEU3YXV0NGVRRUxBVV93NlB5NV9mMGRHdHJ5bGVONlM2eDNnRy16S1g2emc0ZkctZnFZR3ZGTWVOZmUxNW5HVEpJN0dib3hjRWtuT3pXdlZMcmFSem1mUUlJZWxqZS1QckxKT3l5TFNGbG1XQU15NlZlWWd1U3ZNdFhaaHhROVdOVGl3TmtaZXF1bE1oSkU1OC1qbWg1cWUta2trbG5XSmp3RjVMX0lzODVyeExBemJOWlk0Z0tyS1doTWdidUExNS1EaTh4c3ZqVk5kM2Fp?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Daly juge probable une nouvelle hausse des taux de la Fed, malgré la chute « douloureuse » des valeurs technologiques - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Fri, 06 Nov 2026 18:27:26 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZ2tBQklkY2FXblBEUG9FMDJaYVJadWlxMWxpSENhUGlwbWhVd0NlNmNaRUhMblJ6Yy1SY2dYTXBCeklPUXhxMTZ3ZnQtSHZ6eXhfX0F3ZW9jWEFnN1pJdWROdFQwUElvd1l6ZU1pdlpBR3JUVEdDUjVwMEF4cW5oelhnMlp5WmhzaGNzWFdkUVB1UW42NUpxXzZDUWNEa3FDbFZRRU9Jek95YkZING41MGtTdnF0aHBHWEd0dl93Rjl1c19RbTNkdXRBalZocE51dHZNbmpCdkExZU9VWmNfRnFqVTM2OHJVQUN3?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "L'Europe finit dans le rouge, l'emploi US et la thématique IA ont animé la séance",
@@ -333,6 +315,15 @@
  "fiscal": [],
  "uc": [
   {
+   "titre": "Graphique des rendements saisonniers Magellan Aerospace Corporation (MAL.TO) - Yahoo Finance France",
+   "source": "Yahoo Finance France",
+   "date": "Sat, 07 Nov 2026 03:57:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBFUk1PSWx0ZDdmbk5NNmJqSVpjWW5SeS1aRG5GN21md1BoTS1EOXNhR1o5YVJ4UWJ6ejdrekJjTUxVMGNfa1J1R014VDYybkJHMzVtOXVMeHlicEE1LU11Qy02eWY?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Carmignac Patrimoine : la diversification face à des marchés extrêmes - Zoom Invest",
    "source": "Zoom Invest",
    "date": "Tue, 03 Nov 2026 10:05:35 GMT",
@@ -364,15 +355,6 @@
    "source": "Sud Ouest",
    "date": "Tue, 27 Oct 2026 07:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxOUVE2emxuU2JCaWhwSjMtckwwdXp2WjlxNk1LNXVIUWF5MEhrOXdWR3RwQl9Mc09LQkhrTWVsRXNtLWhZczVMT1lOOGhKMGphblIzaktCeHVwQnpaZFJ2UHFEYVlDTGR3eWhlVWFqU25yR0VmMUMyUlN1OEJHaVhpb1BPeUpiRjloQndwQnRJZEN2MktPMlNfZmdJTGMyQ1hnWEdNRkRwSXJMaUlrZ2NVelJvNmVWTFYzNnRzdHVRME9wRUdNVm9pVk5pb3Y5dTViVlJyUGRXdi12d2F0aUc4eWpCUVNnR0l2OWROSjV4ZkpyQXlaMGdBNklRWUJoaTRhb05HWUtLZ1FrV3RhSnllNm5PVllXMk94ekxramZZcGVRRHg0TFNXbEJQUWJyLXd6czRVYXFFeURZR1lLMW5JRy1RM2puV2VaYVdHMXdiQk9lQVp3aV8tcjlQN2llMTFDeTNpd0NkUURqS2hVQjFaV2FndVRPV1doZWc?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Transcript : Magellan Financial Group Limited - Shareholder/Analyst Call - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQN1AteFpLQk9Gd19NTzU2TEtGYTlhTHo3U2E3NW9ybFZmaWRmOExpSEpQYkRaSENvU3JJTHlRVlFMN0ZXLUdLVE1hZnpPMWNtcC1XRnNLTnNsWTBRSHNpaHFUOVNxYVBPZjh6NHhxQWZJZ3FKQmFOb19Tby1OMUlPbU1rQV9YdE9iV1UxOHRQVHhCU2xURTFYNW9kbDc4SVNDOGhFa295UmhnaGJQdUt6WGVLa08tMWJCeXdnWThNX1RSbmN6MVlUQjBvWjVhT3RqWjRmNjY2OTNkQ0pMZGRBTXJTME82UXF5c0Q5blZFRFVRWFV3?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
