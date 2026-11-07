@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-07T11:40:14.249Z",
+ "genere": "2026-11-07T17:42:57.921Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -36,6 +36,15 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "positive"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
   },
   {
    "titre": "Cac 40 : La débâcle des valeurs liées à l'IA fait chuter le Nasdaq de 4%, le CAC 40 résiste au-dessus des 8.200 points - BFM Bourse",
@@ -81,32 +90,14 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Bourses européennes : le CAC 40 résiste après les élections américaines - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 04 Nov 2026 09:22:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObkJLa1VEbDM4NnF3aU1NUldtNVNtdTVqY3J1VE11QjZxdjNnaEJkd1NEZXdhR251NXBxZ2N6MjAzZm44ZmdwVklnVTJkVUh2UUdvQk9hQ2Y5ZXlfTFVLdnBEYXVXeFJyRXZMWjZleVMyanZPZ3NuS01DNlUtcEF2LUQtTnh1ei1XeWZPdl8xdkp2Zll5T1k0SjU5M0p3SV9UNFRCMGhVQWNxQQ?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
   }
  ],
  "produits": [
   {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 10:18:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 09:40:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 06 Nov 2026 14:52:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -119,6 +110,15 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
+  },
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "USA/MIDTERMS-ANALYSE-Même sans le Congrès, Trump pourrait agir à sa guise sur la scène mondiale - Boursorama",
@@ -148,76 +148,22 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "SEB SA : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 06:51:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTgtbGlXWVVwNUVhQmV4SnU0M2p2Z0lNUkZmSmhrdl9sNHRMN1FmN3k5QjlZYnNwWmhNeXZ0Z2lSMlJYSUlwYjFUSnhzSXliWDNwNDhMcThxb0tmZTZKSDB3bm42ZHZMb1VONDFodENERW0wSnNwXzVnZEZEVjlXSE1OR2NOLURXMFJJQld3dlVqaEw2eHdoTS1EYUtHUVBXU2U5UXlkZllGY2ZUQUh0SFVGdFEyNkhucmxCUnNzR2lMekxvTEUwWDd4Z2lVd9IB0wFBVV95cUxOaktVZlItSnE2bHNQSzh4U2xJRVdWR25jNFdUZG9EYTdrU1JiVTFZcHQzTVpVVVN3c2pGWVRUMmZMTjJuamRTdmR5cXowemZKdlRtU0VGVE5QYjRXQ21weWRYTWgxYWdzOHZIVTNzZHYtdy1nTFhfSktZNlNXOUdOQjJXR3Z4Ny1YOWtPd08yM1R2WHBUMHNlRGRuam1NOUJnSUhCaXpCVzAtQ1hCS192bWZ1M3JLcHh2RkFrS05YdUtybXFaVUdNUC1KR200MGhKN0h3?oc=5",
-   "tag": "CAC 40",
+   "date": "Thu, 05 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "NVIDIA Cours Action NVDA, Cotation Bourse NASDAQ - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 11:33:56 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FY3p6cDdaTUwxUFkxZjNJcjdVd1YtTnJocUg0eEJhYjBhTUNsemQtbWVaMFh3TVVKRFBuQ203c2ZyNzdDMVpoOXU2YXpTNjg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Comme les voitures ? Les motos chinoises conquièrent l'Europe - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 11:30:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMHdWRHBQSHdsZWx6MTgyY3YzUHRrS08wcm1aX0JNZ0JQa2hQQlVtbnJvVy10eGpuOC02cmFZUDd4TEVkOXdndUhTQlM5U1BvMzctWTViVkphMnU0X3lIbE04cHNJNFN3cE0xU29LUzhTaUZPQnZ1elNOZ2Y5RmJhbGlhd250WTRWWTVQYlV0OGxXNUl4TEtySU5na3Q0MjU4YzgtZU1MNUxlcWk4ZklBY1V1UjB6ZTRaWEt2YkttR0wzcjRrb2N4a2s5X3Y3OElBb0J30gHYAUFVX3lxTFBfRGJVc1JROW56T0JsTFF3cDJ3UTJNMk1tTUJBM1djSEdHNUF3YjFGRHplOTBCQWt0NEpaQVVEUWhrR3F6VE9HNV9ibV92RHZxczYxTXR4Z2xCcFI2TGhOanM4dEU2d3RWN29kenV4ZXFwZmUzNVpOVDN2Y0JDLUZ4RU82ZWt2WFpYOXhmcmE1V19RLTYtV3hJUzMyYWxuWlRzNFoyUEp0NW9ZdjhITTNiQ05HVVJyLUc0UmxVYUsyTl8xclYxUWtXcFhRT3NDWmRNZ3lFT3FtQw?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 07 Nov 2026 11:27:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 11:25:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 11:17:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STMICROELECTRONICS Cours Action STMPA, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 11:01:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aEdVR1RKdDMyaW5mbzVJUlVoSWhzU0d2VUZCZHZkRjdjVlVzQkptT0FVdkp4MVFwUzNwSXFMRS1SNThZSXFkTkxtVDRISkV0Tkh3Ng?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Dette, instabilité politique… Face au «risque France», faut-il fuir ou miser sur les valeurs capables de résister aux turbulences? - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Sat, 07 Nov 2026 11:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQNXViMG90U0NhbUFiZnVZclRRbkpmbXV2b3owbEVpS01jUjVhU3N3aE1HQ0ZxUFpfcnBLN0VDeTdHb0JQR1dqMnpiazlpa0lCMjlobWpiOGdWTHdGWkc2NWt3S0cwYU15TjA5bW1KeVZQdDBWV3IzNG5sMmt4S0o2WmdwMGZWSEVmZUhoMkg2T0JmNGxBcjl5dEhsMU5XUF82UWJISkRMZzBlbkhDc3BkQ2k2QnNzZmM0NEZFYWhHQTJUbF80dzE5d20tMjJCQkdEM0N1M2hmaExIOFlsTkpQWXdWdFhFbk9GaW1YQldnVHg3UQ?oc=5",
-   "tag": "bourse",
+   "titre": "Bulle de l'IA : \"on est au début d'un krach\" 📉🫧",
+   "source": "BFM Économie",
+   "date": "Sat, 07 Nov 2026 16:00:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-bulle-de-l-ia-on-est-au-debut-d-un-krach_VN-202611070387.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -226,7 +172,7 @@
    "source": "Les Echos",
    "date": "Sat, 07 Nov 2026 10:49:17 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMHBXY0dXbUJIcDY2NjZRRkc3aVlPc1VISk11S1h2aE9hRnJydnJwODdTMUhtUUdIbXBJS2d2ZmtWWk83VE1aelhyc1BSWmlkVHFpOTlWRzJvUElZbzY0VHdJaDdsS3hKLVZsWm9YUDlnUGVzQ3dDTXY0VzQ3RXVmTW5lVWU1VVNUVHdDcE9kZHc0azFQR2d5T1poYUNKdFYwU1drWERVR194OW5WZVNjQkdrellENHN6UGVMQVcwNG45NjZHZFk3LXlVcnhHM19ZU09FdWhTaTNLUlJLMmVudnUxdl9Sdw?oc=5",
-   "tag": "bourse",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -240,19 +186,19 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La France est 3e en Europe pour les dépenses sociales avec 32% du PIB: pourquoi les Français reçoivent-ils alors moins de prestations que les Allemands, les Danois ou les Néerlandais?",
-   "source": "BFM Économie",
-   "date": "Sat, 07 Nov 2026 05:59:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/la-france-est-3e-en-europe-pour-les-depenses-sociales-avec-32-du-pib-pourquoi-les-francais-recoivent-ils-alors-moins-de-prestations-que-les-allemands-les-danois-ou-les-neerlandais_AN-202611070061.html",
-   "tag": "BFM Économie",
+   "titre": "US Fed pulls guidance blocking its banks from engaging with crypto - TradingView",
+   "source": "TradingView",
+   "date": "Sat, 07 Nov 2026 08:34:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilANBVV95cUxOSmpTX3h4OUJkVlBjRDVNak8yLVRsbU12WTRxOElQS1NqdWtaYWdfV1RMelh3VkZWMjE4OWJtM1c5VVB0ampsRXJRYkZWUUlGR2hnVEhjVnRaTTJLc2RZbTBHZ2RLc093WXh6OXk0M0RCcTMzOVg2bjdSdm5CNGdFR0JCQmxLUE9jU01UNkxUZm1Zcy1fWGt3bkI1Mk84cnh2NXMwQzlhWmJMc0w2ZFh0VHB3d0k3Y3dnc3ZYSE5fXzRGcXc4Qmdra05nckhOY2JFLU5SdmczaW9Hbk5wdFY2dnR2ekJvX29tTDVQTVh1LXJZMEtoeWN4aDVtbVU1TmxBT3M2QmtCdkJLXzNKRUdmNHE2MWNQRUsxN1VvcjhMN0diVE0yY2pRcFNJX0ExSUxfcFQ2eEcycy1sb1o3aWphZFFvS0RZNE1nWVZjeWRESmVBS1doWjFrMnFqT0VBdzh0M1o3bTlnQThleVhSMlRqR3JJZUUxcGlBY0ltQi02VE1YQXU3TC1VWUgyMkhRaWc2V3F6NQ?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Les marchés : l'IA peut-elle encore soutenir la Bourse ? – 06/11",
+   "titre": "La France est 3e en Europe pour les dépenses sociales avec 32% du PIB: pourquoi les Français reçoivent-ils alors moins de prestations que les Allemands, les Danois ou les Néerlandais?",
    "source": "BFM Économie",
-   "date": "Fri, 06 Nov 2026 21:32:10 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/c-est-votre-argent/les-marches-l-ia-peut-elle-encore-soutenir-la-bourse-06-11_EN-202611060917.html",
+   "date": "Sat, 07 Nov 2026 05:59:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/la-france-est-3e-en-europe-pour-les-depenses-sociales-avec-32-du-pib-pourquoi-les-francais-recoivent-ils-alors-moins-de-prestations-que-les-allemands-les-danois-ou-les-neerlandais_AN-202611070061.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -285,13 +231,22 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Les responsables de la Fed envisagent une hausse des taux après la publication d'un rapport sur l'emploi très positif - TradingView",
+   "titre": "RBC Capital maintains BCE at Outperform, raises price target to $35 from $34 - TradingView",
    "source": "TradingView",
-   "date": "Fri, 06 Nov 2026 20:56:42 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5Qa0RJM0FkZ3p1SU9LbE0za0M2d2FDRFNmbV95N1NFU092VEtwQl9FYk5YRG5nRndtYlZVaERJeDVEa0R0RVRjLXNLc3ZTekpsRWpUZEhlQms0eF9yX3ZjNFdMYjVNSnBTNDdSQmJrRlJGLVhTMC00?oc=5",
+   "date": "Fri, 06 Nov 2026 19:43:20 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVllGeXZ5ZjF6QnBmbWFEY1V0dEU3YXV0NGVRRUxBVV93NlB5NV9mMGRHdHJ5bGVONlM2eDNnRy16S1g2emc0ZkctZnFZR3ZGTWVOZmUxNW5HVEpJN0dib3hjRWtuT3pXdlZMcmFSem1mUUlJZWxqZS1QckxKT3l5TFNGbG1XQU15NlZlWWd1U3ZNdFhaaHhROVdOVGl3TmtaZXF1bE1oSkU1OC1qbWg1cWUta2trbG5XSmp3RjVMX0lzODVyeExBemJOWlk0Z0tyS1doTWdidUExNS1EaTh4c3ZqVk5kM2Fp?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Daly juge probable une nouvelle hausse des taux de la Fed, malgré la chute « douloureuse » des valeurs technologiques - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Fri, 06 Nov 2026 18:27:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZ2tBQklkY2FXblBEUG9FMDJaYVJadWlxMWxpSENhUGlwbWhVd0NlNmNaRUhMblJ6Yy1SY2dYTXBCeklPUXhxMTZ3ZnQtSHZ6eXhfX0F3ZW9jWEFnN1pJdWROdFQwUElvd1l6ZU1pdlpBR3JUVEdDUjVwMEF4cW5oelhnMlp5WmhzaGNzWFdkUVB1UW42NUpxXzZDUWNEa3FDbFZRRU9Jek95YkZING41MGtTdnF0aHBHWEd0dl93Rjl1c19RbTNkdXRBalZocE51dHZNbmpCdkExZU9VWmNfRnFqVTM2OHJVQUN3?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
    "titre": "L'Europe finit dans le rouge, l'emploi US et la thématique IA ont animé la séance",
@@ -299,15 +254,6 @@
    "date": "Fri, 06 Nov 2026 17:07:22 GMT",
    "lien": "https://www.abcbourse.com/marches/l-europe-finit-dans-le-rouge-l-emploi-us-et-la-thematique-ia-ont-anime-la-seanc_705787",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BCE : un Espagnol et un Néerlandais candidats pour succéder à Christine Lagarde - Les Echos",
-   "source": "Les Echos",
-   "date": "Fri, 06 Nov 2026 17:03:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVTBVLXpaS0pVeGFHNXBQeVMwbm9VcFBMX2tId0Y5aVh6djdGallUTkJpZy13WkFoM1EtZmJRNVdWNnhTeW93bnZCNXlaVzVick0wcnAtUzU4aThOTHRNdERYVlNzalhCR21LZkFGaUxOY0lPcGdfZ3ExZS04OXZaWWZTOGpPTGs4UzkxbzRHMl9yY2NlSUROZzRzMmhVMHhrYXJCQ2lXUTNRd3V6YUFwdExHYTBkVHdtZWVwaFZlVzBqUUxJVUM3bFR4RElDSmVqRkRBdUNfNnduNFBj?oc=5",
-   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -348,15 +294,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Les inquiétudes se déplacent de l'inflation vers la croissance alors que la chute de la tech s'accentue - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 14:44:02 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQT01JdEFxRk1lQkZsVjdVcnRlRHhFRjB1TmVmR0ZONEUxWGhwZWFKMFZSWWxTR1hCUGd2QjNIUzFLUlBYS1NWdHUtek83YXdjU2lvMHJONjltc01xX0dKOHZONlZnWU5YZDFGVTR1NmwwUHpiWjh6bjdhbU9Fb2ZtaDgyR3FMczVmLUdPUUNhbDAzOW0xX0pzOGNaMWZYTlFJX0RhWXJTdndpV0l6NXlXR0lqcElvQUlvY2xQdDVMbDNJNlBGRXR5aXo0Q2Qwek9CXzZGQVlaaGVZM1V1MFYtT3psRTVYY2I4SENzOUlCLWVMOUx3V1RnOVpXOWlLQXlpOTV3MTdIcDVLdkxQZmRNc3NxVdIBkwJBVV95cUxQT01JdEFxRk1lQkZsVjdVcnRlRHhFRjB1TmVmR0ZONEUxWGhwZWFKMFZSWWxTR1hCUGd2QjNIUzFLUlBYS1NWdHUtek83YXdjU2lvMHJONjltc01xX0dKOHZONlZnWU5YZDFGVTR1NmwwUHpiWjh6bjdhbU9Fb2ZtaDgyR3FMczVmLUdPUUNhbDAzOW0xX0pzOGNaMWZYTlFJX0RhWXJTdndpV0l6NXlXR0lqcElvQUlvY2xQdDVMbDNJNlBGRXR5aXo0Q2Qwek9CXzZGQVlaaGVZM1V1MFYtT3psRTVYY2I4SENzOUlCLWVMOUx3V1RnOVpXOWlLQXlpOTV3MTdIcDVLdkxQZmRNc3NxVQ?oc=5",
-   "tag": "inflation zone euro",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
    "titre": "Les créations d'emplois accélèrent et le chômage baisse en octobre aux Etats-Unis",
    "source": "ABC Bourse",
    "date": "Fri, 06 Nov 2026 14:30:07 GMT",
@@ -364,15 +301,6 @@
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "BCE : la bataille pour l'après-Lagarde s'accélère - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 14:04:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOd3pqOTJFbkJ1QUl1elNxQWFWMW1OYXhGWDRmcTBMSENBYk1PTGE5TlNhWmtYRHdXekd1QVkyU0ZjdzZzbWRvdGFKLWtxLXVzZ2V2dFd4M212bXRpR2ZLRDZxOVdUbzZnOTAtRHR0RFdyUWJZQTFYTENtYmlOM1g4cDEwR0xxY3o3b2JHOEltN3NnNV9JUzNrUXFkZThHX3I4empWeDdxLXIxNlVmQ1ozSzdjdGtaRHVpVi1JZ19XX3NZbXRQMlJUWtIByAFBVV95cUxOd3pqOTJFbkJ1QUl1elNxQWFWMW1OYXhGWDRmcTBMSENBYk1PTGE5TlNhWmtYRHdXekd1QVkyU0ZjdzZzbWRvdGFKLWtxLXVzZ2V2dFd4M212bXRpR2ZLRDZxOVdUbzZnOTAtRHR0RFdyUWJZQTFYTENtYmlOM1g4cDEwR0xxY3o3b2JHOEltN3NnNV9JUzNrUXFkZThHX3I4empWeDdxLXIxNlVmQ1ozSzdjdGtaRHVpVi1JZ19XX3NZbXRQMlJUWg?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "positive"
   },
   {
    "titre": "USA: les créations d'emplois dépassent largement les attentes, le chômage recule à 4,1%",
