@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-07T00:03:51.219Z",
+ "genere": "2026-11-07T11:40:14.249Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -56,6 +56,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Agenda mensuel économique international du vendredi 6 novembre 2026 au samedi 5 décembre 2026 - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 05 Nov 2026 15:25:04 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aSFJBaXR0b1d6RTdBdzVMd25ENDR1SXBZVXFCWVptVDk3dVpDUUlIYkczMHU5QmMtWmY4azJobDFYUXdfM0ZxV1BoU0FsSlB3bkRXd0tsVTRXZ1BuNF9iNl9R?oc=5",
+   "tag": "Inflation",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "La Banque d'Angleterre rejoint le club des hausses de taux, l'Australie pourrait déjà en avoir fini - Boursorama",
    "source": "Boursorama",
    "date": "Thu, 05 Nov 2026 14:00:55 GMT",
@@ -74,25 +83,34 @@
    "sentiment": "positive"
   },
   {
-   "titre": "CAC40 : Paris bondit de près de 2 % après le scrutin américain - Le Revenu",
+   "titre": "Bourses européennes : le CAC 40 résiste après les élections américaines - Le Revenu",
    "source": "Le Revenu",
-   "date": "Wed, 04 Nov 2026 17:20:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTTFKT1l5LU91MnNxcGwyLTZvaWVJZVdVYWg3dDNPWTVLOVY4ZWtmWm02SFhTRFBUam9LNGgyOW0tS0VwMFRpdDU5SVk3N0w4MDMwQ01VYzVVU29paE1oeG9SVmFuczduOWliZXN5bGtudTdDbWEwQm0ybFF5N21BWnNQTHBnYnhxaUY4cmM5cEVFXzdETW5nZXg0b3VYT0VLeDdrenR0MnZJUQ?oc=5",
+   "date": "Wed, 04 Nov 2026 09:22:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObkJLa1VEbDM4NnF3aU1NUldtNVNtdTVqY3J1VE11QjZxdjNnaEJkd1NEZXdhR251NXBxZ2N6MjAzZm44ZmdwVklnVTJkVUh2UUdvQk9hQ2Y5ZXlfTFVLdnBEYXVXeFJyRXZMWjZleVMyanZPZ3NuS01DNlUtcEF2LUQtTnh1ei1XeWZPdl8xdkp2Zll5T1k0SjU5M0p3SV9UNFRCMGhVQWNxQQ?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Agenda hebdomadaire économique International du mercredi 4 novembre 2026 au mercredi 11 novembre 2026 - TradingView",
-   "source": "TradingView",
-   "date": "Tue, 03 Nov 2026 15:37:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzMFlXSWphVDZYY2VqVENsVVQ0S0JiZE12UWhMRE1FejA1SVUwMXhNRkE0X21sZzl0eERvNHhOdmJvNG1jcDRtV2hYY0tEbEc4NDExN21tLTRzc19tMVg2NlB3?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "neutre"
   }
  ],
  "produits": [
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 07 Nov 2026 10:18:47 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 07 Nov 2026 09:40:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Analyse du marché : Costco dispose d'une dynamique favorable à une remontée - Boursorama",
    "source": "Boursorama",
@@ -107,15 +125,6 @@
    "source": "Boursorama",
    "date": "Thu, 05 Nov 2026 23:08:36 GMT",
    "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOckRKa0RFTWRzbTBnTms0bGk5STFZNXhRS2JsdEl1SnMwTHhHYlRCekZsM01jS0xUbmFuR0FaNHZKbWVEMERITkdYQ05pelpSN2ZOcEFHVW1oTEZ6Qlh4a052SlF5YWloUWFYMXc5ckJDTWNxNnU4SG9PS2d6OVlFVUM3OHZZNEI4Wms0cFU1WmxLVTZYdmwyQkgwQVZ3RHNvS19FQW1KZmo0d1lkMGZJcF9lOXd4R0puQXB1bDFpWms2WXM5dDlnYWMwbm1weEFvdUg0YzcxbE9Dd1ZtZHJhdjdoYmhBemY3T3VJZ25jcXFzUXhxQU1LMmN5R284WlhkR3R0VkwxdTh0dlFQZDZac0NNNDTSAZoCQVVfeXFMTkpNTG9mT053N2V4NGtZUEZzMG5LNDJUODIzY0p2UTFxNWhrcnJwQnFRS3hXMHR5T2gwNE5xWV92bkwyNmEwbGlqWS1DQWdvT0FyUGZfdXpXLUlZVjV0bUEza2tPMVlFcGZtcWppdkhoUHdJSmdYYjg4OUhkeGJ4QVJ2QjN3cEpzWHA2TWoyVWZORzlPVVJBNk9GeHNsN3I0RzRUNElqQUQyenBDcTdtbEI2Z1d4UWRuaW9zLURtZHhwcmo5NlpfU3dzdlhMWEtYM3VZUllMMmlkaVhNMUMzTG0wdzd5WGhaVDZZTHpoM2NWY2NzcGlMWVp2TkdtejlfY2xPVE94YkdqT2tabTNpMmJGRjVfN0NHSWtR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe continue de saluer les résultats des midterms - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 11:08:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQdXh4WmhDOVFTakVHU1I0Z1NsXzFLM3VoQzRXWDFDZXBmZVZubXFWX19BblA2RWI3LTVSdTVvVndYMTlvQ0lTX3hkdlh0TC11NXpPUmdhU2RvSnpWZXhtNmZpWWZKV2lscHFneWRXLVVvSnVzaU1sLUw5X2loaUhwTWFtX0F2THVVRE1LVjh5UGd6Tk5tcXJlalpqMnh6RUVTM0E1aHcwbkc0ZlVDRERXd2ZrSy1CQkhHQjRTRG8yNVNEUmV4cUdjYm5lTVJlWFFlSGfSAdIBQVVfeXFMUHV4eFpoQzlRU2pFR1NSNGdTbF8xSzN1aEM0V1gxQ2VwZmVWbm1xVl9fQW5QNkViNy01UnU1b1Z3WDE5b0NJU194ZHZYdEwtdTV6T1JnYVNkb0p6VmV4bTZmaVlmSldpbHBxZ3lkVy1Vb0p1c2lNbC1MOV9paGlIcE1hbV9Bdkx1VURNS1Y4eVBnek5ObXFyZWpaajJ4ekVFUzNBNWh3MG5HNGZVQ0REV3dma0stQkJIR0I0U0RvMjVTRFJleHFHY2JuZU1SZVhRZUhn?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -139,39 +148,39 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "SEB SA : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
+   "date": "Thu, 05 Nov 2026 06:51:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSTgtbGlXWVVwNUVhQmV4SnU0M2p2Z0lNUkZmSmhrdl9sNHRMN1FmN3k5QjlZYnNwWmhNeXZ0Z2lSMlJYSUlwYjFUSnhzSXliWDNwNDhMcThxb0tmZTZKSDB3bm42ZHZMb1VONDFodENERW0wSnNwXzVnZEZEVjlXSE1OR2NOLURXMFJJQld3dlVqaEw2eHdoTS1EYUtHUVBXU2U5UXlkZllGY2ZUQUh0SFVGdFEyNkhucmxCUnNzR2lMekxvTEUwWDd4Z2lVd9IB0wFBVV95cUxOaktVZlItSnE2bHNQSzh4U2xJRVdWR25jNFdUZG9EYTdrU1JiVTFZcHQzTVpVVVN3c2pGWVRUMmZMTjJuamRTdmR5cXowemZKdlRtU0VGVE5QYjRXQ21weWRYTWgxYWdzOHZIVTNzZHYtdy1nTFhfSktZNlNXOUdOQjJXR3Z4Ny1YOWtPd08yM1R2WHBUMHNlRGRuam1NOUJnSUhCaXpCVzAtQ1hCS192bWZ1M3JLcHh2RkFrS05YdUtybXFaVUdNUC1KR200MGhKN0h3?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   }
  ],
  "eco": [
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:51:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "NVIDIA Cours Action NVDA, Cotation Bourse NASDAQ - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:47:26 GMT",
+   "date": "Sat, 07 Nov 2026 11:33:56 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FY3p6cDdaTUwxUFkxZjNJcjdVd1YtTnJocUg0eEJhYjBhTUNsemQtbWVaMFh3TVVKRFBuQ203c2ZyNzdDMVpoOXU2YXpTNjg?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "Comme les voitures ? Les motos chinoises conquièrent l'Europe - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:43:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
+   "date": "Sat, 07 Nov 2026 11:30:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMHdWRHBQSHdsZWx6MTgyY3YzUHRrS08wcm1aX0JNZ0JQa2hQQlVtbnJvVy10eGpuOC02cmFZUDd4TEVkOXdndUhTQlM5U1BvMzctWTViVkphMnU0X3lIbE04cHNJNFN3cE0xU29LUzhTaUZPQnZ1elNOZ2Y5RmJhbGlhd250WTRWWTVQYlV0OGxXNUl4TEtySU5na3Q0MjU4YzgtZU1MNUxlcWk4ZklBY1V1UjB6ZTRaWEt2YkttR0wzcjRrb2N4a2s5X3Y3OElBb0J30gHYAUFVX3lxTFBfRGJVc1JROW56T0JsTFF3cDJ3UTJNMk1tTUJBM1djSEdHNUF3YjFGRHplOTBCQWt0NEpaQVVEUWhrR3F6VE9HNV9ibV92RHZxczYxTXR4Z2xCcFI2TGhOanM4dEU2d3RWN29kenV4ZXFwZmUzNVpOVDN2Y0JDLUZ4RU82ZWt2WFpYOXhmcmE1V19RLTYtV3hJUzMyYWxuWlRzNFoyUEp0NW9ZdjhITTNiQ05HVVJyLUc0UmxVYUsyTl8xclYxUWtXcFhRT3NDWmRNZ3lFT3FtQw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 07 Nov 2026 11:27:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -179,36 +188,63 @@
   {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:39:10 GMT",
+   "date": "Sat, 07 Nov 2026 11:25:16 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "SANOFI Cours Action SAN, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:39:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5hSGE4Q2NUclVldnpENmJnbGVFY2NVS21LRzFPUW9qc25NOVhEQkxwcnV6RXRwQUFrd3c4S2RiTDlnNFdrb3hVSWYtdHZoeVlQaWc?oc=5",
+   "date": "Sat, 07 Nov 2026 11:17:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "AXA Cours Action CS, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "STMICROELECTRONICS Cours Action STMPA, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:39:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVUUNTZmlObk9FNUVUaTRiQWpReWduWEpNei1jbVpwUkw2eHVIUjhGX0pLSTRsVExXRDg0cnAwSjR0eERodWJSRjI2SXdWUmhn?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 23:35:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ta1FZdnY5UVUzYUVtX2hTeFJrVEtVcjlFVTl4MVVwQjA0REFoWk9GdjQwQi1vOXRBVTVLSDZXOW12d1RXR0Z3WXNEV0c0WUxO?oc=5",
+   "date": "Sat, 07 Nov 2026 11:01:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aEdVR1RKdDMyaW5mbzVJUlVoSWhzU0d2VUZCZHZkRjdjVlVzQkptT0FVdkp4MVFwUzNwSXFMRS1SNThZSXFkTkxtVDRISkV0Tkh3Ng?oc=5",
    "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Dette, instabilité politique… Face au «risque France», faut-il fuir ou miser sur les valeurs capables de résister aux turbulences? - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Sat, 07 Nov 2026 11:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQNXViMG90U0NhbUFiZnVZclRRbkpmbXV2b3owbEVpS01jUjVhU3N3aE1HQ0ZxUFpfcnBLN0VDeTdHb0JQR1dqMnpiazlpa0lCMjlobWpiOGdWTHdGWkc2NWt3S0cwYU15TjA5bW1KeVZQdDBWV3IzNG5sMmt4S0o2WmdwMGZWSEVmZUhoMkg2T0JmNGxBcjl5dEhsMU5XUF82UWJISkRMZzBlbkhDc3BkQ2k2QnNzZmM0NEZFYWhHQTJUbF80dzE5d20tMjJCQkdEM0N1M2hmaExIOFlsTkpQWXdWdFhFbk9GaW1YQldnVHg3UQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "BCE : ce qui se cache derrière les tractations pour le successeur de Christine Lagarde - Les Echos",
+   "source": "Les Echos",
+   "date": "Sat, 07 Nov 2026 10:49:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMHBXY0dXbUJIcDY2NjZRRkc3aVlPc1VISk11S1h2aE9hRnJydnJwODdTMUhtUUdIbXBJS2d2ZmtWWk83VE1aelhyc1BSWmlkVHFpOTlWRzJvUElZbzY0VHdJaDdsS3hKLVZsWm9YUDlnUGVzQ3dDTXY0VzQ3RXVmTW5lVWU1VVNUVHdDcE9kZHc0azFQR2d5T1poYUNKdFYwU1drWERVR194OW5WZVNjQkdrellENHN6UGVMQVcwNG45NjZHZFk3LXlVcnhHM19ZU09FdWhTaTNLUlJLMmVudnUxdl9Sdw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "C'est un séisme dans le monde des bulles: pour la première fois, les Français achètent plus de prosecco italien que de champagne dans les supermarchés (il coûte 4 moins cher)",
+   "source": "BFM Économie",
+   "date": "Sat, 07 Nov 2026 09:10:20 GMT",
+   "lien": "https://www.bfmtv.com/economie/c-est-un-seisme-dans-le-monde-des-bulles-pour-la-premiere-fois-les-francais-achetent-plus-de-prosecco-italien-que-de-champagne-dans-les-supermarches-il-coute-4-moins-cher_AV-202611070172.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La France est 3e en Europe pour les dépenses sociales avec 32% du PIB: pourquoi les Français reçoivent-ils alors moins de prestations que les Allemands, les Danois ou les Néerlandais?",
+   "source": "BFM Économie",
+   "date": "Sat, 07 Nov 2026 05:59:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/la-france-est-3e-en-europe-pour-les-depenses-sociales-avec-32-du-pib-pourquoi-les-francais-recoivent-ils-alors-moins-de-prestations-que-les-allemands-les-danois-ou-les-neerlandais_AN-202611070061.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -249,31 +285,13 @@
    "sentiment": "positive"
   },
   {
-   "titre": "De Quoi J'me mail : Amazon, une nouvelle gamme d'appareils connectés Echo (2/2) - 06/11",
-   "source": "BFM Économie",
-   "date": "Fri, 06 Nov 2026 19:24:25 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/de-quoi-jme-mail/video-de-quoi-j-me-mail-amazon-une-nouvelle-gamme-d-appareils-connectes-echo-2-2-06-11_VN-202611060861.html",
-   "tag": "BFM Économie",
+   "titre": "Les responsables de la Fed envisagent une hausse des taux après la publication d'un rapport sur l'emploi très positif - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 06 Nov 2026 20:56:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5Qa0RJM0FkZ3p1SU9LbE0za0M2d2FDRFNmbV95N1NFU092VEtwQl9FYk5YRG5nRndtYlZVaERJeDVEa0R0RVRjLXNLc3ZTekpsRWpUZEhlQms0eF9yX3ZjNFdMYjVNSnBTNDdSQmJrRlJGLVhTMC00?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "De Quoi J'me Mail : Apple, le MacBook passe au tactile (1/2) - 06/11",
-   "source": "BFM Économie",
-   "date": "Fri, 06 Nov 2026 18:51:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/de-quoi-jme-mail/video-de-quoi-j-me-mail-apple-le-mac-book-passe-au-tactile-1-2-06-11_VN-202611060843.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Un duel entre les pays du Nord et ceux du Sud de l'Europe: la succession de Christine Lagarde à la tête de la BCE va se jouer entre l'Espagnol Pablo Hernandez de Cos et le Néerlandais Klaas Knot",
-   "source": "BFM Économie",
-   "date": "Fri, 06 Nov 2026 18:11:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-duel-entre-les-pays-du-nord-et-ceux-du-sud-de-l-europe-la-succession-de-christine-lagarde-a-la-tete-de-la-bce-va-se-jouer-entre-l-espagnol-pablo-hernandez-de-cos-et-le-neerlandais-klaas-knot_AD-202611060796.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
    "titre": "L'Europe finit dans le rouge, l'emploi US et la thématique IA ont animé la séance",
@@ -287,7 +305,7 @@
   {
    "titre": "BCE : un Espagnol et un Néerlandais candidats pour succéder à Christine Lagarde - Les Echos",
    "source": "Les Echos",
-   "date": "Fri, 06 Nov 2026 17:03:27 GMT",
+   "date": "Fri, 06 Nov 2026 17:03:36 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVTBVLXpaS0pVeGFHNXBQeVMwbm9VcFBMX2tId0Y5aVh6djdGallUTkJpZy13WkFoM1EtZmJRNVdWNnhTeW93bnZCNXlaVzVick0wcnAtUzU4aThOTHRNdERYVlNzalhCR21LZkFGaUxOY0lPcGdfZ3ExZS04OXZaWWZTOGpPTGs4UzkxbzRHMl9yY2NlSUROZzRzMmhVMHhrYXJCQ2lXUTNRd3V6YUFwdExHYTBkVHdtZWVwaFZlVzBqUUxJVUM3bFR4RElDSmVqRkRBdUNfNnduNFBj?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
@@ -375,24 +393,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "\"L'inflation aux États-Unis est trop élevée ; il est essentiel de revenir à 2 %\" : Williams, de la Fed - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 10:28:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPR2Q2U1NqZVpNZkRlRUlQRjNOZlJQMENweFFqWWd6aG9fR0pRcnUxcjFsaGlpQUM2RUYxMVJFR2NSNXBBaWdNWmpLdWVZR29xZ2htS2doeXVISE4zSU92OWZOVWlCdVdxcG81NDBrNVRkSnVXVXlBeThkZDg1V3R3Y20xSXpWNDUyYlRBa0ptNWd4bTVCSkFjalhxY0diQ19SbmNWWTM3MXQtdXo1VTJVbVYyVGFyVXdBbmRJZmhEdkJ1bnhMVzhjN0ctZ0lIU0lZZ1JMY2stUjVOV0xsalVBa0NvSVRNY3g3dHRMMHo2T21yUVNobjc5TGxBejhNTnZvX3U0bkNBYWFuMmVYX052VjF3U1BEcWlt0gGYAkFVX3lxTE9HZDZTU2plWk1mRGVFSVBGM05mUlAwQ3B4UWpZZ3pob19HSlFydTFyMWxoaWlBQzZFRjExUkVHY1I1cEFpZ01aakt1ZVlHb3FnaG1LZ2h5dUhITjNJT3Y5Zk5VaUJ1V3FwbzU0MGs1VGRKdVdVeUF5OGRkODVXdHdjbTFJelY0NTJiVEFrSm01Z3htNUJKQWNqWHFjR2JDX1JuY1ZZMzcxdC11ejVVMlVtVjJUYXJVd0FuZElmaER2QnVueExXOGM3Ry1nSUhTSVlnUkxjay1SNU5XTGxqVUFrQ29JVE1jeDd0dEwwejZPbXJRU2huNzlMbEF6OE1Odm9fdTRuQ0FhYW4yZVhfTnZWMXdTUERxaW0?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'économie américaine fait preuve de résilience, mais l'inflation est trop élevée : Williams, de la Fed - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 09:50:35 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMioAJBVV95cUxObGxuaFRMc1IwRUZFZGRMZ2V6cFZEMDcyT3MteHZRcmVBandWTFkyTHFLTkNmX0Q0TFJYOEEyNmNIWFp4UmZGQ0pYdTRSbC10MjB0T0MyX1ZGV3d3cnlZcWFfU0JtS1ozbmZyVGx4aHZPQktTTWZ1NFk1S3l3WkNNSVlmU2t2dXIxMDM1Rm5PSHdadFEwOUM2SVZoYlp5UUhyWGRDNnRxUWVERFp6dFp0NXlGMEd6VEtjUndlOFo4VU83ZnJ5aUc0OHRNT1RZRUZ0VTVvaUpod05sVlFlQkVlWGVxMk90czUwYklYT1JXQzZ6ZHBQaG9SSnNWcWM5WXZ4dC1zNVdGaDFFdUJQQU53OXNXTEdCNTBGdFRTbkhManHSAaACQVVfeXFMTmxsbmhUTHNSMEVGRWRkTGdlenBWRDA3Mk9zLXh2UXJlQWp3VkxZMkxxS05DZl9ENExSWDhBMjZjSFhaeFJmRkNKWHU0UmwtdDIwdE9DMl9WRld3d3J5WXFhX1NCbUtaM25mclRseGh2T0JLU01mdTRZNUt5d1pDTUlZZlNrdnVyMTAzNUZuT0h3WnRRMDlDNklWaGJaeVFIclhkQzZ0cVFlRERaenRadDV5RjBHelRLY1J3ZThaOFVPN2ZyeWlHNDh0TU9UWUVGdFU1b2lKaHdObFZRZUJFZVhlcTJPdHM1MGJJWE9SV0M2emRwUGhvUkpzVnFjOVl2eHQtczVXRmgxRXVCUEFOdzlzV0xHQjUwRnRUU25ITGpx?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
    "titre": "ECB President Lagarde to step down on 7 February 2027",
    "source": "BCE",
    "date": "Thu, 29 Oct 2026 11:00:00 +0100",
@@ -404,6 +404,15 @@
  ],
  "fiscal": [],
  "uc": [
+  {
+   "titre": "Carmignac Patrimoine : la diversification face à des marchés extrêmes - Zoom Invest",
+   "source": "Zoom Invest",
+   "date": "Tue, 03 Nov 2026 10:05:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2k4ZDZiS05aUTNKMlVGampDYUdnc0Joamw3LS1kRmFkY3RzQmpPeHJiMklWYXJFYmlEdzNhaWZYZUg4Qk92NGN6bDBFYnBFbXYta1Fpc3BaaXViNmFScHM3YnpCRVRfb1BGcUNGQmVGVDlDeHdDZll6UjFaUE5oN2daMWI1OVB0bUY0a3FVRjN6d3o2S2xOUkVqTm1yNXM0WFdmcWd5NUF4aGc?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Mauguio : le restaurant Le R devient Magellan, son chef reprend les commandes - Echo des Tribunes",
    "source": "Echo des Tribunes",
@@ -477,6 +486,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "Echiquier Artificial Intelligence — Fiche Fonds OPCVM - Zoom Invest",
+   "source": "Zoom Invest",
+   "date": "Mon, 11 May 2026 13:09:36 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4zVzZlSkhGZVR4ZWVwek9VSFFzWmRQR0R2Q255dXMwUEZ6T25feHVZeWQ1TWVGZ1FHV2pXMWRObkhTM1VTZnZvY0l5U19XWjV4dFM5QWJDenB0LTZCYzVPQjkzZDQ3LW1EVDE5TE93eVF0ZVQyTGtYc3R5Q0NuX00?oc=5",
+   "tag": "Echiquier Artificial Intelligence",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
    "source": "Club Patrimoine",
    "date": "Wed, 06 May 2026 07:00:00 GMT",
@@ -495,19 +513,10 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Le point sur Echiquier Artificial Intelligence - Zoom Invest",
-   "source": "Zoom Invest",
-   "date": "Tue, 27 May 2025 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONWJGeXJMV1Q0bGhRSXZISng0Y2MzZmJGejRYbUlvS3YwTmNRMnVWa2pYbWh3bnJkZmlZVU9aNURoT3hPRW93MzlOZ2FuVzBTcmdqVmRKV09sNkVpWk9LckU0WXVEZHZMcHhKaHZLc1d2cmtMbElWV0hWXzZHclFoZTRDUmpXMTdHYXRScHRvV2hJblNJTXN1dTR0UXpTTXA3eXhhZi1XWXhDUFV5N0Z3?oc=5",
-   "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Point sur... Echiquier Artificial Intelligence - Février 2023 - La Financière de l'Echiquier",
+   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Mai 2025 - La Financière de l'Echiquier",
    "source": "La Financière de l'Echiquier",
-   "date": "Thu, 16 Feb 2023 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
+   "date": "Fri, 23 May 2025 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRER2d2xjNml6RF8xWGdMT19ZM2xtcUtaRG5WZWtjWUNnOEF5M21QS21wZU9rTEZKVTh4eUI3R2o0UklWZnJjTV9HY0dPd3pmbHFmVENQekZ1VDNaZGlwTnRadFdJVDUwZEZJUm92cmFFbXFXX1JQMkNXc055TVNaWnB1d0tSdE1uaUJxNmdTQXdxWThnUlJHMUpQOGxSV09hckl6cUlidUo?oc=5",
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -527,15 +536,6 @@
    "date": "Fri, 11 Feb 2022 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQXy01M0NVUTVPaVF3NFFraC1OazB2VUVlU3Y1TUhGWm1nc1E2RGdYdy1yaTBRdHVISVowVGFBZkpFY2RIZk0tREZYVnk1djIwOVRsU21sUk1ZX2NvOGhvS2tkeFBOZERPOUJ6VnB1elplQnRweU5LQkpBTHprTXAzOW8zNlYxYVd6VDQ5QWloUFg1WGFJOVkzTEQ4ZUM?oc=5",
    "tag": "CPR Global Silver Age",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY1c5VExOVUs0YWxXVmpCUjdMV0xnaGhQU21WM2JFcndZMm9qTVRMMy1HT19MajJUMXUzVTF5TGtmRmpiSHN3QlNMTzA2S1lKaWR3dEZnYkI2OVFZdkRXNldmWmdjbFVxcUxYMmsyTlZWWFd3NFhNUjNKazVnNzVJWWo0aThRb1FRTnNV?oc=5",
-   "tag": "DNCA Invest SRI Europe Growth",
    "categorie": "uc",
    "sentiment": "neutre"
   }
