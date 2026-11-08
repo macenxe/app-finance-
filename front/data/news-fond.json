@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-08T11:52:44.701Z",
+ "genere": "2026-11-08T17:53:12.258Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -27,6 +27,15 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "Chances d'une hausse des taux par la Fed bondissent après le rapport d'octobre sur l'emploi - TradingView",
+   "source": "TradingView",
+   "date": "Fri, 06 Nov 2026 15:12:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzdTZYMUsxT296NmEyUk9uUHJ2a3FzZnZwRUw5Y013RUxCQ1F3YV9CLVdQSi1mU29tVlY1RERNdTgxTEo1MmpJRTUxOFY0QVJBa1NkM3NCXy1TVTdqRkNkX3JFSUJYYVVSaHhTRGhocWZka2NWMmFlYW5NWTR2M3c?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "positive"
   },
   {
    "titre": "L’angoisse des traders passe de l’inflation à la croissance alors que la débâcle technologique s’aggrave - Zonebourse Suisse",
@@ -81,15 +90,6 @@
    "tag": "Inflation",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Fed-BCE : la hausse des taux longs entre dans la danse - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Thu, 05 Nov 2026 10:09:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPalUza3ZRTVdaSm9kOGgxS3d4aGMtLXRYc1N3MGxFc3dJeE05TDV3S1VlM1pnQmVKanBNWUMyRmRzNHB1NmZQZUE2anNZak9VN3BMQzhtNEFiLXNQVlQxcTE0Vm1uZEZpTGxtWlZwallPa0RpNU5PQ0RiaENxWkt1RlE4U1ZOUmdPam9TUkxtcDN2RUlvZGVhM3J2MA?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
   }
  ],
  "produits": [
@@ -112,11 +112,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 06 Nov 2026 16:37:37 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
-   "tag": "Rheinmetall",
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 16:36:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -130,10 +130,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
+   "titre": "Action Capgemini SE | Cours CAP Bourse Euronext Paris - Zonebourse Suisse - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Fri, 06 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBBWDNMaU41VHRKTHIxOEx4enBtZWdsX19xQkItWFpiX1hZOEtiMXFDaHprdTMwYzd6TTRMZklMM1JuX3NpRE1uODhnOVJXMkZFcWZkQkxIdVc1R21zUzdKMVNNTHpzckVQ?oc=5",
    "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -158,6 +158,33 @@
   }
  ],
  "eco": [
+  {
+   "titre": "Israël : chargé de former un gouvernement, Eisenkot appelle à l'unité face à une crise historique - Boursorama",
+   "source": "Boursorama",
+   "date": "Sun, 08 Nov 2026 17:09:09 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQNE16Qm95OElTc0ljRUo3Vkt6T0tlRVNHMmZoRFpOVm5fTzJjWkk4MEpIMXdtcXdicVptNHc4VF9LM2R3aFpCemQ0cXZ3Wk9ZakEyZEY0UTRWQ3ZfaFBKaEd0dGlWQ1VOY2VsVW5YZmxrbHFEcnZKdUhtZmtBalRQTnZ6V253eDJHMWlmX1RIYWszbzhsM3BZamdpUy1qYWlVS2lfbjdCNlFMckZnLVdJNndVYmZhUU9PNHo3Sy14VzhmZHJ5azFiQzBWT0gzM2ZqMjZCWkdLVUNJUDdtempuZ09STHA4SG5CeXltYVIycHAzUS1Ic1dsb2NYWlI1SkIxSDNxN0FMM256YjdMVGJBR1Z0N1_SAZoCQVVfeXFMTXNoU0ZGTGxZZFdtTkZIX3EwTmpwWlRsVFFVeDJieWJldF9MYU8tM1JPdE12ODlRNDk3c0VPRHVheWJhbXFWMUFBU3VxbTVscW5YMGtISkFUNXd5Z2o3bm81cDRJYThGeXlVZXh3QkFWdzM2STRiR1U4Q1pPdUpBN2pBcGxQV3hzYU9TczlDeE9oMTJxeXZyQ2dVTTdEbkVkQVJRQjBfcURlMlpsZnhuUTAtRGZCNl9pR29OTWR1SHJlM1hWQV9MV2paZ19rUUlHVWlsZ1JFVm5QM1dySVVmd3psZ1psVVlpZWd6ckcwY1VSWWRNODJIRW5FeVFPekdOVHR3WEpfOEZBSVY5TGp6eVBRMFo1OHRreTFB?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Ils pompent l'eau de l'océan, l'envoient à 4.400 mètres d'altitude en traversant un désert: le chantier dantesque du Chili à 3,5 milliards de dollars pour relancer une mine de cuivre",
+   "source": "BFM Économie",
+   "date": "Sun, 08 Nov 2026 12:03:30 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/industries/ils-pompent-l-eau-de-l-ocean-l-envoient-a-4-400-metres-d-altitude-en-traversant-un-desert-le-chantier-dantesque-du-chili-a-3-5-milliards-de-dollars-pour-relancer-une-mine-de-cuivre_AV-202611080238.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "États-Unis : l’inflation accélère portée par le rebond des prix de l’essence - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Sun, 08 Nov 2026 12:01:22 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0V6bnZPOEx2MEdqR0RITVVfbDBnYm1oemJvSG1iN3JrOVlQUWlYSXFULXdHMkM0QVV6MU93VjZ2SF9CTUFXUDkzRVlQbnp0RDZaSUFDU09xa1NacUNTdUw5UHFVUHVBcVJJMjV6d3BxNW8yVjFIdWUtZWdIeGo0d3lETU1GLTRKX2xpYVNVTDg4eFVTWjBacDVyY3l4Zld1Nno1T1oxT24?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
   {
    "titre": "\"Les prix deviennent démentiels\": après des décennies de déflation, le Japon peine à s'habituer à l'inflation et ses entreprises hésitent à augmenter leurs tarifs",
    "source": "BFM Économie",
