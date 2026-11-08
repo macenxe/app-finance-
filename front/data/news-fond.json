@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-08T17:53:12.258Z",
+ "genere": "2026-11-08T21:57:43.964Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -56,10 +56,10 @@
    "sentiment": "negative"
   },
   {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 06 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
+   "titre": "Bourse : pourquoi le CAC 40 profite-t-il de la victoire des démocrates ? La sélection d’actions de Momentum s’envole - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Thu, 05 Nov 2026 18:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOLUdQRGYxQjFTZThxeVJwTXduX19LWTBMT0NYZ08yR1lyYXc5UExlZEhrZGg4VDJQdkJmQTN5ZTBNbGJ0VmpNQVN1YmtKbnc4SDNNZ3ZtYmFQdkxEbnJxN2xaRFNCejZqa2xYTGtjZTVyNVI0VkdiN1JqNmlwaDc4RTU2QUxqMmpKY1BfU3pLZTlyMmtkVDc5NVp0ZjBfSEJKQWQzTXdSbVV4djdqLUJ0WmlVRjZOOGo5QThHVmJ2c2hIQmhWb096M3g0alpzd1daTnd4VU1XWWY0ZlR0OWlMal9JU3U1UUlmWk1XUGVLSEJDQ3c?oc=5",
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
@@ -121,6 +121,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 16:35:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Analyse du marché : Costco dispose d'une dynamique favorable à une remontée - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 06 Nov 2026 11:00:42 GMT",
@@ -159,13 +168,13 @@
  ],
  "eco": [
   {
-   "titre": "Israël : chargé de former un gouvernement, Eisenkot appelle à l'unité face à une crise historique - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 08 Nov 2026 17:09:09 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQNE16Qm95OElTc0ljRUo3Vkt6T0tlRVNHMmZoRFpOVm5fTzJjWkk4MEpIMXdtcXdicVptNHc4VF9LM2R3aFpCemQ0cXZ3Wk9ZakEyZEY0UTRWQ3ZfaFBKaEd0dGlWQ1VOY2VsVW5YZmxrbHFEcnZKdUhtZmtBalRQTnZ6V253eDJHMWlmX1RIYWszbzhsM3BZamdpUy1qYWlVS2lfbjdCNlFMckZnLVdJNndVYmZhUU9PNHo3Sy14VzhmZHJ5azFiQzBWT0gzM2ZqMjZCWkdLVUNJUDdtempuZ09STHA4SG5CeXltYVIycHAzUS1Ic1dsb2NYWlI1SkIxSDNxN0FMM256YjdMVGJBR1Z0N1_SAZoCQVVfeXFMTXNoU0ZGTGxZZFdtTkZIX3EwTmpwWlRsVFFVeDJieWJldF9MYU8tM1JPdE12ODlRNDk3c0VPRHVheWJhbXFWMUFBU3VxbTVscW5YMGtISkFUNXd5Z2o3bm81cDRJYThGeXlVZXh3QkFWdzM2STRiR1U4Q1pPdUpBN2pBcGxQV3hzYU9TczlDeE9oMTJxeXZyQ2dVTTdEbkVkQVJRQjBfcURlMlpsZnhuUTAtRGZCNl9pR29OTWR1SHJlM1hWQV9MV2paZ19rUUlHVWlsZ1JFVm5QM1dySVVmd3psZ1psVVlpZWd6ckcwY1VSWWRNODJIRW5FeVFPekdOVHR3WEpfOEZBSVY5TGp6eVBRMFo1OHRreTFB?oc=5",
-   "tag": "CAC 40",
+   "titre": "Nvidia: enquête interne sur des accusations d'espionnage chinois - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Sun, 08 Nov 2026 21:49:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaW9xSDAwRlNTNW5sbHVmMmI4cXV0OE9iVU4tMTRDZ19QNkRKc0M5cEpZYTFGNmFWQXhoYmlZSUNyZUVYcDZvd3NlVmtlYmtKSmpzVEd0N3lUemdZVG1fajE4c1RxVENaRHd2blpvb00zSi0waXVQNFJyREdDaUFaWW9wdXFrY2pmdHNpbjNZczJiaGJZZmFENm9oa203cUxmTkpiblVEMFZaRE9DeXBQVjJTcW81aDBWdWk2YXl0RE4?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
    "titre": "Ils pompent l'eau de l'océan, l'envoient à 4.400 mètres d'altitude en traversant un désert: le chantier dantesque du Chili à 3,5 milliards de dollars pour relancer une mine de cuivre",
