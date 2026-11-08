@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-07T21:43:44.514Z",
+ "genere": "2026-11-08T11:52:44.701Z",
  "globales": [
   {
    "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
@@ -38,6 +38,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Les inquiétudes se déplacent de l'inflation vers la croissance alors que la chute de la tech s'accentue - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 14:44:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQT01JdEFxRk1lQkZsVjdVcnRlRHhFRjB1TmVmR0ZONEUxWGhwZWFKMFZSWWxTR1hCUGd2QjNIUzFLUlBYS1NWdHUtek83YXdjU2lvMHJONjltc01xX0dKOHZONlZnWU5YZDFGVTR1NmwwUHpiWjh6bjdhbU9Fb2ZtaDgyR3FMczVmLUdPUUNhbDAzOW0xX0pzOGNaMWZYTlFJX0RhWXJTdndpV0l6NXlXR0lqcElvQUlvY2xQdDVMbDNJNlBGRXR5aXo0Q2Qwek9CXzZGQVlaaGVZM1V1MFYtT3psRTVYY2I4SENzOUlCLWVMOUx3V1RnOVpXOWlLQXlpOTV3MTdIcDVLdkxQZmRNc3NxVdIBkwJBVV95cUxQT01JdEFxRk1lQkZsVjdVcnRlRHhFRjB1TmVmR0ZONEUxWGhwZWFKMFZSWWxTR1hCUGd2QjNIUzFLUlBYS1NWdHUtek83YXdjU2lvMHJONjltc01xX0dKOHZONlZnWU5YZDFGVTR1NmwwUHpiWjh6bjdhbU9Fb2ZtaDgyR3FMczVmLUdPUUNhbDAzOW0xX0pzOGNaMWZYTlFJX0RhWXJTdndpV0l6NXlXR0lqcElvQUlvY2xQdDVMbDNJNlBGRXR5aXo0Q2Qwek9CXzZGQVlaaGVZM1V1MFYtT3psRTVYY2I4SENzOUlCLWVMOUx3V1RnOVpXOWlLQXlpOTV3MTdIcDVLdkxQZmRNc3NxVQ?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "negative"
+  },
+  {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
    "source": "Boursorama",
    "date": "Fri, 06 Nov 2026 08:00:00 GMT",
@@ -74,15 +83,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La Banque d'Angleterre rejoint le club des hausses de taux, l'Australie pourrait déjà en avoir fini - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 14:00:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQMm1QMnNDcW42S2phd1hnbDl5WDdheXJ1MzZwVk9nWWZnMk12ZUxQZU5NNmRDNkNUSGhGQWMwODFGV0JHN0JRTk1pMmRQXzZPSWZJOGhVTVdpOC1zWHpIS0ZUM25nNHh5WWU4akJ5cnhneHg2ZVMzVkFZUVFSVWlvOE1kT0xuTS1RU2RZZzVTb0xqWFhWeEV0Q04tZWJ4RHRWOWctZkhwNnB2bGNrdFdSUnpUbkU5ekx4dVBTeWJZaE4wOFItMjdpZXhmX1J5ZEpRUGI3S2ctNXJXTEZ3bUFILUExXzB1ME43Q05HNTYtNENqUzRJZGpSV0hMNVoxS2VyLVg0Wmg1bHNkNkFCa2lBUzBkR3ZucTl0TkdCMzhGNNIBnwJBVV95cUxQMm1QMnNDcW42S2phd1hnbDl5WDdheXJ1MzZwVk9nWWZnMk12ZUxQZU5NNmRDNkNUSGhGQWMwODFGV0JHN0JRTk1pMmRQXzZPSWZJOGhVTVdpOC1zWHpIS0ZUM25nNHh5WWU4akJ5cnhneHg2ZVMzVkFZUVFSVWlvOE1kT0xuTS1RU2RZZzVTb0xqWFhWeEV0Q04tZWJ4RHRWOWctZkhwNnB2bGNrdFdSUnpUbkU5ekx4dVBTeWJZaE4wOFItMjdpZXhmX1J5ZEpRUGI3S2ctNXJXTEZ3bUFILUExXzB1ME43Q05HNTYtNENqUzRJZGpSV0hMNVoxS2VyLVg0Wmg1bHNkNkFCa2lBUzBkR3ZucTl0TkdCMzhGNA?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
    "titre": "Fed-BCE : la hausse des taux longs entre dans la danse - L'Agefi",
    "source": "L'Agefi",
    "date": "Thu, 05 Nov 2026 10:09:29 GMT",
@@ -94,11 +94,29 @@
  ],
  "produits": [
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 06 Nov 2026 20:32:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 17:21:02 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 06 Nov 2026 16:38:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Rheinmetall AG: Objectif de Cours et Consensus des Analystes | RHM | DE0007030009 - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 06 Nov 2026 16:37:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9SeTh5WXp6M09uZzhnVlpqcWltSVlNUDVZRnk1VndBZ2I5c2pmRjNGRkZVVG5VWk9xa0Q2US1BRUhBV1AzNkNjRHloX3FmbV83OXNJOWF0R3loTlRnOXZKdGUweHNkTl9uM2xscEhLWUxHUG9zTmFVR2dmU0U?oc=5",
+   "tag": "Rheinmetall",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -112,22 +130,22 @@
    "sentiment": "positive"
   },
   {
-   "titre": "USA/MIDTERMS-ANALYSE-Même sans le Congrès, Trump pourrait agir à sa guise sur la scène mondiale - Boursorama",
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 05 Nov 2026 23:08:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOckRKa0RFTWRzbTBnTms0bGk5STFZNXhRS2JsdEl1SnMwTHhHYlRCekZsM01jS0xUbmFuR0FaNHZKbWVEMERITkdYQ05pelpSN2ZOcEFHVW1oTEZ6Qlh4a052SlF5YWloUWFYMXc5ckJDTWNxNnU4SG9PS2d6OVlFVUM3OHZZNEI4Wms0cFU1WmxLVTZYdmwyQkgwQVZ3RHNvS19FQW1KZmo0d1lkMGZJcF9lOXd4R0puQXB1bDFpWms2WXM5dDlnYWMwbm1weEFvdUg0YzcxbE9Dd1ZtZHJhdjdoYmhBemY3T3VJZ25jcXFzUXhxQU1LMmN5R284WlhkR3R0VkwxdTh0dlFQZDZac0NNNDTSAZoCQVVfeXFMTkpNTG9mT053N2V4NGtZUEZzMG5LNDJUODIzY0p2UTFxNWhrcnJwQnFRS3hXMHR5T2gwNE5xWV92bkwyNmEwbGlqWS1DQWdvT0FyUGZfdXpXLUlZVjV0bUEza2tPMVlFcGZtcWppdkhoUHdJSmdYYjg4OUhkeGJ4QVJ2QjN3cEpzWHA2TWoyVWZORzlPVVJBNk9GeHNsN3I0RzRUNElqQUQyenBDcTdtbEI2Z1d4UWRuaW9zLURtZHhwcmo5NlpfU3dzdlhMWEtYM3VZUllMMmlkaVhNMUMzTG0wdzd5WGhaVDZZTHpoM2NWY2NzcGlMWVp2TkdtejlfY2xPVE94YkdqT2tabTNpMmJGRjVfN0NHSWtR?oc=5",
-   "tag": "CAC 40",
+   "date": "Fri, 06 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Rheinmetall dévisse de plus de 16 % en Bourse, ces retards qui font dérailler ses prévisions pour 2026 - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Thu, 05 Nov 2026 13:45:34 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxON0t1OTBGX3c4QVI1aFZIZHJHSFZVX3dPX3VScWJvdkF4VDB4d3UtdEYwenhwMTlJMmxOYk1lNHR3V0JTamlmSS1BSG5LWXJJTUFYeHdmOUw3NlFlZFNJMVNmUWF0UXNPbURrbHUxLS14VUpzODBLNEhZRHJ3UU1sTXNmNzNzd1g4bU9MeU9VbDdPc0Y0WnYxYl9ScXZWd3I1eHg3WjVxbTRZeVBxSFRhcWNwd2FmTEc2bFE?oc=5",
-   "tag": "Rheinmetall",
+   "titre": "USA/MIDTERMS-ANALYSE-Même sans le Congrès, Trump pourrait agir à sa guise sur la scène mondiale - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 05 Nov 2026 23:25:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOckRKa0RFTWRzbTBnTms0bGk5STFZNXhRS2JsdEl1SnMwTHhHYlRCekZsM01jS0xUbmFuR0FaNHZKbWVEMERITkdYQ05pelpSN2ZOcEFHVW1oTEZ6Qlh4a052SlF5YWloUWFYMXc5ckJDTWNxNnU4SG9PS2d6OVlFVUM3OHZZNEI4Wms0cFU1WmxLVTZYdmwyQkgwQVZ3RHNvS19FQW1KZmo0d1lkMGZJcF9lOXd4R0puQXB1bDFpWms2WXM5dDlnYWMwbm1weEFvdUg0YzcxbE9Dd1ZtZHJhdjdoYmhBemY3T3VJZ25jcXFzUXhxQU1LMmN5R284WlhkR3R0VkwxdTh0dlFQZDZac0NNNDTSAZoCQVVfeXFMTkpNTG9mT053N2V4NGtZUEZzMG5LNDJUODIzY0p2UTFxNWhrcnJwQnFRS3hXMHR5T2gwNE5xWV92bkwyNmEwbGlqWS1DQWdvT0FyUGZfdXpXLUlZVjV0bUEza2tPMVlFcGZtcWppdkhoUHdJSmdYYjg4OUhkeGJ4QVJ2QjN3cEpzWHA2TWoyVWZORzlPVVJBNk9GeHNsN3I0RzRUNElqQUQyenBDcTdtbEI2Z1d4UWRuaW9zLURtZHhwcmo5NlpfU3dzdlhMWEtYM3VZUllMMmlkaVhNMUMzTG0wdzd5WGhaVDZZTHpoM2NWY2NzcGlMWVp2TkdtejlfY2xPVE94YkdqT2tabTNpMmJGRjVfN0NHSWtR?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
    "titre": "Défense : le géant allemand Rheinmetall décroche en Bourse après avoir révisé ses prévisions - Les Echos",
@@ -137,77 +155,32 @@
    "tag": "Rheinmetall",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "Bourse : Rheinmetall se prend les chenilles dans le tapis, Legrand se distingue - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Thu, 05 Nov 2026 08:03:10 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZDFucklRaDgyMlVMa08ydkV0QXZ5eFYxY28tN01uLTg1dzM0d045ZThJTXphcEh1bVo1b3VfOUpCTHlfQktONXA1d3NnYzZidVBTZC1SZzRRVGdkWFFVdzVuTFprVHBLQU5FRzhVc0dFY01CbXEyVjdkbmUwd3h1MjJWQm5KQnZ6N0pkdXBMdUxQTjVIdXVmdFBNa0poOVVsMUR1b3RWVE52ZkswVDFWS3doTWpLenh2SlNUQVNkc19mbWx2SFpIcE5DanBOSmtRbC1r?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Point recommandations des analystes : Vusion, Capgemini, Sanofi - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 02 Nov 2026 08:08:48 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVkloR3Z4bVVWalMtYy1od0ZYeXZPai1meVpTT1Vqa3YyZ0ZBRl9ZcVRtMTg3c0dPTFA2TVUzRTRPcFhGeDc3M25ENWxfcUV0cHpZTWZLenBGb20tNXhncGt5UnQtM1VETExoZ1JPWDZfUXRMMU5XcGRKajlWa3JROTlTRUVNV3FSLWJMN2RlWm1sbDd4dU0wT2FJUUZid1RMQng2eDlfNlprdERlS3dxOUtQb0xNdERYalE3QXYzWW4?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "Un Trump pugnace veut Dana White, patron de fédération de MMA, comme porte-parole de la Maison Blanche - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 07 Nov 2026 20:54:41 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPQWU2d3o5TmVGNXlneDk4QVUtNFRIRGZqeGk3bEF2Skh1Z0xQaU96am9RYXRyXzIzOXBZVklOcy1xT3poSVpIa19uU2RGVUd2bUFyLU1tcll5Q0lIdzRRMXlxQ1pyT1BPTmhDcXAyNTNmQXFYZEI4OHFoRUZ0ZGl1VS1hT29DZnRKcVBqcTBvT1VHekh6NG50NG5HVmV6VEt6bGV6OGNQWFVlU2kycTlRNVU0UWQ5di1LejVFTnBQaXp0VzU4N1YyTW1aeGhKQmtCenRCMUxKUWp1WlV6OWI2a0dXVXdxYlpEdFJNTE1SaVVvWWo5NG1pTExIaDZnQ2NiN1ZFOHE5OUNXZ9IBjwJBVV95cUxOSVdyc2pEMjR0NVUzbnBYblVuRkluRkNzMFlzcTU4Tjc0akdCbFI1amhnTklHNTJsTXhMcWRrOTQ4UUJyV3BQWTZ4Q1JHb19OR2ZsUk1neVpBQ3Ezb3V2RkIwRWZJcUtCcTlyTnB5NXBSTEdpOWF2YWppbUhHSEFpN3BOQUJkYlBCajJQWUhQWGkwM3pJaTFuZ21hT1RHTXg3d0ZEYjZjSFVxWWoxMHc5aVA5UXI2Wlc3Rl94YksxY3RKOGtoOXNIR3NPTDZHMTYzLWh4UERZaDdJcGJ5VmJTODhXX2E5YWhhNndrSmZ2SlEwTDdTeWNTaTBpemQzc3B4dXlpNWhja0dIaHJUYjVN?oc=5",
-   "tag": "bourse",
+   "titre": "\"Les prix deviennent démentiels\": après des décennies de déflation, le Japon peine à s'habituer à l'inflation et ses entreprises hésitent à augmenter leurs tarifs",
+   "source": "BFM Économie",
+   "date": "Sun, 08 Nov 2026 08:08:47 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/les-prix-deviennent-dementiels-apres-des-decennies-de-deflation-le-japon-peine-a-s-habituer-a-l-inflation-et-ses-entreprises-hesitent-a-augmenter-leurs-tarifs_AD-202611080127.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Colère sociale: le gouvernement proposera \"des solutions\" sur les hausses des salaires, affirme Jean-Pierre Farandou, ministre du Travail",
+   "source": "BFM Économie",
+   "date": "Sun, 08 Nov 2026 05:40:10 GMT",
+   "lien": "https://www.bfmtv.com/economie/emploi/video-colere-sociale-le-gouvernement-proposera-des-solutions-sur-les-hausses-des-salaires-affirme-jean-pierre-farandou-ministre-du-travail_VN-202611080073.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
   },
   {
    "titre": "Bulle de l'IA : \"on est au début d'un krach\" 📉🫧",
    "source": "BFM Économie",
    "date": "Sat, 07 Nov 2026 16:00:04 GMT",
    "lien": "https://www.bfmtv.com/economie/video-bulle-de-l-ia-on-est-au-debut-d-un-krach_VN-202611070387.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BCE : ce qui se cache derrière les tractations pour le successeur de Christine Lagarde - Les Echos",
-   "source": "Les Echos",
-   "date": "Sat, 07 Nov 2026 10:49:17 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMHBXY0dXbUJIcDY2NjZRRkc3aVlPc1VISk11S1h2aE9hRnJydnJwODdTMUhtUUdIbXBJS2d2ZmtWWk83VE1aelhyc1BSWmlkVHFpOTlWRzJvUElZbzY0VHdJaDdsS3hKLVZsWm9YUDlnUGVzQ3dDTXY0VzQ3RXVmTW5lVWU1VVNUVHdDcE9kZHc0azFQR2d5T1poYUNKdFYwU1drWERVR194OW5WZVNjQkdrellENHN6UGVMQVcwNG45NjZHZFk3LXlVcnhHM19ZU09FdWhTaTNLUlJLMmVudnUxdl9Sdw?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "C'est un séisme dans le monde des bulles: pour la première fois, les Français achètent plus de prosecco italien que de champagne dans les supermarchés (il coûte 4 moins cher)",
-   "source": "BFM Économie",
-   "date": "Sat, 07 Nov 2026 09:10:20 GMT",
-   "lien": "https://www.bfmtv.com/economie/c-est-un-seisme-dans-le-monde-des-bulles-pour-la-premiere-fois-les-francais-achetent-plus-de-prosecco-italien-que-de-champagne-dans-les-supermarches-il-coute-4-moins-cher_AV-202611070172.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "US Fed pulls guidance blocking its banks from engaging with crypto - TradingView",
-   "source": "TradingView",
-   "date": "Sat, 07 Nov 2026 08:34:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilANBVV95cUxOSmpTX3h4OUJkVlBjRDVNak8yLVRsbU12WTRxOElQS1NqdWtaYWdfV1RMelh3VkZWMjE4OWJtM1c5VVB0ampsRXJRYkZWUUlGR2hnVEhjVnRaTTJLc2RZbTBHZ2RLc093WXh6OXk0M0RCcTMzOVg2bjdSdm5CNGdFR0JCQmxLUE9jU01UNkxUZm1Zcy1fWGt3bkI1Mk84cnh2NXMwQzlhWmJMc0w2ZFh0VHB3d0k3Y3dnc3ZYSE5fXzRGcXc4Qmdra05nckhOY2JFLU5SdmczaW9Hbk5wdFY2dnR2ekJvX29tTDVQTVh1LXJZMEtoeWN4aDVtbVU1TmxBT3M2QmtCdkJLXzNKRUdmNHE2MWNQRUsxN1VvcjhMN0diVE0yY2pRcFNJX0ExSUxfcFQ2eEcycy1sb1o3aWphZFFvS0RZNE1nWVZjeWRESmVBS1doWjFrMnFqT0VBdzh0M1o3bTlnQThleVhSMlRqR3JJZUUxcGlBY0ltQi02VE1YQXU3TC1VWUgyMkhRaWc2V3F6NQ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La France est 3e en Europe pour les dépenses sociales avec 32% du PIB: pourquoi les Français reçoivent-ils alors moins de prestations que les Allemands, les Danois ou les Néerlandais?",
-   "source": "BFM Économie",
-   "date": "Sat, 07 Nov 2026 05:59:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/la-france-est-3e-en-europe-pour-les-depenses-sociales-avec-32-du-pib-pourquoi-les-francais-recoivent-ils-alors-moins-de-prestations-que-les-allemands-les-danois-ou-les-neerlandais_AN-202611070061.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
@@ -342,15 +315,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Graphique des rendements saisonniers Conservateur Actions Flexibles D (0P0001HI3T.F) - Yahoo Finance France",
-   "source": "Yahoo Finance France",
-   "date": "Thu, 29 Oct 2026 21:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9Zd0hrUS11WU5CMFBQRG5OUWVJRU1rVHJ0VXpxaTkyUXRGemVOODhwUHRmNXJUNnhOUWVmcGhjYW0wR3pseHlfbjZEamR4cWhfeHhSeVlKdkNLT3hpTXdaVnBRVkhZN2Z6LTdPRQ?oc=5",
-   "tag": "Conservateur Actions Flexibles",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Hendaye. « Jamais il n’a été question que Magellan accomplisse le premier tour du monde en bateau » : Beñat Zintzo-Garmendia propose une relecture historique de la célèbre expédition maritime - Sud Ouest",
    "source": "Sud Ouest",
    "date": "Tue, 27 Oct 2026 07:00:00 GMT",
@@ -446,6 +410,15 @@
    "date": "Fri, 11 Feb 2022 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQXy01M0NVUTVPaVF3NFFraC1OazB2VUVlU3Y1TUhGWm1nc1E2RGdYdy1yaTBRdHVISVowVGFBZkpFY2RIZk0tREZYVnk1djIwOVRsU21sUk1ZX2NvOGhvS2tkeFBOZERPOUJ6VnB1elplQnRweU5LQkpBTHprTXAzOW8zNlYxYVd6VDQ5QWloUFg1WGFJOVkzTEQ4ZUM?oc=5",
    "tag": "CPR Global Silver Age",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
+   "source": "Banque Populaire",
+   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY1c5VExOVUs0YWxXVmpCUjdMV0xnaGhQU21WM2JFcndZMm9qTVRMMy1HT19MajJUMXUzVTF5TGtmRmpiSHN3QlNMTzA2S1lKaWR3dEZnYkI2OVFZdkRXNldmWmdjbFVxcUxYMmsyTlZWWFd3NFhNUjNKazVnNzVJWWo0aThRb1FRTnNV?oc=5",
+   "tag": "DNCA Invest SRI Europe Growth",
    "categorie": "uc",
    "sentiment": "neutre"
   }
