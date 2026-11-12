@@ -61,7 +61,7 @@ const HISTO_DERNIER = {
   // OAT 10 ans : plus d'entrée ici — la carte est servie en live par majOAT (app.js), qui lit
   // le dernier point de front/data/history/oat.json (append quotidien par Actions).
   'fred:IRLTLT01DEM156N':       { valeur:'3,47 %', var:'+28 pb', hausse:true, date:'septembre 2026' },
-  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,44 %', var:'', hausse:null, date:'au 10/11' },
+  'fred:ECBESTRVOLWGTTRMDMNRT': { valeur:'2,44 %', var:'', hausse:null, date:'au 11/11' },
   'hicp:CP0000EZ19M086NEST':    { valeur:'3,8 %', var:'+0,5 pt', hausse:true, date:'septembre 2026' },
 };
 
