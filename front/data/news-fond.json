@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-12T21:25:59.253Z",
+ "genere": "2026-11-13T13:00:15.051Z",
  "globales": [
   {
    "titre": "Le FMI suit de près les évolutions en matière d'IA ; il est encore trop tôt pour dire si une réévaluation de l - Boursorama",
@@ -56,6 +56,15 @@
    "sentiment": "negative"
   },
   {
+   "titre": "IA : Impact sur les Marchés Boursiers - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Fri, 06 Nov 2026 17:11:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWFlQbG9mWGFYMmVaUUJycURmUXRZZkdWRnRJU1dHUmxVY2owS0taU2pib3lIUnFnZXBDblJxNENtT2ZBNEliQUhLX1FKd2VlSHV6cFAtbzJrZ05fU0RkYi1rVlpUamdOM2h5anA0STFmUi1mdWd2VUtFOTI5WXNZSjYzWUp4VVRXXzd4TENMNFVBWG1oOE9qR3JBTUR3MTlaOFlZQXBOTGZEUQ?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Des élections américaines à double détente pour les marchés - Investir Les Echos",
    "source": "Investir Les Echos",
    "date": "Fri, 06 Nov 2026 17:00:00 GMT",
@@ -65,22 +74,13 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Agenda hebdomadaire économique International du samedi 7 novembre 2026 au samedi 14 novembre 2026 - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 06 Nov 2026 15:38:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBiR01GbkV0RnV6eFJqZDVmeXhORGU4VDdKLWZkMTJIaFpma0JhaXlFM0pSdVhJQWktX01WbEdVWWdPSllKZFc0eWxLT1ZsZUdFcWRHWEFsUDEyc1hKZkFNNnZ3?oc=5",
+   "titre": "AGENDA DU 9 AU 13 NOVEMBRE: L'inflation américaine au centre de l'attention - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 06 Nov 2026 16:20:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeXRFa2U1RWJuZ2FxN3VYRUhiSE1jX3RYdG5SdkpNVWplNkc1Z0dGR3dwYkxrNDRPclFMcDlrRWFkd0RxaWdlRG1EZXJjcTNOQjA2X25UNWpGVzF2UWxZM2pkUXBuaXAwa1J2S0UzdkFtZmZCTmk4V2htdjg5LUY4X1lkd3NBN0FleUVRLWhCemtFWUh0b19uN1pTMGpfaFJyQTF4dldrVkw3WmlzTW1DdWFEQ0Z6QQ?oc=5",
    "tag": "Inflation",
    "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Chances d'une hausse des taux par la Fed bondissent après le rapport d'octobre sur l'emploi - TradingView",
-   "source": "TradingView",
-   "date": "Fri, 06 Nov 2026 15:12:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzdTZYMUsxT296NmEyUk9uUHJ2a3FzZnZwRUw5Y013RUxCQ1F3YV9CLVdQSi1mU29tVlY1RERNdTgxTEo1MmpJRTUxOFY0QVJBa1NkM3NCXy1TVTdqRkNkX3JFSUJYYVVSaHhTRGhocWZka2NWMmFlYW5NWTR2M3c?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "positive"
+   "sentiment": "negative"
   },
   {
    "titre": "L’angoisse des traders passe de l’inflation à la croissance alors que la débâcle technologique s’aggrave - Zonebourse Suisse",
@@ -103,10 +103,19 @@
  ],
  "produits": [
   {
-   "titre": "Stellantis prolonge l’arrêt de Mirafiori, la production de Fiat 500 au ralenti - Le Revenu",
+   "titre": "Portzamparc reste à renforcer sur DBV Technologies après de nouvelles analyses - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 07:52:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONWlKdVVza0JqeHVkU1V6VU5GeWVfZHN1LU5vX3phblY1eHdjT3BKSWFLRmRtS0lrcUFNMjZsRHc2UDE4UlF0NVlkYmhqTEZqVlQ5Y25YQzdFbTh6OE5mQ1c0YXVnX1M3WWZGR3J5aFgtUHJUVFhNeVlYWFV2MktQT2ZtUTBheWM5TU9yc2pVQnQ0VHJuY3Bhd3Zkang5Y2FMRm82RnlraXNWaWFPM2dPQkpheW9ocEZZUElwQ2xOZXg1NkxsRTRKTnRqZk9oMXFKem1VcTNmZXUwZUtYMDZaMnh2ZUZmSHoxakpDRNIB8gFBVV95cUxONUJoMkdRY3EwNGFwcVRqcXV5cEZlU0QwQmhDTEozT2pqdFJkMlRrVWdFeDljbDNsbmQyd29LU0RSaDdiWHg1TTNlX216WTJ3NktCUVJHYjhVeWlQb0wybGx1ZWI2bnlNVnNrbDZ3ZDBBbVU4S0MyTFQxUHJsUVJDajA5OXNjR1JIbW1ac2dXZTYzTHowdVNsWkVDRngtSTFCaWM3WHpnajBuNFA0NVYyS05Bc1FUbFRDd3ZrZUg2Uk93aWtsMGNEUWFzemhuczZxdTh6aklkTE56OWVqOGlxOF8zb1U2SHEzUFpqQXVFQWhKdw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC40 : Paris progresse encore, Stellantis et Renault décrochent - Le Revenu",
    "source": "Le Revenu",
-   "date": "Thu, 12 Nov 2026 15:07:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZllCWGozd3Fmc05UM2pTWmZ3SDFrU01XcWdHa2ttazROSllWNUtMcFJaTXRHbkhLTXVoRGdjei1SNWVZVnlrV25lMDJ0X2hNc1B6YTUySVJjNmdtZHV0cXQ5QWJzVnk0WVN2clJzVkhpbFNYNFJITDdGSEhuSnNsWHJVU0wyc2ZKMk00enBPVktLbXExVG1raExSMWFoVXJVZEVoRDAwbmRiNUhBYUE?oc=5",
+   "date": "Thu, 12 Nov 2026 17:19:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPT3UtcU52NGlYZEpZMXdrMXRFX1JNU3FPbExXcDlNMEJDWVF6T2dVWnhYTGxaTUhvUzhRVlJTczBfS29IV091Wlh4LVJIM2dVWWVoUDVlR1pvQmN6WlV2S25PM1EyX2pDa0tDcFlGZXRBV2ZzR3BwTjR3UUdBU3V0NEZ1Z3pnQkYxN0RkZWRhU1Y1TFVyV0EtM1ZEdk93My0tWUkwUm9VZGo?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -121,11 +130,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Action Rheinmetall AG | Cours RHM Bourse Xetra - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 10 Nov 2026 15:56:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMie0FVX3lxTE40Xzg5a0p1cmRsb2gwa2VycXFFdmlMQTVoSXJZYVdMRWdnNG1abkpQV1Yzc0k5eEI0YlREbUJoX2N5YmdfcHQwUHJpNF9URGVobWxoZkhMbHBqdHVyNnQyQXJSSjhsUTF0OUxiNFoybUlFN0RLTkJsUS1STQ?oc=5",
-   "tag": "Rheinmetall",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 11 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -139,6 +148,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Rheinmetall, où en est-on ? Les analystes dressent un bilan avant le CMD - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 10 Nov 2026 08:56:17 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTWdGdGY2RDkxbm9OTG5JczVtTXNFb0pITG5CbEEwRGdHUVZVV3dUMHBNSkl0T183TWlqaC03QVQ2Q2tSRjdoLW9lWk9EOFc0Q2Q4SEF3WnRTdGQ2MzcxV2s1LXljcTQ0d0tIY0VpOFNMN3VDQ3BlWkVlQzlmUW5LbURhY1k0YmloSFQxVllaX0dFbS0xRFJmbU1OQ3lzOHkwOUJWTXdXUVd1RmJLdDJQUnlVal9uNzZUbmZieThiT3ZJNUlOajFvRTF3?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Le CAC 40 au top alors que la France est en crise : scandale ou normal ? - Boursorama",
    "source": "Boursorama",
    "date": "Mon, 09 Nov 2026 17:26:31 GMT",
@@ -146,24 +164,6 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "mwb research passe à l'achat sur Rheinmetall - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 09 Nov 2026 10:38:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPcmVhN3kyYnl5dlZ0WVJwRWllNmNpc29vd08xVGpXY1dod3ZmUEhkZ1hycXlsWVpTWnhaWXdhUTVidFJrdjhiUTRZb2FoOXcyWFdfNVgxQlk4UEY2aldBWkdIY1k4V3Bub2tJMmo5U1g2WGZBTVhjQmJZaGVsOG1VX3pob09aVVc1OGlHTW5yZGZldkR3SFpsb1JOQmpHT3FoWE1UYlBScTVwMlJLS0tvV0taRGE4Q0Z0MTQ0UjdjQWl2RUFK0gHEAUFVX3lxTE9yZWE3eTJieXl2VnRZUnBFaWU2Y2lzb293TzFUaldjV2h3dmZQSGRnWHJxeWxZWlNaeFpZd2FRNWJ0Umt2OGJRNFlvYWg5dzJYV181WDFCWThQRjZqV0FaR0hjWThXcG5va0kyajlTWDZYZkFNWGNCYlloZWw4bVVfemhvT1pVVzU4aUdNbnJkZmV2RHdIWmxvUk5CakdPcWhYTVRiUFJxNXAyUktLS29XS1pEYThDRnQxNDRSN2NBaXZFQUo?oc=5",
-   "tag": "Rheinmetall",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 09 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHXzNQY1BSWHVKcnNBSEtMekZnSFZ0RjMtRWtfSGVsZFRxWEFqQTdfa2FVV25jLTVPTURLOWt5T3ZabkR6Y205VGxR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
   },
   {
    "titre": "CLARIANE : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
@@ -177,247 +177,274 @@
  ],
  "eco": [
   {
-   "titre": "Wall Street termine en baisse, Nvidia pèse - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 21:20:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOUxtMERHM1FPZVd4cndtOTNJYm91TWp2RTNsdHlRLVBuY0VFN3ZRcjFsSEphWHlHenpxTlBtNktybk9HOTF1QjJmR1ZFR1Z4ZTF2aVNENzVDMTJCbjh1UldMSm1MRVhBeEl2Wm5JNzNQbTZnMGtZV3BxMXZWQ2hMY01VVHdUVlR2V3MxNHhYZ0kwWEl1QWRpWktsVDlZbnoxN2ZIOWpzVi1aLWg0NjY3N0cyd0dfdS1LbUFz0gHAAUFVX3lxTE1kRXZ2dktBbkdSVjZFMDkzWUNPTGFYYlc1YjVTODdyQVhac1JKSXRXNExkalItcWZhM1Rncnd2VXUxcmFyZzAzVTdVWHFnOWVyZmY5ekR4UmEtdE4xcnlxaFEwMktsNy1NTnlDUDFBZTlqdDREZlQ1akJac3p4czFOMGNsN25jcC1jcFRhSFdDTmRUb0pxQ2tMb1doY0RST3llckNMSVAxVWpKMmxDcHJjaDV6RVRSR3U5YUVWWnZvbQ?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Le Canada met fin aux discussions avec Stellantis sur la vente d’une usine automobile, selon CBC News - Zonebourse Suisse",
+   "titre": "Richemont plie en Bourse après le ralentissement de la croissance de ses ventes au 2e trimestre - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Thu, 12 Nov 2026 21:09:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOX2ZMWC1KaS1mVGxPV0lNWDAxQkNHRlZQenV6NUJlSTlkaUVoMlN6MFRDMHdpMjVVcDVyY1VtME9pTnRSblhyZEU3d1duamNfYW1BcUZSbUxCR3BpdWpZOEpueDJDa0RIMUhrQm5GUDBITE90ZVZDZ2ZOMnNtb3JJN1Q4SGpmNmRmUzJCV01DVWpubjlsUTA2ZlRKdEZ1Q2h0MkdpaVk0NkVXSDlGZFZwOFZNUVdBZGJHU2hBMWhlZDJ6YnZzX0JWbGdHdk9zczJUVFhhcDU1eWVoWHp4b3RjUS1DNUFPYWlxRGNPOTNrZw?oc=5",
+   "date": "Fri, 13 Nov 2026 12:49:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQcVNKSnJYMG9UZWpwTE5FUURBTWhxTTV2WkFXQ3IxMWxHSXJENnFVSlZnaWE3eWs3c0NiV05SNWhQa283WnhIVVpDc21PVWx5NTFsNWNtbWM1emRuTGNLZWtvQ2tIMW0tVUsteVA1QlRPdFp1TDRYMDhHaHE3aW9ZZ01rYzZacGhKeGdwNmYxajRQdVh1VHoxTlFONGpSbnRQTVhpMkJKaXdJQWlHNUFGdkE0LVVGU2hrUHlVUVdTVUtIRm5pSkJVSWdSMkhmZElYNVB4RXJtWm9aU20weTd4bzdMSE9UNC1SQTVZ?oc=5",
    "tag": "bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Le PE de Nvidia atteint son plus bas niveau depuis 14 ans, mais le départ de son directeur général et les inqu - Boursorama",
+   "titre": "S&P 500 - Les actions à suivre vendredi: Applied Materials, Nvidia, Cerebras, Mi - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 12:40:29 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTXA4R2xiVFVmRHQzQ0dwaFhnVkFBUTdXSzhUaTFTRW9wZFNqbXVETW12OTdYeFV4c2tlbFhUWTB4ZnlWanFuRnN0SXFmb0tKQ2VtcFdiSkdoR1lfeTlfUl9pdXk4UXRweEhMRWtzdVZkNEFjS0pITFRBeWt2eFhnQTNUQnc1TC13U09FODAxN3d5OEowaU0yQVMwLUt0YWpWcXRHdjRfQ0hnQlJPWXhSVzBoR3VJQQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre vendredi: Applied Materials, Nvidia, Cerebras, Microsoft, Super Micro, Cisco, SpaceX, Tesla",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 12:40:29 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-vendredi-applied-materials-nvidia-cerebras-mi_706086",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "E.ON émet des obligations vertes pour 1,8 MdEUR - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 20:56:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPMEJxSmtoMnVWcFlUV1lVUjROdktwekhvNk9LS2o0QWUxRG1LYmpYbGhyeF8xemFkX1RHcTVoOGpXc1U1SUVTREdlM1pRSHZ4bjFVU3NiNHVuZ0haWktRTktfcGJ0dnpJaFJHU3A2TmZaQ21NTUFKbThQOXVFcXg5SjJmQ1dwT0xnSDJXQTUyVkpBNUdKV2ZfVzhQbkYtaDVQVFMtb1hCbmo1TEJHQ0ZUNG92eEFUelVITWhiMFVOanVBdlpBelZuRGpVZ3NpWDA1aDJNY25aSlUwYU40M0NXd3UzMjBjV0tvSHRrNzd4MTF1QnZibFFRa3pPaV9HS0dMTnF6NXlZcjJ4XzEzX1F4Rl9QZk9WR2plbjBVN2lWREVrQzFKZEx3bC04czEtc2hGSHlqT1lMc05ZT1pjNG5kUTVJbU1nUEVkbjRyT19pblpwM0dub196eVlaZnZBQdIB4wJBVV95cUxPUlI1dmxzWGVlLXRVNmoxQ1A1WEtHT25kMkdZZWVfM2FKVFREX3JrTlNjdFZwT0R4N3hHS1RxbDYxbVBwbEVBSDhUbjBYV0ZDLUxlT25LOURHcFpRbF9FVnBOalptRmctU3hKUnU1cmFOZzdoQThLUDZyeUlsTUhuVjhFZWdLQmZXNVBlQ21XeEM4UnRIZEwwOXJhLWp1Rkl2ZXFiNXhyOWVEZWJPT3Z3SXMxZVdwcHJXOXFlNkdYUTFZdkwxUWdLVWNXU3hDa0RlVlliTi14LUtDTk1wOU5IOHFkUXluTDJRTk9KWkJrS0h2Q0R6WFY5bjRGQ3FXYjRVRl9hc1FFQmZWczBEdWNzQjBnT2wxMUY3bVdzSWNGcEdQV3BtN3o4YTFrb2xveXhCbmppV3hDbW9oRnQxWUxraGUzTmtvbTA1NUtET3czbkJRVDBSQnJQS3l5TXdKbkRRT3hF?oc=5",
+   "date": "Fri, 13 Nov 2026 12:35:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNN1IyM2ZuVTBQRjljMkNjUE9qSlMtZndLQmNmdjNfU2xNTXF1Z2hrT2pPcXZNS2R5TVprMzhCcWh1eEVIaFdVb2MtcHJHelhIeU5Mc0k1OFl2cmU4N1Rmbk8tTTEwNHBDeTlUNTRuR1c2MXRwNk1VYmFmM1ZRSXFNZU8wZXRLZTZvdzNDc2RYTmV5WldvanEtQWJvbXdSUXNDYTU5UWpwSzFVaUxOTGlna2syTlRpTmxiaHcyQTZ2anpueW_SAcgBQVVfeXFMTnZvN2t2NlJYeG1NWTNwVkN3Y09DSGlVREQ3VXViTzFCZXRWYnZLRWJaX1FBd2ZJT0h4UEtPdGMwMUl4c0tSOHRNRkVGSVNpeENPU0I2YnZzWW5nTkVQTWl1Sjl4cXhvRS1pNnR5RUw1NnJucHpRMzVlNVFMaEtiQ2dvRzFQdkZjQWY3dGUwdXEzakJuZlZGeUh2ZndYRlBNblVSODZCNkxBd1JEYUhVQ1NjdHdIMV9PSVdYZDdlMFd2LTJZSlprbjg?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Goolsbee, de la Fed, estime que l’inflation « s’approche progressivement d’une zone difficile - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Thu, 12 Nov 2026 20:16:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPWWdmb1FpUDMyQkVha1QyNGt3dFVObHVNV2hyTjhYN0c0SWo0T0U3SzJ2TDQ1SlZScWZfLTJTUFJ2NEtQampCQkVXaXhpU2pDRVF2WVJ2NHlhcE5sOGUxVUlBVS0tSExhT3A1TlZ2WWtGRXBsQzhHcllPSVE0TWdlYldSX0tuQi1sanczbTJsYU9KNmxhX0VpdjhSYW0yQ1NhNzF1SEl2a3RraXdIci0tYW5INFNjaHNhZVNaZDg5b3VCN0ttemdSaUp6Y2xhUW42QlN5bWc1Qld6Rm8wbWxlWFdGMGtYaHM?oc=5",
-   "tag": "Fed taux",
+   "titre": "Les marchés boursiers restent prudents, entre Nvidia et inflation américaine - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Fri, 13 Nov 2026 12:32:19 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPN0wzUEg0NUJCLVJrOVZtTWFYUFRxUWRMNlJJWWJPZlJVbDVLN1M4X244Sk0zaHFsUi14XzF6OTNtRHVPOUFTOVlTdFVHYU5YS01MWmlhNklJTUJ6d1ZINkZuU2s0Z0VfeWZjY09FdmRXQ3FPdDdLSEJVU2VYMGlQTFVkbWhmaXB0MDc1T0lDTzNhdVZIRXlEazFSWWRmWkNPeE9aek9hdHE1TWVNczA5SkM5Zzd5MS1RMDNQaEt0bC03V0dINXJnOE83R2NyYkNJTXc?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "NVIDIA : qui pour succéder à Jensen Huang ? – 12/11",
-   "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 20:13:59 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/nvidia-qui-pour-succeder-a-jensen-huang-12-11_EN-202611120904.html",
-   "tag": "BFM Économie",
+   "titre": "Lithium, nickel, cobalt… Le krach des métaux électriques brise le modèle économique du recyclage - Les Echos",
+   "source": "Les Echos",
+   "date": "Fri, 13 Nov 2026 12:24:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOOVRrdDhRTEFRZ2Y2VmU2NTJHbVl6V0RCY3pNUWJaMUJ2eU05RWhpcl8zelFrYmRtdkc1N0U3dmNCdTVBQUJMc2FIbERZaUMzc0F1QnpMNEtXVzBjd055NVlwdTZ2SVFmWFZBd0hSVi13Zm9leW5JYlkwQk9ENDhGMVhESXY1Y1h6VEUwMDIxVElNR0NuWlBrc1JpV1p5elVBNUk2VkRFa3Vzb09MM1JFWm56RGY0c1RONExrci1LeHJjUnczVG1uV1M3ODF0dWtvWTRsNlZxZUJQVFVxVGU5R3ZISTQ2dElJVzR5c3JlTnlEZw?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "NVIDIA : qui pour succéder à Jensen Huang ? - 12/11",
-   "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 20:09:12 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-nvidia-qui-pour-succeder-a-jensen-huang-12-11_VN-202611120907.html",
-   "tag": "BFM Économie",
+   "titre": "Selon certaines sources, CPC aurait augmenté ses exportations de pétrole et de condensats de gaz de 6 % en gli - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 12:16:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPRF9PdHJDNDg2azhDak96em9WbFNiUWVWaWwyMXBrckpfWWUwVkhMYmJkbGdndUJkZnpTLXhMT19lbzlFLUpSSDdIZWMxU2JaU3d1emg0X0ZPOTRrbUk2MWxTakFROFFwVnNNT0hfNTE3MGdMX0dkaGQzVWlPc052d3FCVk9FeFhjSlZBRHJRaWJBbW5mMnVVZ202d0dPY3dpUGN5YUJkR3pHa2RCYVgzMUdkVkhWSkZ2cm9PTUxnZHpiaEVXVGZzVU5MNFVrcUZyejY3X1hTaGpvS0FtamtXb0ZYSjlJMUcxLUlwWTB2TXJEMG1RT0dQWWVkU1pUcFR5NnZuU3JDWkpQQmJHWXkyQk9VRGgyWDNHMlhCYTkyc3RQdDVjanhGNmVudVE4WElkRHRzNmh30gG7AkFVX3lxTE9KTEJsSDR1ZlZPUnFyTUg2TkxJcERDemZka2ZTR3hEaURqSGRlTktKV3ptUFo0UE1objNScDRKV01MV2VVbWVCd2dKamM1WVVSYVdSQmFPZ0M1ZFl0b1dOQklrYl9xMjNDQkRSN2hJemNfT1ppeE5vQjFCMm4xUGtZeUJ6M245S3h5MUptREJJOEJtTUtWN0VFdk1HeXBJR1hJNzdqa3VTSmF3amx1eGpQNjVQN3dRd3JUM0htUWlLazFqYlg4dHRvRmVBNFhJWWl0NUkwalZ6Q3NDOE5scmd3Si1hZ2xFZFlqaHVEYWxKXy1KczgxWWNRRjNyLWZGYWtxbnhCRlota0t2VVl4enFlbXVRNEtVa0pqSFNfZ2RCSmlOb3dDdlpCWHl2d0xJRkRiVTJ5SkFyOVNRcw?oc=5",
+   "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le Tech Flash : Nvidia, Jensen Huang quitte ses fonctions, par Julien Thibaud - 12/11",
-   "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 20:06:15 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-nvidia-jensen-huang-quitte-ses-fonctions-par-julien-thibaud-12-11_VN-202611120898.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "NVIDIA : Jensen Huang quitte ses fonctions – 12/11",
-   "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 20:03:11 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/nvidia-jensen-huang-quitte-ses-fonctions-12-11_EN-202611120896.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "NVIDIA : Jensen Huang quitte ses fonctions - 12/11",
-   "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 19:57:13 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-nvidia-jensen-huang-quitte-ses-fonctions-12-11_VN-202611120901.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La Fed fixe le calendrier de ses réunions pour 2027, comme l’avait annoncé Warsh - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Thu, 12 Nov 2026 19:17:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeXB3WjdqQ2ZYem9Nb0FtVXEyRFRWVWJoeHdJTUZmWUFKNnY1czhOdmM1eTJfMU13blcyMGVlWldmdy15NWItYzdtWm5WUTl3VFc3ZTNZVDE4VnlUWjhUcmJJVWRFeVZBdDdiVFctQ2JsSmlYaE90U3F3bjh6TnJ0dERMNUFOUDJUUno0bTdMb1VyeFZiVVkwemlvWkI5U2U1Y1o4bTFPSGxTUnozX1IxUjl3UTVtOFlHUElFYTgzVl8yU0k3Zld5dkJFd3VZOUcwWk03NmtpMA?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Prologue affiche une croissance organique pro forma de 13,1% au T3 2026",
+   "titre": "Engie signe un protocole d'accord avec Google pour un projet de centre de données à Châteauroux - ABC Bourse",
    "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 18:55:05 GMT",
-   "lien": "https://www.abcbourse.com/marches/prologue-affiche-une-croissance-organique-pro-forma-de-13-1-au-t3-2026_706049",
+   "date": "Fri, 13 Nov 2026 12:13:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPU0xQV0w0UFQwbnhDR1luR3ExdkNIeFdXNjBvMkdxRVVoTnVKQW0wUVJudGs4akhiOFBLbnZMbHNibWs4SkI1MWpPRmpPY0hjcFNNSmlySmpQLWREbjdMZjZBOVNKTTgzUG9nQjhqMnRtWHRhWVhDdzVFV2w2ZDNpQ3RyRFNFbHItVmV2RzFlbWJsbDUtSGs2UU40bFlEMEVWZXJzd1Zsc1ZVZFVpTnJlNmxreVgzTUR2dFVITHZR?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Engie signe un protocole d'accord avec Google pour un projet de centre de données à Châteauroux",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 12:13:40 GMT",
+   "lien": "https://www.abcbourse.com/marches/engie-signe-un-protocole-d-accord-avec-google-pour-un-projet-de-centre-de-donnee_706084",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Comment s'occuper de la dette ?",
+   "titre": "Les contrats à terme sur le Nasdaq restent en retrait alors que les turbulences chez Nvidia secouent le secteu - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 12:11:54 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiowJBVV95cUxQdlR6ZVU3M1FfNGh3eXlQVEFFU2xfeUpLSTFMWmxEQUs1aW5OZ0J1SEJNY1JLTUxOelpoa3JCbW00N3IzX0dzUDBsUU5jY0hQcGNQdTN4R1VnZVFERUtyV3E0NmJYNzBWc1lJR0RtY3l0WmotZ3JBbDVfWWlXcU1ieFlTTl9oUHo5Q3FSREVsMUJwNE1Pb1Z2aVlWM2Zjc3Y2Um5iM3dIUEhiNWgzZW96OFpXZ3Y1YVJyV2RHRlg0NklNSlVCZnpDbk00QUlCSDZBY2pIaWdNRVhtaFdrXzhRNDl4bGlBQ2hWclFrSklkV0dZXzhvY1pPemxQTGpLaHpCcTNCNW9GVmN6NGpXYTlKQnVuWWJfV3U2NWhwVnBxR1BzVFHSAagCQVVfeXFMTVFCcWRQbTgxblQySGdIZUtjRzBNSHM3Skg5Vkx6LXdSTUNRclQ3ckZCMkxoSjdIUGVQcXhNVk5ReHZTY01qeVFPTWFLdmJJcVZBeWhLcVVBN3JpWGNxQWkxUV9LUTdpZzVac05icVFLLUFxMVNUT3UzMGU4TXo2TlRfd0F4a1poUWlHTXNLQ2dfaml4cTZiRkluVWY1bzBQVkh1Skw1X04wd3JDSnZudDNZeXlIakhfZ3I4TzhSNnFRbFc0X2dJU3NVdFQyUmVYckxsOF9HZm1kdGE4QjJlOGdTVG13YXNTbXltbDJpdXl1TnVBNXFIN0tfZ3F1U3dsYXAzQjNDZVhuQ0hXZmhUMFRoWHZxeDN1YXdiY2xVOFBMbWR1dmRhQkk?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le CHMP recommande Gazyva/Gazyvaro (Roche) dans le lupus systémique - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 12:10:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVlhVSDlMaEFQRWNxLXFueEdlWTRVanlNTTR5TGl1M2R0NXJpYWlsdTZXUDdRRjd5dEhVbjdTa0pGSjc5dzRiT200ajVGWEQ5MEVXaE4wNFFJaDBTUmc0MVFGUlh6eUhpb1Yxd2NnQUVSVFItQXFYakRFcTJfcU1QNUNZUmRzMXZXX3pPTmpUZXhrRXlFOEx2cVQwdjhPMmpISzFza1lTOG5oRGVfb2syVkJ3NkVnNnBPWS1pWnJiZjFWSndfc3JFWW80QXc5eXFuRHR4Z3dOZF9LMmPSAeABQVVfeXFMTUFqUHBPM0ZBVXZYbnlOXzV2NXZ4d3RWSG5LakZHNWh3c19RTm9udkVWTUN0VlFuTlRHend4Qm40cUpPclM2TEx4dVJGVDJYM3VCSlB0RXVPMmE4QkVoeDVhbVRaRmM2WkF4Q2Q0M2ZvSmV2eXZiMkdqc0Q5Y0tLZ2xIU0RuVzZZUHRGdzVjZHF3Z3pURXhrR3pwMUttYjFPTkVZSWEteTY5VFdfVHlucGlaRVN4bjJOZGtXeVp4Wmp3N1NzRXFlMmxkVXZYdHNvX29aN2c2T1kzZDg2V19sOEM?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ROI-Le choc Nvidia, l'évolution des anticipations concernant la Fed et le pari de l'Europe sur l'électrique : - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 11:55:10 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNM1RFRVljM1FPWk5KRzRLemQtWWZUWlc0S0x4dXlybVRDT0NZZlBlbXl0d1c1RzJOY1JsQmM2TFgzRk5xRkR0OUo2ZVR4emVCUW5ILUVxTUYwYjNqeVFyU1RhQlRVRGRhR2tvS3A1MjBWY2JVdW9Sb1Q0eDJPSHREYWs2V3NfR0VWTWdfNVFCWWxIUW5IZEVlc3YyVi1HaE5mZG8tMmFsNFpNRGlsREEtQzNRWG9CSVljNEF3X2NkR2U4bjNZVmxWMjRwa3NjYjVibTZmTU41bVFLWlZzZ2wwZ19zUzdQdWNEc0d3NEw4a21VTkdGMEtuTFZ0WGJYMjVhVmQ2c2NjUUkwR1hENlV0cldtckVIZGE2SE1rSHh6alktLWVHR1JRaTg3Njg1QkVoZkZyQk5XNkZCa0h5VlI5YnNMVVFMNGdu0gHOAkFVX3lxTE1obXFqMTExR0ozbzIzWWhPNzhYN3lXYkpncjh6b2ZJVXJSZDBfQmx5YUl5SGRvRGNPNHUtaGY0aEtDd21maFNqekdDZmpqcXhwdDM3eUU3MVZmUVpaN1I5R3RYRklCc3otbWh1aHlDM3J3UHc1TmRwdFZGV2pyVEdjQ0VBZUFXR1UtYWZJOS11a2xremRwVVFLUE9hVm0yMnlPQVlSeHlfWnliUHoweVgwTmlwdGk1TS1pNlVueU5GZnZhcEE0UVhkV1RmdTZpUnlCamdSNzVWTENDUmgwTV8wM01TbHZnSnVyMFFnYjRuc0I0RnpJdVB4blgwNnZWTFJBVjVoUWtOLVRvdGpCOFBZc0xFNE9nSG43M3B6b3lwN1o4M2dIaEZaYzFHRW9OUXNrZkFBU240aHNJSHBRZHdMTmtyRmdWVzJ6OHBLQkE?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Une première depuis le début de la guerre au Moyen-Orient: l'Agence internationale de l'énergie prévoit que l'offre mondiale de pétrole va dépasser la demande en fin d'année",
    "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 18:41:23 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-comment-s-occuper-de-la-dette_VN-202611120839.html",
+   "date": "Fri, 13 Nov 2026 10:56:33 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/une-premiere-depuis-le-debut-de-la-guerre-au-moyen-orient-l-agence-internationale-de-l-energie-prevoit-que-l-offre-mondiale-de-petrole-va-depasser-la-demande-en-fin-d-annee_AD-202611130460.html",
    "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions à suivre vendredi: Danone, Eiffage, Vinci",
-   "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 17:53:21 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-vendredi-danone-eiffage-vinci_706045",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Danone a finalisé le rachat de l'entreprise australienne Made Group",
-   "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 17:32:59 GMT",
-   "lien": "https://www.abcbourse.com/marches/danone-a-finalise-le-rachat-de-l-entreprise-australienne-made-group_706044",
-   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "L'Europe avance modestement, Nvidia freine son élan",
+   "titre": "L'Allemagne va emprunter 210 milliards d'euros en 2027, presque un record historique: Berlin ouvre les vannes de la dette, mais contrairement à la France, elle en a encore les moyens",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 10:43:15 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/l-allemagne-va-emprunter-210-milliards-d-euros-en-2027-presque-un-record-historique-berlin-ouvre-les-vannes-de-la-dette-mais-contrairement-a-la-france-elle-en-a-encore-les-moyens_AV-202611130451.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Fin de semaine sous tension sur les marchés de taux européens",
    "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 17:22:16 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-avance-modestement-nvidia-freine-son-elan_706042",
+   "date": "Fri, 13 Nov 2026 10:36:35 GMT",
+   "lien": "https://www.abcbourse.com/marches/fin-de-semaine-sous-tension-sur-les-marches-de-taux-europeens_706079",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Elle est la directrice financière de Nvidia depuis 2013: qui est Colette Kress, l'Américaine qui va assurer l'intérim à la tête du géant des puces après le départ de Jensen Huang?",
+   "titre": "Zone euro: la croissance du PIB confirmée à 0,4% au 3e trimestre",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 10:11:55 GMT",
+   "lien": "https://www.abcbourse.com/marches/zone-euro-la-croissance-du-pib-confirmee-a-0-4-au-3e-trimestre_706077",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Les Experts de l'immo : Immobilier, le point sur les taux de crédit - 13/11",
    "source": "BFM Économie",
-   "date": "Thu, 12 Nov 2026 17:19:29 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/elle-est-la-directrice-financiere-de-nvidia-depuis-2013-qui-est-colette-kress-l-americaine-qui-va-assurer-l-interim-a-la-tete-du-geant-des-puces-apres-l-eviction-de-jensen-huang_AV-202611120755.html",
+   "date": "Fri, 13 Nov 2026 10:05:02 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts-de-l-immo/les-experts-de-l-immo-immobilier-le-point-sur-les-taux-de-credit-13-11_EN-202611130429.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Vinci remporte deux contrats de partenariat public-privé pour des lignes électriques au Brésil",
+   "titre": "L'Europe en quête d'une boussole, Richemont est sanctionné",
    "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 17:19:15 GMT",
-   "lien": "https://www.abcbourse.com/marches/vinci-remporte-deux-contrats-de-partenariat-public-prive-pour-des-lignes-electri_706040",
+   "date": "Fri, 13 Nov 2026 09:59:09 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-en-quete-d-une-boussole-richemont-est-sanctionne_706076",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "La Fed pourrait-elle frapper trop fort ? - Boursorama",
+   "titre": "L'IA représente un quart de la croissance du crédit dans la zone euro - Lane (BCE) - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 16:59:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWHJPVE00d2l4d2V2Z3FJZEw3YW9LRDhBMTByMWJ3MUJkbU9OWEtHbmlmLVlFczJ6SVcycXVSZmtRRWNnOEZKSFA4ZjFHWWNzVk95ZmpTbzYzZTRyRkxNdk1fWjVUMHFMRG01dzhaWUlfV09tZ3dZUl9lNEdXQzVPck9wU1ZHV0xEaUNGS1JKY25hREY4ZkNwa0cyUVlrdVIyek0xNWlycm45NjhlTWhSX1VhYzA0bXfSAbwBQVVfeXFMTzRwRlZOLVdyTDVxTmw1S2FfX2U5MlhCaDYwTmNNdFcxQ1p2a2ZSeUZfbFhMcXNBNDdKVE9jbzVKaERTbmhBeUNTYm9VeFRyU3BYMGhZLXJCaTdxNlJRYjdFTEFHd0RTTnBRbFotMHdaVTlSS2ttWWNjV2VubnNTX0E1eUhxVTI5REdSNFpwQU14MmtPQkk5TjNVODA1V1pISTJtaTc5dXAzeFp4VDI2VlN1djEwNkFJb01zR3M?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Goolsbee, de la Fed, s'inquiète de la persistance d'une inflation élevée dans une interview accordée à Yahoo F - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 16:45:08 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNYkxwWGlxWDlsU1RSNzFiNzZ3QTFMZ19qd25LZE1pTklHbmxucmVpcTRZaDkyVlpKS21VME1FODA5SEg0bTRSSnJuVllhXzc4SFBiZkkzUDZicmo3Z1JHMHFfQnFZTlduS0tUNlItcGpsaS1ObFktdnY4X2NxaHJrUjhfYWFpT2lrcXhZaURHVVRjbWtreHV4allLRkFHQUFhdDRlUWxrOC05MkNTem1lQ05XOWVKUlViN2E2VU1sT01TQklPc3RSMFgtU25hU3hKanBxbGdGUTJjVjBlYW5qR2l1UXJvdURMbDItVUROR1ZjLTRSa01JUnRZUkJvZFFWcG9UdjZOS3IzcHdrc29mTUtPeS0wU2lIS3dRVktRcV9FS0pFcktZb0J0Y2MtLWdLclBHZNIBtAJBVV95cUxNYkxwWGlxWDlsU1RSNzFiNzZ3QTFMZ19qd25LZE1pTklHbmxucmVpcTRZaDkyVlpKS21VME1FODA5SEg0bTRSSnJuVllhXzc4SFBiZkkzUDZicmo3Z1JHMHFfQnFZTlduS0tUNlItcGpsaS1ObFktdnY4X2NxaHJrUjhfYWFpT2lrcXhZaURHVVRjbWtreHV4allLRkFHQUFhdDRlUWxrOC05MkNTem1lQ05XOWVKUlViN2E2VU1sT01TQklPc3RSMFgtU25hU3hKanBxbGdGUTJjVjBlYW5qR2l1UXJvdURMbDItVUROR1ZjLTRSa01JUnRZUkJvZFFWcG9UdjZOS3IzcHdrc29mTUtPeS0wU2lIS3dRVktRcV9FS0pFcktZb0J0Y2MtLWdLclBHZA?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris a progressé, les résultats d'entreprises et Nvidia ont animé la séance",
-   "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 16:44:49 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-a-progresse-les-resultats-d-entreprises-et-nvidia-on_706028",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Les recettes de la BCE pour ne plus vraiment rationner la liquidité - L'Agefi",
-   "source": "L'Agefi",
-   "date": "Thu, 12 Nov 2026 16:34:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQzJRdFQwVVYzNHR6LW8xOHYzNmdjV0NlbFZ3V3BGT1NXbUp0V091Zmg2YmdZQVNVeFR3LUxKcTM1Szh1bWdMa29YR3RITjcyR3hOSmZEV1k0di1CLVh5bU0wS3RNbktlSTJEQmE5SzdBQUIybk5HMHFLUFcwcGlGWHl5LXZXZElubVZFNU1xSVJjWHBNczNpcFZPOGhoR0I2YTVZTk1jZWFCWUVqX3Bv?oc=5",
+   "date": "Fri, 13 Nov 2026 09:55:26 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNVVZ6eklETzFtMERmNDVDX0xqOWNINGRRY2lJcVhBUWpVazEyU0t1VW4teVAwS0d6akk0Sko3UldScmVfYndhNDE5b2xBYkF5M2NoMkdnSjB5TnJFcHFNLU9OVW85bzgwSGR4WjRFbncyUTdUYzdEQjJBZVZYV0U5VFZpV21mTVFtbmp1OUdyTEhoZWhVY0MyZ05scklkRll1WXVNVHVtcVl3cXBEbUNqeHE3Z3luMk80RTV3OXBlTXFZMmhhZG1heEY3QW5rcHhqSTZzaE1SOXdiNnplMldxVEdxMEhxRGtpVUNmV3V2WHo1ZllLRE9GcE4zMk0yX3PSAYQCQVVfeXFMUGNJelRXazNTWk41aWZfMy1xS0FSQWd2aUhBdFRFTTM2SlJuMmtZWURzOFJRRWxweHBzQXZXcUZNcHloZWNxWlp5Umc2YUZmSm1jNVdJdmNvYTVaUENQT2R3UWJBTDVuOGo0OFc4dFZBc1ExSXlFTzdoLTBtNzlaX2JRaUlNWTc4amVjUGNleWk0Q045MkNXajRPRlFHYjlsemxMX1AxVHRFWXNxT210R3d0NXhDTElNQ282REFqUWNsVFVTMmZJTzU1d2Z6U3dyLTdiRlVMRENXNnItUXdidTVtWWxheXhFQmJQV3V6ZHpTQmpZNm1zMTJ5bVB0XzF4UEt1Slo?oc=5",
    "tag": "BCE taux",
    "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le bitcoin tombe sous 70.000 dollars, avec la remontée des taux et les craintes sur l'IA",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 09:37:51 GMT",
+   "lien": "https://www.abcbourse.com/marches/le-bitcoin-tombe-sous-70000-dollars-avec-la-remontee-des-taux-et-les-craintes_706075",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Les Experts : Nvidia, Jensen Huang démissionne à effet immédiat - 13/11",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 09:09:52 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/video-les-experts-nvidia-jensen-huang-demissionne-a-effet-immediat-13-11_VN-202611130401.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre jeudi: Nvidia, CoreWeave, Intel, Dell, Sandisk, AMD, Nebius",
+   "titre": "Les Experts : Nvidia, Jensen Huang démissionne à effet immédiat - 13/11",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 09:09:25 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/les-experts/les-experts-nvidia-jensen-huang-demissionne-a-effet-immediat-13-11_EN-202611130395.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Au plus haut depuis près de 3 ans: l'Insee confirme que l'inflation a atteint 3,4% sur un an en octobre",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 09:09:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/au-plus-haut-depuis-pres-de-3-ans-l-insee-confirme-que-l-inflation-a-atteint-3-4-sur-un-an-en-octobre_AD-202611130394.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Affaire Nvidia: pourquoi les puces haut de gamme de l'entreprise sont-elles sous restriction vis-à-vis de la Chine?",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 08:56:29 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-affaire-nvidia-pourquoi-les-puces-haut-de-gamme-de-l-entreprise-sont-elles-sous-restriction-vis-a-vis-de-la-chine_VN-202611130384.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "En portefeuille : Nvidia cède 11% en 4 séances, une opportunité ? - 13/11",
+   "source": "BFM Économie",
+   "date": "Fri, 13 Nov 2026 08:53:52 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/good-morning-market/en-portefeuille-nvidia-perd-desormais-27-en-1-mois-13-11_EN-202611130382.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "La fusion entre Tesla et SpaceX pourrait être annoncée en décembre",
    "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 15:08:28 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-nvidia-coreweave-intel-dell-sandisk-a_706024",
+   "date": "Fri, 13 Nov 2026 08:49:01 GMT",
+   "lien": "https://www.abcbourse.com/marches/la-fusion-entre-tesla-et-spacex-pourrait-etre-annoncee-en-decembre_706074",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Veolia inaugure une usine de récupération des métaux de la \"black mass\" en Moselle",
+   "titre": "Les Bourses européennes reculent dans le sillage de Wall Street, les taux pèsent",
    "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 14:37:09 GMT",
-   "lien": "https://www.abcbourse.com/marches/veolia-inaugure-une-usine-de-recuperation-des-metaux-de-la-black-mass-en-mosel_706022",
+   "date": "Fri, 13 Nov 2026 08:37:03 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-bourses-europeennes-reculent-dans-le-sillage-de-wall-street-les-taux-pesent_706072",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "CAC 40: Le CAC 40 cède du terrain dans le sillage de Wall Street",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 08:09:37 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-le-cac-40-cede-du-terrain-dans-le-sillage-de-wall-street_706069",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "France: l'inflation est confirmée à 3,4% sur un an en octobre",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 08:03:12 GMT",
+   "lien": "https://www.abcbourse.com/marches/france-l-inflation-est-confirmee-a-3-4-sur-un-an-en-octobre_706068",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Le fondateur de Nvidia Jensen Huang démissionne, Colette Kress devient directrice générale par intérim",
-   "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 14:15:40 GMT",
-   "lien": "https://www.abcbourse.com/marches/le-fondateur-de-nvidia-jensen-huang-demissionne-colette-kress-devient-directric_706019",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Veolia lance dans le Grand Est un site de recyclage de black mass pour extraire nickel et cobalt",
-   "source": "ABC Bourse",
-   "date": "Thu, 12 Nov 2026 14:15:13 GMT",
-   "lien": "https://www.abcbourse.com/marches/veolia-lance-dans-le-grand-est-un-site-de-recyclage-de-black-mass-pour-extraire_706018",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "BCE : une dernière hausse des taux prévue en décembre, mais les risques pour l'avenir s'accumulent - Boursorama",
+   "titre": "France: L'inflation IPCH accélère à 3,7% sur un an en octobre-Insee - Boursorama",
    "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 13:32:23 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPRC1UYjZoSlVWSU1sUFBkMjQ5UWI3VU1HbGlYSzFMY01rMDlWNmJnZnNmQnhhQkliU3ptbTF5V3EzYUlvN1dPZHRMbmhabGVNOVZacGExRlFvVmZiazJ3bnVyU3pRVU91bXZZMnRPQmNtNEs2X2R0NU9zWUNpeDFiU0JFWndDaVBOWGMxcEloMEhrT0VGUzlFX3hjRGkzUkQzTEpPSERLMXctcTg2aWRkZDFWWXN4MTVuSnpVc0dYWUd2THRfdmZSU09vMVF5VWplaFh1RUxtYWhvMDJfUmU1bnZpeFpmdElaVWdLQmp0blhiMXJrWFJuM0xoYzBtalI1R2o1UVhqN3rSAYgCQVVfeXFMT0QtVGI2aEpVVklNbFBQZDI0OVFiN1VNR2xpWEsxTGNNazA5VjZiZ2ZzZkJ4YUJJYlN6bW0xeVdxM2FJbzdXT2R0TG5oWmxlTTlWWnBhMUZRb1ZmYmsyd251clN6UVVPdW12WTJ0T0JjbTRLNl9kdDVPc1lDaXgxYlNCRVp3Q2lQTlhjMXBJaDBIa09FRlM5RV94Y0RpM1JEM0xKT0hESzF3LXE4NmlkZGQxVllzeDE1bkp6VXNHWFlHdkx0X3ZmUlNPbzFReVVqZWhYdUVMbWFobzAyX1JlNW52aXhaZnRJWlVnS0JqdG5YYjFya1hSbjNMaGMwbWpSNUdqNVFYajd6?oc=5",
-   "tag": "BCE taux",
+   "date": "Fri, 13 Nov 2026 07:57:56 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQdzdwYXYwT1JRTmRQWFBJelBKVjVJaEh5b2NnWk9uUVRYLW9jZUh4UmRrYVotMDlLa1d0amdTSngxbVgzQXo3Y0VpS0YtbUh6TnE5WFFDb1FRRXRYRWttbHJSckJYNXQ5alNpNlZlSm1YMTZrczZuTTFmZlVCWmVESll4RFdJS0Y3cEludUE3SUVkZzB0T0pqZmZzSUNrRVM2Y1pFNEIzNDlJa0cwUmtqaFlObkM4bmtrUHBEbmRfTXJZVmhkWmhibTlkTm03cFJNeHM1VjV4aW1QRkxjSTl2b184cno5YnZtMkQ0TlRfT000MEnSAfMBQVVfeXFMUHc3cGF2ME9SUU5kUFhQSXpQSlY1SWhIeW9jZ1pPblFUWC1vY2VIeFJka2FaLTA5S2tXdGpnU0p4MW1YM0F6N2NFaUtGLW1Iek5xOVhRQ29RUUV0WEVrbWxyUnJCWDV0OWpTaTZWZUptWDE2a3M2bk0xZmZVQlplREpZeERXSUtGN3BJbnVBN0lFZGcwdE9KamZmc0lDa0VTNmNaRTRCMzQ5SWtHMFJramhZTm5DOG5ra1BwRG5kX01yWVZoZFpoYm05ZE5tN3BSTXhzNVY1eGltUEZMY0k5dm9fOHJ6OWJ2bTJENE5UX09NNDBJ?oc=5",
+   "tag": "inflation zone euro",
    "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ECB President Lagarde to step down on 7 February 2027",
-   "source": "BCE",
-   "date": "Thu, 29 Oct 2026 11:00:00 +0100",
-   "lien": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
-   "tag": "BCE presse",
-   "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   }
  ],
  "fiscal": [],
