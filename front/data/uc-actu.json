@@ -1,6 +1,14 @@
 {
  "evenements": [
   {
+   "date": "2026-11-14",
+   "isin": "IE000S1JLOI7",
+   "fonds": "Lazard Japanese Strategic Equity",
+   "type": "gerant",
+   "titre": "Changement de gérant sur Lazard Japanese Strategic Equity : June-Yon Kim, Matthew Bills, Scott Anderson, Tomomi Fukuta, Guy de Tonquedec → June Kim",
+   "detail": "Gérants avant : June-Yon Kim (depuis 2019-08-01), Matthew Bills (depuis 2023-04-01), Scott Anderson (depuis 2016-11-01), Tomomi Fukuta (depuis 2025-12-31), Guy de Tonquedec (depuis 2025-06-16) — après : June Kim (depuis 2019-08-01)."
+  },
+  {
    "date": "2026-11-12",
    "isin": "IE000S1JLOI7",
    "fonds": "Lazard Japanese Strategic Equity",
