@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-14T17:57:22.248Z",
+ "genere": "2026-11-14T22:16:14.076Z",
  "globales": [
   {
    "titre": "L'inflation de gros aux États-Unis augmente moins que prévu en octobre - TradingView",
@@ -94,20 +94,29 @@
  ],
  "produits": [
   {
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Fri, 13 Nov 2026 18:43:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Sat, 14 Nov 2026 11:14:59 GMT",
+   "date": "Fri, 13 Nov 2026 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
    "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Fri, 13 Nov 2026 17:16:59 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
-   "tag": "CAC 40",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Fri, 13 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -125,15 +134,6 @@
    "source": "Le Revenu",
    "date": "Thu, 12 Nov 2026 17:19:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPT3UtcU52NGlYZEpZMXdrMXRFX1JNU3FPbExXcDlNMEJDWVF6T2dVWnhYTGxaTUhvUzhRVlJTczBfS29IV091Wlh4LVJIM2dVWWVoUDVlR1pvQmN6WlV2S25PM1EyX2pDa0tDcFlGZXRBV2ZzR3BwTjR3UUdBU3V0NEZ1Z3pnQkYxN0RkZWRhU1Y1TFVyV0EtM1ZEdk93My0tWUkwUm9VZGo?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 15:41:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
@@ -168,6 +168,15 @@
  ],
  "eco": [
   {
+   "titre": "Israël : Netanyahu plaide pour l'union, Eisenkot l'accuse d'entraver la formation d'un gouvernement - Boursorama",
+   "source": "Boursorama",
+   "date": "Sat, 14 Nov 2026 21:16:39 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQWnY0a1Y1eUhzZkQxam01OUNZeXhSMGFKT1JfVTJDcl9lZGRRNEFGbkswY2N2eXB5TXNNU2tPdHhuQXVuVElaNmstWU10bzgxS1hyUXhNNGRsX1dQYTh3UHlmMk1hZEFBV01qbzlXRldYNnR2SFZZVVRJUFh5WkljcE9BWkxtZXE2cEVsT29aak1rSUE2Z19rOWNrV0x3amQ3UTUzbzFLTGtiM0tfSVhIZTBVUUJMYlRvcTZLekdibGFheHRhRncxUjN2dGZyTzNXM0Uzem5ZLWtBS3hFcVdrVl9VS1ZOaU93SWxEQ0FzdTFuZE9aUEl6dkh6aXA2RHctRlZ3b195Rnk5T0ZCRUhCUjQ4dS1kVGvSAZwCQVVfeXFMTnNwRl9fS2gzNmd5cFFLMXdaTmQtNVZTX09CUU5Yb1o2SC0yQXB5YjN6dV9PbnUxSkZqZ3NBUEpIQ1RwcUR1V3VqcENEMFdUaGUyOVJqc3p0TlpCTnlqSjdsZWpaUHFVVm1NOHE1UXFacXktOTNSczliZ0pQdnVIWGFDaXlTWjdHajZIU0s2X1JVZmVremVHYnI5QkM5QW40RGpnZ3N5NlJzRUVKRUJUMnhTY2pNREVqT0wxeVBGRWhSUlJMRC1mTHdJOW52U0pjNHhVWTJCdjhzRGQ4dUluUlJKY2xzWTYxWnRTRC00M0N0OF9kZ3pvYmtUUmtMZU1KUEVtRnJoTWI5OUxsUkFfVERvcGRaQzMxbEJ2dmw?oc=5",
+   "tag": "CAC 40",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "USA-Collins plaide pour des hausses progressives des taux de la Fed - Boursorama",
    "source": "Boursorama",
    "date": "Sat, 14 Nov 2026 16:58:30 GMT",
@@ -195,10 +204,10 @@
    "sentiment": "positive"
   },
   {
-   "titre": "La présidente de la Réserve fédérale (Fed) de Boston estime que des relèvements progressifs des taux sont préférables pour gérer les risques économiques - Zonebourse",
-   "source": "Zonebourse",
+   "titre": "La présidente de la Réserve fédérale (Fed) de Boston estime que des relèvements progressifs des taux sont préférables pour gérer les risques économiques - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
    "date": "Sat, 14 Nov 2026 14:41:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdV9QbWliZTFOWlh0bktJdlVIanBMcWdNQWtySDd0dFFfbFNHN1RLN280QzZJYkpVUm8xTnE0ZGZyNUFpcEJSelVEVjlTRE1PZ01Fa0xhLTNDVTBweURaYXhTMlA3UWwyTmVMZlM2YUx0WS0wOVhQZWR4NW5tVklGeWY3Sng5U0Q1MUo3RlJFMl9xTUlaQ0thWlhBX3lITGdOUnZ1ZG81cDdiMDVIYkhXSnNDQUtIT0lpMTRITklTZ2JJdmx3OFZaZXQ1TUJpa3ZFS0puVVlPbmZxcEl5QllDX3RrWGwzZFlJdVhWal9hVDg?oc=5",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNYWZNNmo5dTlFN01xVFN1VV9QOUI3enRGeUJoLXhIX28zbkdfRkxyWXpSd0gyd051UHhqek9PTFdrYWp4aDZxXzFuYmZEYndxVWp6LTV0cElyUTV1ZDZXTTBOWE4tVzJMT0ZTSUtNVmltMDhHUVZDMGVNQjhfMTNaNXlrOVg3MXRJa3NocWpfYTY1b1dhOENQSzdnNks1cUZFYTR5VmtIWXlCRmdkbTNhcXVJaDUxUDdPM2lscHFTdGJQSjBGRUpWRmJwN0FFa1lEcC1SRHZ2c05UeUhHMnlQTklNRk90OXlvM1NQN01RYw?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
