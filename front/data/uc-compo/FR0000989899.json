@@ -1,43 +1,43 @@
 {
  "isin": "FR0000989899",
  "alloc": {
-  "action": 91.6,
+  "action": 91.1,
   "obligation": 1.8,
-  "liquidite": 6.6,
+  "liquidite": 7.1,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 31.9
+   "pct": 30.3
   },
   {
    "nom": "Santé",
-   "pct": 25.8
+   "pct": 28.1
   },
   {
    "nom": "Technologie",
-   "pct": 22.8
+   "pct": 22.9
   },
   {
    "nom": "Communication",
-   "pct": 5.9
+   "pct": 6.5
   },
   {
    "nom": "Conso. cyclique",
    "pct": 4.4
   },
   {
+   "nom": "Matériaux",
+   "pct": 3.2
+  },
+  {
    "nom": "Finance",
-   "pct": 3.9
+   "pct": 2.7
   },
   {
    "nom": "Énergie",
-   "pct": 2.8
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 2.6
+   "pct": 2
   },
   {
    "nom": "Immobilier",
@@ -54,39 +54,39 @@
  ],
  "holdings": [
   {
-   "nom": "Publicis Groupe SA",
-   "pct": 5.5
-  },
-  {
    "nom": "Virbac SA",
-   "pct": 5.4
+   "pct": 5.9
   },
   {
-   "nom": "MTU Aero Engines AG",
-   "pct": 5.1
+   "nom": "Publicis Groupe SA",
+   "pct": 5.9
   },
   {
    "nom": "Ipsen SA",
-   "pct": 4.7
-  },
-  {
-   "nom": "Exosens SA",
-   "pct": 4.2
+   "pct": 5.4
   },
   {
    "nom": "BioMerieux SA",
-   "pct": 4.1
+   "pct": 4.9
   },
   {
-   "nom": "Safran SA",
+   "nom": "MTU Aero Engines AG",
+   "pct": 4.7
+  },
+  {
+   "nom": "Sopra Steria Group SA",
    "pct": 4
   },
   {
-   "nom": "Edenred SE",
-   "pct": 3.6
+   "nom": "Vetoquinol SA",
+   "pct": 4
   },
   {
-   "nom": "Vetoquinol SA",
+   "nom": "Exosens SA",
+   "pct": 3.7
+  },
+  {
+   "nom": "Safran SA",
    "pct": 3.4
   }
  ]

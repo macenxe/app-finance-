@@ -1,8 +1,8 @@
 {
- "genere": "2026-11-09",
+ "genere": "2026-11-16",
  "fonds": {
   "LU1120766388": {
-   "note": 4,
+   "note": 5,
    "risque": 2,
    "societe": "Candriam",
    "annuels": {
@@ -167,7 +167,7 @@
    }
   },
   "FR0012844140": {
-   "note": 3,
+   "note": 2,
    "risque": 2,
    "societe": "CPR Asset Management",
    "annuels": {
@@ -285,7 +285,7 @@
    }
   },
   "LU1244893696": {
-   "note": 2,
+   "note": 3,
    "risque": 1,
    "societe": "Edmond de Rothschild Asset Management (France)",
    "annuels": {
@@ -356,7 +356,7 @@
    }
   },
   "LU1892829828": {
-   "note": 1,
+   "note": 2,
    "risque": 2,
    "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
@@ -370,7 +370,7 @@
    }
   },
   "LU1261432659": {
-   "note": 4,
+   "note": 3,
    "risque": 4,
    "societe": "FIL Investment Management (Luxembourg) S.à r.l.",
    "annuels": {
@@ -471,7 +471,7 @@
    }
   },
   "FR0000989899": {
-   "note": 4,
+   "note": 3,
    "risque": 2,
    "societe": "ODDO BHF Asset Management SAS",
    "annuels": {
@@ -512,7 +512,7 @@
   },
   "FR0000974149": {
    "note": 3,
-   "risque": 3,
+   "risque": 4,
    "societe": "ODDO BHF Asset Management SAS",
    "annuels": {
     "2000": 4.8,
@@ -889,7 +889,7 @@
    }
   },
   "FR0007439666": {
-   "note": 5,
+   "note": 4,
    "risque": 3,
    "societe": "Conservateur Gestion Valor",
    "annuels": {
@@ -920,7 +920,7 @@
    "annuels": {}
   },
   "FR0010564336": {
-   "note": 4,
+   "note": 3,
    "risque": 4,
    "societe": "Conservateur Gestion Valor",
    "annuels": {
@@ -1029,7 +1029,7 @@
    }
   },
   "FR0010097683": {
-   "note": 3,
+   "note": 2,
    "risque": 3,
    "societe": "CPR Asset Management",
    "annuels": {
@@ -1232,7 +1232,7 @@
   },
   "LU1585265066": {
    "note": 3,
-   "risque": 3,
+   "risque": 2,
    "societe": "Tikehau Investment Management",
    "annuels": {
     "2010": 4.3,
@@ -1369,7 +1369,7 @@
    }
   },
   "LU0270904781": {
-   "note": 4,
+   "note": 3,
    "risque": 4,
    "societe": "Pictet Asset Management (Europe) SA",
    "annuels": {

@@ -1,47 +1,47 @@
 {
  "isin": "LU0870553020",
  "alloc": {
-  "action": 99.6,
+  "action": 98.4,
   "obligation": 0,
-  "liquidite": 0.4,
+  "liquidite": 1.6,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 31.4
+   "pct": 30.9
   },
   {
    "nom": "Santé",
-   "pct": 18.1
-  },
-  {
-   "nom": "Conso. cyclique",
-   "pct": 14.5
+   "pct": 19
   },
   {
    "nom": "Technologie",
-   "pct": 13.4
+   "pct": 12.8
+  },
+  {
+   "nom": "Conso. cyclique",
+   "pct": 11.7
   },
   {
    "nom": "Matériaux",
-   "pct": 10.1
+   "pct": 9.9
   },
   {
    "nom": "Conso. de base",
-   "pct": 5.4
-  },
-  {
-   "nom": "Énergie",
-   "pct": 3.5
+   "pct": 5.7
   },
   {
    "nom": "Finance",
-   "pct": 2.7
+   "pct": 5.3
+  },
+  {
+   "nom": "Énergie",
+   "pct": 3.8
   },
   {
    "nom": "Services collectifs",
-   "pct": 0.8
+   "pct": 1.1
   },
   {
    "nom": "Immobilier",
@@ -55,43 +55,43 @@
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 7
+   "pct": 6.1
   },
   {
    "nom": "Air Liquide SA",
+   "pct": 5.1
+  },
+  {
+   "nom": "Safran SA",
    "pct": 5
   },
   {
    "nom": "Novonesis (Novozymes) B Class B",
-   "pct": 5
-  },
-  {
-   "nom": "Safran SA",
-   "pct": 4.8
-  },
-  {
-   "nom": "Lottomatica Group SpA",
    "pct": 4.6
   },
   {
    "nom": "Exosens SA",
-   "pct": 4.5
-  },
-  {
-   "nom": "Galderma Group AG Registered Shares",
-   "pct": 4.1
+   "pct": 4.4
   },
   {
    "nom": "Schneider Electric SE",
+   "pct": 4.1
+  },
+  {
+   "nom": "Galderma Group AG Registered Shares",
    "pct": 4
   },
   {
+   "nom": "Lottomatica Group SpA",
+   "pct": 3.9
+  },
+  {
    "nom": "Gaztransport et technigaz SA",
-   "pct": 3.5
+   "pct": 3.8
   },
   {
    "nom": "Lonza Group Ltd",
-   "pct": 3.5
+   "pct": 3.6
   }
  ]
 }

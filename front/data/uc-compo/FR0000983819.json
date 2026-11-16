@@ -1,31 +1,31 @@
 {
  "isin": "FR0000983819",
  "alloc": {
-  "action": 99.3,
-  "obligation": 0.1,
-  "liquidite": 0.6,
+  "action": 99.7,
+  "obligation": 0,
+  "liquidite": 0.3,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Finance",
-   "pct": 24.7
+   "pct": 24.5
   },
   {
    "nom": "Industrie",
-   "pct": 21.6
+   "pct": 21.8
   },
   {
    "nom": "Technologie",
-   "pct": 19.8
+   "pct": 21.2
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 10
+   "pct": 9.2
   },
   {
    "nom": "Santé",
-   "pct": 5.9
+   "pct": 6.1
   },
   {
    "nom": "Conso. de base",
@@ -33,29 +33,29 @@
   },
   {
    "nom": "Services collectifs",
-   "pct": 4.7
+   "pct": 5
   },
   {
    "nom": "Matériaux",
-   "pct": 4
+   "pct": 3.5
   },
   {
    "nom": "Communication",
-   "pct": 2.2
+   "pct": 2
   },
   {
    "nom": "Énergie",
-   "pct": 1.5
+   "pct": 1.2
   },
   {
    "nom": "Immobilier",
-   "pct": 0.5
+   "pct": 0.4
   }
  ],
  "holdings": [
   {
    "nom": "ASML Holding NV",
-   "pct": 8.8
+   "pct": 9.9
   },
   {
    "nom": "Siemens AG",
@@ -66,14 +66,6 @@
    "pct": 3.3
   },
   {
-   "nom": "Allianz SE",
-   "pct": 3.1
-  },
-  {
-   "nom": "SAP SE",
-   "pct": 3
-  },
-  {
    "nom": "Schneider Electric SE",
    "pct": 2.9
   },
@@ -82,12 +74,20 @@
    "pct": 2.8
   },
   {
+   "nom": "SAP SE",
+   "pct": 2.8
+  },
+  {
+   "nom": "Allianz SE",
+   "pct": 2.7
+  },
+  {
    "nom": "Banco Bilbao Vizcaya Argentaria SA",
    "pct": 2.5
   },
   {
    "nom": "Airbus SE",
-   "pct": 2.4
+   "pct": 2.3
   }
  ]
 }

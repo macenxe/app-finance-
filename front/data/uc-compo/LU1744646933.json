@@ -1,35 +1,35 @@
 {
  "isin": "LU1744646933",
  "alloc": {
-  "action": 97.2,
-  "obligation": 0.3,
-  "liquidite": 2.3,
+  "action": 96.9,
+  "obligation": 0.5,
+  "liquidite": 2.5,
   "autre": 0.1
  },
  "secteurs": [
   {
    "nom": "Technologie",
-   "pct": 33.1
+   "pct": 32.6
   },
   {
    "nom": "Industrie",
-   "pct": 33
+   "pct": 32.3
   },
   {
    "nom": "Services collectifs",
-   "pct": 10
+   "pct": 10.3
   },
   {
    "nom": "Finance",
-   "pct": 7.3
+   "pct": 7.9
   },
   {
    "nom": "Santé",
-   "pct": 7.3
+   "pct": 7.4
   },
   {
    "nom": "Immobilier",
-   "pct": 2.9
+   "pct": 3.1
   },
   {
    "nom": "Matériaux",
@@ -37,11 +37,11 @@
   },
   {
    "nom": "Communication",
-   "pct": 1.6
+   "pct": 1.7
   },
   {
    "nom": "Énergie",
-   "pct": 1.5
+   "pct": 1.3
   },
   {
    "nom": "Conso. de base",
@@ -55,7 +55,7 @@
  "holdings": [
   {
    "nom": "Taiwan Semiconductor Manufacturing Co Ltd",
-   "pct": 5.5
+   "pct": 5
   },
   {
    "nom": "NVIDIA Corp",
@@ -63,30 +63,30 @@
   },
   {
    "nom": "Microsoft Corp",
-   "pct": 3.8
+   "pct": 4.7
   },
   {
    "nom": "Siemens Energy AG Ordinary Shares",
-   "pct": 3.6
-  },
-  {
-   "nom": "ASML Holding NV",
-   "pct": 2.9
+   "pct": 3.3
   },
   {
    "nom": "Schneider Electric SE",
+   "pct": 2.6
+  },
+  {
+   "nom": "Nordex SE Akt. nach Kapitalherabsetzung",
+   "pct": 2.6
+  },
+  {
+   "nom": "Palo Alto Networks Inc",
+   "pct": 2.6
+  },
+  {
+   "nom": "ASML Holding NV",
    "pct": 2.5
   },
   {
    "nom": "Contemporary Amperex Technology Co Ltd Ordinary Shares - Class H",
-   "pct": 2.4
-  },
-  {
-   "nom": "Elia Group SA/NV",
-   "pct": 2.4
-  },
-  {
-   "nom": "Palo Alto Networks Inc",
    "pct": 2.4
   }
  ]

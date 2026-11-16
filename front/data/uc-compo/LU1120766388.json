@@ -1,9 +1,9 @@
 {
  "isin": "LU1120766388",
  "alloc": {
-  "action": 97.5,
+  "action": 99.1,
   "obligation": 0,
-  "liquidite": 2.5,
+  "liquidite": 0.9,
   "autre": 0
  },
  "secteurs": [
@@ -55,15 +55,15 @@
  "holdings": [
   {
    "nom": "Vertex Pharmaceuticals Inc",
-   "pct": 4
+   "pct": 4.1
   },
   {
    "nom": "Gilead Sciences Inc",
-   "pct": 3.9
+   "pct": 4
   },
   {
    "nom": "Alnylam Pharmaceuticals Inc",
-   "pct": 3.8
+   "pct": 3.9
   },
   {
    "nom": "Amgen Inc",
@@ -75,11 +75,11 @@
   },
   {
    "nom": "Biogen Inc",
-   "pct": 3.4
+   "pct": 3.5
   },
   {
    "nom": "Insmed Inc",
-   "pct": 3
+   "pct": 3.1
   },
   {
    "nom": "Revolution Medicines Inc Ordinary Shares",

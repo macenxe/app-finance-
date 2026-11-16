@@ -1,50 +1,50 @@
 {
  "isin": "FR0010871830",
  "alloc": {
-  "action": 40.6,
-  "obligation": 0,
-  "liquidite": 59.4,
-  "autre": 0
+  "action": 39.2,
+  "obligation": 0.3,
+  "liquidite": 56.6,
+  "autre": 4
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 32.5
+   "pct": 28.5
   },
   {
    "nom": "Santé",
-   "pct": 21.3
+   "pct": 20.1
   },
   {
    "nom": "Matériaux",
-   "pct": 14.9
-  },
-  {
-   "nom": "Technologie",
-   "pct": 10.6
-  },
-  {
-   "nom": "Énergie",
-   "pct": 6.4
+   "pct": 13.1
   },
   {
    "nom": "Finance",
-   "pct": 6.3
+   "pct": 10.9
+  },
+  {
+   "nom": "Technologie",
+   "pct": 10.4
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 4.6
+   "pct": 6.4
   },
   {
-   "nom": "Services collectifs",
-   "pct": 3.4
-  },
-  {
-   "nom": "Immobilier",
-   "pct": 0
+   "nom": "Énergie",
+   "pct": 4.1
   },
   {
    "nom": "Conso. de base",
+   "pct": 3.9
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 2.7
+  },
+  {
+   "nom": "Immobilier",
    "pct": 0
   },
   {
@@ -54,20 +54,16 @@
  ],
  "holdings": [
   {
-   "nom": "Rheinmetall AG",
-   "pct": 3.1
-  },
-  {
    "nom": "UCB SA",
-   "pct": 2.5
+   "pct": 2.9
   },
   {
-   "nom": "SAP SE",
-   "pct": 2.5
+   "nom": "Rheinmetall AG",
+   "pct": 2.9
   },
   {
-   "nom": "DSV AS",
-   "pct": 2.4
+   "nom": "STMicroelectronics NV",
+   "pct": 2.6
   }
  ]
 }

@@ -1,46 +1,46 @@
 {
  "isin": "FR0000974149",
  "alloc": {
-  "action": 87,
-  "obligation": 7.2,
-  "liquidite": 5.8,
+  "action": 90.6,
+  "obligation": 5.4,
+  "liquidite": 4,
   "autre": 0
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 46.1
+   "pct": 42.3
   },
   {
    "nom": "Santé",
-   "pct": 32
+   "pct": 36.4
   },
   {
    "nom": "Technologie",
-   "pct": 12.8
+   "pct": 11.5
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 6.5
+   "pct": 6.6
   },
   {
    "nom": "Matériaux",
    "pct": 1.6
   },
   {
-   "nom": "Finance",
-   "pct": 0.6
-  },
-  {
    "nom": "Communication",
-   "pct": 0.5
-  },
-  {
-   "nom": "Immobilier",
-   "pct": 0
+   "pct": 0.8
   },
   {
    "nom": "Conso. de base",
+   "pct": 0.6
+  },
+  {
+   "nom": "Finance",
+   "pct": 0.2
+  },
+  {
+   "nom": "Immobilier",
    "pct": 0
   },
   {
@@ -54,44 +54,40 @@
  ],
  "holdings": [
   {
+   "nom": "Convatec Group PLC",
+   "pct": 5.2
+  },
+  {
+   "nom": "Icon PLC",
+   "pct": 5
+  },
+  {
+   "nom": "MTU Aero Engines AG",
+   "pct": 5
+  },
+  {
    "nom": "GEA Group AG",
    "pct": 4.8
   },
   {
-   "nom": "MTU Aero Engines AG",
-   "pct": 4.7
-  },
-  {
    "nom": "Andritz AG",
-   "pct": 4.4
-  },
-  {
-   "nom": "De'Longhi SpA",
-   "pct": 4
-  },
-  {
-   "nom": "Convatec Group PLC",
-   "pct": 3.8
-  },
-  {
-   "nom": "IMI PLC",
-   "pct": 3.7
+   "pct": 4.2
   },
   {
    "nom": "LivaNova PLC",
-   "pct": 3.6
+   "pct": 3.8
   },
   {
-   "nom": "Icon PLC",
-   "pct": 3.4
-  },
-  {
-   "nom": "Krones AG",
-   "pct": 3.3
+   "nom": "De'Longhi SpA",
+   "pct": 3.7
   },
   {
    "nom": "Nordex SE Akt. nach Kapitalherabsetzung",
    "pct": 3.2
+  },
+  {
+   "nom": "Krones AG",
+   "pct": 3.1
   }
  ]
 }

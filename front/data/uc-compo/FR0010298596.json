@@ -1,85 +1,93 @@
 {
  "isin": "FR0010298596",
  "alloc": {
-  "action": 94.2,
-  "obligation": 0,
-  "liquidite": 5.1,
-  "autre": 0.8
+  "action": 88.8,
+  "obligation": 0.8,
+  "liquidite": 9.9,
+  "autre": 0.5
  },
  "secteurs": [
   {
    "nom": "Industrie",
-   "pct": 33.7
+   "pct": 36.5
   },
   {
    "nom": "Finance",
-   "pct": 18
+   "pct": 19.3
   },
   {
    "nom": "Technologie",
-   "pct": 11.5
+   "pct": 9.1
   },
   {
    "nom": "Santé",
-   "pct": 10.5
+   "pct": 8.6
   },
   {
    "nom": "Énergie",
-   "pct": 10.4
-  },
-  {
-   "nom": "Services collectifs",
-   "pct": 5.3
-  },
-  {
-   "nom": "Conso. de base",
-   "pct": 3.1
-  },
-  {
-   "nom": "Matériaux",
-   "pct": 2.3
-  },
-  {
-   "nom": "Communication",
-   "pct": 2.1
-  },
-  {
-   "nom": "Immobilier",
-   "pct": 1.8
+   "pct": 6.7
   },
   {
    "nom": "Conso. cyclique",
-   "pct": 1.3
+   "pct": 4.8
+  },
+  {
+   "nom": "Services collectifs",
+   "pct": 4.3
+  },
+  {
+   "nom": "Conso. de base",
+   "pct": 3.8
+  },
+  {
+   "nom": "Matériaux",
+   "pct": 3.1
+  },
+  {
+   "nom": "Communication",
+   "pct": 2.4
+  },
+  {
+   "nom": "Immobilier",
+   "pct": 1.4
   }
  ],
  "holdings": [
   {
-   "nom": "Airbus SE",
-   "pct": 3.9
-  },
-  {
-   "nom": "DSV AS",
-   "pct": 3.7
-  },
-  {
    "nom": "UCB SA",
+   "pct": 3.8
+  },
+  {
+   "nom": "TotalEnergies SE",
    "pct": 3.7
   },
   {
-   "nom": "Ayvens SA",
-   "pct": 3.6
-  },
-  {
-   "nom": "Totalenergies Se",
+   "nom": "Schneider Electric SE",
    "pct": 3.5
   },
   {
-   "nom": "Safran SA",
-   "pct": 2.9
+   "nom": "DSV AS",
+   "pct": 3.3
   },
   {
-   "nom": "Societe Generale SA",
+   "nom": "Legrand SA",
+   "pct": 3.3
+  },
+  {
+   "nom": "Ayvens SA",
+   "pct": 3.2
+  },
+  {
+   "nom": "Safran SA",
+   "pct": 3
+  },
+  {
+   "nom": "Lvmh Moet Hennessy Louis Vuitton SE",
    "pct": 2.8
+  },
+  {
+   "nom": "Alten",
+   "pct": 2.6
   }
  ]
 }
