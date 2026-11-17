@@ -1,12 +1,21 @@
 {
- "genere": "2026-11-16T23:20:41.690Z",
+ "genere": "2026-11-17T14:17:35.727Z",
  "globales": [
+  {
+   "titre": "Salaires : combien ont gagné les patrons du CAC 40 en 2025 ? - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 17 Nov 2026 11:33:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONDBqcWVuellsTjhERHZZVUhlM1BWdldRNXRzZTlFU0pNWENtVS1VeU1TdnFkaEoxUFpDYUJkd1VtUVBGSENMQU9XWEFSeWRvY1o2TTh5SDA3bFg0enVZOUFycVk5bHdaTjVXOGswdm52dm5CWjJNRW5wbWx1TUdJaVFibllSMTRkVXRCaWdtTW1UQk15ZmVtaW5abUkwVFJYSGtBTnJPaWhlRkRzMEloQl9yaTc1cnNMdG0ycUJxOUM?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Le dollar frôle 1,10 dollar pour un euro, porté par l'inflation américaine - ABC Bourse",
    "source": "ABC Bourse",
    "date": "Mon, 16 Nov 2026 14:58:57 GMT",
    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQd1lBQzk4amdZSFlnSHQ1WDlFY0RHRVpQMHlfM2FYOVJ2TDkzSFR1Nm9seVFUdkdBdGZrR1BFSzR4SzFKVUVoYVRCc3BlRjg2VGp6Y0xLY2Y0dTluZEx0bklhMWJkVmVBNV9qNW5ZRlg0bWZjV3NvZ2R5SkVpbm9NMy0taTk3dlpzMVN1LVhOcG5MMkdaWWRpc0RDaEJkeVN5cl81SEZReUdPWUNzaDluVXdZdlM?oc=5",
-   "tag": "Inflation",
+   "tag": "BCE / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -47,16 +56,43 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Fed : la vigueur de l'emploi éloigne les baisses de taux - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Tue, 10 Nov 2026 08:46:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcUFzT2JHdDRNN2w3Wno0cGdHOGtfS2FGaUJBUm1aeVltSnVvaGZLQjQ3OTJLNmRsNjNMek8tSUZjNXprc0hNT2NPNWNoNzhibjlwS1lGQklvRzVyd3RkUk01NFdXdDdxRXNWMlFWMzRjc3c4azRJVWpJVk1KNXVxWVlMNEhVZDcxeWxMbEE3aVZVdWVYS2wyc3d1ZlYzSEZLRXM0cWRNbEZtQUlSdDRoV3Z5ZlN6QUJJ?oc=5",
-   "tag": "Fed / Taux",
+   "titre": "Cac 40 : Alors que le marché est rassuré par les résultats de Coreweave, le CAC 40 avance un peu - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Wed, 11 Nov 2026 12:14:41 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNdU11UWZ6WUM3MWx5NkIzXzBRanVlVDFwVEpmamsydlJqclNabVBHSnNqT25CTnVhOVhHbHZBOEtPa2JTNzcwVTVXd1F5aHFET1g1d2ozdExqanBtQTJNMGFVel81QVRubElUTWNucnM3OGJ5Nm5CV1h5YjFiUy1wajB6T0F2dkZCTzJWUWFmeWJHZjhnaWxvTHN1V1dhRXhPZlJmdDQybG5uSm5DXy1zS0hBVUllUFV2RkstZUpiNi0yWE1nVWNtdFNJcEFyUF9Bc1dxaWt6ZjVwd1NlSXJaY0tzX0luejUwYjZBQ0FOb2Z3cTU2MGNj?oc=5",
+   "tag": "Marchés",
    "categorie": "globale",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   }
  ],
  "produits": [
+  {
+   "titre": "Rheinmetall tente de rebondir après une chute jugée \"excessive\" par AlphaValue - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 16 Nov 2026 13:33:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNeTFMNE9URnpVOEJyOWtiNHM5NHh1ZmRlcTNVSzZPTVlmcWhKR2NqX0Y1bi00YkpwaWJ5SFFmSkZPWmJxQzJJZnFOZ1M0SnhWblFUUTRrRURYb2o0RFJfQ1RvU2tHWTBaRWlVYTFvUll1U2NMOEZIcjNVMG9ZbFlCY3l4SkhuNmdMMy1acWI5Nm02Yk1TY2M4X3JfMUpSSVZYTXRuTzQ0TWloTFZHZEN2YkNSVW03cFlNbHVuUjlqNl9nMkY3N0t3V0ZneXRiOUZnenVN?oc=5",
+   "tag": "Rheinmetall",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.20% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZWUwSkRWOGt3U3RXTnhhQkpIS0w5d09RcWxTVm03SjhyWDVTTTNUZ2o2dkdSYll6MHVMdFVHOXM3NG5lc0M4MWhuRVZRRFZfUkdTYTlOdW45OGZaYjROakcxQk5PZURJdEdHQURaRU9VMEo4eUg5VmRuLVhtT18wQlhUZXpEaHZPWmxZZ0JJUENPeUJjRlNZaktrWUVCaGVJWEdURURhOXV0Y3lpU3FZMzlwbHo1TzJ4Y3BTNi1uRm5YS3dnb1RBel9R?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "NEXITY : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
    "source": "Boursorama",
@@ -67,49 +103,22 @@
    "sentiment": "negative"
   },
   {
-   "titre": "WENDEL Cours Action MF, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sun, 15 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9rbVkzTVgtLUhHelpBWWFhZ25kUWxpVDFiN21tVTRSUlNBQ1dhRzlnNUVBaGtYRzJUMWE1VzlfTEx4dHBqZGRuNUp2T1ZsU0hS?oc=5",
+   "titre": "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sat, 14 Nov 2026 07:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdS1ETk0xLW5oWlJsLXA1bVJtRkNyREp0dlpvQWlXZlhEcmJkdDJXYUZEaGctZDNaTFFvemRqMjRHMTExVmRCNVhFUUFKbnRNbDR6Q25naHFZU0Yzb1ZoblhiemVzbGdfU090bXBVUGQ4TjNqUGxyQ0M3UUg3WDA1emF5dm94VXNMdTh5QkVyR0EwcFdCTFBxdlRqWFBsOGRiMGl6cFFjNFRHcEh2OHh2SERRM0lVa05pRk9rZ3pwVGpxZnRVZVBPb1EtUXRDa1V4UUhaQXlaOFltMFpP?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 14 Nov 2026 09:03:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 14 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Fri, 13 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 12 Nov 2026 19:42:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "titre": "Stellantis : plus de 80% de baisse en 2 ans, stop ou encore ? - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Fri, 13 Nov 2026 10:14:11 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLVlrWmpEaVR2SFBmMTRfVjVnM3lPUjVKa1N6WnZHWmh0OFo3VHZQVzYzcnBiY1lwalVzdm9ocGNqRkNrcHhlLVdxM3N0YWRJUjNKdjhsaFk0M1JwZGRMVElKbXhxazhkbVNjY3o0MkVXU2V1X2tEM0NZZ0VsQ04wM18ycWtTRDRaXzNyOHVWaXoyendkZlM4R0Jpdno?oc=5",
    "tag": "Stellantis",
    "categorie": "produits",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
    "titre": "CAC40 : Paris progresse encore, Stellantis et Renault décrochent - Le Revenu",
@@ -121,168 +130,240 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Une confiance à reconstruire pour Rheinmetall - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Thu, 12 Nov 2026 16:51:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVUdaTzBaOXJQTkF5X0k4QldVRFB2YXBNTjNOajFJWjNMYU1WMWhkVHZFRGdadEdmNTdHamVHT3hwcU1CN0RmNUJzNzFoVjMzMzc2b29jRUZwMFlkYTFuWDhhcXNCc3ZVYm5iYlFlQ3FBZWJyVHFvd0ZYU3BiNnpfQVUwVnRWQzJMUzNPQUF3QzJxaFN4aUNvNWNvZlVqc0g5My1qeGhoLTlIN3Y2UzluZFFiZEl2Z3VGZEE?oc=5",
+   "titre": "Défense européenne : CSG entraîne Rheinmetall dans sa chute, les analystes relativisent - Boursorama",
+   "source": "Boursorama",
+   "date": "Wed, 11 Nov 2026 16:05:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQUDZCVEhqc19zWnFnRTFJQk8zbGQ0UUNtbWhaZzQ2aHFvTTE0eHA5TE51d21PTExERVRBRG9OaFlFcS03X21BdVpYTi1JLU9MczRQRUpVZGNGOXhZUzlmRGx2ZWRNcGZFV1UwNWxoLUprRUstenp1cm5FQXVUSkJWMGRhdXVLaDhQdVZwMzRmazhsNE53a191cVBkVWpLYWctMWJCbFY5cVMyMmFWTlZuTDNzRGtvcHFpdjZtclByQkloRnlFMklOb05sSGlCSHpuMF9TdXpsSmc1Z0p4TV9fVVZMTHM3ODlJYTRrV25OUTd1c3ZIME1ZVEdR0gH6AUFVX3lxTFBQNkJUSGpzX3NacWdFMUlCTzNsZDRRQ21taFpnNDZocW9NMTR4cDlMTnV3bU9MTERFVEFEb05oWUVxLTdfbUF1WlhOLUktT0xzNFBFSlVkY0Y5eFlTOWZEbHZlZE1wZkVXVTA1bGgtSmtFSy16enVybkVBdVRKQlYwZGF1dUtoOFB1VnAzNGZrOGw0TndrX3VxUGRVakthZy0xYkJsVjlxUzIyYVZOVm5MM3NEa29wcWl2Nm1yUHJCSWhGeUUySU5vTmxIaUJIem4wX1N1emxKZzVnSnhNX19VVkxMczc4OUlhNGtXbk5RN3VzdkgwTVlUR1E?oc=5",
    "tag": "Rheinmetall",
    "categorie": "produits",
-   "sentiment": "positive"
+   "sentiment": "negative"
   }
  ],
  "eco": [
   {
-   "titre": "La banque centrale du Chili maintient l’exigence de fonds propres des banques à 1 % - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Mon, 16 Nov 2026 23:02:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUW0xdTM2MGpPNjRJWU8taF9MdzVGMkJoekxBUU5uWThxR20tTDd3anpIZXpuSDR1ZmVEUkZXWW9HWWoxR25hdHZRWTFCMFBFN0NFYWgtM1VnR09KNG55THdJM1JoTll0bGlnbjBzNlcwNlV1ajgzamM5d3kycEMwNEZTOElYMGtpYWlwcXFwLWJRcExLYzZBR0tHWWYtWE1lS2t0azkzbzNLUFJVNFdtRS1PS3N3UndHUTRIdEowdWdtUGx3OHdXclJyODBUNFY0dkRQaVlYdHRIMlpF?oc=5",
-   "tag": "banque centrale",
+   "titre": "\"Son deuxième plus haut niveau historique\": à 7,5 millions d'euros l'année dernière, la rémunération moyenne des patrons du CAC 40 a explosé de 75% depuis 2014",
+   "source": "BFM Économie",
+   "date": "Tue, 17 Nov 2026 14:08:41 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/son-deuxieme-plus-haut-niveau-historique-a-7-5-millions-d-euros-l-annee-derniere-la-remuneration-moyenne-des-patrons-du-cac-40-a-explose-de-75-depuis-2014_AD-202611170637.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Berkshire réduit ses participations dans Bank of America et Capital One, et renforce celle dans Delta - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 22:34:46 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOM25ZWnlSRFZFd2N2T1ViN0dqbU1oTGZOQlZ3dmh6Z0RNZi1LbXd5WUJnamJPUER0U2ZqVE5hMEdkRkZiVnlpZHVPcXp4N1h2QVNrTjhpa3liTTRMcExZSmNKTnA3aEVFVm1JdmFKcmx4SDlUSmZJNGkySTRodUtqUXpzaFA4MlNOOU4xcFJDYi1fdzFlaTItak9xVjNGekFmcnZMNDB2MVRPVWUzUDlvTFphbExra0dPdDZMSEJhaU1kcWwtV1FyTUd5R01UV2NiSmZtS3hOX3lueWtQZ2pBdTB3Q3UxZWxmOVRFaGFESWVseW5hUi1tVGxneTY5UEFBUjc4MW1qVllKQdIBjwJBVV95cUxNUy1jRE9lTkFBbDFFX3R0d3YzVjZQSUJmSUFoaGlTUkM4NWRVT05zeFk5RTE2dXJPdzY0UWdxMkdfXzFvWXZuTDZiRm5aVmlEdXZtOWxKRkNCUVlLbXE3dlVWQkpMVll2b2dxZzhpYnhqSDZDT1NfTVR6MndscDJoX0V1SkFSb1E0WVZSZFNhZXp4VWliMXdsVllKcmxST3lhS0YzOFR1dE0xaGtwejVzM0dnRHFBcGlYRHpfSEdtdDlqTkhJTng5cXRTbEl0TFNTZll1MlU2SElsYTdpZWRHS25ZUmU1eV9UcTE1ZGwzSzFaWE9ZQ3BfMnBsT0UwQzhTdF9obWlzeGV5TUpSQ0tn?oc=5",
+   "titre": "Le Nasdaq devrait ouvrir en hausse alors que le secteur technologique se stabilise dans l'attente des résultats de Nvidia et de l'introduction en bourse d'Anthropic - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 17 Nov 2026 14:06:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85OC1ld3VLdmJpd1ltV0I4ZjZKNms5bURkeGZ6eFhoTHV5NFU3XzlzdFhEY0JGbEJhQXVBc3RhYVdqXzBpbmNFYjR0T0ZyYzNFZmI2aTZXcnM4cmVXMTFNdTRESFkyLW9xbXplR29odjFtTkV5UkVr?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mardi: Nvidia, Home Depot, Walt Disney, Intel, Marvell, Coherent - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 14:03:46 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQnVSa0d1aXBGaGc0eEhzRVFpUVNqMXZreExHcEpVRGJGdEN1TXpXRHU3Mks5TE1obGV6TEI5Yk5tMDFLN3Uxb2pOVFRjMkh6Q1lHeDFMMDNLVVdPeE1fYjNoel9ldzJUTGZVNmtyRE5ESl9ITG94anh1eWl5VGVwdGVhdFNaOXpNVjNreFBpTUdrckQtbkxMcHZ1MVB2OUxzRGY5NjBvR2otSG9mdmZpZ3hXUVI?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mardi: Nvidia, Home Depot, Walt Disney, Intel, Marvell, Coherent",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 14:03:46 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-nvidia-home-depot-walt-disney-intel-ma_706227",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carrefour toujours à la recherche de la bonne formule pour ses hypermarchés",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 14:02:51 GMT",
+   "lien": "https://www.abcbourse.com/marches/carrefour-toujours-a-la-recherche-de-la-bonne-formule-pour-ses-hypermarches_706228",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Cac 40 perd plus de 1 %, lesté par le luxe, les marchés se préparent aux comptes de Nvidia - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Tue, 17 Nov 2026 13:55:06 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQeFZLdnkxNlZ0SFJzVDJ1X0k3cWQ0empQMUpOX0VWc1J6Y2dhRlluYzIyWWRWTHNfdFhZVXRnTC1GQWNFRXNyYmVmYmx0blk2S2NGb1R0QzM0RERYSzcxaENjUkhZbktqdnMzSFMtanVONUxDRGtqWUx6WDRzek5oNHVQcVY2X0JTS1I4Zk9EWHFlYzhac1VUb09odm8zRVdoQVJnSHpVNEZzSzFWR2NHeERkaVc4VDdpZV9wVEphcmlMRUl6bVVsQnc1bHNOdk1UeGdkdWFjYjNFVFZNUm1fdWNyMnlIVHRzWVNzSVNxMzVVUQ?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les actions européennes reculent, les contrats à terme sur le Nasdaq progressent légèrement avant les résultats de Nvidia - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Tue, 17 Nov 2026 13:47:48 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNNUhJci1pSmV3SEdmQ2F2VFBtZkNxTHZ6S3FlSDRoQTVxU3pyWUNxdjFMTTF0M2tYSzE4S1ZqRVU5ZEZRR3FLOVNBYU0yOUY2V2d4dloyRE5rM09tcXNuR2d0aUNWdHVRa1lfNnlqLUlGVUJhM1IzUWFGZ3ZCQnI0ejNrSFlWbGtXdGdnYmRxc2daOUNNSHA4Qi1FMEhETkswRmhCb0FQMWZ6c1NRb1NXM2dqUS1DTWFsdGh0UXZwcHRkMmVCSDlLZjRJV1RrSW1rSzA0dzFhel94OXlkemtxLWtSTmxsRndoS2R2UlRPZWVXZw?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Un chef-économiste allemand et le portefeuille des opérations de marchés pour une Française? Berlin fait un pas vers Paris et soutient la candidature de Pablo Hernández de Cos pour l'après-Lagarde",
+   "source": "BFM Économie",
+   "date": "Tue, 17 Nov 2026 13:43:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-chef-economiste-allemand-et-le-portefeuille-des-operations-de-marches-pour-une-francaise-berlin-fait-un-pas-vers-paris-et-soutient-la-candidature-de-pablo-hernandez-de-cos-pour-l-apres-lagarde_AV-202611170604.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "BCE: l'Allemagne fait un pas vers un accord avec la France sur l'après-Lagarde - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 17 Nov 2026 13:27:01 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBWcjdhYW1UdjdOdl96SnYxcHBqWlpqc24wd1pRY3Rwd1F3dmVzbnVUcTJfNUk3bFIxUUNxOG9xS1F0THRYUVUzUzR3SEt1WDVVc1h6QjV3TFpORUsyUUlDMlp3?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Air Liquide fait évoluer sa newsletter actionnaires et rappelle des échéances clés",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 13:00:10 GMT",
+   "lien": "https://www.abcbourse.com/marches/air-liquide-fait-evoluer-sa-newsletter-actionnaires-et-rappelle-des-echeances-cl_706225",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "USA: Wall Street finit dans le rouge, Nvidia et les technologiques sous pression",
+   "titre": "\"On a vu une forte hausse des écarts entre les taux d'emprunt\": la Commission européenne appelle la France et la Belgique à réduire leur déficit et leur dette",
+   "source": "BFM Économie",
+   "date": "Tue, 17 Nov 2026 12:14:36 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/on-a-vu-une-forte-hausse-des-ecarts-entre-les-taux-d-emprunt-la-commission-europeenne-appelle-la-france-et-la-belgique-a-reduire-leur-deficit-et-leur-dette_AD-202611170537.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L’économiste allemand Brunnermeier devrait devenir économiste en chef de la BCE - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Tue, 17 Nov 2026 11:58:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWkZTenFESGtjX05XUC1EUWR4c01EdFppY2h0cUhBM3liWTQxRXdDa090MWhuZmVCQmkwM2ZteHJ3U0RvSTJjdTEwNTF4dzVLb2MwYVBiTEZTZEZqMXlIS2lRWUFHM0lpLWxJQXA3M0FfVkRKbFJ4ZzkxSjVfZDVXU2gydmNRN2N1YWFvQ09fZ3BBODNFM1RGamMtVjdWSm9ldVI0SUhSVmZiRFB0ejFsN1JwT3dvdjJJTDgwX2NhNUYya3EwaDQ2eVY5dXlNd2QxeWRfdmM0QQ?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les obligations d'Etat profitent du regain de prudence sur l'IA",
    "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 21:27:02 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-finit-dans-le-rouge-nvidia-et-les-technologiques-sous-pression_706185",
+   "date": "Tue, 17 Nov 2026 11:37:45 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-obligations-d-etat-profitent-du-regain-de-prudence-sur-l-ia_706220",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Orange met en avant une IA « de confiance » et des réseaux prêts pour l’IA à OpenTech 2026",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 11:20:08 GMT",
+   "lien": "https://www.abcbourse.com/marches/orange-met-en-avant-une-ia-de-confiance-et-des-reseaux-prets-pour-lia-a-ope_706217",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Seulement 0,6% de croissance en 2027: Bruxelles dégrade fortement ses prévisions pour la France et anticipe une inflation encore élevée",
+   "source": "BFM Économie",
+   "date": "Tue, 17 Nov 2026 11:09:46 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/seulement-0-6-de-croissance-en-2027-bruxelles-degrade-fortement-ses-previsions-pour-la-france-et-anticipe-une-inflation-encore-elevee_AV-202611170486.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Soutenu par Berlin, De Cos se rapproche de la présidence de la BCE - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 17 Nov 2026 11:07:28 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUWd4b3RWa1BmUS0yUVh6ak8tYXFZWE5OUC1lc2VHUjFCSmxobDVVZ0tLc09ScE84UkNDYWFIeFdkWlp2cjdxLUNKVU8tanl3dWp3Ri1QeERPYmdtOURhdElLRXluUmlwSFloYnJZc1ZrZTVfNktvNGkxbXVfYzNVTG9KZi0yOGxWamNtMFRMak96dzk5cVh6ekM5RlV0RENnSGc3S3FUNnNnSnRZeWNWeTE5WmdNSVFkOTRQSDNjc0VEYUd1cmR1cTZraFdjS3JaTGtWNVpnSk5ObWlmYnZyQ21ZOWp3dVFXV3M1VWtB0gHzAUFVX3lxTE1EVWFDZ0JaRHpCYzhpUTdfOFFaNFZXaWNMU2ZwVWFYWUY2WkttM1Qxem1scVhjSHhhc0VfWjRMaFN4ZEQ4T0lsQVJGNlpnWFRrc2ZoZklsQnRRMURYMkZpLW5WeTgwbjhYdUNob2oyTmFDMWYzNFk3VjkzNDhuTXlxNkg4ZXhWbHZESHJYenQ0RmNSeHFWVnFrSmxxOWJzaU5VVllleWZ1RjF3ZDRXQzQtVHJiNXpMeWgwN29LTFRMdU1SRXl3LXhYZXNEQU1CN3RSRjBUbEpOeVZNSU1EUnRoejIwVExscDR4bTIyQXVHQVVkcw?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "BCE / Succession de Christine Lagarde : Berlin apporte son soutien au candidat de Madrid - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Tue, 17 Nov 2026 10:53:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSzhFNnRRTWRmN01JczdsZm9tRHptX1pEWVE1ZnNubGQySWt5eGRfWk9UZDgwQ1NDelFoSThmMW0xU3lCV1ZIUXB2cllwSFBzM1NfVEloZk9aUF9mTVFsT0JqVk5rdU1UQzlJTVZGbUg3djJRQ1ZjRkZVWHBoMHpKMzdBeFliMmpkUkNpQjRlanpnSk42WTU0Y2p2WGtPcWVRLXVKYXRDaGsxVHY5VGFSSTJJWk4?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Inflation à 3,5% ? «C’est 7 à 8% pour un smicard», rectifie Michel-Edouard Leclerc - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Tue, 17 Nov 2026 10:51:03 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaHp2U1BPQnRYNFllS1ZQZVZEb3ZlUGdMN1FzZXk0SlItSHc2N2RFQ016ZHpmTThramhKcDZycmg3V3I2NF81Z1NJdFI1SzZaY0Q4eERUTmR2TTFFWlYwY3JvUFVPaHBOZkxxM0xrdWVnU2Ywc1JjaTF6RTUyaFdkMU9CU2tBRGllRjl5VWtSMFc1Qkg3cTZ1Z3BRQUNpNUIyeEc4ZU5FTExUVG9IblRPb1c2bFlrWmM0b0Nrb2kySkU?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe recule avant les résultats de Nvidia, la tech sous pression",
+   "source": "ABC Bourse",
+   "date": "Tue, 17 Nov 2026 10:43:14 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-recule-avant-les-resultats-de-nvidia-la-tech-sous-pression_706215",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre lundi: Nvidia, Intel, CoreWeave, Sandisk, Dell, American Airlines, SpaceX, Boeing, Lockheed, USA Rare Earth, Summit Therapeutics, valeurs bancaires",
+   "titre": "« Risque France », hausses de taux, tensions géopolitiques : les trésoriers français en première ligne - Les Echos",
+   "source": "Les Echos",
+   "date": "Tue, 17 Nov 2026 10:06:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNWERJVUZvdDJZNmx3Uk1DdkQ3d0lPMW9MZmJnWFhSTDBSZHN2NnNzZk5NUDhpaDFLMVdaY19ndmc4YUd1TE9oM2o0a2R3SGt4Skp4MTVQUGp2Wi1naWFtak13S3pVSWdZTnlSYmhtS21nd0UxazRBMEVOdjA4RW04UXRaa1FMeVVkWlluQ2oxbjZqbTV0V3F6ckQ5ck5HTjZiYmtTY29JNm1waFVJSElZNXhjamQydE9fbHBsSkkzdEg1S1djd2xHYTRwRGprRkg4ZDJFZmhHMjc?oc=5",
+   "tag": "BCE taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Zone euro : Bruxelles relève ses prévisions d'inflation, à 3,2 % en 2026 et 3,1 % en 2026 - TradingView",
+   "source": "TradingView",
+   "date": "Tue, 17 Nov 2026 10:04:08 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5nbjJxRTF0bmtRZzcyTUVMQWFxbHhoS092ZDF6RVdQc0VMVU8tTHVYMzY3OWdkb2VjNVNxOXFGSUZiVHFCb2hpUlpNWlROUjBKd3AzTFVsWHdSeTFnVXNpdVlB?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Deutsche Bank dans la tourmente après des révélations de plusieurs médias",
    "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 21:24:17 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-lundi-nvidia-intel-coreweave-sandisk-dell-a_706183",
+   "date": "Tue, 17 Nov 2026 09:14:37 GMT",
+   "lien": "https://www.abcbourse.com/marches/deutsche-bank-dans-la-tourmente-apres-des-revelations-de-plusieurs-medias_706210",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Arkema annonce une émission obligataire pour refinancer une échéance à venir",
+   "titre": "L'Europe se replie avant la publication de résultats cruciale de Nvidia",
    "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 20:10:05 GMT",
-   "lien": "https://www.abcbourse.com/marches/arkema-annonce-une-emission-obligataire-pour-refinancer-une-echeance-a-venir_706182",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Déblocage de l'épargne salariale: l'Assemblée nationale adopte le texte voulu par le gouvernement, qui doit désormais faire l'objet d'un compromis entre députés et sénateurs",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 19:21:44 GMT",
-   "lien": "https://www.bfmtv.com/economie/deblocage-de-l-epargne-salariale-l-assemblee-nationale-adopte-le-texte-voulu-par-le-gouvernement-qui-doit-desormais-faire-l-objet-d-un-compromis-entre-deputes-et-senateurs_AD-202611160835.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia : Jensen Huang pourrait-il revenir ? – 16/11",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 19:13:20 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/nvidia-jensen-huang-pourrait-il-revenir-16-11_EN-202611160825.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia : Jensen Huang pourrait-il revenir ? - 16/11",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 19:12:54 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-nvidia-jensen-huang-pourrait-il-revenir-16-11_VN-202611160831.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Panne Outlook : l'Europe face à sa dépendance",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 19:00:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-panne-outlook-l-europe-face-a-sa-dependance_VN-202611160942.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Panne Outlook : l'Europe face à sa dépendance – 16/11",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 18:53:50 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/panne-outlook-l-europe-face-a-sa-dependance-16-11_EN-202611160809.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Panne Outlook : l'Europe face à sa dépendance - 16/11",
-   "source": "BFM Économie",
-   "date": "Mon, 16 Nov 2026 18:51:52 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-panne-outlook-l-europe-face-a-sa-dependance-16-11_VN-202611160814.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les actions à suivre mardi: Dassault Systèmes, Forvia, Groupe ADP, Ipsos, Saint-Gobain",
-   "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 17:58:27 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-mardi-dassault-systemes-forvia-groupe-adp-ipsos-saint-_706181",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Saint-Gobain va céder son activité de canalisation en Amérique latine à SNA",
-   "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 17:35:13 GMT",
-   "lien": "https://www.abcbourse.com/marches/saint-gobain-va-ceder-son-activite-de-canalisation-en-amerique-latine-a-sna_706176",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe débute la semaine dans le rouge, Nvidia dans le viseur",
-   "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 17:10:29 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-debute-la-semaine-dans-le-rouge-nvidia-dans-le-viseur_706173",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris finit en repli, Nvidia inquiète toujours",
-   "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 16:44:09 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-finit-en-repli-nvidia-inquiete-toujours_706157",
+   "date": "Tue, 17 Nov 2026 09:09:49 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-se-replie-avant-la-publication-de-resultats-cruciale-de-nvidia_706209",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre lundi: Nvidia, Intel, CoreWeave, Sandisk, Dell, American Airlines, SpaceX, Boeing, Lockheed",
+   "titre": "UPDATE :Dassault Systèmes cède un peu de terrain en Bourse après ses nouveaux objectifs pour 2029",
    "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 15:02:15 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-lundi-nvidia-intel-coreweave-sandisk-dell-a_706153",
+   "date": "Tue, 17 Nov 2026 08:43:28 GMT",
+   "lien": "https://www.abcbourse.com/marches/update-dassault-systemes-cede-un-peu-de-terrain-en-bourse-apres-ses-nouveaux-ob_706208",
    "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   },
   {
-   "titre": "Le dollar frôle 1,10 dollar pour un euro, porté par l'inflation américaine",
+   "titre": "CAC 40: La Bourse de Paris ouvre en baisse, Nvidia reste au centre de l'attention",
    "source": "ABC Bourse",
-   "date": "Mon, 16 Nov 2026 14:58:57 GMT",
-   "lien": "https://www.abcbourse.com/marches/le-dollar-frole-1-10-dollar-pour-un-euro-porte-par-l-inflation-americaine_706152",
+   "date": "Tue, 17 Nov 2026 08:11:30 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-ouvre-en-baisse-nvidia-reste-au-centre-de-l-attentio_706206",
    "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "negative"
   }
  ],
  "fiscal": [],
@@ -315,6 +396,24 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Moi, grosse de Murielle Magellan (2019) - Unifrance",
+   "source": "Unifrance",
+   "date": "Wed, 04 Nov 2026 03:48:37 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBSM2dOZk16MkRYQmZaaGx4MEFfX28xU01OYmlYSkdmU2EwTnBULWhGZkJ5VzJWWU1EX3o0Z3IwYkw0OEZlWjIzRGx1MXJ2OTctN0hlOUJvTjhaTTQ?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Carmignac Patrimoine : la diversification face à des marchés extrêmes - Zoom Invest",
+   "source": "Zoom Invest",
+   "date": "Tue, 03 Nov 2026 10:05:35 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2k4ZDZiS05aUTNKMlVGampDYUdnc0Joamw3LS1kRmFkY3RzQmpPeHJiMklWYXJFYmlEdzNhaWZYZUg4Qk92NGN6bDBFYnBFbXYta1Fpc3BaaXViNmFScHM3YnpCRVRfb1BGcUNGQmVGVDlDeHdDZll6UjFaUE5oN2daMWI1OVB0bUY0a3FVRjN6d3o2S2xOUkVqTm1yNXM0WFdmcWd5NUF4aGc?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Magellan Copper & Gold 3Q 2026: Net loss $23.4K, EPS $(0.00) — 10-Q Summary - TradingView",
    "source": "TradingView",
    "date": "Tue, 03 Nov 2026 08:00:00 GMT",
@@ -333,19 +432,19 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Campérêve Magellan 745 : le fourgon à lit central, comme un camping-car - Le Monde du Camping-Car",
-   "source": "Le Monde du Camping-Car",
-   "date": "Wed, 21 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVVQxRDJLYThkSHZCQlI5bjBZa3NLOFh5RzV4VEhlTTNHQzMwUmJrZlZ0M1dHOHdwVHhTN3E4QXhNYmNsOVlXUVNsMU5LWUY0U09XTGZRbFNGNHZ4QXVZU0NaeWhXMHFuVVVkWDFVRmp5b1Fxejd1a0s0V3NlU215OXZzalhEcEM3eldRbFhzeWtlekYxYmtEY21jUTR0NFhoNnUyRXNzT3NZNUFKTXRjLW5ZcjZJOHI5NXMtRw?oc=5",
-   "tag": "Magellan",
+   "titre": "Carmignac Patrimoine : les moteurs du renouveau - PATRIMOINE24",
+   "source": "PATRIMOINE24",
+   "date": "Thu, 22 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPelFxdmtVcUlRenFmZzgyRTlYRnV5V24zMzg0MUplQVBaRzVaWThOdHFNLWJpZ2o5aFlDcms2cEdtTEp1Wl9kUmhtU1BmV3hJOGNLbklwR1lOcFQxakc2blQzeDBiMWNKd0xXNUR6QUN2djZ2akZjTXV1d1B0ZFJxN2N1Yi1LaXBEdXZpRklvalNVQmlJRkRXQTV3?oc=5",
+   "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
   },
   {
-   "titre": "Ingénieure : et pourquoi pas toi ?, 16 rue Magellan 31670 Labège, Labège – 19 novembre 2026 - Unidivers",
-   "source": "Unidivers",
-   "date": "Sat, 17 Oct 2026 22:29:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQX3F1WmxHUzZZemwxay1CZ3o4UURFRWlLSzcwOXIzenNUYlRSYUp5SzVRblVhRGt4Q0thSjQ2bW54NTVfUDdrZWlBZ2dFZWZzZnpuSk9UZmt3THFuTGVEc0ZRa1FIMDNEYXZRSUt4dHRfcWJxRFlCcGVvSmI3UHp6QS1hOGIzUzg0ZFo5U01YTGZLMVpYaVI2TU8wLUpXM1g1LWowdzkzN1B1MGZlXzdDai1UeEN3UjQ?oc=5",
+   "titre": "Campérêve Magellan 745 : le fourgon à lit central, comme un camping-car - Le Monde du Camping-Car",
+   "source": "Le Monde du Camping-Car",
+   "date": "Wed, 21 Oct 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVVQxRDJLYThkSHZCQlI5bjBZa3NLOFh5RzV4VEhlTTNHQzMwUmJrZlZ0M1dHOHdwVHhTN3E4QXhNYmNsOVlXUVNsMU5LWUY0U09XTGZRbFNGNHZ4QXVZU0NaeWhXMHFuVVVkWDFVRmp5b1Fxejd1a0s0V3NlU215OXZzalhEcEM3eldRbFhzeWtlekYxYmtEY21jUTR0NFhoNnUyRXNzT3NZNUFKTXRjLW5ZcjZJOHI5NXMtRw?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
@@ -358,6 +457,15 @@
    "tag": "Echiquier Artificial Intelligence",
    "categorie": "uc",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
+   "source": "Club Patrimoine",
+   "date": "Wed, 06 May 2026 07:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
+   "tag": "Carmignac Patrimoine",
+   "categorie": "uc",
+   "sentiment": "positive"
   },
   {
    "titre": "Point sur… Echiquier Artificial Intelligence ǀ Janvier 2026 - La Financière de l'Echiquier",
@@ -387,38 +495,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 16:09:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY1c5VExOVUs0YWxXVmpCUjdMV0xnaGhQU21WM2JFcndZMm9qTVRMMy1HT19MajJUMXUzVTF5TGtmRmpiSHN3QlNMTzA2S1lKaWR3dEZnYkI2OVFZdkRXNldmWmdjbFVxcUxYMmsyTlZWWFd3NFhNUjNKazVnNzVJWWo0aThRb1FRTnNV?oc=5",
-   "tag": "DNCA Invest SRI Europe Growth",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fonds DNCA Invest SRI Norden Europe - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXl0NjdwQl9jcU1lQ1ZRRElGUGFwVFVrYnhoVG0xYXV3MlNZeTlTQmtCdEFqYkVfcWdOdFJJbTFWd3VKbVdoZmF0NjJsZkdrQlJRT0xGQmVwZmtId2ozZXQyNnlFOXpuM2lHWmFZN3RxQ21pem9ySnFVVVJFdHJKY01ZcURYZGhGYkxJ?oc=5",
-   "tag": "DNCA Invest SRI Norden Europe",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Investir dans une alimentation eco responsable avec le fonds Thématique Pictet Nutrition - Cafédelabourse",
-   "source": "Cafédelabourse",
-   "date": "Wed, 14 Apr 2021 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZUZPMF84Q2xFeXc1U2dCR092ZUdid2wxeV9xX0sydktRWjRqc2o4ZzZSWEZKVFhCZ1JQR2dYcU1NR3FuS0ZMRUFvNG41S2oydV9WN21QUkQ0cHNSVzFWNHlIVmh0OENNLURlNDIwdmJ1UkJERGEwV08yTmFKNDJaWHVsMlVJb2wxWFp3ZENkSVY0WGZycnRzYUJWZTJCMHEyRzNBQ1pmUEhoZW1tX2pJZzdHSQ?oc=5",
-   "tag": "Pictet Nutrition",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Mayssa Al Midani, Gérante du fonds Pictet Nutrition - Boursier.com",
-   "source": "Boursier.com",
-   "date": "Fri, 28 Aug 2020 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWjFYNHZaMlBZamx3djRPZDZxX3ZIcEIxYlZwWUw4UVhXVXdHWVMyUUZabGxoclBoMGhpc0loQ2c4OVI3eEhBM2wxSzJqSDhkYzZuX05zTFVFZV9CV1hXYWt3SjFaNWJxS0pPSDlTOGlDd0tDM1lKZDZiczNrejZKdFVkQVcyMUx3WFJET2lZUGotaTBlVHZuZ09TNGdoUDVOUWUwTGs2REFXRUJ1aXF5UWVaaw?oc=5",
-   "tag": "Pictet Nutrition",
+   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
+   "source": "MACSF",
+   "date": "Fri, 17 Jun 2022 01:42:12 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
+   "tag": "Carmignac Patrimoine",
    "categorie": "uc",
    "sentiment": "neutre"
   }
