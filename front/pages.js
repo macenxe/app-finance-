@@ -560,12 +560,8 @@ function renderOutils() {
 
 // Libellé d'une alerte : un CAP regroupé se lit « CAP 08/2030 » (sans le palier).
 function alerteNom(p) {
-  if (p.isGroupeCap) {
-    const d = parseDateFlexible(p.ech);
-    if (d) return `CAP ${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
-    return 'CAP';
-  }
-  return condenserTitreProduit(p.nom, p.ech);
+  if (p.isGroupeCap) return `CAP ${moisAnneeConstat(p) || ''}`.trim();
+  return condenserTitreProduit(p.nom, p);
 }
 
 // ── Alertes : niveau actuel par rapport à sa cible ──
@@ -894,14 +890,25 @@ function formatMoisAnnee(s) {
   const p = n => String(n).padStart(2, '0');
   return `${p(d.getMonth() + 1)}/${d.getFullYear()}`;
 }
-// Condense le suffixe « Mois AAAA » d'un nom de produit en MM/AAAA (à partir de l'échéance),
+// MM/AAAA de la constatation finale : jour et mois de la constatation annuelle, placés dans
+// l'année de l'échéance (l'année d'avant s'ils tombent après elle), reportés au jour ouvré
+// suivant s'ils tombent un week-end (ex. 30/11/2030, samedi → 12/2030). Repli sur l'échéance.
+function moisAnneeConstat(r) {
+  const c = parseDateFlexible(r.constat), e = parseDateFlexible(r.ech);
+  if (!c || !e) return formatMoisAnnee(r.ech);
+  const f = new Date(e.getFullYear(), c.getMonth(), c.getDate());
+  if (f > e) f.setFullYear(f.getFullYear() - 1);
+  f.setDate(f.getDate() + ({ 6: 2, 0: 1 }[f.getDay()] || 0));
+  return `${String(f.getMonth() + 1).padStart(2, '0')}/${f.getFullYear()}`;
+}
+// Condense le suffixe « Mois AAAA » d'un nom de produit en MM/AAAA (constatation finale),
 // pour que le titre tienne sur une seule ligne quelle que soit sa longueur.
 const MOIS_TITRE_RE = /\s+(janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre)\s+\d{4}\s*$/i;
-function condenserTitreProduit(nom, ech) {
+function condenserTitreProduit(nom, r) {
   if (!nom) return nom;
   const m = nom.match(MOIS_TITRE_RE);
   if (!m) return nom;
-  const court = formatMoisAnnee(ech);
+  const court = moisAnneeConstat(r);
   if (!court) return nom;
   return `${nom.slice(0, m.index)} ${court}`;
 }
@@ -1130,7 +1137,7 @@ function cardAutocallHtml(r) {
         <span class="ac-card-niveau-val ac-card-niveau-val--${zone.cle}">${fmtBarreBarriere(geo.niveauVal, isCms)}</span>
       </div>` : '';
 
-  const titreCourt = condenserTitreProduit(r.nom, r.ech);
+  const titreCourt = condenserTitreProduit(r.nom, r);
 
   return `
   <div class="ac-card${r.rappele ? ' ac-card--rappele' : ''}" data-isin="${escHtml(r.isin)}"${r.rappele ? '' : ` onclick="App.voirDetail('${r.isin}')"`}>
@@ -1217,7 +1224,7 @@ function cardAutocallGroupeHtml(r) {
         <span class="ac-card-niveau-val ac-card-niveau-val--${zone.cle}">${fmtBarreBarriere(geo.niveauVal, false)}</span>
       </div>` : '';
 
-  const titreGroupe = `CAP ${formatMoisAnnee(r.ech) || ''}`.trim();
+  const titreGroupe = `CAP ${moisAnneeConstat(r) || ''}`.trim();
   const isinsGroupe = r.paliers.map(p => p.isin).filter(Boolean).join(',');
 
   const paliersPct = r.paliers.map(p => p.pct).filter(n => n != null).sort((a, b) => a - b);
@@ -1259,7 +1266,7 @@ const AC_TRI_LIBELLES = {
 };
 const AC_STATUT_RANG = { risque: 0, neutre: 1, coupon: 2, rappel: 3 };
 const AC_VALEUR_TRI = {
-  nom:      r => condenserTitreProduit(r.isGroupeCap ? `CAP ${formatMoisAnnee(r.ech) || ''}`.trim() : r.nom, r.ech),
+  nom:      r => condenserTitreProduit(r.isGroupeCap ? `CAP ${moisAnneeConstat(r) || ''}`.trim() : r.nom, r),
   famille:  r => AC_FAMILLE_LABELS[familleProduit(r)] || '',
   sj:       r => r.sjLabel || r.sj || '',
   position: r => ecartRappelPct(r.isGroupeCap ? geometrieBarreGroupe(r) : geometrieBarre(r)),
