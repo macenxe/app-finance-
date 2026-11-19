@@ -1,6 +1,15 @@
 {
- "genere": "2026-11-18T21:51:06.633Z",
+ "genere": "2026-11-19T14:19:57.737Z",
  "globales": [
+  {
+   "titre": "Les responsables de la Fed considéraient le maintien des taux en octobre comme une décision « serrée », selon les minutes - TradingView",
+   "source": "TradingView",
+   "date": "Wed, 18 Nov 2026 16:35:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBya21Fd2k1TGt6Yzdad2I4dDU0VXo0MVJmaWZhZTFTWE1fZ3F0My1GQ0Y0bWNrZzZ6c3QtbGxmTC1mSkhJUjJxeVJrbG11cTZwR1lzQkdkeHJJN2xyNXNqOXFIQW5aYkl4ZWVuUDRFTQ?oc=5",
+   "tag": "Fed / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Nvidia relance les valeurs IA, mais pas le Cac 40, Alstom décroché, Waller veut une Fed plus agressive - Investir Les Echos",
    "source": "Investir Les Echos",
@@ -11,20 +20,29 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Cac 40 : Nvidia rassure la Bourse avec ses résultats, le CAC 40 hésite - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Wed, 18 Nov 2026 13:13:27 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOS0t4WjdQSC01Z3Z5TGZHMVJWYWh6MDFZb2V5U1hETjEwOGhBWV9TWUpId2NYa0RmSVFsTmdFdzNGd1FkNGZCci1DdUZTaWVWVGtHSzFJNHV3OHFvVTRKQzU4aVJZcndmbmJQU0Fkc01HODBibzBFRzlUamxVdFBGVHRaTV9CMXhyd0U3MktQOWpUdnpfX09obk9KT25hNlVDOXVSRUFJb0VOdFU1dXRwSFZCTnpqRFRMUk9XYmVNbXJBWS1GVlcydVdqZzN5TnNDTDQwWQ?oc=5",
+   "tag": "Marchés",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Finances publiques : la BCE compte sur les marchés pour recadrer la France - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Wed, 18 Nov 2026 11:05:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSnBaQWdMRWpYQjB2NmRZbUVILXp2emo2aWtQR3k5aEFmbGRTR1FuWTRkUTEtNEMxM1VYdzIwc0xxM1dXQU15LWhKdG9ONWM3elVrUjJkdEpYZzBYX1E2RExyN2RmLWRwU3M4OWZheUdPOTB1VVdmWWxRZUN5YV9wb0FZV2FvUTRSc1g1dHpmTUFYaWcxaWt5ZVBfSHNQZGlBekZ2bFRiZnk0bUVDaHhwdUh0Mk4?oc=5",
+   "tag": "BCE / Taux",
+   "categorie": "globale",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Bourse : Christopher Waller, «le président de l’ombre de la Fed» qui a fait décoller les taux à long terme - Capital.fr",
    "source": "Capital.fr",
    "date": "Wed, 18 Nov 2026 11:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxONnFDcWxNSmFScHplVTBZYmU2ZGlXdVliQm0wRjg0bklpamF6MXRFTHhrR3Juc2V0VDh5Mng3cjl6c09BeDZNbnNrcm04akRVLUowbGkteEstaDRNTUZxSEt3c2NGYS1Ta3FYRnhmYlpFdzdKY3FQamNwZlRiZHhZbm95TGlhTUhLUWNsaE41X1RRaUxHYm40NllTWnlwQ0tUajdsZkJtVXlhbHN0dHNPV3E4V0x4WmljdUZWVjk0SlNfMVJKX1ljS1pPRTZIeWY2ZUw2MkNlUllSODRmbUViMS04SmdhUQ?oc=5",
    "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : Nvidia rassure la Bourse avec ses résultats, le CAC 40 hésite - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Tue, 17 Nov 2026 19:36:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOS0t4WjdQSC01Z3Z5TGZHMVJWYWh6MDFZb2V5U1hETjEwOGhBWV9TWUpId2NYa0RmSVFsTmdFdzNGd1FkNGZCci1DdUZTaWVWVGtHSzFJNHV3OHFvVTRKQzU4aVJZcndmbmJQU0Fkc01HODBibzBFRzlUamxVdFBGVHRaTV9CMXhyd0U3MktQOWpUdnpfX09obk9KT25hNlVDOXVSRUFJb0VOdFU1dXRwSFZCTnpqRFRMUk9XYmVNbXJBWS1GVlcydVdqZzN5TnNDTDQwWQ?oc=5",
-   "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
   },
@@ -45,24 +63,6 @@
    "tag": "Marchés",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Dollar américain : un sommet de 19 mois porté par les taux de la Fed - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Tue, 17 Nov 2026 11:37:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYkU3c2hQUTA4VHdKN3dZNE43dGVfSlVvaUc2MmI1R3FONzI1TkNZdzNlSDA5a054cUFCRXRLcFlDaEs2NzktODAwVlFQVHN3U1lvVEVzR0loWjhabzlVVlBkM0tqTGRPUjBQeC11QnQ0RURpRUpxaGVnOUdBSExwd1d4WGpSTHNvTDRHVUJUdmZvUTN2X2NKNDlOWURxajhVTkR6MXJR?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les marchés boursiers asiatiques reculent en raison de la faiblesse du secteur technologique, dans l'attente d - Boursorama",
-   "source": "Boursorama",
-   "date": "Tue, 17 Nov 2026 02:06:46 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQeEwxZjFEMk1aaS1OOXJKVVNWak5LNG04aXdKWVpxd0JzTEx6dzZ5aEszdDV6ZFhLUENPTkNIRFJXbDY2NERwbnozSi11ekppemlKUzJiS2pJczVZVVZpd0lpWS1PaFNDU2hDVXR2YktxeThCbkpPa1B6dGVlcTJIN3otT0FFcEZKMC05UkcyUkM3NjhYVGxvemJIRnhhMUNpVVNxaUZRdjI4Zi1UZVJyeWxEVC1DeTU2SkFGeWZ2bktDWWwxZFRGbDBUTXU3dHA2Njc0VkNPLUJiZFgxSmE3S3F0ei04bGFuczlldUNjQ25vZG1IUDJvN3kyRndhWkZsd1dJbHlJdHI3V0hoZnFSRmdIWjlIcGNRclpVbjNrUFc0NFhkMUUySlg5UEdBblQxN0RJX1Nac2XSAbgCQVVfeXFMUHhMMWYxRDJNWmktTjlySlVTVmpOSzRtOGl3SllacXdCc0xMenc2eWhLM3Q1emRYS1BDT05DSERSV2w2NjREcG56M0otdXpKaXppSlMyYktqSXM1WVVWaXdJaVktT2hTQ1NoQ1V0dmJLcXk4Qm5KT2tQenRlZXEySDd6LU9BRXBGSjAtOVJHMlJDNzY4WFRsb3piSEZ4YTFDaVVTcWlGUXYyOGYtVGVScnlsRFQtQ3k1NkpBRnlmdm5LQ1lsMWRURmwwVE11N3RwNjY3NFZDTy1CYmRYMUphN0txdHotOGxhbnM5ZXVDY0Nub2RtSFAybzd5MkZ3YVpGbHdXSWx5SXRyN1dIaGZxUkZnSFo5SHBjUXJaVW4za1BXNDRYZDFFMkpYOVBHQW5UMTdESV9TWnNl?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "negative"
   },
   {
    "titre": "Le dollar frôle 1,10 dollar pour un euro, porté par l'inflation américaine - ABC Bourse",
@@ -94,49 +94,58 @@
  ],
  "produits": [
   {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "titre": "Services informatiques : entre Capgemini et Dassault Systèmes, la Bourse a fait son choix - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Thu, 19 Nov 2026 12:30:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQdEY1MEE5VzdleHpmeW01OEpsR2RxTDhkWnRJNTQ5RVpHWkpLN0tsaDgySzRCdTNoZUlGakZ3bnhVZEVKdExBRjZUc3d5VDlXellLU3NXVzM0a3B5WkNJR1FIZF96djl2cXZRVVoyU05ILVNzNFFxWnhGa25IMUZ0b1V5NExEd29ObnZRbVkzREczckxxVGJsRVcwc3hSSXVWemsyeENwdVM3RlQyVzJkeXNLMGd5U3Y2NlVhSngyTTF1MDZTY1VSNkEzX1JYWHFwNzVtOGZGWGlrWTN6ZG5VUnJXX0RabDkzQWJleHRRZkE?oc=5",
    "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
    "titre": "ESSILORLUXOTTICA Cours Action EL, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
+   "date": "Thu, 19 Nov 2026 11:48:33 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45RlZOTHFnaWMzRWtNS3dHZXUyaWw5Zl9XalNOS1dGOGs5SEYwSHhuY1h4NXVjWXVNbi0wOUFiaVpTU255cWxHeWQxMlM4bUlX?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris - Boursorama",
+   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3X2xHSUdDQmNGajdkdTRNUXZFZU5tTGpDcnFUU2p1S2JucGVpYVFrbTNuSk1Vc2hiYkx5VjJlZU9yYnZVVThpT2o1NG01NGxfR1E?oc=5",
-   "tag": "CAC 40",
+   "date": "Thu, 19 Nov 2026 11:17:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+   "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "neutre"
   },
   {
-   "titre": "NEXITY : L'analyse ne suggère pas de baisse à moyen terme - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 16 Nov 2026 06:23:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaVRmUGNES01CWTBqOWNpd0JHMXNlNWhZalM5TndIc201Ui1zUlBIWjRDQVlZckhFemNFT2Y2OUZ4Zkx6elVCdmRJdVlMMXpESUdqTDZoalBiU2owVVVRVW93NkwxenJDU2VyanJ0UUFBMC1KNXRwRzBKUFg5cGxjWmFLUlRTblNHXzdVb21JZENZQVA0MUlmcFh5eXFhdnhGbmZkQXZFa2tsNkliaEpVUjE1dFJjTnk2UmJ0WFR0RWtwOVEyc09fUnFuWThuUdIB0wFBVV95cUxPT0xXUXJpclg1a3RKNlNTUWI1OUtKSlQxMW1pcDBwVnZCZC1RNWhpQ0p2WGIySy0wRFRaN1hhRVlfc05SZDZocHlHTnc0RHY5ellRMmRkN1hpNGVJUnJmeW50cXlVV05NNlFYbFN4M3dxZkViVU5XZWZER2pGcjFxOGo5eFl4SG53cHQ1Y0Jad0ZCMW80Y3hTbEZtdTJhQlVEanpSMTJEa3VaLWlrSFpLN2pHUHJOUzQydkQtOXhVR0M2N3pZc0ZMWVI5REhpU3FOQ3RB?oc=5",
+   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.58% - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Thu, 19 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNXBUcVpMeFEyUDZMLUVjZ0JhT0lzdFk4bE0zUGpyTnN4dDZvcjhPMVJ5MUVibzNyZUJDUVZDWEpzS0hnZlAySU1jeVQ2WGxOSTNDbUhKd1dwSVBlWTY2Q3ZrcmFWYmxtNGZVakhxSTZrOUIxa01IMEJhVTlCNGptWXEtM25OTm5yLVU0YXByWG9pTG1SaTB6R3l2bXQxT1hObFAyZDVmRy04VE1Tdk5zMHFCNkRqb1c5R3JFTGx3a3lKWllfRTc1cWJ3?oc=5",
    "tag": "CAC 40",
    "categorie": "produits",
-   "sentiment": "negative"
+   "sentiment": "positive"
+  },
+  {
+   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
+   "source": "Boursorama",
+   "date": "Tue, 17 Nov 2026 09:19:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
+   "tag": "Capgemini",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum - Capital.fr",
+   "source": "Capital.fr",
+   "date": "Sat, 14 Nov 2026 07:30:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdS1ETk0xLW5oWlJsLXA1bVJtRkNyREp0dlpvQWlXZlhEcmJkdDJXYUZEaGctZDNaTFFvemRqMjRHMTExVmRCNVhFUUFKbnRNbDR6Q25naHFZU0Yzb1ZoblhiemVzbGdfU090bXBVUGQ4TjNqUGxyQ0M3UUg3WDA1emF5dm94VXNMdTh5QkVyR0EwcFdCTFBxdlRqWFBsOGRiMGl6cFFjNFRHcEh2OHh2SERRM0lVa05pRk9rZ3pwVGpxZnRVZVBPb1EtUXRDa1V4UUhaQXlaOFltMFpP?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
   },
   {
    "titre": "36% des entreprises de l'indice MSCI Europe ont fait état de gains mesurables liés à l'IA au cours de l'année écoulée, selon Morgan Stanley - Investir Les Echos",
@@ -155,251 +164,224 @@
    "tag": "Stellantis",
    "categorie": "produits",
    "sentiment": "negative"
-  },
-  {
-   "titre": "CAC40 : Paris progresse encore, Stellantis et Renault décrochent - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Thu, 12 Nov 2026 17:19:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPT3UtcU52NGlYZEpZMXdrMXRFX1JNU3FPbExXcDlNMEJDWVF6T2dVWnhYTGxaTUhvUzhRVlJTczBfS29IV091Wlh4LVJIM2dVWWVoUDVlR1pvQmN6WlV2S25PM1EyX2pDa0tDcFlGZXRBV2ZzR3BwTjR3UUdBU3V0NEZ1Z3pnQkYxN0RkZWRhU1Y1TFVyV0EtM1ZEdk93My0tWUkwUm9VZGo?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
   }
  ],
  "eco": [
   {
-   "titre": "Wall Street en ordre dispersé après Nvidia et les \"minutes\" de la Fed - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 18 Nov 2026 21:32:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPSDFhZzFQN1dIYTJYSUo0eFdNWTV1LVdUU2lteHRqRlZQcnpVdmY0RHBnVkk0WHZnUGtMTFJLT1JWRVNITlh0NVYtNTE3Mkd4Qy1hSDhNeG5Sc3lBS0pYOGxoTlYxNG1tT3pHSlpWaVUzRW9kcE14NzJfWXBuSnl2SWRFeFAzZkRLWWJTaTZjbWU0WV9ueEFoWTl1R0xKZ3FkOGFrZXQ1OXlra1FmYW5rWUlvdVdfQW5zeGFJaWJyVk4wNE5CSHprUEhPOE5kakVJckpOQWF0UmQ1QjhaR0HSAeMBQVVfeXFMTXVEQTJQNG1HMGZBelA5R3gwYU5HZ0hDWEVpd05SS3ExXzYtLTQzUG8xV294VHVYa2pJczJUZ20xU2hxcEVVLXhrODkwaW9zTFBERHFpUktJamFEZGcwY1BoOVdoeXFuSEIyMkpPR2ZRTmJvY0tHUXpLSEJfZW1mQjV1UzduYm91M0pJckhXa2ZMT0haREd2b054bDdTd3lGYU9uWUVnQUt3VnRraXlQM2ltVlZoRGJpNXpjZTBTOU0tNHFmUk9meXNHNTRsdW53SHRHNk9IWnhJWFZWY2hyOHVlamc?oc=5",
+   "titre": "Les marchés d’actions misent sur l’introduction en Bourse spectaculaire d’Anthropic pour mettre fin à leur série de baisses - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Thu, 19 Nov 2026 14:07:52 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOYlNhLWpHUzh3V2VwazlxSHRMV1VvTmp6Q1RUV0RHcFdMZDltRlRBeDVyTlRqbGlWbTRGVFYwZkdUclBib0JYa2FhQjVvSlZBeVZ6TGl0MER2aURFajhoazZIZHliNkFlNmpnTW1VRlZCbUVHQ0xxcTZ6NlpRTGJOQlZaeFp1Unl3YThlR0RGV0NCTG1oclZ1eEIwRTVUZ1JEV3BxRlZ4NmNoeXNOQldCMVFLMS13aFloTHY5THNXajh3RU8wbFQ4Y0I0Y1NsN1VMM3V4U28tLWhPUW52aF9zYVFqeEhkWkh3M0dYNTR3?oc=5",
+   "tag": "bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "TSMC durcit les conditions de fabrication des puces IA chinoises - Le Revenu",
+   "source": "Le Revenu",
+   "date": "Thu, 19 Nov 2026 14:04:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQkFUcDliMzIyRXBFRGxaalpWSm1xbjRSN3lyckhQUXkyd1VHZ2p0THRINXpVUGtCR0hlWVprQzV3REhhU0VQdnZFNVNtb0d3Q1NENmFPVU90NnhTQXRyMlZEVXZLS3IxUTBvU3ZiY0Nfc3p3TWRoS21KY25MUGswaVpLejlRd2YwYWhNZ2t1c3ItOVZzaXFCMkx0eXhkT2lvT19hR2tScWVmNWhXNjRCaDg5a1RJa3Zi?oc=5",
    "tag": "CAC 40",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Wall Street en ordre dispersé après Nvidia et les \"minutes\" de la Fed - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Wed, 18 Nov 2026 21:32:50 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcnZUelNfdms1WFJpdEUtWWZaT0RUWXI5QnpaNU5BTHF6bXBjQTdmRGVZUlVjSDR5eFdNWDg5MUtaWWdBaUdLNmdwSG1DYXNQWUVWU3dBWEp5NENnV0RMR3JLd2Y4Q1ZVYi1OY0ZqbGJvWlFOUncwT2NsT1Y5eTBoRXd2ZjhzRF9UakppaXhwZG5KYzJJUWxHZWlVeWNoeE9QWWR4djg0anQwSzR3WEVnYVNkN3BfVFlvUm81TDVzN1RBdnhpRnZLYXhnX3VOSnQ4b18tSlA1UQ?oc=5",
-   "tag": "Fed taux",
+   "titre": "Pétrole, gaz et charbon: la mention des énergies fossiles a disparu du projet de décision finale de la COP31",
+   "source": "BFM Économie",
+   "date": "Thu, 19 Nov 2026 14:01:40 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/petrole-gaz-et-charbon-la-mention-des-energies-fossiles-a-disparu-du-projet-de-decision-finale-de-la-cop31_AD-202611190629.html",
+   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "S&P 500 - Les actions à suivre mercredi: Nvidia, Marvell, CoreWeave, Dell, Lowe's, Target, Anthropic, Take-Two Interactive, Palo Alto, Crowdstrike, Fortinet",
+   "titre": "L'or se replie près d'un plus bas de 14 mois, pénalisé par les taux et le dollar",
    "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 21:20:02 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-nvidia-marvell-coreweave-dell-lowe-_706341",
+   "date": "Thu, 19 Nov 2026 13:51:22 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-or-se-replie-pres-d-un-plus-bas-de-14-mois-penalise-par-les-taux-et-le-dollar_706385",
    "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "negative"
   },
   {
-   "titre": "Pour lutter contre l'inflation, \"presque tous\" les banquiers centraux américains estiment qu'un relèvement des taux directeurs est inéluctable",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 20:04:26 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/monde/pour-lutter-contre-l-inflation-presque-tous-les-banquiers-centraux-americains-estiment-qu-un-relevement-des-taux-directeurs-est-ineluctable_AD-202611180942.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Pascal Lecoq (HPE) : IA, chaleur, souveraineté, les défis des data centers - 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:40:53 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-pascal-lecoq-hpe-ia-chaleur-souverainete-les-defis-des-data-centers-18-11_VN-202611180929.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Tesla veut faire de l'Allemange son usine à Cybercab – 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:35:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/tesla-veut-faire-de-l-allemange-son-usine-a-cybercab-18-11_EN-202611180924.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Tesla veut faire de l'Allemange son usine à Cybercab - 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:33:53 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-tesla-veut-faire-de-l-allemange-son-usine-a-cybercab-18-11_VN-202611180934.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Projet de loi logement : le statut de bailleur privé grandement assoupli dans l'espoir de relancer l'investissement locatif pour les particuliers",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:31:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/france/projet-de-loi-logement-le-statut-de-bailleur-prive-grandement-assoupli-dans-l-espoir-de-relancer-l-investissement-locatif-pour-les-particuliers_AD-202611180921.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le Tech Flash : Nvidia arrête de vendre ses puces IA en Chine, par Léa Benaim - 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:29:42 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-nvidia-arrete-de-vendre-ses-puces-ia-en-chine-par-lea-benaim-18-11_VN-202611180923.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA-Des responsables de la Fed ont noté la nécessité d'une hausse supplémentaire des taux-\"minutes\" - Boursorama",
+   "titre": "Les marchés boursiers misent sur l'introduction en bourse spectaculaire d'Anthropic pour mettre fin à leur sér - Boursorama",
    "source": "Boursorama",
-   "date": "Wed, 18 Nov 2026 19:21:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxPU0dPT3JYUnJVQXNCQklKREktQlhTTm1KdDBtR0Z4anM2TDlPT1EwSjRNbkVTREh0clpNMm1GS3FFc0w1ZXlSYzZjV3h3b2pqRGdYU2JhcVFYMy1rR1Vnd2tlM20ySkJORVMwT0tfWklBNHpfMUtRU2lDWWtJM1RjemJMNldqTmlLcWZ6WGgwT2huVjV5VGxaVUN1Z1pBa0sydEQxTHN4SGFIRUlnUUZTU09ld0xYTDQ0UlRJS0h1eDhKN0pzX2xwUmNoWVc1cnF2czRiajl2a0h5TVlxUjBGWFdyamJqSGdiN0VzUDNOZTg5dDhiRUNFdldQYWRNTzR4XzZpWjVLeldjSnZmbUdmZVJwLTM2WG9COTducjJR0gGeAkFVX3lxTE9TR09PclhSclVBc0JCSUpESS1CWFNObUp0MG1HRnhqczZMOU9PUTBKNE1uRVNESHRyWk0ybUZLcUVzTDVleVJjNmNXeHdvampEZ1hTYmFxUVgzLWtHVWd3a2UzbTJKQk5FUzBPS19aSUE0el8xS1FTaUNZa0kzVGN6Ykw2V2pOaUtxZnpYaDBPaG5WNXlUbFpVQ3VnWkFrSzJ0RDFMc3hIYUhFSWdRRlNTT2V3TFhMNDRSVElLSHV4OEo3SnNfbHBSY2hZVzVycXZzNGJqOXZrSHlNWXFSMEZYV3JqYmpIZ2I3RXNQM05lODl0OGJFQ0V2V1BhZE1PNHhfNmlaNUt6V2NKdmZtR2ZlUnAtMzZYb0I5N25yMlE?oc=5",
-   "tag": "Fed taux",
+   "date": "Thu, 19 Nov 2026 13:50:40 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxQTXNHMHZrd1p5TDcyVXQxRl9NcGoxbDNraWl4MmFiX0VncFV4dS1ySVpGZUhOQTk1OTNVTjNyVUw1NVE3a2g2M1dkVzNjWFZiV1VzcXRZbC1jb0swcng3TzJ2cnJWVTY0S2NORFUwUjVDYURRMmJFbFRHX1pGY2ZtamV3ZktQOFA4c2lXZDdMbERDd0Rsb0hweVZETWdNaFllTS1VU1hIZHhGZUFiMEdZVG11RDBrN2ZGZkswSUt5dWdHazFXMXBzMWVRQXNUVnVGU3JFdXl3dktocHpSUlphYmxWV3VibjJtLWpZMGFPYjhhNDZWS2NUQnV1Z3l6eGk4S0pKQndrZkZic2dZZS1sX1RaUmpZa3ZkM0pCeGZNSHNQOHZPRkZTetIBrgJBVV95cUxOWjFPbVh3Uk5IVlB3aVV5WGJhY200anloRl9KLW50VmFxSC1JRkpDVVlLNjJNVThZM1BsQkhHZFFoMWYwRjluOGlQYnVndDJSakhxMmJTa3EzbzU3UHY4TlQ3RDlLV2FNLUdYT1BiMjRhcE9QZTVPenFPVG80X1F1VFlkVklvR3c5OVVUMy16azRkVmNpVXh6S2VYOTJ2aWM1dEVNR0R6bzZuZU4zQnoxc2tqT1ZuZkVyV3pTcnFzaHhxWTViWWV2SkM2UDhqaFdNbHZ6THVKaHJPY3pCZ1dWOGtvOU1HZVJEcG4xMERDS3BISTViY1lqOGpBbDAyS0VobjQwM1BPNUtUejVwNXhYM25aeVl1dDlHQXA2V1dhQk42bjNubXlOSlJrWjF6Zw?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
   },
   {
-   "titre": "La Fed envisage de nouvelles hausses de taux face à l'inflation et aux risques liés à l'IA - Zonebourse Suisse",
+   "titre": "L’espoir d’une introduction en Bourse réussie d’Anthropic soutient le Dax - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Wed, 18 Nov 2026 19:18:19 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNVkR4LVpZOXMwV3hsLVl2bTZXVjNHVmFjM0xtU1puTWgtZDlyLTdWcTJnakNWdkctaVlWUUwtNlY0cTY3Y3djdHZ5WVB1cEVoak9WY1JZa3Fud3I4UExVX2VDZ1dxbnctc0JGWkVqeDhZVzl2dHNqNlplNkZtc1l4TXgzdDJqNjhBQnQ1SGFia3ZaTjJxTml6bFg0eWRzWURKTzFpSXFNUDEtRWxRLVViWE9zcktwd0tBU2NDNHRWMmVNVnFQRk9fbWxhc211aE9FT2N4bEVDWlhYVE1ZR2ZvcElPNnU?oc=5",
-   "tag": "Fed taux",
+   "date": "Thu, 19 Nov 2026 13:38:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQR2NzdkF6dmxWVXAxQVliUHRPbXlUUHpldkNSSzVRWmxLVHE5Z0lSQ215TjFUaE1vQlE2UDZwWUlhSjBWN2k3RUNoTkdQa0lJMzNxLVFxb0h6LTFUcXEtX1hQdHF6UXdIMzdPaDBuMmVBSUVxR19oUFc0cFY1SjRzc1NBSUxEWFhYM3R3RHo4MjhMeXNhallwR1RWYjJFWEhoQmh0Z0RGVDFHT1kzTUJNWnUxOGtEeE44dmQ4azdGSzFOcjVnenR4dTRwUjFJMEpOSWc?oc=5",
+   "tag": "bourse",
    "categorie": "eco",
-   "sentiment": "neutre"
+   "sentiment": "positive"
   },
   {
-   "titre": "Les responsables de la Fed se sont concentrés sur les risques d’inflation en octobre, certains jugeant nécessaire une hausse de taux plus importante - Zonebourse Suisse",
+   "titre": "J.P. Morgan anticipe des hausses de taux de la Fed lors de ses trois prochaines réunions, alors que l’inflation persiste - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Wed, 18 Nov 2026 19:03:47 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPUDJhaGpuN3JJNUlMNVFQbGpPdU8tMjBpR29uYVp1NnR4V2xEenN4eTQtcXVHaTMtcXdieW1zc2NraWxGYUUxSmNDSlcwYnNTVWxaTkFPcXB5dXhFdDdZbVd3VEtaRGRJbUgyZ2Z0a2dXUHV3NTQ1NHBlOC1MX0Y2emdBc1VGQ3hWNTNmdjVuS1FkS3plbU1BY1BRMGN3d1pWYjFXdGNZclRtaGFqa0x5MGlXeGZYb0VZNDE1VERLdkpyWmJXd2dxeHE4d0FsSDdzYmV6S3dnanRSN083ck5QdXNIWVRMMHA5ZU9HbVpCQQ?oc=5",
+   "date": "Thu, 19 Nov 2026 13:33:42 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNZE90UXpjSlVLMzZrNFRnd19PbkxQT2EyRERQVkxPUFBVWm9UX0xEOHc3UG9GQ29xb0pXcHVIUUJ2MlgyWjdKQUUyN0MzWGNVRkUtU3NwcVBNd0xpM2M5eU5hTGpRSU52MUtyRmZsbFk0YjdSeDhORnRlU09ETEEyNy1XcGpESVgxc29MNWJNMHNEZE1yR1l3ZUZOX2huNDl1dFRhYzZaTUNPVDdCdHJvSzJFWGRZck5tTXFDT2hNZ01oa0NKT1VGVTRON1VKQTFXNV8yQ2JLUElQbVlqOExEb0JOMTJCbTR1TmNXX2tB?oc=5",
    "tag": "Fed taux",
    "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre jeudi: Anthropic, Nvidia, Palo Alto Networks, Intel, Walmart",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 13:22:14 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-jeudi-anthropic-nvidia-palo-alto-networks-int_706383",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "En octobre, les responsables de la Fed se sont concentrés sur les risques liés à l'inflation, certains d'entre - Boursorama",
-   "source": "Boursorama",
-   "date": "Wed, 18 Nov 2026 19:00:44 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMigANBVV95cUxOU1ZubkFmZ1c1VzhOWjBxYVJoaG85S0pxM0p1emlVWXN0MFZidWJSZjZLVkt1VWlPV2NzWDNXRExvd0QyNjJ3VnhLT0VGM0lEakRQSzZPM1Vvd3hxOXhOWmtUUlc1MXhpWjBEV1JhSnNYMEhMdlMzZjNqNXQ3OFNiaDRObmVyN29UTVJ4MGtXaDN5SVRfTm54Q1psWjlwZVp5WC1TZHFlNFJqa0Q4RldQdG5xbmZjSV9CVWlzSG1JcExlQWJPQjRscjdkT1gwaEhzeEJjVGdpdTl6Q0V0V1o3NEczVTJjMV9YRFY0eXNLZFF6bFMwWEVlWm1zdU5IdzRUNDhlSGxvTEZqUlFuaUlaN0djeDZEMG1Xb2FlWnRTRXZqZVN2WjhDYWtmUVVFVFdXLUt2OV9GUTd3T25RV1kzbGtaOUt6YTBRZFpoNmtMT3B3WUotZW8yNTFQYzgzSFpMMHdhazZ3ZVV2aDhUelJJSHVhYWRObUE4cDFNWXI3bHrSAYADQVVfeXFMTlNWbm5BZmdXNVc4TlowcWFSaGhvOUtKcTNKdXppVVlzdDBWYnViUmY2S1ZLdVVpT1djc1gzV0RMb3dEMjYyd1Z4S09FRjNJRGpEUEs2TzNVb3d4cTl4TlprVFJXNTF4aVowRFdSYUpzWDBITHZTM2YzajV0NzhTYmg0Tm5lcjdvVE1SeDBrV2gzeUlUX05ueENabFo5cGVaeVgtU2RxZTRSamtEOEZXUHRucW5mY0lfQlVpc0htSXBMZUFiT0I0bHI3ZE9YMGhIc3hCY1RnaXU5ekNFdFdaNzRHM1UyYzFfWERWNHlzS2RRemxTMFhFZVptc3VOSHc0VDQ4ZUhsb0xGalJRbmlJWjdHY3g2RDBtV29hZVp0U0V2amVTdlo4Q2FrZlFVRVRXVy1LdjlfRlE3d09uUVdZM2xrWjlLemEwUWRaaDZrTE9wd1lKLWVvMjUxUGM4M0haTDB3YWs2d2VVdmg4VHpSSUh1YWFkTm1BOHAxTVlyN2x6?oc=5",
-   "tag": "Fed taux",
+   "titre": "La BCE juge les banques robustes malgré les crises et lance une mise en garde - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Thu, 19 Nov 2026 12:43:34 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcGRzT0VXOHpWcFBQYUFMSW5nbS1vUEN4N1hucXYzbEI3elpmVW8xM3JPSzJoODIxYzNvWmRxRnVzbVczUE9wN2VZX1I5dmRnTU9zTXV6N0dEekdBSGwtam5FUW1MV2NFN2pOdWFSWG9xam5lMXc1dkw5WUp1OFgtZWZUMlJVdy1zOWxZTVI0Tm1SMDU5RjFMQXJZSFNMRUdMMHA0NHdRYUVZbXFuWlJReUpYLUdpQTctTF9fVUJGUy0tZk1QMXVlSjB0WjFYM0Rpc1hJ?oc=5",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "negative"
   },
   {
-   "titre": "Nvidia toujours au sommet malgré les turbulences",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 19:00:00 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-nvidia-toujours-au-sommet-malgre-les-turbulences_VN-202611181010.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia toujours au sommet malgré les turbulences - 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 18:58:19 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/nvidia-toujours-au-sommet-malgre-les-turbulences-18-11_EN-202611180897.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia toujours au sommet malgré les turbulences - 18/11",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 18:58:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-nvidia-toujours-au-sommet-malgre-les-turbulences-18-11_VN-202611180907.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les armateurs alertent sur la souveraineté de la France",
-   "source": "BFM Économie",
-   "date": "Wed, 18 Nov 2026 18:29:10 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-les-armateurs-alertent-sur-la-souverainete-de-la-france_VN-202611180877.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Soitec anticipe une croissance organique annuelle de 40% grâce à la Photonics-SOI",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 17:40:17 GMT",
-   "lien": "https://www.abcbourse.com/marches/soitec-anticipe-une-croissance-organique-annuelle-de-40-grace-a-la-photonics-so_706336",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Figeac Aéro affiche une croissance de 8,9 % au premier semestre et confirme ses objectifs annuels",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 17:29:14 GMT",
-   "lien": "https://www.abcbourse.com/marches/figeac-aero-affiche-une-croissance-de-8-9-au-premier-semestre-et-confirme-ses_706335",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "L'Europe finit dans le rouge, l'effet Nvidia a fait long feu",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 17:22:29 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-finit-dans-le-rouge-l-effet-nvidia-a-fait-long-feu_706334",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Soitec revoit ses ambitions à la hausse pour 2027, avec une croissance de 40 % attendue",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 17:17:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/soitec-revoit-ses-ambitions-a-la-hausse-pour-2027-avec-une-croissance-de-40-a_706332",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris prolonge son repli, Nvidia pèse sur la tendance",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 16:43:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-prolonge-son-repli-nvidia-pese-sur-la-tendance_706323",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Accor va racheter les minoritaires d'Ennismore, la piste d'une introduction en Bourse demeure",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 15:07:42 GMT",
-   "lien": "https://www.abcbourse.com/marches/accor-va-racheter-les-minoritaires-d-ennismore-la-piste-d-une-introduction-en-b_706318",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mercredi: Nvidia, Marvell, CoreWeave, Dell, Lowe's, Target, Anthropic, Take-Two Interactive",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 15:04:05 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-nvidia-marvell-coreweave-dell-lowe-_706319",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre mercredi: Nvidia, Marvell, CoreWeave, Dell, Lowe's, Target",
-   "source": "ABC Bourse",
-   "date": "Wed, 18 Nov 2026 13:31:21 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mercredi-nvidia-marvell-coreweave-dell-lowe-_706314",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Zone euro : l’inflation confirmée à 4 % en octobre 2026 - Le Revenu",
+   "titre": "Bitcoin : la Fed menace la reprise autour de 63 750 dollars - Le Revenu",
    "source": "Le Revenu",
-   "date": "Wed, 18 Nov 2026 10:51:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWGluZEpDVWozSVZ0emxyQVN3RGItdFI4eVdwbi1tV1BjUFZOYjN5V2hMOGtnVUZWNHc5NHNXMFNyN2tpSFBXX04tX0RWNVdZNFE5WUhOOUNjb1hnbktVYWFYMDBQZVAwRExyRnJVb0xveUl2YkFvYjB4WWNpTWlscDdnY2VUU1JhcThCeU42dWdCRG1vZFJ5UUJjYkl4TTNLRE5DN1lB?oc=5",
+   "date": "Thu, 19 Nov 2026 12:34:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNanFGNm4wTzYxYXIxS09mbk1WSGI2WnJubl96cUR4YkZDaTg1SmVJd0Y3ZnM0NGh4SVBsY1pPcXlwMzd5TGZuTDlGWWY2dnI3emNpU3N3NFdiTF9TaE1hQUtHZ3FZbkpOdWpNQVFtR1lNamM2OXFlaG9naDVyZTZBbTBXMk9UYXZCT2dJZFNPemRXTnE3QVU0UDlidmx5THgyZXRqTk0wc1ZMcC1IQ29hWTktY2dWWWFVeHBFSDZib0VwazBaM3JaUnVEN3JLSXcxdzVTa2JOUkRJNHJ2ZDUybjlnSFZHM2JJNFNQRmhB?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Allemagne-La croissance et l'inflation devraient s'accélérer - Bundesbank - TradingView",
+   "source": "TradingView",
+   "date": "Thu, 19 Nov 2026 12:32:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAzOW9iMjBMN1R3bEhLWGgzSFJKbHZMTzcxVzNrcUh6dW9fX0lHWHBVcUZGeGlUWVdQWDk0b1djSU5WZ3JhY2VmTE8zR19uVFhuMEdaNzBPM1hiUVpYTWZ3LVo2XzdnXzIzTkNTd2RWOWw0R2Y4cWhz?oc=5",
    "tag": "inflation zone euro",
    "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Allemagne-La croissance et l'inflation devraient s'accélérer - Bundesbank - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 19 Nov 2026 12:32:38 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQU1QzRTk4UVhNU19CVUwzVXJSeUhfRGFBbzdReXk5RVJCNTJtRXphUm52bHJzNGxPN2s5TWFYOXNYaEFLUnpDSXltY3JpYkdQalVwcnFXLWwzc2RFNHVVUlFoX1NvUWhOWXZNd3BKbGVPY29qUW5IaUFWR2lUdC12bTctamxLeWRNUW80QjBYVV9OOXkxOVNYTXVQaXlXSzVtcWRmNktTME5nQV9iTWE2aVIxd1pjdmJJcDg4MXhtd0YwaEJpQVRVcVVISkllbC14LXJMYUh4VkFUU0xCZjFaUVBPSmo1aDZkNjVsWGc4Tk90djlkY1HSAfsBQVVfeXFMTmZxazZrWXB2MUFoQTJDYWVvZ1NvbTJnaFZDZlVEMlZKY0NQQjZTRy1OUi0weWtibzVvbXlLa2lBQV9RcGc0dFVtSnpIYVBHR1FhTVNva1pnYm00N3lYWktsRHNTM0JrY0ktQjRiMFRDazMtNHFtS1RFd2dqRGZNaXFnX0tMc2VXOVEySGNJMWgzUzhxTDIwZTVaMkgzVk8zQWpQWXpiLUw2VTRHaFYwdFA3VlBUNURfbXFDY1BWczFUWkNxVmYzRFF3eVNkNXJ2S1hvY05vRG5lSkVESmJGUTdsUWNmR09uUTV4VmZwN1p3UU5TN1NoNVlvR2c?oc=5",
+   "tag": "inflation zone euro",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Gabriel Zucman veut régulariser les \"impayés\" des milliardaires grâce à un impôt censé rapporter l'équivalent de 8% du PIB de la France",
+   "source": "BFM Économie",
+   "date": "Thu, 19 Nov 2026 12:32:14 GMT",
+   "lien": "https://www.bfmtv.com/economie/gabriel-zucman-veut-regulariser-les-impayes-des-milliardaires-grace-a-un-impot-cense-rapporter-l-equivalent-de-8-du-pib-de-la-france_AD-202611190564.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
    "sentiment": "neutre"
+  },
+  {
+   "titre": "La France émet pour 1,7 milliard d'euros d'OAT indexées sur l'inflation avec des taux qui progressent",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 11:21:32 GMT",
+   "lien": "https://www.abcbourse.com/marches/la-france-emet-pour-1-7-milliard-d-euros-d-oat-indexees-sur-l-inflation-avec-des_706380",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "La France émet pour 12 milliards d'euros d'OAT, avec des taux en nette hausse",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 10:39:56 GMT",
+   "lien": "https://www.abcbourse.com/marches/la-france-emet-pour-12-milliards-d-euros-d-oat-avec-des-taux-en-nette-hausse_706377",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le texte atterrit à un déficit public de 5,4% pour 2026: le Sénat adopte le budget de fin de gestion avec d'ultimes ajustements pour l'armée et les aides face à la crise énergétique",
+   "source": "BFM Économie",
+   "date": "Thu, 19 Nov 2026 10:39:46 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/le-texte-atterrit-a-un-deficit-public-de-5-4-pour-2026-le-senat-adopte-le-budget-de-fin-de-gestion-avec-des-ultimes-ajustements-pour-l-armee-et-les-aides-face-a-la-crise-energetique_AD-202611190475.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Toujours à la vente sur Worldline, Goldman Sachs réduit sa cible à 9,10 euros",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 10:35:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/toujours-a-la-vente-sur-worldline-goldman-sachs-reduit-sa-cible-a-9-10-euros_706376",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le placement à suivre : Selim Mehrez - Taux, comment profiter des tensions actuelles ? - 19/11",
+   "source": "BFM Économie",
+   "date": "Thu, 19 Nov 2026 10:31:24 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-patrimoine/video-le-placement-a-suivre-selim-mehrez-taux-comment-profiter-des-tensions-actuelles-19-11_VN-202611190471.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les rendements obligataires montent après le compte rendu de la Fed",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 10:25:33 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-rendements-obligataires-montent-apres-le-compte-rendu-de-la-fed_706375",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Europe tente de repartir de l'avant, l'IPO d'Anthropic en vue",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 10:13:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-tente-de-repartir-de-l-avant-l-ipo-d-anthropic-en-vue_706374",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le bitcoin recule, plombé par la Fed et les ventes des mineurs",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 09:56:19 GMT",
+   "lien": "https://www.abcbourse.com/marches/le-bitcoin-recule-plombe-par-la-fed-et-les-ventes-des-mineurs_706373",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "L'Europe progresse en attendant l'IPO d'Anthropic à Wall Street",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 08:48:07 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-progresse-en-attendant-l-ipo-d-anthropic-a-wall-street_706367",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "L'Oréal et EssilorLuxottica visent 15 % du capital d'Armani",
+   "source": "ABC Bourse",
+   "date": "Thu, 19 Nov 2026 08:44:41 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-oreal-et-essilorluxottica-visent-15-du-capital-d-armani_706368",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Etats-Unis: Des responsables de la Fed ont noté la nécessité d'une hausse supplémentaire des taux - Boursorama",
+   "source": "Boursorama",
+   "date": "Thu, 19 Nov 2026 05:51:18 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNVFpCaHpJWGtGZ1g5SnYwbDlfR01oSVpORXM4VmxreDVzRmI2NWFjY0dVOGdVWG9Qdmp3TUlOOXJZWGlIOW11am5oMDlxQmJNNG0zek1IMGEzREpJV3pDaFBDRk1JNGZXb2dKanJWNkc0bDZtbTZtcS1BWVNhQkl5OGtSVUR6WU4zVVVGNFF3NnI1ei1OSGxEMmpsVjlOUE8tNEtBM2dfWHNmb3lkWVhYb3VNejZmMU9CRmNsOGozR012QVhXSV9VNzY3S2NoaE9WWmd6Xzc1WW82d2lWelo0WWw0WjJSVjdwd0ppTml4VFVtSGFOcVVtbk5SWDNUOTF2d3J1dlhhRnppVXlhbkFxMEZreGRhU0JDYzJTWdIBnAJBVV95cUxNVFpCaHpJWGtGZ1g5SnYwbDlfR01oSVpORXM4VmxreDVzRmI2NWFjY0dVOGdVWG9Qdmp3TUlOOXJZWGlIOW11am5oMDlxQmJNNG0zek1IMGEzREpJV3pDaFBDRk1JNGZXb2dKanJWNkc0bDZtbTZtcS1BWVNhQkl5OGtSVUR6WU4zVVVGNFF3NnI1ei1OSGxEMmpsVjlOUE8tNEtBM2dfWHNmb3lkWVhYb3VNejZmMU9CRmNsOGozR012QVhXSV9VNzY3S2NoaE9WWmd6Xzc1WW82d2lWelo0WWw0WjJSVjdwd0ppTml4VFVtSGFOcVVtbk5SWDNUOTF2d3J1dlhhRnppVXlhbkFxMEZreGRhU0JDYzJTWQ?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
   }
  ],
  "fiscal": [],
@@ -432,6 +414,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "En Malaisie, la vérité sur le tour du monde de Magellan - Arte.tv",
+   "source": "Arte.tv",
+   "date": "Mon, 09 Nov 2026 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQkhFNzdXc2tVazB4SHpzc1RYMmRSVFFNa2x2RE8xYXE4Wk5WZDhDMFFVVDIzaDE5MGZnWDRUSk1PRFlaLVE5ejRMa05UNGljUTE3emJ2dHNiaUluNVF1Nmc3dFR4YkoyNXkyUkJnVktrUkk3Tmt3Q0l2SFlBX1dPcmFaODhXX1BEaWhjTjZVa0ZBYTlQQm5QWjhwSG1DMnM?oc=5",
+   "tag": "Magellan",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Carmignac Patrimoine : la diversification face à des marchés extrêmes - Zoom Invest",
    "source": "Zoom Invest",
    "date": "Tue, 03 Nov 2026 10:05:35 GMT",
@@ -445,15 +436,6 @@
    "source": "TradingView",
    "date": "Tue, 03 Nov 2026 08:00:00 GMT",
    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQLUlrSzZGZkY0d0c4TEF1V1Jxek1jdHdZMW96Tzk0NkdoblIwa3NUNFI1cGhGakN5Zk9FQ0xuWnJPeUxvbUdpU0htRnhMck5KU3piQks2TDA4cWI0azNnVk50Q2QxdkNaUVFkY3NPU2tBTnptUXZkbHdNNTRQQkJNTzdQWnoyQWY0WnJBQnhWbkZsWHoxT0hKMURMeGFNd1dVQWxweFBXS2lYVXVSY2w3ZE9NNWU5bU50a05KOXpXamItMTRC?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "SPÉCIAL EURONAVAL 2026 – GPS leurré, cap maintenu : MAGELLAN fait ses preuves en conditions réelles (par Linda Verhaeghe). - Theatrum Belli",
-   "source": "Theatrum Belli",
-   "date": "Mon, 02 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRmlWUGxFMmtnLWdMNDFKdUVNNTVEQ2dPQlY2eDRJeUM4aU4tbURRU0VSdXh4b2tXWkhFVWdyaXp2dWVPdlhsZm9tQk1VVGltSUIydWJZM2o1X2J5SG1tSmFsNXpLTjJxMEJicTNtNkdWZlBZVTZfdUVydExZcXMtTnNDcHNxYS1kdFFrLWRtWHVJNG84X1BRdnQ3eFdYNlA5UnFqcVJjS3FYaUZSdU1DcFZlRjlpN3gyTzQ0aF9ZbU5ycXhqd2N3dkdtMnVqdDNIYktF?oc=5",
    "tag": "Magellan",
    "categorie": "uc",
    "sentiment": "neutre"
