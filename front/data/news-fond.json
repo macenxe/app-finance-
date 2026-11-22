@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-22T13:15:40.086Z",
+ "genere": "2026-11-22T20:40:58.575Z",
  "globales": [
   {
    "titre": "Bourse en direct, Cours actions et dérivés - Boursorama",
@@ -72,15 +72,6 @@
    "tag": "International",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "L’économie japonaise se contracte de manière inattendue, l’inflation comprimant les dépenses des ménages - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Mon, 16 Nov 2026 00:54:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUlhkRk1Yc2hPTmNUREl4cU4tT1YtUnRYNF9Ya2w4RGRWc1VrcnpLWjZJQzI4NTNwRF9xMWFIUEhLWmNYV2Y2RTY5UE5NY0ZWOHNhVnNoeFNfU0pGZllrNWk4ejdMVF93X3ZNaHdXeVBaMzNNZmVrY0ZRdUVtVVFQd0JCRE1NVFpFVlNRQmtTRC1DVUxCWHRUbFY0LXVKbTBoQUwtQ1BDUmpjU1pIUFFZTXVUM3VwN1QwRlVISFpDanRPSXVOeW1Zb2IxRDlzTEpBWDNPMUt1TGJscUlpWkhYR3pMNFRZaklENXA1NGoxbw?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "neutre"
   }
  ],
  "produits": [
@@ -105,9 +96,18 @@
   {
    "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
-   "date": "Fri, 20 Nov 2026 06:25:00 GMT",
+   "date": "Fri, 20 Nov 2026 16:38:48 GMT",
    "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
    "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le grand retour de la volatilité pour nos sélections Investir 10 - Investir Les Echos",
+   "source": "Investir Les Echos",
+   "date": "Fri, 20 Nov 2026 16:35:23 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQeGlCdlpkV1J3X3VINWtIakZscWxHeXFEOXdVSi1wR2JxVzB5czZvZGtZTE9pamFYUlVQRWZ6c1VIVmU3dktXVDc2OHRCUEh4M1oxcUY5NFgwV0ptcWZOZU96R2RYd1BnYlpUSXFkVUdxbUpfaEhTdnkwUEoxSFdNaVBqYkY4RXdBWThHMVRPa2dQb01STS1SY0hDUDJuY0VPV2JtUHJEeGMtNWVjR1NkNHczUXZSdkxiYlFWeklqb0xDcDBETmhfSUJtbm9GTFhETDhyTnJ4LVh1Wjg?oc=5",
+   "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "neutre"
   },
@@ -137,24 +137,24 @@
    "tag": "CAC 40",
    "categorie": "produits",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Le Cac 40 retombe sous les 8.200 points, Accor en plus forte baisse, STMicroelectronics rebondit - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Wed, 18 Nov 2026 16:49:02 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNU1FBSnI0QWZUY2pIN1pfaHdiTW5FM05waTFHQzRTNllNWDFBaGMtTmQtVHhnYm8yY0xRcGE5TTkycEM1WHZ5dnNBUG1HdTZ6TE92WGNrRWVKVU5QWGZibGh3M0p0a2lpOGNoM2ZrZUQ1MUYzRi1leUM5LVhFa2JjYTJhM054QUhLa1hvTUluMlNOdDhYdkcyOW5YS0hyYnZaSnl0aHhHUkpaLUJkSEtueFRzZUV1SDdBRkNvYTJteWh6SVFLZFZoSnE2ekpUd2tNSjN4N3lDS21DbFBjSW52UEd5OUpmbUlwVnVCWEtwYTF4MHZyUjF3?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
   }
  ],
  "eco": [
+  {
+   "titre": "Le trafic aérien risque d'être paralysé en Belgique ce lundi: les contrôleurs aériens rejoindront un mouvement national contre les mesures budgétaires du gouvernement",
+   "source": "BFM Économie",
+   "date": "Sun, 22 Nov 2026 15:50:42 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/transports/le-trafic-aerien-risque-d-etre-paralyse-en-belgique-ce-lundi-les-controleurs-aeriens-rejoindront-un-mouvement-national-contre-les-mesures-budgetaires-du-gouvernement_AD-202611220316.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
   {
    "titre": "Laurence Boone, une économiste éclectique au poste stratégique de responsable des marchés de la BCE - Les Echos",
    "source": "Les Echos",
    "date": "Sun, 22 Nov 2026 13:00:09 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWDYtUm5ZcEFpWTFYdVRIRThzdUExVndMMGFlTFdZSWctRDg0UkdyU3IzTkNTYnJOU2pqcVFHbnJsX09mSVYwdE11ZDN0RFpwMEhFaVJMVGxvbEcxU0dmSW5pZS1XWnFndHdpVGJpRXQ2MHFfSWM1NjFUZ1hmVmZuc1F5aXZFQWdFZkJKak54SXN6bFRqWjl3UUJwRUNfWmZTNzhHQkVWRVZISTVDRml1UDVjeFlJQWVsY1hLTDFVMmZxX0llQ2F5MkV2TWI4UkVUQzQ2bU0yX0hQOFVPRVNYVmtPbWRoUmFWWm5LQV9HS0dpZ2VPdWRPeA?oc=5",
-   "tag": "bourse",
+   "tag": "BCE taux",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -168,7 +168,7 @@
    "sentiment": "negative"
   },
   {
-   "titre": "La BNS surveille étroitement les effets de second tour de l’inflation, indique son vice-président - Zonebourse Suisse",
+   "titre": "La Banque nationale suisse (BNS) surveille de près les effets de second tour de l’inflation, indique son vice-président à un journal - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
    "date": "Sun, 22 Nov 2026 08:01:29 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNY0drbTJ4Zm5yMW5Ga3AxOHVJSGZual9vYkFxOGVBUk10N3dubzV5NFpPeEJqZWl1MjRRaEV0WnpOcHBxUzFZYUM4N2ZGc1liUHJUVEZsTFVUYU1KSnd6ZTZ2cVRRX2hYMFFlUkVzWXZNMkxocEdRYnVDLTJ2azIwczdTTUlmRWJJTDg0VTVDU2RJN1g2SEwtY2xjTlVHRU9NcnVua0lYM2NqU2U2T2VXZkk2cTF6dWpTVUpwaHFENGY1SDczSkRwYk5nMHRRbTB1XzlBel9FN2pQWnhrajMwYWlkRnZqN0NpNV9FR2t3?oc=5",
@@ -193,24 +193,6 @@
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "Cet ancien journaliste de Radio France a hérité d'une des missions les plus compliquées d'Europe: sauver les finances du pays qui affiche le plus gros déficit de l'UE à près de 8% du PIB",
-   "source": "BFM Économie",
-   "date": "Sat, 21 Nov 2026 13:25:51 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/cet-ancien-journaliste-de-radio-france-a-herite-d-une-des-missions-les-plus-compliquees-d-europe-sauver-les-finances-du-pays-qui-affiche-le-plus-gros-deficit-de-l-ue-a-pres-de-8-du-pib_AV-202611210329.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L'UE propose un budget réduit de 204 milliards d'euros pour la période 2028-2034: \"le compte n'y est pas\", en particulier pour les agriculteurs, selon l'Élysée",
-   "source": "BFM Économie",
-   "date": "Sat, 21 Nov 2026 13:00:46 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/union-europeenne/l-ue-propose-un-budget-reduit-de-204-milliards-d-euros-pour-la-periode-2028-2034-le-compte-n-y-est-pas-en-particulier-pour-les-agriculteurs-selon-l-elysee_AD-202611210299.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
   },
   {
    "titre": "USA: Wall Street chute en clôture, le Nasdaq corrige de plus de 5% en raison des inquiétudes liées à l'IA",
@@ -324,6 +306,15 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "R-CO VALOR C EUR 3 713,36€ - Boursier.com",
+   "source": "Boursier.com",
+   "date": "Thu, 19 Nov 2026 14:45:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB4UllRQklKY2dBZG9XWHhYSUI4OF9qdGVZaV8taDhIUWFXdTZ1NXprSHdrVHM4aFBNajl5bzZSRFliS04yS0RjYzZPR21UY2NkZmo5czdBT2NuN2Q1aExDWnZjN1V3VjlMUm1rX3JYaFN6eHhSOG04MWowLVdrb2s?oc=5",
+   "tag": "R-co Valor",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "« Magellan », une lecture interprétée par la comédienne Odile Frédeval, à la Véndéthèque de La Châtaigneraie - Ouest-France",
    "source": "Ouest-France",
    "date": "Mon, 16 Nov 2026 16:02:03 GMT",
@@ -414,29 +405,20 @@
    "sentiment": "neutre"
   },
   {
+   "titre": "Point sur... Echiquier Artificial Intelligence - Février 2023 - La Financière de l'Echiquier",
+   "source": "La Financière de l'Echiquier",
+   "date": "Thu, 16 Feb 2023 08:00:00 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
+   "tag": "Echiquier Artificial Intelligence",
+   "categorie": "uc",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
    "source": "MACSF",
    "date": "Fri, 17 Jun 2022 01:42:12 GMT",
    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
    "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fonds CPR Global Silver Age - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Sat, 12 Feb 2022 09:15:29 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQXy01M0NVUTVPaVF3NFFraC1OazB2VUVlU3Y1TUhGWm1nc1E2RGdYdy1yaTBRdHVISVowVGFBZkpFY2RIZk0tREZYVnk1djIwOVRsU21sUk1ZX2NvOGhvS2tkeFBOZERPOUJ6VnB1elplQnRweU5LQkpBTHprTXAzOW8zNlYxYVd6VDQ5QWloUFg1WGFJOVkzTEQ4ZUM?oc=5",
-   "tag": "CPR Global Silver Age",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcm1jMDVaMlB2WGFwU2NoN1l4aGxfZ0pzQnNWc0ZSdGZfNDZvMW1GRjNsbWMyYkRjV1lIdjk4enV6N3RUYWJkWkhIbjlNMlhtNURYRk5mQnE4dlotYWtLYnF0dlN6YnJheUdCMXJ2U1RBVjgzX0N3ZFlRcm5KUHA5NTFOVnQ5TkpKUngw?oc=5",
-   "tag": "DNCA Invest SRI Europe Growth",
    "categorie": "uc",
    "sentiment": "neutre"
   }
