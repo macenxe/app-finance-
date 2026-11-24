@@ -1,5 +1,5 @@
 {
- "genere": "2026-11-23T15:52:59.062Z",
+ "genere": "2026-11-24T02:52:09.629Z",
  "globales": [
   {
    "titre": "Les marchés tentent un rebond après une semaine noire pour la tech américaine et le Cac 40 - Investir Les Echos",
@@ -38,15 +38,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "Bourse : Christopher Waller, «le président de l’ombre de la Fed» qui a fait décoller les taux à long terme - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Wed, 18 Nov 2026 11:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxONnFDcWxNSmFScHplVTBZYmU2ZGlXdVliQm0wRjg0bklpamF6MXRFTHhrR3Juc2V0VDh5Mng3cjl6c09BeDZNbnNrcm04akRVLUowbGkteEstaDRNTUZxSEt3c2NGYS1Ta3FYRnhmYlpFdzdKY3FQamNwZlRiZHhZbm95TGlhTUhLUWNsaE41X1RRaUxHYm40NllTWnlwQ0tUajdsZkJtVXlhbHN0dHNPV3E4V0x4WmljdUZWVjk0SlNfMVJKX1ljS1pPRTZIeWY2ZUw2MkNlUllSODRmbUViMS04SmdhUQ?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "L’IA est devenue l’unique moteur de l’économie mondiale, alerte le FMI - Le Revenu",
    "source": "Le Revenu",
    "date": "Tue, 17 Nov 2026 15:00:00 GMT",
@@ -63,18 +54,27 @@
    "tag": "Fed / Taux",
    "categorie": "globale",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Le billet vert sous les 1,10 dollar pour un euro, poussé par l'inflation aux USA - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 16 Nov 2026 16:27:07 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxObVpWbGZMai0wblZsQXdFUEZqR2J3bkFvTEtKQy1VSmtjSHI3cTh5UEhvZmJfZ1lXbVBONjlyaUp4TXVkdlB2NGk0VlVraHVGeTFUbVlCLV9oa1ZFSUNfeklzbHdvb3VydF93VTk2VnA4a1RIX1EzN2RKNDduU3Q0NjZSd3haUmQ5Y1pWU3VHSl93TTZLN0N5SmFCWVVIdXZXMGtaOVZsWFZqSFFDSER5LVpJd0E2cjVfeFBfaXE3VWRJRGU3X3lPZnl4ZGpPS1R3bXk3QUV3?oc=5",
-   "tag": "Inflation",
-   "categorie": "globale",
-   "sentiment": "neutre"
   }
  ],
  "produits": [
+  {
+   "titre": "Stellantis se retire de toutes les compétitions de sport automobile - Zonebourse",
+   "source": "Zonebourse",
+   "date": "Mon, 23 Nov 2026 16:17:16 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNazFwN2x5MzRYWGlISkRvQ1BMRHN4OGYtc3V3OUNmS0FzRjdNVXladFBXQ3Y0akxBTklYQUVXSFFBXzJjQS1GVHJqSzREXzc3djJKVS1xVDFUYmRqeDk4WXByZ0E3N3U2MkIwdVo0V2MxTWNuTWQwMmhjdFE0SjMzTHZYQkxWLVRpNEprY1BuZERNNkVmTFlqSWNiSml3dEN5ZmxVNmRycUFmUUk5cUM2UmlwWi1ldUJaLUluSDdyLXVSZmtnME9n?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Stellantis met fin à ses activités de course automobile officielle pour concentrer ses ressources - ABC Bourse",
+   "source": "ABC Bourse",
+   "date": "Mon, 23 Nov 2026 16:03:31 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYmdzWEFuMWFQVlM2V216b1BqRmNBUmI3U2lhM1kySXNTSmNvQzNxdmpnUnRaaVBWOG15dnZLYU1ralpqcjBZdDZlMHBrSElWeVlLaU9GaFRKMXhtajFkaDRlbVJ5MzQyek4zcFV4SnBubi1BajZDamxnSmRmX2pCZGw4Z2tpQjlOVW1PYjE5RklTSktjUy1rcU5oaFVqRzNVMjhfa3VIUVNobWxCYnJhVUVtei1DakJkendzTExB?oc=5",
+   "tag": "Stellantis",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
   {
    "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.48% - BFM Bourse",
    "source": "BFM Bourse",
@@ -85,6 +85,15 @@
    "sentiment": "positive"
   },
   {
+   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
+   "source": "BFM Bourse",
+   "date": "Mon, 23 Nov 2026 01:11:21 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
+   "tag": "CAC 40",
+   "categorie": "produits",
+   "sentiment": "neutre"
+  },
+  {
    "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
    "source": "Boursorama",
    "date": "Sat, 21 Nov 2026 13:11:00 GMT",
@@ -92,24 +101,6 @@
    "tag": "Capgemini",
    "categorie": "produits",
    "sentiment": "neutre"
-  },
-  {
-   "titre": "Capgemini SE: Objectif de Cours et Consensus des Analystes | CAP | FR0000125338 - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Fri, 20 Nov 2026 16:55:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9YSjliNzhuOHVucDNaRmtRNWM0VGsxRWJ5NUo1bm9lTmpTbGhYT2R6dUZOVDBxd1RLRlczVjJYWkR4UklrM29yeWdHdTc0ckJicE9qdmFhbUI0QnZhOHRydUJyQTNWMnE0TmFIT1p6UXlMMHdLWlRr?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "C'est le luxe qui tire la croissance d'Accor, estime ce gérant - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Thu, 19 Nov 2026 19:35:46 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaFlBUXBXZnRXQ21oVlJpUlBIVXE0SVBfVVZHdG1qNUYxblp4WDRMLW5hZFJ1VDEyeWs5d2FzT09vUWRfY0o1TWVFTGxpSEg3Y2kwVjVNMWhFRVptOG9acld4MzlVcEdkVGg2RkJKa2MwYWp5REFieXFPVWhaWV8zcTQxX0VBTndQZXIxem5meUVaTWVZcDYtODBRMkxuYllxTXJkYzNJdHhBZ3daT1R2UGJVV0M4eFR5N285MGJn?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
   },
   {
    "titre": "Dassault Systèmes : faut-il éviter cette action du CAC 40, après un gros gain en Bourse ? - Capital.fr",
@@ -130,15 +121,6 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Thu, 19 Nov 2026 09:25:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "La société de gestion Amundi très prudente sur les marchés pour 2027 - Investir Les Echos",
    "source": "Investir Les Echos",
    "date": "Thu, 19 Nov 2026 07:57:40 GMT",
@@ -150,74 +132,191 @@
  ],
  "eco": [
   {
-   "titre": "L'éco du monde : Les taux se détendent, la règle d'or envisagée semble saluée – 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 15:42:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/l-eco-du-monde-les-taux-se-detendent-la-regle-d-or-envisagee-semble-saluee-23-11_EN-202611230628.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'éco du monde : Les taux se détendent, la règle d'or envisagée semble saluée - 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 15:40:14 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-l-eco-du-monde-les-taux-se-detendent-la-regle-d-or-envisagee-semble-saluee-23-11_VN-202611230630.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le directeur de la banque centrale brésilienne affirme que les paris électoraux sont passés de « l’avidité » à la peur après le scrutin - Zonebourse Suisse",
+   "titre": "La filiale de trésorerie de Sun Pharma obtient une notation de crédit préliminaire BBB+ de S&P - Zonebourse Suisse",
    "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 15:37:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPYVNVOGJnbm04R1NqcHh6cVZqOUg1TEs3bjhBVzJCWUREMVhQTHRoMVdyRkJMVVc4UGNaYzFvWXB4Y0pKVktXRl90a1RISzhRT28zZ0tzLUJ4Y04tNWg2cFJlNXprVUJXcENRV1JoREpoUTI1UWx3b2hBeEt3d0NGbTJmekdMUzNpQ0ZDT3U5cTRtLTVhMHpPcUNuWEk1Y0k1aERKNDdpLXNDZ3hMT1BOS2xnVHpTV1BqblVvTl9Cd3ZoV0tySlMwRFlZR3BPNFhFU1VNU3JSWm1WX1NFNzZuMXF2aFljT0NhV00ta05n?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia : Jensen Huang rétabli à son poste de PDG – 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 15:31:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/nvidia-jensen-huang-retabli-a-son-poste-de-pdg-23-11_EN-202611230623.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia : Jensen Huang rétabli à son poste de PDG - 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 15:28:32 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-nvidia-jensen-huang-retabli-a-son-poste-de-pdg-23-11_VN-202611230624.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Produits de taux et liquidités : OAT, la prime de risque française s’installe - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Mon, 23 Nov 2026 15:26:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWE5Uc0NfUmRiYnNxYjBfakFUUU1zWGZjMHdfdFM1bkMxN2c4MExPdXlPNmlLRDBsN2YxLTBGSlZkZlVzMmZLTE0yWWVFQzZjU0FiNjE1eGN0dkxublc3ZGh2TEdQYmdfWEp4SHBNdzcta05Mc2VaMi1qTWRYWnloYmlieFdVY2todmFwbk42TzlXeDRSZEJhVWIxTlV0ckx1N2tzYmVReHU3SkQxY0dLVkRKQi1fN0RJLUxXazRBbGFsT2dQRU44NmN0TQ?oc=5",
+   "date": "Tue, 24 Nov 2026 02:25:15 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWGNwakxCeVEzRHRxWWVOQWZxTVdEX0FkZmZiTlJxbkRfT3JaYXNsbUtlVGQ5LVlfUmZQVG56V09hZ0YybXlSMWR2aWtDN2s0QUJlcU56Z0VocEZuMzhDSjF4dGp4TF9fQlNNNHl2YmMtNHJaa3R6OTN6T3Q5enVYYWVKdGE5MURPeVcyYlJzQzRKcW1SZGNPcy1EU0hRbGp6eXZtMkFuLUt3MzVwR2p5eURKSGlQUXpNZHRWV0hIWnktTGhHU19hakRySGloekw3UzcwYjBPNUp2R2E5b0dOUXhhckx1d3Zs?oc=5",
    "tag": "bourse",
    "categorie": "eco",
-   "sentiment": "negative"
+   "sentiment": "neutre"
   },
   {
-   "titre": "Après la débâcle et les scandales, Jensen Huang réintègre Nvidia, la Bourse est à la fête, la hausse du Cac 40 s'accélère - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Mon, 23 Nov 2026 15:24:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcFFrQ1FSc2FHdFc5TFB3aDVmbzNWRGljdjZidFZUOVlNWDZjMlhxajc4ekdTWmZJcVRaanBFT0NleFVCekVwby13WTlvbkJUaDNsLUk0eDlaZkY0QWFzenFyVVJRZnB2TUFDU0hRMGwtR2p0cGNiTzNJcXlyOElfdDBTT1k3eU1RU3ZYX1I2Q0hEODhRVHdtLWljbmtyRWpsdlRrazVsWnFYM2VqWkE0c1hTS0JONmRJcTItYWI2NlB6ZDZ0VE05S19SSnZUSFBBUlVXQUJOUQ?oc=5",
-   "tag": "bourse",
+   "titre": "Williams de la Fed : l'inflation reste trop élevée, de nouvelles hausses de taux sont possibles - Boursorama",
+   "source": "Boursorama",
+   "date": "Mon, 23 Nov 2026 23:39:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNTjhvYkNGNHJCM3RTVDdIZ3BhQWRDYUVFZGhURVMtUUpwc3hDZUdFck9DcGFpaS02T1lKRldxQl81d2x6ZDBzaDRFRW1oOVdIVE5jQWFIaWN5Q3FPaHBsamtzdGtpbi1qa0wxOWJVTzBfYTliM25mbTZMQ3hjTVpZNDA0UU1vWHhxN25MOFhHVmRsc1djaWNsLWtiUnExeVUyUFNOREJyeUFYS0k2V25CSGNTXzlSZ2hXdWhkUVpSRFA4aTlybWRxejBodHQ4UTZIcWJfa2R1NmMyRDBkc2hlaHhxVXJuSGEzdzNLVTUtdTFaUG00MllEUGdnX2Z4S0FDb2NnRdIBhAJBVV95cUxNTjhvYkNGNHJCM3RTVDdIZ3BhQWRDYUVFZGhURVMtUUpwc3hDZUdFck9DcGFpaS02T1lKRldxQl81d2x6ZDBzaDRFRW1oOVdIVE5jQWFIaWN5Q3FPaHBsamtzdGtpbi1qa0wxOWJVTzBfYTliM25mbTZMQ3hjTVpZNDA0UU1vWHhxN25MOFhHVmRsc1djaWNsLWtiUnExeVUyUFNOREJyeUFYS0k2V25CSGNTXzlSZ2hXdWhkUVpSRFA4aTlybWRxejBodHQ4UTZIcWJfa2R1NmMyRDBkc2hlaHhxVXJuSGEzdzNLVTUtdTFaUG00MllEUGdnX2Z4S0FDb2NnRQ?oc=5",
+   "tag": "Fed taux",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Jensen Huang revient chez Nvidia, l'action explose de 30 % et entraîne le Nasdaq dans son sillage - ABC Bourse",
+   "titre": "Williams de la Fed : l'inflation reste trop élevée, de nouvelles hausses de taux sont possibles - TradingView",
+   "source": "TradingView",
+   "date": "Mon, 23 Nov 2026 23:39:32 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9PTGtqUkctLWE4bGlkWGE3dEZsUlFmOVlnMmZKeXh3WllvcmJXS1I2cnEtTEhleGhVY1BQZ2JNNGV1WDlBbm5GcFVVVXJGX3pTMXV4dlM1ejVPVngzelZEWG1nV1QwRnBrUEhFWGZicmdONGQzTkpV?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "John Williams, de la Fed, affirme que la banque centrale s’efforce de réduire l’inflation - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 23 Nov 2026 22:08:30 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVVhEc2VQMTIzOS0yZFVCMGd6RWNrLU1TT3VNei1oeWFBd3ZmSkM0aXU1eV9aOHpvYVlwUzJZTW1aMFc5UTBIWUxHTUY4T2N6RHpuSERqbmR3a0JtVDd6d3pVaTl3NlJMVm1ES0R4SFZ2YUR1ZWp3U3hkcWlsZGlnOE1ib2tCZFpXU2dUMTJmeFQ4YUlUV0xoNk9hV3JJb29Del9Bdk5aYmVnajMtbFVWbHlWbnBac0JBenliVF9CRFl5S2hCY0FDNXFGeGYtTjVKTkpXNmxJd0F0Vk1uaVNVemloNA?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "USA: Wall Street célèbre le retour de Jensen Huang, qui relance les paris sur l'IA",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 15:16:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObWw3dS1lVHhoaFJlSjZxZGYyR0dMYlNPMF9LZU1qaWNsbHI2aTI4ZHM4VENzRzNiSmtjOVA1UjZWTmpDNEJac1VDbEdiaUczZjg1Vm9Ub0o3U1hJODViamdCWTB1c2VSTHIwQ2FGX1NoU2FrcFlxblN5WS1KWmNhVUpiQnRPSERXYTZmNVRtZXUyMFpXMHZoUnhWeTBSWTg1WjRITzZ1cGtiSnp4VzRNVDlra2g4WFpsRnc?oc=5",
-   "tag": "bourse",
+   "date": "Mon, 23 Nov 2026 21:33:45 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-celebre-le-retour-de-jensen-huang-qui-relance-les-paris-sur-l-_706552",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "La Réserve fédérale américaine (Fed) doit encore « agir » pour faire baisser l’inflation, estime Williams - Zonebourse Suisse",
+   "source": "Zonebourse Suisse",
+   "date": "Mon, 23 Nov 2026 21:01:24 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOTm1rVDRqd0RtV20tZUdmSndkb3hVS1ZoUVQxclpMcmRSM1IxcmpNMUFISWhFWXgydFVsdm9fcWpfdWstemg3aFMyYXFxR1FVWkI4bzFkV1Y4MHlZYWJ3dnJ1dGd4U0V0U2g5VExwOGRkNXJidmxsNm5OS05hdFVjSlg3dU9KazI3N1FtbUpDRVpEQ2VQRW5BT2pDRHZIOEVmck9Zd1U1SXlFMGw5eWsydnptTzdsdGViUDZ5LXpGRFFyaXNuTmpPMnhKQmJKRUJJc3ZCNjNtZndJMVZFMDBYWDhiZDhzblU?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "À lire sur le site Tech&Co : Microsoft célèbre les 25 ans de la Xbox, par Sylvain Trinel - 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 20:47:12 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-a-lire-sur-le-site-tech-co-microsoft-celebre-les-25-ans-de-la-xbox-par-sylvain-trinel-23-11_VN-202611230887.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bruno Zerbib (Orange) : Orange dévoile sa vision de l'avenir des réseaux – 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 20:31:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/bruno-zerbib-orange-orange-devoile-sa-vision-de-l-avenir-des-reseaux-23-11_EN-202611230875.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Bruno Zerbib (Orange) : Orange dévoile sa vision de l'avenir des réseaux - 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 20:23:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-bruno-zerbib-orange-orange-devoile-sa-vision-de-l-avenir-des-reseaux-23-11_VN-202611230874.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Dollar jumps on hawkish Fed bets, AI rally - TradingView",
+   "source": "TradingView",
+   "date": "Mon, 23 Nov 2026 20:22:55 GMT",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQUcyaFhQVHB2RHhpQUVLVGMzZ1pBeTA5dml2MHNoSldNMTl6Y3pvcGlUNE44RjdJY19PYUlGbXNOX0F0Z2NUdWRQVmNkcjlzeHhDbTRzMnhmNjd2LUZRdzZ0RVVNOHJFVkxVQmFibmE1cXFpYjg2TjAtdVB3TEVvM0drSTlCQnBXVXRYbmNoRk1QUzFlSFFYREtnenFTMzdmY0JNRjhMVVV3aFRnM3RKQkk5cDF6REtTaGIyNnN0Vmx0eF95NEVtNg?oc=5",
+   "tag": "Fed taux",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Tech Flash : Nvidia réintègre Jensen Huang par Léa Benaim - 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 20:12:02 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-nvidia-reintegre-jensen-huang-par-lea-benaim-23-11_VN-202611230863.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Jensen Huang reprend les commandes de Nvidia – 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 18:56:53 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/jensen-huang-reprend-les-commandes-de-nvidia-23-11_EN-202611230798.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Jensen Huang reprend les commandes de Nvidia - 23/11",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 18:52:03 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-jensen-huang-reprend-les-commandes-de-nvidia-23-11_VN-202611230801.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Jensen Huang rétabli à la tête de Nvidia",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 17:28:17 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/usa-today/video-jensen-huang-retabli-a-la-tete-de-nvidia_VN-202611230718.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Après la cyberattaque spectaculaire subie par Crédit Mutuel Arkéa, la banque Delubac aussi victime d'une \"intrusion informatique\"",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 17:26:31 GMT",
+   "lien": "https://www.bfmtv.com/economie/apres-la-cyberattaque-spectaculaire-subie-par-credit-mutuel-arkea-la-banque-delubac-aussi-victime-d-une-intrusion-informatique_AD-202611230714.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "ATON: 15 industriels chinois valident des anticorps de sa filiale Bcell Design",
+   "source": "ABC Bourse",
+   "date": "Mon, 23 Nov 2026 17:20:09 GMT",
+   "lien": "https://www.abcbourse.com/marches/aton-15-industriels-chinois-valident-des-anticorps-de-sa-filiale-bcell-design_706543",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'Europe débute la semaine en vive hausse, Jensen Huang est de retour",
+   "source": "ABC Bourse",
+   "date": "Mon, 23 Nov 2026 17:13:57 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-debute-la-semaine-en-vive-hausse-jensen-huang-est-de-retour_706542",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Nvidia : Jensen Huang rétabli à son poste de PDG 😲",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 17:03:26 GMT",
+   "lien": "https://www.bfmtv.com/economie/video-nvidia-jensen-huang-retabli-a-son-poste-de-pdg_VN-202611230692.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris rebondit nettement grâce au come-back de Jensen Huang",
+   "source": "ABC Bourse",
+   "date": "Mon, 23 Nov 2026 16:50:21 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-rebondit-nettement-grace-au-come-back-de-jensen-huang_706533",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "positive"
+  },
+  {
+   "titre": "Le baril de pétrole américain retombe sous les 80 dollars pour la première fois depuis août: les cours de l'or noir chutent face au retour d’une offre abondante",
+   "source": "BFM Économie",
+   "date": "Mon, 23 Nov 2026 16:49:44 GMT",
+   "lien": "https://www.bfmtv.com/economie/entreprises/energie/le-baril-de-petrole-americain-retombe-sous-les-80-dollars-pour-la-premiere-fois-depuis-aout-les-cours-de-l-or-noir-chutent-face-au-retour-d-une-offre-abondante_AV-202611230672.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Stellantis met fin à ses activités de course automobile officielle pour concentrer ses ressources",
+   "source": "ABC Bourse",
+   "date": "Mon, 23 Nov 2026 16:03:31 GMT",
+   "lien": "https://www.abcbourse.com/marches/stellantis-met-fin-a-ses-activites-de-course-automobile-officielle-pour-concentr_706531",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -231,47 +330,11 @@
    "sentiment": "neutre"
   },
   {
-   "titre": "La banque centrale turque a vendu 12 milliards de dollars de devises, ses réserves nettes ont fortement reculé la semaine dernière, selon des banquiers - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 15:16:14 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOWl95UUFQV2h1ZnNqTThoSUwyb1ZNaVVadkF2XzFtUFY4VHY1LW5qZjVhYnNENEJWQUthSEEyQ1FqcWhZSXF0dU1CYjVkZ005UXZLZ05EOWhxUTVlblkxQThINEpGSVJ0UnQ5T0lNNjNIQmVYSWxqaUdySkJhOGlqU3JCY0Frc2xhZE5nNnNPNGxaMW53U3NMYmpITUJ0SndmRVhMcXZxemUtU185RlNSTkl0bHJ6Z1BFcjlDQUxWN1B0eE5zSDRMSlc3RWIxWmRnWnMyT2JRVnIzTXF4SnY3UERRVGl3VXZoT2tTQlFjczk?oc=5",
-   "tag": "banque centrale",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Jensen Huang redevient PDG de Nvidia",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 15:15:06 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-jensen-huang-redevient-pdg-de-nvidia_VN-202611230615.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Société Générale devient l'une des banques européennes préférées de Morgan Stanley - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 15:01:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbV9OT2hUVTlvQUdtUDFDQkt6OGd0QllDRXJscV9WeWNKTUFLSWRpY2hvelhiUzdQRDl0ZUJtMEhCQ25rejBQeDNEQVhPbFJhYUZKT0N1emt5UUF6cWZIcjRMQjBDdHhCcjdYcERIWkcxYUZfN1h5aFk1SnA0dkhScXFfejF1RFVScS1WczdWMF8zV0JTYzJFaVZScDlUYmROYmRyRXBaS0VHUlNOTGFTVUxCNTdHMFByN3RNdnlR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "Société Générale devient l'une des banques européennes préférées de Morgan Stanley",
    "source": "ABC Bourse",
    "date": "Mon, 23 Nov 2026 15:01:27 GMT",
    "lien": "https://www.abcbourse.com/marches/societe-generale-devient-l-une-des-banques-europeennes-preferees-de-morgan-stanl_706525",
    "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia: Jensen Huang est réintégré à la tête du géant des puces électroniques, 11 jours après sa démission",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 14:43:55 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-nvidia-jensen-huang-est-reintegre-a-la-tete-du-geant-des-puces-electroniques-11-jours-apres-sa-demission_VN-202611230594.html",
-   "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
@@ -294,42 +357,6 @@
    "sentiment": "positive"
   },
   {
-   "titre": "Coup de théâtre chez Nvidia: Jensen Huang est réintégré à la tête du géant des puces électroniques, 11 jours après sa démission fracassante",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 14:06:52 GMT",
-   "lien": "https://www.bfmtv.com/economie/coup-de-theatre-chez-nvidia-jensen-huang-reintegre-a-la-tete-du-geant-des-puces-electroniques-11-jours-apres-sa-demission_AN-202611230562.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ROI-L'éclatement de la bulle de l'IA pourrait remettre les baisses de taux de la Fed à l'ordre du jour : McGee - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 23 Nov 2026 14:01:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxQd2pYcHA2SEV5NDhCeTZ3amhCUEtPMEo4YkFPQ0FucWtfTEYzQmZsMDVfdkVxc2xHQ3pMZFZXdXNfZF81YlM4QlF5UlJqWGtBdkxBSE5FMThrZ3A2NlltNjJvajNpOWphQ3pQS2Q5OGItU2UzRVhYZ21uZWlRMTR6TWJHdVRMUnJvaDQ2VkF3SWVLT2RrVjl1dEcya0ZGbmdLQnFTdUpYS1ZBdFZibk9ud21sdnNsV19vOElmSWp6cXNWeTAyUmdQcE5MTWI2cFZnRUJkTDRJa2pwRjhVOWwtVmUxeURHaEFSa2UzenFmbGE4VWdGU3RGWU1KUzF4RWlKYUtLVUpZXzVWRk8wVHBZc3h4ZGxfZUtESmhMYUpB0gGeAkFVX3lxTFB3alhwcDZIRXk0OEJ5NndqaEJQS08wSjhiQU9DQW5xa19MRjNCZmwwNV92RXFzbEdDekxkVld1c19kXzViUzhCUXlSUmpYa0F2TEFITkUxOGtncDY2WW02Mm9qM2k5amFDelBLZDk4Yi1TZTNFWFhnbW5laVExNHpNYkd1VExScm9oNDZWQXdJZUtPZGtWOXV0RzJrRkZuZ0tCcVN1SlhLVkF0VmJuT253bWx2c2xXX284SWZJanpxc1Z5MDJSZ1BwTkxNYjZwVmdFQmRMNElranBGOFU5bC1WZTF5REdoQVJrZTN6cWZsYThVZ0ZTdEZZTUpTMXhFaUphS0tVSllfNVZGTzBUcFlzeHhkbF9lS0RKaExhSkE?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "L’indice d’activité nationale de la Fed de Chicago recule contre toute attente en octobre - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 13:44:06 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQRUpNamgxUU1wV3FWdXM5MUNSVGZLdjdQZVYzWjZfSzFldFF5UFE3SUVMaklmUE9OcTlEQjJ3aEdmYUFMQUhjT1NWZ241NzFUUVlpQTRib01jMGFyeFVaZnNmcWoyaklEQTFwTGIwTldTRk1PMEFMUzhObHZIcWdHZ2RxLVA2QnJGVGdEeG4tblk2R3FTVnk4WndwNUdvNmctd2VoYkxxNFotUDh6cUpDd0hkenBOTXVIYmJ0MmhOWndLdE1sVlk3aTBPdk5EOTlTNW1ZaEpwU2NSZ1E4aXJEZlRGT3pvUQ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "S&P 500 - Les actions à suivre lundi: CrowdStrike, Zscaler, Anthropic, Nvidia, Intel, Nebius, Hewlett Packard",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 13:33:56 GMT",
-   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-lundi-crowdstrike-zscaler-anthropic-nvidia-i_706520",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
    "titre": "L'or s'offre un rebond technique, avant l'inflation américaine - ABC Bourse",
    "source": "ABC Bourse",
    "date": "Mon, 23 Nov 2026 13:03:38 GMT",
@@ -337,87 +364,6 @@
    "tag": "inflation zone euro",
    "categorie": "eco",
    "sentiment": "positive"
-  },
-  {
-   "titre": "L'or s'offre un rebond technique, avant l'inflation américaine",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 13:03:38 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-or-s-offre-un-rebond-technique-avant-l-inflation-americaine_706518",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Jusqu'à 8 fois supérieur à la moyenne: selon une étude, des taux élevés de polluants éternels ont été retrouvés dans le sang des salariés de la chimie exposés aux PFAS",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 12:10:53 GMT",
-   "lien": "https://www.bfmtv.com/economie/emploi/jusqu-a-8-fois-superieur-a-la-moyenne-selon-une-etude-des-taux-eleves-de-polluants-eternels-ont-ete-retrouves-dans-le-sang-des-salaries-de-la-chimie-exposes-aux-pfas_AD-202611230510.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "\"Un message positif\": l'hypothèse d'une règle d'or budgétaire rassure un peu les marchés, les taux d'emprunts de la France se détendent",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 12:09:35 GMT",
-   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/un-message-positif-l-hypothese-d-une-regle-d-or-budgetaire-rassure-un-peu-les-marches-les-taux-d-emprunts-de-la-france-se-detendent_AV-202611230508.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La BCE permettra aux banques de donner davantage de titres tokenisés en garantie - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 23 Nov 2026 11:49:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE95WnRZZTZNN3VJM1BpNHhQT19WWG4yWXZURHNhWE10U216WDFKdWNFeW1ESEppWnpKdXN2YXpfdHVmNnNKNldqRUxiUVVOeWxJNGFCeE10aE5TbWVjRHl6amsteVl0ZDFrbTdHX0hSOA?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Panetta, de la BCE, alerte sur les risques de fragmentation des paiements : hausse des coûts et affaiblissement des liens économiques - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 11:46:22 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQZXpLYkJCa1k4LXZXU05ZaUxxaGNZSXpzd1FIRU9JcjFpOXRXZlhxOWkwRy1oaXlWZkRVczVSeldnX010NW94d1ZwTFFNeWJXaEhhZmFWZVkwcjlPcFJmWnVJeVBFckJpYnppWGxMcVllaUZ6LXE0Szk1dlBoQnROclB0YkNZMnR4RjJvbnJGamtpOWdQZy1ULVM2ZDExdjNUU0lpU3RRUlUxdEhGSmtzd3B0V1pDR3BzbG9iRXZCTTJpTGVoR2stX1ZhSFd1U0ItMS12Si1SYnhtOW80RTFnWDV1NFJoMGt4STA2VQ?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Chez Airbus, Emmanuel Macron encourage la filière aéronatique à \"aller plus vite\" pour produire plus et à \"ne pas attendre les résultats\" de la concurrence chinoise",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 11:28:22 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/aeronautique/chez-airbus-emmanuel-macron-encourage-la-filiere-aeronatique-a-aller-plus-vite-pour-produire-plus-et-a-ne-pas-attendre-les-resultats-de-la-concurrence-chinoise_AV-202611230463.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Quelles perspectives 2027 pour les marchés obligataires - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 23 Nov 2026 11:22:28 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQ0JITXRXYmNqeHQzVm9qY2lwQXFacnZJYmVHSm14ZER1czVxLUpISk43YVpyangzdVU0OE1DUGhVempBY1gzcU1YbVlHa0FTaFRVYmp5N0o5Vjk3SXBfc3BZcGhWdTZpUGwzWHNBYmRHdEdQekdPTGN1OTNSTnNyNXFtRzlhZG44WVZ4NzMzMEtNTldGVDMyUkdOR0luRmVLUmRmMU0zZm94OEFjY0p4Z3g1cXNJUERvbFdQZFYzdi1RRWc3cWc1c2gxQmxvYVpBcHNn0gHTAUFVX3lxTE9DQkhNdFdiY2p4dDNWb2pjaXBBcVpydkliZUdKbXhkRHVzNXEtSkhKTjdhWnJqeDN1VTQ4TUNQaFV6akFjWDNxTVhtWUdrQVNoVFViank3SjlWOTdJcF9zcFlwaFZ1NmlQbDNYc0FiZEd0R1B6R09MY3U5M1JOc3I1cW1HOWFkbjhZVng3MzMwS01OV0ZUMzJSR05HSW5GZUtSZGYxTTNmb3g4QWNjSnhneDVxc0lQRG9sV1BkVjN2LVFFZzdxZzVzaDFCbG9hWkFwc2c?oc=5",
-   "tag": "BCE taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Thales remporte un contrat pour fournir des radars à l'armée des Pays-Bas",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 10:38:14 GMT",
-   "lien": "https://www.abcbourse.com/marches/thales-remporte-un-contrat-pour-fournir-des-radars-a-l-armee-des-pays-bas_706514",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les taux dans la zone euro évoluent en ordre dispersé après les PMI",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 10:30:12 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-taux-dans-la-zone-euro-evoluent-en-ordre-disperse-apres-les-pmi_706512",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
