@@ -1,507 +1,126 @@
 {
- "genere": "2026-11-24T02:52:09.629Z",
- "globales": [
-  {
-   "titre": "Les marchés tentent un rebond après une semaine noire pour la tech américaine et le Cac 40 - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Mon, 23 Nov 2026 08:12:13 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNa3g0Qlc0a2RDNl9NTXBJVjVPemxXWFF5Mm0xQ3dlNGxNblJPeWFmSEJXU1o1REhDazVXcWZLVGM3Z0ZqTGpvcklPUF9vZjlINHNDY0ZJZFM4LTZQT1E1TU5TLUd2V2ZyczBiT1poQjVwUTZCZ0k5VjlkZDNmVVB3Z3Y1eU51Ym5GUVVTYkZmYW1TWDg4bXVBTnhsVFhIdGExV01Ec1MtOURxN0tCQllVcDluaV81em9IMmwwRHBHS3ZVWUtCTzAxYjBJQXNuRUZ3QW80NF85OFVvZlFyMm93VmxESEVNN1hkLWtPS3JjdGtLQzA?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Anthropic réussit ses débuts boursiers, mais la fête tourne court pour les marchés, le Cac 40 devrait perdre 1 - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Fri, 20 Nov 2026 07:34:20 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNM0ZPSFlHejJnTWx5YkZ3S3NuQm56cFhKTnUxUHlEYWp4Wmo1QVBEemM4Zkg0Y2NiWWM4ZmpPMkl5dVBWQ1ZvNTVFZDBseDhmY21ackhoU2dETlVYYjYyWm9KRUlJYnd2aEFobFF3X0VkNHRnejktSFB2bmRlVk1tUWtPam1WVjktMHhwQWNpem8ycHFveEZseW5lSjkwVW9IMEQ2NHdicVpoOWZGbDJwVWg1WmRNM2JkdTBONHQyTlVlWVVOQW5pVWhSNnJZZWhFV3hsNXVLSFBJM01HYVpLSU03ZUsyYlZEdFJZbVVqM2VtYkNoc0FIcHB2UjBoSVhDb0FVZ2c3RzFXcEU?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : Nvidia rassure la Bourse avec ses résultats, le CAC 40 hésite - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Wed, 18 Nov 2026 13:13:27 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOS0t4WjdQSC01Z3Z5TGZHMVJWYWh6MDFZb2V5U1hETjEwOGhBWV9TWUpId2NYa0RmSVFsTmdFdzNGd1FkNGZCci1DdUZTaWVWVGtHSzFJNHV3OHFvVTRKQzU4aVJZcndmbmJQU0Fkc01HODBibzBFRzlUamxVdFBGVHRaTV9CMXhyd0U3MktQOWpUdnpfX09obk9KT25hNlVDOXVSRUFJb0VOdFU1dXRwSFZCTnpqRFRMUk9XYmVNbXJBWS1GVlcydVdqZzN5TnNDTDQwWQ?oc=5",
-   "tag": "Marchés",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Finances publiques : la BCE compte sur les marchés pour recadrer la France - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Wed, 18 Nov 2026 11:05:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSnBaQWdMRWpYQjB2NmRZbUVILXp2emo2aWtQR3k5aEFmbGRTR1FuWTRkUTEtNEMxM1VYdzIwc0xxM1dXQU15LWhKdG9ONWM3elVrUjJkdEpYZzBYX1E2RExyN2RmLWRwU3M4OWZheUdPOTB1VVdmWWxRZUN5YV9wb0FZV2FvUTRSc1g1dHpmTUFYaWcxaWt5ZVBfSHNQZGlBekZ2bFRiZnk0bUVDaHhwdUh0Mk4?oc=5",
-   "tag": "BCE / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L’IA est devenue l’unique moteur de l’économie mondiale, alerte le FMI - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Tue, 17 Nov 2026 15:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUmJWUTFBQkdhaGpjU0JkQjU0cVFwT2stM2VzaGZuTmg4d2FZTnd1Z0FKY2hOamI2SFpCWFd2bkJXWDU3eFJiMVl1clFWbUUyR2gwZThiLVVNTGdpVEtzcG5wRlhiNzRoVzJNMWV5cnNRbDJ1TGZwbDRzMUgtR202amp4SDJWYUpRZmdyZTVoQ3NKZXRhZE1nbVdQUlVBdFl5TG1hS0Nn?oc=5",
-   "tag": "International",
-   "categorie": "globale",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "Dollar américain : un sommet de 19 mois porté par les taux de la Fed - Le Revenu",
-   "source": "Le Revenu",
-   "date": "Tue, 17 Nov 2026 11:37:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYkU3c2hQUTA4VHdKN3dZNE43dGVfSlVvaUc2MmI1R3FONzI1TkNZdzNlSDA5a054cUFCRXRLcFlDaEs2NzktODAwVlFQVHN3U1lvVEVzR0loWjhabzlVVlBkM0tqTGRPUjBQeC11QnQ0RURpRUpxaGVnOUdBSExwd1d4WGpSTHNvTDRHVUJUdmZvUTN2X2NKNDlOWURxajhVTkR6MXJR?oc=5",
-   "tag": "Fed / Taux",
-   "categorie": "globale",
-   "sentiment": "neutre"
-  }
- ],
- "produits": [
-  {
-   "titre": "Stellantis se retire de toutes les compétitions de sport automobile - Zonebourse",
-   "source": "Zonebourse",
-   "date": "Mon, 23 Nov 2026 16:17:16 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNazFwN2x5MzRYWGlISkRvQ1BMRHN4OGYtc3V3OUNmS0FzRjdNVXladFBXQ3Y0akxBTklYQUVXSFFBXzJjQS1GVHJqSzREXzc3djJKVS1xVDFUYmRqeDk4WXByZ0E3N3U2MkIwdVo0V2MxTWNuTWQwMmhjdFE0SjMzTHZYQkxWLVRpNEprY1BuZERNNkVmTFlqSWNiSml3dEN5ZmxVNmRycUFmUUk5cUM2UmlwWi1ldUJaLUluSDdyLXVSZmtnME9n?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Stellantis met fin à ses activités de course automobile officielle pour concentrer ses ressources - ABC Bourse",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 16:03:31 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYmdzWEFuMWFQVlM2V216b1BqRmNBUmI3U2lhM1kySXNTSmNvQzNxdmpnUnRaaVBWOG15dnZLYU1ralpqcjBZdDZlMHBrSElWeVlLaU9GaFRKMXhtajFkaDRlbVJ5MzQyek4zcFV4SnBubi1BajZDamxnSmRmX2pCZGw4Z2tpQjlOVW1PYjE5RklTSktjUy1rcU5oaFVqRzNVMjhfa3VIUVNobWxCYnJhVUVtei1DakJkendzTExB?oc=5",
-   "tag": "Stellantis",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Cac 40 : L’indice parisien a ouvert la séance en hausse de +0.48% - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 23 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOEhIdGs3eFNpM0dZcDItYjF3M0RmSkEzdU9zWlBEN2pFN2JkTWtHcy1ra3NRc3RQNVNWX3VmMDZBdVNxbFFnaGUyMGw4NjN4ZllzZmZIeEwtRkhDRHhzdEJGVGxUcjFmLXpXQ1JZcEVycVhucFQ1OVk2VTdRNTRvdWhCX0lJWWFJZmRIb0JHZ1RMbXpSMmY0STR1TzYwMko0bTUtOHp6aVdwVnFMNTF4NjR0ZVh4dGJIOFc0U1FtTndDeVZMVUQzbE5n?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Bourse : Conseils boursiers, Analyse technique, Cours de bourse et CAC 40 en direct - BFM Bourse - BFM Bourse",
-   "source": "BFM Bourse",
-   "date": "Mon, 23 Nov 2026 01:11:21 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9aTnc0Rjh1VDBYdE4taXhhQnBSV3BBZzd2UlhaMEVUWmJtQnBHYWlUMmpxWVB1Vm9YaWVxTnc3Qkg?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris - Boursorama",
-   "source": "Boursorama",
-   "date": "Sat, 21 Nov 2026 13:11:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Dassault Systèmes : faut-il éviter cette action du CAC 40, après un gros gain en Bourse ? - Capital.fr",
-   "source": "Capital.fr",
-   "date": "Thu, 19 Nov 2026 18:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNY05RYlhqS2hXZTByNlNubDBWNmtyeWhTNEYzRmR2VVlnNlZIWTMtOURmUmk1cG5KblBtUzlpNU9jOUE0enB1UERNQWoxOXVfcnJoZGdCODFGQm1adVN3SzNxb25nZnZfWUIxVlFpc1pDVlZYRXZQdXRPYlBKLVV2amF3ekQ0WDlUYXRRZzVyel9GOTZRRHJ1LWJkclQ5NW1NcHdXakJDSE9Ya3h4ckF2ZkpFTDJYTHpCLURsQ2tGVHVtdVM2WGxJVTFoWndUYnRR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Services informatiques : entre Capgemini et Dassault Systèmes, la Bourse a fait son choix - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Thu, 19 Nov 2026 12:30:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQdEY1MEE5VzdleHpmeW01OEpsR2RxTDhkWnRJNTQ5RVpHWkpLN0tsaDgySzRCdTNoZUlGakZ3bnhVZEVKdExBRjZUc3d5VDlXellLU3NXVzM0a3B5WkNJR1FIZF96djl2cXZRVVoyU05ILVNzNFFxWnhGa25IMUZ0b1V5NExEd29ObnZRbVkzREczckxxVGJsRVcwc3hSSXVWemsyeENwdVM3RlQyVzJkeXNLMGd5U3Y2NlVhSngyTTF1MDZTY1VSNkEzX1JYWHFwNzVtOGZGWGlrWTN6ZG5VUnJXX0RabDkzQWJleHRRZkE?oc=5",
-   "tag": "Capgemini",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La société de gestion Amundi très prudente sur les marchés pour 2027 - Investir Les Echos",
-   "source": "Investir Les Echos",
-   "date": "Thu, 19 Nov 2026 07:57:40 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNUhseGhyQTA5UnpyRlhkN21xRmNpdndTbmJUVjNOUFNFaE9FRDFvdy0teVN6ZGIwX0pFbTI3TG1NQUVVMmZ3Z3dNQjZKZnZYMnVjaUppYy1nYjUyanppa1cyaGFNbWFPSmlxUTJqTDZjUEJtYURDNl9rTm5ZX0xTVE5ac1BtYlZxbF9Gb0VxLXB2UWhrSFlyTnA3R0NnSVpRRFNSLWxnMTIzYmM1eXdERjduSTE5SjRINkdkUzJXT29QUzRvZ0hZaGdlUzlMMVVGMWI3YjNR?oc=5",
-   "tag": "CAC 40",
-   "categorie": "produits",
-   "sentiment": "neutre"
-  }
- ],
+ "genere": "2026-11-24T15:44:57.752Z",
+ "globales": [],
+ "produits": [],
  "eco": [
   {
-   "titre": "La filiale de trésorerie de Sun Pharma obtient une notation de crédit préliminaire BBB+ de S&P - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Tue, 24 Nov 2026 02:25:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWGNwakxCeVEzRHRxWWVOQWZxTVdEX0FkZmZiTlJxbkRfT3JaYXNsbUtlVGQ5LVlfUmZQVG56V09hZ0YybXlSMWR2aWtDN2s0QUJlcU56Z0VocEZuMzhDSjF4dGp4TF9fQlNNNHl2YmMtNHJaa3R6OTN6T3Q5enVYYWVKdGE5MURPeVcyYlJzQzRKcW1SZGNPcy1EU0hRbGp6eXZtMkFuLUt3MzVwR2p5eURKSGlQUXpNZHRWV0hIWnktTGhHU19hakRySGloekw3UzcwYjBPNUp2R2E5b0dOUXhhckx1d3Zs?oc=5",
-   "tag": "bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Williams de la Fed : l'inflation reste trop élevée, de nouvelles hausses de taux sont possibles - Boursorama",
-   "source": "Boursorama",
-   "date": "Mon, 23 Nov 2026 23:39:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNTjhvYkNGNHJCM3RTVDdIZ3BhQWRDYUVFZGhURVMtUUpwc3hDZUdFck9DcGFpaS02T1lKRldxQl81d2x6ZDBzaDRFRW1oOVdIVE5jQWFIaWN5Q3FPaHBsamtzdGtpbi1qa0wxOWJVTzBfYTliM25mbTZMQ3hjTVpZNDA0UU1vWHhxN25MOFhHVmRsc1djaWNsLWtiUnExeVUyUFNOREJyeUFYS0k2V25CSGNTXzlSZ2hXdWhkUVpSRFA4aTlybWRxejBodHQ4UTZIcWJfa2R1NmMyRDBkc2hlaHhxVXJuSGEzdzNLVTUtdTFaUG00MllEUGdnX2Z4S0FDb2NnRdIBhAJBVV95cUxNTjhvYkNGNHJCM3RTVDdIZ3BhQWRDYUVFZGhURVMtUUpwc3hDZUdFck9DcGFpaS02T1lKRldxQl81d2x6ZDBzaDRFRW1oOVdIVE5jQWFIaWN5Q3FPaHBsamtzdGtpbi1qa0wxOWJVTzBfYTliM25mbTZMQ3hjTVpZNDA0UU1vWHhxN25MOFhHVmRsc1djaWNsLWtiUnExeVUyUFNOREJyeUFYS0k2V25CSGNTXzlSZ2hXdWhkUVpSRFA4aTlybWRxejBodHQ4UTZIcWJfa2R1NmMyRDBkc2hlaHhxVXJuSGEzdzNLVTUtdTFaUG00MllEUGdnX2Z4S0FDb2NnRQ?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Williams de la Fed : l'inflation reste trop élevée, de nouvelles hausses de taux sont possibles - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 23 Nov 2026 23:39:32 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9PTGtqUkctLWE4bGlkWGE3dEZsUlFmOVlnMmZKeXh3WllvcmJXS1I2cnEtTEhleGhVY1BQZ2JNNGV1WDlBbm5GcFVVVXJGX3pTMXV4dlM1ejVPVngzelZEWG1nV1QwRnBrUEhFWGZicmdONGQzTkpV?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "John Williams, de la Fed, affirme que la banque centrale s’efforce de réduire l’inflation - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 22:08:30 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVVhEc2VQMTIzOS0yZFVCMGd6RWNrLU1TT3VNei1oeWFBd3ZmSkM0aXU1eV9aOHpvYVlwUzJZTW1aMFc5UTBIWUxHTUY4T2N6RHpuSERqbmR3a0JtVDd6d3pVaTl3NlJMVm1ES0R4SFZ2YUR1ZWp3U3hkcWlsZGlnOE1ib2tCZFpXU2dUMTJmeFQ4YUlUV0xoNk9hV3JJb29Del9Bdk5aYmVnajMtbFVWbHlWbnBac0JBenliVF9CRFl5S2hCY0FDNXFGeGYtTjVKTkpXNmxJd0F0Vk1uaVNVemloNA?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "USA: Wall Street célèbre le retour de Jensen Huang, qui relance les paris sur l'IA",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 21:33:45 GMT",
-   "lien": "https://www.abcbourse.com/marches/usa-wall-street-celebre-le-retour-de-jensen-huang-qui-relance-les-paris-sur-l-_706552",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "La Réserve fédérale américaine (Fed) doit encore « agir » pour faire baisser l’inflation, estime Williams - Zonebourse Suisse",
-   "source": "Zonebourse Suisse",
-   "date": "Mon, 23 Nov 2026 21:01:24 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOTm1rVDRqd0RtV20tZUdmSndkb3hVS1ZoUVQxclpMcmRSM1IxcmpNMUFISWhFWXgydFVsdm9fcWpfdWstemg3aFMyYXFxR1FVWkI4bzFkV1Y4MHlZYWJ3dnJ1dGd4U0V0U2g5VExwOGRkNXJidmxsNm5OS05hdFVjSlg3dU9KazI3N1FtbUpDRVpEQ2VQRW5BT2pDRHZIOEVmck9Zd1U1SXlFMGw5eWsydnptTzdsdGViUDZ5LXpGRFFyaXNuTmpPMnhKQmJKRUJJc3ZCNjNtZndJMVZFMDBYWDhiZDhzblU?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "À lire sur le site Tech&Co : Microsoft célèbre les 25 ans de la Xbox, par Sylvain Trinel - 23/11",
+   "titre": "L'éco du monde : Le dollar monte encore, au plus haut depuis mars 2025 - 24/11",
    "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 20:47:12 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-a-lire-sur-le-site-tech-co-microsoft-celebre-les-25-ans-de-la-xbox-par-sylvain-trinel-23-11_VN-202611230887.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bruno Zerbib (Orange) : Orange dévoile sa vision de l'avenir des réseaux – 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 20:31:01 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/bruno-zerbib-orange-orange-devoile-sa-vision-de-l-avenir-des-reseaux-23-11_EN-202611230875.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Bruno Zerbib (Orange) : Orange dévoile sa vision de l'avenir des réseaux - 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 20:23:04 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-bruno-zerbib-orange-orange-devoile-sa-vision-de-l-avenir-des-reseaux-23-11_VN-202611230874.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Dollar jumps on hawkish Fed bets, AI rally - TradingView",
-   "source": "TradingView",
-   "date": "Mon, 23 Nov 2026 20:22:55 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQUcyaFhQVHB2RHhpQUVLVGMzZ1pBeTA5dml2MHNoSldNMTl6Y3pvcGlUNE44RjdJY19PYUlGbXNOX0F0Z2NUdWRQVmNkcjlzeHhDbTRzMnhmNjd2LUZRdzZ0RVVNOHJFVkxVQmFibmE1cXFpYjg2TjAtdVB3TEVvM0drSTlCQnBXVXRYbmNoRk1QUzFlSFFYREtnenFTMzdmY0JNRjhMVVV3aFRnM3RKQkk5cDF6REtTaGIyNnN0Vmx0eF95NEVtNg?oc=5",
-   "tag": "Fed taux",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le Tech Flash : Nvidia réintègre Jensen Huang par Léa Benaim - 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 20:12:02 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-nvidia-reintegre-jensen-huang-par-lea-benaim-23-11_VN-202611230863.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Jensen Huang reprend les commandes de Nvidia – 23/11",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 18:56:53 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/jensen-huang-reprend-les-commandes-de-nvidia-23-11_EN-202611230798.html",
+   "date": "Tue, 24 Nov 2026 15:33:35 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-l-eco-du-monde-le-dollar-monte-encore-au-plus-haut-depuis-mars-2025-24-11_VN-202611240704.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Jensen Huang reprend les commandes de Nvidia - 23/11",
+   "titre": "L'éco du monde : Le dollar monte encore, au plus haut depuis mars 2025 – 24/11",
    "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 18:52:03 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-jensen-huang-reprend-les-commandes-de-nvidia-23-11_VN-202611230801.html",
+   "date": "Tue, 24 Nov 2026 15:33:31 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/l-eco-du-monde-le-dollar-monte-encore-au-plus-haut-depuis-mars-2025-24-11_EN-202611240703.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Jensen Huang rétabli à la tête de Nvidia",
+   "titre": "Stmicroelectronics: le support des 38,60 euros enfoncé",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 14:00:35 GMT",
+   "lien": "https://www.abcbourse.com/marches/stmicroelectronics-le-support-des-38-60-euros-enfonce_706597",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "S&P 500 - Les actions à suivre mardi: Nvidia, Anthropic, Hewlett Packard, Best Buy, Kohl's, Dollar Tree",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 13:32:17 GMT",
+   "lien": "https://www.abcbourse.com/marches/sp-500--les-actions-a-suivre-mardi-nvidia-anthropic-hewlett-packard-best-b_706595",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "L'or reflue avant des données clés sur l'inflation américaine",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 13:01:54 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-or-reflue-avant-des-donnees-cles-sur-l-inflation-americaine_706593",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le retour surprise du patron de Nvidia a pu rapporter jusqu'à 15 millions de dollars à Donald Trump",
    "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 17:28:17 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/usa-today/video-jensen-huang-retabli-a-la-tete-de-nvidia_VN-202611230718.html",
+   "date": "Tue, 24 Nov 2026 12:01:45 GMT",
+   "lien": "https://www.bfmtv.com/economie/le-retour-surprise-du-patron-de-nvidia-a-pu-rapporte-jusqu-a-15-millions-de-dollars-a-donald-trump_AD-202611240553.html",
    "tag": "BFM Économie",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "Après la cyberattaque spectaculaire subie par Crédit Mutuel Arkéa, la banque Delubac aussi victime d'une \"intrusion informatique\"",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 17:26:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/apres-la-cyberattaque-spectaculaire-subie-par-credit-mutuel-arkea-la-banque-delubac-aussi-victime-d-une-intrusion-informatique_AD-202611230714.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "ATON: 15 industriels chinois valident des anticorps de sa filiale Bcell Design",
+   "titre": "Les taux en ordre dispersé aux Etats-Unis à la veille de l'indicateur d'inflation PCE",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 17:20:09 GMT",
-   "lien": "https://www.abcbourse.com/marches/aton-15-industriels-chinois-valident-des-anticorps-de-sa-filiale-bcell-design_706543",
+   "date": "Tue, 24 Nov 2026 10:44:49 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-taux-en-ordre-disperse-aux-etats-unis-a-la-veille-de-l-indicateur-d-inflatio_706588",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
   },
   {
-   "titre": "L'Europe débute la semaine en vive hausse, Jensen Huang est de retour",
+   "titre": "L'Europe reprend son souffle, Sanofi se distingue à Paris",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 17:13:57 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-debute-la-semaine-en-vive-hausse-jensen-huang-est-de-retour_706542",
+   "date": "Tue, 24 Nov 2026 10:03:45 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-reprend-son-souffle-sanofi-se-distingue-a-paris_706586",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Nvidia : Jensen Huang rétabli à son poste de PDG 😲",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 17:03:26 GMT",
-   "lien": "https://www.bfmtv.com/economie/video-nvidia-jensen-huang-retabli-a-son-poste-de-pdg_VN-202611230692.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris rebondit nettement grâce au come-back de Jensen Huang",
+   "titre": "Sanofi: les 89 euros franchis après l'accord sur Insmed",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 16:50:21 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-rebondit-nettement-grace-au-come-back-de-jensen-huang_706533",
+   "date": "Tue, 24 Nov 2026 09:00:35 GMT",
+   "lien": "https://www.abcbourse.com/marches/sanofi-les-89-euros-franchis-apres-l-accord-sur-insmed_706583",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "Le baril de pétrole américain retombe sous les 80 dollars pour la première fois depuis août: les cours de l'or noir chutent face au retour d’une offre abondante",
-   "source": "BFM Économie",
-   "date": "Mon, 23 Nov 2026 16:49:44 GMT",
-   "lien": "https://www.bfmtv.com/economie/entreprises/energie/le-baril-de-petrole-americain-retombe-sous-les-80-dollars-pour-la-premiere-fois-depuis-aout-les-cours-de-l-or-noir-chutent-face-au-retour-d-une-offre-abondante_AV-202611230672.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Stellantis met fin à ses activités de course automobile officielle pour concentrer ses ressources",
+   "titre": "CAC 40: La Bourse de Paris ouvre en hausse dans le sillage de l'envolée de Wall Street, Sanofi en vedette",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 16:03:31 GMT",
-   "lien": "https://www.abcbourse.com/marches/stellantis-met-fin-a-ses-activites-de-course-automobile-officielle-pour-concentr_706531",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Jensen Huang revient chez Nvidia, l'action explose de 30 % et entraîne le Nasdaq dans son sillage",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 15:16:28 GMT",
-   "lien": "https://www.abcbourse.com/marches/jensen-huang-revient-chez-nvidia-l-action-explose-de-30-et-entraine-le-nasdaq_706527",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Société Générale devient l'une des banques européennes préférées de Morgan Stanley",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 15:01:27 GMT",
-   "lien": "https://www.abcbourse.com/marches/societe-generale-devient-l-une-des-banques-europeennes-preferees-de-morgan-stanl_706525",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Nvidia fait revenir aux commandes son ex-patron démissionnaire Jensen Huang",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 14:16:20 GMT",
-   "lien": "https://www.abcbourse.com/marches/nvidia-fait-revenir-aux-commandes-son-ex-patron-demissionnaire-jensen-huang_706524",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Jensen Huang reprend les commandes de NVIDIA",
-   "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 14:15:33 GMT",
-   "lien": "https://www.abcbourse.com/marches/jensen-huang-reprend-les-commandes-de-nvidia_706523",
+   "date": "Tue, 24 Nov 2026 08:15:03 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-ouvre-en-hausse-dans-le-sillage-de-l-envolee-de-wall_706578",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "L'or s'offre un rebond technique, avant l'inflation américaine - ABC Bourse",
+   "titre": "UPDATE3: Sanofi monte en Bourse après l'annonce d'un accord pour acquérir la société américaine Insmed",
    "source": "ABC Bourse",
-   "date": "Mon, 23 Nov 2026 13:03:38 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONUdPWlZFREVJZ3NWTHF6S3pxSjJRVW5kT1FVd05hYTRSR0czOWdmNmFGRDgwYVJTMWhmdTFYSWpST2lhNVU1X1dObTV6SE80d2lKWlA1MnpydEZHZk5JMG45OTJqSzFfOHJLZDlNdmdCN1lRZ2pHUmlpclREWU1KWFV5S25SdkZZRWJsOGVpeG50SGwzT082bkpKV2VOSVh6dzBlcQ?oc=5",
-   "tag": "inflation zone euro",
+   "date": "Tue, 24 Nov 2026 08:11:29 GMT",
+   "lien": "https://www.abcbourse.com/marches/update3-sanofi-monte-en-bourse-apres-l-annonce-d-un-accord-pour-acquerir-la-soc_706577",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
+  },
+  {
+   "titre": "CAC 40: La Bourse de Paris attendue sur une note prudente après l'envolée de Wall Street",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 07:55:26 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-attendue-sur-une-note-prudente-apres-l-envolee-de-wal_706576",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Eutelsat va racheter pour 496,9 millions d'euros de ses obligations venant à échéance en 2028",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 07:49:34 GMT",
+   "lien": "https://www.abcbourse.com/marches/eutelsat-va-racheter-pour-496-9-millions-d-euros-de-ses-obligations-venant-a-ech_706574",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
   }
  ],
  "fiscal": [],
- "uc": [
-  {
-   "titre": "Graphique des rendements saisonniers Fidelity Magellan ETF (FMAG) - Yahoo Finance France",
-   "source": "Yahoo Finance France",
-   "date": "Fri, 20 Nov 2026 15:58:15 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE53cWZyQllKSmtCbHczUFRrSXg1bGdhQ0RqTDJJM1lzTG1LWHlJVENGd0FSU3lFLTdKYmtmSmpEcUppQmJXRGdEb0UzTTlTRzZpWWhrXzNiQjFVVE5vVjhmTENR?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "R-CO VALOR C EUR 3 713,36€ - Boursier.com",
-   "source": "Boursier.com",
-   "date": "Thu, 19 Nov 2026 14:45:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB4UllRQklKY2dBZG9XWHhYSUI4OF9qdGVZaV8taDhIUWFXdTZ1NXprSHdrVHM4aFBNajl5bzZSRFliS04yS0RjYzZPR21UY2NkZmo5czdBT2NuN2Q1aExDWnZjN1V3VjlMUm1rX3JYaFN6eHhSOG04MWowLVdrb2s?oc=5",
-   "tag": "R-co Valor",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "« Magellan », une lecture interprétée par la comédienne Odile Frédeval, à la Véndéthèque de La Châtaigneraie - Ouest-France",
-   "source": "Ouest-France",
-   "date": "Mon, 16 Nov 2026 16:02:03 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMisAJBVV95cUxOcFZZSTNXNEw5YUVxb3FVRnJ2VWdQd2t2eXVQUTJmMFpjb2ZyY3RYbk5KSnlkUlA0QVlOd3MtTW1tVkQ3R25MSGVBX2NJUTY4dFJjOGhyNk92bjJWU2JuTXFDWEVSWW52RDZ3dTNzeUsyM3kySHAyMmMyUEFUZk5OTVI5dHZ3T0lXNzhqOF80M3hnMkg1R05SS0c3dFk1UjBiTExuTzZnYngyMWNkQ0gwTDhJTDc5NE9fT2ptejF0YjUwRjVBVUZVNGwwUnhTYnFNdnBkNGhpMUhqUTROdEZ3TzRHQ3lIYjFtUHVXam1VOGZNYl9DOGZ6MEx3UVBhb1lpdlpnanZBN18tWjRGa3NxM0VYZ1RkWWQ5WURCUDFOSy15MTRhYVgwcG5KdDg0NUJz?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "MAGELLAN - un grand récit d'aventures au Théâtre Douze - Ville de Paris",
-   "source": "Ville de Paris",
-   "date": "Mon, 09 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbnVqRUxMT1I1dXNleWNnaGNQcjVmWnp1eGtLbWFSYlFpNVRFTzhkdjB3UF9GaTlZcHY0eF9ZMlZMRlNwaloxa2N2RW5xRXUyaWltVVh4RVVZWDhiekxqYnV1bUJLeFRncXdYNV95YnVITThIY1RkWjZKTGxKVjZmTUhJNEZvT1pNR1JHcnVWVDd5aU96Qnc?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "PARIS : Conseil et Tech - Magellan finalise l'acquisition d'une division de Worldline et se réinvente à l'ère de l'IA - Presse Agence",
-   "source": "Presse Agence",
-   "date": "Sat, 07 Nov 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYUpUU3BvQ19nZFNLZU0wV25SVlgzVGhPc2FTdm51VG5YdnlKNzM2MHVyU0lNelNBX3FaT0FtdVotTGtCOFpNNGtpRUZjSjQ3RV9DMmZtZk52VzRnYjRlUnlrY2p5SWJOazB5UHJaTS1TV05lZy04M2NkYW42cC1iS3pBT1dSNnZCYUR5ZGd3MXV6ekhLcEdCX1FDbnh4T3ZWRC1YVExpX0czTlBRMHRRRWxrcG8yQ1ppRS0xaXlsNm5vYzQ2Z2RILTdOamdiNzQ?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "negative"
-  },
-  {
-   "titre": "SPÉCIAL EURONAVAL - GPS leurré, cap maintenu : MAGELLAN fait ses preuves en conditions réelles. - marine & océans",
-   "source": "marine & océans",
-   "date": "Mon, 02 Nov 2026 10:33:51 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLXBNdkZpSktzaDNQTFdpdzdSdmV3UW5TT0dzcGp5MHpyVS12a3FHOTFHLU9xRnphNGt4QW9fdFZhRkN2Z2RsX2NmazIwTy0zeWJHSFZ1cjFXMktPSXFQalhBREVLNFM5Qnhoc0I0UFNGM0xZZ0dadHliZGVmRS1hY0NLVHhVY0tkQllKeUlhN2FDNmc0VUxUbFlObVg0V1JGM0FuMVVVaHg4amxYYlVmM0J6RVZQaEFEQUpPanVPTnpWdlRLSXUzdWRvaW9tX0xOcENOeGVR?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Mauguio : le restaurant Le R devient Magellan, son chef reprend les commandes - Echo des Tribunes",
-   "source": "Echo des Tribunes",
-   "date": "Sat, 31 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTE8tbXZLdUZQSUVraTV4SF81SXdvaW4yUVpzU0JaajNyQmNmeVFjQy0zUXgwZEZBMW1EemVlMWlPU0NmYldQQmFjMlZJdGIzM050eHJzd282YzJrOGktNUNlV2c5bGpQS3RHQlliTHlVMFBTNUlqd0N3X0JCNzF3VnBfbmZOZl9PWmk5WTJuRURlX3hCaDNZYVdKdWtoMjdsMlZrNllSMDd1WHU0S2VCNDRhejdYdE1oeGtwMEVoQUtybzFpRXRkZg?oc=5",
-   "tag": "Magellan",
-   "categorie": "uc",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Carmignac Patrimoine : les moteurs du renouveau - PATRIMOINE24",
-   "source": "PATRIMOINE24",
-   "date": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPelFxdmtVcUlRenFmZzgyRTlYRnV5V24zMzg0MUplQVBaRzVaWThOdHFNLWJpZ2o5aFlDcms2cEdtTEp1Wl9kUmhtU1BmV3hJOGNLbklwR1lOcFQxakc2blQzeDBiMWNKd0xXNUR6QUN2djZ2akZjTXV1d1B0ZFJxN2N1Yi1LaXBEdXZpRklvalNVQmlJRkRXQTV3?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Echiquier Artificial Intelligence — Fiche Fonds OPCVM - Zoom Invest",
-   "source": "Zoom Invest",
-   "date": "Mon, 11 May 2026 13:09:36 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4zVzZlSkhGZVR4ZWVwek9VSFFzWmRQR0R2Q255dXMwUEZ6T25feHVZeWQ1TWVGZ1FHV2pXMWRObkhTM1VTZnZvY0l5U19XWjV4dFM5QWJDenB0LTZCYzVPQjkzZDQ3LW1EVDE5TE93eVF0ZVQyTGtYc3R5Q0NuX00?oc=5",
-   "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "« Carmignac Patrimoine : notre flexibilité nous a permis de capter le rebond des marchés » - Club Patrimoine",
-   "source": "Club Patrimoine",
-   "date": "Wed, 06 May 2026 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSHR4aTk2N3c4OC0xYmtkMVZTaUJwcWlqM1NBeWMzZDdkMEE1TnRMeUdKOGZOS3M2M2JGNkowaUZ4MW84QmZ1YXhaQVBseWxKaXpocDdRTFNzNjJ6UGx2c1RXc05JbG94Q2d1WQ?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Point sur… Echiquier Artificial Intelligence ǀ Janvier 2026 - La Financière de l'Echiquier",
-   "source": "La Financière de l'Echiquier",
-   "date": "Thu, 15 Jan 2026 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeF9ObU9hYmlReDZpSlRLYVUwMXZ5c3dnZUFWU0dzaUJ0bVVYUnl1Nnp4UnZUaGN0T2tFU3FaUE1hYkJpa2xWMUVha3lPNWxZMk5UNHBoRS1CNnZySENRTWNsVEVGcmVOWlVMRzV2UlJlMUVMblhScjVYWUg4ODNZOERoekhmZWdLREZ5dnRuLWV3VTJ0dnc?oc=5",
-   "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le point sur Echiquier Artificial Intelligence - Zoom Invest",
-   "source": "Zoom Invest",
-   "date": "Tue, 27 May 2025 07:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONWJGeXJMV1Q0bGhRSXZISng0Y2MzZmJGejRYbUlvS3YwTmNRMnVWa2pYbWh3bnJkZmlZVU9aNURoT3hPRW93MzlOZ2FuVzBTcmdqVmRKV09sNkVpWk9LckU0WXVEZHZMcHhKaHZLc1d2cmtMbElWV0hWXzZHclFoZTRDUmpXMTdHYXRScHRvV2hJblNJTXN1dTR0UXpTTXA3eXhhZi1XWXhDUFV5N0Z3?oc=5",
-   "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Point sur... Echiquier Artificial Intelligence - Février 2023 - La Financière de l'Echiquier",
-   "source": "La Financière de l'Echiquier",
-   "date": "Thu, 16 Feb 2023 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeVJUYW9PYjBMeFk0VTkteDV0dEU3Z2Q4WS1TMDBWQXpuRktiZmdsQk12ZHprejdKamlGTlMzZjd5RWlEbmE4TktqRm5XVEdnRVdQc2wtRUdWRjJMMTFBeDgyUEs0Q2hUa2pLRXJJRFpFN3R6Q28xSDhISEUxX19WVndPX3FFcUNzWDZ5aGlIZWlSbmc?oc=5",
-   "tag": "Echiquier Artificial Intelligence",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Carmignac Patrimoine FR0010135103, fonds patrimonial diversifié - MACSF",
-   "source": "MACSF",
-   "date": "Fri, 17 Jun 2022 01:42:12 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQRW9ZNld4a3I5Tk0wcm5JY05SUDdqSi1VeDBLWFptNzJoR3ktNWxzZ3FUYWVjQW1JMlBkdUVBRkdDUTRKaXZ5Z2dhVXFBc3hzck9KVzBUUElyX1V0QzVPRDZwRjdLMVNKZU8ta2JzLWFaN3pXSWNIeXQ1NFhpR01qdHRSSFU1S3dmRmZJRDdkM2d1cnJZc3V5UUNkZ0hJUk9LV0FYNHBJSnZVbi1TaWVjUm9Gc2NwX3Job25HenF2OXlTLWQ4Y1BnVThVVmREOTRUclFaQlpNN0hTRzRTZVE?oc=5",
-   "tag": "Carmignac Patrimoine",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Fonds DNCA Invest SRI Europe Growth - Banque Populaire",
-   "source": "Banque Populaire",
-   "date": "Wed, 12 Jan 2022 08:00:00 GMT",
-   "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcm1jMDVaMlB2WGFwU2NoN1l4aGxfZ0pzQnNWc0ZSdGZfNDZvMW1GRjNsbWMyYkRjV1lIdjk4enV6N3RUYWJkWkhIbjlNMlhtNURYRk5mQnE4dlotYWtLYnF0dlN6YnJheUdCMXJ2U1RBVjgzX0N3ZFlRcm5KUHA5NTFOVnQ5TkpKUngw?oc=5",
-   "tag": "DNCA Invest SRI Europe Growth",
-   "categorie": "uc",
-   "sentiment": "neutre"
-  }
- ]
+ "uc": []
 }
