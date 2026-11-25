@@ -1,25 +1,142 @@
 {
- "genere": "2026-11-24T15:44:57.752Z",
+ "genere": "2026-11-25T00:35:10.004Z",
  "globales": [],
  "produits": [],
  "eco": [
   {
-   "titre": "L'éco du monde : Le dollar monte encore, au plus haut depuis mars 2025 - 24/11",
+   "titre": "USA: Wall Street freinée par les technologiques, le Dow Jones au-dessus des 50.000 points",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 21:35:23 GMT",
+   "lien": "https://www.abcbourse.com/marches/usa-wall-street-freinee-par-les-technologiques-le-dow-jones-au-dessus-des-500_706621",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Microsoft : Copilot devient l'OS du travail – 24/11",
    "source": "BFM Économie",
-   "date": "Tue, 24 Nov 2026 15:33:35 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/video-l-eco-du-monde-le-dollar-monte-encore-au-plus-haut-depuis-mars-2025-24-11_VN-202611240704.html",
+   "date": "Tue, 24 Nov 2026 21:10:01 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/01-business/microsoft-copilot-devient-l-os-du-travail-24-11_EN-202611240983.html",
    "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Microsoft : Copilot devient l'OS du travail - 24/11",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 21:08:34 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/01-business/video-microsoft-copilot-devient-l-os-du-travail-24-11_VN-202611240987.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Le Parlement adopte définitivement le projet de loi de fin de gestion 2026, avec un déficit public maintenu à 5,4 % du PIB",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:30:16 GMT",
+   "lien": "https://www.bfmtv.com/economie/economie-social/finances-publiques/le-parlement-adopte-definitivement-le-projet-de-loi-de-fin-de-gestion-2026-avec-un-deficit-public-maintenu-a-5-4-du-pib_AD-202611240919.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Le Tech Flash : Puces Nvidia, Washington sort l'artillerie lourde, par Léa Benaim - 24/11",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:20:43 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-puces-nvidia-washington-sort-l-artillerie-lourde-par-lea-benaim-24-11_VN-202611240917.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Ariane 6 réussit sa mission pour Amazon Leo – 24/11",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:07:19 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/ariane-6-reussit-sa-mission-pour-amazon-leo-24-11_EN-202611240900.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Ariane 6 réussit sa mission pour Amazon Leo - 24/11",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:05:45 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-ariane-6-reussit-sa-mission-pour-amazon-leo-24-11_VN-202611240914.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Portugal: le budget 2027 pourrait faire basculer le pays dans le déficit public après quatre années consécutives d'excédents",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:01:47 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/portugal-le-budget-2027-pourrait-faire-basculer-le-pays-dans-le-deficit-public-apres-quatre-annees-consecutives-d-excedents_AD-202611240894.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Ariane 6 réussit sa mission pour Amazon Leo",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 19:00:00 GMT",
+   "lien": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-ariane-6-reussit-sa-mission-pour-amazon-leo_VN-202611240997.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Sa dette représente 242% de son PIB: pour recevoir des aides, le Venezuela est obligé d'enfin dévoiler l'ampleur de son surendettement après des années d'opacité",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 18:32:04 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/sa-dette-represente-242-de-son-pib-pour-recevoir-des-aides-le-venezuela-est-oblige-d-enfin-devoiler-l-ampleur-de-son-surendettement-apres-des-annees-d-opacite_AD-202611240870.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Les actions à suivre mercredi: Air Liquide, Trigano, Rémy Cointreau",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 17:47:55 GMT",
+   "lien": "https://www.abcbourse.com/marches/les-actions-a-suivre-mercredi-air-liquide-trigano-remy-cointreau_706616",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "Même avec 90 milliards d'euros promis par l'Europe, il lui manque encore 25 milliards: l'Ukraine chiffre à 115 milliards ses besoins d'aide financière pour 2027",
+   "source": "BFM Économie",
+   "date": "Tue, 24 Nov 2026 17:28:35 GMT",
+   "lien": "https://www.bfmtv.com/economie/international/meme-avec-90-milliards-d-euros-promis-par-l-europe-il-lui-manque-encore-25-milliards-l-ukraine-chiffre-a-115-milliards-ses-besoins-d-aide-financiere-pour-2027_AD-202611240803.html",
+   "tag": "BFM Économie",
+   "categorie": "eco",
+   "sentiment": "negative"
+  },
+  {
+   "titre": "Air Liquide va investir plus de 100 millions de dollars pour accélérer sa croissance aux Etats-Unis",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 17:21:52 GMT",
+   "lien": "https://www.abcbourse.com/marches/air-liquide-va-investir-plus-de-100-millions-de-dollars-pour-accelerer-sa-croiss_706614",
+   "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "positive"
   },
   {
-   "titre": "L'éco du monde : Le dollar monte encore, au plus haut depuis mars 2025 – 24/11",
-   "source": "BFM Économie",
-   "date": "Tue, 24 Nov 2026 15:33:31 GMT",
-   "lien": "https://www.bfmtv.com/economie/replay-emissions/bfm-bourse/l-eco-du-monde-le-dollar-monte-encore-au-plus-haut-depuis-mars-2025-24-11_EN-202611240703.html",
-   "tag": "BFM Économie",
+   "titre": "L'Europe sur la défensive après la folle séance de lundi",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 17:10:14 GMT",
+   "lien": "https://www.abcbourse.com/marches/l-europe-sur-la-defensive-apres-la-folle-seance-de-lundi_706613",
+   "tag": "ABC Bourse",
    "categorie": "eco",
-   "sentiment": "positive"
+   "sentiment": "neutre"
+  },
+  {
+   "titre": "CAC 40: Retour au calme pour la Bourse de Paris, l'effet Nvidia s'est dissipé",
+   "source": "ABC Bourse",
+   "date": "Tue, 24 Nov 2026 16:44:42 GMT",
+   "lien": "https://www.abcbourse.com/marches/cac-40-retour-au-calme-pour-la-bourse-de-paris-l-effet-nvidia-s-est-dissipe_706602",
+   "tag": "ABC Bourse",
+   "categorie": "eco",
+   "sentiment": "neutre"
   },
   {
    "titre": "Stmicroelectronics: le support des 38,60 euros enfoncé",
@@ -44,78 +161,6 @@
    "source": "ABC Bourse",
    "date": "Tue, 24 Nov 2026 13:01:54 GMT",
    "lien": "https://www.abcbourse.com/marches/l-or-reflue-avant-des-donnees-cles-sur-l-inflation-americaine_706593",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Le retour surprise du patron de Nvidia a pu rapporter jusqu'à 15 millions de dollars à Donald Trump",
-   "source": "BFM Économie",
-   "date": "Tue, 24 Nov 2026 12:01:45 GMT",
-   "lien": "https://www.bfmtv.com/economie/le-retour-surprise-du-patron-de-nvidia-a-pu-rapporte-jusqu-a-15-millions-de-dollars-a-donald-trump_AD-202611240553.html",
-   "tag": "BFM Économie",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Les taux en ordre dispersé aux Etats-Unis à la veille de l'indicateur d'inflation PCE",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 10:44:49 GMT",
-   "lien": "https://www.abcbourse.com/marches/les-taux-en-ordre-disperse-aux-etats-unis-a-la-veille-de-l-indicateur-d-inflatio_706588",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "L'Europe reprend son souffle, Sanofi se distingue à Paris",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 10:03:45 GMT",
-   "lien": "https://www.abcbourse.com/marches/l-europe-reprend-son-souffle-sanofi-se-distingue-a-paris_706586",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "Sanofi: les 89 euros franchis après l'accord sur Insmed",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 09:00:35 GMT",
-   "lien": "https://www.abcbourse.com/marches/sanofi-les-89-euros-franchis-apres-l-accord-sur-insmed_706583",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris ouvre en hausse dans le sillage de l'envolée de Wall Street, Sanofi en vedette",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 08:15:03 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-ouvre-en-hausse-dans-le-sillage-de-l-envolee-de-wall_706578",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "UPDATE3: Sanofi monte en Bourse après l'annonce d'un accord pour acquérir la société américaine Insmed",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 08:11:29 GMT",
-   "lien": "https://www.abcbourse.com/marches/update3-sanofi-monte-en-bourse-apres-l-annonce-d-un-accord-pour-acquerir-la-soc_706577",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "positive"
-  },
-  {
-   "titre": "CAC 40: La Bourse de Paris attendue sur une note prudente après l'envolée de Wall Street",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 07:55:26 GMT",
-   "lien": "https://www.abcbourse.com/marches/cac-40-la-bourse-de-paris-attendue-sur-une-note-prudente-apres-l-envolee-de-wal_706576",
-   "tag": "ABC Bourse",
-   "categorie": "eco",
-   "sentiment": "neutre"
-  },
-  {
-   "titre": "Eutelsat va racheter pour 496,9 millions d'euros de ses obligations venant à échéance en 2028",
-   "source": "ABC Bourse",
-   "date": "Tue, 24 Nov 2026 07:49:34 GMT",
-   "lien": "https://www.abcbourse.com/marches/eutelsat-va-racheter-pour-496-9-millions-d-euros-de-ses-obligations-venant-a-ech_706574",
    "tag": "ABC Bourse",
    "categorie": "eco",
    "sentiment": "neutre"
